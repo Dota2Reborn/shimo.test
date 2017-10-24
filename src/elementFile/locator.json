@@ -1,0 +1,413 @@
+[
+{
+	"注释":"导航页",
+    "pageName": "new_index",
+    "elements":
+    [
+      {
+        "elementName": "dashboard",
+        "locateUsing": "xpath",
+        "locator": "//div[@id='left-sidebar']//a[1]"
+      },
+      {
+        "elementName": "desktop",
+        "locateUsing": "xpath",
+        "locator": "//div[@id='left-sidebar']//a[2]"
+      },
+      {
+        "elementName": "favorites",
+        "locateUsing": "xpath",
+        "locator": "//div[@id='left-sidebar']//a[3]"
+      },
+      {
+        "elementName": "trash",
+        "locateUsing": "xpath",
+        "locator": "//div[@id='left-sidebar']//a[4]"
+      }
+     ]
+},
+
+{"pageName":"------------------------------------------------------------------------------------------"},
+
+{
+    "pageName": "indexPage",
+    "elements":
+    [
+      {
+        "elementName": "inputSearch",
+        "locateUsing": "id",
+        "locator": "kw"
+      },
+      {
+        "elementName": "buttonSearch",
+        "locateUsing": "id",
+        "locator": "su"
+      }
+     ]
+},
+{
+	"注释":"登录页面",
+    "pageName": "homePage",
+    "elements":
+    [
+      {
+        "注释":"用户名",
+        "elementName": "userEmail",
+        "locateUsing": "name",
+        "locator": "email"
+      },
+      {
+        "注释":"密码",
+        "elementName": "userPwd",
+        "locateUsing": "name",
+        "locator": "password"
+      },
+      {
+        "注释":"用户名",
+        "elementName": "xpath_login",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='home-begin-use']//a[@href='/register']"
+      },
+      {
+        "注释":"密码",
+        "elementName": "login_submit",
+        "locateUsing": "id",
+        "locator": "bd-login-submit"
+      }
+     ]
+},
+{
+    "pageName": "memberManagement",
+    "elements":
+    [
+      {
+        "elementName": "addMember",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='add-btn']"
+      },
+      {
+        "elementName": "message_ok",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='btn btn-ok']"
+      },
+      {
+        "elementName": "address_cppy",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='invitation-panel-foot']//button"
+      }
+     ]
+},
+{
+    "pageName": "qiYeGuanLi",
+    "elements":
+    [
+      {
+        "elementName": "xpath_QYGL",
+        "locateUsing": "xpath",
+        "locator": "//ul[@class='sm-list-tabs']//li[@class='list-tab enterprise']"
+      },
+      {
+        "elementName": "xpath_qiYeName",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='settings creator']//div[1]//a"
+      },
+      {
+        "elementName": "xpath_qiYeName_input",
+        "locateUsing": "xpath",
+        "locator": "//input[@class='sm-form-control ']"
+      },
+      {
+        "elementName": "xpath_qiYeName_ok",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='btn btn-ok']"
+      },
+      {
+        "elementName": "xpath_qiYeName_name",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='settings creator']//div[1]//div[@class='desc']"
+      },
+      {
+        "elementName": "xpath_qiYeYaoQing",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='settings creator']//div[2]//a"
+      },
+      {
+        "elementName": "xpath_qiYeYaoQing_3",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='modal-content']//div[3]"
+      },
+      {
+        "elementName": "xpath_qiYeYaoQing_2",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='modal-content']//div[2]"
+      },
+      {
+        "elementName": "xpath_qiYeYaoQing_1",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='modal-content']//div[1]"
+      },
+      {
+        "elementName": "xpath_qiYeYaoQing_OK",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='btn btn-ok']"
+      },
+      {
+        "elementName": "xpath_setAdmin",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='settings creator']//div[4]//a"
+      },
+      {
+        "elementName": "xpath_setAdmin_OK",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='btn btn-ok']"
+      },
+      {
+        "elementName": "xpath_setAdmin_1",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='modal-content']//div[1]"
+      },
+      {
+        "elementName": "xpath_setAdmin_2",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='modal-content']//div[2]"
+      },
+      {
+        "elementName": "xpath_addCollaborators",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='settings creator']//div[3]//a"
+      },
+      {
+        "elementName": "xpath_addCollaborators_1",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='modal-content']//div[2]"
+      },
+      {
+        "elementName": "xpath_addCollaborators_2",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='modal-content']//div[3]"
+      },
+      {
+        "elementName": "xpath_addCollaborators_3",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='modal-content']//div[4]"
+      },
+      {
+        "elementName": "xpath_addCollaborators_OK",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='btn btn-ok']"
+      },
+      {
+        "elementName": "xpath_transferCompany",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='settings creator']//div[6]//span"
+      },
+      {
+        "elementName": "xpath_transferCompanyTo",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='ui-list']//div[1]"
+      },
+      {
+        "elementName": "xpath_transferCompanyTo_ok",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='btn btn-error']"
+      },
+      {
+        "elementName": "xpath_search",
+        "locateUsing": "xpath",
+        "locator": "//input[@class='search-input standard']"
+      },
+      {
+        "elementName": "xpath_banUser_1",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='shimo-modal-content']//div//div[1]"
+      },
+      {
+        "elementName": "xpath_banUser_2",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='shimo-modal-content']//div//div[2]"
+      },
+      {
+        "elementName": "xpath_banUser_ok",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='btn btn-ok']"
+      },
+      {
+        "elementName": "xpath_userTab_1",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='member-filter']//a[1]"
+      },
+      {
+        "elementName": "xpath_userTab_2",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='member-filter']//a[2]"
+      },
+      {
+        "elementName": "xpath_userTab_3",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='member-filter']//a[3]"
+      }
+     ]
+},
+{
+    "pageName": "desktop",
+    "elements":
+    [
+      {
+        "elementName": "xpath_new_form",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='menu-wrap']//div[@class='menu-wrap-inner']//div[2]"
+      },
+      {
+        "elementName": "xpath_new",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='menu-wrap']//div[@class='menu-wrap-inner']//div[1]"
+      },
+      {
+        "elementName": "xpath_input",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='span-input-wrap']//input"
+      },
+      {
+        "elementName": "xpath_assert",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='list-outer-container ']//ul//li[1]//div//a//div//div[2]"
+      },
+      {
+        "elementName": "xpath_folder",
+        "locateUsing": "className",
+        "locator": "folder-style"
+      },
+      {
+        "elementName": "xpath_user_icon",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='avatar config-avatar']//div[@class='img-wrap ']"
+      },
+      {
+        "elementName": "xpath_user_msg",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='message-popover-trigger']//div[@class='icon icon-message']"
+      },
+      {
+        "elementName": "xpath_user_icon_qiYeGuanLi",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='header-menu-items']//a[2]"
+      },
+      {
+        "elementName": "xpath_user_icon_zhangHaoSheZhi",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='header-menu-items']//a[1]"
+      },
+      {
+        "elementName": "xpath_user_icon_logout",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='header-menu-items']//a[4]"
+      },
+      {
+        "elementName": "xpath_add_Collaborators",
+        "locateUsing": "xpath",
+        "locator": "//button[@class='btn btn-ok']"
+      },
+      {
+        "elementName": "xpath_collaborators_OK",
+        "locateUsing": "xpath",
+        "locator": "//button[@class='btn btn btn-ok']"
+      },
+      {
+        "elementName": "xpath_collaborators_edit",
+        "locateUsing": "xpath",
+        "locator": "//div[@class='sm-dropdown-button']"
+      },
+      {
+        "elementName": "xpath_collaborators_edit_delete",
+        "locateUsing": "xpath",
+        "locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical roles-menu sm-dropdown-menu-root']//li[5]"
+      }
+     ]
+},
+{
+    "pageName": "article",
+    "elements":
+    [
+      {
+        "elementName": "id_input",
+        "locateUsing": "id",
+        "locator": "innerdocbody"
+      },
+      {
+        "elementName": "class_title",
+        "locateUsing": "className",
+        "locator": "type-txt"
+      },
+      {
+        "elementName": "class_title_big",
+        "locateUsing": "linkText",
+        "locator": "大标题"
+      },
+      {
+        "elementName": "class_title_mid",
+        "locateUsing": "linkText",
+        "locator": "中标题"
+      },
+      {
+        "elementName": "class_title_small",
+        "locateUsing": "linkText",
+        "locator": "小标题"
+      },
+      {
+        "elementName": "class_title_ordinary",
+        "locateUsing": "linkText",
+        "locator": "普通"
+      },
+      {
+        "elementName": "class_fontSize",
+        "locateUsing": "className",
+        "locator": "size-txt"
+      },
+      {
+        "elementName": "class_fontSize_36",
+        "locateUsing": "linkText",
+        "locator": "36"
+      },
+      {
+        "elementName": "class_fontSize_30",
+        "locateUsing": "linkText",
+        "locator": "30"
+      },
+      {
+        "elementName": "class_fontSize_24",
+        "locateUsing": "linkText",
+        "locator": "24"
+      },
+      {
+        "elementName": "class_fontSize_18",
+        "locateUsing": "linkText",
+        "locator": "18"
+      },
+      {
+        "elementName": "class_fontSize_14",
+        "locateUsing": "linkText",
+        "locator": "14"
+      },
+      {
+        "elementName": "class_fontSize_12",
+        "locateUsing": "linkText",
+        "locator": "12"
+      },
+      {
+        "elementName": "class_fontSize_11",
+        "locateUsing": "linkText",
+        "locator": "11"
+      },
+      {
+        "elementName": "class_fontSize_10",
+        "locateUsing": "linkText",
+        "locator": "10"
+      },
+      {
+        "elementName": "class_fontSize_9",
+        "locateUsing": "linkText",
+        "locator": "9"
+      }
+     ]
+}
+]
