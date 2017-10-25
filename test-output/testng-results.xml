@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9007" started-at="2017-10-24T09:18:35Z" finished-at="2017-10-24T09:18:44Z">
+  <suite name="Default suite" duration-ms="13852" started-at="2017-10-25T02:15:55Z" finished-at="2017-10-25T02:16:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9007" started-at="2017-10-24T09:18:35Z" finished-at="2017-10-24T09:18:44Z">
+    <test name="Default test" duration-ms="13852" started-at="2017-10-25T02:15:55Z" finished-at="2017-10-25T02:16:09Z">
       <class name="test.testDesktop">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:test.testDesktop@60bd273d]" name="setUp" is-config="true" duration-ms="8763" started-at="2017-10-24T17:18:35Z" finished-at="2017-10-24T17:18:44Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.testDesktop@60bd273d]" name="setUp" is-config="true" duration-ms="13584" started-at="2017-10-25T10:15:55Z" finished-at="2017-10-25T10:16:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="desktop()[pri:0, instance:test.testDesktop@60bd273d]" name="desktop" duration-ms="214" started-at="2017-10-24T17:18:44Z" finished-at="2017-10-24T17:18:44Z">
+        <test-method status="PASS" signature="desktop()[pri:0, instance:test.testDesktop@60bd273d]" name="desktop" duration-ms="249" started-at="2017-10-25T10:16:09Z" finished-at="2017-10-25T10:16:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- desktop -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.testDesktop@60bd273d]" name="tearDown" is-config="true" duration-ms="19" started-at="2017-10-24T17:18:44Z" finished-at="2017-10-24T17:18:44Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.testDesktop@60bd273d]" name="tearDown" is-config="true" duration-ms="17" started-at="2017-10-25T10:16:09Z" finished-at="2017-10-25T10:16:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="lastMethod()[pri:0, instance:test.testDesktop@60bd273d]" name="lastMethod" is-config="true" duration-ms="0" started-at="2017-10-24T17:18:44Z" finished-at="2017-10-24T17:18:44Z">
+        <test-method status="PASS" signature="lastMethod()[pri:0, instance:test.testDesktop@60bd273d]" name="lastMethod" is-config="true" duration-ms="1" started-at="2017-10-25T10:16:09Z" finished-at="2017-10-25T10:16:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lastMethod -->
