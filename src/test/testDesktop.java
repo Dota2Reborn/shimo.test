@@ -1,5 +1,7 @@
 package test;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -110,8 +112,36 @@ public class testDesktop {
 	
 	@Test
 	public void desktop() {
+		String url = "error";
 		desktop.click();
+		url = driver.getCurrentUrl();
+//		System.out.println(url);
+		Boolean desktop_url = url.equals("https://release.feature.shimodev.com/desktop");
+		
+		dashboard.click();
+		url = driver.getCurrentUrl();
+		Boolean dashboard_url1 = url.equals("https://release.feature.shimodev.com/dashboard/updated");
+		
+		dashboard_2.click();
+		url = driver.getCurrentUrl();
+		Boolean dashboard_url2 = url.equals("https://release.feature.shimodev.com/dashboard/used");
+		
+		dashboard_3.click();
+		url = driver.getCurrentUrl();
+		Boolean dashboard_url3 = url.equals("https://release.feature.shimodev.com/dashboard/own");
+		
+		dashboard_4.click();
+		url = driver.getCurrentUrl();
+		Boolean dashboard_url4 = url.equals("https://release.feature.shimodev.com/dashboard/shared");
+
+		assertEquals(true, desktop_url&&dashboard_url1&&dashboard_url2&&dashboard_url3&&dashboard_url4);
+		
+//		favorites.click();
+//		trash.click();
+//		dashboard.click();
 	}
+	
+	
 	
 	@SearchWith(pageName = "new_index", elementName = "dashboard")
 	public WebElement dashboard;
@@ -121,6 +151,15 @@ public class testDesktop {
 	public WebElement favorites;
 	@SearchWith(pageName = "new_index", elementName = "trash")
 	public WebElement trash;
+	
+	@SearchWith(pageName = "new_index", elementName = "dashboard_1")
+	public WebElement dashboard_1;
+	@SearchWith(pageName = "new_index", elementName = "dashboard_2")
+	public WebElement dashboard_2;
+	@SearchWith(pageName = "new_index", elementName = "dashboard_3")
+	public WebElement dashboard_3;
+	@SearchWith(pageName = "new_index", elementName = "dashboard_4")
+	public WebElement dashboard_4;
 	
 	
 	@SearchWith(pageName = "homePage", elementName = "userEmail")
