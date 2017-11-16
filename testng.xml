@@ -3,10 +3,7 @@
 <suite name="Suite" parallel="tests" thread-count="5" >
   <test name="Test">
     <classes>
-      <class name="pipi.shimoTest"/>
-      <class name="sample.newFileSample"/>
-      <class name="pipi.MyTest"/>
-      <class name="pipi.test"/>
+      <class name="test.testDesktop"/>
       <class name="test.testZhuZhan"/>
     </classes>
   </test> <!-- Test -->

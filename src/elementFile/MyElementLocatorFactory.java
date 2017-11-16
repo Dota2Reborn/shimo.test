@@ -1,6 +1,5 @@
 package elementFile;
 
-
 import java.lang.reflect.Field;
 
 import org.openqa.selenium.SearchContext;
@@ -19,8 +18,7 @@ public class MyElementLocatorFactory implements ElementLocatorFactory {
 
 	@Override
 	public ElementLocator createLocator(Field field) {
-		return new DefaultElementLocator(searchContext,
-				new MyAnnotation(field));
+		return new DefaultElementLocator(searchContext, new MyAnnotation(field));
 	}
 
 }

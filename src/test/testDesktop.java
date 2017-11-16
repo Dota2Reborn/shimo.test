@@ -199,11 +199,11 @@ public class testDesktop {
 		desktop_setting.click();
 		desktop_setting_doc_11.click();
 		desktop_newFolder_name_ok.click();
-		
+
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg1 = desktop1_1.getText();
-		
+
 		assertEquals(msg, msg1);
 
 	}
@@ -233,9 +233,9 @@ public class testDesktop {
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg1 = desktop1_1.getText();
-		
+
 		assertEquals(msg, msg1);
-		
+
 	}
 
 	@Test
@@ -268,11 +268,10 @@ public class testDesktop {
 		desktop_setting_folder_9.click();
 		desktop_newFolder_name_ok.click();
 
-
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg1 = desktop1_1.getText();
-		
+
 		assertEquals(msg, msg1);
 	}
 
@@ -366,7 +365,7 @@ public class testDesktop {
 		login("autoTest@shimo.im", "123123");
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		
+
 		String msg = desktop1_1.getText();
 
 		Actions action = new Actions(driver);
@@ -383,7 +382,7 @@ public class testDesktop {
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		desktop1_1_folder.click();
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_6));
@@ -393,13 +392,13 @@ public class testDesktop {
 		desktop_moveFolder_back_button.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_button));
 		desktop_moveFolder_button.click();
-		
+
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop));
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg1 = desktop1_1.getText();
-		
+
 		assertEquals(msg, msg1);
 	}
 
@@ -447,8 +446,6 @@ public class testDesktop {
 	public WebElement desktop_moveFolder_back_button;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_1")
 	public WebElement desktop_moveFolder_list_1;
-	
-	
 
 	@SearchWith(pageName = "doc", elementName = "b_back")
 	public WebElement b_back;

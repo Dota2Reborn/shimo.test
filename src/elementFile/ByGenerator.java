@@ -1,6 +1,5 @@
 package elementFile;
 
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -16,30 +15,22 @@ import com.google.common.base.Preconditions;
 public class ByGenerator {
 	private static final String locatorFile = "locator.json";
 
-	public static By createBy(String pageName, String elementName,
-			Object... replaceValues) {
-		Preconditions.checkArgument(StringUtils.isNotEmpty(pageName),
-				"Page elementName is missing.");
-		Preconditions.checkArgument(StringUtils.isNotEmpty(elementName),
-				"Element elementName is missing.");
+	public static By createBy(String pageName, String elementName, Object... replaceValues) {
+		Preconditions.checkArgument(StringUtils.isNotEmpty(pageName), "Page elementName is missing.");
+		Preconditions.checkArgument(StringUtils.isNotEmpty(elementName), "Element elementName is missing.");
 
-		File file = new File(
-				ByGenerator.class.getResource(locatorFile).getFile());
-		Preconditions.checkArgument(file.exists(),
-				"Unable to locate " + locatorFile);
+		File file = new File(ByGenerator.class.getResource(locatorFile).getFile());
+		Preconditions.checkArgument(file.exists(), "Unable to locate " + locatorFile);
 		JSONObject foundObject = getElementJson(file, pageName, elementName);
 
-		Preconditions.checkState(foundObject != null,
-				"No entry found for the page [" + pageName + "] and element ["
-						+ elementName + "] in the " + "locators file ["
-						+ locatorFile + "]");
+		Preconditions.checkState(foundObject != null, "No entry found for the page [" + pageName + "] and element ["
+				+ elementName + "] in the " + "locators file [" + locatorFile + "]");
 		String locateUsing = foundObject.getString("locateUsing");
 		String locator = foundObject.getString("locator");
 		if (replaceValues != null && replaceValues.length > 0) {
 			locator = String.format(locator, replaceValues);
 		}
-		Preconditions.checkArgument(StringUtils.isNotEmpty(locator),
-				"Locator cannot be null (or) empty.");
+		Preconditions.checkArgument(StringUtils.isNotEmpty(locator), "Locator cannot be null (or) empty.");
 
 		if (("xpath".equalsIgnoreCase(locateUsing))) {
 			return new By.ByXPath(locator);
@@ -65,12 +56,10 @@ public class ByGenerator {
 		if (("partialLinkText".equalsIgnoreCase(locateUsing))) {
 			return new By.ByPartialLinkText(locator);
 		}
-		throw new UnsupportedOperationException(
-				"Currently " + locateUsing + " is NOT supported.");
+		throw new UnsupportedOperationException("Currently " + locateUsing + " is NOT supported.");
 	}
 
-	private static JSONObject getElementJson(File file, String pageName,
-			String elementName) {
+	private static JSONObject getElementJson(File file, String pageName, String elementName) {
 		FileReader fileReader = null;
 		BufferedReader bufferedReader = null;
 		StringBuilder stringBuilder = new StringBuilder();

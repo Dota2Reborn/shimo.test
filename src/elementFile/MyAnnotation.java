@@ -1,6 +1,5 @@
 package elementFile;
 
-
 import java.lang.reflect.Field;
 
 import org.openqa.selenium.By;
@@ -15,14 +14,12 @@ public class MyAnnotation extends Annotations {
 	@Override
 	public By buildBy() {
 		By by = null;
-		SearchWith searchWith = super.getField()
-				.getAnnotation(SearchWith.class);
+		SearchWith searchWith = super.getField().getAnnotation(SearchWith.class);
 
 		if (null != searchWith) {
-			by = ByGenerator.createBy(searchWith.pageName(),
-					searchWith.elementName());
+			by = ByGenerator.createBy(searchWith.pageName(), searchWith.elementName());
 		}
-//		System.out.println("By INFO: " + (null == by));
+		// System.out.println("By INFO: " + (null == by));
 		return by;
 	}
 

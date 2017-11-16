@@ -1,25 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13852" started-at="2017-10-25T02:15:55Z" finished-at="2017-10-25T02:16:09Z">
+  <suite name="Default suite" duration-ms="63788" started-at="2017-11-14T10:34:50Z" finished-at="2017-11-14T10:35:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13852" started-at="2017-10-25T02:15:55Z" finished-at="2017-10-25T02:16:09Z">
+    <test name="Default test" duration-ms="63788" started-at="2017-11-14T10:34:50Z" finished-at="2017-11-14T10:35:53Z">
       <class name="test.testDesktop">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:test.testDesktop@60bd273d]" name="setUp" is-config="true" duration-ms="13584" started-at="2017-10-25T10:15:55Z" finished-at="2017-10-25T10:16:09Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.testDesktop@130c12b7]" name="setUp" is-config="true" duration-ms="496" started-at="2017-11-14T18:34:50Z" finished-at="2017-11-14T18:34:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="desktop()[pri:0, instance:test.testDesktop@60bd273d]" name="desktop" duration-ms="249" started-at="2017-10-25T10:16:09Z" finished-at="2017-10-25T10:16:09Z">
+        <test-method status="PASS" signature="desktop_doc_setting_1()[pri:0, instance:test.testDesktop@130c12b7]" name="desktop_doc_setting_1" duration-ms="5097" started-at="2017-11-14T18:34:50Z" finished-at="2017-11-14T18:34:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- desktop -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.testDesktop@60bd273d]" name="tearDown" is-config="true" duration-ms="17" started-at="2017-10-25T10:16:09Z" finished-at="2017-10-25T10:16:09Z">
+        </test-method> <!-- desktop_doc_setting_1 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.testDesktop@130c12b7]" name="tearDown" is-config="true" duration-ms="95" started-at="2017-11-14T18:34:55Z" finished-at="2017-11-14T18:34:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="lastMethod()[pri:0, instance:test.testDesktop@60bd273d]" name="lastMethod" is-config="true" duration-ms="1" started-at="2017-10-25T10:16:09Z" finished-at="2017-10-25T10:16:09Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.testDesktop@130c12b7]" name="setUp" is-config="true" duration-ms="1244" started-at="2017-11-14T18:34:55Z" finished-at="2017-11-14T18:34:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="desktop_doc_setting_2()[pri:0, instance:test.testDesktop@130c12b7]" name="desktop_doc_setting_2" duration-ms="4530" started-at="2017-11-14T18:34:57Z" finished-at="2017-11-14T18:35:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_doc_setting_2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.testDesktop@130c12b7]" name="tearDown" is-config="true" duration-ms="11" started-at="2017-11-14T18:35:01Z" finished-at="2017-11-14T18:35:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.testDesktop@130c12b7]" name="setUp" is-config="true" duration-ms="977" started-at="2017-11-14T18:35:01Z" finished-at="2017-11-14T18:35:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="desktop_doc_setting_3()[pri:0, instance:test.testDesktop@130c12b7]" name="desktop_doc_setting_3" duration-ms="4767" started-at="2017-11-14T18:35:02Z" finished-at="2017-11-14T18:35:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_doc_setting_3 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.testDesktop@130c12b7]" name="tearDown" is-config="true" duration-ms="11" started-at="2017-11-14T18:35:07Z" finished-at="2017-11-14T18:35:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.testDesktop@130c12b7]" name="setUp" is-config="true" duration-ms="446" started-at="2017-11-14T18:35:07Z" finished-at="2017-11-14T18:35:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="desktop_doc_setting_6()[pri:0, instance:test.testDesktop@130c12b7]" name="desktop_doc_setting_6" duration-ms="10757" started-at="2017-11-14T18:35:07Z" finished-at="2017-11-14T18:35:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_doc_setting_6 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.testDesktop@130c12b7]" name="tearDown" is-config="true" duration-ms="10" started-at="2017-11-14T18:35:18Z" finished-at="2017-11-14T18:35:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.testDesktop@130c12b7]" name="setUp" is-config="true" duration-ms="695" started-at="2017-11-14T18:35:18Z" finished-at="2017-11-14T18:35:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="desktop_newDoc()[pri:0, instance:test.testDesktop@130c12b7]" name="desktop_newDoc" duration-ms="12574" started-at="2017-11-14T18:35:19Z" finished-at="2017-11-14T18:35:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_newDoc -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.testDesktop@130c12b7]" name="tearDown" is-config="true" duration-ms="10" started-at="2017-11-14T18:35:31Z" finished-at="2017-11-14T18:35:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.testDesktop@130c12b7]" name="setUp" is-config="true" duration-ms="425" started-at="2017-11-14T18:35:31Z" finished-at="2017-11-14T18:35:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="desktop_newFolder()[pri:0, instance:test.testDesktop@130c12b7]" name="desktop_newFolder" duration-ms="5660" started-at="2017-11-14T18:35:32Z" finished-at="2017-11-14T18:35:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_newFolder -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.testDesktop@130c12b7]" name="tearDown" is-config="true" duration-ms="9" started-at="2017-11-14T18:35:38Z" finished-at="2017-11-14T18:35:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.testDesktop@130c12b7]" name="setUp" is-config="true" duration-ms="426" started-at="2017-11-14T18:35:38Z" finished-at="2017-11-14T18:35:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="desktop_newSheet()[pri:0, instance:test.testDesktop@130c12b7]" name="desktop_newSheet" duration-ms="12428" started-at="2017-11-14T18:35:38Z" finished-at="2017-11-14T18:35:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_newSheet -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.testDesktop@130c12b7]" name="tearDown" is-config="true" duration-ms="9" started-at="2017-11-14T18:35:50Z" finished-at="2017-11-14T18:35:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.testDesktop@130c12b7]" name="setUp" is-config="true" duration-ms="458" started-at="2017-11-14T18:35:50Z" finished-at="2017-11-14T18:35:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="desktop_show_type()[pri:0, instance:test.testDesktop@130c12b7]" name="desktop_show_type" duration-ms="2618" started-at="2017-11-14T18:35:51Z" finished-at="2017-11-14T18:35:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_show_type -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.testDesktop@130c12b7]" name="tearDown" is-config="true" duration-ms="9" started-at="2017-11-14T18:35:53Z" finished-at="2017-11-14T18:35:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="lastMethod()[pri:0, instance:test.testDesktop@130c12b7]" name="lastMethod" is-config="true" duration-ms="0" started-at="2017-11-14T18:35:53Z" finished-at="2017-11-14T18:35:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lastMethod -->
