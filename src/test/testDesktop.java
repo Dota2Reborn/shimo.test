@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import elementFile.ByGenerator;
 import elementFile.CustomFieldDecorator;
 import elementFile.MyElementLocatorFactory;
 import elementFile.SearchWith;
@@ -402,6 +404,133 @@ public class testDesktop {
 		assertEquals(msg, msg1);
 	}
 
+	@Test
+	public void desktop_doc_setting_8() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+
+		desktop1_1_folder.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		Actions action = new Actions(driver);
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_8));
+		desktop_setting_doc_8.click();
+
+		Date date = new Date();
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+		String time = format.format(date);
+
+		desktop_newFolder_name.sendKeys(time);
+		desktop_newFolder_name_ok.click();
+
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg = desktop1_1.getText();
+
+		assertEquals(time, msg);
+	}
+
+	@Test
+	public void desktop_doc_setting_9() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		String msg = desktop1_1.getText();
+		Actions action = new Actions(driver);
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_9));
+		desktop_setting_doc_9.click();
+
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg1 = desktop1_1.getText();
+
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
+		desktop_setting_doc_11.click();
+		desktop_newFolder_name_ok.click();
+
+		assertEquals(msg1, "¸±±¾ " + msg);
+	}
+
+	@Test(enabled = false)
+	public void desktop_moveTo() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		Thread.sleep(1000);
+		Actions action = new Actions(driver);
+		// action.clickAndHold(desktop1_1).perform();
+		// Thread.sleep(1000);
+		// action.moveToElement(desktop1_1_folder).perform();
+		// Thread.sleep(1000);
+		// action.release().perform();
+		action.dragAndDrop(desktop1_1, desktop1_1_folder).perform();
+		// action.dragAndDropBy(desktop1_1,100,100).perform();
+
+	}
+
+	@Test
+	public void desktop_import_doc() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		WebElement uploadButton = desktop_import;
+		String url = System.getProperty("user.dir") + "/doc/test_doc.docx";
+		System.out.println(url);
+		uploadButton.sendKeys(url);
+
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(b_back));
+		b_back.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg = desktop1_1.getText();
+		Actions action = new Actions(driver);
+		action.moveToElement(desktop1_1).perform();
+		desktop_setting.click();
+		desktop_setting_doc_11.click();
+		desktop_newFolder_name_ok.click();
+
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		assertEquals(msg, "test_doc");
+
+	}
+
+	@Test
+	public void desktop_import_sheet() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		WebElement uploadButton = desktop_import;
+		String url = System.getProperty("user.dir") + "/doc/test_sheet.xlsx";
+		System.out.println(url);
+		uploadButton.sendKeys(url);
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_cancel));
+		desktop_newFolder_name_cancel.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg = desktop1_1.getText();
+
+		Actions action = new Actions(driver);
+		action.moveToElement(desktop1_1).perform();
+		desktop_setting.click();
+		desktop_setting_doc_11.click();
+		desktop_newFolder_name_ok.click();
+
+		assertEquals(msg, "test_sheet");
+
+	}
+
 	@SearchWith(pageName = "desktop", elementName = "desktop")
 	public WebElement desktop;
 	@SearchWith(pageName = "desktop", elementName = "desktop_new")
@@ -412,6 +541,8 @@ public class testDesktop {
 	public WebElement desktop_newSheet;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder")
 	public WebElement desktop_newFolder;
+	@SearchWith(pageName = "desktop", elementName = "desktop_import")
+	public WebElement desktop_import;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name")
 	public WebElement desktop_newFolder_name;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_ok")
@@ -430,6 +561,10 @@ public class testDesktop {
 	public WebElement desktop_setting_doc_3;
 	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_6")
 	public WebElement desktop_setting_doc_6;
+	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_8")
+	public WebElement desktop_setting_doc_8;
+	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_9")
+	public WebElement desktop_setting_doc_9;
 	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_11")
 	public WebElement desktop_setting_doc_11;
 	@SearchWith(pageName = "desktop", elementName = "desktop_setting_folder_9")

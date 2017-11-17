@@ -64,6 +64,12 @@
 				"注释": "新建文件按钮"
 			},
 			{
+				"elementName": "desktop_import",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sc-kAzzGY knioBL']//form//input",
+				"注释": "导入"
+			},
+			{
 				"elementName": "desktop_newDoc",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-dropdown  randomClass-dhpOWU  sm-dropdown-placement-bottomCenter ']//ul//li[1]",
@@ -108,7 +114,7 @@
 			{
 				"elementName": "desktop1_1_folder",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[@class='sc-bfYoXt ipfbwM desktop folder-tile']",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')]",
 				"注释": "平铺模式第一行第一个文件夹"
 			},
 			{
@@ -140,6 +146,18 @@
 				"locateUsing": "xpath",
 				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[6]",
 				"注释": "文档表格移动"
+			},
+			{
+				"elementName": "desktop_setting_doc_8",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[8]",
+				"注释": "文档表格重命名"
+			},
+			{
+				"elementName": "desktop_setting_doc_9",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[9]",
+				"注释": "文档表格创建副本"
 			},
 			{
 				"elementName": "desktop_setting_doc_11",
