@@ -1,6 +1,8 @@
 package test;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,18 +65,6 @@ public class testAddCollaborator {
 
 	@AfterMethod
 	public void tearDown() throws Exception {
-		// logout();
-		// Set<String> winHandels = driver.getWindowHandles();
-		// List<String> it = new ArrayList<String>(winHandels);
-		// int n = it.size();
-		// for (int i = 0; i < n - 1; i++) {
-		// driver.switchTo().window(it.get(i));
-		// driver.close();
-		// }
-		//
-		// winHandels = driver.getWindowHandles();
-		// it = new ArrayList<String>(winHandels);
-		// driver.switchTo().window(it.get(0));
 		init();
 		System.out.println("--------------------------------------------");
 	}
@@ -89,7 +79,6 @@ public class testAddCollaborator {
 	public void login(String user, String pwd) {
 
 		driver.navigate().to("https://release.feature.shimodev.com/login");
-
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
 		userPwd.sendKeys(pwd);
@@ -109,6 +98,7 @@ public class testAddCollaborator {
 		driver.switchTo().window(it.get(i));
 	}
 
+	//删除浏览器多余标签页
 	public void init() {
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -134,8 +124,9 @@ public class testAddCollaborator {
 		}
 	}
 
-	@Test(enabled = false)
-	public void dashboard() {
+	// 基础版用户，文件协作者为5人，不能继续添加协作者
+	@Test(enabled = true)
+	public void addCollaborator_1() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
@@ -144,6 +135,45 @@ public class testAddCollaborator {
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_5.click();
 
+		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator_close));
+		Boolean exist = button_addCollaborator.isEnabled();
+
+		assertFalse(exist);
+	}
+
+	//通过输入邮箱地址添加协作者，并且在协作者列表中移除该协作者
+	@Test(enabled = true)
+	public void addCollaborator_2() throws InterruptedException {
+		login("autoTest01@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+
+		Actions action = new Actions(driver);
+		action.contextClick(desktop1_1_folder).perform();
+		desktop_setting_doc_5.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+		String msg_a = addCollaborator_total.getText();
+		button_addCollaborator.click();
+
+		input_addCollaborator.sendKeys("11@cc.ccc");
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+		b_addCollaborator_1_add.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
+		b_addCollaborator_ok.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+		b_addCollaborator_2_list.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
+		list_addCollaborator_4.click();
+
+		Thread.sleep(500);
+		String msg_b = addCollaborator_total.getText();
+		
+		assertEquals(msg_a, msg_b);
 	}
 
 	@SearchWith(pageName = "desktop", elementName = "desktop")
@@ -158,6 +188,9 @@ public class testAddCollaborator {
 	public WebElement desktop_new;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1")
 	public WebElement desktop1_1;
+	@SearchWith(pageName = "desktop", elementName = "desktop1_1_folder")
+	public WebElement desktop1_1_folder;
+
 	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_5")
 	public WebElement desktop_setting_doc_5;
 
@@ -169,4 +202,21 @@ public class testAddCollaborator {
 	public WebElement xpath_login;
 	@SearchWith(pageName = "homePage", elementName = "login_submit")
 	public WebElement login_submit;
+
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator")
+	public WebElement button_addCollaborator;
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_close")
+	public WebElement button_addCollaborator_close;
+	@SearchWith(pageName = "addCollaborator", elementName = "input_addCollaborator")
+	public WebElement input_addCollaborator;
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_add")
+	public WebElement b_addCollaborator_1_add;
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_2_list")
+	public WebElement b_addCollaborator_2_list;
+	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4")
+	public WebElement list_addCollaborator_4;
+	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_total")
+	public WebElement addCollaborator_total;
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_ok")
+	public WebElement b_addCollaborator_ok;
 }

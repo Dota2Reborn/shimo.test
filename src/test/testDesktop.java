@@ -160,6 +160,12 @@ public class testDesktop {
 		// dashboard.click();
 	}
 
+	/**
+	* 新建文档
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_newDoc() throws InterruptedException {
 
@@ -188,6 +194,12 @@ public class testDesktop {
 
 	}
 
+	/**
+	* 新建表格
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_newSheet() {
 
@@ -218,6 +230,12 @@ public class testDesktop {
 
 	}
 
+	/**
+	* 新建文件夹
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_newFolder() {
 
@@ -255,6 +273,12 @@ public class testDesktop {
 		assertEquals(msg, msg1);
 	}
 
+	/**
+	* 桌面-列表/平铺 模式切换
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_show_type() throws InterruptedException {
 
@@ -279,6 +303,12 @@ public class testDesktop {
 
 	}
 
+	/**
+	* 右键文档-在新标签页中打开
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_doc_setting_1() {
 		login("autoTest@shimo.im", "123123");
@@ -295,6 +325,12 @@ public class testDesktop {
 		assertEquals(2, n);
 	}
 
+	/**
+	* 右键文档-添加到快捷方式
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_doc_setting_2() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -317,6 +353,12 @@ public class testDesktop {
 
 	}
 
+	/**
+	* 右键文档-收藏
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_doc_setting_3() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -339,6 +381,12 @@ public class testDesktop {
 		assertEquals(doc_name, doc_name1);
 	}
 
+	/**
+	* 右键文档-移动
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_doc_setting_6() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -381,6 +429,12 @@ public class testDesktop {
 		assertEquals(msg, msg1);
 	}
 
+	/**
+	* 右键文档-重命名
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_doc_setting_8() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -409,6 +463,12 @@ public class testDesktop {
 		assertEquals(time, msg);
 	}
 
+	/**
+	* 右键文档-创建副本
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_doc_setting_9() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -433,6 +493,12 @@ public class testDesktop {
 		assertEquals(msg1, "副本 " + msg);
 	}
 
+	/**
+	* 右键文件夹-在新标签页打开
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_folder_setting_1() {
 		login("autoTest@shimo.im", "123123");
@@ -449,6 +515,12 @@ public class testDesktop {
 		assertEquals(2, n);
 	}
 
+	/**
+	* 右键文件夹-添加到快捷方式
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_folder_setting_2() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -471,6 +543,12 @@ public class testDesktop {
 
 	}
 
+	/**
+	* 右键文件夹-收藏
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_folder_setting_3() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -493,7 +571,12 @@ public class testDesktop {
 		assertEquals(doc_name, doc_name1);
 	}
 
-	// 文件夹移动，重命名，删除
+	/**
+	* 右键文件夹-文件夹移动，重命名，删除
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_folder_setting() {
 
@@ -566,6 +649,12 @@ public class testDesktop {
 
 	}
 
+	/**
+	* 导入文档
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_import_doc() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -596,6 +685,12 @@ public class testDesktop {
 
 	}
 
+	/**
+	* 导入表格
+	* @author 刘晨
+	* @Time 2017-11-20
+	*
+	*/
 	@Test
 	public void desktop_import_sheet() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
