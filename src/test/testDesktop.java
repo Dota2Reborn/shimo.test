@@ -54,7 +54,7 @@ public class testDesktop {
 		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
 		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
 		PageFactory.initElements(customFieldDecorator, this);
-		wait = new WebDriverWait(driver, 10);
+		wait = new WebDriverWait(driver, 20);
 		driver.navigate().to("https://release.feature.shimodev.com/");
 
 	}
@@ -456,6 +456,121 @@ public class testDesktop {
 		assertEquals(msg1, "副本 " + msg);
 	}
 
+	@Test
+	public void desktop_folder_setting_1() {
+		login("autoTest@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+
+		Actions action = new Actions(driver);
+		action.contextClick(desktop1_1_folder).perform();
+		desktop_setting_doc_1.click();
+
+		Set<String> winHandels = driver.getWindowHandles();
+		List<String> it = new ArrayList<String>(winHandels);
+		int n = it.size();
+		assertEquals(2, n);
+	}
+
+	@Test
+	public void desktop_folder_setting_2() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+
+		Actions action = new Actions(driver);
+		action.contextClick(desktop1_1_folder).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
+		desktop_setting_doc_2.click();
+		Thread.sleep(500);
+		String msg = desktop_shortcut_1.getText();
+		String doc_name = desktop1_1_folder.getText();
+
+		action.contextClick(desktop1_1_folder).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
+		desktop_setting_doc_2.click();
+
+		assertEquals(doc_name, msg);
+
+	}
+
+	@Test
+	public void desktop_folder_setting_3() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+
+		String doc_name = desktop1_1_folder.getText();
+		Actions action = new Actions(driver);
+		action.contextClick(desktop1_1_folder).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_3));
+		desktop_setting_doc_3.click();
+
+		favorites.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		String doc_name1 = desktop1_1_folder.getText();
+		action.contextClick(desktop1_1_folder).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_3));
+		desktop_setting_doc_3.click();
+
+		assertEquals(doc_name, doc_name1);
+	}
+
+	// 文件夹移动，重命名，删除
+	@Test
+	public void desktop_folder_setting() {
+
+		login("autoTest@shimo.im", "123123");
+
+		desktop.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		desktop_new.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder));
+		desktop_newFolder.click();
+
+		desktop_newFolder_name.sendKeys("FFFFF");
+		desktop_newFolder_name_ok.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("settings")));
+		desktop.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+
+		Actions action = new Actions(driver);
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_6));
+		desktop_setting_doc_6.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_list_2));
+		desktop_moveFolder_list_2.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_button));
+		desktop_moveFolder_button.click();
+
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		desktop1_1_folder.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_8));
+		desktop_setting_doc_8.click();
+
+		desktop_newFolder_name.sendKeys("删除文件夹");
+		desktop_newFolder_name_ok.click();
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg = desktop1_1.getText();
+
+		action.moveToElement(desktop1_1).perform();
+		desktop_setting.click();
+		desktop_setting_folder_9.click();
+		desktop_newFolder_name_ok.click();
+
+		assertEquals(msg, "删除文件夹");
+	}
+
 	@Test(enabled = false)
 	public void desktop_moveTo() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -581,6 +696,8 @@ public class testDesktop {
 	public WebElement desktop_moveFolder_back_button;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_1")
 	public WebElement desktop_moveFolder_list_1;
+	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_2")
+	public WebElement desktop_moveFolder_list_2;
 
 	@SearchWith(pageName = "doc", elementName = "b_back")
 	public WebElement b_back;

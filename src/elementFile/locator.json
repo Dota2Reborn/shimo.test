@@ -191,6 +191,12 @@
 				"注释": "移动文件到文件夹，选择列表中第一个文件夹"
 			},
 			{
+				"elementName": "desktop_moveFolder_list_2",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sc-gRnDUn lmYtmU']//li[2]",
+				"注释": "移动文件到文件夹，选择列表中第二个文件夹"
+			},
+			{
 				"elementName": "desktop_moveFolder_back_button",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']/*[name()='svg']",
