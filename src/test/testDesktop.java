@@ -1,10 +1,8 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,7 +28,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import elementFile.ByGenerator;
 import elementFile.CustomFieldDecorator;
 import elementFile.MyElementLocatorFactory;
 import elementFile.SearchWith;
@@ -70,18 +67,6 @@ public class testDesktop {
 
 	@AfterMethod
 	public void tearDown() throws Exception {
-		// logout();
-		// Set<String> winHandels = driver.getWindowHandles();
-		// List<String> it = new ArrayList<String>(winHandels);
-		// int n = it.size();
-		// for (int i = 0; i < n - 1; i++) {
-		// driver.switchTo().window(it.get(i));
-		// driver.close();
-		// }
-		//
-		// winHandels = driver.getWindowHandles();
-		// it = new ArrayList<String>(winHandels);
-		// driver.switchTo().window(it.get(0));
 		init();
 		System.out.println("--------------------------------------------");
 	}
@@ -128,13 +113,6 @@ public class testDesktop {
 		winHandels = driver.getWindowHandles();
 		it = new ArrayList<String>(winHandels);
 		driver.switchTo().window(it.get(0));
-		// Set<String> winHandels = driver.getWindowHandles();
-		// List<String> it = new ArrayList<String>(winHandels);
-		// int n = it.size();
-		// for (int i = 0; i < n - 1; i++) {
-		// driver.switchTo().window(it.get(i));
-		// driver.close();
-		// }
 	}
 
 	// ÅÐ¶ÏÔªËØÊÇ·ñ´æÔÚ
@@ -309,7 +287,6 @@ public class testDesktop {
 
 		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1).perform();
-		;
 		desktop_setting_doc_1.click();
 
 		Set<String> winHandels = driver.getWindowHandles();
