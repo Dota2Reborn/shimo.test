@@ -139,9 +139,7 @@ public class testAddCollaborator {
 		login("autoTest01@shimo.im", "123123");
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		
-		
-		
+
 		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_5.click();
