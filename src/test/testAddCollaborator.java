@@ -75,7 +75,12 @@ public class testAddCollaborator {
 		// driver.quit();
 	}
 
-	// 登录
+	/**
+	* 登录
+	* @author 刘晨
+	* @Time 2017-11-21
+	*
+	*/
 	public void login(String user, String pwd) {
 
 		driver.navigate().to("https://release.feature.shimodev.com/login");
@@ -86,19 +91,34 @@ public class testAddCollaborator {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
 	}
 
-	// 登出
+	/**
+	* 登出
+	* @author 刘晨
+	* @Time 2017-11-21
+	*
+	*/
 	public void logout() {
 		driver.navigate().to("https://release.feature.shimodev.com/logout");
 	}
 
-	// 页签切换
+	/**
+	* 页签切换
+	* @author 刘晨
+	* @Time 2017-11-21
+	*
+	*/
 	public void switchToPage(int i) {
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
 		driver.switchTo().window(it.get(i));
 	}
 
-	//删除浏览器多余标签页
+	/**
+	* 删除浏览器多余标签页
+	* @author 刘晨
+	* @Time 2017-11-21
+	*
+	*/
 	public void init() {
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -113,7 +133,12 @@ public class testAddCollaborator {
 		driver.switchTo().window(it.get(0));
 	}
 
-	// 判断元素是否存在
+	/**
+	* 判断元素是否存在
+	* @author 刘晨
+	* @Time 2017-11-21
+	*
+	*/
 	public boolean doesWebElementExist(WebDriver driver, By selector) {
 
 		try {
@@ -124,7 +149,12 @@ public class testAddCollaborator {
 		}
 	}
 
-	// 基础版用户，文件协作者为5人，不能继续添加协作者
+	/**
+	* 基础版用户，文件协作者为5人，不能继续添加协作者
+	* @author 刘晨
+	* @Time 2017-11-21
+	*
+	*/
 	@Test(enabled = true)
 	public void addCollaborator_1() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
@@ -141,7 +171,12 @@ public class testAddCollaborator {
 		assertFalse(exist);
 	}
 
-	//通过输入邮箱地址添加协作者，并且在协作者列表中移除该协作者
+	/**
+	* 通过输入邮箱地址添加协作者，并且在协作者列表中移除该协作者
+	* @author 刘晨
+	* @Time 2017-11-21
+	*
+	*/
 	@Test(enabled = true)
 	public void addCollaborator_2() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");

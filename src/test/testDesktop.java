@@ -77,7 +77,12 @@ public class testDesktop {
 		// driver.quit();
 	}
 
-	// µÇÂ¼
+	/**
+	* µÇÂ¼
+	* @author Áõ³¿
+	* @Time 2017-11-20
+	*
+	*/
 	public void login(String user, String pwd) {
 
 		driver.navigate().to("https://release.feature.shimodev.com/login");
@@ -89,18 +94,34 @@ public class testDesktop {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
 	}
 
-	// µÇ³ö
+	/**
+	* µÇ³ö
+	* @author Áõ³¿
+	* @Time 2017-11-20
+	*
+	*/
 	public void logout() {
 		driver.navigate().to("https://release.feature.shimodev.com/logout");
 	}
 
-	// Ò³Ç©ÇĞ»»
+	/**
+	* Ò³Ç©ÇĞ»»
+	* @author Áõ³¿
+	* @Time 2017-11-20
+	*
+	*/
 	public void switchToPage(int i) {
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
 		driver.switchTo().window(it.get(i));
 	}
 
+	/**
+	* É¾³ıä¯ÀÀÆ÷¶àÓà±êÇ©Ò³
+	* @author Áõ³¿
+	* @Time 2017-11-20
+	*
+	*/
 	public void init() {
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -115,7 +136,12 @@ public class testDesktop {
 		driver.switchTo().window(it.get(0));
 	}
 
-	// ÅĞ¶ÏÔªËØÊÇ·ñ´æÔÚ
+	/**
+	* ÅĞ¶ÏÔªËØÊÇ·ñ´æÔÚ
+	* @author Áõ³¿
+	* @Time 2017-11-20
+	*
+	*/
 	public boolean doesWebElementExist(WebDriver driver, By selector) {
 
 		try {
