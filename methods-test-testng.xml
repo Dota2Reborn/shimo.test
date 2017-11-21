@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Test-method Suite" parallel="methods" thread-count="2" >
-  <test name="Test-method test" group-by-instances="true">
-    <classes>
-      <class name="test.testDesktop"/>
-      <class name="test.testZhuZhan" />
-    </classes>
-  </test>
-</suite>
+<suite name="Suite1" verbose="1">
+	<test name="test">
+		<classes>
+			<class name="test.testAddCollaborator" />
+			<class name="test.testDesktop" />
+		</classes>
+	</test>
+</suite>  
