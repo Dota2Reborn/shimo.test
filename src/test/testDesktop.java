@@ -207,8 +207,9 @@ public class testDesktop {
 		b_back.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		Actions action = new Actions(driver);
-		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
+//		action.moveToElement(desktop1_1).perform();
+//		desktop_setting.click();
+		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_11.click();
 		desktop_newFolder_name_ok.click();
 
@@ -243,8 +244,9 @@ public class testDesktop {
 		b_back.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		Actions action = new Actions(driver);
-		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
+//		action.moveToElement(desktop1_1).perform();
+//		desktop_setting.click();
+		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_11.click();
 		desktop_newFolder_name_ok.click();
 
@@ -287,8 +289,9 @@ public class testDesktop {
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		Actions action = new Actions(driver);
-		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
+//		action.moveToElement(desktop1_1).perform();
+//		desktop_setting.click();
+		action.contextClick(desktop1_1).perform();
 		desktop_setting_folder_9.click();
 		desktop_newFolder_name_ok.click();
 
@@ -649,8 +652,9 @@ public class testDesktop {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
 
-		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
+//		action.moveToElement(desktop1_1).perform();
+//		desktop_setting.click();
+		action.contextClick(desktop1_1).perform();
 		desktop_setting_folder_9.click();
 		desktop_newFolder_name_ok.click();
 
@@ -699,8 +703,9 @@ public class testDesktop {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
 		Actions action = new Actions(driver);
-		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
+//		action.moveToElement(desktop1_1).perform();
+//		desktop_setting.click();
+		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_11.click();
 		desktop_newFolder_name_ok.click();
 
@@ -735,8 +740,9 @@ public class testDesktop {
 		String msg = desktop1_1.getText();
 
 		Actions action = new Actions(driver);
-		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
+//		action.moveToElement(desktop1_1).perform();
+//		desktop_setting.click();
+		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_11.click();
 		desktop_newFolder_name_ok.click();
 

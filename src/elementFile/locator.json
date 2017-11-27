@@ -60,13 +60,13 @@
 			{
 				"elementName": "desktop_new",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sc-dREXXX ckPPx']//button",
+				"locator": "//button[@data-test='create-file']",
 				"注释": "新建文件按钮"
 			},
 			{
 				"elementName": "desktop_import",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sc-kAzzGY knioBL']//form//input",
+				"locator": "//input[@data-test='import-file']",
 				"注释": "导入"
 			},
 			{
@@ -90,7 +90,7 @@
 			{
 				"elementName": "desktop_newFolder_name",
 				"locateUsing": "xpath",
-				"locator": "//form[@class='sc-Rmtcm bxoFGD']//input",
+				"locator": "//input[@data-test='new-folder-inputbox']",
 				"注释": "文件夹命名"
 			},
 			{
@@ -118,6 +118,24 @@
 				"注释": "平铺模式第一行第一个文件夹"
 			},
 			{
+				"elementName": "desktop_list_1_folder",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[1]//div//a//div[3]//div",
+				"注释": "列表模式第一个文件"
+			},
+			{
+				"elementName": "desktop_list_2_folder",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[2]//div//a//div[3]//div",
+				"注释": "列表模式第二个文件"
+			},
+						{
+				"elementName": "desktop_list_3_folder",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[3]//div//a//div[3]//div",
+				"注释": "列表模式第三个文件"
+			},
+			{
 				"elementName": "desktop_set",
 				"locateUsing": "className",
 				"locator": "settings-btn",
@@ -126,56 +144,56 @@
 			{
 				"elementName": "desktop_setting_doc_1",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[1]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[1]",
 				"注释": "文档表格新标签页中打开"
 			},
 			{
 				"elementName": "desktop_setting_doc_2",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[2]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[2]",
 				"注释": "文档表格添加快捷方式"
 			},
 			{
 				"elementName": "desktop_setting_doc_3",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[3]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[3]",
 				"注释": "文档表格添加收藏"
 			},
 			{
 				"elementName": "desktop_setting_doc_5",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[5]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[5]",
 				"注释": "文档表格添加协作者"
 			},
 			{
 				"elementName": "desktop_setting_doc_6",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[6]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[6]",
 				"注释": "文档表格移动"
 			},
 			{
 				"elementName": "desktop_setting_doc_8",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[8]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[8]",
 				"注释": "文档表格重命名"
 			},
 			{
 				"elementName": "desktop_setting_doc_9",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[9]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
 				"注释": "文档表格创建副本"
 			},
 			{
 				"elementName": "desktop_setting_doc_11",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[11]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[11]",
 				"注释": "文档表格删除按钮"
 			},
 			
 			{
 				"elementName": "desktop_setting_folder_9",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-menu sm-menu-vertical sc-brqgnP dAhvWQ sm-menu-root']//li[9]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
 				"注释": "文件夹删除按钮"
 			},
 			{
@@ -185,21 +203,57 @@
 				"注释": "桌面快捷方式第一个"
 			},
 			{
+				"elementName": "desktop_orderByUpdate",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical sc-brqgnP ATuTK sm-dropdown-menu-root']//li[2]",
+				"注释": "桌面排序-按更新时间"
+			},
+			{
+				"elementName": "desktop_orderByCreate",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical sc-brqgnP ATuTK sm-dropdown-menu-root']//li[3]",
+				"注释": "桌面排序-按创建时间"
+			},
+			{
+				"elementName": "desktop_orderByFile",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical sc-brqgnP ATuTK sm-dropdown-menu-root']//li[5]",
+				"注释": "桌面排序-文件名"
+			},
+			{
+				"elementName": "desktop_orderByOwner",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical sc-brqgnP ATuTK sm-dropdown-menu-root']//li[6]",
+				"注释": "桌面排序-所有者"
+			},
+			{
+				"elementName": "desktop_orderByFolderUP",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical sc-brqgnP ATuTK sm-dropdown-menu-root']//li[8]",
+				"注释": "桌面排序-文件夹置顶"
+			},
+			{
+				"elementName": "desktop_order",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='actions']//div[1]",
+				"注释": "桌面排序"
+			},
+			{
 				"elementName": "desktop_show_type",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='actions']//div[@class='sc-imABML fTjZIC']",
+				"locator": "//div[@class='actions']//div[@data-test='change-table-mode']",
 				"注释": "列表平铺模式切换"
 			},
 			{
 				"elementName": "desktop_moveFolder_list_1",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sc-gRnDUn lmYtmU']//li[1]",
+				"locator": "//div[@class='sm-modal-body']//ul//li[1]",
 				"注释": "移动文件到文件夹，选择列表中第一个文件夹"
 			},
 			{
 				"elementName": "desktop_moveFolder_list_2",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sc-gRnDUn lmYtmU']//li[2]",
+				"locator": "//div[@class='sm-modal-body']//ul//li[2]",
 				"注释": "移动文件到文件夹，选择列表中第二个文件夹"
 			},
 			{
@@ -211,7 +265,7 @@
 			{
 				"elementName": "desktop_moveFolder_button",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sc-cTjmhe dSgSbm']//button",
+				"locator": "//div[@class='sm-modal-body']//div//div//button",
 				"注释": "移动到测试文件夹"
 			}
 		]
@@ -223,7 +277,7 @@
 			{
 				"elementName": "b_addCollaborator",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sc-cEvuZC guyxpG']//span//button",
+				"locator": "//button[@data-test='adding-collaborators']",
 				"注释": "添加协作者按钮"
 			},
 			{
@@ -235,19 +289,19 @@
 			{
 				"elementName": "input_addCollaborator",
 				"locateUsing": "xpath",
-				"locator": "//input[@class='sc-dxgOiQ hFSxgS']",
+				"locator": "//input[@data-test='collaborator-search-inputbox']",
 				"注释": "添加协作者邮箱输入框"
 			},
 			{
 				"elementName": "b_addCollaborator_ok",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sc-ugnQR keiEtD']//button",
+				"locator": "//button[@data-test='added-collaborators']",
 				"注释": "确认添加协作者按钮"
 			},
 			{
 				"elementName": "b_addCollaborator_2_list",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='collab-modal-user-list-wrapper sc-gVyKpa cyEvaf']//div[2]//div//div",
+				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[2]//div//div",
 				"注释": "协作者列表第二个协作者权限下拉框"
 			},
 			{
@@ -259,13 +313,13 @@
 			{
 				"elementName": "addCollaborator_total",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sc-hzNEM gjWIGa']//p",
+				"locator": "//div[@class='sm-modal-body']//div[1]//p",
 				"注释": "协作者人数"
 			},
 			{
 				"elementName": "b_addCollaborator_1_add",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='collab-modal-user-list-wrapper sc-gVyKpa cyEvaf']//div[1]//div//div",
+				"locator": "//div[@class='sm-modal-body']//div[3]//div//div[1]//div//div",
 				"注释": "搜索显示被添加协作者列表第一个添加按钮"
 			}
 		]

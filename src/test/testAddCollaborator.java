@@ -76,11 +76,12 @@ public class testAddCollaborator {
 	}
 
 	/**
-	* 登录
-	* @author 刘晨
-	* @Time 2017-11-21
-	*
-	*/
+	 * 登录
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
 	public void login(String user, String pwd) {
 
 		driver.navigate().to("https://release.feature.shimodev.com/login");
@@ -92,21 +93,23 @@ public class testAddCollaborator {
 	}
 
 	/**
-	* 登出
-	* @author 刘晨
-	* @Time 2017-11-21
-	*
-	*/
+	 * 登出
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
 	public void logout() {
 		driver.navigate().to("https://release.feature.shimodev.com/logout");
 	}
 
 	/**
-	* 页签切换
-	* @author 刘晨
-	* @Time 2017-11-21
-	*
-	*/
+	 * 页签切换
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
 	public void switchToPage(int i) {
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -114,11 +117,12 @@ public class testAddCollaborator {
 	}
 
 	/**
-	* 删除浏览器多余标签页
-	* @author 刘晨
-	* @Time 2017-11-21
-	*
-	*/
+	 * 删除浏览器多余标签页
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
 	public void init() {
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -134,11 +138,12 @@ public class testAddCollaborator {
 	}
 
 	/**
-	* 判断元素是否存在
-	* @author 刘晨
-	* @Time 2017-11-21
-	*
-	*/
+	 * 判断元素是否存在
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
 	public boolean doesWebElementExist(WebDriver driver, By selector) {
 
 		try {
@@ -150,11 +155,12 @@ public class testAddCollaborator {
 	}
 
 	/**
-	* 基础版用户，文件协作者为5人，不能继续添加协作者
-	* @author 刘晨
-	* @Time 2017-11-21
-	*
-	*/
+	 * 基础版用户，文件协作者为5人，不能继续添加协作者
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
 	@Test(enabled = true)
 	public void addCollaborator_1() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
@@ -172,11 +178,12 @@ public class testAddCollaborator {
 	}
 
 	/**
-	* 通过输入邮箱地址添加协作者，并且在协作者列表中移除该协作者
-	* @author 刘晨
-	* @Time 2017-11-21
-	*
-	*/
+	 * 通过输入邮箱地址添加协作者，并且在协作者列表中移除该协作者
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
 	@Test(enabled = true)
 	public void addCollaborator_2() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
@@ -207,8 +214,143 @@ public class testAddCollaborator {
 
 		Thread.sleep(500);
 		String msg_b = addCollaborator_total.getText();
-		
+
 		assertEquals(msg_a, msg_b);
+	}
+
+	/**
+	 * 桌面排序as更新时间
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
+	@Test(enabled = true)
+	public void order_setting_byUpdate() throws InterruptedException {
+		login("autoTest02@shimo.im", "123123");
+
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		desktop_show_type.click();
+		desktop_order.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByUpdate));
+		desktop_orderByUpdate.click();
+
+		Boolean f1 = desktop_list_1_folder.getText().equals("最近更新");
+		Boolean f2 = desktop_list_2_folder.getText().equals("最新创建");
+		Boolean f3 = desktop_list_3_folder.getText().equals("111");
+
+		assertEquals(true, f1 && f2 && f3);
+
+	}
+	
+	/**
+	 * 桌面排序as创建时间
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
+	@Test(enabled = true)
+	public void order_setting_byCreate() throws InterruptedException {
+		login("autoTest02@shimo.im", "123123");
+
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		desktop_show_type.click();
+		desktop_order.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
+		desktop_orderByCreate.click();
+
+		Boolean f1 = desktop_list_1_folder.getText().equals("最新创建");
+		Boolean f2 = desktop_list_2_folder.getText().equals("111");
+		Boolean f3 = desktop_list_3_folder.getText().equals("最近更新");
+
+		assertEquals(true, f1 && f2 && f3);
+
+	}
+	
+	/**
+	 * 桌面排序as文件名
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
+	@Test(enabled = true)
+	public void order_setting_byFileName() throws InterruptedException {
+		login("autoTest02@shimo.im", "123123");
+
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		desktop_show_type.click();
+		desktop_order.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFile));
+		desktop_orderByFile.click();
+
+		Boolean f1 = desktop_list_1_folder.getText().equals("111");
+		Boolean f2 = desktop_list_2_folder.getText().equals("所有者排序");
+		Boolean f3 = desktop_list_3_folder.getText().equals("文件夹排序");
+
+		assertEquals(true, f1 && f2 && f3);
+
+	}
+	
+	/**
+	 * 桌面排序as所有者
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
+	@Test(enabled = true)
+	public void order_setting_byOwner() throws InterruptedException {
+		login("autoTest02@shimo.im", "123123");
+
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		desktop_show_type.click();
+		desktop_order.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByOwner));
+		desktop_orderByOwner.click();
+
+		Boolean f1 = desktop_list_1_folder.getText().equals("所有者排序");
+		Boolean f2 = desktop_list_2_folder.getText().equals("最新创建");
+		Boolean f3 = desktop_list_3_folder.getText().equals("111");
+
+		assertEquals(true, f1 && f2 && f3);
+
+	}
+	
+	/**
+	 * 桌面排序as文件夹置顶
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
+	@Test(enabled = true)
+	public void order_setting_byFolderUP() throws InterruptedException {
+		login("autoTest02@shimo.im", "123123");
+
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		desktop_show_type.click();
+		desktop_order.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+		desktop_orderByFolderUP.click();
+
+		Boolean f1 = desktop_list_1_folder.getText().equals("文件夹排序");
+		Boolean f2 = desktop_list_2_folder.getText().equals("最新创建");
+		Boolean f3 = desktop_list_3_folder.getText().equals("111");
+
+		assertEquals(true, f1 && f2 && f3);
+
 	}
 
 	@SearchWith(pageName = "desktop", elementName = "desktop")
@@ -225,9 +367,32 @@ public class testAddCollaborator {
 	public WebElement desktop1_1;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1_folder")
 	public WebElement desktop1_1_folder;
+	@SearchWith(pageName = "desktop", elementName = "desktop_list_1_folder")
+	public WebElement desktop_list_1_folder;
+	@SearchWith(pageName = "desktop", elementName = "desktop_list_2_folder")
+	public WebElement desktop_list_2_folder;
+	@SearchWith(pageName = "desktop", elementName = "desktop_list_3_folder")
+	public WebElement desktop_list_3_folder;
 
 	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_5")
 	public WebElement desktop_setting_doc_5;
+
+	@SearchWith(pageName = "desktop", elementName = "desktop_show_type")
+	public WebElement desktop_show_type;
+	@SearchWith(pageName = "desktop", elementName = "desktop_order")
+	public WebElement desktop_order;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByUpdate")
+	public WebElement desktop_orderByUpdate;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByCreate")
+	public WebElement desktop_orderByCreate;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByFile")
+	public WebElement desktop_orderByFile;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByOwner")
+	public WebElement desktop_orderByOwner;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByFolderUP")
+	public WebElement desktop_orderByFolderUP;
+	
+	
 
 	@SearchWith(pageName = "homePage", elementName = "userEmail")
 	public WebElement userEmail;
