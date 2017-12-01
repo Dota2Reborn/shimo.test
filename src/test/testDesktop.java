@@ -78,11 +78,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 登录
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 登录
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	public void login(String user, String pwd) {
 
 		driver.navigate().to("https://release.feature.shimodev.com/login");
@@ -95,21 +96,23 @@ public class testDesktop {
 	}
 
 	/**
-	* 登出
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 登出
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	public void logout() {
 		driver.navigate().to("https://release.feature.shimodev.com/logout");
 	}
 
 	/**
-	* 页签切换
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 页签切换
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	public void switchToPage(int i) {
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -117,11 +120,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 删除浏览器多余标签页
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 删除浏览器多余标签页
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	public void init() {
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -137,11 +141,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 判断元素是否存在
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 判断元素是否存在
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	public boolean doesWebElementExist(WebDriver driver, By selector) {
 
 		try {
@@ -187,11 +192,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 新建文档
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 新建文档
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_newDoc() throws InterruptedException {
 
@@ -207,8 +213,8 @@ public class testDesktop {
 		b_back.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		Actions action = new Actions(driver);
-//		action.moveToElement(desktop1_1).perform();
-//		desktop_setting.click();
+		// action.moveToElement(desktop1_1).perform();
+		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_11.click();
 		desktop_newFolder_name_ok.click();
@@ -222,11 +228,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 新建表格
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 新建表格
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_newSheet() {
 
@@ -244,8 +251,8 @@ public class testDesktop {
 		b_back.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		Actions action = new Actions(driver);
-//		action.moveToElement(desktop1_1).perform();
-//		desktop_setting.click();
+		// action.moveToElement(desktop1_1).perform();
+		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_11.click();
 		desktop_newFolder_name_ok.click();
@@ -259,11 +266,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 新建文件夹
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 新建文件夹
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_newFolder() {
 
@@ -289,8 +297,8 @@ public class testDesktop {
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		Actions action = new Actions(driver);
-//		action.moveToElement(desktop1_1).perform();
-//		desktop_setting.click();
+		// action.moveToElement(desktop1_1).perform();
+		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_folder_9.click();
 		desktop_newFolder_name_ok.click();
@@ -303,11 +311,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 桌面-列表/平铺 模式切换
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 桌面-列表/平铺 模式切换
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_show_type() throws InterruptedException {
 
@@ -333,11 +342,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 右键文档-在新标签页中打开
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 右键文档-在新标签页中打开
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_doc_setting_1() {
 		login("autoTest@shimo.im", "123123");
@@ -355,11 +365,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 右键文档-添加到快捷方式
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 右键文档-添加到快捷方式
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_doc_setting_2() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -383,11 +394,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 右键文档-收藏
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 右键文档-收藏
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_doc_setting_3() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -411,11 +423,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 右键文档-移动
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 右键文档-移动
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_doc_setting_6() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -459,11 +472,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 右键文档-重命名
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 右键文档-重命名
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_doc_setting_8() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -493,11 +507,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 右键文档-创建副本
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 右键文档-创建副本
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_doc_setting_9() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -523,11 +538,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 右键文件夹-在新标签页打开
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 右键文件夹-在新标签页打开
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_folder_setting_1() {
 		login("autoTest@shimo.im", "123123");
@@ -545,11 +561,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 右键文件夹-添加到快捷方式
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 右键文件夹-添加到快捷方式
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_folder_setting_2() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -573,11 +590,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 右键文件夹-收藏
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 右键文件夹-收藏
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_folder_setting_3() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -601,11 +619,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 右键文件夹-文件夹移动，重命名，删除
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 右键文件夹-文件夹移动，重命名，删除
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_folder_setting() {
 
@@ -652,8 +671,8 @@ public class testDesktop {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
 
-//		action.moveToElement(desktop1_1).perform();
-//		desktop_setting.click();
+		// action.moveToElement(desktop1_1).perform();
+		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_folder_9.click();
 		desktop_newFolder_name_ok.click();
@@ -680,11 +699,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 导入文档
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 导入文档
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_import_doc() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -703,8 +723,8 @@ public class testDesktop {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
 		Actions action = new Actions(driver);
-//		action.moveToElement(desktop1_1).perform();
-//		desktop_setting.click();
+		// action.moveToElement(desktop1_1).perform();
+		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_11.click();
 		desktop_newFolder_name_ok.click();
@@ -717,11 +737,12 @@ public class testDesktop {
 	}
 
 	/**
-	* 导入表格
-	* @author 刘晨
-	* @Time 2017-11-20
-	*
-	*/
+	 * 导入表格
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
 	@Test
 	public void desktop_import_sheet() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
@@ -740,8 +761,8 @@ public class testDesktop {
 		String msg = desktop1_1.getText();
 
 		Actions action = new Actions(driver);
-//		action.moveToElement(desktop1_1).perform();
-//		desktop_setting.click();
+		// action.moveToElement(desktop1_1).perform();
+		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_11.click();
 		desktop_newFolder_name_ok.click();
