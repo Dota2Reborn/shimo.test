@@ -333,7 +333,7 @@ public class testZhuZhan {
 		xpath_user_icon.click();
 		xpath_user_icon_qiYeGuanLi.click();
 		switchToPage(2);
-		wait.until(ExpectedConditions.elementToBeClickable(addMember));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='waterfall-inner']//div[1]//div[@class='action']")));
 
 		List<WebElement> elements = driver.findElements(By.className("member-row"));
 		int number = elements.size(); // 成员列表
