@@ -530,7 +530,125 @@ public class testAddCollaborator {
 		b_addCollaborator_confirm.click();
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
 
-		String email = addCollaborator_1_list_userEmail.getText();
+		String email = addCollaborator_1_list_userName.getText();
+		assertEquals(email, "autoTest01");
+	}
+
+	/**
+	 * 通过文件夹右侧添加协作者
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-12-07
+	 *
+	 */
+	@Test(enabled = true)
+	public void addCollaborator_9() throws InterruptedException {
+		login("autoTest01@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		String msg = desktop_show_type.getText();
+		if (msg.equals("平铺")) {
+			desktop_show_type.click();
+		}
+
+		desktop1_1_folder.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(addCollaborator_folder_add));
+		addCollaborator_folder_add.click();
+
+		input_addCollaborator.sendKeys("11@cc.ccc");
+
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+		b_addCollaborator_1_add.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
+		b_addCollaborator_ok.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+		b_addCollaborator_2_list.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
+		list_addCollaborator_4.click();
+
+		Thread.sleep(500);
+		String username = addCollaborator_2_list_userName.getText();
+		assertNotEquals(username, "李磊");
+
+	}
+	
+	/**
+	 * 非企业成员之间转让所有权
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-12-07
+	 *
+	 */
+	@Test(enabled = true)
+	public void addCollaborator_10() throws InterruptedException {
+		login("autoTest01@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		String msg = desktop_show_type.getText();
+		if (msg.equals("平铺")) {
+			desktop_show_type.click();
+		}
+
+		Actions action = new Actions(driver);
+		action.contextClick(desktop1_1_folder).perform();
+		desktop_setting_doc_5.click();
+		
+		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+		button_addCollaborator.click();
+
+		input_addCollaborator.sendKeys("autoTest_addCollabor@shimo.im");
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+		b_addCollaborator_1_add.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
+		b_addCollaborator_ok.click();
+
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
+		b_addCollaborator_1_list.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_1));
+		list_addCollaborator_1.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_changeOwner_1));
+		list_addCollaborator_changeOwner_1.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_confirm));
+		b_addCollaborator_confirm.click();
+
+		logout();
+		login("autoTest_addCollabor@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		String msg1 = desktop_show_type.getText();
+		if (msg1.equals("平铺")) {
+			desktop_show_type.click();
+		}
+
+		action = new Actions(driver);
+		action.contextClick(desktop1_1_folder).perform();
+		desktop_setting_doc_5.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
+		b_addCollaborator_1_list.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_1));
+		list_addCollaborator_1.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_changeOwner_1));
+		list_addCollaborator_changeOwner_1.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_confirm));
+		b_addCollaborator_confirm.click();
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
+
+		String email = addCollaborator_1_list_userName.getText();
 		assertEquals(email, "autoTest01");
 	}
 
@@ -559,7 +677,7 @@ public class testAddCollaborator {
 		Boolean f1 = desktop_list_1_folder.getText().equals("最近更新");
 		Boolean f2 = desktop_list_2_folder.getText().equals("最新创建");
 		Boolean f3 = desktop_list_3_folder.getText().equals("111");
-		
+
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 		desktop_orderByDefault.click();
@@ -598,7 +716,7 @@ public class testAddCollaborator {
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 		desktop_orderByDefault.click();
-		
+
 		desktop_show_type.click();
 		assertTrue(f1 && f2 && f3);
 
@@ -633,7 +751,7 @@ public class testAddCollaborator {
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 		desktop_orderByDefault.click();
-		
+
 		desktop_show_type.click();
 		assertTrue(f1 && f2 && f3);
 
@@ -664,7 +782,7 @@ public class testAddCollaborator {
 		Boolean f1 = desktop_list_1_folder.getText().equals("所有者排序");
 		Boolean f2 = desktop_list_2_folder.getText().equals("最新创建");
 		Boolean f3 = desktop_list_3_folder.getText().equals("111");
-		
+
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 		desktop_orderByDefault.click();
@@ -798,7 +916,11 @@ public class testAddCollaborator {
 	public WebElement b_addCollaborator_confirm;
 	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_changeOwner_1")
 	public WebElement list_addCollaborator_changeOwner_1;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_1_list_userEmail")
-	public WebElement addCollaborator_1_list_userEmail;
+	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_1_list_userName")
+	public WebElement addCollaborator_1_list_userName;
+	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_2_list_userName")
+	public WebElement addCollaborator_2_list_userName;
+	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_folder_add")
+	public WebElement addCollaborator_folder_add;
 
 }
