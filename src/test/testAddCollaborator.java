@@ -559,6 +559,10 @@ public class testAddCollaborator {
 		Boolean f1 = desktop_list_1_folder.getText().equals("最近更新");
 		Boolean f2 = desktop_list_2_folder.getText().equals("最新创建");
 		Boolean f3 = desktop_list_3_folder.getText().equals("111");
+		
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+		desktop_orderByDefault.click();
 
 		desktop_show_type.click();
 		assertTrue(f1 && f2 && f3);
@@ -591,6 +595,10 @@ public class testAddCollaborator {
 		Boolean f2 = desktop_list_2_folder.getText().equals("111");
 		Boolean f3 = desktop_list_3_folder.getText().equals("最近更新");
 
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+		desktop_orderByDefault.click();
+		
 		desktop_show_type.click();
 		assertTrue(f1 && f2 && f3);
 
@@ -622,6 +630,10 @@ public class testAddCollaborator {
 		Boolean f2 = desktop_list_2_folder.getText().equals("所有者排序");
 		Boolean f3 = desktop_list_3_folder.getText().equals("文件夹排序");
 
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+		desktop_orderByDefault.click();
+		
 		desktop_show_type.click();
 		assertTrue(f1 && f2 && f3);
 
@@ -652,6 +664,10 @@ public class testAddCollaborator {
 		Boolean f1 = desktop_list_1_folder.getText().equals("所有者排序");
 		Boolean f2 = desktop_list_2_folder.getText().equals("最新创建");
 		Boolean f3 = desktop_list_3_folder.getText().equals("111");
+		
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+		desktop_orderByDefault.click();
 
 		desktop_show_type.click();
 		assertTrue(f1 && f2 && f3);
