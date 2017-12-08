@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite1" verbose="1">
+<suite name="testng" verbose="1">
 	<test name="test">
 		<classes>
 			<class name="test.testAddCollaborator" />
