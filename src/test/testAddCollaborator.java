@@ -38,9 +38,9 @@ public class testAddCollaborator {
 
 	public testAddCollaborator() {
 		// System.setProperty("webdriver.firefox.bin", "C:\\Program
-		// Files\\(x86)\\Firefox\\firefox.exe");//»ğºü
+		// Files\\(x86)\\Firefox\\firefox.exe");//ç«ç‹
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");// ¹È¸è
+				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");// è°·æ­Œ
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setCapability("marionette", true);
 		driver = new ChromeDriver(capabilities);
@@ -72,14 +72,14 @@ public class testAddCollaborator {
 
 	@AfterClass
 	public void lastMethod() {
-		// ¹Ø±Õä¯ÀÀÆ÷
-		// driver.quit();
+		// å…³é—­æµè§ˆå™¨
+		 driver.quit();
 	}
 
 	/**
-	 * µÇÂ¼
+	 * ç™»å½•
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-21
 	 *
 	 */
@@ -94,9 +94,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * µÇ³ö
+	 * ç™»å‡º
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-21
 	 *
 	 */
@@ -105,9 +105,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * Ò³Ç©ÇĞ»»
+	 * é¡µç­¾åˆ‡æ¢
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-21
 	 *
 	 */
@@ -118,9 +118,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * É¾³ıä¯ÀÀÆ÷¶àÓà±êÇ©Ò³
+	 * åˆ é™¤æµè§ˆå™¨å¤šä½™æ ‡ç­¾é¡µ
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-21
 	 *
 	 */
@@ -139,9 +139,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * ÅĞ¶ÏÔªËØÊÇ·ñ´æÔÚ
+	 * åˆ¤æ–­å…ƒç´ æ˜¯å¦å­˜åœ¨
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-21
 	 *
 	 */
@@ -156,9 +156,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * »ù´¡°æÓÃ»§£¬ÎÄ¼şĞ­×÷ÕßÎª5ÈË£¬²»ÄÜ¼ÌĞøÌí¼ÓĞ­×÷Õß
+	 * åŸºç¡€ç‰ˆç”¨æˆ·ï¼Œæ–‡ä»¶åä½œè€…ä¸º5äººï¼Œä¸èƒ½ç»§ç»­æ·»åŠ åä½œè€…
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-21
 	 *
 	 */
@@ -168,7 +168,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("Æ½ÆÌ")) {
+		if (msg.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -183,9 +183,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * Í¨¹ıÊäÈëÓÊÏäµØÖ·Ìí¼ÓĞ­×÷Õß£¬²¢ÇÒÔÚĞ­×÷ÕßÁĞ±íÖĞÒÆ³ı¸ÃĞ­×÷Õß
+	 * é€šè¿‡è¾“å…¥é‚®ç®±åœ°å€æ·»åŠ åä½œè€…ï¼Œå¹¶ä¸”åœ¨åä½œè€…åˆ—è¡¨ä¸­ç§»é™¤è¯¥åä½œè€…
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-21
 	 *
 	 */
@@ -195,7 +195,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("Æ½ÆÌ")) {
+		if (msg.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -228,9 +228,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * Í¨¹ı¡¾×î½ü¡¿ÁĞ±íÖĞµÄµÚÒ»¸öÌí¼ÓÎªĞ­×÷Õß
+	 * é€šè¿‡ã€æœ€è¿‘ã€‘åˆ—è¡¨ä¸­çš„ç¬¬ä¸€ä¸ªæ·»åŠ ä¸ºåä½œè€…
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-29
 	 *
 	 */
@@ -240,7 +240,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("Æ½ÆÌ")) {
+		if (msg.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -271,9 +271,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * Í¨¹ı¡¾ÆóÒµ³ÉÔ±¡¿ÁĞ±íÖĞµÄµÚ¶ş¸öÌí¼ÓÎªĞ­×÷Õß
+	 * é€šè¿‡ã€ä¼ä¸šæˆå‘˜ã€‘åˆ—è¡¨ä¸­çš„ç¬¬äºŒä¸ªæ·»åŠ ä¸ºåä½œè€…
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-29
 	 *
 	 */
@@ -283,7 +283,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("Æ½ÆÌ")) {
+		if (msg.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -317,9 +317,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * µã»÷Ğ­×÷ÕßÁĞ±íÖĞÌí¼ÓĞ­×÷ÕßÖ®ºó£¬²»µã»÷È·¶¨£¬µã»÷·µ»Ø£¬Ğ­×÷Õß²»»á±»Ìí¼Ó
+	 * ç‚¹å‡»åä½œè€…åˆ—è¡¨ä¸­æ·»åŠ åä½œè€…ä¹‹åï¼Œä¸ç‚¹å‡»ç¡®å®šï¼Œç‚¹å‡»è¿”å›ï¼Œåä½œè€…ä¸ä¼šè¢«æ·»åŠ 
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-29
 	 *
 	 */
@@ -329,7 +329,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("Æ½ÆÌ")) {
+		if (msg.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -352,9 +352,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * Ğ­×÷ÕßÔÚĞ­×÷ÕßÁĞ±íÖĞÒÆ³ı×Ô¼º
+	 * åä½œè€…åœ¨åä½œè€…åˆ—è¡¨ä¸­ç§»é™¤è‡ªå·±
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-12-01
 	 *
 	 */
@@ -364,7 +364,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("Æ½ÆÌ")) {
+		if (msg.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -389,7 +389,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg1 = desktop_show_type.getText();
-		if (msg1.equals("Æ½ÆÌ")) {
+		if (msg1.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -408,13 +408,13 @@ public class testAddCollaborator {
 
 		Thread.sleep(500);
 		String fileName = desktop1_1_folder.getText();
-		assertNotEquals(fileName, "Ìí¼ÓĞ­×÷Õß²âÊÔ");
+		assertNotEquals(fileName, "æ·»åŠ åä½œè€…æµ‹è¯•");
 	}
 
 	/**
-	 * ×÷ÎªĞ­×÷ÕßÌí¼ÓĞ­×÷Õß
+	 * ä½œä¸ºåä½œè€…æ·»åŠ åä½œè€…
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-12-01
 	 *
 	 */
@@ -424,7 +424,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("Æ½ÆÌ")) {
+		if (msg.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -449,7 +449,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg1 = desktop_show_type.getText();
-		if (msg1.equals("Æ½ÆÌ")) {
+		if (msg1.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -468,13 +468,13 @@ public class testAddCollaborator {
 
 		Thread.sleep(500);
 		String fileName = desktop1_1_folder.getText();
-		assertNotEquals(fileName, "Ìí¼ÓĞ­×÷Õß²âÊÔ");
+		assertNotEquals(fileName, "æ·»åŠ åä½œè€…æµ‹è¯•");
 	}
 
 	/**
-	 * ÆóÒµ³ÉÔ±Ö®¼ä×ªÈÃËùÓĞÈ¨
+	 * ä¼ä¸šæˆå‘˜ä¹‹é—´è½¬è®©æ‰€æœ‰æƒ
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-12-01
 	 *
 	 */
@@ -484,7 +484,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("Æ½ÆÌ")) {
+		if (msg.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -509,7 +509,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg1 = desktop_show_type.getText();
-		if (msg1.equals("Æ½ÆÌ")) {
+		if (msg1.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -535,9 +535,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * Í¨¹ıÎÄ¼ş¼ĞÓÒ²àÌí¼ÓĞ­×÷Õß
+	 * é€šè¿‡æ–‡ä»¶å¤¹å³ä¾§æ·»åŠ åä½œè€…
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-12-07
 	 *
 	 */
@@ -547,7 +547,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("Æ½ÆÌ")) {
+		if (msg.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -573,14 +573,14 @@ public class testAddCollaborator {
 
 		Thread.sleep(500);
 		String username = addCollaborator_2_list_userName.getText();
-		assertNotEquals(username, "ÀîÀÚ");
+		assertNotEquals(username, "æç£Š");
 
 	}
 	
 	/**
-	 * ·ÇÆóÒµ³ÉÔ±Ö®¼ä×ªÈÃËùÓĞÈ¨
+	 * éä¼ä¸šæˆå‘˜ä¹‹é—´è½¬è®©æ‰€æœ‰æƒ
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-12-07
 	 *
 	 */
@@ -590,26 +590,14 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("Æ½ÆÌ")) {
+		if (msg.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
 		Actions action = new Actions(driver);
-		action.contextClick(desktop1_1_folder).perform();
+		action.contextClick(desktop1_2_folder).perform();
 		desktop_setting_doc_5.click();
 		
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		button_addCollaborator.click();
-
-		input_addCollaborator.sendKeys("autoTest_addCollabor@shimo.im");
-		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		b_addCollaborator_1_add.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
-		b_addCollaborator_ok.click();
-
-		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
 		b_addCollaborator_1_list.click();
 
@@ -627,7 +615,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg1 = desktop_show_type.getText();
-		if (msg1.equals("Æ½ÆÌ")) {
+		if (msg1.equals("å¹³é“º")) {
 			desktop_show_type.click();
 		}
 
@@ -653,9 +641,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * ×ÀÃæÅÅĞòas¸üĞÂÊ±¼ä
+	 * æ¡Œé¢æ’åºasæ›´æ–°æ—¶é—´
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-28
 	 *
 	 */
@@ -666,7 +654,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("ÁĞ±í")) {
+		if (msg.equals("åˆ—è¡¨")) {
 			desktop_show_type.click();
 		}
 		desktop_order.click();
@@ -674,8 +662,8 @@ public class testAddCollaborator {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByUpdate));
 		desktop_orderByUpdate.click();
 
-		Boolean f1 = desktop_list_1_folder.getText().equals("×î½ü¸üĞÂ");
-		Boolean f2 = desktop_list_2_folder.getText().equals("×îĞÂ´´½¨");
+		Boolean f1 = desktop_list_1_folder.getText().equals("æœ€è¿‘æ›´æ–°");
+		Boolean f2 = desktop_list_2_folder.getText().equals("æœ€æ–°åˆ›å»º");
 		Boolean f3 = desktop_list_3_folder.getText().equals("111");
 
 		desktop_order.click();
@@ -688,9 +676,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * ×ÀÃæÅÅĞòas´´½¨Ê±¼ä
+	 * æ¡Œé¢æ’åºasåˆ›å»ºæ—¶é—´
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-28
 	 *
 	 */
@@ -701,7 +689,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("ÁĞ±í")) {
+		if (msg.equals("åˆ—è¡¨")) {
 			desktop_show_type.click();
 		}
 		desktop_order.click();
@@ -709,9 +697,9 @@ public class testAddCollaborator {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
 		desktop_orderByCreate.click();
 
-		Boolean f1 = desktop_list_1_folder.getText().equals("×îĞÂ´´½¨");
+		Boolean f1 = desktop_list_1_folder.getText().equals("æœ€æ–°åˆ›å»º");
 		Boolean f2 = desktop_list_2_folder.getText().equals("111");
-		Boolean f3 = desktop_list_3_folder.getText().equals("×î½ü¸üĞÂ");
+		Boolean f3 = desktop_list_3_folder.getText().equals("æœ€è¿‘æ›´æ–°");
 
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
@@ -723,9 +711,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * ×ÀÃæÅÅĞòasÎÄ¼şÃû
+	 * æ¡Œé¢æ’åºasæ–‡ä»¶å
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-28
 	 *
 	 */
@@ -736,7 +724,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("ÁĞ±í")) {
+		if (msg.equals("åˆ—è¡¨")) {
 			desktop_show_type.click();
 		}
 		desktop_order.click();
@@ -745,8 +733,8 @@ public class testAddCollaborator {
 		desktop_orderByFile.click();
 
 		Boolean f1 = desktop_list_1_folder.getText().equals("111");
-		Boolean f2 = desktop_list_2_folder.getText().equals("ËùÓĞÕßÅÅĞò");
-		Boolean f3 = desktop_list_3_folder.getText().equals("ÎÄ¼ş¼ĞÅÅĞò");
+		Boolean f2 = desktop_list_2_folder.getText().equals("è¡¨æ ¼æ’åº");
+		Boolean f3 = desktop_list_3_folder.getText().equals("æ‰€æœ‰è€…æ’åº");
 
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
@@ -758,9 +746,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * ×ÀÃæÅÅĞòasËùÓĞÕß
+	 * æ¡Œé¢æ’åºasæ‰€æœ‰è€…
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-28
 	 *
 	 */
@@ -771,7 +759,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("ÁĞ±í")) {
+		if (msg.equals("åˆ—è¡¨")) {
 			desktop_show_type.click();
 		}
 		desktop_order.click();
@@ -779,8 +767,8 @@ public class testAddCollaborator {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByOwner));
 		desktop_orderByOwner.click();
 
-		Boolean f1 = desktop_list_1_folder.getText().equals("ËùÓĞÕßÅÅĞò");
-		Boolean f2 = desktop_list_2_folder.getText().equals("×îĞÂ´´½¨");
+		Boolean f1 = desktop_list_1_folder.getText().equals("æ‰€æœ‰è€…æ’åº");
+		Boolean f2 = desktop_list_2_folder.getText().equals("æœ€æ–°åˆ›å»º");
 		Boolean f3 = desktop_list_3_folder.getText().equals("111");
 
 		desktop_order.click();
@@ -793,9 +781,9 @@ public class testAddCollaborator {
 	}
 
 	/**
-	 * ×ÀÃæÅÅĞòasÎÄ¼ş¼ĞÖÃ¶¥
+	 * æ¡Œé¢æ’åºasæ–‡ä»¶å¤¹ç½®é¡¶
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-21
 	 *
 	 */
@@ -806,7 +794,7 @@ public class testAddCollaborator {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
-		if (msg.equals("ÁĞ±í")) {
+		if (msg.equals("åˆ—è¡¨")) {
 			desktop_show_type.click();
 		}
 		desktop_order.click();
@@ -818,8 +806,8 @@ public class testAddCollaborator {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 		desktop_orderByDefault.click();
 
-		Boolean f1 = desktop_list_1_folder.getText().equals("ÎÄ¼ş¼ĞÅÅĞò");
-		Boolean f2 = desktop_list_2_folder.getText().equals("×îĞÂ´´½¨");
+		Boolean f1 = desktop_list_1_folder.getText().equals("æ–‡ä»¶å¤¹æ’åº");
+		Boolean f2 = desktop_list_2_folder.getText().equals("æœ€æ–°åˆ›å»º");
 		Boolean f3 = desktop_list_3_folder.getText().equals("111");
 
 		desktop_order.click();
@@ -846,6 +834,8 @@ public class testAddCollaborator {
 	public WebElement desktop1_1;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1_folder")
 	public WebElement desktop1_1_folder;
+	@SearchWith(pageName = "desktop", elementName = "desktop1_2_folder")
+	public WebElement desktop1_2_folder;
 	@SearchWith(pageName = "desktop", elementName = "desktop_list_1_folder")
 	public WebElement desktop_list_1_folder;
 	@SearchWith(pageName = "desktop", elementName = "desktop_list_2_folder")

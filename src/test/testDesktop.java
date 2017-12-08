@@ -39,9 +39,9 @@ public class testDesktop {
 
 	public testDesktop() {
 		// System.setProperty("webdriver.firefox.bin", "C:\\Program
-		// Files\\(x86)\\Firefox\\firefox.exe");//»ğºü
+		// Files\\(x86)\\Firefox\\firefox.exe");//ç«ç‹
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");// ¹È¸è
+				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");// è°·æ­Œ
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setCapability("marionette", true);
 		driver = new ChromeDriver(capabilities);
@@ -73,14 +73,14 @@ public class testDesktop {
 
 	@AfterClass
 	public void lastMethod() {
-		// ¹Ø±Õä¯ÀÀÆ÷
-		// driver.quit();
+		// å…³é—­æµè§ˆå™¨
+		 driver.quit();
 	}
 
 	/**
-	 * µÇÂ¼
+	 * ç™»å½•
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -96,9 +96,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * µÇ³ö
+	 * ç™»å‡º
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -107,9 +107,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * Ò³Ç©ÇĞ»»
+	 * é¡µç­¾åˆ‡æ¢
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -120,9 +120,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * É¾³ıä¯ÀÀÆ÷¶àÓà±êÇ©Ò³
+	 * åˆ é™¤æµè§ˆå™¨å¤šä½™æ ‡ç­¾é¡µ
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -141,9 +141,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ÅĞ¶ÏÔªËØÊÇ·ñ´æÔÚ
+	 * åˆ¤æ–­å…ƒç´ æ˜¯å¦å­˜åœ¨
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -192,9 +192,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ĞÂ½¨ÎÄµµ
+	 * æ–°å»ºæ–‡æ¡£
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -228,9 +228,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ĞÂ½¨±í¸ñ
+	 * æ–°å»ºè¡¨æ ¼
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -266,9 +266,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ĞÂ½¨ÎÄ¼ş¼Ğ
+	 * æ–°å»ºæ–‡ä»¶å¤¹
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -311,9 +311,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ×ÀÃæ-ÁĞ±í/Æ½ÆÌ Ä£Ê½ÇĞ»»
+	 * æ¡Œé¢-åˆ—è¡¨/å¹³é“º æ¨¡å¼åˆ‡æ¢
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -342,9 +342,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ÓÒ¼üÎÄµµ-ÔÚĞÂ±êÇ©Ò³ÖĞ´ò¿ª
+	 * å³é”®æ–‡æ¡£-åœ¨æ–°æ ‡ç­¾é¡µä¸­æ‰“å¼€
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -365,9 +365,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ÓÒ¼üÎÄµµ-Ìí¼Óµ½¿ì½İ·½Ê½
+	 * å³é”®æ–‡æ¡£-æ·»åŠ åˆ°å¿«æ·æ–¹å¼
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -394,9 +394,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ÓÒ¼üÎÄµµ-ÊÕ²Ø
+	 * å³é”®æ–‡æ¡£-æ”¶è—
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -423,9 +423,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ÓÒ¼üÎÄµµ-ÒÆ¶¯
+	 * å³é”®æ–‡æ¡£-ç§»åŠ¨
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -472,9 +472,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ÓÒ¼üÎÄµµ-ÖØÃüÃû
+	 * å³é”®æ–‡æ¡£-é‡å‘½å
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -507,9 +507,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ÓÒ¼üÎÄµµ-´´½¨¸±±¾
+	 * å³é”®æ–‡æ¡£-åˆ›å»ºå‰¯æœ¬
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -534,13 +534,13 @@ public class testDesktop {
 		desktop_setting_doc_11.click();
 		desktop_newFolder_name_ok.click();
 
-		assertEquals(msg1, "¸±±¾ " + msg);
+		assertEquals(msg1, "å‰¯æœ¬ " + msg);
 	}
 
 	/**
-	 * ÓÒ¼üÎÄ¼ş¼Ğ-ÔÚĞÂ±êÇ©Ò³´ò¿ª
+	 * å³é”®æ–‡ä»¶å¤¹-åœ¨æ–°æ ‡ç­¾é¡µæ‰“å¼€
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -561,9 +561,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ÓÒ¼üÎÄ¼ş¼Ğ-Ìí¼Óµ½¿ì½İ·½Ê½
+	 * å³é”®æ–‡ä»¶å¤¹-æ·»åŠ åˆ°å¿«æ·æ–¹å¼
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -590,9 +590,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ÓÒ¼üÎÄ¼ş¼Ğ-ÊÕ²Ø
+	 * å³é”®æ–‡ä»¶å¤¹-æ”¶è—
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -619,9 +619,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * ÓÒ¼üÎÄ¼ş¼Ğ-ÎÄ¼ş¼ĞÒÆ¶¯£¬ÖØÃüÃû£¬É¾³ı
+	 * å³é”®æ–‡ä»¶å¤¹-æ–‡ä»¶å¤¹ç§»åŠ¨ï¼Œé‡å‘½åï¼Œåˆ é™¤
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -665,7 +665,7 @@ public class testDesktop {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_8));
 		desktop_setting_doc_8.click();
 
-		desktop_newFolder_name.sendKeys("É¾³ıÎÄ¼ş¼Ğ");
+		desktop_newFolder_name.sendKeys("åˆ é™¤æ–‡ä»¶å¤¹");
 		desktop_newFolder_name_ok.click();
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
@@ -677,7 +677,7 @@ public class testDesktop {
 		desktop_setting_folder_9.click();
 		desktop_newFolder_name_ok.click();
 
-		assertEquals(msg, "É¾³ıÎÄ¼ş¼Ğ");
+		assertEquals(msg, "åˆ é™¤æ–‡ä»¶å¤¹");
 	}
 
 	@Test(enabled = false)
@@ -699,9 +699,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * µ¼ÈëÎÄµµ
+	 * å¯¼å…¥æ–‡æ¡£
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -737,9 +737,9 @@ public class testDesktop {
 	}
 
 	/**
-	 * µ¼Èë±í¸ñ
+	 * å¯¼å…¥è¡¨æ ¼
 	 * 
-	 * @author Áõ³¿
+	 * @author åˆ˜æ™¨
 	 * @Time 2017-11-20
 	 *
 	 */
