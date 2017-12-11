@@ -24,6 +24,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -41,6 +42,22 @@ public class testAddCollaborator {
 		// Files\\(x86)\\Firefox\\firefox.exe");//火狐
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");// 谷歌
+//		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+//		capabilities.setCapability("marionette", true);
+//		driver = new ChromeDriver(capabilities);
+//		driver.manage().window().setSize(new Dimension(1200, 1000));
+//		// driver.manage().window().maximize();
+//		// driver.manage().window().fullscreen();
+//		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
+//		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
+//		PageFactory.initElements(customFieldDecorator, this);
+//		wait = new WebDriverWait(driver, 20);
+//		driver.navigate().to("https://release.feature.shimodev.com/");
+
+	}
+	
+	@BeforeClass
+	public void firstMethod() {
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setCapability("marionette", true);
 		driver = new ChromeDriver(capabilities);
@@ -52,7 +69,6 @@ public class testAddCollaborator {
 		PageFactory.initElements(customFieldDecorator, this);
 		wait = new WebDriverWait(driver, 20);
 		driver.navigate().to("https://release.feature.shimodev.com/");
-
 	}
 
 	@BeforeMethod
