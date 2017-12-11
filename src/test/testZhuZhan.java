@@ -37,9 +37,9 @@ public class testZhuZhan {
 
 	public testZhuZhan() {
 		// System.setProperty("webdriver.firefox.bin", "C:\\Program Files
-		// (x86)\\Firefox\\firefox.exe");//»ğºü
+		// (x86)\\Firefox\\firefox.exe");//ç«ç‹
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");// ¹È¸è
+				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");// è°·æ­Œ
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setCapability("marionette", true);
 		driver = new ChromeDriver(capabilities);
@@ -81,7 +81,7 @@ public class testZhuZhan {
 
 	@AfterClass
 	public void lastMethod() {
-		// ¹Ø±Õä¯ÀÀÆ÷
+		// å…³é—­æµè§ˆå™¨
 		// driver.quit();
 	}
 
@@ -116,7 +116,7 @@ public class testZhuZhan {
 	}
 
 	/**
-	 * ·½·¨£º»áÔ±µÇÂ¼ pass
+	 * æ–¹æ³•ï¼šä¼šå‘˜ç™»å½• pass
 	 * 
 	 * @throws InterruptedException
 	 */
@@ -126,10 +126,10 @@ public class testZhuZhan {
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("add-entry-btn")));
 		driver.findElement(By.className("add-entry-btn")).click();
 		xpath_new.click();
-		wait.until(ExpectedConditions.textToBePresentInElementValue(xpath_input, "ÎŞ±êÌâ"));
-		xpath_input.sendKeys("Æ¤Æ¤");
+		wait.until(ExpectedConditions.textToBePresentInElementValue(xpath_input, "æ— æ ‡é¢˜"));
+		xpath_input.sendKeys("çš®çš®");
 
-		wait.until(ExpectedConditions.textToBePresentInElementValue(xpath_input, "Æ¤Æ¤"));
+		wait.until(ExpectedConditions.textToBePresentInElementValue(xpath_input, "çš®çš®"));
 		driver.findElement(By.className("header-back-up")).click();
 
 		driver.navigate().refresh();
@@ -150,18 +150,18 @@ public class testZhuZhan {
 		fileTxt = driver.findElement(By.xpath(xpath_txt)).getText();
 		// String title = xpath_assert.getText();
 		System.out.println(fileTxt);
-		// ¶ÏÑÔ
-		// assertEquals("Æ¤Æ¤", title);
+		// æ–­è¨€
+		// assertEquals("çš®çš®", title);
 
 	}
 
-	// È«Ìå³ÉÔ±¿ÉÑûÇë
+	// å…¨ä½“æˆå‘˜å¯é‚€è¯·
 	@Test
 	public void testQiYeGL_inviteMember1() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
 		xpath_QYGL.click();
 		switchToPage(1);
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		xpath_qiYeYaoQing.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_qiYeYaoQing_OK));
 		xpath_qiYeYaoQing_1.click();
@@ -180,18 +180,18 @@ public class testZhuZhan {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='invitation-panel-foot']//button")));
 		Boolean clickAble = driver.findElement(By.xpath("//div[@class='invitation-panel-foot']//button")).isDisplayed();
 
-		// ¶ÏÑÔ
+		// æ–­è¨€
 		assertEquals(true, clickAble);
 
 	}
 
-	// ½öÆóÒµ´´½¨ÕßºÍ¹ÜÀíÔ±
+	// ä»…ä¼ä¸šåˆ›å»ºè€…å’Œç®¡ç†å‘˜
 	@Test
 	public void testQiYeGL_inviteMember2() {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
 		xpath_QYGL.click();
 		switchToPage(1);
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		xpath_qiYeYaoQing.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_qiYeYaoQing_OK));
 		xpath_qiYeYaoQing_2.click();
@@ -210,18 +210,18 @@ public class testZhuZhan {
 		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
 
 		String fileTxt = driver.findElement(By.xpath("//div[@class='shimo-modal-content']")).getText();
-		// ¶ÏÑÔ
-		assertEquals("Ã»ÓĞÈ¨ÏŞ£¬ÇëÁªÏµÆóÒµ¹ÜÀíÔ±Ìí¼Ó", fileTxt);
+		// æ–­è¨€
+		assertEquals("æ²¡æœ‰æƒé™ï¼Œè¯·è”ç³»ä¼ä¸šç®¡ç†å‘˜æ·»åŠ ", fileTxt);
 
 	}
 
-	// ½öÆóÒµ´´½¨Õß
+	// ä»…ä¼ä¸šåˆ›å»ºè€…
 	@Test
 	public void testQiYeGL_inviteMember3() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
 		xpath_QYGL.click();
 		switchToPage(1);
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		xpath_qiYeYaoQing.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_qiYeYaoQing_OK));
 		xpath_qiYeYaoQing_3.click();
@@ -240,12 +240,12 @@ public class testZhuZhan {
 		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
 
 		String fileTxt = driver.findElement(By.xpath("//div[@class='shimo-modal-content']")).getText();
-		// ¶ÏÑÔ
-		assertEquals("Ã»ÓĞÈ¨ÏŞ£¬ÇëÁªÏµÆóÒµ¹ÜÀíÔ±Ìí¼Ó", fileTxt);
+		// æ–­è¨€
+		assertEquals("æ²¡æœ‰æƒé™ï¼Œè¯·è”ç³»ä¼ä¸šç®¡ç†å‘˜æ·»åŠ ", fileTxt);
 
 	}
 
-	// ¸ü¸ÄÆóÒµÃû³Æ
+	// æ›´æ”¹ä¼ä¸šåç§°
 	@Test
 	public void testQiYeGL_changeQiYeName() throws InterruptedException {
 		Date date = new Date();
@@ -255,7 +255,7 @@ public class testZhuZhan {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
 		xpath_QYGL.click();
 		switchToPage(1);
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		xpath_qiYeName.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_qiYeName_ok));
 		xpath_qiYeName_input.clear();
@@ -264,17 +264,17 @@ public class testZhuZhan {
 		wait.until(ExpectedConditions.textToBePresentInElement(xpath_qiYeName_name, time));
 		String qiYeName = xpath_qiYeName_name.getText();
 
-		assertEquals("ÄúµÄÆóÒµÃû³ÆÎª " + time, qiYeName);
+		assertEquals("æ‚¨çš„ä¼ä¸šåç§°ä¸º " + time, qiYeName);
 
 	}
 
-	// ÉèÖÃ¹ÜÀíÔ±-½öÆóÒµ´´½¨Õß
+	// è®¾ç½®ç®¡ç†å‘˜-ä»…ä¼ä¸šåˆ›å»ºè€…
 	@Test(enabled = true)
 	public void testQiYeGL_setAdmin() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
 		xpath_QYGL.click();
 		switchToPage(1);
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		xpath_setAdmin.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_setAdmin_OK));
 		xpath_setAdmin_2.click();
@@ -290,14 +290,14 @@ public class testZhuZhan {
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 
 		List<WebElement> elements = driver.findElements(By.className("member-row"));
-		int number = elements.size(); // ³ÉÔ±ÁĞ±í
+		int number = elements.size(); // æˆå‘˜åˆ—è¡¨
 		String kk;
 		String pp;
 		int n = 1;
 		for (int i = 1; i <= number; i++) {
 			kk = "//div[@class='waterfall-inner']//div[" + i + "]//div[@class='action']//div//div[1]//span[1]";
 			pp = driver.findElement(By.xpath(kk)).getText();
-			if (pp.equals("³ÉÔ±")) {
+			if (pp.equals("æˆå‘˜")) {
 				n = i;
 				break;
 			}
@@ -310,17 +310,17 @@ public class testZhuZhan {
 		text = driver.findElement(By.xpath(jj)).getText();
 		System.out.println(text);
 
-		assertEquals("ÒÆ³ı³ÉÔ±", text);
+		assertEquals("ç§»é™¤æˆå‘˜", text);
 
 	}
 
-	// ÉèÖÃ¹ÜÀíÔ±-´´½¨ÕßºÍ¹ÜÀíÔ±
+	// è®¾ç½®ç®¡ç†å‘˜-åˆ›å»ºè€…å’Œç®¡ç†å‘˜
 	@Test(enabled = true)
 	public void testQiYeGL_setAdmin_2() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
 		xpath_QYGL.click();
 		switchToPage(1);
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		xpath_setAdmin.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_setAdmin_OK));
 		xpath_setAdmin_1.click();
@@ -336,14 +336,14 @@ public class testZhuZhan {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='waterfall-inner']//div[1]//div[@class='action']")));
 
 		List<WebElement> elements = driver.findElements(By.className("member-row"));
-		int number = elements.size(); // ³ÉÔ±ÁĞ±í
+		int number = elements.size(); // æˆå‘˜åˆ—è¡¨
 		String kk;
 		String pp;
 		int n = 1;
 		for (int i = 1; i <= number; i++) {
 			kk = "//div[@class='waterfall-inner']//div[" + i + "]//div[@class='action']//div//div[1]//span[1]";
 			pp = driver.findElement(By.xpath(kk)).getText();
-			if (pp.equals("³ÉÔ±")) {
+			if (pp.equals("æˆå‘˜")) {
 				n = i;
 				break;
 			}
@@ -356,17 +356,17 @@ public class testZhuZhan {
 		text = driver.findElement(By.xpath(jj)).getText();
 		System.out.println(text);
 
-		assertEquals("ÉèÖÃÎª¹ÜÀíÔ±", text);
+		assertEquals("è®¾ç½®ä¸ºç®¡ç†å‘˜", text);
 
 	}
 
-	// ÉèÖÃÌí¼ÓÍâ²¿Ğ­×÷Õß-½ö´´½¨ÕßºÍ¹ÜÀíÔ±
+	// è®¾ç½®æ·»åŠ å¤–éƒ¨åä½œè€…-ä»…åˆ›å»ºè€…å’Œç®¡ç†å‘˜
 	@Test(enabled = true)
 	public void testQiYeGL_addCollaborators() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
 		xpath_QYGL.click();
 		switchToPage(1);
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		xpath_addCollaborators.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_addCollaborators_OK));
 		xpath_addCollaborators_2.click();
@@ -397,9 +397,9 @@ public class testZhuZhan {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath_add)));
 		driver.findElement(By.xpath(xpath_add)).click();
 		// Thread.sleep(1000);
-		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "¸ù¾İÆóÒµÉèÖÃ£¬Äã²»ÄÜÌí¼ÓÍâ²¿Ğ­×÷Õß£¬ÇëÁªÏµÆóÒµ¹ÜÀíÔ±"));
+		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "æ ¹æ®ä¼ä¸šè®¾ç½®ï¼Œä½ ä¸èƒ½æ·»åŠ å¤–éƒ¨åä½œè€…ï¼Œè¯·è”ç³»ä¼ä¸šç®¡ç†å‘˜"));
 		msg = driver.findElement(By.xpath(xpath_msg)).getText();
-		Boolean user1 = msg.equals("¸ù¾İÆóÒµÉèÖÃ£¬Äã²»ÄÜÌí¼ÓÍâ²¿Ğ­×÷Õß£¬ÇëÁªÏµÆóÒµ¹ÜÀíÔ±");
+		Boolean user1 = msg.equals("æ ¹æ®ä¼ä¸šè®¾ç½®ï¼Œä½ ä¸èƒ½æ·»åŠ å¤–éƒ¨åä½œè€…ï¼Œè¯·è”ç³»ä¼ä¸šç®¡ç†å‘˜");
 
 		// driver.navigate().to("https://release.feature.shimodev.com/logout");
 		// driver.navigate().to("https://release.feature.shimodev.com/login");
@@ -418,10 +418,10 @@ public class testZhuZhan {
 		Thread.sleep(500);
 		driver.findElement(By.xpath(xpath_add)).click();
 		// Thread.sleep(1000);
-		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "Ìí¼Ó³É¹¦"));
+		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "æ·»åŠ æˆåŠŸ"));
 		msg = driver.findElement(By.xpath(xpath_msg)).getText();
 
-		Boolean user2 = msg.equals("Ìí¼Ó³É¹¦");
+		Boolean user2 = msg.equals("æ·»åŠ æˆåŠŸ");
 
 		xpath_collaborators_edit.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_collaborators_edit_delete));
@@ -431,13 +431,13 @@ public class testZhuZhan {
 
 	}
 
-	// ÉèÖÃÌí¼ÓÍâ²¿Ğ­×÷Õß-È«Ìå³ÉÔ±
+	// è®¾ç½®æ·»åŠ å¤–éƒ¨åä½œè€…-å…¨ä½“æˆå‘˜
 	@Test(enabled = true)
 	public void testQiYeGL_addCollaborators_1() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
 		xpath_QYGL.click();
 		switchToPage(1);
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		xpath_addCollaborators.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_addCollaborators_OK));
 		xpath_addCollaborators_1.click();
@@ -469,9 +469,9 @@ public class testZhuZhan {
 		Thread.sleep(500);
 		driver.findElement(By.xpath(xpath_add)).click();
 		// Thread.sleep(1500);
-		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "Ìí¼Ó³É¹¦"));
+		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "æ·»åŠ æˆåŠŸ"));
 		msg = driver.findElement(By.xpath(xpath_msg)).getText();
-		assertEquals("Ìí¼Ó³É¹¦", msg);
+		assertEquals("æ·»åŠ æˆåŠŸ", msg);
 
 		xpath_collaborators_edit.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_collaborators_edit_delete));
@@ -479,13 +479,13 @@ public class testZhuZhan {
 
 	}
 
-	// ÉèÖÃÌí¼ÓÍâ²¿Ğ­×÷Õß-×÷Õß£¬ÆóÒµ´´½¨ÕßºÍ¹ÜÀíÔ±
+	// è®¾ç½®æ·»åŠ å¤–éƒ¨åä½œè€…-ä½œè€…ï¼Œä¼ä¸šåˆ›å»ºè€…å’Œç®¡ç†å‘˜
 	@Test(enabled = true)
 	public void testQiYeGL_addCollaborators_3() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
 		xpath_QYGL.click();
 		switchToPage(1);
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		xpath_addCollaborators.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_addCollaborators_OK));
 		xpath_addCollaborators_3.click();
@@ -518,10 +518,10 @@ public class testZhuZhan {
 		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_email), "erdan@qq.com"));
 		Thread.sleep(1000);
 		driver.findElement(By.xpath(xpath_add)).click();
-		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "¸ù¾İÆóÒµÉèÖÃ£¬Äã²»ÄÜÌí¼ÓÍâ²¿Ğ­×÷Õß£¬ÇëÁªÏµÆóÒµ¹ÜÀíÔ±"));
+		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "æ ¹æ®ä¼ä¸šè®¾ç½®ï¼Œä½ ä¸èƒ½æ·»åŠ å¤–éƒ¨åä½œè€…ï¼Œè¯·è”ç³»ä¼ä¸šç®¡ç†å‘˜"));
 		msg = driver.findElement(By.xpath(xpath_msg)).getText();
 
-		Boolean user1 = msg.equals("¸ù¾İÆóÒµÉèÖÃ£¬Äã²»ÄÜÌí¼ÓÍâ²¿Ğ­×÷Õß£¬ÇëÁªÏµÆóÒµ¹ÜÀíÔ±");
+		Boolean user1 = msg.equals("æ ¹æ®ä¼ä¸šè®¾ç½®ï¼Œä½ ä¸èƒ½æ·»åŠ å¤–éƒ¨åä½œè€…ï¼Œè¯·è”ç³»ä¼ä¸šç®¡ç†å‘˜");
 
 		// driver.navigate().to("https://release.feature.shimodev.com/logout");
 		// driver.navigate().to("https://release.feature.shimodev.com/login");
@@ -542,7 +542,7 @@ public class testZhuZhan {
 		Thread.sleep(1000);
 		msg = driver.findElement(By.xpath(xpath_msg)).getText();
 
-		Boolean user2 = msg.equals("Ìí¼Ó³É¹¦");
+		Boolean user2 = msg.equals("æ·»åŠ æˆåŠŸ");
 
 		xpath_collaborators_edit.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_collaborators_edit_delete));
@@ -564,10 +564,10 @@ public class testZhuZhan {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath(xpath_add)).click();
 		Thread.sleep(1000);
-		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "Ìí¼Ó³É¹¦"));
+		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "æ·»åŠ æˆåŠŸ"));
 		msg = driver.findElement(By.xpath(xpath_msg)).getText();
 
-		Boolean user3 = msg.equals("Ìí¼Ó³É¹¦");
+		Boolean user3 = msg.equals("æ·»åŠ æˆåŠŸ");
 
 		xpath_collaborators_edit.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_collaborators_edit_delete));
@@ -577,13 +577,13 @@ public class testZhuZhan {
 
 	}
 
-	// ÉèÖÃÌí¼ÓÍâ²¿Ğ­×÷Õß-×÷Õß£¬ÆóÒµ´´½¨ÕßºÍ¹ÜÀíÔ±
+	// è®¾ç½®æ·»åŠ å¤–éƒ¨åä½œè€…-ä½œè€…ï¼Œä¼ä¸šåˆ›å»ºè€…å’Œç®¡ç†å‘˜
 	@Test(enabled = true)
 	public void testQiYeGL_transferCompany() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
 		xpath_QYGL.click();
 		switchToPage(1);
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_transferCompany));
 		xpath_transferCompany.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_transferCompanyTo_ok));
@@ -593,7 +593,7 @@ public class testZhuZhan {
 		Thread.sleep(1000);
 
 		List<WebElement> elements = driver.findElements(By.className("row"));
-		int number = elements.size(); // ³ÉÔ±ÁĞ±í
+		int number = elements.size(); // æˆå‘˜åˆ—è¡¨
 		Boolean user1;
 		if (number == 8) {
 			user1 = true;
@@ -607,7 +607,7 @@ public class testZhuZhan {
 
 		xpath_QYGL.click();
 		switchToPage(2);
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_transferCompany));
 		xpath_transferCompany.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_transferCompanyTo_ok));
@@ -616,7 +616,7 @@ public class testZhuZhan {
 
 		Thread.sleep(1000);
 		elements = driver.findElements(By.className("row"));
-		number = elements.size(); // ³ÉÔ±ÁĞ±í
+		number = elements.size(); // æˆå‘˜åˆ—è¡¨
 		Boolean user2;
 		if (number == 8) {
 			user2 = true;
@@ -627,21 +627,21 @@ public class testZhuZhan {
 		assertEquals(true, user1 && user2);
 	}
 
-	// ³ÉÔ±ÁĞ±í£¬ËÑË÷³ÉÔ±
+	// æˆå‘˜åˆ—è¡¨ï¼Œæœç´¢æˆå‘˜
 	@Test(enabled = true)
 	public void testQiYeGL_search() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
 		xpath_QYGL.click();
 		switchToPage(1);
 
-		xpath_search.sendKeys("Áõ³¿");
+		xpath_search.sendKeys("åˆ˜æ™¨");
 		Thread.sleep(1000);
 		String user = driver.findElement(By.xpath("//div[@class='name']")).getText();
 
-		assertEquals(user, "Áõ³¿");
+		assertEquals(user, "åˆ˜æ™¨");
 	}
 
-	// ³ÉÔ±ÁĞ±í£¬ËÑË÷³ÉÔ±
+	// æˆå‘˜åˆ—è¡¨ï¼Œæœç´¢æˆå‘˜
 	@Test(enabled = true)
 	public void testQiYeGL_banUser() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
@@ -650,7 +650,7 @@ public class testZhuZhan {
 
 		Thread.sleep(1000);
 		List<WebElement> elements = driver.findElements(By.className("email"));
-		int number = elements.size(); // ³ÉÔ±ÁĞ±í
+		int number = elements.size(); // æˆå‘˜åˆ—è¡¨
 		String kk;
 		String pp;
 		int n = 1;
@@ -691,7 +691,7 @@ public class testZhuZhan {
 		Thread.sleep(1000);
 
 		elements = driver.findElements(By.className("email"));
-		number = elements.size(); // ³ÉÔ±ÁĞ±í
+		number = elements.size(); // æˆå‘˜åˆ—è¡¨
 		Boolean result = false;
 		for (int i = 1; i <= number; i++) {
 			kk = "//div[@class='waterfall-inner']//div[" + i + "]//div[@class='email']";
@@ -705,7 +705,7 @@ public class testZhuZhan {
 		assertEquals(true, result);
 	}
 
-	// ¼ÓÈëÍË³öÆóÒµ
+	// åŠ å…¥é€€å‡ºä¼ä¸š
 	@Test(enabled = true)
 	public void testExitQiYe() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
@@ -729,7 +729,7 @@ public class testZhuZhan {
 		Thread.sleep(1000);
 		String msg = driver.findElement(By.xpath(xpath_msg)).getText();
 
-		assertEquals(msg, "³É¹¦ÑûÇë 1 ÈË");
+		assertEquals(msg, "æˆåŠŸé‚€è¯· 1 äºº");
 
 		login("testQiYe@qq.com", "123123");
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_user_msg));
@@ -739,8 +739,8 @@ public class testZhuZhan {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath_select)));
 		driver.findElement(By.xpath(xpath_select)).click();
 
-		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("ÆóÒµÉèÖÃ")));
-		driver.findElement(By.linkText("ÆóÒµÉèÖÃ")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("ä¼ä¸šè®¾ç½®")));
+		driver.findElement(By.linkText("ä¼ä¸šè®¾ç½®")).click();
 		String xpath_exit = "//a[@class='action red show']";
 		driver.findElement(By.xpath(xpath_exit)).click();
 
@@ -748,10 +748,10 @@ public class testZhuZhan {
 		Thread.sleep(1000);
 
 		msg = driver.findElement(By.xpath(xpath_msg)).getText();
-		assertEquals(msg, "²Ù×÷³É¹¦");
+		assertEquals(msg, "æ“ä½œæˆåŠŸ");
 	}
 
-	// ÆóÒµÑûÇëÁ´½Ó¼ÓÈëÆóÒµ
+	// ä¼ä¸šé‚€è¯·é“¾æ¥åŠ å…¥ä¼ä¸š
 	@Test(enabled = false)
 	public void testLinkToQiYe() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
