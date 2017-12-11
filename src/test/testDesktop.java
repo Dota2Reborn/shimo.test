@@ -36,6 +36,8 @@ import elementFile.SearchWith;
 public class testDesktop {
 	public WebDriver driver = null;
 	WebDriverWait wait;
+	int test_num = 2; // 1为release 2为dev
+	String test_url;
 	// Boolean firstTest = true;
 
 	public testDesktop() {
@@ -43,6 +45,12 @@ public class testDesktop {
 		// Files\\(x86)\\Firefox\\firefox.exe");//火狐
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");// 谷歌
+		
+		if(test_num==1){
+			test_url="https://release.feature.shimodev.com/";
+		}else {
+			test_url="https://shimodev.com/";
+		}
 //		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 //		capabilities.setCapability("marionette", true);
 //		driver = new ChromeDriver(capabilities);
@@ -69,14 +77,14 @@ public class testDesktop {
 		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
 		PageFactory.initElements(customFieldDecorator, this);
 		wait = new WebDriverWait(driver, 20);
-		driver.navigate().to("https://release.feature.shimodev.com/");
+		driver.navigate().to(test_url);
 	}
 
 	@BeforeMethod
 	public void setUp() throws Exception {
 		System.out.println("--------------------------------------------");
 		String url = driver.getCurrentUrl();
-		if (url != "https://release.feature.shimodev.com/") {
+		if (url != test_url) {
 			logout();
 		}
 	}
@@ -102,7 +110,7 @@ public class testDesktop {
 	 */
 	public void login(String user, String pwd) {
 
-		driver.navigate().to("https://release.feature.shimodev.com/login");
+		driver.navigate().to(test_url + "login");
 
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
@@ -119,7 +127,7 @@ public class testDesktop {
 	 *
 	 */
 	public void logout() {
-		driver.navigate().to("https://release.feature.shimodev.com/logout");
+		driver.navigate().to(test_url + "logout");
 	}
 
 	/**
@@ -397,7 +405,9 @@ public class testDesktop {
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
 		desktop_setting_doc_2.click();
-		Thread.sleep(500);
+		
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop_shortcut_1.getText();
 		String doc_name = desktop1_1.getText();
 
