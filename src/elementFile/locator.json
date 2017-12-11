@@ -118,6 +118,12 @@
 				"注释": "平铺模式第一行第一个文件夹"
 			},
 			{
+				"elementName": "desktop1_2_folder",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')][2]",
+				"注释": "平铺模式第一行第二个文件夹"
+			},
+			{
 				"elementName": "desktop_list_1_folder",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[1]//div//a//div[3]//div",
@@ -335,10 +341,16 @@
 				"注释": "协作者列表第三个协作者权限下拉框"
 			},
 			{
-				"elementName": "addCollaborator_1_list_userEmail",
+				"elementName": "addCollaborator_1_list_userName",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//span[1]//span[1]",
-				"注释": "协作者列表第一个协作者邮箱地址"
+				"注释": "协作者列表第一个协作者用户名"
+			},
+			{
+				"elementName": "addCollaborator_2_list_userName",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[2]//span[1]//span[1]",
+				"注释": "协作者列表第二个协作者用户名"
 			},
 			{
 				"elementName": "list_addCollaborator_1",
@@ -369,6 +381,12 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//div[2]",
 				"注释": "协作者页面切换到企业成员列表"
+			},
+			{
+				"elementName": "addCollaborator_folder_add",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='main']//div[1]//div[2]//div//div[2]//ul//span",
+				"注释": "文件夹内右侧(加号)添加协作人按钮"
 			},
 			{
 				"elementName": "addCollaborator_1_add",
