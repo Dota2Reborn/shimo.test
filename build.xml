@@ -19,6 +19,9 @@
 			<classpath refid="run.classpath" />
 		</javac>
 	</target>
+	<target name="copy_mkdir">
+		<move file="doc\locator_del.json" tofile="build/classes/elementFile/locator.json" />
+	</target>
 	<path id="runpath">
 		<path refid="run.classpath" />
 		<pathelement location="build/classes" />
