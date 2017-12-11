@@ -20,7 +20,8 @@
 		</javac>
 	</target>
 	<target name="copy_mkdir" depends="compile">
-		<move file="doc\locator_del.json" tofile="build/classes/elementFile/locator.json" />
+		<copy file="doc\locator_del.json" tofile="doc\locator_del_1.json"/>
+		<move file="doc\locator_del_1.json" tofile="build/classes/elementFile/locator.json" />
 	</target>
 	<path id="runpath">
 		<path refid="run.classpath" />
