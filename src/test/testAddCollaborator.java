@@ -830,6 +830,10 @@ public class testAddCollaborator {
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 		desktop_orderByDefault.click();
+		
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
+		desktop_orderByCreate.click();
 
 		Boolean f1 = desktop_list_1_file.getText().equals("文件夹排序");
 		Boolean f2 = desktop_list_2_file.getText().equals("最新创建");

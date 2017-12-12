@@ -89,7 +89,7 @@ public class ByGenerator {
 				for (int i = 0; i < elements.length(); ++i) {
 					JSONObject element = elements.getJSONObject(i);
 					if (elementName.equals(element.getString("elementName"))) {
-						System.out.println(element.toString());
+//						System.out.println(element.toString());
 						return element;
 					}
 				}
