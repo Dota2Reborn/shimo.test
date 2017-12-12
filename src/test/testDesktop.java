@@ -181,7 +181,7 @@ public class testDesktop {
 		}
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void dashboard() {
 
 		login("autoTest@shimo.im", "123123");
@@ -190,29 +190,26 @@ public class testDesktop {
 		desktop.click();
 		url = driver.getCurrentUrl();
 		// System.out.println(url);
-		Boolean desktop_url = url.equals("https://release.feature.shimodev.com/desktop");
+		Boolean desktop_url = url.equals(test_url + "desktop");
 
 		dashboard.click();
 		url = driver.getCurrentUrl();
-		Boolean dashboard_url1 = url.equals("https://release.feature.shimodev.com/dashboard/updated");
+		Boolean dashboard_url1 = url.equals(test_url + "dashboard/updated");
 
 		dashboard_2.click();
 		url = driver.getCurrentUrl();
-		Boolean dashboard_url2 = url.equals("https://release.feature.shimodev.com/dashboard/used");
+		Boolean dashboard_url2 = url.equals(test_url + "dashboard/used");
 
 		dashboard_3.click();
 		url = driver.getCurrentUrl();
-		Boolean dashboard_url3 = url.equals("https://release.feature.shimodev.com/dashboard/own");
+		Boolean dashboard_url3 = url.equals(test_url + "dashboard/own");
 
 		dashboard_4.click();
 		url = driver.getCurrentUrl();
-		Boolean dashboard_url4 = url.equals("https://release.feature.shimodev.com/dashboard/shared");
+		Boolean dashboard_url4 = url.equals(test_url + "dashboard/shared");
 
 		assertEquals(true, desktop_url && dashboard_url1 && dashboard_url2 && dashboard_url3 && dashboard_url4);
 
-		// favorites.click();
-		// trash.click();
-		// dashboard.click();
 	}
 
 	/**
