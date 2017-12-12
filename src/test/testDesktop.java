@@ -98,7 +98,7 @@ public class testDesktop {
 	@AfterClass
 	public void lastMethod() {
 		// 关闭浏览器
-		 driver.quit();
+//		 driver.quit();
 	}
 
 	/**

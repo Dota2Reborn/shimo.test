@@ -124,19 +124,19 @@
 				"注释": "平铺模式第一行第二个文件夹"
 			},
 			{
-				"elementName": "desktop_list_1_folder",
+				"elementName": "desktop_list_1_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[1]//div//a//div[3]//div",
 				"注释": "列表模式第一个文件"
 			},
 			{
-				"elementName": "desktop_list_2_folder",
+				"elementName": "desktop_list_2_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[2]//div//a//div[3]//div",
 				"注释": "列表模式第二个文件"
 			},
 						{
-				"elementName": "desktop_list_3_folder",
+				"elementName": "desktop_list_3_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[3]//div//a//div[3]//div",
 				"注释": "列表模式第三个文件"

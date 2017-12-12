@@ -97,7 +97,7 @@ public class testAddCollaborator {
 	@AfterClass
 	public void lastMethod() {
 		// 关闭浏览器
-		 driver.quit();
+//		 driver.quit();
 	}
 
 	/**
@@ -686,9 +686,9 @@ public class testAddCollaborator {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByUpdate));
 		desktop_orderByUpdate.click();
 
-		Boolean f1 = desktop_list_1_folder.getText().equals("最近更新");
-		Boolean f2 = desktop_list_2_folder.getText().equals("最新创建");
-		Boolean f3 = desktop_list_3_folder.getText().equals("111");
+		Boolean f1 = desktop_list_1_file.getText().equals("最近更新");
+		Boolean f2 = desktop_list_2_file.getText().equals("最新创建");
+		Boolean f3 = desktop_list_3_file.getText().equals("111");
 
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
@@ -721,9 +721,9 @@ public class testAddCollaborator {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
 		desktop_orderByCreate.click();
 
-		Boolean f1 = desktop_list_1_folder.getText().equals("最新创建");
-		Boolean f2 = desktop_list_2_folder.getText().equals("111");
-		Boolean f3 = desktop_list_3_folder.getText().equals("最近更新");
+		Boolean f1 = desktop_list_1_file.getText().equals("最新创建");
+		Boolean f2 = desktop_list_2_file.getText().equals("111");
+		Boolean f3 = desktop_list_3_file.getText().equals("最近更新");
 
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
@@ -755,10 +755,11 @@ public class testAddCollaborator {
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFile));
 		desktop_orderByFile.click();
+		Thread.sleep(600);
 
-		Boolean f1 = desktop_list_1_folder.getText().equals("111");
-		Boolean f2 = desktop_list_2_folder.getText().equals("表格排序");
-		Boolean f3 = desktop_list_3_folder.getText().equals("所有者排序");
+		Boolean f1 = desktop_list_1_file.getText().equals("111");
+		Boolean f2 = desktop_list_2_file.getText().equals("表格排序");
+		Boolean f3 = desktop_list_3_file.getText().startsWith("所有者排序");
 
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
@@ -791,9 +792,9 @@ public class testAddCollaborator {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByOwner));
 		desktop_orderByOwner.click();
 
-		Boolean f1 = desktop_list_1_folder.getText().equals("所有者排序");
-		Boolean f2 = desktop_list_2_folder.getText().equals("最新创建");
-		Boolean f3 = desktop_list_3_folder.getText().equals("111");
+		Boolean f1 = desktop_list_1_file.getText().startsWith("所有者排序");
+		Boolean f2 = desktop_list_2_file.getText().equals("最新创建");
+		Boolean f3 = desktop_list_3_file.getText().equals("111");
 
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
@@ -830,9 +831,9 @@ public class testAddCollaborator {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 		desktop_orderByDefault.click();
 
-		Boolean f1 = desktop_list_1_folder.getText().equals("文件夹排序");
-		Boolean f2 = desktop_list_2_folder.getText().equals("最新创建");
-		Boolean f3 = desktop_list_3_folder.getText().equals("111");
+		Boolean f1 = desktop_list_1_file.getText().equals("文件夹排序");
+		Boolean f2 = desktop_list_2_file.getText().equals("最新创建");
+		Boolean f3 = desktop_list_3_file.getText().equals("111");
 
 		desktop_order.click();
 
@@ -860,12 +861,12 @@ public class testAddCollaborator {
 	public WebElement desktop1_1_folder;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_2_folder")
 	public WebElement desktop1_2_folder;
-	@SearchWith(pageName = "desktop", elementName = "desktop_list_1_folder")
-	public WebElement desktop_list_1_folder;
-	@SearchWith(pageName = "desktop", elementName = "desktop_list_2_folder")
-	public WebElement desktop_list_2_folder;
-	@SearchWith(pageName = "desktop", elementName = "desktop_list_3_folder")
-	public WebElement desktop_list_3_folder;
+	@SearchWith(pageName = "desktop", elementName = "desktop_list_1_file")
+	public WebElement desktop_list_1_file;
+	@SearchWith(pageName = "desktop", elementName = "desktop_list_2_file")
+	public WebElement desktop_list_2_file;
+	@SearchWith(pageName = "desktop", elementName = "desktop_list_3_file")
+	public WebElement desktop_list_3_file;
 
 	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_5")
 	public WebElement desktop_setting_doc_5;
