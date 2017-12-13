@@ -30,8 +30,6 @@
 	<target name="run" depends="copy_mkdir">
 		<testng classpathref="runpath" outputDir="test-output">
 			<xmlfileset dir="${basedir}" includes="testng.xml" />
-			<sysproperty key="org.uncommons.reportng.title" value="自动化测试报告" />
-			<jvmarg value="-Dfile.encoding=UTF-8" />
 		</testng>
 	</target>
 	<target name="testng">
