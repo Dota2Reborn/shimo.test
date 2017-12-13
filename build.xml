@@ -20,7 +20,7 @@
 		</javac>
 	</target>
 	<target name="copy_mkdir" depends="compile">
-		<copy file="src\elementFile\locator.json" tofile="src\elementFile\locator_1.json"/>
+		<copy file="src\elementFile\locator.json" tofile="src\elementFile\locator_1.json" />
 		<move file="src\elementFile\locator_1.json" tofile="build/classes/elementFile/locator.json" />
 	</target>
 	<path id="runpath">
@@ -30,7 +30,8 @@
 	<target name="run" depends="copy_mkdir">
 		<testng classpathref="runpath" outputDir="test-output">
 			<xmlfileset dir="${basedir}" includes="testng.xml" />
-			<jvmarg value="-ea" />
+			<sysproperty key="org.uncommons.reportng.title" value="自动化测试报告" />
+			<jvmarg value="-Dfile.encoding=UTF-8" />
 		</testng>
 	</target>
 	<target name="testng">
