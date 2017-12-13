@@ -35,7 +35,7 @@ import elementFile.SearchWith;
 public class testAddCollaborator {
 	public WebDriver driver = null;
 	WebDriverWait wait;
-	int test_num = 2; // 1为release 2为dev
+	int test_num = 1; // 1为release 2为dev
 	String test_url;
 	// Boolean firstTest = true;
 
@@ -46,7 +46,7 @@ public class testAddCollaborator {
 				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");// 谷歌
 		
 		if(test_num==1){
-			test_url="https://release.feature.shimodev.com/";
+			test_url="https://release.shimodev.com/";
 		}else {
 			test_url="https://shimodev.com/";
 		}

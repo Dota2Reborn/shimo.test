@@ -55,10 +55,10 @@ public class testZhuZhan {
 	public void setUp() throws Exception {
 
 		if (firstTest == false) {
-			driver.navigate().to("https://release.feature.shimodev.com/logout");
+			driver.navigate().to("https://release.shimodev.com/logout");
 			// driver.navigate().to("https://shimodev.com/logout");
 		}
-		driver.get("https://release.feature.shimodev.com/login");
+		driver.get("https://release.shimodev.com/login");
 		// driver.get("https://shimodev.com/login");
 		login("panpan@qq.com", "123123");
 		firstTest = false;
@@ -87,8 +87,8 @@ public class testZhuZhan {
 
 	public void login(String user, String pwd) {
 		if (firstTest == false) {
-			driver.navigate().to("https://release.feature.shimodev.com/logout");
-			driver.navigate().to("https://release.feature.shimodev.com/login");
+			driver.navigate().to("https://release.shimodev.com/logout");
+			driver.navigate().to("https://release.shimodev.com/login");
 			// driver.navigate().to("https://shimodev.com/logout");
 			// driver.navigate().to("https://shimodev.com/login");
 		}
@@ -167,8 +167,8 @@ public class testZhuZhan {
 		xpath_qiYeYaoQing_1.click();
 		xpath_qiYeYaoQing_OK.click();
 
-		// driver.navigate().to("https://release.feature.shimodev.com/logout");
-		// driver.navigate().to("https://release.feature.shimodev.com/login");
+		// driver.navigate().to("https://release.shimodev.com/logout");
+		// driver.navigate().to("https://release.shimodev.com/login");
 		login("amei@qq.com", "123123");
 
 		xpath_user_icon.click();
@@ -197,8 +197,8 @@ public class testZhuZhan {
 		xpath_qiYeYaoQing_2.click();
 		xpath_qiYeYaoQing_OK.click();
 
-		// driver.navigate().to("https://release.feature.shimodev.com/logout");
-		// driver.navigate().to("https://release.feature.shimodev.com/login");
+		// driver.navigate().to("https://release.shimodev.com/logout");
+		// driver.navigate().to("https://release.shimodev.com/login");
 		login("amei@qq.com", "123123");
 
 		xpath_user_icon.click();
@@ -227,8 +227,8 @@ public class testZhuZhan {
 		xpath_qiYeYaoQing_3.click();
 		xpath_qiYeYaoQing_OK.click();
 
-		// driver.navigate().to("https://release.feature.shimodev.com/logout");
-		// driver.navigate().to("https://release.feature.shimodev.com/login");
+		// driver.navigate().to("https://release.shimodev.com/logout");
+		// driver.navigate().to("https://release.shimodev.com/login");
 		login("pipi@qq.com", "123123");
 
 		xpath_user_icon.click();
@@ -280,8 +280,8 @@ public class testZhuZhan {
 		xpath_setAdmin_2.click();
 		xpath_setAdmin_OK.click();
 
-		// driver.navigate().to("https://release.feature.shimodev.com/logout");
-		// driver.navigate().to("https://release.feature.shimodev.com/login");
+		// driver.navigate().to("https://release.shimodev.com/logout");
+		// driver.navigate().to("https://release.shimodev.com/login");
 		login("pipi@qq.com", "123123");
 
 		xpath_user_icon.click();
@@ -326,8 +326,8 @@ public class testZhuZhan {
 		xpath_setAdmin_1.click();
 		xpath_setAdmin_OK.click();
 
-		// driver.navigate().to("https://release.feature.shimodev.com/logout");
-		// driver.navigate().to("https://release.feature.shimodev.com/login");
+		// driver.navigate().to("https://release.shimodev.com/logout");
+		// driver.navigate().to("https://release.shimodev.com/login");
 		login("pipi@qq.com", "123123");
 
 		xpath_user_icon.click();
@@ -372,8 +372,8 @@ public class testZhuZhan {
 		xpath_addCollaborators_2.click();
 		xpath_addCollaborators_OK.click();
 
-		// driver.navigate().to("https://release.feature.shimodev.com/logout");
-		// driver.navigate().to("https://release.feature.shimodev.com/login");
+		// driver.navigate().to("https://release.shimodev.com/logout");
+		// driver.navigate().to("https://release.shimodev.com/login");
 		login("amei@qq.com", "123123");
 
 		Actions action = new Actions(driver);
@@ -401,8 +401,8 @@ public class testZhuZhan {
 		msg = driver.findElement(By.xpath(xpath_msg)).getText();
 		Boolean user1 = msg.equals("根据企业设置，你不能添加外部协作者，请联系企业管理员");
 
-		// driver.navigate().to("https://release.feature.shimodev.com/logout");
-		// driver.navigate().to("https://release.feature.shimodev.com/login");
+		// driver.navigate().to("https://release.shimodev.com/logout");
+		// driver.navigate().to("https://release.shimodev.com/login");
 		login("pipi@qq.com", "123123");
 
 		action.moveToElement(driver.findElement(By.xpath(xpath_file1))).perform();
@@ -443,8 +443,8 @@ public class testZhuZhan {
 		xpath_addCollaborators_1.click();
 		xpath_addCollaborators_OK.click();
 
-		// driver.navigate().to("https://release.feature.shimodev.com/logout");
-		// driver.navigate().to("https://release.feature.shimodev.com/login");
+		// driver.navigate().to("https://release.shimodev.com/logout");
+		// driver.navigate().to("https://release.shimodev.com/login");
 		login("amei@qq.com", "123123");
 
 		Actions action = new Actions(driver);
@@ -491,8 +491,8 @@ public class testZhuZhan {
 		xpath_addCollaborators_3.click();
 		xpath_addCollaborators_OK.click();
 
-		// driver.navigate().to("https://release.feature.shimodev.com/logout");
-		// driver.navigate().to("https://release.feature.shimodev.com/login");
+		// driver.navigate().to("https://release.shimodev.com/logout");
+		// driver.navigate().to("https://release.shimodev.com/login");
 		login("shimo03@sina.com", "123123");
 
 		Actions action = new Actions(driver);
@@ -523,8 +523,8 @@ public class testZhuZhan {
 
 		Boolean user1 = msg.equals("根据企业设置，你不能添加外部协作者，请联系企业管理员");
 
-		// driver.navigate().to("https://release.feature.shimodev.com/logout");
-		// driver.navigate().to("https://release.feature.shimodev.com/login");
+		// driver.navigate().to("https://release.shimodev.com/logout");
+		// driver.navigate().to("https://release.shimodev.com/login");
 		login("amei@qq.com", "123123");
 
 		action.moveToElement(driver.findElement(By.xpath(xpath_file1))).perform();
@@ -601,8 +601,8 @@ public class testZhuZhan {
 			user1 = false;
 		}
 
-		// driver.navigate().to("https://release.feature.shimodev.com/logout");
-		// driver.navigate().to("https://release.feature.shimodev.com/login");
+		// driver.navigate().to("https://release.shimodev.com/logout");
+		// driver.navigate().to("https://release.shimodev.com/login");
 		login("pipi@qq.com", "123123");
 
 		xpath_QYGL.click();
