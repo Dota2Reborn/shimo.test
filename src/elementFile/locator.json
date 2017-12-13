@@ -1,422 +1,422 @@
 [
 	{
-		"×¢ÊÍ": "¹¤×÷Ì¨",
+		"æ³¨é‡Š": "å·¥ä½œå°",
 		"pageName": "dashboard",
 		"elements": [
 			{
 				"elementName": "dashboard",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='left-sidebar']//a[1]",
-				"×¢ÊÍ": "ÇĞ»»µ½¹¤×÷Ì¨"
+				"æ³¨é‡Š": "åˆ‡æ¢åˆ°å·¥ä½œå°"
 			},
 			{
 				"elementName": "favorites",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='left-sidebar']//a[3]",
-				"×¢ÊÍ": "ÇĞ»»µ½ÎÒµÄÊÕ²Ø"
+				"æ³¨é‡Š": "åˆ‡æ¢åˆ°æˆ‘çš„æ”¶è—"
 			},
 			{
 				"elementName": "trash",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='left-sidebar']//a[4]",
-				"×¢ÊÍ": "ÇĞ»»µ½»ØÊÕÕ¾"
+				"æ³¨é‡Š": "åˆ‡æ¢åˆ°å›æ”¶ç«™"
 			},
 			{
 				"elementName": "dashboard_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='nav-wrap']//div[1]",
-				"×¢ÊÍ": "¹¤×÷Ì¨-×î½ü¸üĞÂ"
+				"æ³¨é‡Š": "å·¥ä½œå°-æœ€è¿‘æ›´æ–°"
 			},
 			{
 				"elementName": "dashboard_2",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='nav-wrap']//div[2]",
-				"×¢ÊÍ": "¹¤×÷Ì¨-×î½üÊ¹ÓÃ"
+				"æ³¨é‡Š": "å·¥ä½œå°-æœ€è¿‘ä½¿ç”¨"
 			},
 			{
 				"elementName": "dashboard_3",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='nav-wrap']//div[3]",
-				"×¢ÊÍ": "¹¤×÷Ì¨-ÎÒ´´½¨µÄ"
+				"æ³¨é‡Š": "å·¥ä½œå°-æˆ‘åˆ›å»ºçš„"
 			},
 			{
 				"elementName": "dashboard_4",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='nav-wrap']//div[4]",
-				"×¢ÊÍ": "¹¤×÷Ì¨-¹²Ïí¸øÎÒµÄ"
+				"æ³¨é‡Š": "å·¥ä½œå°-å…±äº«ç»™æˆ‘çš„"
 			}
 		]
 	},
 	{
-		"×¢ÊÍ": "×ÀÃæ",
+		"æ³¨é‡Š": "æ¡Œé¢",
 		"pageName": "desktop",
 		"elements": [
 			{
 				"elementName": "desktop",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='left-sidebar']//a[2]",
-				"×¢ÊÍ": "ÇĞ»»µ½ÎÒµÄ×ÀÃæ"
+				"æ³¨é‡Š": "åˆ‡æ¢åˆ°æˆ‘çš„æ¡Œé¢"
 			},
 			{
 				"elementName": "desktop_new",
 				"locateUsing": "xpath",
 				"locator": "//button[@data-test='create-file']",
-				"×¢ÊÍ": "ĞÂ½¨ÎÄ¼ş°´Å¥"
+				"æ³¨é‡Š": "æ–°å»ºæ–‡ä»¶æŒ‰é’®"
 			},
 			{
 				"elementName": "desktop_import",
 				"locateUsing": "xpath",
 				"locator": "//input[@data-test='import-file']",
-				"×¢ÊÍ": "µ¼Èë"
+				"æ³¨é‡Š": "å¯¼å…¥"
 			},
 			{
 				"elementName": "desktop_newDoc",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='create-file-doc']",
-				"×¢ÊÍ": "ĞÂ½¨ÎÄµµ"
+				"æ³¨é‡Š": "æ–°å»ºæ–‡æ¡£"
 			},
 			{
 				"elementName": "desktop_newSheet",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='create-file-sheet']",
-				"×¢ÊÍ": "ĞÂ½¨±í¸ñ"
+				"æ³¨é‡Š": "æ–°å»ºè¡¨æ ¼"
 			},
 			{
 				"elementName": "desktop_newFolder",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='create-file-folder']",
-				"×¢ÊÍ": "ĞÂ½¨ÎÄ¼ş¼Ğ"
+				"æ³¨é‡Š": "æ–°å»ºæ–‡ä»¶å¤¹"
 			},
 			{
 				"elementName": "desktop_newFolder_name",
 				"locateUsing": "xpath",
 				"locator": "//input[@data-test='new-folder-inputbox']",
-				"×¢ÊÍ": "ÎÄ¼ş¼ĞÃüÃû"
+				"æ³¨é‡Š": "æ–‡ä»¶å¤¹å‘½å"
 			},
 			{
 				"elementName": "desktop_newFolder_name_ok",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-footer']//button[1]",
-				"×¢ÊÍ": "ÎÄ¼ş¼ĞÃüÃûÈ·¶¨"
+				"æ³¨é‡Š": "æ–‡ä»¶å¤¹å‘½åç¡®å®š"
 			},
 			{
 				"elementName": "desktop_newFolder_name_cancel",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-footer']//button[2]",
-				"×¢ÊÍ": "ÎÄ¼ş¼ĞÃüÃûÈ¡Ïû"
+				"æ³¨é‡Š": "æ–‡ä»¶å¤¹å‘½åå–æ¶ˆ"
 			},
 			{
 				"elementName": "desktop1_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[1]",
-				"×¢ÊÍ": "Æ½ÆÌÄ£Ê½µÚÒ»ĞĞµÚÒ»¸öÎÄ¼ş"
+				"æ³¨é‡Š": "å¹³é“ºæ¨¡å¼ç¬¬ä¸€è¡Œç¬¬ä¸€ä¸ªæ–‡ä»¶"
 			},
 			{
 				"elementName": "desktop1_1_folder",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')]",
-				"×¢ÊÍ": "Æ½ÆÌÄ£Ê½µÚÒ»ĞĞµÚÒ»¸öÎÄ¼ş¼Ğ"
+				"æ³¨é‡Š": "å¹³é“ºæ¨¡å¼ç¬¬ä¸€è¡Œç¬¬ä¸€ä¸ªæ–‡ä»¶å¤¹"
 			},
 			{
 				"elementName": "desktop1_2_folder",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')][2]",
-				"×¢ÊÍ": "Æ½ÆÌÄ£Ê½µÚÒ»ĞĞµÚ¶ş¸öÎÄ¼ş¼Ğ"
+				"æ³¨é‡Š": "å¹³é“ºæ¨¡å¼ç¬¬ä¸€è¡Œç¬¬äºŒä¸ªæ–‡ä»¶å¤¹"
 			},
 			{
 				"elementName": "desktop_list_1_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[1]//div//a//div[3]//div",
-				"×¢ÊÍ": "ÁĞ±íÄ£Ê½µÚÒ»¸öÎÄ¼ş"
+				"æ³¨é‡Š": "åˆ—è¡¨æ¨¡å¼ç¬¬ä¸€ä¸ªæ–‡ä»¶"
 			},
 			{
 				"elementName": "desktop_list_2_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[2]//div//a//div[3]//div",
-				"×¢ÊÍ": "ÁĞ±íÄ£Ê½µÚ¶ş¸öÎÄ¼ş"
+				"æ³¨é‡Š": "åˆ—è¡¨æ¨¡å¼ç¬¬äºŒä¸ªæ–‡ä»¶"
 			},
 						{
 				"elementName": "desktop_list_3_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[3]//div//a//div[3]//div",
-				"×¢ÊÍ": "ÁĞ±íÄ£Ê½µÚÈı¸öÎÄ¼ş"
+				"æ³¨é‡Š": "åˆ—è¡¨æ¨¡å¼ç¬¬ä¸‰ä¸ªæ–‡ä»¶"
 			},
 			{
 				"elementName": "desktop_set",
 				"locateUsing": "className",
 				"locator": "settings-btn",
-				"×¢ÊÍ": "hoverÎÄ¼şµÄ³İÂÖ"
+				"æ³¨é‡Š": "hoveræ–‡ä»¶çš„é½¿è½®"
 			},
 			{
 				"elementName": "desktop_setting_doc_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[1]",
-				"×¢ÊÍ": "ÎÄµµ±í¸ñĞÂ±êÇ©Ò³ÖĞ´ò¿ª"
+				"æ³¨é‡Š": "æ–‡æ¡£è¡¨æ ¼æ–°æ ‡ç­¾é¡µä¸­æ‰“å¼€"
 			},
 			{
 				"elementName": "desktop_setting_doc_2",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[2]",
-				"×¢ÊÍ": "ÎÄµµ±í¸ñÌí¼Ó¿ì½İ·½Ê½"
+				"æ³¨é‡Š": "æ–‡æ¡£è¡¨æ ¼æ·»åŠ å¿«æ·æ–¹å¼"
 			},
 			{
 				"elementName": "desktop_setting_doc_3",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[3]",
-				"×¢ÊÍ": "ÎÄµµ±í¸ñÌí¼ÓÊÕ²Ø"
+				"æ³¨é‡Š": "æ–‡æ¡£è¡¨æ ¼æ·»åŠ æ”¶è—"
 			},
 			{
 				"elementName": "desktop_setting_doc_5",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[5]",
-				"×¢ÊÍ": "ÎÄµµ±í¸ñÌí¼ÓĞ­×÷Õß"
+				"æ³¨é‡Š": "æ–‡æ¡£è¡¨æ ¼æ·»åŠ åä½œè€…"
 			},
 			{
 				"elementName": "desktop_setting_doc_6",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[6]",
-				"×¢ÊÍ": "ÎÄµµ±í¸ñÒÆ¶¯"
+				"æ³¨é‡Š": "æ–‡æ¡£è¡¨æ ¼ç§»åŠ¨"
 			},
 			{
 				"elementName": "desktop_setting_doc_8",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[8]",
-				"×¢ÊÍ": "ÎÄµµ±í¸ñÖØÃüÃû"
+				"æ³¨é‡Š": "æ–‡æ¡£è¡¨æ ¼é‡å‘½å"
 			},
 			{
 				"elementName": "desktop_setting_doc_9",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
-				"×¢ÊÍ": "ÎÄµµ±í¸ñ´´½¨¸±±¾"
+				"æ³¨é‡Š": "æ–‡æ¡£è¡¨æ ¼åˆ›å»ºå‰¯æœ¬"
 			},
 			{
 				"elementName": "desktop_setting_doc_11",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[11]",
-				"×¢ÊÍ": "ÎÄµµ±í¸ñÉ¾³ı°´Å¥"
+				"æ³¨é‡Š": "æ–‡æ¡£è¡¨æ ¼åˆ é™¤æŒ‰é’®"
 			},
 			
 			{
 				"elementName": "desktop_setting_folder_9",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
-				"×¢ÊÍ": "ÎÄ¼ş¼ĞÉ¾³ı°´Å¥"
+				"æ³¨é‡Š": "æ–‡ä»¶å¤¹åˆ é™¤æŒ‰é’®"
 			},
 			{
 				"elementName": "desktop_shortcut_1",
 				"locateUsing": "xpath",
 				"locator": "//ul[@class='shortcut-list']//li[1]",
-				"×¢ÊÍ": "×ÀÃæ¿ì½İ·½Ê½µÚÒ»¸ö"
+				"æ³¨é‡Š": "æ¡Œé¢å¿«æ·æ–¹å¼ç¬¬ä¸€ä¸ª"
 			},
 			{
 				"elementName": "desktop_orderByUpdate",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-updatetime']",
-				"×¢ÊÍ": "×ÀÃæÅÅĞò-°´¸üĞÂÊ±¼ä"
+				"æ³¨é‡Š": "æ¡Œé¢æ’åº-æŒ‰æ›´æ–°æ—¶é—´"
 			},
 			{
 				"elementName": "desktop_orderByCreate",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-createtime']",
-				"×¢ÊÍ": "×ÀÃæÅÅĞò-°´´´½¨Ê±¼ä"
+				"æ³¨é‡Š": "æ¡Œé¢æ’åº-æŒ‰åˆ›å»ºæ—¶é—´"
 			},
 			{
 				"elementName": "desktop_orderByFile",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-name']",
-				"×¢ÊÍ": "×ÀÃæÅÅĞò-ÎÄ¼şÃû"
+				"æ³¨é‡Š": "æ¡Œé¢æ’åº-æ–‡ä»¶å"
 			},
 			{
 				"elementName": "desktop_orderByOwner",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-owner']",
-				"×¢ÊÍ": "×ÀÃæÅÅĞò-ËùÓĞÕß"
+				"æ³¨é‡Š": "æ¡Œé¢æ’åº-æ‰€æœ‰è€…"
 			},
 			{
 				"elementName": "desktop_orderByFolderUP",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-folder-priority']",
-				"×¢ÊÍ": "×ÀÃæÅÅĞò-ÎÄ¼ş¼ĞÖÃ¶¥"
+				"æ³¨é‡Š": "æ¡Œé¢æ’åº-æ–‡ä»¶å¤¹ç½®é¡¶"
 			},
 			{
 				"elementName": "desktop_orderByDefault",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-default']",
-				"×¢ÊÍ": "×ÀÃæÅÅĞò-Ä¬ÈÏ"
+				"æ³¨é‡Š": "æ¡Œé¢æ’åº-é»˜è®¤"
 			},
 			{
 				"elementName": "desktop_order",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='actions']//div[1]",
-				"×¢ÊÍ": "×ÀÃæÅÅĞò"
+				"æ³¨é‡Š": "æ¡Œé¢æ’åº"
 			},
 			{
 				"elementName": "desktop_show_type",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='actions']//div[@data-test='change-table-mode']",
-				"×¢ÊÍ": "ÁĞ±íÆ½ÆÌÄ£Ê½ÇĞ»»"
+				"æ³¨é‡Š": "åˆ—è¡¨å¹³é“ºæ¨¡å¼åˆ‡æ¢"
 			},
 			{
 				"elementName": "desktop_moveFolder_list_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//ul//li[1]",
-				"×¢ÊÍ": "ÒÆ¶¯ÎÄ¼şµ½ÎÄ¼ş¼Ğ£¬Ñ¡ÔñÁĞ±íÖĞµÚÒ»¸öÎÄ¼ş¼Ğ"
+				"æ³¨é‡Š": "ç§»åŠ¨æ–‡ä»¶åˆ°æ–‡ä»¶å¤¹ï¼Œé€‰æ‹©åˆ—è¡¨ä¸­ç¬¬ä¸€ä¸ªæ–‡ä»¶å¤¹"
 			},
 			{
 				"elementName": "desktop_moveFolder_list_2",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//ul//li[2]",
-				"×¢ÊÍ": "ÒÆ¶¯ÎÄ¼şµ½ÎÄ¼ş¼Ğ£¬Ñ¡ÔñÁĞ±íÖĞµÚ¶ş¸öÎÄ¼ş¼Ğ"
+				"æ³¨é‡Š": "ç§»åŠ¨æ–‡ä»¶åˆ°æ–‡ä»¶å¤¹ï¼Œé€‰æ‹©åˆ—è¡¨ä¸­ç¬¬äºŒä¸ªæ–‡ä»¶å¤¹"
 			},
 			{
 				"elementName": "desktop_moveFolder_back_button",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']/*[name()='svg']",
-				"×¢ÊÍ": "ÒÆ¶¯ÎÄ¼şµ½ÎÄ¼ş¼Ğ£¬ÁĞ±íÖĞºóÍË°´Å¥"
+				"æ³¨é‡Š": "ç§»åŠ¨æ–‡ä»¶åˆ°æ–‡ä»¶å¤¹ï¼Œåˆ—è¡¨ä¸­åé€€æŒ‰é’®"
 			},
 			{
 				"elementName": "desktop_moveFolder_button",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div//div//button",
-				"×¢ÊÍ": "ÒÆ¶¯µ½²âÊÔÎÄ¼ş¼Ğ"
+				"æ³¨é‡Š": "ç§»åŠ¨åˆ°æµ‹è¯•æ–‡ä»¶å¤¹"
 			}
 		]
 	},
 	{
-		"×¢ÊÍ": "Ğ­×÷ÕßÏà¹Ø",
+		"æ³¨é‡Š": "åä½œè€…ç›¸å…³",
 		"pageName": "addCollaborator",
 		"elements": [
 			{
 				"elementName": "b_addCollaborator",
 				"locateUsing": "xpath",
 				"locator": "//button[@data-test='adding-collaborators']",
-				"×¢ÊÍ": "Ìí¼ÓĞ­×÷Õß°´Å¥"
+				"æ³¨é‡Š": "æ·»åŠ åä½œè€…æŒ‰é’®"
 			},
 			{
 				"elementName": "b_addCollaborator_close",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-content']//button",
-				"×¢ÊÍ": "¹Ø±ÕÌí¼ÓĞ­×÷Õßµ¯¿ò"
+				"æ³¨é‡Š": "å…³é—­æ·»åŠ åä½œè€…å¼¹æ¡†"
 			},
 			{
 				"elementName": "b_addCollaborator_back",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[1]//span",
-				"×¢ÊÍ": "´ÓĞ­×÷ÕßÁĞ±í·´À¡°´Å¥"
+				"æ³¨é‡Š": "ä»åä½œè€…åˆ—è¡¨åé¦ˆæŒ‰é’®"
 			},
 			{
 				"elementName": "b_addCollaborator_confirm",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-popconfirm sm-tooltip-inner']//div//div[2]//button",
-				"×¢ÊÍ": "Ğ­×÷ÕßÒÆ³ı»òÕß½µµÍ×Ô¼ºÈ¨ÏŞÊ±ÌáÊ¾µ¯´°µÄÈ·¶¨°´Å¥"
+				"æ³¨é‡Š": "åä½œè€…ç§»é™¤æˆ–è€…é™ä½è‡ªå·±æƒé™æ—¶æç¤ºå¼¹çª—çš„ç¡®å®šæŒ‰é’®"
 			},
 			{
 				"elementName": "input_addCollaborator",
 				"locateUsing": "xpath",
 				"locator": "//input[@data-test='collaborator-search-inputbox']",
-				"×¢ÊÍ": "Ìí¼ÓĞ­×÷ÕßÓÊÏäÊäÈë¿ò"
+				"æ³¨é‡Š": "æ·»åŠ åä½œè€…é‚®ç®±è¾“å…¥æ¡†"
 			},
 			{
 				"elementName": "b_addCollaborator_ok",
 				"locateUsing": "xpath",
 				"locator": "//button[@data-test='added-collaborators']",
-				"×¢ÊÍ": "È·ÈÏÌí¼ÓĞ­×÷Õß°´Å¥"
+				"æ³¨é‡Š": "ç¡®è®¤æ·»åŠ åä½œè€…æŒ‰é’®"
 			},
 			{
 				"elementName": "b_addCollaborator_1_list",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//div//div",
-				"×¢ÊÍ": "Ğ­×÷ÕßÁĞ±íµÚÒ»¸öĞ­×÷ÕßÈ¨ÏŞÏÂÀ­¿ò"
+				"æ³¨é‡Š": "åä½œè€…åˆ—è¡¨ç¬¬ä¸€ä¸ªåä½œè€…æƒé™ä¸‹æ‹‰æ¡†"
 			},
 			{
 				"elementName": "b_addCollaborator_2_list",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[2]//div//div",
-				"×¢ÊÍ": "Ğ­×÷ÕßÁĞ±íµÚ¶ş¸öĞ­×÷ÕßÈ¨ÏŞÏÂÀ­¿ò"
+				"æ³¨é‡Š": "åä½œè€…åˆ—è¡¨ç¬¬äºŒä¸ªåä½œè€…æƒé™ä¸‹æ‹‰æ¡†"
 			},
 			{
 				"elementName": "b_addCollaborator_3_list",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[3]//div//div",
-				"×¢ÊÍ": "Ğ­×÷ÕßÁĞ±íµÚÈı¸öĞ­×÷ÕßÈ¨ÏŞÏÂÀ­¿ò"
+				"æ³¨é‡Š": "åä½œè€…åˆ—è¡¨ç¬¬ä¸‰ä¸ªåä½œè€…æƒé™ä¸‹æ‹‰æ¡†"
 			},
 			{
 				"elementName": "addCollaborator_1_list_userName",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//span[1]//span[1]",
-				"×¢ÊÍ": "Ğ­×÷ÕßÁĞ±íµÚÒ»¸öĞ­×÷ÕßÓÃ»§Ãû"
+				"æ³¨é‡Š": "åä½œè€…åˆ—è¡¨ç¬¬ä¸€ä¸ªåä½œè€…ç”¨æˆ·å"
 			},
 			{
 				"elementName": "addCollaborator_2_list_userName",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[2]//span[1]//span[1]",
-				"×¢ÊÍ": "Ğ­×÷ÕßÁĞ±íµÚ¶ş¸öĞ­×÷ÕßÓÃ»§Ãû"
+				"æ³¨é‡Š": "åä½œè€…åˆ—è¡¨ç¬¬äºŒä¸ªåä½œè€…ç”¨æˆ·å"
 			},
 			{
 				"elementName": "list_addCollaborator_1",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='collab-control-transfer']",
-				"×¢ÊÍ": "Ğ­×÷ÕßÈ¨ÏŞÁĞ±í--×ªÈÃËùÓĞÈ¨"
+				"æ³¨é‡Š": "åä½œè€…æƒé™åˆ—è¡¨--è½¬è®©æ‰€æœ‰æƒ"
 			},
 			{
 				"elementName": "list_addCollaborator_changeOwner_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[2]//div//div[1]//div//a",
-				"×¢ÊÍ": "Ğ­×÷ÕßÈ¨ÏŞÁĞ±í--×ªÈÃËùÓĞÈ¨ÁĞ±í--Ñ¡ÔñµÚÒ»¸öÓÃ»§Îª×ªÈÃ¶ÔÏó°´Å¥"
+				"æ³¨é‡Š": "åä½œè€…æƒé™åˆ—è¡¨--è½¬è®©æ‰€æœ‰æƒåˆ—è¡¨--é€‰æ‹©ç¬¬ä¸€ä¸ªç”¨æˆ·ä¸ºè½¬è®©å¯¹è±¡æŒ‰é’®"
 			},
 			{
 				"elementName": "list_addCollaborator_4",
 				"locateUsing": "xpath",
 				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical sc-brqgnP ATuTK sm-dropdown-menu-root']//li[4]",
-				"×¢ÊÍ": "Ğ­×÷ÕßÈ¨ÏŞÁĞ±í--ÒÆ³ı"
+				"æ³¨é‡Š": "åä½œè€…æƒé™åˆ—è¡¨--ç§»é™¤"
 			},
 			{
 				"elementName": "addCollaborator_total",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[1]//p",
-				"×¢ÊÍ": "Ğ­×÷ÕßÈËÊı"
+				"æ³¨é‡Š": "åä½œè€…äººæ•°"
 			},
 			{
 				"elementName": "addCollaborator_company_list",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//div[2]",
-				"×¢ÊÍ": "Ğ­×÷ÕßÒ³ÃæÇĞ»»µ½ÆóÒµ³ÉÔ±ÁĞ±í"
+				"æ³¨é‡Š": "åä½œè€…é¡µé¢åˆ‡æ¢åˆ°ä¼ä¸šæˆå‘˜åˆ—è¡¨"
 			},
 			{
 				"elementName": "addCollaborator_folder_add",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='main']//div[1]//div[2]//div//div[2]//ul//span",
-				"×¢ÊÍ": "ÎÄ¼ş¼ĞÄÚÓÒ²à(¼ÓºÅ)Ìí¼ÓĞ­×÷ÈË°´Å¥"
+				"æ³¨é‡Š": "æ–‡ä»¶å¤¹å†…å³ä¾§(åŠ å·)æ·»åŠ åä½œäººæŒ‰é’®"
 			},
 			{
 				"elementName": "addCollaborator_1_add",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-tab-content']//div//div//div//div[1]//div[2]//div",
-				"×¢ÊÍ": "×î½üĞ­×÷ÕßÁĞ±íµÚÒ»¸öÌí¼Ó°´Å¥"
+				"æ³¨é‡Š": "æœ€è¿‘åä½œè€…åˆ—è¡¨ç¬¬ä¸€ä¸ªæ·»åŠ æŒ‰é’®"
 			},
 			{
 				"elementName": "addCollaborator_companyList_2_add",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[2]//div//div",
-				"×¢ÊÍ": "ÆóÒµĞ­×÷ÕßÁĞ±íµÚ¶ş¸öÌí¼Ó°´Å¥"
+				"æ³¨é‡Š": "ä¼ä¸šåä½œè€…åˆ—è¡¨ç¬¬äºŒä¸ªæ·»åŠ æŒ‰é’®"
 			},
 			{
 				"elementName": "b_addCollaborator_1_add",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div//div[1]//div//div",
-				"×¢ÊÍ": "ËÑË÷ÏÔÊ¾±»Ìí¼ÓĞ­×÷ÕßÁĞ±íµÚÒ»¸öÌí¼Ó°´Å¥"
+				"æ³¨é‡Š": "æœç´¢æ˜¾ç¤ºè¢«æ·»åŠ åä½œè€…åˆ—è¡¨ç¬¬ä¸€ä¸ªæ·»åŠ æŒ‰é’®"
 			}
 		]
 	},
 	{
-		"×¢ÊÍ": "ÎÄµµ£¬±í¸ñ",
+		"æ³¨é‡Š": "æ–‡æ¡£ï¼Œè¡¨æ ¼",
 		"pageName": "doc",
 		"elements": [
 			{
 				"elementName": "b_back",
 				"locateUsing": "className",
 				"locator": "header-back-up",
-				"×¢ÊÍ": "ºóÍË"
+				"æ³¨é‡Š": "åé€€"
 			}
 		]
 	},
@@ -439,29 +439,29 @@
 		]
 	},
 	{
-		"×¢ÊÍ": "µÇÂ¼Ò³Ãæ",
+		"æ³¨é‡Š": "ç™»å½•é¡µé¢",
 		"pageName": "homePage",
 		"elements": [
 			{
-				"×¢ÊÍ": "ÓÃ»§Ãû",
+				"æ³¨é‡Š": "ç”¨æˆ·å",
 				"elementName": "userEmail",
 				"locateUsing": "name",
 				"locator": "email"
 			},
 			{
-				"×¢ÊÍ": "ÃÜÂë",
+				"æ³¨é‡Š": "å¯†ç ",
 				"elementName": "userPwd",
 				"locateUsing": "name",
 				"locator": "password"
 			},
 			{
-				"×¢ÊÍ": "ÓÃ»§Ãû",
+				"æ³¨é‡Š": "ç”¨æˆ·å",
 				"elementName": "xpath_login",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='home-begin-use']//a[@href='/register']"
 			},
 			{
-				"×¢ÊÍ": "ÃÜÂë",
+				"æ³¨é‡Š": "å¯†ç ",
 				"elementName": "login_submit",
 				"locateUsing": "id",
 				"locator": "bd-login-submit"
