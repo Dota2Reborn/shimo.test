@@ -75,7 +75,7 @@ public class testAddCollaborator {
 		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
 		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
 		PageFactory.initElements(customFieldDecorator, this);
-		wait = new WebDriverWait(driver, 20);
+		wait = new WebDriverWait(driver, 10);
 		driver.navigate().to(test_url);
 	}
 
@@ -658,8 +658,9 @@ public class testAddCollaborator {
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_confirm));
 		b_addCollaborator_confirm.click();
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
-
+//		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
+		Thread.sleep(500);
+		
 		String email = addCollaborator_1_list_userName.getText();
 		assertEquals(email, "autoTest01");
 	}

@@ -76,7 +76,7 @@ public class testDesktop {
 		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
 		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
 		PageFactory.initElements(customFieldDecorator, this);
-		wait = new WebDriverWait(driver, 20);
+		wait = new WebDriverWait(driver, 10);
 		driver.navigate().to(test_url);
 	}
 
