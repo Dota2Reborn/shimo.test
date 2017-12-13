@@ -30,6 +30,7 @@
 	<target name="run" depends="copy_mkdir">
 		<testng classpathref="runpath" outputDir="test-output">
 			<xmlfileset dir="${basedir}" includes="testng.xml" />
+			<jvmarg value="-Dfile.encoding=UTF-8" />
 		</testng>
 	</target>
 	<target name="testng">
