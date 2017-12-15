@@ -29,6 +29,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import base.baseFunc;
 import elementFile.CustomFieldDecorator;
 import elementFile.MyElementLocatorFactory;
 import elementFile.SearchWith;
@@ -36,48 +37,20 @@ import elementFile.SearchWith;
 public class testDesktop {
 	public WebDriver driver = null;
 	WebDriverWait wait;
-	int test_num = 1; // 1为release 2为dev
 	String test_url;
-	// Boolean firstTest = true;
+	baseFunc init = new baseFunc();
 
 	public testDesktop() {
-		// System.setProperty("webdriver.firefox.bin", "C:\\Program
-		// Files\\(x86)\\Firefox\\firefox.exe");//火狐
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");// 谷歌
-		
-		if(test_num==1){
-			test_url="https://release.shimodev.com/";
-		}else {
-			test_url="https://shimodev.com/";
-		}
-//		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-//		capabilities.setCapability("marionette", true);
-//		driver = new ChromeDriver(capabilities);
-//		driver.manage().window().setSize(new Dimension(1200, 1000));
-//		// driver.manage().window().maximize();
-//		// driver.manage().window().fullscreen();
-//		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
-//		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
-//		PageFactory.initElements(customFieldDecorator, this);
-//		wait = new WebDriverWait(driver, 20);
-//		driver.navigate().to("https://release.feature.shimodev.com/");
 
+		test_url = init.getUrl();
+		driver = init.initData(this);
+		wait = new WebDriverWait(driver, 10);
+		driver.navigate().to(test_url);
 	}
 	
 	@BeforeClass
 	public void firstMethod() {
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		capabilities.setCapability("marionette", true);
-		driver = new ChromeDriver(capabilities);
-		driver.manage().window().setSize(new Dimension(1200, 1000));
-		// driver.manage().window().maximize();
-		// driver.manage().window().fullscreen();
-		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
-		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
-		PageFactory.initElements(customFieldDecorator, this);
-		wait = new WebDriverWait(driver, 10);
-		driver.navigate().to(test_url);
+		
 	}
 
 	@BeforeMethod
@@ -91,7 +64,7 @@ public class testDesktop {
 
 	@AfterMethod
 	public void tearDown() throws Exception {
-		init();
+		pageInit();
 		System.out.println("--------------------------------------------");
 	}
 
@@ -150,7 +123,7 @@ public class testDesktop {
 	 * @Time 2017-11-20
 	 *
 	 */
-	public void init() {
+	public void pageInit() {
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
 		int n = it.size();
@@ -181,7 +154,7 @@ public class testDesktop {
 		}
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void dashboard() {
 
 		login("autoTest@shimo.im", "123123");

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
-import org.openqa.selenium.support.pagefactory.FieldDecorator;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -28,55 +22,26 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import elementFile.CustomFieldDecorator;
-import elementFile.MyElementLocatorFactory;
+import base.baseFunc;
 import elementFile.SearchWith;
 
 public class testAddCollaborator {
 	public WebDriver driver = null;
 	WebDriverWait wait;
-	int test_num = 1; // 1为release 2为dev
 	String test_url;
-	// Boolean firstTest = true;
+	baseFunc init = new baseFunc();
 
 	public testAddCollaborator() {
-		// System.setProperty("webdriver.firefox.bin", "C:\\Program
-		// Files\\(x86)\\Firefox\\firefox.exe");//火狐
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");// 谷歌
-		
-		if(test_num==1){
-			test_url="https://release.shimodev.com/";
-		}else {
-			test_url="https://shimodev.com/";
-		}
-//		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-//		capabilities.setCapability("marionette", true);
-//		driver = new ChromeDriver(capabilities);
-//		driver.manage().window().setSize(new Dimension(1200, 1000));
-//		// driver.manage().window().maximize();
-//		// driver.manage().window().fullscreen();
-//		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
-//		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
-//		PageFactory.initElements(customFieldDecorator, this);
-//		wait = new WebDriverWait(driver, 20);
-//		driver.navigate().to("https://release.feature.shimodev.com/");
 
+		test_url = init.getUrl();
+		driver = init.initData(this);
+		driver.navigate().to(test_url);
+		wait = new WebDriverWait(driver, 10);
 	}
-	
+
 	@BeforeClass
 	public void firstMethod() {
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		capabilities.setCapability("marionette", true);
-		driver = new ChromeDriver(capabilities);
-		driver.manage().window().setSize(new Dimension(1200, 1000));
-		// driver.manage().window().maximize();
-		// driver.manage().window().fullscreen();
-		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
-		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
-		PageFactory.initElements(customFieldDecorator, this);
-		wait = new WebDriverWait(driver, 10);
-		driver.navigate().to(test_url);
+		
 	}
 
 	@BeforeMethod
@@ -90,14 +55,14 @@ public class testAddCollaborator {
 
 	@AfterMethod
 	public void tearDown() throws Exception {
-		init();
+		pageInit();
 		System.out.println("--------------------------------------------");
 	}
 
 	@AfterClass
 	public void lastMethod() {
 		// 关闭浏览器
-//		 driver.quit();
+		// driver.quit();
 	}
 
 	/**
@@ -148,7 +113,7 @@ public class testAddCollaborator {
 	 * @Time 2017-11-21
 	 *
 	 */
-	public void init() {
+	public void pageInit() {
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
 		int n = it.size();
@@ -189,6 +154,7 @@ public class testAddCollaborator {
 	@Test(enabled = true)
 	public void addCollaborator_1() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
+
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop_show_type.getText();
@@ -527,6 +493,7 @@ public class testAddCollaborator {
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_confirm));
 		b_addCollaborator_confirm.click();
+		Thread.sleep(500);
 
 		logout();
 		login("autoTest03@shimo.im", "123123");
@@ -600,7 +567,7 @@ public class testAddCollaborator {
 		assertNotEquals(username, "李磊");
 
 	}
-	
+
 	/**
 	 * 非企业成员之间转让所有权
 	 * 
@@ -621,7 +588,7 @@ public class testAddCollaborator {
 		Actions action = new Actions(driver);
 		action.contextClick(desktop1_2_folder).perform();
 		desktop_setting_doc_5.click();
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
 		b_addCollaborator_1_list.click();
 
@@ -633,6 +600,8 @@ public class testAddCollaborator {
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_confirm));
 		b_addCollaborator_confirm.click();
+
+		Thread.sleep(500);
 
 		logout();
 		login("autoTest_addCollabor@shimo.im", "123123");
@@ -658,9 +627,9 @@ public class testAddCollaborator {
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_confirm));
 		b_addCollaborator_confirm.click();
-//		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
+		// wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
 		Thread.sleep(500);
-		
+
 		String email = addCollaborator_1_list_userName.getText();
 		assertEquals(email, "autoTest01");
 	}
@@ -831,7 +800,7 @@ public class testAddCollaborator {
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 		desktop_orderByDefault.click();
-		
+
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
 		desktop_orderByCreate.click();
