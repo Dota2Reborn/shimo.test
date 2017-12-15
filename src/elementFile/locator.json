@@ -461,7 +461,7 @@
 				"locator": "//div[@class='home-begin-use']//a[@href='/register']"
 			},
 			{
-				"note": "密码",
+				"note": "登录按钮",
 				"elementName": "login_submit",
 				"locateUsing": "id",
 				"locator": "bd-login-submit"

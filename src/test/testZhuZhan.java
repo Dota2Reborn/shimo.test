@@ -766,8 +766,6 @@ public class testZhuZhan {
 	public WebElement userEmail;
 	@SearchWith(pageName = "homePage", elementName = "userPwd")
 	public WebElement userPwd;
-	@SearchWith(pageName = "homePage", elementName = "xpath_login")
-	public WebElement xpath_login;
 	@SearchWith(pageName = "homePage", elementName = "login_submit")
 	public WebElement login_submit;
 

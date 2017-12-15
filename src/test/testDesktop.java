@@ -44,7 +44,7 @@ public class testDesktop {
 
 		test_url = init.getUrl();
 		driver = init.initData(this);
-		wait = new WebDriverWait(driver, 10);
+		wait = new WebDriverWait(driver, 20);
 		driver.navigate().to(test_url);
 	}
 	
@@ -71,7 +71,7 @@ public class testDesktop {
 	@AfterClass
 	public void lastMethod() {
 		// 关闭浏览器
-//		 driver.quit();
+		 driver.quit();
 	}
 
 	/**
@@ -845,8 +845,6 @@ public class testDesktop {
 	public WebElement userEmail;
 	@SearchWith(pageName = "homePage", elementName = "userPwd")
 	public WebElement userPwd;
-	@SearchWith(pageName = "homePage", elementName = "xpath_login")
-	public WebElement xpath_login;
 	@SearchWith(pageName = "homePage", elementName = "login_submit")
 	public WebElement login_submit;
 
