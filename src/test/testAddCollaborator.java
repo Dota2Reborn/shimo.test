@@ -41,7 +41,7 @@ public class testAddCollaborator {
 
 	@BeforeClass
 	public void firstMethod() {
-		
+
 	}
 
 	@BeforeMethod
@@ -62,7 +62,7 @@ public class testAddCollaborator {
 	@AfterClass
 	public void lastMethod() {
 		// 关闭浏览器
-		 driver.quit();
+		driver.quit();
 	}
 
 	/**
@@ -153,6 +153,9 @@ public class testAddCollaborator {
 	 */
 	@Test(enabled = true)
 	public void addCollaborator_1() throws InterruptedException {
+
+		init.printLog(this.getClass().getName(), "autoTest01@shimo.im");
+
 		login("autoTest01@shimo.im", "123123");
 
 		desktop.click();
@@ -170,6 +173,7 @@ public class testAddCollaborator {
 		Boolean exist = button_addCollaborator.isEnabled();
 
 		assertFalse(exist);
+
 	}
 
 	/**
