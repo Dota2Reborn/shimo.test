@@ -56,11 +56,11 @@ public class testAddCollaborator {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		pageInit();
-		System.out.println("--------------------------------------------");
 	}
 
 	@AfterClass
 	public void lastMethod() {
+		System.out.println("--------------------------------------------");
 		// 关闭浏览器
 		driver.quit();
 	}
@@ -73,7 +73,9 @@ public class testAddCollaborator {
 	 *
 	 */
 	public void login(String user, String pwd) {
-
+		String className = new Exception().getStackTrace()[1].getMethodName();
+		init.printLog(className, user);
+		
 		driver.navigate().to(test_url + "login");
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
@@ -153,9 +155,6 @@ public class testAddCollaborator {
 	 */
 	@Test(enabled = true)
 	public void addCollaborator_1() throws InterruptedException {
-
-		init.printLog(this.getClass().getName(), "autoTest01@shimo.im");
-
 		login("autoTest01@shimo.im", "123123");
 
 		desktop.click();

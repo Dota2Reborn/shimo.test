@@ -65,11 +65,11 @@ public class testDesktop {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		pageInit();
-		System.out.println("--------------------------------------------");
 	}
 
 	@AfterClass
 	public void lastMethod() {
+		System.out.println("--------------------------------------------");
 		// 关闭浏览器
 		 driver.quit();
 	}
@@ -82,6 +82,8 @@ public class testDesktop {
 	 *
 	 */
 	public void login(String user, String pwd) {
+		String className = new Exception().getStackTrace()[1].getMethodName();
+		init.printLog(className, user);
 
 		driver.navigate().to(test_url + "login");
 
