@@ -376,6 +376,14 @@ public class testDesktop {
 		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
+		String setting_2 = desktop_setting_doc_2.getText();
+		if(setting_2.equals("从快捷方式移除")) {
+			desktop_setting_doc_2.click();
+			action.contextClick(desktop1_1).perform();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
+		}
+		
+		
 		desktop_setting_doc_2.click();
 		
 		driver.navigate().refresh();
@@ -574,6 +582,14 @@ public class testDesktop {
 		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
+		
+		String setting_2 = desktop_setting_doc_2.getText();
+		if(setting_2.equals("从快捷方式移除")) {
+			desktop_setting_doc_2.click();
+			action.contextClick(desktop1_1_folder).perform();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
+		}
+		
 		desktop_setting_doc_2.click();
 		Thread.sleep(500);
 		String msg = desktop_shortcut_1.getText();
