@@ -1,422 +1,422 @@
 [
 	{
-		"注释": "工作台",
+		"note": "工作台",
 		"pageName": "dashboard",
 		"elements": [
 			{
 				"elementName": "dashboard",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='left-sidebar']//a[1]",
-				"注释": "切换到工作台"
+				"note": "切换到工作台"
 			},
 			{
 				"elementName": "favorites",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='left-sidebar']//a[3]",
-				"注释": "切换到我的收藏"
+				"note": "切换到我的收藏"
 			},
 			{
 				"elementName": "trash",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='left-sidebar']//a[4]",
-				"注释": "切换到回收站"
+				"note": "切换到回收站"
 			},
 			{
 				"elementName": "dashboard_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='nav-wrap']//div[1]",
-				"注释": "工作台-最近更新"
+				"note": "工作台-最近更新"
 			},
 			{
 				"elementName": "dashboard_2",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='nav-wrap']//div[2]",
-				"注释": "工作台-最近使用"
+				"note": "工作台-最近使用"
 			},
 			{
 				"elementName": "dashboard_3",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='nav-wrap']//div[3]",
-				"注释": "工作台-我创建的"
+				"note": "工作台-我创建的"
 			},
 			{
 				"elementName": "dashboard_4",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='nav-wrap']//div[4]",
-				"注释": "工作台-共享给我的"
+				"note": "工作台-共享给我的"
 			}
 		]
 	},
 	{
-		"注释": "桌面",
+		"note": "桌面",
 		"pageName": "desktop",
 		"elements": [
 			{
 				"elementName": "desktop",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='left-sidebar']//a[2]",
-				"注释": "切换到我的桌面"
+				"note": "切换到我的桌面"
 			},
 			{
 				"elementName": "desktop_new",
 				"locateUsing": "xpath",
 				"locator": "//button[@data-test='create-file']",
-				"注释": "新建文件按钮"
+				"note": "新建文件按钮"
 			},
 			{
 				"elementName": "desktop_import",
 				"locateUsing": "xpath",
 				"locator": "//input[@data-test='import-file']",
-				"注释": "导入"
+				"note": "导入"
 			},
 			{
 				"elementName": "desktop_newDoc",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='create-file-doc']",
-				"注释": "新建文档"
+				"note": "新建文档"
 			},
 			{
 				"elementName": "desktop_newSheet",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='create-file-sheet']",
-				"注释": "新建表格"
+				"note": "新建表格"
 			},
 			{
 				"elementName": "desktop_newFolder",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='create-file-folder']",
-				"注释": "新建文件夹"
+				"note": "新建文件夹"
 			},
 			{
 				"elementName": "desktop_newFolder_name",
 				"locateUsing": "xpath",
 				"locator": "//input[@data-test='new-folder-inputbox']",
-				"注释": "文件夹命名"
+				"note": "文件夹命名"
 			},
 			{
 				"elementName": "desktop_newFolder_name_ok",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-footer']//button[1]",
-				"注释": "文件夹命名确定"
+				"note": "文件夹命名确定"
 			},
 			{
 				"elementName": "desktop_newFolder_name_cancel",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-footer']//button[2]",
-				"注释": "文件夹命名取消"
+				"note": "文件夹命名取消"
 			},
 			{
 				"elementName": "desktop1_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[1]",
-				"注释": "平铺模式第一行第一个文件"
+				"note": "平铺模式第一行第一个文件"
 			},
 			{
 				"elementName": "desktop1_1_folder",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')]",
-				"注释": "平铺模式第一行第一个文件夹"
+				"note": "平铺模式第一行第一个文件夹"
 			},
 			{
 				"elementName": "desktop1_2_folder",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')][2]",
-				"注释": "平铺模式第一行第二个文件夹"
+				"note": "平铺模式第一行第二个文件夹"
 			},
 			{
 				"elementName": "desktop_list_1_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[1]//div//a//div[3]//div",
-				"注释": "列表模式第一个文件"
+				"note": "列表模式第一个文件"
 			},
 			{
 				"elementName": "desktop_list_2_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[2]//div//a//div[3]//div",
-				"注释": "列表模式第二个文件"
+				"note": "列表模式第二个文件"
 			},
 						{
 				"elementName": "desktop_list_3_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[3]//div//a//div[3]//div",
-				"注释": "列表模式第三个文件"
+				"note": "列表模式第三个文件"
 			},
 			{
 				"elementName": "desktop_set",
 				"locateUsing": "className",
 				"locator": "settings-btn",
-				"注释": "hover文件的齿轮"
+				"note": "hover文件的齿轮"
 			},
 			{
 				"elementName": "desktop_setting_doc_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[1]",
-				"注释": "文档表格新标签页中打开"
+				"note": "文档表格新标签页中打开"
 			},
 			{
 				"elementName": "desktop_setting_doc_2",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[2]",
-				"注释": "文档表格添加快捷方式"
+				"note": "文档表格添加快捷方式"
 			},
 			{
 				"elementName": "desktop_setting_doc_3",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[3]",
-				"注释": "文档表格添加收藏"
+				"note": "文档表格添加收藏"
 			},
 			{
 				"elementName": "desktop_setting_doc_5",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[5]",
-				"注释": "文档表格添加协作者"
+				"note": "文档表格添加协作者"
 			},
 			{
 				"elementName": "desktop_setting_doc_6",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[6]",
-				"注释": "文档表格移动"
+				"note": "文档表格移动"
 			},
 			{
 				"elementName": "desktop_setting_doc_8",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[8]",
-				"注释": "文档表格重命名"
+				"note": "文档表格重命名"
 			},
 			{
 				"elementName": "desktop_setting_doc_9",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
-				"注释": "文档表格创建副本"
+				"note": "文档表格创建副本"
 			},
 			{
 				"elementName": "desktop_setting_doc_11",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[11]",
-				"注释": "文档表格删除按钮"
+				"note": "文档表格删除按钮"
 			},
 			
 			{
 				"elementName": "desktop_setting_folder_9",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
-				"注释": "文件夹删除按钮"
+				"note": "文件夹删除按钮"
 			},
 			{
 				"elementName": "desktop_shortcut_1",
 				"locateUsing": "xpath",
 				"locator": "//ul[@class='shortcut-list']//li[1]",
-				"注释": "桌面快捷方式第一个"
+				"note": "桌面快捷方式第一个"
 			},
 			{
 				"elementName": "desktop_orderByUpdate",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-updatetime']",
-				"注释": "桌面排序-按更新时间"
+				"note": "桌面排序-按更新时间"
 			},
 			{
 				"elementName": "desktop_orderByCreate",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-createtime']",
-				"注释": "桌面排序-按创建时间"
+				"note": "桌面排序-按创建时间"
 			},
 			{
 				"elementName": "desktop_orderByFile",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-name']",
-				"注释": "桌面排序-文件名"
+				"note": "桌面排序-文件名"
 			},
 			{
 				"elementName": "desktop_orderByOwner",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-owner']",
-				"注释": "桌面排序-所有者"
+				"note": "桌面排序-所有者"
 			},
 			{
 				"elementName": "desktop_orderByFolderUP",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-folder-priority']",
-				"注释": "桌面排序-文件夹置顶"
+				"note": "桌面排序-文件夹置顶"
 			},
 			{
 				"elementName": "desktop_orderByDefault",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-default']",
-				"注释": "桌面排序-默认"
+				"note": "桌面排序-默认"
 			},
 			{
 				"elementName": "desktop_order",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='actions']//div[1]",
-				"注释": "桌面排序"
+				"note": "桌面排序"
 			},
 			{
 				"elementName": "desktop_show_type",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='actions']//div[@data-test='change-table-mode']",
-				"注释": "列表平铺模式切换"
+				"note": "列表平铺模式切换"
 			},
 			{
 				"elementName": "desktop_moveFolder_list_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//ul//li[1]",
-				"注释": "移动文件到文件夹，选择列表中第一个文件夹"
+				"note": "移动文件到文件夹，选择列表中第一个文件夹"
 			},
 			{
 				"elementName": "desktop_moveFolder_list_2",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//ul//li[2]",
-				"注释": "移动文件到文件夹，选择列表中第二个文件夹"
+				"note": "移动文件到文件夹，选择列表中第二个文件夹"
 			},
 			{
 				"elementName": "desktop_moveFolder_back_button",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']/*[name()='svg']",
-				"注释": "移动文件到文件夹，列表中后退按钮"
+				"note": "移动文件到文件夹，列表中后退按钮"
 			},
 			{
 				"elementName": "desktop_moveFolder_button",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div//div//button",
-				"注释": "移动到测试文件夹"
+				"note": "移动到测试文件夹"
 			}
 		]
 	},
 	{
-		"注释": "协作者相关",
+		"note": "协作者相关",
 		"pageName": "addCollaborator",
 		"elements": [
 			{
 				"elementName": "b_addCollaborator",
 				"locateUsing": "xpath",
 				"locator": "//button[@data-test='adding-collaborators']",
-				"注释": "添加协作者按钮"
+				"note": "添加协作者按钮"
 			},
 			{
 				"elementName": "b_addCollaborator_close",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-content']//button",
-				"注释": "关闭添加协作者弹框"
+				"note": "关闭添加协作者弹框"
 			},
 			{
 				"elementName": "b_addCollaborator_back",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[1]//span",
-				"注释": "从协作者列表反馈按钮"
+				"note": "从协作者列表反馈按钮"
 			},
 			{
 				"elementName": "b_addCollaborator_confirm",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-popconfirm sm-tooltip-inner']//div//div[2]//button",
-				"注释": "协作者移除或者降低自己权限时提示弹窗的确定按钮"
+				"note": "协作者移除或者降低自己权限时提示弹窗的确定按钮"
 			},
 			{
 				"elementName": "input_addCollaborator",
 				"locateUsing": "xpath",
 				"locator": "//input[@data-test='collaborator-search-inputbox']",
-				"注释": "添加协作者邮箱输入框"
+				"note": "添加协作者邮箱输入框"
 			},
 			{
 				"elementName": "b_addCollaborator_ok",
 				"locateUsing": "xpath",
 				"locator": "//button[@data-test='added-collaborators']",
-				"注释": "确认添加协作者按钮"
+				"note": "确认添加协作者按钮"
 			},
 			{
 				"elementName": "b_addCollaborator_1_list",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//div//div",
-				"注释": "协作者列表第一个协作者权限下拉框"
+				"note": "协作者列表第一个协作者权限下拉框"
 			},
 			{
 				"elementName": "b_addCollaborator_2_list",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[2]//div//div",
-				"注释": "协作者列表第二个协作者权限下拉框"
+				"note": "协作者列表第二个协作者权限下拉框"
 			},
 			{
 				"elementName": "b_addCollaborator_3_list",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[3]//div//div",
-				"注释": "协作者列表第三个协作者权限下拉框"
+				"note": "协作者列表第三个协作者权限下拉框"
 			},
 			{
 				"elementName": "addCollaborator_1_list_userName",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//span[1]//span[1]",
-				"注释": "协作者列表第一个协作者用户名"
+				"note": "协作者列表第一个协作者用户名"
 			},
 			{
 				"elementName": "addCollaborator_2_list_userName",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[2]//span[1]//span[1]",
-				"注释": "协作者列表第二个协作者用户名"
+				"note": "协作者列表第二个协作者用户名"
 			},
 			{
 				"elementName": "list_addCollaborator_1",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='collab-control-transfer']",
-				"注释": "协作者权限列表--转让所有权"
+				"note": "协作者权限列表--转让所有权"
 			},
 			{
 				"elementName": "list_addCollaborator_changeOwner_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[2]//div//div[1]//div//a",
-				"注释": "协作者权限列表--转让所有权列表--选择第一个用户为转让对象按钮"
+				"note": "协作者权限列表--转让所有权列表--选择第一个用户为转让对象按钮"
 			},
 			{
 				"elementName": "list_addCollaborator_4",
 				"locateUsing": "xpath",
 				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical sc-brqgnP ATuTK sm-dropdown-menu-root']//li[4]",
-				"注释": "协作者权限列表--移除"
+				"note": "协作者权限列表--移除"
 			},
 			{
 				"elementName": "addCollaborator_total",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[1]//p",
-				"注释": "协作者人数"
+				"note": "协作者人数"
 			},
 			{
 				"elementName": "addCollaborator_company_list",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//div[2]",
-				"注释": "协作者页面切换到企业成员列表"
+				"note": "协作者页面切换到企业成员列表"
 			},
 			{
 				"elementName": "addCollaborator_folder_add",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='main']//div[1]//div[2]//div//div[2]//ul//span",
-				"注释": "文件夹内右侧(加号)添加协作人按钮"
+				"note": "文件夹内右侧(加号)添加协作人按钮"
 			},
 			{
 				"elementName": "addCollaborator_1_add",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-tab-content']//div//div//div//div[1]//div[2]//div",
-				"注释": "最近协作者列表第一个添加按钮"
+				"note": "最近协作者列表第一个添加按钮"
 			},
 			{
 				"elementName": "addCollaborator_companyList_2_add",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[2]//div//div",
-				"注释": "企业协作者列表第二个添加按钮"
+				"note": "企业协作者列表第二个添加按钮"
 			},
 			{
 				"elementName": "b_addCollaborator_1_add",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div//div[1]//div//div",
-				"注释": "搜索显示被添加协作者列表第一个添加按钮"
+				"note": "搜索显示被添加协作者列表第一个添加按钮"
 			}
 		]
 	},
 	{
-		"注释": "文档，表格",
+		"note": "文档，表格",
 		"pageName": "doc",
 		"elements": [
 			{
 				"elementName": "b_back",
 				"locateUsing": "className",
 				"locator": "header-back-up",
-				"注释": "后退"
+				"note": "后退"
 			}
 		]
 	},
@@ -439,29 +439,29 @@
 		]
 	},
 	{
-		"注释": "登录页面",
+		"note": "登录页面",
 		"pageName": "homePage",
 		"elements": [
 			{
-				"注释": "用户名",
+				"note": "用户名",
 				"elementName": "userEmail",
 				"locateUsing": "name",
 				"locator": "email"
 			},
 			{
-				"注释": "密码",
+				"note": "密码",
 				"elementName": "userPwd",
 				"locateUsing": "name",
 				"locator": "password"
 			},
 			{
-				"注释": "用户名",
+				"note": "用户名",
 				"elementName": "xpath_login",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='home-begin-use']//a[@href='/register']"
 			},
 			{
-				"注释": "密码",
+				"note": "密码",
 				"elementName": "login_submit",
 				"locateUsing": "id",
 				"locator": "bd-login-submit"

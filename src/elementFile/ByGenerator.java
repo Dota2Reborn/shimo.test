@@ -15,13 +15,13 @@ import com.google.common.base.Preconditions;
 public class ByGenerator {
 	private static final String locatorFile = "locator.json";
 
-	public static By createBy(String pageName, String elementName, Object... replaceValues) {
+	public static By createBy(String pageName, String elementName,String noteName, Object... replaceValues) {
 		Preconditions.checkArgument(StringUtils.isNotEmpty(pageName), "Page elementName is missing.");
 		Preconditions.checkArgument(StringUtils.isNotEmpty(elementName), "Element elementName is missing.");
 
 		File file = new File(ByGenerator.class.getResource(locatorFile).getFile());
 		Preconditions.checkArgument(file.exists(), "Unable to locate " + locatorFile);
-		JSONObject foundObject = getElementJson(file, pageName, elementName);
+		JSONObject foundObject = getElementJson(file, pageName,noteName, elementName);
 
 		Preconditions.checkState(foundObject != null, "No entry found for the page [" + pageName + "] and element ["
 				+ elementName + "] in the " + "locators file [" + locatorFile + "]");
@@ -59,7 +59,7 @@ public class ByGenerator {
 		throw new UnsupportedOperationException("Currently " + locateUsing + " is NOT supported.");
 	}
 
-	private static JSONObject getElementJson(File file, String pageName, String elementName) {
+	private static JSONObject getElementJson(File file, String pageName,String noteName, String elementName) {
 		FileReader fileReader = null;
 		BufferedReader bufferedReader = null;
 		StringBuilder stringBuilder = new StringBuilder();
@@ -89,7 +89,7 @@ public class ByGenerator {
 				for (int i = 0; i < elements.length(); ++i) {
 					JSONObject element = elements.getJSONObject(i);
 					if (elementName.equals(element.getString("elementName"))) {
-//						System.out.println(element.toString());
+						System.out.println(element.toString());
 						return element;
 					}
 				}

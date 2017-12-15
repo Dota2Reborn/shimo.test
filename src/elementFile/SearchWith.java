@@ -11,4 +11,6 @@ public @interface SearchWith {
 	String pageName() default "";
 
 	String elementName() default "";
+	
+	String noteName() default "";
 }

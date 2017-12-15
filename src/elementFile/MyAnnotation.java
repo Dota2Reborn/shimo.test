@@ -17,7 +17,7 @@ public class MyAnnotation extends Annotations {
 		SearchWith searchWith = super.getField().getAnnotation(SearchWith.class);
 
 		if (null != searchWith) {
-			by = ByGenerator.createBy(searchWith.pageName(), searchWith.elementName());
+			by = ByGenerator.createBy(searchWith.pageName(), searchWith.elementName(),searchWith.noteName());
 		}
 		// System.out.println("By INFO: " + (null == by));
 		return by;

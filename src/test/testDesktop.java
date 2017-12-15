@@ -618,11 +618,12 @@ public class testDesktop {
 	 * 右键文件夹-文件夹移动，重命名，删除
 	 * 
 	 * @author 刘晨
+	 * @throws InterruptedException 
 	 * @Time 2017-11-20
 	 *
 	 */
 	@Test
-	public void desktop_folder_setting() {
+	public void desktop_folder_setting() throws InterruptedException {
 
 		login("autoTest@shimo.im", "123123");
 
@@ -649,6 +650,7 @@ public class testDesktop {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_list_2));
 		desktop_moveFolder_list_2.click();
 
+		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_button));
 		desktop_moveFolder_button.click();
 
@@ -660,7 +662,7 @@ public class testDesktop {
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_8));
 		desktop_setting_doc_8.click();
-
+		
 		desktop_newFolder_name.sendKeys("删除文件夹");
 		desktop_newFolder_name_ok.click();
 		driver.navigate().refresh();
