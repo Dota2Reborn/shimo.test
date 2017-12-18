@@ -397,7 +397,7 @@
 			{
 				"elementName": "list_addCollaborator_4",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical sc-brqgnP ATuTK sm-dropdown-menu-root']//li[4]",
+				"locator": "//p[@data-test='collab-control-remove']",
 				"note": "协作者权限列表--移除"
 			},
 			{
