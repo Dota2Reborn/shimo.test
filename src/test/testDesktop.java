@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
-import org.openqa.selenium.support.pagefactory.FieldDecorator;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -30,8 +24,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import base.baseFunc;
-import elementFile.CustomFieldDecorator;
-import elementFile.MyElementLocatorFactory;
 import elementFile.SearchWith;
 
 public class testDesktop {
@@ -212,7 +204,9 @@ public class testDesktop {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
 		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
 		driver.navigate().refresh();
@@ -250,7 +244,9 @@ public class testDesktop {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
 		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
 		driver.navigate().refresh();
@@ -296,7 +292,9 @@ public class testDesktop {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_folder_9));
 		desktop_setting_folder_9.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
 		driver.navigate().refresh();
@@ -538,6 +536,7 @@ public class testDesktop {
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
 		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
 		assertEquals(msg1, "副本 " + msg);
@@ -690,7 +689,9 @@ public class testDesktop {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_folder_9));
 		desktop_setting_folder_9.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
 		assertEquals(msg, "删除文件夹");
@@ -742,7 +743,9 @@ public class testDesktop {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
 		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
 		driver.navigate().refresh();
@@ -780,7 +783,9 @@ public class testDesktop {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
 		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
 		assertEquals(msg, "test_sheet");

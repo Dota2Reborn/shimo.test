@@ -44,6 +44,36 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='nav-wrap']//div[4]",
 				"note": "工作台-共享给我的"
+			},
+			{
+				"elementName": "dashboard_update_file",
+				"locateUsing": "className",
+				"locator": "card-content",
+				"note": "工作台-最近更新-文件"
+			},
+			{
+				"elementName": "dashboard_update_time",
+				"locateUsing": "className",
+				"locator": "card-content-update",
+				"note": "工作台-最近更新-更新时间"
+			},
+			{
+				"elementName": "dashboard_update_name",
+				"locateUsing": "className",
+				"locator": "file-title",
+				"note": "工作台-最近更新-文件名"
+			},
+			{
+				"elementName": "dashboard_setting_doc_8",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[8]",
+				"note": "工作台-定位到所在文件夹"
+			},
+			{
+				"elementName": "dashboard_setting_doc_12",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[12]",
+				"note": "文件删除按钮"
 			}
 		]
 	},
@@ -417,6 +447,12 @@
 				"locateUsing": "className",
 				"locator": "header-back-up",
 				"note": "后退"
+			},
+			{
+				"elementName": "doc_edit",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='ql-container']//div[1]",
+				"note": "文档编辑入口"
 			}
 		]
 	},
