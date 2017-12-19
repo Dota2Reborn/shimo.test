@@ -697,7 +697,7 @@ public class testDesktop {
 	}
 
 	/**
-	 * 导入文档
+	 * 导入文档doc
 	 * 
 	 * @author 刘晨
 	 * @Time 2017-11-20
@@ -710,7 +710,7 @@ public class testDesktop {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		WebElement uploadButton = desktop_import;
-		String url = System.getProperty("user.dir") + "/doc/test_doc.docx";
+		String url = System.getProperty("user.dir") + "/doc/test_doc.doc";
 		System.out.println(url);
 		uploadButton.sendKeys(url);
 
@@ -733,6 +733,46 @@ public class testDesktop {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		assertEquals(msg, "test_doc");
+
+	}
+	
+	/**
+	 * 导入文档docx
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
+	@Test
+	public void desktop_import_docx() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		WebElement uploadButton = desktop_import;
+		String url = System.getProperty("user.dir") + "/doc/test_docx.docx";
+		System.out.println(url);
+		uploadButton.sendKeys(url);
+
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(b_back));
+		b_back.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg = desktop1_1.getText();
+		Actions action = new Actions(driver);
+		// action.moveToElement(desktop1_1).perform();
+		// desktop_setting.click();
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
+		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
+		desktop_newFolder_name_ok.click();
+
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		assertEquals(msg, "test_docx");
 
 	}
 
