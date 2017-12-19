@@ -26,6 +26,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import base.baseFunc;
 import elementFile.CustomFieldDecorator;
 import elementFile.MyElementLocatorFactory;
 import elementFile.SearchWith;
@@ -34,6 +35,10 @@ public class testZhuZhan {
 	public WebDriver driver = null;
 	WebDriverWait wait;
 	Boolean firstTest = true;
+	
+	String test_url;
+	baseFunc init = new baseFunc();
+
 
 	public testZhuZhan() {
 		// System.setProperty("webdriver.firefox.bin", "C:\\Program Files
