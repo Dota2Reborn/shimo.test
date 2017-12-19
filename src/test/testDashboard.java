@@ -161,7 +161,6 @@ public class testDashboard {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		desktop1_1.click();
 
-		// Thread.sleep(7000);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.sendKeys("la");
 		Thread.sleep(500);
@@ -321,10 +320,10 @@ public class testDashboard {
 		Thread.sleep(500);
 		dashboard_setting_doc_8.click();
 
-		String url_1 = "https://release.shimodev.com/folder/x2zSDzXqfQI9TaKr";
-		wait.until(ExpectedConditions.urlToBe(url_1));
+		String url_sample = "https://release.shimodev.com/folder/x2zSDzXqfQI9TaKr";
+		wait.until(ExpectedConditions.urlToBe(url_sample));
 		String url = driver.getCurrentUrl();
-		assertEquals(url_1, url);
+		assertEquals(url_sample, url);
 	}
 
 	@SearchWith(pageName = "homePage", elementName = "userEmail")
