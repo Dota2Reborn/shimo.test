@@ -62,7 +62,7 @@ public class testDashboard {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-//		driver.quit();
+		// driver.quit();
 	}
 
 	/**
@@ -75,7 +75,7 @@ public class testDashboard {
 	public void login(String user, String pwd) {
 		String className = new Exception().getStackTrace()[1].getMethodName();
 		init.printLog(className, user);
-		
+
 		driver.navigate().to(test_url + "login");
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
@@ -161,7 +161,7 @@ public class testDashboard {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		desktop1_1.click();
 
-//		Thread.sleep(7000);
+		// Thread.sleep(7000);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.sendKeys("la");
 		Thread.sleep(500);
@@ -173,10 +173,10 @@ public class testDashboard {
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
 		String msg = dashboard_update_time.getText();
-		
+
 		assertEquals(msg, "刚刚 autoTest06 更新");
 	}
-	
+
 	/**
 	 * 最近使用验证
 	 * 
@@ -198,13 +198,13 @@ public class testDashboard {
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard));
 		dashboard.click();
 		dashboard_2.click();
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
 		String msg = dashboard_update_time.getText();
-		
+
 		assertEquals(msg, "刚刚 我 打开");
 	}
-	
+
 	/**
 	 * 我创建的验证
 	 * 
@@ -220,30 +220,87 @@ public class testDashboard {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
 		desktop_newDoc.click();
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
-		
+
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		String time = format.format(date);
 		driver.findElement(By.id("ql-title-input")).sendKeys(time);
 		b_back.click();
-		
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard));
 		dashboard_3.click();
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
 		String msg = dashboard_update_name.getText();
-		
+
 		Actions action = new Actions(driver);
 		action.contextClick(dashboard_update_name).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_setting_doc_12));
 		dashboard_setting_doc_12.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
-		
+
 		assertEquals(msg, time);
 	}
-	
+
+	/**
+	 * 共享给我的验证
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-12-19
+	 *
+	 */
+	@Test(enabled = true)
+	public void dashboard_share() throws InterruptedException {
+		login("autoTest06@shimo.im", "123123");
+
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		String msg = desktop_show_type.getText();
+		if (msg.equals("平铺")) {
+			desktop_show_type.click();
+		}
+
+		Actions action = new Actions(driver);
+		action.contextClick(desktop1_1_folder).perform();
+		desktop_setting_doc_5.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+		button_addCollaborator.click();
+
+		input_addCollaborator.sendKeys("autoTest07@shimo.im");
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+		b_addCollaborator_1_add.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
+		b_addCollaborator_ok.click();
+
+		logout();
+		login("autoTest07@shimo.im", "123123");
+
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_shareTime_1));
+		action.moveToElement(dashboard_shareTime_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_shareTime_unread));
+		dashboard_shareTime_unread.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_4));
+		dashboard_4.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_share_file));
+		action.contextClick(dashboard_share_file).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_share_setting_doc_10));
+		dashboard_share_setting_doc_10.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
+		desktop_newFolder_name_ok.click();
+
+		Thread.sleep(1000);
+
+		msg = driver.findElement(By.className("none-file")).getText();
+		assertEquals("没有文件", msg);
+
+	}
+
 	/**
 	 * 工作台-文件定位的所在文件夹
 	 * 
@@ -269,15 +326,14 @@ public class testDashboard {
 		String url = driver.getCurrentUrl();
 		assertEquals(url_1, url);
 	}
-	
-	
+
 	@SearchWith(pageName = "homePage", elementName = "userEmail")
 	public WebElement userEmail;
 	@SearchWith(pageName = "homePage", elementName = "userPwd")
 	public WebElement userPwd;
 	@SearchWith(pageName = "homePage", elementName = "login_submit")
 	public WebElement login_submit;
-	
+
 	@SearchWith(pageName = "desktop", elementName = "desktop_new")
 	public WebElement desktop_new;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1")
@@ -288,12 +344,27 @@ public class testDashboard {
 	public WebElement desktop_newDoc;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_ok")
 	public WebElement desktop_newFolder_name_ok;
-	
+	@SearchWith(pageName = "desktop", elementName = "desktop1_1_folder")
+	public WebElement desktop1_1_folder;
+	@SearchWith(pageName = "desktop", elementName = "desktop_show_type")
+	public WebElement desktop_show_type;
+	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_5")
+	public WebElement desktop_setting_doc_5;
+
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator")
+	public WebElement button_addCollaborator;
+	@SearchWith(pageName = "addCollaborator", elementName = "input_addCollaborator")
+	public WebElement input_addCollaborator;
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_add")
+	public WebElement b_addCollaborator_1_add;
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_ok")
+	public WebElement b_addCollaborator_ok;
+
 	@SearchWith(pageName = "doc", elementName = "b_back")
 	public WebElement b_back;
 	@SearchWith(pageName = "doc", elementName = "doc_edit")
 	public WebElement doc_edit;
-	
+
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_time")
 	public WebElement dashboard_update_time;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_file")
@@ -304,7 +375,15 @@ public class testDashboard {
 	public WebElement dashboard_setting_doc_8;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_setting_doc_12")
 	public WebElement dashboard_setting_doc_12;
-	
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_setting_doc_10")
+	public WebElement dashboard_share_setting_doc_10;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_shareTime_1")
+	public WebElement dashboard_shareTime_1;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_shareTime_unread")
+	public WebElement dashboard_shareTime_unread;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file")
+	public WebElement dashboard_share_file;
+
 	@SearchWith(pageName = "dashboard", elementName = "dashboard")
 	public WebElement dashboard;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_1")

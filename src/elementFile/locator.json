@@ -64,6 +64,12 @@
 				"note": "工作台-最近更新-文件名"
 			},
 			{
+				"elementName": "dashboard_share_file",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='category-list-wrapper']//div[2]//div[2]",
+				"note": "工作台-共享给我的-文件"
+			},
+			{
 				"elementName": "dashboard_setting_doc_8",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[8]",
@@ -73,7 +79,25 @@
 				"elementName": "dashboard_setting_doc_12",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[12]",
-				"note": "文件删除按钮"
+				"note": "我创建的-文件删除按钮"
+			},
+			{
+				"elementName": "dashboard_share_setting_doc_10",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[10]",
+				"note": "共享给我的-文件删除按钮"
+			},
+			{
+				"elementName": "dashboard_shareTime_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='card-header']//div[@class='update-time']",
+				"note": "新的共享-大标签-更新时间"
+			},
+			{
+				"elementName": "dashboard_shareTime_unread",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='card-header']//div[@class='unread']",
+				"note": "新的共享-大标签-标记已读"
 			}
 		]
 	},
