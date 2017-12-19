@@ -62,7 +62,7 @@ public class testDashboard {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-		// driver.quit();
+		 driver.quit();
 	}
 
 	/**
