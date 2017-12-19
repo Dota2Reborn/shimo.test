@@ -75,7 +75,7 @@ public class testAddCollaborator {
 	public void login(String user, String pwd) {
 		String className = new Exception().getStackTrace()[1].getMethodName();
 		init.printLog(className, user);
-		
+
 		driver.navigate().to(test_url + "login");
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
