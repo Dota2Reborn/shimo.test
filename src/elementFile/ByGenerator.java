@@ -59,6 +59,7 @@ public class ByGenerator {
 		throw new UnsupportedOperationException("Currently " + locateUsing + " is NOT supported.");
 	}
 
+	@SuppressWarnings("resource")
 	private static JSONObject getElementJson(File file, String pageName, String elementName, String noteName) {
 		FileReader fileReader = null;
 		BufferedReader bufferedReader = null;

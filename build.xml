@@ -6,6 +6,7 @@
 			<include name="lib/testng-6.8.7.jar" />
 			<include name="lib/json-20160810.jar" />
 			<include name="lib/selenium-server-standalone-3.4.0.jar" />
+			<include name="lib/arrow-tools-0.3.0.jar" />
 		</fileset>
 	</path>
 	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="run.classpath" />
