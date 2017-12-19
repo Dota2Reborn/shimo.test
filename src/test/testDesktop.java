@@ -39,10 +39,10 @@ public class testDesktop {
 		wait = new WebDriverWait(driver, 20);
 		driver.navigate().to(test_url);
 	}
-	
+
 	@BeforeClass
 	public void firstMethod() {
-		
+
 	}
 
 	@BeforeMethod
@@ -63,7 +63,7 @@ public class testDesktop {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-		 driver.quit();
+		driver.quit();
 	}
 
 	/**
@@ -375,15 +375,14 @@ public class testDesktop {
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
 		String setting_2 = desktop_setting_doc_2.getText();
-		if(setting_2.equals("从快捷方式移除")) {
+		if (setting_2.equals("从快捷方式移除")) {
 			desktop_setting_doc_2.click();
 			action.contextClick(desktop1_1).perform();
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
 		}
-		
-		
+
 		desktop_setting_doc_2.click();
-		
+
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop_shortcut_1.getText();
@@ -581,14 +580,14 @@ public class testDesktop {
 		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
-		
+
 		String setting_2 = desktop_setting_doc_2.getText();
-		if(setting_2.equals("从快捷方式移除")) {
+		if (setting_2.equals("从快捷方式移除")) {
 			desktop_setting_doc_2.click();
 			action.contextClick(desktop1_1_folder).perform();
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
 		}
-		
+
 		desktop_setting_doc_2.click();
 		Thread.sleep(500);
 		String msg = desktop_shortcut_1.getText();
@@ -635,7 +634,7 @@ public class testDesktop {
 	 * 右键文件夹-文件夹移动，重命名，删除
 	 * 
 	 * @author 刘晨
-	 * @throws InterruptedException 
+	 * @throws InterruptedException
 	 * @Time 2017-11-20
 	 *
 	 */
@@ -679,7 +678,7 @@ public class testDesktop {
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_8));
 		desktop_setting_doc_8.click();
-		
+
 		desktop_newFolder_name.sendKeys("删除文件夹");
 		desktop_newFolder_name_ok.click();
 		driver.navigate().refresh();
@@ -695,24 +694,6 @@ public class testDesktop {
 		desktop_newFolder_name_ok.click();
 
 		assertEquals(msg, "删除文件夹");
-	}
-
-	@Test(enabled = false)
-	public void desktop_moveTo() throws InterruptedException {
-		login("autoTest@shimo.im", "123123");
-		desktop.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-
-		Thread.sleep(1000);
-		Actions action = new Actions(driver);
-		// action.clickAndHold(desktop1_1).perform();
-		// Thread.sleep(1000);
-		// action.moveToElement(desktop1_1_folder).perform();
-		// Thread.sleep(1000);
-		// action.release().perform();
-		action.dragAndDrop(desktop1_1, desktop1_1_folder).perform();
-		// action.dragAndDropBy(desktop1_1,100,100).perform();
-
 	}
 
 	/**
