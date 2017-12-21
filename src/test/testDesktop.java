@@ -11,173 +11,14 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import base.baseFunc;
-import elementFile.SearchWith;
+import base.TestInit;
 
-public class testDesktop {
-	public WebDriver driver = null;
-	WebDriverWait wait;
-	String test_url;
-	baseFunc init = new baseFunc();
-
-	public testDesktop() {
-
-		test_url = init.getUrl();
-		driver = init.initData(this);
-		wait = new WebDriverWait(driver, 20);
-		driver.navigate().to(test_url);
-	}
-
-	@BeforeClass
-	public void firstMethod() {
-
-	}
-
-	@BeforeMethod
-	public void setUp() throws Exception {
-		System.out.println("--------------------------------------------");
-		String url = driver.getCurrentUrl();
-		if (url != test_url) {
-			logout();
-		}
-	}
-
-	@AfterMethod
-	public void tearDown() throws Exception {
-		pageInit();
-	}
-
-	@AfterClass
-	public void lastMethod() {
-		System.out.println("--------------------------------------------");
-		// 关闭浏览器
-		driver.quit();
-	}
-
-	/**
-	 * 登录
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-11-20
-	 *
-	 */
-	public void login(String user, String pwd) {
-		String className = new Exception().getStackTrace()[1].getMethodName();
-		init.printLog(className, user);
-
-		driver.navigate().to(test_url + "login");
-
-		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
-		userEmail.sendKeys(user);
-		userPwd.sendKeys(pwd);
-		login_submit.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
-	}
-
-	/**
-	 * 登出
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-11-20
-	 *
-	 */
-	public void logout() {
-		driver.navigate().to(test_url + "logout");
-	}
-
-	/**
-	 * 页签切换
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-11-20
-	 *
-	 */
-	public void switchToPage(int i) {
-		Set<String> winHandels = driver.getWindowHandles();
-		List<String> it = new ArrayList<String>(winHandels);
-		driver.switchTo().window(it.get(i));
-	}
-
-	/**
-	 * 删除浏览器多余标签页
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-11-20
-	 *
-	 */
-	public void pageInit() {
-		Set<String> winHandels = driver.getWindowHandles();
-		List<String> it = new ArrayList<String>(winHandels);
-		int n = it.size();
-		for (int i = 0; i < n - 1; i++) {
-			driver.switchTo().window(it.get(i));
-			driver.close();
-		}
-
-		winHandels = driver.getWindowHandles();
-		it = new ArrayList<String>(winHandels);
-		driver.switchTo().window(it.get(0));
-	}
-
-	/**
-	 * 判断元素是否存在
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-11-20
-	 *
-	 */
-	public boolean doesWebElementExist(WebDriver driver, By selector) {
-
-		try {
-			driver.findElement(selector);
-			return true;
-		} catch (NoSuchElementException e) {
-			return false;
-		}
-	}
-
-	@Test(enabled = false)
-	public void dashboard() {
-
-		login("autoTest@shimo.im", "123123");
-
-		String url = "error";
-		desktop.click();
-		url = driver.getCurrentUrl();
-		// System.out.println(url);
-		Boolean desktop_url = url.equals(test_url + "desktop");
-
-		dashboard.click();
-		url = driver.getCurrentUrl();
-		Boolean dashboard_url1 = url.equals(test_url + "dashboard/updated");
-
-		dashboard_2.click();
-		url = driver.getCurrentUrl();
-		Boolean dashboard_url2 = url.equals(test_url + "dashboard/used");
-
-		dashboard_3.click();
-		url = driver.getCurrentUrl();
-		Boolean dashboard_url3 = url.equals(test_url + "dashboard/own");
-
-		dashboard_4.click();
-		url = driver.getCurrentUrl();
-		Boolean dashboard_url4 = url.equals(test_url + "dashboard/shared");
-
-		assertEquals(true, desktop_url && dashboard_url1 && dashboard_url2 && dashboard_url3 && dashboard_url4);
-
-	}
+public class testDesktop extends TestInit {
 
 	/**
 	 * 新建文档
@@ -735,7 +576,7 @@ public class testDesktop {
 		assertEquals(msg, "test_doc");
 
 	}
-	
+
 	/**
 	 * 导入文档docx
 	 * 
@@ -813,83 +654,6 @@ public class testDesktop {
 
 	}
 
-	@SearchWith(pageName = "desktop", elementName = "desktop")
-	public WebElement desktop;
-	@SearchWith(pageName = "desktop", elementName = "desktop_new")
-	public WebElement desktop_new;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newDoc")
-	public WebElement desktop_newDoc;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newSheet")
-	public WebElement desktop_newSheet;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder")
-	public WebElement desktop_newFolder;
-	@SearchWith(pageName = "desktop", elementName = "desktop_import")
-	public WebElement desktop_import;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name")
-	public WebElement desktop_newFolder_name;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_ok")
-	public WebElement desktop_newFolder_name_ok;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_cancel")
-	public WebElement desktop_newFolder_name_cancel;
-	@SearchWith(pageName = "desktop", elementName = "desktop1_1")
-	public WebElement desktop1_1;
-	@SearchWith(pageName = "desktop", elementName = "desktop1_1_folder")
-	public WebElement desktop1_1_folder;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_1")
-	public WebElement desktop_setting_doc_1;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_2")
-	public WebElement desktop_setting_doc_2;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_3")
-	public WebElement desktop_setting_doc_3;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_6")
-	public WebElement desktop_setting_doc_6;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_8")
-	public WebElement desktop_setting_doc_8;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_9")
-	public WebElement desktop_setting_doc_9;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_11")
-	public WebElement desktop_setting_doc_11;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_folder_9")
-	public WebElement desktop_setting_folder_9;
-	@SearchWith(pageName = "desktop", elementName = "desktop_set")
-	public WebElement desktop_setting;
-	@SearchWith(pageName = "desktop", elementName = "desktop_show_type")
-	public WebElement desktop_show_type;
-	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_1")
-	public WebElement desktop_shortcut_1;
-	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_button")
-	public WebElement desktop_moveFolder_button;
-	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_back_button")
-	public WebElement desktop_moveFolder_back_button;
-	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_1")
-	public WebElement desktop_moveFolder_list_1;
-	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_2")
-	public WebElement desktop_moveFolder_list_2;
-
-	@SearchWith(pageName = "doc", elementName = "b_back")
-	public WebElement b_back;
-
-	@SearchWith(pageName = "dashboard", elementName = "dashboard")
-	public WebElement dashboard;
-	@SearchWith(pageName = "dashboard", elementName = "favorites")
-	public WebElement favorites;
-	@SearchWith(pageName = "dashboard", elementName = "trash")
-	public WebElement trash;
-
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_1")
-	public WebElement dashboard_1;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_2")
-	public WebElement dashboard_2;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_3")
-	public WebElement dashboard_3;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_4")
-	public WebElement dashboard_4;
-
-	@SearchWith(pageName = "homePage", elementName = "userEmail")
-	public WebElement userEmail;
-	@SearchWith(pageName = "homePage", elementName = "userPwd")
-	public WebElement userPwd;
-	@SearchWith(pageName = "homePage", elementName = "login_submit")
-	public WebElement login_submit;
+	
 
 }
