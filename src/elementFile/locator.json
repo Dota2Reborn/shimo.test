@@ -82,6 +82,12 @@
 				"note": "我创建的-文件删除按钮"
 			},
 			{
+				"elementName": "dashboard_setting_doc_10",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[10]",
+				"note": "我创建的-文件创建副本"
+			},
+			{
 				"elementName": "dashboard_share_setting_doc_10",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[10]",
