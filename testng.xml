@@ -3,9 +3,9 @@
 <suite name="shimo" parallel="none">
 	<test name="Desktop">
 		<classes>
-			<class name="test.testDesktop" />
-			<class name="test.testAddCollaborator" />
-			<class name="test.testDashboard" />
+			<class name="cases.testDesktop" />
+			<class name="cases.testAddCollaborator" />
+			<class name="cases.testDashboard" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

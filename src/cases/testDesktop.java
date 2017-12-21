@@ -1,4 +1,4 @@
-package test;
+package cases;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
