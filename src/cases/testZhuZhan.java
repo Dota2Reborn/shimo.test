@@ -519,7 +519,7 @@ public class testZhuZhan {
 		String msg;
 		driver.findElement(By.xpath(xpath_input_email)).sendKeys("erdan@qq.com");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath_add)));
-		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_email), "erdan@qq.com"));
+//		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_email), "erdan@qq.com"));
 		Thread.sleep(1000);
 		driver.findElement(By.xpath(xpath_add)).click();
 		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "根据企业设置，你不能添加外部协作者，请联系企业管理员"));
@@ -541,7 +541,7 @@ public class testZhuZhan {
 
 		driver.findElement(By.xpath(xpath_input_email)).sendKeys("erdan@qq.com");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath_add)));
-		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_email), "erdan@qq.com"));
+//		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_email), "erdan@qq.com"));
 		driver.findElement(By.xpath(xpath_add)).click();
 		Thread.sleep(1000);
 		msg = driver.findElement(By.xpath(xpath_msg)).getText();
@@ -564,7 +564,7 @@ public class testZhuZhan {
 
 		driver.findElement(By.xpath(xpath_input_email)).sendKeys("erdan@qq.com");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath_add)));
-		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_email), "erdan@qq.com"));
+//		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_email), "erdan@qq.com"));
 		Thread.sleep(1000);
 		driver.findElement(By.xpath(xpath_add)).click();
 		Thread.sleep(1000);
