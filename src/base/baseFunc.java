@@ -58,16 +58,4 @@ public class baseFunc {
 		return test_url;
 	}
 
-	/**
-	 * Log
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-11-20
-	 *
-	 */
-	public void printLog(String classname, String userID) {
-		System.out.println(classname + "[" + userID + "]");
-
-	}
-
 }

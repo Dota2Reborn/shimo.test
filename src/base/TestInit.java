@@ -65,7 +65,7 @@ public class TestInit {
 	 */
 	public void login(String user, String pwd) {
 		String className = new Exception().getStackTrace()[1].getMethodName();
-		init.printLog(className, user);
+		printLog(className, user);
 
 		driver.navigate().to(test_url + "login");
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
@@ -118,6 +118,18 @@ public class TestInit {
 		winHandels = driver.getWindowHandles();
 		it = new ArrayList<String>(winHandels);
 		driver.switchTo().window(it.get(0));
+	}
+	
+	/**
+	 * Log
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
+	public void printLog(String classname, String userID) {
+		System.out.println(classname + "[" + userID + "]");
+
 	}
 
 	/**
