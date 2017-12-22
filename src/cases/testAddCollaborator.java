@@ -31,7 +31,6 @@ public class testAddCollaborator extends TestInit {
 			desktop_show_type.click();
 		}
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_5.click();
 
@@ -59,7 +58,6 @@ public class testAddCollaborator extends TestInit {
 			desktop_show_type.click();
 		}
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		desktop_setting_doc_5.click();
 
@@ -104,7 +102,6 @@ public class testAddCollaborator extends TestInit {
 			desktop_show_type.click();
 		}
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		desktop_setting_doc_5.click();
 
@@ -147,7 +144,6 @@ public class testAddCollaborator extends TestInit {
 			desktop_show_type.click();
 		}
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		desktop_setting_doc_5.click();
 
@@ -193,7 +189,6 @@ public class testAddCollaborator extends TestInit {
 			desktop_show_type.click();
 		}
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		desktop_setting_doc_5.click();
 
@@ -228,7 +223,6 @@ public class testAddCollaborator extends TestInit {
 			desktop_show_type.click();
 		}
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		desktop_setting_doc_5.click();
 
@@ -288,7 +282,6 @@ public class testAddCollaborator extends TestInit {
 			desktop_show_type.click();
 		}
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		desktop_setting_doc_5.click();
 
@@ -348,7 +341,6 @@ public class testAddCollaborator extends TestInit {
 			desktop_show_type.click();
 		}
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		desktop_setting_doc_5.click();
 
@@ -455,7 +447,6 @@ public class testAddCollaborator extends TestInit {
 			desktop_show_type.click();
 		}
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_2_folder).perform();
 		desktop_setting_doc_5.click();
 

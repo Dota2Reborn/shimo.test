@@ -12,7 +12,6 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -41,7 +40,6 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
 		b_back.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		Actions action = new Actions(driver);
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
@@ -81,7 +79,6 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
 		b_back.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		Actions action = new Actions(driver);
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
@@ -129,7 +126,6 @@ public class testDesktop extends TestInit {
 		desktop.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		Actions action = new Actions(driver);
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
@@ -189,7 +185,6 @@ public class testDesktop extends TestInit {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_1.click();
 
@@ -212,7 +207,6 @@ public class testDesktop extends TestInit {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
 		String setting_2 = desktop_setting_doc_2.getText();
@@ -251,7 +245,6 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		String doc_name = desktop1_1.getText();
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_3));
 		desktop_setting_doc_3.click();
@@ -281,7 +274,6 @@ public class testDesktop extends TestInit {
 
 		String msg = desktop1_1.getText();
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_6));
 		desktop_setting_doc_6.click();
@@ -331,7 +323,6 @@ public class testDesktop extends TestInit {
 		desktop1_1_folder.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_8));
 		desktop_setting_doc_8.click();
@@ -364,7 +355,6 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		String msg = desktop1_1.getText();
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_9));
 		desktop_setting_doc_9.click();
@@ -395,7 +385,6 @@ public class testDesktop extends TestInit {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		desktop_setting_doc_1.click();
 
@@ -418,7 +407,6 @@ public class testDesktop extends TestInit {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
 
@@ -456,7 +444,6 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
 		String doc_name = desktop1_1_folder.getText();
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_3));
 		desktop_setting_doc_3.click();
@@ -499,7 +486,6 @@ public class testDesktop extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_6));
 		desktop_setting_doc_6.click();
@@ -561,7 +547,6 @@ public class testDesktop extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
-		Actions action = new Actions(driver);
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
@@ -601,7 +586,6 @@ public class testDesktop extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
-		Actions action = new Actions(driver);
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
@@ -641,7 +625,6 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
 
-		Actions action = new Actions(driver);
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();

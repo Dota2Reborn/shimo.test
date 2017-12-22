@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -20,6 +21,7 @@ import elementFile.SearchWith;
 public class TestInit {
 	public WebDriver driver = null;
 	public WebDriverWait wait = null;
+	public Actions action = null;
 	String test_url;
 	baseFunc init = new baseFunc();
 
@@ -33,6 +35,7 @@ public class TestInit {
 		driver = init.initData(this);
 		driver.navigate().to(test_url);
 		wait = new WebDriverWait(driver, 20);
+		action = new Actions(driver);
 	}
 
 	@BeforeMethod
@@ -53,7 +56,7 @@ public class TestInit {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-		driver.quit();
+//		driver.quit();
 	}
 
 	/**
@@ -276,6 +279,12 @@ public class TestInit {
 	public WebElement favorites;
 	@SearchWith(pageName = "dashboard", elementName = "trash")
 	public WebElement trash;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_search_button")
+	public WebElement dashboard_search_button;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_search_input")
+	public WebElement dashboard_search_input;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_search_result_1")
+	public WebElement dashboard_search_result_1;
 
 	// addCollaborator
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_close")

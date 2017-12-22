@@ -104,6 +104,24 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='card-header']//div[@class='unread']",
 				"note": "新的共享-大标签-标记已读"
+			},
+			{
+				"elementName": "dashboard_search_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='search-button']",
+				"note": "桌面搜索按钮"
+			},
+			{
+				"elementName": "dashboard_search_input",
+				"locateUsing": "xpath",
+				"locator": "//input[@data-test='search-input']",
+				"note": "桌面搜索输入框"
+			},
+			{
+				"elementName": "dashboard_search_result_1",
+				"locateUsing": "xpath",
+				"locator": "//li[@data-test='search-result-item'][1]",
+				"note": "桌面搜索结果第一行"
 			}
 		]
 	},

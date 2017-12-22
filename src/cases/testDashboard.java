@@ -7,7 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -101,7 +100,6 @@ public class testDashboard extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
 		String msg = dashboard_update_name.getText();
 
-		Actions action = new Actions(driver);
 		action.contextClick(dashboard_update_name).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_setting_doc_12));
 		dashboard_setting_doc_12.click();
@@ -129,7 +127,6 @@ public class testDashboard extends TestInit {
 			desktop_show_type.click();
 		}
 
-		Actions action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
 		desktop_setting_doc_5.click();
 
@@ -165,7 +162,7 @@ public class testDashboard extends TestInit {
 		Thread.sleep(1000);
 
 		msg = driver.findElement(By.className("none-file")).getText();
-		assertEquals("没有文件", msg);
+		assertEquals(msg, "没有文件");
 
 	}
 
@@ -185,7 +182,6 @@ public class testDashboard extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
 
 		System.out.println("bilibili ->" + dashboard_update_name.getText());
-		Actions action = new Actions(driver);
 		action.contextClick(dashboard_update_name).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_setting_doc_8));
 		Thread.sleep(500);
@@ -194,7 +190,7 @@ public class testDashboard extends TestInit {
 		String url_sample = "https://release.shimodev.com/folder/x2zSDzXqfQI9TaKr";
 		wait.until(ExpectedConditions.urlToBe(url_sample));
 		String url = driver.getCurrentUrl();
-		assertEquals(url_sample, url);
+		assertEquals(url, url_sample);
 	}
 
 	/**
@@ -214,7 +210,6 @@ public class testDashboard extends TestInit {
 
 		System.out.println("创建副本 ->" + dashboard_update_name.getText());
 
-		Actions action = new Actions(driver);
 		action.contextClick(dashboard_update_name).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_setting_doc_10));
 		dashboard_setting_doc_10.click();
@@ -232,7 +227,7 @@ public class testDashboard extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
-		assertEquals("副本 创建副本", fileName);
+		assertEquals(fileName, "副本 创建副本");
 	}
 
 }
