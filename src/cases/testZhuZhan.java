@@ -374,6 +374,7 @@ public class testZhuZhan {
 		xpath_addCollaborators.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_addCollaborators_OK));
 		xpath_addCollaborators_2.click();
+		System.out.println(xpath_addCollaborators_2.getText());
 		xpath_addCollaborators_OK.click();
 
 		// driver.navigate().to("https://release.shimodev.com/logout");
@@ -581,7 +582,7 @@ public class testZhuZhan {
 
 	}
 
-	// 设置添加外部协作者-作者，企业创建者和管理员
+	// 转让企业
 	@Test(enabled = true)
 	public void testQiYeGL_transferCompany() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));
@@ -597,9 +598,9 @@ public class testZhuZhan {
 		Thread.sleep(1000);
 
 		List<WebElement> elements = driver.findElements(By.className("row"));
-		int number = elements.size(); // 成员列表
+		int number = elements.size(); // 企业设置列表数量
 		Boolean user1;
-		if (number == 8) {
+		if (number == 9) {
 			user1 = true;
 		} else {
 			user1 = false;
@@ -620,9 +621,9 @@ public class testZhuZhan {
 
 		Thread.sleep(1000);
 		elements = driver.findElements(By.className("row"));
-		number = elements.size(); // 成员列表
+		number = elements.size(); // 企业设置列表数量
 		Boolean user2;
-		if (number == 8) {
+		if (number == 9) {
 			user2 = true;
 		} else {
 			user2 = false;
@@ -645,7 +646,7 @@ public class testZhuZhan {
 		assertEquals(user, "刘晨");
 	}
 
-	// 成员列表，搜索成员
+	// 禁用成员
 	@Test(enabled = true)
 	public void testQiYeGL_banUser() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_QYGL));

@@ -583,7 +583,7 @@
 			{
 				"elementName": "xpath_qiYeName",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[1]//a"
+				"locator": "//div[@class='settings creator']//div[2]//a"
 			},
 			{
 				"elementName": "xpath_qiYeName_input",
@@ -598,12 +598,12 @@
 			{
 				"elementName": "xpath_qiYeName_name",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[1]//div[@class='desc']"
+				"locator": "//div[@class='settings creator']//div[2]//div[@class='desc']"
 			},
 			{
 				"elementName": "xpath_qiYeYaoQing",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[2]//a"
+				"locator": "//div[@class='settings creator']//div[3]//a"
 			},
 			{
 				"elementName": "xpath_qiYeYaoQing_3",
@@ -628,7 +628,7 @@
 			{
 				"elementName": "xpath_setAdmin",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[4]//a"
+				"locator": "//div[@class='settings creator']//div[5]//a"
 			},
 			{
 				"elementName": "xpath_setAdmin_OK",
@@ -648,7 +648,7 @@
 			{
 				"elementName": "xpath_addCollaborators",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[3]//a"
+				"locator": "//div[@class='settings creator']//div[4]//a"
 			},
 			{
 				"elementName": "xpath_addCollaborators_1",
@@ -673,7 +673,7 @@
 			{
 				"elementName": "xpath_transferCompany",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[6]//span"
+				"locator": "//div[@class='settings creator']//div[7]//span"
 			},
 			{
 				"elementName": "xpath_transferCompanyTo",
