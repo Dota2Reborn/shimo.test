@@ -60,10 +60,8 @@ public class testZhuZhan {
 
 		if (firstTest == false) {
 			driver.navigate().to("https://release.shimodev.com/logout");
-			// driver.navigate().to("https://shimodev.com/logout");
 		}
 		driver.get("https://release.shimodev.com/login");
-		// driver.get("https://shimodev.com/login");
 		login("panpan@qq.com", "123123");
 		firstTest = false;
 	}
@@ -93,8 +91,6 @@ public class testZhuZhan {
 		if (firstTest == false) {
 			driver.navigate().to("https://release.shimodev.com/logout");
 			driver.navigate().to("https://release.shimodev.com/login");
-			// driver.navigate().to("https://shimodev.com/logout");
-			// driver.navigate().to("https://shimodev.com/login");
 		}
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
@@ -171,8 +167,6 @@ public class testZhuZhan {
 		xpath_qiYeYaoQing_1.click();
 		xpath_qiYeYaoQing_OK.click();
 
-		// driver.navigate().to("https://release.shimodev.com/logout");
-		// driver.navigate().to("https://release.shimodev.com/login");
 		login("amei@qq.com", "123123");
 
 		xpath_user_icon.click();
@@ -201,8 +195,6 @@ public class testZhuZhan {
 		xpath_qiYeYaoQing_2.click();
 		xpath_qiYeYaoQing_OK.click();
 
-		// driver.navigate().to("https://release.shimodev.com/logout");
-		// driver.navigate().to("https://release.shimodev.com/login");
 		login("amei@qq.com", "123123");
 
 		xpath_user_icon.click();
@@ -231,8 +223,6 @@ public class testZhuZhan {
 		xpath_qiYeYaoQing_3.click();
 		xpath_qiYeYaoQing_OK.click();
 
-		// driver.navigate().to("https://release.shimodev.com/logout");
-		// driver.navigate().to("https://release.shimodev.com/login");
 		login("pipi@qq.com", "123123");
 
 		xpath_user_icon.click();
@@ -245,7 +235,7 @@ public class testZhuZhan {
 
 		String fileTxt = driver.findElement(By.xpath("//div[@class='shimo-modal-content']")).getText();
 		// 断言
-		assertEquals("没有权限，请联系企业管理员添加", fileTxt);
+		assertEquals("没有权限，请联系企业创建者添加", fileTxt);
 
 	}
 
@@ -284,8 +274,6 @@ public class testZhuZhan {
 		xpath_setAdmin_2.click();
 		xpath_setAdmin_OK.click();
 
-		// driver.navigate().to("https://release.shimodev.com/logout");
-		// driver.navigate().to("https://release.shimodev.com/login");
 		login("pipi@qq.com", "123123");
 
 		xpath_user_icon.click();
@@ -330,8 +318,6 @@ public class testZhuZhan {
 		xpath_setAdmin_1.click();
 		xpath_setAdmin_OK.click();
 
-		// driver.navigate().to("https://release.shimodev.com/logout");
-		// driver.navigate().to("https://release.shimodev.com/login");
 		login("pipi@qq.com", "123123");
 
 		xpath_user_icon.click();
@@ -377,8 +363,6 @@ public class testZhuZhan {
 		System.out.println(xpath_addCollaborators_2.getText());
 		xpath_addCollaborators_OK.click();
 
-		// driver.navigate().to("https://release.shimodev.com/logout");
-		// driver.navigate().to("https://release.shimodev.com/login");
 		login("amei@qq.com", "123123");
 
 		Actions action = new Actions(driver);
@@ -406,8 +390,6 @@ public class testZhuZhan {
 		msg = driver.findElement(By.xpath(xpath_msg)).getText();
 		Boolean user1 = msg.equals("根据企业设置，你不能添加外部协作者，请联系企业管理员");
 
-		// driver.navigate().to("https://release.shimodev.com/logout");
-		// driver.navigate().to("https://release.shimodev.com/login");
 		login("pipi@qq.com", "123123");
 
 		action.moveToElement(driver.findElement(By.xpath(xpath_file1))).perform();
@@ -448,8 +430,6 @@ public class testZhuZhan {
 		xpath_addCollaborators_1.click();
 		xpath_addCollaborators_OK.click();
 
-		// driver.navigate().to("https://release.shimodev.com/logout");
-		// driver.navigate().to("https://release.shimodev.com/login");
 		login("amei@qq.com", "123123");
 
 		Actions action = new Actions(driver);
@@ -496,8 +476,6 @@ public class testZhuZhan {
 		xpath_addCollaborators_3.click();
 		xpath_addCollaborators_OK.click();
 
-		// driver.navigate().to("https://release.shimodev.com/logout");
-		// driver.navigate().to("https://release.shimodev.com/login");
 		login("shimo03@sina.com", "123123");
 
 		Actions action = new Actions(driver);
@@ -516,11 +494,9 @@ public class testZhuZhan {
 		String xpath_input_email = "//div[@class='sm-form-control search-box']//input";
 		String xpath_add = "//div[@class='sm-dropdown-button no-overlay']";
 		String xpath_msg = "//p[@class='sm-alert-content']";
-		String xpath_email = "//div[@class='user-list-item']//span[@class='email ellipsis']";
 		String msg;
 		driver.findElement(By.xpath(xpath_input_email)).sendKeys("erdan@qq.com");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath_add)));
-//		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_email), "erdan@qq.com"));
 		Thread.sleep(1000);
 		driver.findElement(By.xpath(xpath_add)).click();
 		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_msg), "根据企业设置，你不能添加外部协作者，请联系企业管理员"));
@@ -528,8 +504,6 @@ public class testZhuZhan {
 
 		Boolean user1 = msg.equals("根据企业设置，你不能添加外部协作者，请联系企业管理员");
 
-		// driver.navigate().to("https://release.shimodev.com/logout");
-		// driver.navigate().to("https://release.shimodev.com/login");
 		login("amei@qq.com", "123123");
 
 		action.moveToElement(driver.findElement(By.xpath(xpath_file1))).perform();
@@ -542,7 +516,6 @@ public class testZhuZhan {
 
 		driver.findElement(By.xpath(xpath_input_email)).sendKeys("erdan@qq.com");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath_add)));
-//		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_email), "erdan@qq.com"));
 		driver.findElement(By.xpath(xpath_add)).click();
 		Thread.sleep(1000);
 		msg = driver.findElement(By.xpath(xpath_msg)).getText();
@@ -565,7 +538,6 @@ public class testZhuZhan {
 
 		driver.findElement(By.xpath(xpath_input_email)).sendKeys("erdan@qq.com");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath_add)));
-//		wait.until(ExpectedConditions.textToBe(By.xpath(xpath_email), "erdan@qq.com"));
 		Thread.sleep(1000);
 		driver.findElement(By.xpath(xpath_add)).click();
 		Thread.sleep(1000);

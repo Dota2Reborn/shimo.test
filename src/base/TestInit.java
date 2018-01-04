@@ -56,7 +56,7 @@ public class TestInit {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-//		driver.quit();
+		 driver.quit();
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class TestInit {
 		it = new ArrayList<String>(winHandels);
 		driver.switchTo().window(it.get(0));
 	}
-	
+
 	/**
 	 * Log
 	 * 
