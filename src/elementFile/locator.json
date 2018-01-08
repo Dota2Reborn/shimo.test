@@ -505,6 +505,173 @@
 		]
 	},
 	{
+		"note": "企业管理",
+		"pageName": "companyManagement",
+		"elements": [
+			{
+				"elementName": "company_Management",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-list-tabs']//li[@class='list-tab enterprise']",
+				"note": "桌面-企业管理入口"
+			},
+			{
+				"elementName": "member_management",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='tab-nav']//a[1]",
+				"note": "企业管理-成员管理"
+			},
+			{
+				"elementName": "company_setting",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='tab-nav']//a[2]",
+				"note": "企业管理-企业设置"
+			},
+			{
+				"elementName": "pay_order",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='tab-nav']//a[3]",
+				"note": "企业管理-支付与订单"
+			},
+			{
+				"elementName": "button_companyName",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings creator']//div[2]//a",
+				"note": "企业设置-企业名称（更改按钮）"
+			},
+			{
+				"elementName": "text_companyName",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings creator']//div[2]//div[@class='desc']",
+				"note": "企业设置-企业名称"
+			},
+			{
+				"elementName": "input_companyName",
+				"locateUsing": "xpath",
+				"locator": "//input[@class='sm-form-control ']",
+				"note": "企业设置-企业名称（输入框）"
+			},
+			{
+				"elementName": "invite_member",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings creator']//div[3]//a",
+				"note": "企业设置-谁能邀请新成员进企业"
+			},
+			{
+				"elementName": "invite_member_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[3]",
+				"note": "企业设置-谁能邀请新成员进企业-仅企业创建者"
+			},
+			{
+				"elementName": "invite_member_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[2]",
+				"note": "企业设置-谁能邀请新成员进企业-仅企业创建者和管理员"
+			},
+			{
+				"elementName": "invite_member_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[1]",
+				"note": "企业设置-谁能邀请新成员进企业-所有企业成员"
+			},
+			{
+				"elementName": "invite_member_OK",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='btn btn-ok']",
+				"note": "企业设置-谁能邀请新成员进企业-保存按钮"
+			},
+			{
+				"elementName": "addMember",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='add-btn']",
+				"note": "成员管理-添加成员按钮"
+			},
+			{
+				"elementName": "message_ok",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='btn btn-ok']",
+				"note": "消息确认按钮"
+			},
+			{
+				"elementName": "message_warning",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='shimo-modal-content']",
+				"note": "提示消息"
+			},
+			{
+				"elementName": "address_cppy",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='invitation-panel-foot']//button",
+				"note": "企业设置-添加成员-复制链接按钮"
+			},
+			{
+				"elementName": "setAdmin",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings creator']//div[5]//a",
+				"note": "企业设置-设置管理员"
+			},
+			{
+				"elementName": "setAdmin_ManagerAndCreater",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[1]",
+				"note": "企业设置-设置管理员-管理员和创建者"
+			},
+			{
+				"elementName": "setAdmin_Creater",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[2]",
+				"note": "企业设置-设置管理员-仅创建者"
+			},
+			{
+				"elementName": "button_addCollaborators",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings creator']//div[4]//a",
+				"note": "企业设置-谁能添加外部协作者（更改按钮）"
+			},
+			{
+				"elementName": "addCollaborators_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[2]",
+				"note": "企业设置-谁能添加外部协作者-所有企业成员"
+			},
+			{
+				"elementName": "xpath_addCollaborators_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[3]",
+				"note": "企业设置-谁能添加外部协作者-仅企业创建者和管理员"
+			},
+			{
+				"elementName": "xpath_addCollaborators_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[4]",
+				"note": "企业设置-谁能添加外部协作者-仅企业创建者和管理员，以及文件所有者"
+			}
+		]
+	},
+	{
+		"note": "旧桌面",
+		"pageName": "desktop_old",
+		"elements": [
+			{
+				"elementName": "new",
+				"locateUsing": "className",
+				"locator": "add-entry-btn",
+				"note": "桌面-新建"
+			},
+			{
+				"elementName": "desktop_user_icon",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='avatar config-avatar']//div[@class='img-wrap ']",
+				"note": "桌面-右上角头像"
+			},
+			{
+				"elementName": "desktop_user_icon_companyManagement",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='header-menu-items']//a[2]"
+			}
+		]
+	},
+	{
 		"pageName": "------------------------------------------------------------------------------------------"
 	},
 	{
