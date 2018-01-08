@@ -56,7 +56,7 @@ public class TestInit {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-		 driver.quit();
+		driver.quit();
 	}
 
 	/**
@@ -76,6 +76,43 @@ public class TestInit {
 		userPwd.sendKeys(pwd);
 		login_submit.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
+	}
+
+	/**
+	 * 登录
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-01-08
+	 *
+	 */
+	public void login_error(String user, String pwd) {
+		String className = new Exception().getStackTrace()[1].getMethodName();
+		printLog(className, user);
+
+		driver.navigate().to(test_url + "login");
+		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
+		userEmail.sendKeys(user);
+		userPwd.sendKeys(pwd);
+		login_submit.click();
+	}
+
+	/**
+	 * 登录（旧桌面）
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
+	public void login_old(String user, String pwd) {
+		String className = new Exception().getStackTrace()[1].getMethodName();
+		printLog(className, user);
+
+		driver.navigate().to(test_url + "login");
+		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
+		userEmail.sendKeys(user);
+		userPwd.sendKeys(pwd);
+		login_submit.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_old_new));
 	}
 
 	/**
@@ -327,5 +364,49 @@ public class TestInit {
 	public WebElement b_addCollaborator_1_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_ok")
 	public WebElement b_addCollaborator_ok;
+
+	// 企业管理
+	@SearchWith(pageName = "companyManagement", elementName = "company_Management")
+	public WebElement company_Management;
+	@SearchWith(pageName = "companyManagement", elementName = "company_setting")
+	public WebElement company_setting;
+	@SearchWith(pageName = "companyManagement", elementName = "invite_member")
+	public WebElement invite_member;
+	@SearchWith(pageName = "companyManagement", elementName = "invite_member_OK")
+	public WebElement invite_member_OK;
+	@SearchWith(pageName = "companyManagement", elementName = "invite_member_1")
+	public WebElement invite_member_1;
+	@SearchWith(pageName = "companyManagement", elementName = "invite_member_2")
+	public WebElement invite_member_2;
+	@SearchWith(pageName = "companyManagement", elementName = "invite_member_3")
+	public WebElement invite_member_3;
+	@SearchWith(pageName = "companyManagement", elementName = "addMember")
+	public WebElement addMember;
+	@SearchWith(pageName = "companyManagement", elementName = "address_cppy")
+	public WebElement address_cppy;
+	@SearchWith(pageName = "companyManagement", elementName = "message_ok")
+	public WebElement message_ok;
+	@SearchWith(pageName = "companyManagement", elementName = "message_warning")
+	public WebElement message_warning;
+	@SearchWith(pageName = "companyManagement", elementName = "button_companyName")
+	public WebElement button_companyName;
+	@SearchWith(pageName = "companyManagement", elementName = "input_companyName")
+	public WebElement input_companyName;
+	@SearchWith(pageName = "companyManagement", elementName = "text_companyName")
+	public WebElement text_companyName;
+	@SearchWith(pageName = "companyManagement", elementName = "setAdmin")
+	public WebElement setAdmin;
+	@SearchWith(pageName = "companyManagement", elementName = "setAdmin_ManagerAndCreater")
+	public WebElement setAdmin_ManagerAndCreater;
+	@SearchWith(pageName = "companyManagement", elementName = "setAdmin_Creater")
+	public WebElement setAdmin_Creater;
+
+	// 旧桌面
+	@SearchWith(pageName = "desktop_old", elementName = "new")
+	public WebElement desktop_old_new;
+	@SearchWith(pageName = "desktop_old", elementName = "desktop_user_icon")
+	public WebElement desktop_user_icon;
+	@SearchWith(pageName = "desktop_old", elementName = "desktop_user_icon_companyManagement")
+	public WebElement desktop_user_icon_companyManagement;
 
 }
