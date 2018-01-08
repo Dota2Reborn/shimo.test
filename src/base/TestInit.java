@@ -400,6 +400,14 @@ public class TestInit {
 	public WebElement setAdmin_ManagerAndCreater;
 	@SearchWith(pageName = "companyManagement", elementName = "setAdmin_Creater")
 	public WebElement setAdmin_Creater;
+	@SearchWith(pageName = "companyManagement", elementName = "button_addCollaborators")
+	public WebElement button_addCollaborators;
+	@SearchWith(pageName = "companyManagement", elementName = "addCollaborators_1")
+	public WebElement addCollaborators_1;
+	@SearchWith(pageName = "companyManagement", elementName = "addCollaborators_2")
+	public WebElement addCollaborators_2;
+	@SearchWith(pageName = "companyManagement", elementName = "addCollaborators_3")
+	public WebElement addCollaborators_3;
 
 	// 旧桌面
 	@SearchWith(pageName = "desktop_old", elementName = "new")
