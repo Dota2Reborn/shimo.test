@@ -635,13 +635,13 @@
 				"note": "企业设置-谁能添加外部协作者-所有企业成员"
 			},
 			{
-				"elementName": "xpath_addCollaborators_2",
+				"elementName": "addCollaborators_2",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='modal-content']//div[3]",
 				"note": "企业设置-谁能添加外部协作者-仅企业创建者和管理员"
 			},
 			{
-				"elementName": "xpath_addCollaborators_3",
+				"elementName": "addCollaborators_3",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='modal-content']//div[4]",
 				"note": "企业设置-谁能添加外部协作者-仅企业创建者和管理员，以及文件所有者"
@@ -673,7 +673,7 @@
 	},
 	{
 		"pageName": "------------------------------------------------------------------------------------------",
-		"test":""
+		"test":"123123123123"
 	},
 	{
 		"pageName": "indexPage",
