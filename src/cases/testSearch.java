@@ -37,7 +37,7 @@ public class testSearch extends TestInit {
 	 * hover 搜索图标输入搜索内容，移开鼠标，搜索结果保持，输入框不收起
 	 * 
 	 * @author 刘晨
-	 * @Time 2017-01-09
+	 * @Time 2018-01-09
 	 *
 	 */
 	@Test(enabled = true)
@@ -56,7 +56,7 @@ public class testSearch extends TestInit {
 	 * hover 搜索图标输入搜索内容，移开鼠标，任意点击搜索外的位置，搜索收起
 	 * 
 	 * @author 刘晨
-	 * @Time 2017-01-09
+	 * @Time 2018-01-09
 	 *
 	 */
 	@Test(enabled = true)

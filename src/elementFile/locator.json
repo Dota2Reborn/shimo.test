@@ -122,6 +122,42 @@
 				"locateUsing": "xpath",
 				"locator": "//li[@data-test='search-result-item'][1]",
 				"note": "桌面搜索结果第一行"
+			},
+			{
+				"elementName": "dashboard_notice",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='header']//div//div[2]/*[name()='svg']",
+				"note": "桌面通知铃铛"
+			},
+			{
+				"elementName": "dashboard_notice_list_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='notification-item'][1]",
+				"note": "桌面通知铃铛-通知列表中第一个"
+			},
+			{
+				"elementName": "dashboard_notice_list_1_time",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='notification-item'][1]//div[2]",
+				"note": "桌面通知铃铛-通知列表中第一个时间"
+			},
+			{
+				"elementName": "dashboard_notice_list_allNotice",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(@class,'sm-tab-container')]//div[1]//div[1]",
+				"note": "桌面通知铃铛-全部通知"
+			},
+			{
+				"elementName": "dashboard_notice_list_unread",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(@class,'sm-tab-container')]//div[1]//div[2]",
+				"note": "桌面通知铃铛-未读"
+			},
+			{
+				"elementName": "dashboard_notice_list_allRead",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(@class,'emiPrA')]",
+				"note": "桌面通知铃铛-标记全部已读"
 			}
 		]
 	},
@@ -501,6 +537,30 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@id='ql-container']//div[1]",
 				"note": "文档编辑入口"
+			},
+			{
+				"elementName": "doc_notice_user",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='ql-mention-list']//li[@data-type='user']",
+				"note": "@用户，被选列表中内容第一个用户"
+			},
+			{
+				"elementName": "doc_menu",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-dropdown-button operations inactive']",
+				"note": "文档编辑页面中右上角 点点点"
+			},
+			{
+				"elementName": "doc_menu_delete",
+				"locateUsing": "xpath",
+				"locator": "//li[@class='sm-dropdown-menu-item operations-noselect operations-red']",
+				"note": "文档编辑页面中右上角 点点点-删除文档"
+			},
+			{
+				"elementName": "doc_menu_delete_OK",
+				"locateUsing": "xpath",
+				"locator": "//button[@class='btn confirm-btn btn-ok']",
+				"note": "文档编辑页面中右上角 点点点-删除文档-确定按钮"
 			}
 		]
 	},

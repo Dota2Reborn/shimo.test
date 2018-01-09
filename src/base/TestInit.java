@@ -56,7 +56,7 @@ public class TestInit {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-		driver.quit();
+//		driver.quit();
 	}
 
 	/**
@@ -280,6 +280,14 @@ public class TestInit {
 	public WebElement b_back;
 	@SearchWith(pageName = "doc", elementName = "doc_edit")
 	public WebElement doc_edit;
+	@SearchWith(pageName = "doc", elementName = "doc_notice_user")
+	public WebElement doc_notice_user;
+	@SearchWith(pageName = "doc", elementName = "doc_menu")
+	public WebElement doc_menu;
+	@SearchWith(pageName = "doc", elementName = "doc_menu_delete")
+	public WebElement doc_menu_delete;
+	@SearchWith(pageName = "doc", elementName = "doc_menu_delete_OK")
+	public WebElement doc_menu_delete_OK;
 
 	// dashboard
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_time")
@@ -322,6 +330,16 @@ public class TestInit {
 	public WebElement dashboard_search_input;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_search_result_1")
 	public WebElement dashboard_search_result_1;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice")
+	public WebElement dashboard_notice;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1")
+	public WebElement dashboard_notice_list_1;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1_time")
+	public WebElement dashboard_notice_list_1_time;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_unread")
+	public WebElement dashboard_notice_list_unread;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_allRead")
+	public WebElement dashboard_notice_list_allRead;
 
 	// addCollaborator
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_close")
