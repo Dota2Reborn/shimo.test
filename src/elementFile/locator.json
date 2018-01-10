@@ -561,6 +561,24 @@
 				"locateUsing": "xpath",
 				"locator": "//button[@class='btn confirm-btn btn-ok']",
 				"note": "文档编辑页面中右上角 点点点-删除文档-确定按钮"
+			},
+			{
+				"elementName": "doc_discuss",
+				"locateUsing": "xpath",
+				"locator": "//button[@class='ql-comment']",
+				"note": "文档编辑页面中评论按钮"
+			},
+			{
+				"elementName": "doc_discuss_input",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='doc-comment-input']",
+				"note": "文档编辑页面中评论输入框"
+			},
+			{
+				"elementName": "doc_discuss_input_ok",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='doc-comment-btn doc-comment-send btn btn-ok']",
+				"note": "文档编辑页面中评论输入框-确定按钮"
 			}
 		]
 	},

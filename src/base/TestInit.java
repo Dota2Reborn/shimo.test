@@ -288,6 +288,12 @@ public class TestInit {
 	public WebElement doc_menu_delete;
 	@SearchWith(pageName = "doc", elementName = "doc_menu_delete_OK")
 	public WebElement doc_menu_delete_OK;
+	@SearchWith(pageName = "doc", elementName = "doc_discuss")
+	public WebElement doc_discuss;
+	@SearchWith(pageName = "doc", elementName = "doc_discuss_input")
+	public WebElement doc_discuss_input;
+	@SearchWith(pageName = "doc", elementName = "doc_discuss_input_ok")
+	public WebElement doc_discuss_input_ok;
 
 	// dashboard
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_time")

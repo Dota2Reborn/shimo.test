@@ -5,6 +5,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -175,5 +176,41 @@ public class testNotice extends TestInit {
 		switchToPage(1);
 		String result = driver.findElement(By.xpath("//div[@class='info-word']//p")).getText();
 		assertEquals(result, "当前登录帐号 autoTest12@shimo.im 没有权限访问这个文档");
+	}
+
+	/**
+	 * 点击文档评论通知，跳转到文档，并且打开通知当前评论
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-01-09
+	 *
+	 */
+	@Test(enabled = true)
+	public void notice_5() throws InterruptedException {
+		login("autoTest14@shimo.im", "123123");
+		desktop.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		desktop1_1.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
+		doc_edit.clear();
+		doc_edit.sendKeys("lala");
+		doc_discuss.click();
+		doc_discuss_input.sendKeys("yoyoyo");
+		action.sendKeys(Keys.ENTER);
+		wait.until(ExpectedConditions.elementToBeClickable(doc_discuss_input_ok));
+		doc_discuss_input_ok.click();
+
+		logout();
+		login("autoTest12@shimo.im", "123123");
+		action.moveToElement(dashboard_notice).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
+		dashboard_notice_list_1.click();
+
+		switchToPage(1);
+		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
+		Boolean resutl = doc_discuss_input.isDisplayed();
+		assertTrue(resutl);
 	}
 }
