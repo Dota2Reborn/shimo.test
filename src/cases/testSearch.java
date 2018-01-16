@@ -68,6 +68,7 @@ public class testSearch extends TestInit {
 
 		action.moveToElement(dashboard_search_input, -100, 0).click().perform();
 
+		Thread.sleep(1000);
 		Boolean result = dashboard_search_button.isDisplayed();
 		assertTrue(result);
 	}

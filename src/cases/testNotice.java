@@ -4,8 +4,11 @@ import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -76,6 +79,7 @@ public class testNotice extends TestInit {
 
 		String msg1 = dashboard_notice_list_unread.getText();
 		dashboard_notice_list_allRead.click();
+		Thread.sleep(500);
 		String msg2 = dashboard_notice_list_unread.getText();
 
 		assertFalse(msg1.equals(msg2));
@@ -212,5 +216,52 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		Boolean resutl = doc_discuss_input.isDisplayed();
 		assertTrue(resutl);
+	}
+
+	/**
+	 * 全部通知与未读通知列表切换
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-01-12
+	 *
+	 */
+	@Test(enabled = true)
+	public void notice_6() throws InterruptedException {
+		login("autoTest11@shimo.im", "123123");
+		desktop.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		desktop1_1.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
+		doc_edit.clear();
+		doc_edit.sendKeys("@autoTest12");
+		wait.until(ExpectedConditions.elementToBeClickable(doc_notice_user));
+		doc_notice_user.click();
+
+		b_back.click();
+		logout();
+		login("autoTest12@shimo.im", "123123");
+		action.moveToElement(dashboard_notice).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
+
+		dashboard_notice_list_unread.click();
+
+		String result = dashboard_notice_list_unread.getAttribute("data-test");
+		List<WebElement> elements;
+		int i = 100;
+		if (result.equals("active")) {
+			elements = driver.findElements(
+					By.xpath("//div[@class='sm-tab-content']//div[2]//div//div[@data-test='notification-item']"));
+			if (elements != null) {
+				i = elements.size();
+			}
+		} else {
+			assertFalse(true);
+		}
+
+		String msg1 = dashboard_notice_list_unread.getText();
+		String msg2 = "未读 (" + i + ")";
+		assertTrue(msg1.equals(msg2));
 	}
 }
