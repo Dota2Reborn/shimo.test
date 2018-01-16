@@ -150,13 +150,13 @@
 			{
 				"elementName": "dashboard_notice_list_unread",
 				"locateUsing": "xpath",
-				"locator": "//div[contains(@class,'sm-tab-container')]//div[1]//div[2]",
+				"locator": "//div[@data-test='notification-container']//div[1]//div[1]//div[2]//span",
 				"note": "桌面通知铃铛-未读"
 			},
 			{
 				"elementName": "dashboard_notice_list_allRead",
 				"locateUsing": "xpath",
-				"locator": "//div[contains(@class,'emiPrA')]",
+				"locator": "//div[@data-test='notification-allread']",
 				"note": "桌面通知铃铛-标记全部已读"
 			}
 		]
