@@ -251,6 +251,7 @@ public class testNotice extends TestInit {
 		List<WebElement> elements;
 		int i = 100;
 		if (result.equals("active")) {
+			Thread.sleep(500);
 			elements = driver.findElements(
 					By.xpath("//div[@class='sm-tab-content']//div[2]//div//div[@data-test='notification-item']"));
 			if (elements != null) {

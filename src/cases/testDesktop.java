@@ -284,6 +284,8 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_button));
 		desktop_moveFolder_button.click();
 
+//		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		desktop1_1_folder.click();
@@ -298,6 +300,8 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_button));
 		desktop_moveFolder_button.click();
 
+//		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop));
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop));
 		desktop.click();

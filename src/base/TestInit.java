@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,9 +34,9 @@ public class TestInit {
 	public void firstMethod() {
 		test_url = init.getUrl();
 		driver = init.initData(this);
+		action = new Actions(driver);
 		driver.navigate().to(test_url);
 		wait = new WebDriverWait(driver, 20);
-		action = new Actions(driver);
 	}
 
 	@BeforeMethod
@@ -124,6 +125,7 @@ public class TestInit {
 	 */
 	public void logout() {
 		driver.navigate().to(test_url + "logout");
+		action.sendKeys(Keys.ESCAPE);
 	}
 
 	/**
