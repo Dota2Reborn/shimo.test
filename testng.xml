@@ -6,6 +6,9 @@
 			<class name="cases.testDesktop" />
 			<class name="cases.testAddCollaborator" />
 			<class name="cases.testDashboard" />
+			<class name="cases.testDesktopOrderBy" />
+			<class name="cases.testSearch" />
+			<class name="cases.testNotice" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
