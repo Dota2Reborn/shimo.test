@@ -29,8 +29,14 @@ public class baseFunc {
 	 */
 	public WebDriver initData(Object xx) {
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+		String os = System.getProperties().getProperty("os.name");
+		if (os.startsWith("Windows")) {
+			System.setProperty("webdriver.chrome.driver",
+					"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+		} else {
+
+		}
+
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setCapability("marionette", true);
 		driver = new ChromeDriver(capabilities);
