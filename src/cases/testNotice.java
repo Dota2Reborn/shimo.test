@@ -47,7 +47,8 @@ public class testNotice extends TestInit {
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
 		String url = driver.getCurrentUrl();
-		assertEquals(url, "https://release.shimodev.com/docs/MQHNJBqnsUQUPuYV");
+//		assertEquals(url, "https://release.shimodev.com/docs/MQHNJBqnsUQUPuYV");
+		assertTrue(url.startsWith("https://release.shimodev.com/docs/MQHNJBqnsUQUPuYV"));
 	}
 
 	/**

@@ -57,7 +57,7 @@ public class TestInit {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-//		driver.quit();
+		driver.quit();
 	}
 
 	/**
@@ -189,6 +189,17 @@ public class TestInit {
 		} catch (NoSuchElementException e) {
 			return false;
 		}
+	}
+
+	/**
+	 * 等待元素加载
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-01-25
+	 *
+	 */
+	public void waitFor() {
+
 	}
 
 	// homePage
