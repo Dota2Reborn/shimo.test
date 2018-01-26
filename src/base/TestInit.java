@@ -80,7 +80,7 @@ public class TestInit {
 	}
 
 	/**
-	 * 登录
+	 * 登录（For登录报错验证）
 	 * 
 	 * @author 刘晨
 	 * @Time 2017-01-08
@@ -97,6 +97,27 @@ public class TestInit {
 		login_submit.click();
 	}
 
+	/**
+	 * 注册(yanzheng=1时，仅作错误输入验证使用)
+	 * 
+	 * @author 王继程
+	 * @Time 2017-11-21
+	 *
+	 */
+	public void Registered(String name, String user, String pwd, int yanzheng) {
+		if (yanzheng == 1) {
+			String className = new Exception().getStackTrace()[1].getMethodName();
+			printLog(className, className);
+			driver.navigate().to(test_url + "register");
+			wait.until(ExpectedConditions.elementToBeClickable(Next));
+			userName.sendKeys(name);
+			Email.sendKeys(user);
+			Pwd.sendKeys(pwd);
+			Next.click();
+		} else {
+
+		}
+	}
 
 	/**
 	 * 登出
@@ -433,4 +454,13 @@ public class TestInit {
 	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_companyManagement")
 	public WebElement desktop_user_icon_companyManagement;
 
+	// Registered
+	@SearchWith(pageName = "Registered", elementName = "userName")
+	public WebElement userName;
+	@SearchWith(pageName = "Registered", elementName = "userEmail")
+	public WebElement Email;
+	@SearchWith(pageName = "Registered", elementName = "userPwd")
+	public WebElement Pwd;
+	@SearchWith(pageName = "Registered", elementName = "Next")
+	public WebElement Next;
 }

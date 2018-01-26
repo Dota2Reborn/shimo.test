@@ -257,7 +257,7 @@ public class testCompanyManagement extends TestInit {
 	}
 
 	/**
-	 * 谁能添加外部协作者-仅企业创建者和管理者
+	 * 谁能添加外部协作者-仅企业创建者和管理员
 	 * 
 	 * @author 刘晨
 	 * @Time 2017-01-08
