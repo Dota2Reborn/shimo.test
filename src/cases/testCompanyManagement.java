@@ -26,7 +26,7 @@ public class testCompanyManagement extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void inviteMember_allMember() throws InterruptedException {
-		login_old("panpan@qq.com", "123123");
+		login("panpan@qq.com", "123123");
 		company_Management.click();
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
@@ -38,11 +38,11 @@ public class testCompanyManagement extends TestInit {
 		invite_member_OK.click();
 
 		logout();
-		login_old("amei@qq.com", "123123");
+		login("amei@qq.com", "123123");
 
-		desktop_user_icon.click();
+		action.moveToElement(desktop_user_icon).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_user_icon_companyManagement));
 		desktop_user_icon_companyManagement.click();
-		switchToPage(2);
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 		addMember.click();
 
@@ -61,7 +61,7 @@ public class testCompanyManagement extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void inviteMember_ManagerAndCreater() throws InterruptedException {
-		login_old("panpan@qq.com", "123123");
+		login("panpan@qq.com", "123123");
 		company_Management.click();
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
@@ -73,11 +73,11 @@ public class testCompanyManagement extends TestInit {
 		invite_member_OK.click();
 
 		logout();
-		login_old("amei@qq.com", "123123");
+		login("amei@qq.com", "123123");
 
-		desktop_user_icon.click();
+		action.moveToElement(desktop_user_icon).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_user_icon_companyManagement));
 		desktop_user_icon_companyManagement.click();
-		switchToPage(2);
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 		addMember.click();
 		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
@@ -95,7 +95,7 @@ public class testCompanyManagement extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void inviteMember_JustByCreater() throws InterruptedException {
-		login_old("panpan@qq.com", "123123");
+		login("panpan@qq.com", "123123");
 		company_Management.click();
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
@@ -107,11 +107,11 @@ public class testCompanyManagement extends TestInit {
 		invite_member_OK.click();
 
 		logout();
-		login_old("pipi@qq.com", "123123");
+		login("pipi@qq.com", "123123");
 
-		desktop_user_icon.click();
+		action.moveToElement(desktop_user_icon).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_user_icon_companyManagement));
 		desktop_user_icon_companyManagement.click();
-		switchToPage(2);
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 		addMember.click();
 		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
@@ -133,7 +133,7 @@ public class testCompanyManagement extends TestInit {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		String time = format.format(date);
 
-		login_old("panpan@qq.com", "123123");
+		login("panpan@qq.com", "123123");
 		company_Management.click();
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
@@ -161,7 +161,7 @@ public class testCompanyManagement extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void setManager_Creater() throws InterruptedException {
-		login_old("panpan@qq.com", "123123");
+		login("panpan@qq.com", "123123");
 		company_Management.click();
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
@@ -173,11 +173,11 @@ public class testCompanyManagement extends TestInit {
 		message_ok.click();
 
 		logout();
-		login_old("pipi@qq.com", "123123");
+		login("pipi@qq.com", "123123");
 
-		desktop_user_icon.click();
+		action.moveToElement(desktop_user_icon).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_user_icon_companyManagement));
 		desktop_user_icon_companyManagement.click();
-		switchToPage(2);
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 
 		List<WebElement> elements = driver.findElements(By.className("member-row"));
@@ -213,7 +213,7 @@ public class testCompanyManagement extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void setManager_ManagerAndCreater() throws InterruptedException {
-		login_old("panpan@qq.com", "123123");
+		login("panpan@qq.com", "123123");
 		company_Management.click();
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
@@ -225,11 +225,11 @@ public class testCompanyManagement extends TestInit {
 		message_ok.click();
 
 		logout();
-		login_old("pipi@qq.com", "123123");
+		login("pipi@qq.com", "123123");
 
-		desktop_user_icon.click();
+		action.moveToElement(desktop_user_icon).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_user_icon_companyManagement));
 		desktop_user_icon_companyManagement.click();
-		switchToPage(2);
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 
 		List<WebElement> elements = driver.findElements(By.className("member-row"));
@@ -265,7 +265,7 @@ public class testCompanyManagement extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void addCollaborators_ManagerAndCreater() throws InterruptedException {
-		login_old("panpan@qq.com", "123123");
+		login("panpan@qq.com", "123123");
 		company_Management.click();
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
@@ -277,6 +277,6 @@ public class testCompanyManagement extends TestInit {
 		message_ok.click();
 
 		logout();
-		login_old("amei@qq.com", "123123");
+		login("amei@qq.com", "123123");
 	}
 }
