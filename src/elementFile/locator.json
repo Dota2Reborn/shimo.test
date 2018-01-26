@@ -158,6 +158,18 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='notification-allread']",
 				"note": "桌面通知铃铛-标记全部已读"
+			},
+			{
+				"elementName": "desktop_user_icon",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='header']//div//div[3]",
+				"note": "桌面-右上角头像"
+			},
+			{
+				"elementName": "desktop_user_icon_companyManagement",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='usermenu-container']//ul//li[6]",
+				"note": "桌面-右上角头像-我的企业"
 			}
 		]
 	},
@@ -589,7 +601,7 @@
 			{
 				"elementName": "company_Management",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-list-tabs']//li[@class='list-tab enterprise']",
+				"locator": "//div[@id='left-sidebar']//div//a[1]",
 				"note": "桌面-企业管理入口"
 			},
 			{
@@ -723,29 +735,6 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='modal-content']//div[4]",
 				"note": "企业设置-谁能添加外部协作者-仅企业创建者和管理员，以及文件所有者"
-			}
-		]
-	},
-	{
-		"note": "旧桌面",
-		"pageName": "desktop_old",
-		"elements": [
-			{
-				"elementName": "new",
-				"locateUsing": "className",
-				"locator": "add-entry-btn",
-				"note": "桌面-新建"
-			},
-			{
-				"elementName": "desktop_user_icon",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='avatar config-avatar']//div[@class='img-wrap ']",
-				"note": "桌面-右上角头像"
-			},
-			{
-				"elementName": "desktop_user_icon_companyManagement",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='header-menu-items']//a[2]"
 			}
 		]
 	},

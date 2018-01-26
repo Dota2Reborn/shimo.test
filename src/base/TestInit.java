@@ -97,24 +97,6 @@ public class TestInit {
 		login_submit.click();
 	}
 
-	/**
-	 * 登录（旧桌面）
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-11-21
-	 *
-	 */
-	public void login_old(String user, String pwd) {
-		String className = new Exception().getStackTrace()[1].getMethodName();
-		printLog(className, user);
-
-		driver.navigate().to(test_url + "login");
-		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
-		userEmail.sendKeys(user);
-		userPwd.sendKeys(pwd);
-		login_submit.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_old_new));
-	}
 
 	/**
 	 * 登出
@@ -446,12 +428,9 @@ public class TestInit {
 	@SearchWith(pageName = "companyManagement", elementName = "addCollaborators_3")
 	public WebElement addCollaborators_3;
 
-	// 旧桌面
-	@SearchWith(pageName = "desktop_old", elementName = "new")
-	public WebElement desktop_old_new;
-	@SearchWith(pageName = "desktop_old", elementName = "desktop_user_icon")
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon")
 	public WebElement desktop_user_icon;
-	@SearchWith(pageName = "desktop_old", elementName = "desktop_user_icon_companyManagement")
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_companyManagement")
 	public WebElement desktop_user_icon_companyManagement;
 
 }
