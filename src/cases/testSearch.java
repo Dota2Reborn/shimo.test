@@ -1,6 +1,6 @@
 package cases;
 
-import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;

@@ -24,7 +24,8 @@ public class testDashboard extends TestInit {
 	@Test(enabled = true)
 	public void dashboard_update() throws InterruptedException {
 		login("autoTest06@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		desktop1_1.click();
@@ -54,7 +55,8 @@ public class testDashboard extends TestInit {
 	@Test(enabled = true)
 	public void dashboard_used() throws InterruptedException {
 		login("autoTest06@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		desktop1_1.click();
@@ -120,7 +122,8 @@ public class testDashboard extends TestInit {
 	public void dashboard_share() throws InterruptedException {
 		login("autoTest06@shimo.im", "123123");
 
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {
@@ -212,6 +215,7 @@ public class testDashboard extends TestInit {
 
 		action.contextClick(dashboard_update_name).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_setting_doc_10));
+		Thread.sleep(100);
 		dashboard_setting_doc_10.click();
 
 		action.contextClick(dashboard_update_name).perform();
@@ -219,6 +223,7 @@ public class testDashboard extends TestInit {
 		Thread.sleep(500);
 		dashboard_setting_doc_8.click();
 
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String fileName = desktop1_1.getText();
 
 		action.contextClick(desktop1_1).perform();

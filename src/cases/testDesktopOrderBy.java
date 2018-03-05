@@ -19,7 +19,8 @@ public class testDesktopOrderBy extends TestInit{
 	public void order_setting_byUpdate() throws InterruptedException {
 		login("autoTest02@shimo.im", "123123");
 
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("列表")) {
@@ -54,7 +55,8 @@ public class testDesktopOrderBy extends TestInit{
 	public void order_setting_byCreate() throws InterruptedException {
 		login("autoTest02@shimo.im", "123123");
 
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("列表")) {
@@ -89,7 +91,8 @@ public class testDesktopOrderBy extends TestInit{
 	public void order_setting_byFileName() throws InterruptedException {
 		login("autoTest02@shimo.im", "123123");
 
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("列表")) {
@@ -125,7 +128,8 @@ public class testDesktopOrderBy extends TestInit{
 	public void order_setting_byOwner() throws InterruptedException {
 		login("autoTest02@shimo.im", "123123");
 
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("列表")) {
@@ -160,7 +164,8 @@ public class testDesktopOrderBy extends TestInit{
 	public void order_setting_byFolderUP() throws InterruptedException {
 		login("autoTest02@shimo.im", "123123");
 
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("列表")) {

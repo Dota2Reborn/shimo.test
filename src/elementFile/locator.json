@@ -434,7 +434,7 @@
 			{
 				"elementName": "desktop_moveFolder_button",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div//div//button",
+				"locator": "//div[@class='sm-modal-body']//div[2]//div//button",
 				"note": "移动到测试文件夹"
 			}
 		]

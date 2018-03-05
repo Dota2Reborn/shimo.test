@@ -130,6 +130,27 @@ public class TestInit {
 		driver.navigate().to(test_url + "logout");
 		action.sendKeys(Keys.ESCAPE);
 	}
+	
+	/**
+	 * 点击切换到我的桌面
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
+	public void clickDesktop() {
+		desktop.click();
+		String msg = desktop_order.getText();
+		if (msg.equals("更新时间")) {
+			desktop_order.click();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+			desktop_orderByFolderUP.click();
+
+			desktop_order.click();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+			desktop_orderByDefault.click();
+		}
+	}
 
 	/**
 	 * 页签切换

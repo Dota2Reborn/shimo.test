@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
@@ -42,7 +43,8 @@ public class baseFunc {
 
 		}
 
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+//		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		ChromeOptions capabilities = new ChromeOptions();
 		capabilities.setCapability("marionette", true);
 		driver = new ChromeDriver(capabilities);
 		driver.manage().window().setSize(new Dimension(1600, 1000));

@@ -31,7 +31,8 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
 		desktop_new.click();
@@ -68,7 +69,8 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
@@ -107,7 +109,8 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
@@ -153,7 +156,8 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
 		desktop_show_type.click();
 
@@ -182,7 +186,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_1() {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		action.contextClick(desktop1_1).perform();
@@ -204,7 +209,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_2() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		action.contextClick(desktop1_1).perform();
@@ -241,7 +247,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_3() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		String doc_name = desktop1_1.getText();
@@ -269,7 +276,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_6() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		String msg = desktop1_1.getText();
@@ -297,6 +305,7 @@ public class testDesktop extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_back_button));
 		desktop_moveFolder_back_button.click();
+		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_button));
 		desktop_moveFolder_button.click();
 
@@ -321,7 +330,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_8() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
 		desktop1_1_folder.click();
@@ -355,7 +365,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_9() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		String msg = desktop1_1.getText();
@@ -386,7 +397,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_folder_setting_1() {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
 		action.contextClick(desktop1_1_folder).perform();
@@ -408,7 +420,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_folder_setting_2() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
 		action.contextClick(desktop1_1_folder).perform();
@@ -421,8 +434,9 @@ public class testDesktop extends TestInit {
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
 		}
 
+		Thread.sleep(100);
 		desktop_setting_doc_2.click();
-		Thread.sleep(500);
+		Thread.sleep(100);
 		String msg = desktop_shortcut_1.getText();
 		String doc_name = desktop1_1_folder.getText();
 
@@ -444,7 +458,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_folder_setting_3() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
 		String doc_name = desktop1_1_folder.getText();
@@ -475,7 +490,8 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		desktop_new.click();
@@ -537,7 +553,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_import_doc() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		WebElement uploadButton = desktop_import;
@@ -576,7 +593,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_import_docx() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		WebElement uploadButton = desktop_import;
@@ -615,7 +633,8 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_import_sheet() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		WebElement uploadButton = desktop_import;
