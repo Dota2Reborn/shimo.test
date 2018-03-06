@@ -644,6 +644,7 @@ public class testCompanyManagement extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_banUser_ok));
 		xpath_banUser_ok.click();
 //		Thread.sleep(3000);
+		
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_userTab_3));
 		xpath_userTab_3.click();
 
