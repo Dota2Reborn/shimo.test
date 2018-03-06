@@ -136,6 +136,12 @@
 				"note": "桌面通知铃铛-通知列表中第一个"
 			},
 			{
+				"elementName": "dashboard_notice_list_1_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='notification-item'][1]//div[3]//button",
+				"note": "桌面通知铃铛-通知列表中第一个-按钮"
+			},
+			{
 				"elementName": "dashboard_notice_list_1_time",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='notification-item'][1]//div[2]",
@@ -560,7 +566,7 @@
 			{
 				"elementName": "b_addCollaborator_1_add",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[3]//div//div[1]//div//div",
+				"locator": "//div[@class='sm-modal-body']//div[3]//div//div[1]//div//div//a",
 				"note": "搜索显示被添加协作者列表第一个添加按钮"
 			}
 		]
@@ -766,25 +772,54 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='modal-content']//div[4]",
 				"note": "企业设置-谁能添加外部协作者-仅企业创建者和管理员，以及文件所有者"
-			}
-		]
-	},
-	{
-		"pageName": "------------------------------------------------------------------------------------------",
-		"test":"123123123123"
-	},
-	{
-		"pageName": "indexPage",
-		"elements": [
-			{
-				"elementName": "inputSearch",
-				"locateUsing": "id",
-				"locator": "kw"
 			},
 			{
-				"elementName": "buttonSearch",
-				"locateUsing": "id",
-				"locator": "su"
+				"elementName": "transferCompany",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='row creator-only transfer-team']//span",
+				"note": "企业设置-移交企业"
+			},
+			{
+				"elementName": "transferCompany_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='btn btn-error']",
+				"note": "企业设置-移交企业-移交企业确认按钮"
+			},
+			{
+				"elementName": "memberSearch",
+				"locateUsing": "xpath",
+				"locator": "//input[@class='search-input standard']",
+				"note": "企业设置-成员列表-搜索"
+			},
+			{
+				"elementName": "xpath_banUser_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='shimo-modal-content']//div//div[2]",
+				"note": "企业设置-成员列表-移除成员-禁用"
+			},
+			{
+				"elementName": "xpath_banUser_ok",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='btn btn-ok']",
+				"note": "企业设置-成员列表-移除成员-禁用-确认"
+			},
+			{
+				"elementName": "xpath_userTab_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='member-filter']//a[1]",
+				"note": "企业设置-成员列表"
+			},
+			{
+				"elementName": "xpath_userTab_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='member-filter']//a[3]",
+				"note": "企业设置-禁用成员列表"
+			},
+			{
+				"elementName": "button_exitCompany",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings member']//div[8]//a",
+				"note": "企业设置-成员退出企业"
 			}
 		]
 	},
@@ -819,248 +854,7 @@
 		]
 	},
 	{
-		"pageName": "memberManagement",
-		"elements": [
-			{
-				"elementName": "addMember",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='add-btn']"
-			},
-			{
-				"elementName": "message_ok",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-ok']"
-			},
-			{
-				"elementName": "address_cppy",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='invitation-panel-foot']//button"
-			}
-		]
-	},
-	{
-		"pageName": "qiYeGuanLi",
-		"elements": [
-			{
-				"elementName": "xpath_QYGL",
-				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-list-tabs']//li[@class='list-tab enterprise']"
-			},
-			{
-				"elementName": "xpath_qiYeName",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[2]//a"
-			},
-			{
-				"elementName": "xpath_qiYeName_input",
-				"locateUsing": "xpath",
-				"locator": "//input[@class='sm-form-control ']"
-			},
-			{
-				"elementName": "xpath_qiYeName_ok",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-ok']"
-			},
-			{
-				"elementName": "xpath_qiYeName_name",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[2]//div[@class='desc']"
-			},
-			{
-				"elementName": "xpath_qiYeYaoQing",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[3]//a"
-			},
-			{
-				"elementName": "xpath_qiYeYaoQing_3",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[3]"
-			},
-			{
-				"elementName": "xpath_qiYeYaoQing_2",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[2]"
-			},
-			{
-				"elementName": "xpath_qiYeYaoQing_1",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[1]"
-			},
-			{
-				"elementName": "xpath_qiYeYaoQing_OK",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-ok']"
-			},
-			{
-				"elementName": "xpath_setAdmin",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[5]//a"
-			},
-			{
-				"elementName": "xpath_setAdmin_OK",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-ok']"
-			},
-			{
-				"elementName": "xpath_setAdmin_1",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[1]"
-			},
-			{
-				"elementName": "xpath_setAdmin_2",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[2]"
-			},
-			{
-				"elementName": "xpath_addCollaborators",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[4]//a"
-			},
-			{
-				"elementName": "xpath_addCollaborators_1",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[2]"
-			},
-			{
-				"elementName": "xpath_addCollaborators_2",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[3]"
-			},
-			{
-				"elementName": "xpath_addCollaborators_3",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[4]"
-			},
-			{
-				"elementName": "xpath_addCollaborators_OK",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-ok']"
-			},
-			{
-				"elementName": "xpath_transferCompany",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[7]//span"
-			},
-			{
-				"elementName": "xpath_transferCompanyTo",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='ui-list']//div[1]"
-			},
-			{
-				"elementName": "xpath_transferCompanyTo_ok",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-error']"
-			},
-			{
-				"elementName": "xpath_search",
-				"locateUsing": "xpath",
-				"locator": "//input[@class='search-input standard']"
-			},
-			{
-				"elementName": "xpath_banUser_1",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='shimo-modal-content']//div//div[1]"
-			},
-			{
-				"elementName": "xpath_banUser_2",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='shimo-modal-content']//div//div[2]"
-			},
-			{
-				"elementName": "xpath_banUser_ok",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-ok']"
-			},
-			{
-				"elementName": "xpath_userTab_1",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='member-filter']//a[1]"
-			},
-			{
-				"elementName": "xpath_userTab_2",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='member-filter']//a[2]"
-			},
-			{
-				"elementName": "xpath_userTab_3",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='member-filter']//a[3]"
-			}
-		]
-	},
-	{
-		"pageName": "desktop",
-		"elements": [
-			{
-				"elementName": "xpath_new_form",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='menu-wrap']//div[@class='menu-wrap-inner']//div[2]"
-			},
-			{
-				"elementName": "xpath_new",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='menu-wrap']//div[@class='menu-wrap-inner']//div[1]"
-			},
-			{
-				"elementName": "xpath_input",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='span-input-wrap']//input"
-			},
-			{
-				"elementName": "xpath_assert",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='list-outer-container ']//ul//li[1]//div//a//div//div[2]"
-			},
-			{
-				"elementName": "xpath_folder",
-				"locateUsing": "className",
-				"locator": "folder-style"
-			},
-			{
-				"elementName": "xpath_user_icon",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='avatar config-avatar']//div[@class='img-wrap ']"
-			},
-			{
-				"elementName": "xpath_user_msg",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='message-popover-trigger']//div[@class='icon icon-message']"
-			},
-			{
-				"elementName": "xpath_user_icon_qiYeGuanLi",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='header-menu-items']//a[2]"
-			},
-			{
-				"elementName": "xpath_user_icon_zhangHaoSheZhi",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='header-menu-items']//a[1]"
-			},
-			{
-				"elementName": "xpath_user_icon_logout",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='header-menu-items']//a[4]"
-			},
-			{
-				"elementName": "xpath_add_Collaborators",
-				"locateUsing": "xpath",
-				"locator": "//button[@class='btn btn-ok']"
-			},
-			{
-				"elementName": "xpath_collaborators_OK",
-				"locateUsing": "xpath",
-				"locator": "//button[@class='btn btn btn-ok']"
-			},
-			{
-				"elementName": "xpath_collaborators_edit",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-dropdown-button']"
-			},
-			{
-				"elementName": "xpath_collaborators_edit_delete",
-				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical roles-menu sm-dropdown-menu-root']//li[5]"
-			}
-		]
+		"pageName": "------------------------------------------------------------------------------------------",
+		"test":"123123123123"
 	}
 ]

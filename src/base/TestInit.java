@@ -57,7 +57,7 @@ public class TestInit {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-		driver.quit();
+//		driver.quit();
 	}
 
 	/**
@@ -377,6 +377,8 @@ public class TestInit {
 	public WebElement dashboard_notice;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1")
 	public WebElement dashboard_notice_list_1;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1_button")
+	public WebElement dashboard_notice_list_1_button;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1_time")
 	public WebElement dashboard_notice_list_1_time;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_unread")
@@ -469,6 +471,24 @@ public class TestInit {
 	public WebElement addCollaborators_2;
 	@SearchWith(pageName = "companyManagement", elementName = "addCollaborators_3")
 	public WebElement addCollaborators_3;
+	@SearchWith(pageName = "companyManagement", elementName = "transferCompany")
+	public WebElement transferCompany;
+	@SearchWith(pageName = "companyManagement", elementName = "transferCompany_button")
+	public WebElement transferCompany_button;
+	@SearchWith(pageName = "companyManagement", elementName = "memberSearch")
+	public WebElement memberSearch;
+	@SearchWith(pageName = "companyManagement", elementName = "xpath_banUser_2")
+	public WebElement xpath_banUser_2;
+	@SearchWith(pageName = "companyManagement", elementName = "xpath_banUser_ok")
+	public WebElement xpath_banUser_ok;
+	@SearchWith(pageName = "companyManagement", elementName = "xpath_userTab_1")
+	public WebElement xpath_userTab_1;
+	@SearchWith(pageName = "companyManagement", elementName = "xpath_userTab_3")
+	public WebElement xpath_userTab_3;
+	@SearchWith(pageName = "companyManagement", elementName = "button_exitCompany")
+	public WebElement button_exitCompany;
+	
+	
 
 	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon")
 	public WebElement desktop_user_icon;
