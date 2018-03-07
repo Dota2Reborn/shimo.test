@@ -72,25 +72,25 @@
 			{
 				"elementName": "dashboard_setting_doc_8",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[8]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
 				"note": "工作台-定位到所在文件夹"
 			},
 			{
 				"elementName": "dashboard_setting_doc_12",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[12]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[13]",
 				"note": "我创建的-文件删除按钮"
 			},
 			{
 				"elementName": "dashboard_setting_doc_10",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[10]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[11]",
 				"note": "我创建的-文件创建副本"
 			},
 			{
 				"elementName": "dashboard_share_setting_doc_10",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[10]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[11]",
 				"note": "共享给我的-文件删除按钮"
 			},
 			{
@@ -319,50 +319,50 @@
 			{
 				"elementName": "desktop_setting_doc_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[2]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[3]",
 				"note": "文档表格添加快捷方式"
 			},
 			{
 				"elementName": "desktop_setting_doc_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[3]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[4]",
 				"note": "文档表格添加收藏"
 			},
 			{
 				"elementName": "desktop_setting_doc_5",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[5]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[6]",
 				"note": "文档表格添加协作者"
 			},
 			{
 				"elementName": "desktop_setting_doc_6",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[6]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[7]",
 				"note": "文档表格移动"
 			},
 			{
 				"elementName": "desktop_setting_doc_8",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[8]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
 				"note": "文档表格重命名"
 			},
 			{
 				"elementName": "desktop_setting_doc_9",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[10]",
 				"note": "文档表格创建副本"
 			},
 			{
 				"elementName": "desktop_setting_doc_11",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[11]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[12]",
 				"note": "文档表格删除按钮"
 			},
 			
 			{
 				"elementName": "desktop_setting_folder_9",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[10]",
 				"note": "文件夹删除按钮"
 			},
 			{
@@ -614,7 +614,7 @@
 			{
 				"elementName": "doc_discuss",
 				"locateUsing": "xpath",
-				"locator": "//button[@class='ql-comment']",
+				"locator": "//div[@class='doc-comment-addbtn']",
 				"note": "文档编辑页面中评论按钮"
 			},
 			{
