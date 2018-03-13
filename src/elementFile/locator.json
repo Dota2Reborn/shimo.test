@@ -574,7 +574,7 @@
 				"elementName": "Can_edit_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='collab-control-editable']",
-				"note": "可以编辑王J程"
+				"note": "可以编辑王程"
 			},
 			{
 				"elementName": "can_only_comment_2",
