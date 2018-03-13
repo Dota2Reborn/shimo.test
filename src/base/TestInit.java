@@ -434,7 +434,7 @@ public class TestInit {
 	public WebElement can_only_comment_2;
 	@SearchWith(pageName = "addCollaborator", elementName = "can_only_read_3")
 	public WebElement can_only_read_3;
-	@SearchWith(pageName = "doc", elementName = "Shut_down_sm_modal_close_x")
+	@SearchWith(pageName = "addCollaborator", elementName = "Shut_down_sm_modal_close_x")
 	public WebElement Shut_down_sm_modal_close_x;
 
 	// 企业管理
