@@ -495,7 +495,6 @@ public class TestInit {
 	@SearchWith(pageName = "companyManagement", elementName = "button_exitCompany")
 	public WebElement button_exitCompany;
 	
-	
 
 	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon")
 	public WebElement desktop_user_icon;
