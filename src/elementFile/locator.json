@@ -841,6 +841,12 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='settings member']//div[8]//a",
 				"note": "企业设置-成员退出企业"
+			},
+			{
+				"elementName": "addmember_copyLink_open",
+				"locateUsing": "className",
+				"locator": "close-invitation-link",
+				"note": "企业设置-打开或者关闭邀请链接"
 			}
 		]
 	},

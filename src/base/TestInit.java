@@ -494,6 +494,8 @@ public class TestInit {
 	public WebElement xpath_userTab_3;
 	@SearchWith(pageName = "companyManagement", elementName = "button_exitCompany")
 	public WebElement button_exitCompany;
+	@SearchWith(pageName = "companyManagement", elementName = "addmember_copyLink_open")
+	public WebElement addmember_copyLink_open;
 	
 
 	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon")
