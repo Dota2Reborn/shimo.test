@@ -426,7 +426,14 @@ public class TestInit {
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_add")
 	public WebElement b_addCollaborator_1_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_ok")
+	//王继程3/12
 	public WebElement b_addCollaborator_ok;
+	@SearchWith(pageName = "addCollaborator", elementName = "Can_edit_1")
+	public WebElement Can_edit_1;
+	@SearchWith(pageName = "addCollaborator", elementName = "can_only_comment_2")
+	public WebElement can_only_comment_2;
+	@SearchWith(pageName = "addCollaborator", elementName = "can_only_read_3")
+	public WebElement can_only_read_3;
 
 	// 企业管理
 	@SearchWith(pageName = "companyManagement", elementName = "company_Management")
