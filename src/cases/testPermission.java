@@ -23,18 +23,17 @@ public class testPermission extends TestInit {
 	public void Add_to() throws InterruptedException {
 		login("testing_1@test.im","123123");
 		desktop.click();
-		wait.until(ExpectedConditions.elementToBeClickable(addCollaborator_folder_add));
-//		addCollaborator_folder_add.click();
-//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-//		String msg = desktop_show_type.getText();
-//		if (msg.equals("平铺")) {
-//			desktop_show_type.click();
-//		}
-//
-//		desktop1_1_folder.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		String msg = desktop_show_type.getText();
+		if (msg.equals("平铺")) {
+			desktop_show_type.click();
+		}
+		action.contextClick(desktop1_1).perform();
+		desktop_setting_doc_5.click();
 		Add(0,"testing_2@test.im");
-		b_addCollaborator_ok.click();
 		Modify(2,2);
+		Shut_down_sm_modal_close_x.click();
 		
 		
 		
@@ -66,7 +65,7 @@ public class testPermission extends TestInit {
 
 	//选择权限
 	public void Modify(int Permissions,int Several) throws InterruptedException {
-		
+		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		if(Permissions==1) {//可写
 			driver.findElement(By.xpath("//div[@class='sm-modal-body']//div[3]//div[1]//div["+Several+"]//div[1]//div[1]")).click();
 			wait.until(ExpectedConditions.elementToBeClickable(Can_edit_1));
