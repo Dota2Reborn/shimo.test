@@ -114,6 +114,7 @@ public class dashboard_used  extends TestInit {
     	    String text8 = driver.findElement(By.xpath("//div[@class='category-card-container']//div//div[2]//div//div//ul//li[8]")).getText();
     	    assertEquals(text8, "重命名");
     	    
+    	    
     		
         	
         	
