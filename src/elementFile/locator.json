@@ -563,12 +563,33 @@
 				"locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[2]//div//div",
 				"note": "企业协作者列表第二个添加按钮"
 			},
+			
 			{
 				"elementName": "b_addCollaborator_1_add",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[3]//div//div[1]//div//div//a",
 				"note": "搜索显示被添加协作者列表第一个添加按钮"
+			},
+			{
+				"elementName": "Can_edit_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='collab-control-editable']",
+				"note": "可以编辑王继程"
+			},
+			{
+				"elementName": "can_only_comment_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='collab-control-commentable']",
+				"note": "只能评论"
+			},
+			{
+				"elementName": "can_only_read_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='collab-control-readonly']",
+				"note": "只能阅读"
 			}
+			
+			
 		]
 	},
 	{
