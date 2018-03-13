@@ -57,7 +57,7 @@ public class TestInit {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-//		driver.quit();
+		// driver.quit();
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class TestInit {
 		driver.navigate().to(test_url + "logout");
 		action.sendKeys(Keys.ESCAPE);
 	}
-	
+
 	/**
 	 * 点击切换到我的桌面
 	 * 
@@ -227,23 +227,23 @@ public class TestInit {
 	}
 
 	// homePage
-	@SearchWith(pageName = "homePage", elementName = "userEmail")
+	@SearchWith(pageName = "homePage", elementName = "userEmail", noteName = "用户名")
 	public WebElement userEmail;
-	@SearchWith(pageName = "homePage", elementName = "userPwd")
+	@SearchWith(pageName = "homePage", elementName = "userPwd", noteName = "密码")
 	public WebElement userPwd;
-	@SearchWith(pageName = "homePage", elementName = "login_submit")
+	@SearchWith(pageName = "homePage", elementName = "login_submit", noteName = "登录按钮")
 	public WebElement login_submit;
 
 	// desktop
-	@SearchWith(pageName = "desktop", elementName = "desktop_new")
+	@SearchWith(pageName = "desktop", elementName = "desktop_new", noteName = "新建文件按钮")
 	public WebElement desktop_new;
-	@SearchWith(pageName = "desktop", elementName = "desktop_show_type")
+	@SearchWith(pageName = "desktop", elementName = "desktop_show_type", noteName = "列表平铺模式切换")
 	public WebElement desktop_show_type;
-	@SearchWith(pageName = "desktop", elementName = "desktop")
+	@SearchWith(pageName = "desktop", elementName = "desktop", noteName = "切换到我的桌面")
 	public WebElement desktop;
-	@SearchWith(pageName = "desktop", elementName = "desktop1_1")
+	@SearchWith(pageName = "desktop", elementName = "desktop1_1", noteName = "平铺模式第一行第一个文件")
 	public WebElement desktop1_1;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newDoc")
+	@SearchWith(pageName = "desktop", elementName = "desktop_newDoc", noteName = "新建文档")
 	public WebElement desktop_newDoc;
 	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_11")
 	public WebElement desktop_setting_doc_11;
@@ -426,7 +426,7 @@ public class TestInit {
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_add")
 	public WebElement b_addCollaborator_1_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_ok")
-	//王继程3/12
+	// 王继程3/12
 	public WebElement b_addCollaborator_ok;
 	@SearchWith(pageName = "addCollaborator", elementName = "Can_edit_1")
 	public WebElement Can_edit_1;
@@ -452,7 +452,7 @@ public class TestInit {
 	public WebElement invite_member_2;
 	@SearchWith(pageName = "companyManagement", elementName = "invite_member_3")
 	public WebElement invite_member_3;
-	@SearchWith(pageName = "companyManagement", elementName = "addMember")
+	@SearchWith(pageName = "companyManagement", elementName = "addMember", noteName = "成员管理-添加成员按钮")
 	public WebElement addMember;
 	@SearchWith(pageName = "companyManagement", elementName = "address_cppy")
 	public WebElement address_cppy;
@@ -498,7 +498,6 @@ public class TestInit {
 	public WebElement button_exitCompany;
 	@SearchWith(pageName = "companyManagement", elementName = "addmember_copyLink_open")
 	public WebElement addmember_copyLink_open;
-	
 
 	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon")
 	public WebElement desktop_user_icon;
