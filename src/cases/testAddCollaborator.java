@@ -4,6 +4,10 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertNotEquals;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -33,7 +37,7 @@ public class testAddCollaborator extends TestInit {
 
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_5.click();
-
+		
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
 		Boolean exist = button_addCollaborator.isEnabled();
 
