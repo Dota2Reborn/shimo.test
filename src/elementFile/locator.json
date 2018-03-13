@@ -587,6 +587,12 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='collab-control-readonly']",
 				"note": "只能阅读"
+			},
+			{
+				"elementName": "Shut_down_sm_modal_close_x",
+				"locateUsing": "className",
+				"locator": "sm-modal-close-x",
+				"note": "关闭添加协作窗口"
 			}
 			
 			
