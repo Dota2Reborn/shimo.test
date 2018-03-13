@@ -723,4 +723,22 @@ public class testCompanyManagement extends TestInit {
 		
 		assertTrue(R1 && R2);
 	}
+	
+	/**
+	 * 企业管理-开启/关闭企业邀请链接
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-13
+	 *
+	 */
+	@Test(enabled = true)
+	public void copyLink() throws InterruptedException {
+		login("panpan@qq.com", "123123");
+		company_Management.click();
+		switchToPage(1);
+		wait.until(ExpectedConditions.elementToBeClickable(addMember));
+		addMember.click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("close-invitation-link")));
+		Boolean R1 = driver.findElement(By.className("close-invitation-link")).getText().equals("开启链接");
+	}
 }

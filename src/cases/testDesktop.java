@@ -230,6 +230,7 @@ public class testDesktop extends TestInit {
 		String doc_name = desktop1_1.getText();
 
 		action.contextClick(desktop1_1).perform();
+		Thread.sleep(200);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
 		desktop_setting_doc_2.click();
 
@@ -434,7 +435,7 @@ public class testDesktop extends TestInit {
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
 		}
 
-		Thread.sleep(100);
+		Thread.sleep(200);
 		desktop_setting_doc_2.click();
 		Thread.sleep(100);
 		String msg = desktop_shortcut_1.getText();
@@ -442,6 +443,7 @@ public class testDesktop extends TestInit {
 
 		action.contextClick(desktop1_1_folder).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
+		Thread.sleep(200);
 		desktop_setting_doc_2.click();
 
 		assertEquals(doc_name, msg);
