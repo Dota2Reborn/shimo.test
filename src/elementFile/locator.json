@@ -90,7 +90,7 @@
 			{
 				"elementName": "dashboard_share_setting_doc_10",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[11]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[12]",
 				"note": "共享给我的-文件删除按钮"
 			},
 			{
@@ -362,7 +362,7 @@
 			{
 				"elementName": "desktop_setting_folder_9",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[10]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[11]",
 				"note": "文件夹删除按钮"
 			},
 			{
