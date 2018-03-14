@@ -25,20 +25,29 @@ public class testPermission extends TestInit {
 		desktop.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-		String msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
+		Tile();
+		//右键第一个文件
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_5.click();
 		Add(0,"testing_2@test.im");
 		Modify(2,2);
 		Shut_down_sm_modal_close_x.click();
-		
-		
+		logout();
+		login("testing_2@test.im","123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		Tile();
 		
 	}
-	
+	//验证是否平铺
+	public void Tile() throws InterruptedException {
+		
+		String msg = desktop_show_type.getText();
+		if (msg.equals("平铺")) {
+			desktop_show_type.click();
+		}
+		
+	}
 
 	//添加协作
 	public void Add(int Judgment,String Emil_1) throws InterruptedException {
