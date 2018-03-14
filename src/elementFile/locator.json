@@ -598,7 +598,7 @@
 		]
 	},
 	{
-		"note": "文档，表格",
+		"note": "文档，表格，文件夹",
 		"pageName": "doc",
 		"elements": [
 			{
@@ -654,7 +654,20 @@
 				"locateUsing": "xpath",
 				"locator": "//a[@class='doc-comment-btn doc-comment-send btn btn-ok']",
 				"note": "文档编辑页面中评论输入框-确定按钮"
+			},
+			{
+				"elementName": "ql_comment_Comments",
+				"locateUsing": "className",
+				"locator": "ql-comment",
+				"note": "工具栏中发起评论按钮"
+			},
+			{
+				"elementName": "Folder_settings",
+				"locateUsing": "className",
+				"locator": "settings",
+				"note": "文件夹中上方设置按钮"
 			}
+			
 		]
 	},
 	{
