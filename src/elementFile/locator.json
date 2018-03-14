@@ -608,6 +608,18 @@
 				"note": "后退"
 			},
 			{
+				"elementName": "quick_access_point",
+				"locateUsing": "className",
+				"locator": "quick-access-point",
+				"note": "收索&快速打开"
+			},
+			{
+				"elementName": "Back_to_Desktop",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='qa-ancestor']//div[2]//a[1]",
+				"note": "一级文件夹下的文档或者表格中，下箭头直接返回桌面"
+			},
+			{
 				"elementName": "doc_edit",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='ql-container']//div[1]",
@@ -666,6 +678,12 @@
 				"locateUsing": "className",
 				"locator": "settings",
 				"note": "文件夹中上方设置按钮"
+			},
+			{
+				"elementName": "Exit_share_OK",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-footer']",
+				"note": "管理员删除文档-选择退出共享"
 			}
 			
 		]

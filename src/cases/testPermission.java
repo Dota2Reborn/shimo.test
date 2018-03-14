@@ -1,12 +1,7 @@
 package cases;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -37,6 +32,20 @@ public class testPermission extends TestInit {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		Tile();
+		desktop1_1_folder.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		desktop1_1.click();
+		wait.until(ExpectedConditions.elementToBeClickable(ql_comment_Comments));
+//		String t = desktop_new.getAttribute("disabled");
+//
+//		assertEquals(t, "true");
+		
+		b_back.click();
+		wait.until(ExpectedConditions.elementToBeClickable(Folder_settings));
+		Folder_settings.click();
+		
+		
+		
 		
 	}
 	//验证是否平铺

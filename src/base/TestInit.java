@@ -315,6 +315,10 @@ public class TestInit {
 	// doc
 	@SearchWith(pageName = "doc", elementName = "b_back")
 	public WebElement b_back;
+	@SearchWith(pageName = "doc", elementName = "quick_access_point")
+	public WebElement quick_access_point;
+	@SearchWith(pageName = "doc", elementName = "Back_to_Desktop")
+	public WebElement Back_to_Desktop;
 	@SearchWith(pageName = "doc", elementName = "doc_edit")
 	public WebElement doc_edit;
 	@SearchWith(pageName = "doc", elementName = "doc_notice_user")
@@ -335,6 +339,9 @@ public class TestInit {
 	public WebElement ql_comment_Comments;
 	@SearchWith(pageName = "doc", elementName = "Folder_settings")
 	public WebElement Folder_settings;
+	@SearchWith(pageName = "doc", elementName = "Exit_share_OK")
+	public WebElement Exit_share_OK;
+	
 	
 	// dashboard
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_time")
