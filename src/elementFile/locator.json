@@ -260,7 +260,7 @@
 				"elementName": "desktop_newFolder_name_ok",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-footer']//button[1]",
-				"note": "文件夹命名确定"
+				"note": "文件夹命名确定,退出共享确认"
 			},
 			{
 				"elementName": "desktop_newFolder_name_cancel",

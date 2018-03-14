@@ -1,6 +1,8 @@
 package cases;
 
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -8,14 +10,14 @@ import org.testng.annotations.Test;
 import base.TestInit;
 public class testPermission extends TestInit {
 	/**
-	 * 文件夹添加协作
+	 * 文件夹添加只评论协作者
 	 * 
 	 * @author 王继程
 	 * @Time 2018-03-06
 	 *
 	 */
 	@Test(enabled = true)
-	public void Add_to() throws InterruptedException {
+	public void Add_to1() throws InterruptedException {
 		login("testing_1@test.im","123123");
 		desktop.click();
 
@@ -36,17 +38,58 @@ public class testPermission extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		desktop1_1.click();
 		wait.until(ExpectedConditions.elementToBeClickable(ql_comment_Comments));
-//		String t = desktop_new.getAttribute("disabled");
-//
-//		assertEquals(t, "true");
+
+		driver.findElement(By.xpath("//div[@id='ql-container']//div[1]//p")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(doc_discuss));
+		ql_comment_Comments.click();
+		wait.until(ExpectedConditions.elementToBeClickable(doc_discuss_input));
+		String M = doc_discuss_input.getAttribute("spellcheck");
+		assertEquals(M,"false");
+		quick_access_point.click();
+		wait.until(ExpectedConditions.elementToBeClickable(Back_to_Desktop));
+		Back_to_Desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		action.contextClick(desktop1_1).perform();
+		desktop_setting_folder_9.click();
+		wait.until(ExpectedConditions.elementToBeClickable(Exit_share_OK));
+		Exit_share_OK.click();
+	}
+	/**
+	 * 文件夹添加只读协作者
+	 * 
+	 * @author 王继程
+	 * @Time 2018-03-06
+	 *
+	 */
+	@Test(enabled = true)
+	public void Add_to2() throws InterruptedException {
+		login("testing_3@test.im","123123");
+		desktop.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		Tile();
+		//右键第一个文件
+		action.contextClick(desktop1_1).perform();
+		desktop_setting_doc_5.click();
+		Add(0,"testing_5@test.im");
+		Modify(3,2);
+		Shut_down_sm_modal_close_x.click();
+		logout();
+		login("testing_5@test.im","123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		Tile();
+		desktop1_1_folder.click();
 		
-		b_back.click();
-		wait.until(ExpectedConditions.elementToBeClickable(Folder_settings));
-		Folder_settings.click();
-		
-		
-		
-		
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String t = desktop_new.getAttribute("disabled");
+		assertEquals(t, "true");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		action.contextClick(desktop1_1).perform();
+		desktop_setting_folder_9.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
+		desktop_newFolder_name_ok.click();
 	}
 	//验证是否平铺
 	public void Tile() throws InterruptedException {
@@ -60,7 +103,7 @@ public class testPermission extends TestInit {
 
 	//添加协作
 	public void Add(int Judgment,String Emil_1) throws InterruptedException {
-		
+		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
 		int[] integers = {2,3,4,5,6};
 		//int[] integers = {2};
 		if(Judgment==1){
@@ -134,26 +177,7 @@ public class testPermission extends TestInit {
 //		}
 //
 //	}
-//	//选择权限
-//	public void Modify(int Permissions,int Several) throws InterruptedException {
-//		
-//		if(Permissions==1) {//可写
-//			driver.findElement(By.xpath("//div[@class='sm-modal-body']//div[3]//div[1]//div["+Several+"]//div[1]//div[1]")).click();
-//			wait.until(ExpectedConditions.elementToBeClickable(Can_edit_1));
-//			Can_edit_1.click();
-//			 
-//		}else if(Permissions==2){//只评论
-//			driver.findElement(By.xpath("//div[@class='sm-modal-body']//div[3]//div[1]//div["+Several+"]//div[1]//div[1]")).click();
-//			wait.until(ExpectedConditions.elementToBeClickable(can_only_comment_2));
-//			can_only_comment_2.click();
-//		}else if(Permissions==3){//只读
-//			driver.findElement(By.xpath("//div[@class='sm-modal-body']//div[3]//div[1]//div["+Several+"]//div[1]//div[1]")).click();
-//			wait.until(ExpectedConditions.elementToBeClickable(can_only_read_3));
-//			can_only_read_3.click();
-//		}
-//		
-//	}
-//
+
 //	//新建文件
 //	public void New(int Classification) throws InterruptedException {
 //		
