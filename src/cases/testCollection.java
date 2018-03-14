@@ -7,7 +7,7 @@ import base.TestInit;
 
 public class testCollection extends TestInit {
 	/**
-	 * 文件夹添加协作
+	 * 我的收藏
 	 * 
 	 * @author 王继程
 	 * @Time 2018-03-12
@@ -15,22 +15,11 @@ public class testCollection extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void Add_to() throws InterruptedException {
-//		login("Collection@shimo.im","123123");
-//		favorites.click();
-//		//hover文件
-//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-//		desktop1_1_folder.
-//		
-//		//点击齿轮
-//		//wait.until(ExpectedConditions.elementToBeClickable(desktop_setting));
-////		desktop_setting.click();
-//		
-//		//新标签页打开
-//		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_1));
-//		desktop_setting_doc_1.click();
-//		
+		login("Collection@shimo.im","123123");
+		favorites.click();
+		
 		
 		
 	}
-//Desktop
+
 }
