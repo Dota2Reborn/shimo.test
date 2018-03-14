@@ -331,7 +331,11 @@ public class TestInit {
 	public WebElement doc_discuss_input;
 	@SearchWith(pageName = "doc", elementName = "doc_discuss_input_ok")
 	public WebElement doc_discuss_input_ok;
-
+	@SearchWith(pageName = "doc", elementName = "ql_comment_Comments")
+	public WebElement ql_comment_Comments;
+	@SearchWith(pageName = "doc", elementName = "Folder_settings")
+	public WebElement Folder_settings;
+	
 	// dashboard
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_time")
 	public WebElement dashboard_update_time;
