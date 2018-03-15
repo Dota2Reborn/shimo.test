@@ -435,7 +435,7 @@ public class testCompanyManagement extends TestInit {
 		input_addCollaborator.sendKeys("erdan@qq.com");
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		
+
 		Boolean R1 = b_addCollaborator_1_add.getAttribute("disabled").equalsIgnoreCase("true");
 
 		logout();
@@ -582,7 +582,7 @@ public class testCompanyManagement extends TestInit {
 		Boolean R2 = transferCompany.isDisplayed();
 		assertFalse(R1 && R2);
 	}
-	
+
 	/**
 	 * 企业管理-成员列表-搜索
 	 * 
@@ -596,13 +596,13 @@ public class testCompanyManagement extends TestInit {
 		company_Management.click();
 		switchToPage(1);
 		memberSearch.sendKeys("刘晨");
-		
+
 		Thread.sleep(500);
 		String user = driver.findElement(By.xpath("//div[@class='name']")).getText();
 
 		assertEquals(user, "刘晨");
 	}
-	
+
 	/**
 	 * 企业管理-成员列表-禁用成员
 	 * 
@@ -615,7 +615,7 @@ public class testCompanyManagement extends TestInit {
 		login("panpan@qq.com", "123123");
 		company_Management.click();
 		switchToPage(1);
-		
+
 		List<WebElement> elements = driver.findElements(By.className("email"));
 		int number = elements.size(); // 成员列表
 		String kk;
@@ -639,12 +639,12 @@ public class testCompanyManagement extends TestInit {
 		driver.findElement(By.xpath(aa)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(bb)));
 		driver.findElement(By.xpath(bb)).click();
-		
+
 		xpath_banUser_2.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_banUser_ok));
 		xpath_banUser_ok.click();
-//		Thread.sleep(3000);
-		
+		// Thread.sleep(3000);
+
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_userTab_3));
 		xpath_userTab_3.click();
 
@@ -671,7 +671,7 @@ public class testCompanyManagement extends TestInit {
 		}
 		assertTrue(result);
 	}
-	
+
 	/**
 	 * 企业管理-加入/退出企业
 	 * 
@@ -684,7 +684,7 @@ public class testCompanyManagement extends TestInit {
 		login("panpan@qq.com", "123123");
 		company_Management.click();
 		switchToPage(1);
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 		addMember.click();
 		String xpath_email = "//div[@class='tab-head-wrap']//div[2]";
@@ -702,10 +702,10 @@ public class testCompanyManagement extends TestInit {
 		String xpath_msg = "//div[@class='title']//span";
 		Thread.sleep(500);
 		Boolean R1 = driver.findElement(By.xpath(xpath_msg)).getText().equals("成功邀请 1 人");
-		
+
 		logout();
 		login("testQiYe@qq.com", "123123");
-		
+
 		action.moveToElement(dashboard_notice).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1_button));
 		// String msg = dashboard_notice_list_1_time.getText();
@@ -720,10 +720,10 @@ public class testCompanyManagement extends TestInit {
 
 		Thread.sleep(500);
 		Boolean R2 = driver.findElement(By.xpath(xpath_msg)).getText().equals("操作成功");
-		
+
 		assertTrue(R1 && R2);
 	}
-	
+
 	/**
 	 * 企业管理-开启/关闭企业邀请链接
 	 * 
@@ -738,7 +738,18 @@ public class testCompanyManagement extends TestInit {
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 		addMember.click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("close-invitation-link")));
-		Boolean R1 = driver.findElement(By.className("close-invitation-link")).getText().equals("开启链接");
+		wait.until(ExpectedConditions.elementToBeClickable(addmember_copyLink_open));
+		Boolean R1 = addmember_copyLink_open.getText().equals("开启链接");
+		// TODO
+		addmember_copyLink_open.click();
+		Thread.sleep(100);
+		if (R1.equals(true)) {
+			Boolean R2 = address_cppy.getAttribute("class").equals("sm-btn sm-btn-primary invitation-link-copy");
+			assertTrue(R2);
+		}else {
+			Boolean R2 = address_cppy.getAttribute("class").equals("sm-btn sm-btn-primary invitation-link-copy disable");
+			assertTrue(R2);
+		}
+
 	}
 }
