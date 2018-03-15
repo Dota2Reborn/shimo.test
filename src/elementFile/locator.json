@@ -684,6 +684,12 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-footer']",
 				"note": "管理员删除文档-选择退出共享"
+			},
+			{
+				"elementName": "Collection_OK",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='s-menu-btn-wrap']//div[1]//div[1]",
+				"note": "标题栏收藏按钮"
 			}
 			
 		]

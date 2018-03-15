@@ -341,6 +341,8 @@ public class TestInit {
 	public WebElement Folder_settings;
 	@SearchWith(pageName = "doc", elementName = "Exit_share_OK")
 	public WebElement Exit_share_OK;
+	@SearchWith(pageName = "doc", elementName = "Collection_OK")
+	public WebElement Collection_OK;
 	
 	
 	// dashboard
