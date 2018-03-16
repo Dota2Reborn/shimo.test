@@ -313,56 +313,56 @@
 			{
 				"elementName": "desktop_setting_doc_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[1]",
+				"locator": "//li//div[contains(text(),'在新标签页中打开')]",
 				"note": "文档表格新标签页中打开"
 			},
 			{
 				"elementName": "desktop_setting_doc_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[3]",
+				"locator": "//li//div[contains(text(),'添加到快捷方式')]",
 				"note": "文档表格添加快捷方式"
 			},
 			{
 				"elementName": "desktop_setting_doc_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[4]",
+				"locator": "//li//div[contains(text(),'收藏')]",
 				"note": "文档表格添加收藏"
 			},
 			{
 				"elementName": "desktop_setting_doc_5",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[6]",
+				"locator": "//li//div[contains(text(),'人协作')]",
 				"note": "文档表格添加协作者"
 			},
 			{
 				"elementName": "desktop_setting_doc_6",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[7]",
+				"locator": "//li//div[contains(text(),'移动')]",
 				"note": "文档表格移动"
 			},
 			{
 				"elementName": "desktop_setting_doc_8",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
+				"locator": "//li//div[contains(text(),'重命名')]",
 				"note": "文档表格重命名"
 			},
 			{
 				"elementName": "desktop_setting_doc_9",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[10]",
+				"locator": "//li//div[contains(text(),'创建副本')]",
 				"note": "文档表格创建副本"
 			},
 			{
 				"elementName": "desktop_setting_doc_11",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[12]",
+				"locator": "//li//div[contains(text(),'删除')]",
 				"note": "文档表格删除按钮"
 			},
 			
 			{
 				"elementName": "desktop_setting_folder_9",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[11]",
+				"locator": "//li//div[contains(text(),'删除')]",
 				"note": "文件夹删除按钮"
 			},
 			{
@@ -636,6 +636,12 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-dropdown-button operations inactive']",
 				"note": "文档编辑页面中右上角 点点点"
+			},
+			{
+				"elementName": "doc_menu_msg",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical operations sm-dropdown-menu-root']//li[contains(text(),'文档信息')]",
+				"note": "文档编辑页面中右上角 点点点-文档信息"
 			},
 			{
 				"elementName": "doc_menu_delete",
