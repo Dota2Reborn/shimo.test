@@ -16,7 +16,7 @@ public class testAddCollaborator extends TestInit {
 	 * 基础版用户，文件协作者为5人，不能继续添加协作者
 	 * 
 	 * @author 刘晨
-	 * @Time 2017-11-21
+	 * @Time 2017-11-22
 	 *
 	 */
 	@Test(enabled = true)
