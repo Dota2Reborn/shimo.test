@@ -4,10 +4,6 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertNotEquals;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -27,7 +23,7 @@ public class testAddCollaborator extends TestInit {
 	public void addCollaborator_1() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
 
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop_show_type.getText();
@@ -37,7 +33,7 @@ public class testAddCollaborator extends TestInit {
 
 		action.contextClick(desktop1_1).perform();
 		desktop_setting_doc_5.click();
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
 		Boolean exist = button_addCollaborator.isEnabled();
 
@@ -55,7 +51,7 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_2() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
@@ -100,7 +96,7 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_3() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
@@ -143,7 +139,7 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_4() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
@@ -189,7 +185,7 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_5() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
@@ -224,7 +220,7 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_6() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
@@ -284,7 +280,7 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_7() throws InterruptedException {
 		login("autoTest03@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
@@ -344,7 +340,7 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_8() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
@@ -408,7 +404,7 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_9() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
@@ -452,7 +448,7 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_10() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
@@ -507,7 +503,7 @@ public class testAddCollaborator extends TestInit {
 		String email = addCollaborator_1_list_userName.getText();
 		assertEquals(email, "autoTest01");
 	}
-	
+
 	/**
 	 * 非席位成员，在5个人以上协作者文件夹中不能新建
 	 * 
@@ -518,7 +514,7 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_fail() throws InterruptedException {
 		login("autoTest10@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
