@@ -84,13 +84,13 @@
 			{
 				"elementName": "dashboard_setting_doc_10",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[11]",
+				"locator": "//li//div[contains(text(),'删除')]",
 				"note": "我创建的-文件创建副本"
 			},
 			{
 				"elementName": "dashboard_share_setting_doc_10",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[12]",
+				"locator": "//li//div[contains(text(),'删除')]",
 				"note": "共享给我的-文件删除按钮"
 			},
 			{
@@ -925,6 +925,72 @@
 				"elementName": "login_submit",
 				"locateUsing": "id",
 				"locator": "bd-login-submit"
+			}
+		]
+	},
+	{
+		"note": "桌面/工作台/文档表格编辑页点点等-菜单",
+		"pageName": "menu",
+		"elements": [
+			{
+				"elementName": "menu_newPage",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'在新标签页中打开')]",
+				"note": "新标签页中打开"
+			},
+			{
+				"elementName": "menu_shortcut",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'快捷方式')]",
+				"note": "添加快捷方式"
+			},
+			{
+				"elementName": "menu_collection",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'收藏')]",
+				"note": "添加收藏"
+			},
+			{
+				"elementName": "menu_cooperation",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'协作')]",
+				"note": "添加协作者"
+			},
+			{
+				"elementName": "menu_move",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'移动')]",
+				"note": "移动"
+			},
+			{
+				"elementName": "menu_rename",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'重命名')]",
+				"note": "重命名"
+			},
+			{
+				"elementName": "menu_creatCopy",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'创建副本')]",
+				"note": "创建副本"
+			},
+			{
+				"elementName": "menu_delete",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'删除')]",
+				"note": "删除按钮"
+			},
+			{
+				"elementName": "menu_mute",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'消息')]",
+				"note": "消息免打扰"
+			},
+			{
+				"elementName": "menu_moveToFolder",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'定位到所在文件夹')]",
+				"note": "定位到所在文件夹"
 			}
 		]
 	},

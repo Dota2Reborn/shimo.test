@@ -527,4 +527,27 @@ public class TestInit {
 	public WebElement Pwd;
 	@SearchWith(pageName = "Registered", elementName = "Next")
 	public WebElement Next;
+	
+	//桌面/工作台/文档表格编辑页点点等-菜单
+	@SearchWith(pageName = "menu", elementName = "menu_newPage", noteName = "新标签页中打开")
+	public WebElement menu_newPage;
+	@SearchWith(pageName = "menu", elementName = "menu_shortcut", noteName = "添加到快捷方式")
+	public WebElement menu_shortcut;
+	@SearchWith(pageName = "menu", elementName = "menu_collection", noteName = "收藏")
+	public WebElement menu_collection;
+	@SearchWith(pageName = "menu", elementName = "menu_cooperation", noteName = "添加协作者")
+	public WebElement menu_cooperation;
+	@SearchWith(pageName = "menu", elementName = "menu_move", noteName = "移动")
+	public WebElement menu_move;
+	@SearchWith(pageName = "menu", elementName = "menu_rename", noteName = "重命名")
+	public WebElement menu_rename;
+	@SearchWith(pageName = "menu", elementName = "menu_creatCopy", noteName = "创建副本")
+	public WebElement menu_creatCopy;
+	@SearchWith(pageName = "menu", elementName = "menu_delete", noteName = "删除")
+	public WebElement menu_delete;
+	@SearchWith(pageName = "menu", elementName = "menu_mute", noteName = "消息免打扰")
+	public WebElement menu_mute;
+	@SearchWith(pageName = "menu", elementName = "menu_moveToFolder", noteName = "定位到所在文件夹")
+	public WebElement menu_moveToFolder;
+	
 }
