@@ -211,37 +211,6 @@
 		]
 	},
 	{
-		"note": "我的收藏",
-		"pageName": "Registered",
-		"elements": [
-			{
-				"note": "昵称",
-				"elementName": "userName",
-				"locateUsing": "name",
-				"locator": "name"
-			},
-			{
-				"note": "登录邮箱",
-				"elementName": "userEmail",
-				"locateUsing": "name",
-				"locator": "email"
-			},
-			{
-				"note": "密码",
-				"elementName": "userPwd",
-				"locateUsing": "name",
-				"locator": "password"
-			},
-			{
-				"note": "下一步",
-				"elementName": "Next",
-				"locateUsing": "id",
-				"locator": "bd-register-submit"
-			}
-			
-		]
-	},
-	{
 		"note": "桌面",
 		"pageName": "desktop",
 		"elements": [
