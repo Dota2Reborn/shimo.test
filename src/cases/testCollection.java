@@ -30,8 +30,12 @@ public class testCollection extends TestInit {
 		b_back.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		favorites.click();
-		//wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		//String msg = desktop1_1.getText();
+		action.contextClick(desktop1_1).perform();
+		
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
+		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
+		desktop_newFolder_name_ok.click();
 		
 		
 		
