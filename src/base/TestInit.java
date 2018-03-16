@@ -345,8 +345,7 @@ public class TestInit {
 	public WebElement Exit_share_OK;
 	@SearchWith(pageName = "doc", elementName = "Collection_OK")
 	public WebElement Collection_OK;
-	
-	
+
 	// dashboard
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_time")
 	public WebElement dashboard_update_time;
