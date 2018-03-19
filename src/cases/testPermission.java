@@ -117,6 +117,7 @@ public class testPermission extends TestInit {
 				b_addCollaborator_1_add.click();
 			}
 		}
+		
 		if(Emil_1!=""){
 			input_addCollaborator.sendKeys(Emil_1);
 			wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
