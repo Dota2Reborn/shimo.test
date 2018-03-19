@@ -44,8 +44,8 @@ public class testDesktop extends TestInit {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
-		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
@@ -84,8 +84,8 @@ public class testDesktop extends TestInit {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
-		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
@@ -132,8 +132,8 @@ public class testDesktop extends TestInit {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_folder_9));
-		desktop_setting_folder_9.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
@@ -191,7 +191,7 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_1.click();
+		menu_newPage.click();
 
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -214,15 +214,15 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
-		String setting_2 = desktop_setting_doc_2.getText();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
+		String setting_2 = menu_shortcut.getText();
 		if (setting_2.equals("从快捷方式移除")) {
-			desktop_setting_doc_2.click();
+			menu_shortcut.click();
 			action.contextClick(desktop1_1).perform();
-			wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
+			wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
 		}
 
-		desktop_setting_doc_2.click();
+		menu_shortcut.click();
 
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
@@ -231,8 +231,8 @@ public class testDesktop extends TestInit {
 
 		action.contextClick(desktop1_1).perform();
 		Thread.sleep(200);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
-		desktop_setting_doc_2.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
+		menu_shortcut.click();
 
 		assertEquals(doc_name, msg);
 
@@ -254,15 +254,15 @@ public class testDesktop extends TestInit {
 
 		String doc_name = desktop1_1.getText();
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_3));
-		desktop_setting_doc_3.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
+		menu_collection.click();
 
 		favorites.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String doc_name1 = desktop1_1.getText();
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_3));
-		desktop_setting_doc_3.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
+		menu_collection.click();
 
 		assertEquals(doc_name, doc_name1);
 	}
@@ -284,8 +284,8 @@ public class testDesktop extends TestInit {
 		String msg = desktop1_1.getText();
 
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_6));
-		desktop_setting_doc_6.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_move));
+		menu_move.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_list_1));
 		desktop_moveFolder_list_1.click();
@@ -301,8 +301,8 @@ public class testDesktop extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_6));
-		desktop_setting_doc_6.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_move));
+		menu_move.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_back_button));
 		desktop_moveFolder_back_button.click();
@@ -339,8 +339,8 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_8));
-		desktop_setting_doc_8.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_rename));
+		menu_rename.click();
 
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
@@ -372,16 +372,16 @@ public class testDesktop extends TestInit {
 
 		String msg = desktop1_1.getText();
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_9));
-		desktop_setting_doc_9.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_creatCopy));
+		menu_creatCopy.click();
 
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg1 = desktop1_1.getText();
 
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
-		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
@@ -403,7 +403,7 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_1.click();
+		menu_newPage.click();
 
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -426,25 +426,25 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
 		action.contextClick(desktop1_1_folder).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
+		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
 
-		String setting_2 = desktop_setting_doc_2.getText();
+		String setting_2 = menu_shortcut.getText();
 		if (setting_2.equals("从快捷方式移除")) {
-			desktop_setting_doc_2.click();
+			menu_shortcut.click();
 			action.contextClick(desktop1_1_folder).perform();
-			wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
+			wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
 		}
 
 		Thread.sleep(200);
-		desktop_setting_doc_2.click();
+		menu_shortcut.click();
 		Thread.sleep(100);
 		String msg = desktop_shortcut_1.getText();
 		String doc_name = desktop1_1_folder.getText();
 
 		action.contextClick(desktop1_1_folder).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_2));
+		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
 		Thread.sleep(200);
-		desktop_setting_doc_2.click();
+		menu_shortcut.click();
 
 		assertEquals(doc_name, msg);
 
@@ -466,15 +466,15 @@ public class testDesktop extends TestInit {
 
 		String doc_name = desktop1_1_folder.getText();
 		action.contextClick(desktop1_1_folder).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_3));
-		desktop_setting_doc_3.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
+		menu_collection.click();
 
 		favorites.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String doc_name1 = desktop1_1_folder.getText();
 		action.contextClick(desktop1_1_folder).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_3));
-		desktop_setting_doc_3.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
+		menu_collection.click();
 
 		assertEquals(doc_name, doc_name1);
 	}
@@ -509,8 +509,8 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_6));
-		desktop_setting_doc_6.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_move));
+		menu_move.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_list_2));
 		desktop_moveFolder_list_2.click();
@@ -525,8 +525,8 @@ public class testDesktop extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_8));
-		desktop_setting_doc_8.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_rename));
+		menu_rename.click();
 
 		desktop_newFolder_name.sendKeys("删除文件夹");
 		desktop_newFolder_name_ok.click();
@@ -537,8 +537,8 @@ public class testDesktop extends TestInit {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_folder_9));
-		desktop_setting_folder_9.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
@@ -573,8 +573,8 @@ public class testDesktop extends TestInit {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
-		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
@@ -613,8 +613,8 @@ public class testDesktop extends TestInit {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
-		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
@@ -653,8 +653,8 @@ public class testDesktop extends TestInit {
 		// action.moveToElement(desktop1_1).perform();
 		// desktop_setting.click();
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
-		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 

@@ -245,14 +245,10 @@ public class TestInit {
 	public WebElement desktop1_1;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newDoc", noteName = "新建文档")
 	public WebElement desktop_newDoc;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_11")
-	public WebElement desktop_setting_doc_11;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_ok")
 	public WebElement desktop_newFolder_name_ok;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1_folder")
 	public WebElement desktop1_1_folder;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_5")
-	public WebElement desktop_setting_doc_5;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_2_folder")
 	public WebElement desktop1_2_folder;
 	@SearchWith(pageName = "desktop", elementName = "desktop_list_1_file")
@@ -285,20 +281,6 @@ public class TestInit {
 	public WebElement desktop_newFolder_name;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_cancel")
 	public WebElement desktop_newFolder_name_cancel;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_1")
-	public WebElement desktop_setting_doc_1;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_2")
-	public WebElement desktop_setting_doc_2;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_3")
-	public WebElement desktop_setting_doc_3;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_6")
-	public WebElement desktop_setting_doc_6;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_8")
-	public WebElement desktop_setting_doc_8;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_doc_9")
-	public WebElement desktop_setting_doc_9;
-	@SearchWith(pageName = "desktop", elementName = "desktop_setting_folder_9")
-	public WebElement desktop_setting_folder_9;
 	@SearchWith(pageName = "desktop", elementName = "desktop_set")
 	public WebElement desktop_setting;
 	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_1")
@@ -353,14 +335,6 @@ public class TestInit {
 	public WebElement dashboard_update_file;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_name")
 	public WebElement dashboard_update_name;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_setting_doc_8")
-	public WebElement dashboard_setting_doc_8;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_setting_doc_10")
-	public WebElement dashboard_setting_doc_10;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_setting_doc_12")
-	public WebElement dashboard_setting_doc_12;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_setting_doc_10")
-	public WebElement dashboard_share_setting_doc_10;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_shareTime_1")
 	public WebElement dashboard_shareTime_1;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_shareTime_unread")

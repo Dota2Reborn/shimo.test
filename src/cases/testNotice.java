@@ -107,7 +107,7 @@ public class testNotice extends TestInit {
 		}
 
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		button_addCollaborator.click();
@@ -157,7 +157,7 @@ public class testNotice extends TestInit {
 		}
 
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		button_addCollaborator.click();

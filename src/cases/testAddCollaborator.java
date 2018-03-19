@@ -32,7 +32,7 @@ public class testAddCollaborator extends TestInit {
 		}
 
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
 		Boolean exist = button_addCollaborator.isEnabled();
@@ -60,7 +60,7 @@ public class testAddCollaborator extends TestInit {
 		}
 
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		String msg_a = addCollaborator_total.getText();
@@ -105,7 +105,7 @@ public class testAddCollaborator extends TestInit {
 		}
 
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		String msg_a = addCollaborator_total.getText();
@@ -148,7 +148,7 @@ public class testAddCollaborator extends TestInit {
 		}
 
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		String msg_a = addCollaborator_total.getText();
@@ -194,7 +194,7 @@ public class testAddCollaborator extends TestInit {
 		}
 
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		String msg_a = addCollaborator_total.getText();
@@ -229,7 +229,7 @@ public class testAddCollaborator extends TestInit {
 		}
 
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		button_addCollaborator.click();
@@ -254,7 +254,7 @@ public class testAddCollaborator extends TestInit {
 
 		action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
 		b_addCollaborator_2_list.click();
@@ -289,7 +289,7 @@ public class testAddCollaborator extends TestInit {
 		}
 
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		button_addCollaborator.click();
@@ -314,7 +314,7 @@ public class testAddCollaborator extends TestInit {
 
 		action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
 		b_addCollaborator_2_list.click();
@@ -349,7 +349,7 @@ public class testAddCollaborator extends TestInit {
 		}
 
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
 		b_addCollaborator_1_list.click();
@@ -375,7 +375,7 @@ public class testAddCollaborator extends TestInit {
 
 		action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
 		b_addCollaborator_1_list.click();
@@ -457,7 +457,7 @@ public class testAddCollaborator extends TestInit {
 		}
 
 		action.contextClick(desktop1_2_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
 		b_addCollaborator_1_list.click();
@@ -484,7 +484,7 @@ public class testAddCollaborator extends TestInit {
 
 		action = new Actions(driver);
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
 		b_addCollaborator_1_list.click();
