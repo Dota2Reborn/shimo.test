@@ -70,30 +70,6 @@
 				"note": "工作台-共享给我的-文件"
 			},
 			{
-				"elementName": "dashboard_setting_doc_8",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[9]",
-				"note": "工作台-定位到所在文件夹"
-			},
-			{
-				"elementName": "dashboard_setting_doc_12",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']//ul//li[13]",
-				"note": "我创建的-文件删除按钮"
-			},
-			{
-				"elementName": "dashboard_setting_doc_10",
-				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'删除')]",
-				"note": "我创建的-文件创建副本"
-			},
-			{
-				"elementName": "dashboard_share_setting_doc_10",
-				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'删除')]",
-				"note": "共享给我的-文件删除按钮"
-			},
-			{
 				"elementName": "dashboard_shareTime_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='card-header']//div[@class='update-time']",
@@ -309,61 +285,6 @@
 				"locateUsing": "className",
 				"locator": "settings-btn",
 				"note": "hover文件的齿轮"
-			},
-			{
-				"elementName": "desktop_setting_doc_1",
-				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'在新标签页中打开')]",
-				"note": "文档表格新标签页中打开"
-			},
-			{
-				"elementName": "desktop_setting_doc_2",
-				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'添加到快捷方式')]",
-				"note": "文档表格添加快捷方式"
-			},
-			{
-				"elementName": "desktop_setting_doc_3",
-				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'收藏')]",
-				"note": "文档表格添加收藏"
-			},
-			{
-				"elementName": "desktop_setting_doc_5",
-				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'人协作')]",
-				"note": "文档表格添加协作者"
-			},
-			{
-				"elementName": "desktop_setting_doc_6",
-				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'移动')]",
-				"note": "文档表格移动"
-			},
-			{
-				"elementName": "desktop_setting_doc_8",
-				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'重命名')]",
-				"note": "文档表格重命名"
-			},
-			{
-				"elementName": "desktop_setting_doc_9",
-				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'创建副本')]",
-				"note": "文档表格创建副本"
-			},
-			{
-				"elementName": "desktop_setting_doc_11",
-				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'删除')]",
-				"note": "文档表格删除按钮"
-			},
-			
-			{
-				"elementName": "desktop_setting_folder_9",
-				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'删除')]",
-				"note": "文件夹删除按钮"
 			},
 			{
 				"elementName": "desktop_shortcut_1",
