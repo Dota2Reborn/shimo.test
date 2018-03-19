@@ -293,6 +293,12 @@ public class TestInit {
 	public WebElement desktop_moveFolder_list_1;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_2")
 	public WebElement desktop_moveFolder_list_2;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderHeader_1", noteName = "表头文件名排序")
+	public WebElement desktop_orderHeader_1;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderHeader_2", noteName = "表头所有者排序")
+	public WebElement desktop_orderHeader_2;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderHeader_3", noteName = "表头时间排序")
+	public WebElement desktop_orderHeader_3;
 
 	// doc
 	@SearchWith(pageName = "doc", elementName = "b_back")

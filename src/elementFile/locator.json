@@ -335,6 +335,24 @@
 				"note": "桌面排序"
 			},
 			{
+				"elementName": "desktop_orderHeader_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='filelist-table-header']//div[1]",
+				"note": "表头文件名排序"
+			},
+			{
+				"elementName": "desktop_orderHeader_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='filelist-table-header']//div[2]",
+				"note": "表头所有者排序"
+			},
+			{
+				"elementName": "desktop_orderHeader_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='filelist-table-header']//div[3]",
+				"note": "表头时间排序"
+			},
+			{
 				"elementName": "desktop_show_type",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='actions']//div[@data-test='change-table-mode']",
