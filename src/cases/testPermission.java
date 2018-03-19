@@ -115,7 +115,6 @@ public class testPermission extends TestInit {
 				//验证添加按钮是否加载出来
 				wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
 				b_addCollaborator_1_add.click();
-		    
 			}
 		}
 		if(Emil_1!=""){
