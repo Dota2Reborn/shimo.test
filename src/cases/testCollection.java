@@ -70,7 +70,7 @@ public class testCollection extends TestInit {
 		
 	}
 	/**
-	 * 收藏页面文件排序
+	 * 收藏页面按创建时间排序，并且定位第一个文件夹所在位置
 	 * 
 	 * @author 王继程
 	 * @Time 2018-03-19
@@ -79,23 +79,21 @@ public class testCollection extends TestInit {
 	@Test(enabled = true)
 	public void Collection_Sort() throws InterruptedException {
 		login(" Collection@shimo.im", "123123");
+
 		favorites.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
-		desktop_new.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
-		desktop_newDoc.click();
-		wait.until(ExpectedConditions.elementToBeClickable(Collection_OK));
-		Collection_OK.click();
-		
-		b_back.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
+		Tile();
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+		desktop_orderByFolderUP.click();
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
+		desktop_orderByCreate.click();
+		//wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_name));
+		//String name = desktop1_1_name.getText();
+		//assertEquals(name, "第四个创建的");
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		favorites.click();
-		action.contextClick(desktop1_1).perform();
 		
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
 		
 	}
 	/**
@@ -137,5 +135,14 @@ public class testCollection extends TestInit {
 		assertTrue(result);
 
 	}
+	//验证是否平铺
+		public void Tile() throws InterruptedException {
+			
+			String msg = desktop_show_type.getText();
+			if (msg.equals("平铺")) {
+				desktop_show_type.click();
+			}
+			
+		}
 
 }
