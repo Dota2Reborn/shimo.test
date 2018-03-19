@@ -381,6 +381,12 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[2]//div//button",
 				"note": "移动到测试文件夹"
+			},
+			{
+				"elementName": "desktop1_1_name",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[1]//div[1]//a[1]//div[2]",
+				"note": "平铺模式第一行第一个名称"
 			}
 		]
 	},
