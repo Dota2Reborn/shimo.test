@@ -77,7 +77,39 @@ public class testCollection extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void Collection_Sort() throws InterruptedException {
+	public void Collection_Sort_1() throws InterruptedException {
+		login(" Collection@shimo.im", "123123");
+
+		favorites.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
+		Tile();
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+		desktop_orderByFolderUP.click();
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
+		desktop_orderByCreate.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_name));
+		String name = desktop1_1_name.getText();
+		assertEquals(name, "第四个创建的");
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_moveToFolder));
+		menu_moveToFolder.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.className("final"))));
+		String Folder_name=driver.findElement(By.className("final")).getText();
+		assertEquals(Folder_name, "第三个创建的");
+		
+	}
+	/**
+	 * 收藏页面按创建时间排序，并且定位第一个文件夹所在位置
+	 * 
+	 * @author 王继程
+	 * @Time 2018-03-19
+	 *
+	 */
+	@Test(enabled = true)
+	public void Collection_Sort_2() throws InterruptedException {
 		login(" Collection@shimo.im", "123123");
 
 		favorites.click();
