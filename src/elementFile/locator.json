@@ -922,62 +922,62 @@
 			{
 				"elementName": "file_menu_version",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'保存版本')]",
+				"locator": "//li[contains(text(),'保存版本')]",
 				"note": "保存版本"
 			},
 			{
 				"elementName": "file_menu_shortcut",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'快捷方式')]",
+				"locator": "//li[contains(text(),'快捷方式')]",
 				"note": "添加快捷方式"
 			},
 			{
 				"elementName": "file_menu_collection",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'收藏')]",
+				"locator": "//li[contains(text(),'收藏')]",
 				"note": "添加收藏"
 			},
 			{
 				"elementName": "file_menu_list",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'查看目录')]",
+				"locator": "//li[contains(text(),'查看目录')]",
 				"note": "查看目录"
 			},
 			{
 				"elementName": "file_menu_move",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'移动')]",
+				"locator": "//li[contains(text(),'移动')]",
 				"note": "移动"
 			},
 			{
 				"elementName": "file_menu_history",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'查看历史')]",
+				"locator": "//li[contains(text(),'查看历史')]",
 				"note": "重命名"
 			},
 			{
 				"elementName": "file_menu_creatCopy",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'创建副本')]",
+				"locator": "//li[contains(text(),'创建副本')]",
 				"note": "创建副本"
 			},
 			{
 				"elementName": "file_menu_delete",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'删除')]",
+				"locator": "//li[contains(text(),'删除')]",
 				"note": "删除按钮"
 			},
 			{
 				"elementName": "file_menu_mute",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'消息')]",
+				"locator": "//li[contains(text(),'消息')]",
 				"note": "消息免打扰"
 			},
 			{
 				"elementName": "file_menu_msg",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'文档信息')]",
-				"note": "文档信息"
+				"locator": "//li[contains(text(),'信息')]",
+				"note": "文档/表格信息"
 			}
 		]
 	},
