@@ -23,9 +23,10 @@ public class testPermission extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		Tile();
-		//右键第一个文件
+		//右键第一个文件desktop_setting_doc_5
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_5.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_cooperation));
+		menu_cooperation.click();
 		Add(0,"testing_2@test.im");
 		Modify(2,2);
 		Shut_down_sm_modal_close_x.click();
@@ -50,7 +51,7 @@ public class testPermission extends TestInit {
 		Back_to_Desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_folder_9.click();
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(Exit_share_OK));
 		Exit_share_OK.click();
 	}
@@ -70,7 +71,8 @@ public class testPermission extends TestInit {
 		Tile();
 		//右键第一个文件
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_5.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_cooperation));
+		menu_cooperation.click();
 		Add(0,"testing_5@test.im");
 		Modify(3,2);
 		Shut_down_sm_modal_close_x.click();
@@ -87,7 +89,7 @@ public class testPermission extends TestInit {
 		desktop.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_folder_9.click();
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 	}
