@@ -89,9 +89,9 @@ public class testCollection extends TestInit {
 		desktop_order.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
 		desktop_orderByCreate.click();
-		//wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_name));
-		//String name = desktop1_1_name.getText();
-		//assertEquals(name, "第四个创建的");
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_name));
+		String name = desktop1_1_name.getText();
+		assertEquals(name, "第四个创建的");
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		
 		
