@@ -103,8 +103,8 @@ public class testDashboard extends TestInit {
 		String msg = dashboard_update_name.getText();
 
 		action.contextClick(dashboard_update_name).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_setting_doc_12));
-		dashboard_setting_doc_12.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
@@ -131,7 +131,7 @@ public class testDashboard extends TestInit {
 		}
 
 		action.contextClick(desktop1_1_folder).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		button_addCollaborator.click();
@@ -157,8 +157,8 @@ public class testDashboard extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_share_file));
 		action.contextClick(dashboard_share_file).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_share_setting_doc_10));
-		dashboard_share_setting_doc_10.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 
@@ -186,9 +186,9 @@ public class testDashboard extends TestInit {
 
 		System.out.println("bilibili ->" + dashboard_update_name.getText());
 		action.contextClick(dashboard_update_name).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_setting_doc_8));
+		wait.until(ExpectedConditions.elementToBeClickable(menu_moveToFolder));
 		Thread.sleep(500);
-		dashboard_setting_doc_8.click();
+		menu_moveToFolder.click();
 
 		String url_sample = "https://release.shimodev.com/folder/x2zSDzXqfQI9TaKr";
 		wait.until(ExpectedConditions.urlToBe(url_sample));
@@ -214,21 +214,21 @@ public class testDashboard extends TestInit {
 		System.out.println("创建副本 ->" + dashboard_update_name.getText());
 
 		action.contextClick(dashboard_update_name).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_setting_doc_10));
+		wait.until(ExpectedConditions.elementToBeClickable(menu_creatCopy));
 		Thread.sleep(100);
-		dashboard_setting_doc_10.click();
+		menu_creatCopy.click();
 
 		action.contextClick(dashboard_update_name).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_setting_doc_8));
+		wait.until(ExpectedConditions.elementToBeClickable(menu_moveToFolder));
 		Thread.sleep(500);
-		dashboard_setting_doc_8.click();
+		menu_moveToFolder.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String fileName = desktop1_1.getText();
 
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
-		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 

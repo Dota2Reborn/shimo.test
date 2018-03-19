@@ -289,7 +289,7 @@ public class testCompanyManagement extends TestInit {
 		}
 
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		button_addCollaborator.click();
@@ -313,7 +313,7 @@ public class testCompanyManagement extends TestInit {
 		}
 
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		button_addCollaborator.click();
@@ -330,7 +330,7 @@ public class testCompanyManagement extends TestInit {
 		String m1 = driver.findElement(By.className("sm-toast")).getText();
 		Boolean R2 = m1.equals("成功添加 1 个协作者");
 
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
 		b_addCollaborator_2_list.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
@@ -370,7 +370,7 @@ public class testCompanyManagement extends TestInit {
 		}
 
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		button_addCollaborator.click();
@@ -427,7 +427,7 @@ public class testCompanyManagement extends TestInit {
 		}
 
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		button_addCollaborator.click();
@@ -449,7 +449,7 @@ public class testCompanyManagement extends TestInit {
 		}
 
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		button_addCollaborator.click();
@@ -483,7 +483,7 @@ public class testCompanyManagement extends TestInit {
 		}
 
 		action.contextClick(desktop1_1).perform();
-		desktop_setting_doc_5.click();
+		menu_cooperation.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		button_addCollaborator.click();
