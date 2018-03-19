@@ -101,7 +101,6 @@ public class testCollection extends TestInit {
 		assertEquals(Folder_name, "第三个创建的");
 		
 		
-		
 	}
 	/**
 	 * 我都收藏-列表/平铺 模式切换
