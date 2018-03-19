@@ -1,7 +1,9 @@
 package cases;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -32,8 +34,8 @@ public class testCollection extends TestInit {
 		favorites.click();
 		action.contextClick(desktop1_1).perform();
 		
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
-		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 		
@@ -61,8 +63,8 @@ public class testCollection extends TestInit {
 		favorites.click();
 		action.contextClick(desktop1_1).perform();
 		
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
-		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 		
@@ -71,12 +73,12 @@ public class testCollection extends TestInit {
 	 * 收藏页面文件排序
 	 * 
 	 * @author 王继程
-	 * @Time 2018-03-12
+	 * @Time 2018-03-19
 	 *
 	 */
 	@Test(enabled = true)
 	public void Collection_Sort() throws InterruptedException {
-		login("New_collection@shimo.im", "123123");
+		login(" Collection@shimo.im", "123123");
 		favorites.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
 		desktop_new.click();
@@ -90,11 +92,50 @@ public class testCollection extends TestInit {
 		favorites.click();
 		action.contextClick(desktop1_1).perform();
 		
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_setting_doc_11));
-		desktop_setting_doc_11.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
 		
+	}
+	/**
+	 * 我都收藏-列表/平铺 模式切换
+	 * 
+	 * @author 
+	 * @Time 2018-03-19
+	 *
+	 */
+	@Test
+	public void desktop_show_type() throws InterruptedException {
+
+		login(" Collection@shimo.im", "123123");
+		favorites.click();
+		String msg = desktop_order.getText();
+		if (msg.equals("更新时间")) {
+			desktop_order.click();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+			desktop_orderByFolderUP.click();
+
+			desktop_order.click();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+			desktop_orderByDefault.click();
+		}
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
+		desktop_show_type.click();
+
+		Boolean result = false;
+		Boolean exist1 = doesWebElementExist(driver, By.className("table-head-cell"));
+
+		desktop_show_type.click();
+
+		Boolean exist2 = doesWebElementExist(driver, By.className("table-head-cell"));
+
+		if (exist1 == true && exist2 == false) {
+			result = true;
+		}
+
+		assertTrue(result);
+
 	}
 
 }
