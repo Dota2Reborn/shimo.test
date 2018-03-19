@@ -299,6 +299,9 @@ public class TestInit {
 	public WebElement desktop_orderHeader_2;
 	@SearchWith(pageName = "desktop", elementName = "desktop_orderHeader_3", noteName = "表头时间排序")
 	public WebElement desktop_orderHeader_3;
+	@SearchWith(pageName = "desktop", elementName = "desktop1_1_name", noteName = "获取第一个文件名称")
+	public WebElement desktop1_1_name;
+	
 
 	// doc
 	@SearchWith(pageName = "doc", elementName = "b_back")
