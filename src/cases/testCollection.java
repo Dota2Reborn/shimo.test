@@ -119,18 +119,25 @@ public class testCollection extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
 		desktop_orderByFolderUP.click();
 		desktop_order.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
-		desktop_orderByCreate.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_name));
-		String name = desktop1_1_name.getText();
-		assertEquals(name, "第四个创建的");
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_moveToFolder));
-		menu_moveToFolder.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.className("final"))));
-		String Folder_name=driver.findElement(By.className("final")).getText();
-		assertEquals(Folder_name, "第三个创建的");
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFile));
+		desktop_orderByFile.click();
+		
+		
+//		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+//		desktop_orderByFolderUP.click();
+//		desktop_order.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
+//		desktop_orderByCreate.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_name));
+//		String name = desktop1_1_name.getText();
+//		assertEquals(name, "第四个创建的");
+//		action.contextClick(desktop1_1).perform();
+//		wait.until(ExpectedConditions.elementToBeClickable(menu_moveToFolder));
+//		menu_moveToFolder.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.className("final"))));
+//		String Folder_name=driver.findElement(By.className("final")).getText();
+//		assertEquals(Folder_name, "第三个创建的");
 		
 		
 	}
