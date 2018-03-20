@@ -192,8 +192,6 @@ public class testCollection extends TestInit {
 		desktop_orderByFolderUP.click();
 		
 	}
-	
-	
 	/**
 	 * 文件夹下文件在收藏页面创建副本
 	 * 
