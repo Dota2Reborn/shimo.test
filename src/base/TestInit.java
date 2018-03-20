@@ -243,6 +243,8 @@ public class TestInit {
 	public WebElement desktop;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1", noteName = "平铺模式第一行第一个文件")
 	public WebElement desktop1_1;
+	@SearchWith(pageName = "desktop", elementName = "desktop1_2", noteName = "平铺模式第一行第二个文件")
+	public WebElement desktop1_2;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newDoc", noteName = "新建文档")
 	public WebElement desktop_newDoc;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_ok")
@@ -293,6 +295,15 @@ public class TestInit {
 	public WebElement desktop_moveFolder_list_1;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_2")
 	public WebElement desktop_moveFolder_list_2;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderHeader_1", noteName = "表头文件名排序")
+	public WebElement desktop_orderHeader_1;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderHeader_2", noteName = "表头所有者排序")
+	public WebElement desktop_orderHeader_2;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderHeader_3", noteName = "表头时间排序")
+	public WebElement desktop_orderHeader_3;
+	@SearchWith(pageName = "desktop", elementName = "desktop1_1_name", noteName = "获取第一个文件名称")
+	public WebElement desktop1_1_name;
+	
 
 	// doc
 	@SearchWith(pageName = "doc", elementName = "b_back")

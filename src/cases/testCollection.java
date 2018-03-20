@@ -32,6 +32,9 @@ public class testCollection extends TestInit {
 		b_back.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		favorites.click();
+
+		String name=desktop1_1.getText();
+		assertEquals(name, "无标题");
 		action.contextClick(desktop1_1).perform();
 		
 		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
@@ -61,6 +64,8 @@ public class testCollection extends TestInit {
 		b_back.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		favorites.click();
+		String name=desktop1_1.getText();
+		assertEquals(name, "无标题");
 		action.contextClick(desktop1_1).perform();
 		
 		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
@@ -70,36 +75,7 @@ public class testCollection extends TestInit {
 		
 	}
 	/**
-	 * 收藏页面文件排序
-	 * 
-	 * @author 王继程
-	 * @Time 2018-03-19
-	 *
-	 */
-	@Test(enabled = true)
-	public void Collection_Sort() throws InterruptedException {
-		login(" Collection@shimo.im", "123123");
-		favorites.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
-		desktop_new.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
-		desktop_newDoc.click();
-		wait.until(ExpectedConditions.elementToBeClickable(Collection_OK));
-		Collection_OK.click();
-		
-		b_back.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		favorites.click();
-		action.contextClick(desktop1_1).perform();
-		
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
-		
-	}
-	/**
-	 * 我都收藏-列表/平铺 模式切换
+	 * 我的收藏-列表/平铺 模式切换
 	 * 
 	 * @author 
 	 * @Time 2018-03-19
@@ -108,9 +84,10 @@ public class testCollection extends TestInit {
 	@Test
 	public void desktop_show_type() throws InterruptedException {
 
-		login(" Collection@shimo.im", "123123");
+		login("Collection@shimo.im", "123123");
 		favorites.click();
 		String msg = desktop_order.getText();
+		int i=1;
 		if (msg.equals("更新时间")) {
 			desktop_order.click();
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
@@ -119,6 +96,7 @@ public class testCollection extends TestInit {
 			desktop_order.click();
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 			desktop_orderByDefault.click();
+			i = 10;
 		}
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
 		desktop_show_type.click();
@@ -133,9 +111,146 @@ public class testCollection extends TestInit {
 		if (exist1 == true && exist2 == false) {
 			result = true;
 		}
-
+		//driver.manage().deleteAllCookies();
 		assertTrue(result);
+		if(i==10) {
+			desktop_order.click();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+			desktop_orderByFolderUP.click();
+		}
 
 	}
+	/**
+	 * 收藏页面按创建时间排序，并且定位第一个文件夹所在位置
+	 * 
+	 * @author 王继程
+	 * @Time 2018-03-19
+	 *
+	 */
+	@Test(enabled = true)
+	public void Collection_Sort_1() throws InterruptedException {
+		login(" Collection@shimo.im", "123123");
+		favorites.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
+		Tile();
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+		desktop_orderByFolderUP.click();
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
+		desktop_orderByCreate.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_name));
+		String name = desktop1_1_name.getText();
+		assertEquals(name, "第四个创建的");
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_moveToFolder));
+		menu_moveToFolder.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.className("final"))));
+		String Folder_name=driver.findElement(By.className("final")).getText();
+		assertEquals(Folder_name, "第三个创建的");
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+		desktop_orderByFolderUP.click();
+		
+	}
+	/**
+	 * 收藏页面按文件名排序，并且定位第一个文件夹所在位置
+	 * 
+	 * @author 王继程
+	 * @Time 2018-03-19
+	 *
+	 */
+	@Test(enabled = true)
+	public void Collection_Sort_2() throws InterruptedException {
+		login(" Collection@shimo.im", "123123");
+		favorites.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
+		Tile();
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+		desktop_orderByFolderUP.click();
+//		boolean bl = driver.findElement(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span")).isDisplayed();
+//		if(bl==true) {
+//			desktop_orderByFolderUP.click();
+//		}
+		
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFile));
+		desktop_orderByFile.click();
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String name1 = desktop1_1_name.getText();
+		assertEquals(name1, "第二个创建的");
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFile));
+		desktop_orderByFile.click();
+		String name2 = desktop1_1_name.getText();
+		assertEquals(name2, "第一个创建的");
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+		desktop_orderByFolderUP.click();
+	}
+	/**
+	 * 文件夹下文件在收藏页面创建副本
+	 * 
+	 * @author 王继程
+	 * @Time 2018-03-20
+	 *
+	 */
+	@Test(enabled = true)
+	public void Collection_Sort_3() throws InterruptedException {
+		login(" Collection@shimo.im", "123123");
+		favorites.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
+		Tile();
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+		desktop_orderByFolderUP.click();
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
+		desktop_orderByCreate.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String name1 = desktop1_1_name.getText();
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_creatCopy));
+		menu_creatCopy.click();
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_moveToFolder));
+		menu_moveToFolder.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String name = desktop1_1_name.getText();
+//		if(name=="第四个创建的") {
+//			action.contextClick(desktop1_2).perform();
+//			wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+//			menu_delete.click();
+//			wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
+//			desktop_newFolder_name_ok.click();
+//		}else 
+		if(name1!=name) {
+			action.contextClick(desktop1_1).perform();
+			wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+			menu_delete.click();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
+			desktop_newFolder_name_ok.click();
+		}
+		String msg ="副本"+" "+"第四个创建的";
+		assertEquals(msg, name);
+		desktop_order.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+		desktop_orderByFolderUP.click();
+		
+	}
+	//验证是否平铺
+		public void Tile() throws InterruptedException {
+			
+			String msg = desktop_show_type.getText();
+			if (msg.equals("平铺")) {
+				desktop_show_type.click();
+			}
+			
+		}
 
 }
