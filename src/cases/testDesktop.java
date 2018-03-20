@@ -31,7 +31,7 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
@@ -69,7 +69,7 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
@@ -109,7 +109,7 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
@@ -156,7 +156,7 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
 		desktop_show_type.click();
@@ -186,7 +186,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_1() {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
@@ -209,7 +209,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_2() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
@@ -248,7 +248,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_3() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
@@ -277,7 +277,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_6() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
@@ -293,7 +293,7 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_button));
 		desktop_moveFolder_button.click();
 
-//		driver.navigate().refresh();
+		// driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
@@ -310,7 +310,7 @@ public class testDesktop extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_button));
 		desktop_moveFolder_button.click();
 
-//		driver.navigate().refresh();
+		// driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop));
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop));
@@ -331,7 +331,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_8() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
@@ -366,7 +366,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_9() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
@@ -398,7 +398,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_folder_setting_1() {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
@@ -421,7 +421,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_folder_setting_2() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
@@ -460,7 +460,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_folder_setting_3() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
@@ -492,7 +492,7 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
@@ -555,7 +555,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_import_doc() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
@@ -595,7 +595,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_import_docx() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
@@ -635,7 +635,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_import_sheet() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
@@ -662,6 +662,169 @@ public class testDesktop extends TestInit {
 
 	}
 
-	
+	/**
+	 * hover文档/表格，齿轮-在新标签页中打开
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-19
+	 *
+	 */
+	@Test
+	public void desktop_doc_newPage() {
+		login("autoTest@shimo.im", "123123");
+		// desktop.click();
+		clickDesktop();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
+		action.moveToElement(desktop1_1).perform();
+		desktop_setting.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(menu_newPage));
+		menu_newPage.click();
+
+		Set<String> winHandels = driver.getWindowHandles();
+		List<String> it = new ArrayList<String>(winHandels);
+		int n = it.size();
+		assertEquals(2, n);
+	}
+
+	/**
+	 * hover文档/表格，齿轮-添加到快捷方式
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-19
+	 *
+	 */
+	@Test
+	public void desktop_doc_shortcut() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		// desktop.click();
+		clickDesktop();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		action.moveToElement(desktop1_1).perform();
+		desktop_setting.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
+		String setting_2 = menu_shortcut.getText();
+		if (setting_2.equals("从快捷方式移除")) {
+			menu_shortcut.click();
+			action.contextClick(desktop1_1).perform();
+			wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
+		}
+
+		menu_shortcut.click();
+
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg = desktop_shortcut_1.getText();
+		String doc_name = desktop1_1.getText();
+
+		action.contextClick(desktop1_1).perform();
+		Thread.sleep(200);
+		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
+		menu_shortcut.click();
+
+		assertEquals(doc_name, msg);
+
+	}
+
+	/**
+	 * hover文档/表格，齿轮-收藏
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-19
+	 *
+	 */
+	@Test
+	public void desktop_doc_collection() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		// desktop.click();
+		clickDesktop();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		String doc_name = desktop1_1.getText();
+		action.moveToElement(desktop1_1).perform();
+		desktop_setting.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
+		menu_collection.click();
+
+		favorites.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String doc_name1 = desktop1_1.getText();
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
+		menu_collection.click();
+
+		assertEquals(doc_name, doc_name1);
+	}
+
+	/**
+	 * hover文档/表格，齿轮-重命名
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-19
+	 *
+	 */
+	@Test
+	public void desktop_doc_rename() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		// desktop.click();
+		clickDesktop();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+
+		desktop1_1_folder.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		action.moveToElement(desktop1_1).perform();
+		desktop_setting.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_rename));
+		menu_rename.click();
+
+		Date date = new Date();
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+		String time = format.format(date);
+
+		desktop_newFolder_name.sendKeys(time);
+		desktop_newFolder_name_ok.click();
+
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg = desktop1_1.getText();
+
+		assertEquals(time, msg);
+	}
+
+	/**
+	 * hover文档/表格，齿轮-创建副本
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-19
+	 *
+	 */
+	@Test
+	public void desktop_doc_creatCopy() throws InterruptedException {
+		login("autoTest@shimo.im", "123123");
+		// desktop.click();
+		clickDesktop();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+		String msg = desktop1_1.getText();
+		action.moveToElement(desktop1_1).perform();
+		desktop_setting.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_creatCopy));
+		menu_creatCopy.click();
+
+		driver.navigate().refresh();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg1 = desktop1_1.getText();
+
+		action.moveToElement(desktop1_1).perform();
+		desktop_setting.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
+		desktop_newFolder_name_ok.click();
+
+		assertEquals(msg1, "副本 " + msg);
+	}
 }
