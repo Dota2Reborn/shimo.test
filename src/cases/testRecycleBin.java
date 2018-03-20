@@ -62,7 +62,7 @@ public class testRecycleBin extends TestInit{
 		//删除按钮
 		wait.until(ExpectedConditions.elementToBeClickable(file_menu_delete));
 		file_menu_delete.click();
-		//删除文档，确认删除
+		//删除文档，确认删除（存在问题）
 		wait.until(ExpectedConditions.elementToBeClickable(doc_menu_delete_OK));
 		doc_menu_delete_OK.click();
 		wait.until(ExpectedConditions.elementToBeClickable(trash));
@@ -73,24 +73,7 @@ public class testRecycleBin extends TestInit{
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Completely_removed));
 		menu_Completely_removed.click();
-
-//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-//		action.contextClick(desktop1_1).perform();
-//		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-//		menu_delete.click();
-//		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-//		desktop_newFolder_name_ok.click();
-//		trash.click();
-//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-//		String name = desktop1_1.getText();
-//		assertEquals(name, "删除恢复测试");
-//		action.contextClick(desktop1_1).perform();
-//		wait.until(ExpectedConditions.elementToBeClickable(menu_Recovery));
-//		menu_Recovery.click();
-//		desktop.click();
-//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-//		String name1 = desktop1_1.getText();
-//		assertEquals(name1, "删除恢复测试");
+		
 	}
 
 }
