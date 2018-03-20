@@ -153,7 +153,6 @@ public class dashboard_own extends TestInit{
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 		Thread.sleep(1000);
 		menu_cooperation.click();
-		
 		 wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
 	     input_addCollaborator.sendKeys("own5@shimo.im");
 	     //验证添加按钮是否加载出来
