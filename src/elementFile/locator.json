@@ -251,6 +251,12 @@
 				"note": "平铺模式第一行第一个文件"
 			},
 			{
+				"elementName": "desktop1_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[2]",
+				"note": "平铺模式第一行第一个文件"
+			},
+			{
 				"elementName": "desktop1_1_folder",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')]",
