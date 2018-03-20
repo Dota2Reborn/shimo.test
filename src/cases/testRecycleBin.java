@@ -16,6 +16,7 @@ public class testRecycleBin extends TestInit{
 	public void New_Document() throws InterruptedException {
 		login("RecycleBin@shimo.im", "123123");
 		
+		
 	
 	}
 
