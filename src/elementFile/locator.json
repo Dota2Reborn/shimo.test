@@ -942,6 +942,18 @@
 				"locateUsing": "xpath",
 				"locator": "//li//div[contains(text(),'定位到所在文件夹')]",
 				"note": "定位到所在文件夹"
+			},
+			{
+				"elementName": "menu_Recovery",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'恢复文件')]",
+				"note": "恢复文件"
+			},
+			{
+				"elementName": "menu_Completely_removed",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'彻底删除')]",
+				"note": "彻底删除"
 			}
 		]
 	},
