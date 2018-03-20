@@ -153,13 +153,13 @@ public class dashboard_own extends TestInit{
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 		Thread.sleep(1000);
 		menu_cooperation.click();
-		 wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
-	     input_addCollaborator.sendKeys("own5@shimo.im");
-	     //验证添加按钮是否加载出来
-	     wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-	     Thread.sleep(500);
-	     b_addCollaborator_1_add.click();
-	     Thread.sleep(1500);
+		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
+	    input_addCollaborator.sendKeys("own5@shimo.im");
+	    //验证添加按钮是否加载出来
+	    wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+	    b_addCollaborator_1_add.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 	     driver.findElement(By.xpath("//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//div[1]//div[1]")).click();
 	     wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_1));
 	     list_addCollaborator_1.click();
