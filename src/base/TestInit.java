@@ -243,6 +243,8 @@ public class TestInit {
 	public WebElement desktop;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1", noteName = "平铺模式第一行第一个文件")
 	public WebElement desktop1_1;
+	@SearchWith(pageName = "desktop", elementName = "desktop1_2", noteName = "平铺模式第一行第二个文件")
+	public WebElement desktop1_2;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newDoc", noteName = "新建文档")
 	public WebElement desktop_newDoc;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_ok")
