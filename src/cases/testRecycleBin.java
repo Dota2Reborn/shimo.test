@@ -1,5 +1,6 @@
 package cases;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import base.TestInit;
@@ -16,7 +17,12 @@ public class testRecycleBin extends TestInit{
 	public void New_Document() throws InterruptedException {
 		login("RecycleBin@shimo.im", "123123");
 		
-		
+		desktop.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 	
 	}
 
