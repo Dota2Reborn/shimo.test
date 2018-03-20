@@ -84,7 +84,7 @@ public class testCollection extends TestInit {
 	@Test
 	public void desktop_show_type() throws InterruptedException {
 
-		login(" Collection@shimo.im", "123123");
+		login("Collection@shimo.im", "123123");
 		favorites.click();
 		String msg = desktop_order.getText();
 		int i=1;
@@ -111,7 +111,7 @@ public class testCollection extends TestInit {
 		if (exist1 == true && exist2 == false) {
 			result = true;
 		}
-
+		//driver.manage().deleteAllCookies();
 		assertTrue(result);
 		if(i==10) {
 			desktop_order.click();
