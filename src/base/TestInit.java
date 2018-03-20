@@ -534,7 +534,10 @@ public class TestInit {
 	public WebElement menu_mute;
 	@SearchWith(pageName = "menu", elementName = "menu_moveToFolder", noteName = "定位到所在文件夹")
 	public WebElement menu_moveToFolder;
-	
+	@SearchWith(pageName = "menu", elementName = "menu_Recovery", noteName = "恢复文件")
+	public WebElement menu_Recovery;
+	@SearchWith(pageName = "menu", elementName = "menu_Completely_removed", noteName = "彻底删除")
+	public WebElement menu_Completely_removed;
 	//文档表格编辑页点点等-菜单
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_version", noteName = "保存版本")
 	public WebElement file_menu_version;
