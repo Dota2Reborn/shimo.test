@@ -55,7 +55,6 @@ public class testRecycleBin extends TestInit{
 		desktop_new.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
 		desktop_newDoc.click();
-
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.sendKeys("文档内输入内容，可进入回收站");
 		//点点点
