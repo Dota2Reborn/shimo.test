@@ -308,6 +308,8 @@ public class TestInit {
 	// doc
 	@SearchWith(pageName = "doc", elementName = "b_back")
 	public WebElement b_back;
+	@SearchWith(pageName = "doc", elementName = "doc_saveStatus", noteName="文档/表格提示状态-灰字")
+	public WebElement doc_saveStatus;
 	@SearchWith(pageName = "doc", elementName = "quick_access_point")
 	public WebElement quick_access_point;
 	@SearchWith(pageName = "doc", elementName = "Back_to_Desktop")

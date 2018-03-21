@@ -577,6 +577,12 @@
 				"note": "文档编辑入口"
 			},
 			{
+				"elementName": "doc_saveStatus",
+				"locateUsing": "xpath",
+				"locator": "//span[@id='save-status']//span[2]",
+				"note": "文档/表格提示状态-灰字"
+			},
+			{
 				"elementName": "doc_notice_user",
 				"locateUsing": "xpath",
 				"locator": "//ul[@class='ql-mention-list']//li[@data-type='user']",

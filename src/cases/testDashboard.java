@@ -226,7 +226,9 @@ public class testDashboard extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String fileName = desktop1_1.getText();
 
-		action.contextClick(desktop1_1).perform();
+//		action.contextClick(desktop1_1).perform();
+		action.moveToElement(desktop1_1).perform();
+		desktop_setting.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
 		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));

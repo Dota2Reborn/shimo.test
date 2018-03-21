@@ -643,7 +643,7 @@ public class testCompanyManagement extends TestInit {
 		xpath_banUser_2.click();
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_banUser_ok));
 		xpath_banUser_ok.click();
-		// Thread.sleep(3000);
+		driver.navigate().refresh();
 
 		wait.until(ExpectedConditions.elementToBeClickable(xpath_userTab_3));
 		xpath_userTab_3.click();
@@ -746,10 +746,88 @@ public class testCompanyManagement extends TestInit {
 		if (R1.equals(true)) {
 			Boolean R2 = address_cppy.getAttribute("class").equals("sm-btn sm-btn-primary invitation-link-copy");
 			assertTrue(R2);
-		}else {
-			Boolean R2 = address_cppy.getAttribute("class").equals("sm-btn sm-btn-primary invitation-link-copy disable");
+		} else {
+			Boolean R2 = address_cppy.getAttribute("class")
+					.equals("sm-btn sm-btn-primary invitation-link-copy disable");
 			assertTrue(R2);
 		}
 
+	}
+
+	/**
+	 * 企业管理-不输入邮箱，点击发送邀请
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-20
+	 *
+	 */
+	@Test(enabled = true)
+	public void addMember() throws InterruptedException {
+		login("panpan@qq.com", "123123");
+		company_Management.click();
+		switchToPage(1);
+		wait.until(ExpectedConditions.elementToBeClickable(addMember));
+		addMember.click();
+		String xpath_email = "//div[@class='tab-head-wrap']//div[2]";
+		driver.findElement(By.xpath(xpath_email)).click();
+		Thread.sleep(1000);
+		String xpath_sendInvite = "//button[@class='sm-btn sm-btn-primary ']";
+		driver.findElement(By.xpath(xpath_sendInvite)).click();
+
+		String xpath_msg = "//div[@class='title']//span";
+		Thread.sleep(500);
+		Boolean R1 = driver.findElement(By.xpath(xpath_msg)).getText().equals("请输入正确的邮箱");
+
+		assertTrue(R1);
+	}
+
+	/**
+	 * 企业管理-试图邀请一个已经存在于企业中的用户
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-06
+	 *
+	 */
+	@Test(enabled = true)
+	public void addMember_1() throws InterruptedException {
+		login("panpan@qq.com", "123123");
+		company_Management.click();
+		switchToPage(1);
+
+		wait.until(ExpectedConditions.elementToBeClickable(addMember));
+		addMember.click();
+		String xpath_email = "//div[@class='tab-head-wrap']//div[2]";
+		driver.findElement(By.xpath(xpath_email)).click();
+		Thread.sleep(500);
+		String xpath_emailInvite = "//div[@class='invitation-email-panel']//div//input";
+		driver.findElement(By.xpath(xpath_emailInvite)).sendKeys("pipi@qq.com");
+		Thread.sleep(500);
+		String msg = driver.findElement(By.xpath("//span[@class='share-user-email ellipsis invitation-user-email']"))
+				.getText();
+		System.out.println(msg);
+		assertEquals(msg, "pipi@qq.com（已是企业成员）");
+	}
+
+	/**
+	 * 企业管理-点击企业创建者，展开下拉操作账号设置，点击账号设置
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-20
+	 *
+	 */
+	@Test(enabled = true)
+	public void member_setting() throws InterruptedException {
+		login("panpan@qq.com", "123123");
+		company_Management.click();
+		switchToPage(1);
+		String xpath_setting = "//div[@class='waterfall-inner']//div[1]//div[@class='action']";
+
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath_setting)));
+		driver.findElement(By.xpath(xpath_setting)).click();
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//a[contains(text(),'帐号设置')]")).click();
+
+		Boolean R1 = driver.getCurrentUrl().contains("/profile");
+		assertTrue(R1);
 	}
 }

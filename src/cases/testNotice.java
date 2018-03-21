@@ -37,6 +37,7 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_notice_user));
 		doc_notice_user.click();
 
+		wait.until(ExpectedConditions.textToBe(By.xpath("//span[@id='save-status']//span[2]"), "自动保存成功"));
 		b_back.click();
 		logout();
 		login("autoTest12@shimo.im", "123123");
@@ -73,7 +74,8 @@ public class testNotice extends TestInit {
 		doc_edit.sendKeys("@autoTest12");
 		wait.until(ExpectedConditions.elementToBeClickable(doc_notice_user));
 		doc_notice_user.click();
-
+		wait.until(ExpectedConditions.textToBe(By.xpath("//span[@id='save-status']//span[2]"), "自动保存成功"));
+		
 		b_back.click();
 		logout();
 		login("autoTest12@shimo.im", "123123");
@@ -247,7 +249,8 @@ public class testNotice extends TestInit {
 		doc_edit.sendKeys("@autoTest12");
 		wait.until(ExpectedConditions.elementToBeClickable(doc_notice_user));
 		doc_notice_user.click();
-
+		wait.until(ExpectedConditions.textToBe(By.xpath("//span[@id='save-status']//span[2]"), "自动保存成功"));
+		
 		b_back.click();
 		logout();
 		login("autoTest12@shimo.im", "123123");
