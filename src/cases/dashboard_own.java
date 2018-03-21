@@ -2,6 +2,10 @@ package cases;
 
 import static org.testng.Assert.assertEquals;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -206,23 +210,33 @@ public class dashboard_own extends TestInit{
 		input_addCollaborator.sendKeys("own7@shimo.im");
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
 		b_addCollaborator_1_add.click();
-
+//		Date date = new Date();
+//		DateFormat format = new SimpleDateFormat("HH:mm");
+//		String time = format.format(date);
+//		System.out.println(time+"时间");
 		wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
 		Shut_down_sm_modal_close_x.click();
 		logout();
 		login("own7@shimo.im", "123123");
-		//hover文件
-		action.moveToElement((WebElement) By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[1]//dsiv[1]//a[1]")).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_shareTime_unread));
-		dashboard_shareTime_unread.click();
-		desktop.click();
-		//div[@data-test='category-list-wrapper']//div[2]//div[1]
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(file_menu_delete));
-		file_menu_delete.click();
+		String n = dashboard_shareTime_1.getText();
+		assertEquals(n, "刚刚");
+		action.contextClick(dashboard_share_file).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
+//		System.out.println(n+n+n+n);
+//		String m="刚刚";
+//		if(n.equals(m)) {
+//			assertEquals(n, "刚刚");
+//			
+//		}else if(n!="刚刚") {
+//			String name2 = n.substring(n.length()-5);
+//			assertEquals(time, name2);
+//		}
+
+		
+		
 		
 	     
 	}
