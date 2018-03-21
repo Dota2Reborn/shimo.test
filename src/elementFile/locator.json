@@ -603,7 +603,7 @@
 			{
 				"elementName": "doc_menu_delete_OK",
 				"locateUsing": "xpath",
-				"locator": "//button[@class='btn confirm-btn btn-ok']",
+				"locator": "//div[@class='confirm-dialog-footer dialog-foot']//button[1]",
 				"note": "文档编辑页面中右上角 点点点-删除文档-确定按钮"
 			},
 			{
