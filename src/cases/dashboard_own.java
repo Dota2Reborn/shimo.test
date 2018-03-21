@@ -202,43 +202,30 @@ public class dashboard_own extends TestInit{
 		wait.until(ExpectedConditions.elementToBeClickable(menu_cooperation));
 		menu_cooperation.click();
 		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
+		Thread.sleep(500);
 		input_addCollaborator.sendKeys("own7@shimo.im");
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
 		b_addCollaborator_1_add.click();
-		
+
+		wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
 		Shut_down_sm_modal_close_x.click();
 		logout();
 		login("own7@shimo.im", "123123");
+		//hover文件
+		action.moveToElement((WebElement) By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[1]//dsiv[1]//a[1]")).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_shareTime_unread));
+		dashboard_shareTime_unread.click();
 		desktop.click();
-		
-		
-		
+		//div[@data-test='category-list-wrapper']//div[2]//div[1]
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(file_menu_delete));
+		file_menu_delete.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
+		desktop_newFolder_name_ok.click();
 		
 	     
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
