@@ -187,7 +187,35 @@ public class dashboard_own extends TestInit{
 	     
 	}
 	
-	
+	/**
+	 *新的的共享
+	 * 
+	 * @author 陈清杰
+	 * @Time 2018-03-21
+	 */
+	@Test
+	public void own5() throws InterruptedException{
+		login("own6@shimo.im", "123123");
+		desktop.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		action.contextClick(desktop1_1).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_cooperation));
+		menu_cooperation.click();
+		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
+		input_addCollaborator.sendKeys("own7@shimo.im");
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+		b_addCollaborator_1_add.click();
+		
+		Shut_down_sm_modal_close_x.click();
+		logout();
+		login("own7@shimo.im", "123123");
+		desktop.click();
+		
+		
+		
+		
+	     
+	}
 
 
 
