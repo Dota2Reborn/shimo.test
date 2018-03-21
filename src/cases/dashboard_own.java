@@ -220,7 +220,7 @@ public class dashboard_own extends TestInit{
 		login("own7@shimo.im", "123123");
 		String n = dashboard_shareTime_1.getText();
 		assertEquals(n, "刚刚");
-		action.contextClick(dashboard_share_file).perform();
+		action.contextClick(dashboard_shareTime_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
 		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
