@@ -25,7 +25,7 @@ public class testNotice extends TestInit {
 	@Test(enabled = true)
 	public void notice_1() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
@@ -49,7 +49,7 @@ public class testNotice extends TestInit {
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
 		String url = driver.getCurrentUrl();
-//		assertEquals(url, "https://release.shimodev.com/docs/MQHNJBqnsUQUPuYV");
+		// assertEquals(url, "https://release.shimodev.com/docs/MQHNJBqnsUQUPuYV");
 		assertTrue(url.startsWith("https://release.shimodev.com/docs/MQHNJBqnsUQUPuYV"));
 	}
 
@@ -63,7 +63,7 @@ public class testNotice extends TestInit {
 	@Test(enabled = true)
 	public void notice_2() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
@@ -75,7 +75,7 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_notice_user));
 		doc_notice_user.click();
 		wait.until(ExpectedConditions.textToBe(By.xpath("//span[@id='save-status']//span[2]"), "自动保存成功"));
-		
+
 		b_back.click();
 		logout();
 		login("autoTest12@shimo.im", "123123");
@@ -100,7 +100,7 @@ public class testNotice extends TestInit {
 	@Test(enabled = true)
 	public void notice_3() throws InterruptedException {
 		login("autoTest13@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop_show_type.getText();
@@ -150,7 +150,7 @@ public class testNotice extends TestInit {
 	@Test(enabled = true)
 	public void notice_4() throws InterruptedException {
 		login("autoTest13@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop_show_type.getText();
@@ -199,7 +199,7 @@ public class testNotice extends TestInit {
 	@Test(enabled = true)
 	public void notice_5() throws InterruptedException {
 		login("autoTest14@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
@@ -213,8 +213,8 @@ public class testNotice extends TestInit {
 		action.sendKeys(Keys.ENTER);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_discuss_input_ok));
 		doc_discuss_input_ok.click();
-		wait.until(ExpectedConditions.textToBe(By.className("doc-comment-input-placeholder"), "按enter发送，shift+enter换行"));
-		
+		wait.until(
+				ExpectedConditions.textToBe(By.className("doc-comment-input-placeholder"), "按enter发送，shift+enter换行"));
 
 		logout();
 		login("autoTest12@shimo.im", "123123");
@@ -238,7 +238,7 @@ public class testNotice extends TestInit {
 	@Test(enabled = true)
 	public void notice_6() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
-//		desktop.click();
+		// desktop.click();
 		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
@@ -250,7 +250,7 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_notice_user));
 		doc_notice_user.click();
 		wait.until(ExpectedConditions.textToBe(By.xpath("//span[@id='save-status']//span[2]"), "自动保存成功"));
-		
+
 		b_back.click();
 		logout();
 		login("autoTest12@shimo.im", "123123");
