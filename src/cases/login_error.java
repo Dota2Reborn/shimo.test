@@ -15,12 +15,13 @@ public class login_error extends TestInit {
 	 * 登录 输入不符合格式的邮箱登录
 	 * 
 	 * @author 陈清杰
+	 * @return 
 	 * @Time 2018-01-08
 	 */
 
 	@SuppressWarnings("deprecation")
 	@Test
-	public login_error() throws InterruptedException {
+	public void login_error66() throws InterruptedException {
 
 		driver.navigate().to("https://release.shimodev.com/");
 		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"))
