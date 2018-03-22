@@ -73,7 +73,7 @@
 				"elementName": "New_Share_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='share-list-wrapper']//div[2]//div[1]//div[1]//a[1]",
-				"note": "工作台-新的共享-文件"
+				"note": "工作台-新的共享-第一个文件"
 			},
 			{
 				"elementName": "dashboard_shareTime_1",
