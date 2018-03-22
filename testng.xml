@@ -2,13 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="shimo" parallel="none">
 	<test name="Desktop">
-		<classes>
-			<class name="cases.testDesktop" />
-			<class name="cases.testAddCollaborator" />
-			<class name="cases.testDashboard" />
-			<class name="cases.testDesktopOrderBy" />
-			<class name="cases.testSearch" />
-			<class name="cases.testNotice" />
-		</classes>
+		<packages>
+			<package name="cases" />
+		</packages>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
