@@ -1,6 +1,7 @@
 package cases;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -210,30 +211,38 @@ public class dashboard_own extends TestInit{
 		input_addCollaborator.sendKeys("own7@shimo.im");
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
 		b_addCollaborator_1_add.click();
-//		Date date = new Date();
-//		DateFormat format = new SimpleDateFormat("HH:mm");
-//		String time = format.format(date);
-//		System.out.println(time+"时间");
+		//获取当前时间
+		Boolean a = false;
+		Date date = new Date();
+		DateFormat format = new SimpleDateFormat("HHmm");
+		String time = format.format(date);
+		int dat1=Integer.parseInt(time);
 		wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
 		Shut_down_sm_modal_close_x.click();
 		logout();
 		login("own7@shimo.im", "123123");
 		String n = dashboard_shareTime_1.getText();
-		assertEquals(n, "刚刚");
+
+		String m="刚刚";
+		if(n.equals(m)) {
+			assertEquals(n,"刚刚");
+			a = true;
+		}else if(n!=m) {
+			String name2 = n.substring(n.length()-5);
+			name2=name2.replace(":",""); 
+			int dat2=Integer.parseInt(name2);
+			if(dat2==dat1||dat2>dat1) {
+				a = true;
+			}
+			
+		}
+		
+		assertTrue(a);
 		action.contextClick(dashboard_shareTime_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
 		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
-//		System.out.println(n+n+n+n);
-//		String m="刚刚";
-//		if(n.equals(m)) {
-//			assertEquals(n, "刚刚");
-//			
-//		}else if(n!="刚刚") {
-//			String name2 = n.substring(n.length()-5);
-//			assertEquals(time, name2);
-//		}
 
 		
 		
