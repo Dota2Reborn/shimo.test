@@ -234,9 +234,7 @@ public class dashboard_own extends TestInit{
 			if(dat2==dat1||dat2>dat1) {
 				a = true;
 			}
-			
 		}
-		
 		assertTrue(a);
 		action.contextClick(dashboard_shareTime_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
