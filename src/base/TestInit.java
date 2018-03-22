@@ -354,6 +354,8 @@ public class TestInit {
 	public WebElement dashboard_shareTime_unread;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file")
 	public WebElement dashboard_share_file;
+	@SearchWith(pageName = "dashboard", elementName = "New_Share_1",noteName="新的共享第一个")
+	public WebElement New_Share_1;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_1")
 	public WebElement dashboard_1;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_2")
