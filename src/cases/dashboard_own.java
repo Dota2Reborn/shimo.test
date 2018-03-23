@@ -241,6 +241,7 @@ public class dashboard_own extends TestInit{
 		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
+		
 	     
 	}
 
