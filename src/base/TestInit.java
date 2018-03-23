@@ -57,7 +57,7 @@ public class TestInit {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-		// driver.quit();
+		driver.quit();
 	}
 
 	/**
@@ -303,12 +303,11 @@ public class TestInit {
 	public WebElement desktop_orderHeader_3;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1_name", noteName = "获取第一个文件名称")
 	public WebElement desktop1_1_name;
-	
 
 	// doc
 	@SearchWith(pageName = "doc", elementName = "b_back")
 	public WebElement b_back;
-	@SearchWith(pageName = "doc", elementName = "doc_saveStatus", noteName="文档/表格提示状态-灰字")
+	@SearchWith(pageName = "doc", elementName = "doc_saveStatus", noteName = "文档/表格提示状态-灰字")
 	public WebElement doc_saveStatus;
 	@SearchWith(pageName = "doc", elementName = "quick_access_point")
 	public WebElement quick_access_point;
@@ -354,7 +353,7 @@ public class TestInit {
 	public WebElement dashboard_shareTime_unread;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file")
 	public WebElement dashboard_share_file;
-	@SearchWith(pageName = "dashboard", elementName = "New_Share_1",noteName="新的共享第一个")
+	@SearchWith(pageName = "dashboard", elementName = "New_Share_1", noteName = "新的共享第一个")
 	public WebElement New_Share_1;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_1")
 	public WebElement dashboard_1;
@@ -516,8 +515,8 @@ public class TestInit {
 	public WebElement Pwd;
 	@SearchWith(pageName = "Registered", elementName = "Next")
 	public WebElement Next;
-	
-	//桌面/工作台-菜单
+
+	// 桌面/工作台-菜单
 	@SearchWith(pageName = "menu", elementName = "menu_newPage", noteName = "新标签页中打开")
 	public WebElement menu_newPage;
 	@SearchWith(pageName = "menu", elementName = "menu_shortcut", noteName = "添加到快捷方式")
@@ -542,7 +541,7 @@ public class TestInit {
 	public WebElement menu_Recovery;
 	@SearchWith(pageName = "menu", elementName = "menu_Completely_removed", noteName = "彻底删除")
 	public WebElement menu_Completely_removed;
-	//文档表格编辑页点点等-菜单
+	// 文档表格编辑页点点等-菜单
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_version", noteName = "保存版本")
 	public WebElement file_menu_version;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_shortcut", noteName = "添加快捷方式")
