@@ -1,5 +1,8 @@
 package cases;
 
-public class testAlertMute {
+import base.TestInit;
+
+public class testAlertMute extends TestInit {
+	
 
 }
