@@ -149,6 +149,13 @@ public class TestInit {
 			desktop_order.click();
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 			desktop_orderByDefault.click();
+		} else {
+			return;
+		}
+		
+		msg = desktop_show_type.getText();
+		if (msg.equals("平铺")) {
+			desktop_show_type.click();
 		}
 	}
 
@@ -213,6 +220,59 @@ public class TestInit {
 		} catch (NoSuchElementException e) {
 			return false;
 		}
+	}
+
+	/**
+	 * 右键点击
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-23
+	 *
+	 */
+	public void contextClick(WebElement element) {
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			action.contextClick(element).perform();
+		} catch (NoSuchElementException e) {
+			//TODO
+			System.out.println(element + "is missing");
+		}
+	}
+	
+	/**
+	 * 左键点击
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-23
+	 *
+	 */
+	public void click(WebElement element) {
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			element.click();
+		} catch (NoSuchElementException e) {
+			//TODO
+			System.out.println(element + "is missing");
+		}
+	}
+	
+	/**
+	 * 获取文本信息
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-23
+	 *
+	 */
+	public String getText(WebElement element) {
+		String msg = "";
+		try {
+			wait.until(ExpectedConditions.visibilityOf(element));
+			msg = addCollaborator_total.getText();
+		} catch (NoSuchElementException e) {
+			//TODO
+			System.out.println(element + "is missing");
+		}
+		return msg;
 	}
 
 	/**
