@@ -3,6 +3,7 @@ package cases;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -57,7 +58,7 @@ public class testRecycleBin extends TestInit{
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
 		desktop_newDoc.click();
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
-		doc_edit.sendKeys("文档内输入内容，可进入回收站");
+		doc_edit.sendKeys("文档内输入内容，可进入回收站"+Keys.ENTER);//.send_keys(Keys.ENTER);
 		Thread.sleep(1000);
 		//点点点
 		doc_menu.click();
