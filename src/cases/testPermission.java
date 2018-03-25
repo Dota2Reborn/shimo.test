@@ -23,7 +23,7 @@ public class testPermission extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		Tile();
-		//右键第一个文件desktop_setting_doc_5
+		//右键第一个文件
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_cooperation));
 		menu_cooperation.click();
