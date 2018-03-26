@@ -50,7 +50,6 @@ public class testAlertMute extends TestInit {
 		String gg = "刚刚";
 		if(time2.equals(gg)) {
 			a=true;
-			//System.out.println("adasdasdasdas死的");
 		}else if(time2!="刚刚") {
 			String time3 = time2.substring(time2.length()-5);
 			time3=time3.replace(":",""); 
@@ -66,7 +65,6 @@ public class testAlertMute extends TestInit {
 		click(End_Discussion_OK);
 		click(doc_menu);
 		click(file_menu_mute);
-		
 		
 	}
 	
