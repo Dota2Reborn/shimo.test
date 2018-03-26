@@ -23,18 +23,19 @@ public class hovertest extends TestInit{
 	 */
 	@Test
 	public void hover_person () throws InterruptedException{
-		driver.navigate().to("https://release.shimodev.com/");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
+		
+		
 		
 		login("autoTesthover@shimo.im", "123123");
-		
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_user_icon));
 		action.moveToElement(desktop_user_icon).perform();
-		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]")));
 		String aa = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]";
 		String result = driver.findElement(By.xpath(aa)).getText();
 		assertEquals(result, "基础版");
 		
-		String bb = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span";
+		String bb = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[1]";
 		String result2 = driver.findElement(By.xpath(bb)).getText();
 		assertEquals(result2, "基础版");
 		
@@ -46,17 +47,17 @@ public class hovertest extends TestInit{
 		String result4 = driver.findElement(By.xpath(dd)).getText();
 		assertEquals(result4, "autoTesthover@shimo.im");
 		
-		String result5 = "";
-		result5 = driver.findElement(By.xpath("desktop_user_icon_companyManagement")).getText();
+		String ee = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[5]";
+		String result5 = driver.findElement(By.xpath(ee)).getText();
 		assertEquals(result5, "帐号设置");
-		
+
 		String ff = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[7]//span";
 		String result6 = driver.findElement(By.xpath(ff)).getText();
 		assertEquals(result6, "邀请好友免费获得高级版");
 		
 		String gg = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]";
 		String result7 = driver.findElement(By.xpath(gg)).getText();
-		assertEquals(result7, "下载石墨文档 Appmobile");
+		assertEquals(result7, "下载石墨文档 App");
 		
 		String hh = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]";
 		String result8 = driver.findElement(By.xpath(hh)).getText();
@@ -79,8 +80,7 @@ public class hovertest extends TestInit{
 	 */
 	@Test
 	public void hover_person1 ()throws InterruptedException{
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		
 		login("autoTesthover@shimo.im", "123123");
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
@@ -113,8 +113,7 @@ public class hovertest extends TestInit{
 	@Test
 	public void hover_person2()throws InterruptedException{
 		
-		driver .navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		login("autoTesthover@shimo.im", "123123");
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
 		action.moveToElement(img).perform();
@@ -138,7 +137,7 @@ public class hovertest extends TestInit{
 	@Test
 	public void hover_person3() throws InterruptedException{
 		
-		driver.navigate().to("https://release.shimodev.com");
+		
 		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
 		login("autoTesthover@shimo.im", "123123");
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
@@ -161,8 +160,7 @@ public class hovertest extends TestInit{
 	 */
 	@Test
 	public void hover_person4() throws InterruptedException{
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		login("autoTesthover@shimo.im", "123123");
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
 		action.moveToElement(img).perform();
@@ -186,8 +184,7 @@ public class hovertest extends TestInit{
 	@Test
 	public void hover_person5()throws InterruptedException{
 		
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		login("autoTesthover@shimo.im", "123123");
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
 		action.moveToElement(img).perform();
@@ -209,8 +206,7 @@ public class hovertest extends TestInit{
 	@Test
 	public void hover_person6() throws InterruptedException{
 		
-		driver.navigate().to("https://release.shimodev.com");
-	    driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 	    login("autoTest@shimo.im", "123123");
 	    WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
 	    action.moveToElement(img).perform();
@@ -231,12 +227,11 @@ public class hovertest extends TestInit{
 	 */
 	@Test
 	public void hover_person7() throws InterruptedException{
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		login("gaoji1@shimo.im","123456");
 		action.moveToElement(desktop_user_icon).perform();
 		Thread.sleep(1000);
-		
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]")));
 		String cc = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]";
 		String result = driver.findElement(By.xpath(cc)).getText();
 		assertEquals(result , "gaoji1");
@@ -254,11 +249,7 @@ public class hovertest extends TestInit{
 	    String result3 = driver.findElement(By.xpath(dd)).getText();
 	    assertEquals(result3, "gaoji1@shimo.im");
 	    
-	    String ee = "";
-	    ee = driver.findElement(By.xpath("desktop_user_icon_accountSetting")).getText();
-	    assertEquals(ee, "账号设置");
-        
-		
+	  
 		
 		
 		
@@ -275,8 +266,7 @@ public class hovertest extends TestInit{
 	@Test
 	public void hover_person8() throws InterruptedException{
 		
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		login("gaoji1@shimo.im", "123456");
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
 		action.moveToElement(img).perform();
@@ -300,8 +290,7 @@ public class hovertest extends TestInit{
 	 */
 	@Test
 	public void hover_person9 ()throws InterruptedException{
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		
 	    login("gaoji1@shimo.im", "123456");
 	    WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
@@ -325,8 +314,7 @@ public class hovertest extends TestInit{
 	 */
 	@Test
 	public void hover_person10() throws InterruptedException{
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		login("shiyongtest@shimo.im", "123123");
 		
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
@@ -355,8 +343,7 @@ public class hovertest extends TestInit{
 	@Test
 	public void hover_person11 () throws InterruptedException{
 		
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		login("shiyongtest@shimo.im", "123123");
 		
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
@@ -379,8 +366,7 @@ public class hovertest extends TestInit{
 	 */
 	@Test
 	public void hover_person12() throws  InterruptedException{
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+	
 		login("shiyongtest@shimo.im", "123123");
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
 		action.moveToElement(img).perform();
@@ -399,8 +385,7 @@ public class hovertest extends TestInit{
 	 */
 	@Test
 	public void hover_person13 ()throws InterruptedException{
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		login("fufei1@shimo.im", "123456");
 		WebElement  img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
 		action.moveToElement(img).perform();
@@ -421,8 +406,7 @@ public class hovertest extends TestInit{
 	 */
 	@Test
 	public void hover_person14() throws InterruptedException{
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		login("fufei1@shimo.im", "123456");
 		
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
@@ -444,8 +428,7 @@ public class hovertest extends TestInit{
 	@Test
 	public void hover_person15() throws InterruptedException{
 		
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		login("fufei1@shimo.im", "123456");
 		
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));

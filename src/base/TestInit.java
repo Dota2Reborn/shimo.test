@@ -35,7 +35,9 @@ public class TestInit {
 		test_url = init.getUrl();
 		driver = init.initData(this);
 		action = new Actions(driver);
-		driver.navigate().to(test_url);
+		driver.navigate().to(test_url + "login");
+//		driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+//		System.out.println("11111111111111111111111111111111111111");
 		wait = new WebDriverWait(driver, 20);
 	}
 
@@ -43,7 +45,7 @@ public class TestInit {
 	public void setUp() throws Exception {
 		System.out.println("--------------------------------------------");
 		String url = driver.getCurrentUrl();
-		if (url != test_url) {
+		if (!url.equals(test_url + "login")) {
 			logout();
 		}
 	}
@@ -71,7 +73,9 @@ public class TestInit {
 		String className = new Exception().getStackTrace()[1].getMethodName();
 		printLog(className, user);
 
-		driver.navigate().to(test_url + "login");
+		if (!driver.getCurrentUrl().equals(test_url + "login")) {
+			driver.navigate().to(test_url + "login");
+		}
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
 		userPwd.sendKeys(pwd);
@@ -128,6 +132,8 @@ public class TestInit {
 	 */
 	public void logout() {
 		driver.navigate().to(test_url + "logout");
+//		driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+//		System.out.println("11111111111111111111111111111111111111");
 		action.sendKeys(Keys.ESCAPE);
 	}
 
@@ -152,7 +158,7 @@ public class TestInit {
 		} else {
 			return;
 		}
-		
+
 		msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {
 			desktop_show_type.click();
@@ -222,6 +228,7 @@ public class TestInit {
 		}
 	}
 
+
 	/**
 	 * 右键点击
 	 * 
@@ -234,12 +241,12 @@ public class TestInit {
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			action.contextClick(element).perform();
 		} catch (NoSuchElementException e) {
-			//TODO
+			// TODO
 			System.out.println(element + "is missing");
 		}
-		
+
 	}
-	
+
 	/**
 	 * 左键点击
 	 * 
@@ -252,11 +259,11 @@ public class TestInit {
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
 		} catch (NoSuchElementException e) {
-			//TODO
+			// TODO
 			System.out.println(element + "is missing");
 		}
 	}
-	
+
 	/**
 	 * 获取文本信息
 	 * 
@@ -270,7 +277,7 @@ public class TestInit {
 			wait.until(ExpectedConditions.visibilityOf(element));
 			msg = addCollaborator_total.getText();
 		} catch (NoSuchElementException e) {
-			//TODO
+			// TODO
 			System.out.println(element + "is missing");
 		}
 		return msg;
@@ -315,45 +322,45 @@ public class TestInit {
 	public WebElement desktop1_2_folder;
 	@SearchWith(pageName = "desktop", elementName = "desktop_list_1_file", noteName = "列表模式第一个文件")
 	public WebElement desktop_list_1_file;
-	@SearchWith(pageName = "desktop", elementName = "desktop_list_2_file",noteName = "列表模式第二个文件")
+	@SearchWith(pageName = "desktop", elementName = "desktop_list_2_file", noteName = "列表模式第二个文件")
 	public WebElement desktop_list_2_file;
-	@SearchWith(pageName = "desktop", elementName = "desktop_list_3_file",noteName = "列表模式第三个文件")
+	@SearchWith(pageName = "desktop", elementName = "desktop_list_3_file", noteName = "列表模式第三个文件")
 	public WebElement desktop_list_3_file;
-	@SearchWith(pageName = "desktop", elementName = "desktop_order",noteName = "桌面排序")
+	@SearchWith(pageName = "desktop", elementName = "desktop_order", noteName = "桌面排序")
 	public WebElement desktop_order;
-	@SearchWith(pageName = "desktop", elementName = "desktop_orderByUpdate",noteName = "桌面排序-按更新时间")
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByUpdate", noteName = "桌面排序-按更新时间")
 	public WebElement desktop_orderByUpdate;
-	@SearchWith(pageName = "desktop", elementName = "desktop_orderByCreate",noteName = "桌面排序-按创建时间")
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByCreate", noteName = "桌面排序-按创建时间")
 	public WebElement desktop_orderByCreate;
-	@SearchWith(pageName = "desktop", elementName = "desktop_orderByFile",noteName = "桌面排序-文件名")
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByFile", noteName = "桌面排序-文件名")
 	public WebElement desktop_orderByFile;
-	@SearchWith(pageName = "desktop", elementName = "desktop_orderByOwner",noteName = "桌面排序-所有者")
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByOwner", noteName = "桌面排序-所有者")
 	public WebElement desktop_orderByOwner;
-	@SearchWith(pageName = "desktop", elementName = "desktop_orderByFolderUP",noteName = "桌面排序-文件夹置顶")
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByFolderUP", noteName = "桌面排序-文件夹置顶")
 	public WebElement desktop_orderByFolderUP;
-	@SearchWith(pageName = "desktop", elementName = "desktop_orderByDefault",noteName = "桌面排序-默认")
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByDefault", noteName = "桌面排序-默认")
 	public WebElement desktop_orderByDefault;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newSheet",noteName = "新建表格")
+	@SearchWith(pageName = "desktop", elementName = "desktop_newSheet", noteName = "新建表格")
 	public WebElement desktop_newSheet;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder",noteName = "新建文件夹")
+	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder", noteName = "新建文件夹")
 	public WebElement desktop_newFolder;
-	@SearchWith(pageName = "desktop", elementName = "desktop_import",noteName = "导入")
+	@SearchWith(pageName = "desktop", elementName = "desktop_import", noteName = "导入")
 	public WebElement desktop_import;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name",noteName = "文件夹命名")
+	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name", noteName = "文件夹命名")
 	public WebElement desktop_newFolder_name;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_cancel",noteName = "文件夹命名取消")
+	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_cancel", noteName = "文件夹命名取消")
 	public WebElement desktop_newFolder_name_cancel;
-	@SearchWith(pageName = "desktop", elementName = "desktop_set",noteName = "hover文件的齿轮")
+	@SearchWith(pageName = "desktop", elementName = "desktop_set", noteName = "hover文件的齿轮")
 	public WebElement desktop_setting;
-	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_1",noteName = "桌面快捷方式第一个")
+	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_1", noteName = "桌面快捷方式第一个")
 	public WebElement desktop_shortcut_1;
-	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_button",noteName = "移动到测试文件夹")
+	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_button", noteName = "移动到测试文件夹")
 	public WebElement desktop_moveFolder_button;
-	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_back_button",noteName = "移动文件到文件夹，列表中后退按钮")
+	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_back_button", noteName = "移动文件到文件夹，列表中后退按钮")
 	public WebElement desktop_moveFolder_back_button;
-	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_1",noteName = "移动文件到文件夹，选择列表中第一个文件夹")
+	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_1", noteName = "移动文件到文件夹，选择列表中第一个文件夹")
 	public WebElement desktop_moveFolder_list_1;
-	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_2",noteName = "移动文件到文件夹，选择列表中第二个文件夹")
+	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_2", noteName = "移动文件到文件夹，选择列表中第二个文件夹")
 	public WebElement desktop_moveFolder_list_2;
 	@SearchWith(pageName = "desktop", elementName = "desktop_orderHeader_1", noteName = "表头文件名排序")
 	public WebElement desktop_orderHeader_1;
@@ -363,108 +370,113 @@ public class TestInit {
 	public WebElement desktop_orderHeader_3;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1_name", noteName = "获取第一个文件名称")
 	public WebElement desktop1_1_name;
-	
 
 	// doc
 	@SearchWith(pageName = "doc", elementName = "b_back", noteName = "后退")
 	public WebElement b_back;
-	@SearchWith(pageName = "doc", elementName = "doc_saveStatus", noteName="文档/表格提示状态-灰字")
+	@SearchWith(pageName = "doc", elementName = "doc_saveStatus", noteName = "文档/表格提示状态-灰字")
 	public WebElement doc_saveStatus;
-	@SearchWith(pageName = "doc", elementName = "quick_access_point",noteName = "收索&快速打开")
+	@SearchWith(pageName = "doc", elementName = "quick_access_point", noteName = "收索&快速打开")
 	public WebElement quick_access_point;
-	@SearchWith(pageName = "doc", elementName = "Back_to_Desktop",noteName = "一级文件夹下的文档或者表格中，下箭头直接返回桌面")
+	@SearchWith(pageName = "doc", elementName = "Back_to_Desktop", noteName = "一级文件夹下的文档或者表格中，下箭头直接返回桌面")
 	public WebElement Back_to_Desktop;
-	@SearchWith(pageName = "doc", elementName = "doc_edit",noteName = "文档编辑入口")
+	@SearchWith(pageName = "doc", elementName = "Back_to_Table", noteName = "一级文件夹下的文档或者表格中，下箭头直接返回工作台")
+	public WebElement Back_to_Table;
+	@SearchWith(pageName = "doc", elementName = "doc_edit", noteName = "文档编辑入口")
 	public WebElement doc_edit;
-	@SearchWith(pageName = "doc", elementName = "doc_notice_user",noteName = "@用户，被选列表中内容第一个用户")
+	@SearchWith(pageName = "doc", elementName = "doc_notice_user", noteName = "@用户，被选列表中内容第一个用户")
 	public WebElement doc_notice_user;
-	@SearchWith(pageName = "doc", elementName = "doc_menu",noteName = "文档编辑页面中右上角 点点点")
+	@SearchWith(pageName = "doc", elementName = "doc_menu", noteName = "文档编辑页面中右上角 点点点")
 	public WebElement doc_menu;
 	@SearchWith(pageName = "doc", elementName = "doc_menu_msg", noteName = "文档编辑页面中右上角 点点点-文档信息")
 	public WebElement doc_menu_msg;
-	@SearchWith(pageName = "doc", elementName = "doc_menu_delete",noteName = "文档编辑页面中右上角 点点点-删除文档")
+	@SearchWith(pageName = "doc", elementName = "doc_menu_delete", noteName = "文档编辑页面中右上角 点点点-删除文档")
 	public WebElement doc_menu_delete;
-	@SearchWith(pageName = "doc", elementName = "doc_menu_delete_OK",noteName = "文档编辑页面中右上角 点点点-删除文档-确定按钮")
+	@SearchWith(pageName = "doc", elementName = "doc_menu_delete_OK", noteName = "文档编辑页面中右上角 点点点-删除文档-确定按钮")
 	public WebElement doc_menu_delete_OK;
-	@SearchWith(pageName = "doc", elementName = "doc_discuss",noteName = "文档编辑页面中评论按钮")
+	@SearchWith(pageName = "doc", elementName = "doc_discuss", noteName = "文档编辑页面中评论按钮")
 	public WebElement doc_discuss;
-	@SearchWith(pageName = "doc", elementName = "doc_discuss_input",noteName = "文档编辑页面中评论输入框")
+	@SearchWith(pageName = "doc", elementName = "doc_discuss_input", noteName = "文档编辑页面中评论输入框")
 	public WebElement doc_discuss_input;
-	@SearchWith(pageName = "doc", elementName = "doc_discuss_input_ok",noteName = "文档编辑页面中评论输入框-确定按钮")
+	@SearchWith(pageName = "doc", elementName = "doc_discuss_input_ok", noteName = "文档编辑页面中评论输入框-确定按钮")
 	public WebElement doc_discuss_input_ok;
-	@SearchWith(pageName = "doc", elementName = "ql_comment_Comments",noteName = "工具栏中发起评论按钮")
+	@SearchWith(pageName = "doc", elementName = "ql_comment_Comments", noteName = "工具栏中发起评论按钮")
 	public WebElement ql_comment_Comments;
-	@SearchWith(pageName = "doc", elementName = "Folder_settings",noteName = "文件夹中上方设置按钮")
+	@SearchWith(pageName = "doc", elementName = "Folder_settings", noteName = "文件夹中上方设置按钮")
 	public WebElement Folder_settings;
-	@SearchWith(pageName = "doc", elementName = "Exit_share_OK",noteName = "管理员删除文档-选择退出共享")
+	@SearchWith(pageName = "doc", elementName = "Exit_share_OK", noteName = "管理员删除文档-选择退出共享")
 	public WebElement Exit_share_OK;
 	@SearchWith(pageName = "doc", elementName = "Collection_OK", noteName = "标题栏收藏按钮")
 	public WebElement Collection_OK;
+	@SearchWith(pageName = "doc", elementName = "End_Discussion", noteName = "结束讨论")
+	public WebElement End_Discussion;
+	@SearchWith(pageName = "doc", elementName = "End_Discussion_OK", noteName = "确定结束讨论")
+	public WebElement End_Discussion_OK;
 
 	// dashboard
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_time",noteName = "工作台-最近更新-更新时间")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_time", noteName = "工作台-最近更新-更新时间")
 	public WebElement dashboard_update_time;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_file",noteName = "工作台-共享给我的-文件")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_file", noteName = "工作台-共享给我的-文件")
 	public WebElement dashboard_update_file;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_name",noteName = "工作台-最近更新-文件名")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_name", noteName = "工作台-最近更新-文件名")
 	public WebElement dashboard_update_name;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_shareTime_1",noteName = "新的共享-大标签-更新时间")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_shareTime_1", noteName = "新的共享-大标签-更新时间")
 	public WebElement dashboard_shareTime_1;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_shareTime_unread",noteName = "新的共享-大标签-标记已读")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_shareTime_unread", noteName = "新的共享-大标签-标记已读")
 	public WebElement dashboard_shareTime_unread;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file",noteName = "工作台-共享给我的-文件")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file", noteName = "工作台-共享给我的-文件")
 	public WebElement dashboard_share_file;
-	@SearchWith(pageName = "dashboard", elementName = "New_Share_1",noteName="新的共享第一个")
+	@SearchWith(pageName = "dashboard", elementName = "New_Share_1", noteName = "新的共享第一个")
 	public WebElement New_Share_1;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_1",noteName = "工作台-最近更新")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_1", noteName = "工作台-最近更新")
 	public WebElement dashboard_1;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_2",noteName = "工作台-最近使用")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_2", noteName = "工作台-最近使用")
 	public WebElement dashboard_2;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_3",noteName = "工作台-我创建的")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_3", noteName = "工作台-我创建的")
 	public WebElement dashboard_3;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_4",noteName = "工作台-共享给我的")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_4", noteName = "工作台-共享给我的")
 	public WebElement dashboard_4;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard",noteName = "切换到工作台")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard", noteName = "切换到工作台")
 	public WebElement dashboard;
-	@SearchWith(pageName = "dashboard", elementName = "favorites",noteName = "切换到我的收藏")
+	@SearchWith(pageName = "dashboard", elementName = "favorites", noteName = "切换到我的收藏")
 	public WebElement favorites;
-	@SearchWith(pageName = "dashboard", elementName = "trash",noteName = "切换到回收站")
+	@SearchWith(pageName = "dashboard", elementName = "trash", noteName = "切换到回收站")
 	public WebElement trash;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_search_button",noteName = "桌面搜索按钮")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_search_button", noteName = "桌面搜索按钮")
 	public WebElement dashboard_search_button;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_search_input",noteName = "桌面搜索输入框")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_search_input", noteName = "桌面搜索输入框")
 	public WebElement dashboard_search_input;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_search_result_1",noteName = "桌面搜索结果第一行")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_search_result_1", noteName = "桌面搜索结果第一行")
 	public WebElement dashboard_search_result_1;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice",noteName = "桌面通知铃铛")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice", noteName = "桌面通知铃铛")
 	public WebElement dashboard_notice;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1",noteName = "桌面通知铃铛-通知列表中第一个")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1", noteName = "桌面通知铃铛-通知列表中第一个")
 	public WebElement dashboard_notice_list_1;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1_button",noteName = "桌面通知铃铛-通知列表中第一个-按钮")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1_button", noteName = "桌面通知铃铛-通知列表中第一个-按钮")
 	public WebElement dashboard_notice_list_1_button;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1_time",noteName = "桌面通知铃铛-通知列表中第一个时间")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1_time", noteName = "桌面通知铃铛-通知列表中第一个时间")
 	public WebElement dashboard_notice_list_1_time;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_unread",noteName = "桌面通知铃铛-未读")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_unread", noteName = "桌面通知铃铛-未读")
 	public WebElement dashboard_notice_list_unread;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_allRead",noteName = "桌面通知铃铛-标记全部已读")
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_allRead", noteName = "桌面通知铃铛-标记全部已读")
 	public WebElement dashboard_notice_list_allRead;
 
 	// addCollaborator
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_close",noteName = "关闭添加协作者弹框")
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_close", noteName = "关闭添加协作者弹框")
 	public WebElement button_addCollaborator_close;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_list",noteName = "协作者列表第一个协作者权限下拉框")
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_list", noteName = "协作者列表第一个协作者权限下拉框")
 	public WebElement b_addCollaborator_1_list;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_2_list",noteName = "协作者列表第二个协作者权限下拉框")
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_2_list", noteName = "协作者列表第二个协作者权限下拉框")
 	public WebElement b_addCollaborator_2_list;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_3_list",noteName = "协作者列表第三个协作者权限下拉框")
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_3_list", noteName = "协作者列表第三个协作者权限下拉框")
 	public WebElement b_addCollaborator_3_list;
-	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_1",noteName = "协作者权限列表--转让所有权")
+	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_1", noteName = "协作者权限列表--转让所有权")
 	public WebElement list_addCollaborator_1;
-	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4",noteName = "协作者权限列表--移除")
+	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4", noteName = "协作者权限列表--移除")
 	public WebElement list_addCollaborator_4;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_total",noteName = "协作者人数")
+	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_total", noteName = "协作者人数")
 	public WebElement addCollaborator_total;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_1_add",noteName = "最近协作者列表第一个添加按钮")
+	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_1_add", noteName = "最近协作者列表第一个添加按钮")
 	public WebElement addCollaborator_1_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_companyList_2_add", noteName = "企业协作者列表第二个添加按钮")
 	public WebElement addCollaborator_companyList_2_add;
@@ -576,8 +588,8 @@ public class TestInit {
 	public WebElement Pwd;
 	@SearchWith(pageName = "Registered", elementName = "Next", noteName = "下一步")
 	public WebElement Next;
-	
-	//桌面/工作台-菜单
+
+	// 桌面/工作台-菜单
 	@SearchWith(pageName = "menu", elementName = "menu_newPage", noteName = "新标签页中打开")
 	public WebElement menu_newPage;
 	@SearchWith(pageName = "menu", elementName = "menu_shortcut", noteName = "添加到快捷方式")
@@ -602,7 +614,10 @@ public class TestInit {
 	public WebElement menu_Recovery;
 	@SearchWith(pageName = "menu", elementName = "menu_Completely_removed", noteName = "彻底删除")
 	public WebElement menu_Completely_removed;
-	//文档表格编辑页点点等-菜单
+	@SearchWith(pageName = "menu", elementName = "menu_Point_Menu", noteName = "工作台-最近使用-第一个文件点点(仅有一个文件时使用)")
+	public WebElement menu_Point_Menu;
+
+	// 文档表格编辑页点点等-菜单
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_version", noteName = "保存版本")
 	public WebElement file_menu_version;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_shortcut", noteName = "添加快捷方式")

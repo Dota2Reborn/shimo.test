@@ -67,7 +67,7 @@
 				"elementName": "dashboard_share_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='category-list-wrapper']//div[2]//div[2]",
-				"note": "工作台-共享给我的-文件"
+				"note": "工作台-共享给我的(最近使用、我创建的)-第一个文件"
 			},
 			{
 				"elementName": "New_Share_1",
@@ -573,8 +573,14 @@
 			{
 				"elementName": "Back_to_Desktop",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='qa-ancestor']//div[2]//a[1]",
+				"locator": "//div[@class='qa-ancestor']//div[1]//a[1]",
 				"note": "一级文件夹下的文档或者表格中，下箭头直接返回桌面"
+			},
+			{
+				"elementName": "Back_to_Table",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='qa-ancestor']//div[2]//a[1]",
+				"note": "一级文件夹下的文档或者表格中，下箭头直接返回工作台"
 			},
 			{
 				"elementName": "doc_edit",
@@ -659,6 +665,18 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='s-menu-btn-wrap']//div[1]//div[1]",
 				"note": "标题栏收藏按钮"
+			},
+			{
+				"elementName": "End_Discussion",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='doc-comment-header']//a[1]//span[2]",
+				"note": "结束讨论"
+			},
+			{
+				"elementName": "End_Discussion_OK",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='confirm-wrap']//div[1]//div[3]//button[1]",
+				"note": "确定结束讨论"
 			}
 			
 		]
@@ -966,6 +984,12 @@
 				"locateUsing": "xpath",
 				"locator": "//li//div[contains(text(),'彻底删除')]",
 				"note": "彻底删除"
+			},
+			{
+				"elementName": "menu_Point_Menu",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='file-options-icon']",
+				"note": "工作台-最近使用-第一个文件点点(仅有一个文件时使用)"
 			}
 		]
 	},

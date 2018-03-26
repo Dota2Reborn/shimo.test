@@ -138,7 +138,7 @@ public class dashboard_shared extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_4));
 	    dashboard_4.click();
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-		WebElement card1 = driver.findElement(By.xpath("//div[@class='category-card-container']"));
+		WebElement card1 = driver.findElement(By.xpath("//div[@class='category-card-container']"));//卡片
 		action.moveToElement(card1).perform();
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).click();
 		Thread.sleep(1000);
@@ -235,7 +235,7 @@ public class dashboard_shared extends TestInit {
 	 *共享给我
 	 *先共享文件，再共享包含该文件的文件夹，生成两个卡片
 	 * @author 陈清杰
-	 * @Time2018-03-22
+	 * @Time2018-03-23
 	 * */
 	/*@Test
 	public void shared4()throws InterruptedException{

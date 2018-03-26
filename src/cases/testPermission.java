@@ -21,23 +21,21 @@ public class testPermission extends TestInit {
 		login("testing_1@test.im","123123");
 		desktop.click();
 
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		Tile();
 		//右键第一个文件
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_cooperation));
-		menu_cooperation.click();
+		click(menu_cooperation);
 		Add(0,"testing_2@test.im");
 		Modify(2,2);
-		Shut_down_sm_modal_close_x.click();
+		click(Shut_down_sm_modal_close_x);
 		logout();
 		login("testing_2@test.im","123123");
-		desktop.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		click(desktop);
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		Tile();
 		desktop1_1_folder.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		desktop1_1.click();
+		click(desktop1_1);
 		wait.until(ExpectedConditions.elementToBeClickable(ql_comment_Comments));
 
 		driver.findElement(By.xpath("//div[@id='ql-container']//div[1]//p")).click();
@@ -47,13 +45,11 @@ public class testPermission extends TestInit {
 		String M = doc_discuss_input.getAttribute("spellcheck");
 		assertEquals(M,"false");
 		quick_access_point.click();
-		wait.until(ExpectedConditions.elementToBeClickable(Back_to_Desktop));
-		Back_to_Desktop.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		click(Back_to_Desktop);
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		action.contextClick(desktop1_1).perform();
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(Exit_share_OK));
-		Exit_share_OK.click();
+		click(menu_delete);
+		click(Exit_share_OK);
 	}
 	/**
 	 * 文件夹添加只读协作者
@@ -79,6 +75,9 @@ public class testPermission extends TestInit {
 		logout();
 		login("testing_5@test.im","123123");
 		desktop.click();
+		
+		click(desktop);
+		
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		Tile();
 		desktop1_1_folder.click();
