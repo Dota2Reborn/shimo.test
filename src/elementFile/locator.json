@@ -67,7 +67,7 @@
 				"elementName": "dashboard_share_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='category-list-wrapper']//div[2]//div[2]",
-				"note": "工作台-共享给我的-文件"
+				"note": "工作台-共享给我的(最近使用、我创建的)-第一个文件"
 			},
 			{
 				"elementName": "New_Share_1",
