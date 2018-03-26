@@ -1,13 +1,10 @@
 package cases;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -49,11 +46,11 @@ public class testAlertMute extends TestInit {
 		//String time2 = getText(dashboard_notice_list_1_time);
 		wait.until(ExpectedConditions.visibilityOf(dashboard_notice_list_1_time));
 		String time2 = dashboard_notice_list_1_time.getText();
-		System.out.println(time2);
+		//System.out.println(time2);
 		String gg = "刚刚";
 		if(time2.equals(gg)) {
 			a=true;
-			System.out.println("adasdasdasdas死的");
+			//System.out.println("adasdasdasdas死的");
 		}else if(time2!="刚刚") {
 			String time3 = time2.substring(time2.length()-5);
 			time3=time3.replace(":",""); 
@@ -64,9 +61,12 @@ public class testAlertMute extends TestInit {
 		}
 		assertTrue(a);
 		dashboard_notice_list_1.click();
-		driver.findElement(By.className("doc-comment-close"));
-		click(menu_Point_Menu);
-		click(menu_mute);
+		switchToPage(1);
+		click(End_Discussion);
+		click(End_Discussion_OK);
+		click(doc_menu);
+		click(file_menu_mute);
+		
 		
 	}
 	
