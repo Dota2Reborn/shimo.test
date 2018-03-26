@@ -221,6 +221,21 @@ public class TestInit {
 			return false;
 		}
 	}
+	
+	/**
+	 * 判断元素是否存在
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-26
+	 *
+	 */
+	public void doesWebElementExist_del(WebElement element) {
+		try {
+			wait.until(ExpectedConditions.visibilityOf(element));
+		} catch (NoSuchElementException e) {
+			System.out.println(element + "is missing");
+		}
+	}
 
 	/**
 	 * 右键点击
