@@ -380,6 +380,8 @@ public class TestInit {
 	public WebElement quick_access_point;
 	@SearchWith(pageName = "doc", elementName = "Back_to_Desktop", noteName = "一级文件夹下的文档或者表格中，下箭头直接返回桌面")
 	public WebElement Back_to_Desktop;
+	@SearchWith(pageName = "doc", elementName = "Back_to_Table", noteName = "一级文件夹下的文档或者表格中，下箭头直接返回工作台")
+	public WebElement Back_to_Table;
 	@SearchWith(pageName = "doc", elementName = "doc_edit", noteName = "文档编辑入口")
 	public WebElement doc_edit;
 	@SearchWith(pageName = "doc", elementName = "doc_notice_user", noteName = "@用户，被选列表中内容第一个用户")
