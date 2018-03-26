@@ -23,9 +23,6 @@ public class login_error extends TestInit {
 	@Test
 	public void login_error66() throws InterruptedException {
 
-		driver.navigate().to("https://release.shimodev.com/");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"))
-				.click();
 
 		login_error("chenqingjie", "123123");
 		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "请输入一个有效的邮箱地址"));
@@ -47,9 +44,7 @@ public class login_error extends TestInit {
 	@Test
 	public void login_error0() throws InterruptedException {
 
-		driver.navigate().to("https://release.shimodev.com/");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"))
-				.click();
+		
 
 		login_error("", "123123");
 		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "请输入邮箱"));
@@ -69,10 +64,7 @@ public class login_error extends TestInit {
 	 */
 	@Test
 	public void login_error1() throws InterruptedException {
-		driver.navigate().to("https://release.shimodev.com/");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"))
-				.click();
-
+		
 		login_error("nizhidaomilandexiaotiejiangma@qq.com", "123123");
 		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "用户不存在"));
 
@@ -91,8 +83,7 @@ public class login_error extends TestInit {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void login_error2() throws InterruptedException {
-		driver.navigate().to("https://release.shimodev.com/");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 
 		login_error("chenqingjie@shimo.im", "");
 		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "请输入密码"));
@@ -114,8 +105,7 @@ public class login_error extends TestInit {
 	@Test
 	public void login_error3() throws Exception {
 
-		driver.navigate().to("https://release.shimodev.com/");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+	
 
 		login_error("chenqingjie@shimo.im", " ");
 		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "密码有误"));
@@ -136,9 +126,8 @@ public class login_error extends TestInit {
 	@Test
 	public void login_error4() throws Exception {
 
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
-
+		
+		
 		login_error("chenqingjie@shimo.im", "8294854");
 		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "密码有误"));
 
@@ -157,8 +146,7 @@ public class login_error extends TestInit {
 	@Test
 	public void login_error5() throws Exception {
 
-		driver.navigate().to("https://release.shimodev.com/");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 
 		login_error("chenqingjie@shimo.im", "777777");
 		// wait.until(ExpectedConditions.textToBePresentInElementLocated(By.className("error-block"),

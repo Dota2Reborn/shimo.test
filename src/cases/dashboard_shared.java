@@ -138,7 +138,7 @@ public class dashboard_shared extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_4));
 	    dashboard_4.click();
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-		WebElement card1 = driver.findElement(By.xpath("//div[@class='category-card-container']"));
+		WebElement card1 = driver.findElement(By.xpath("//div[@class='category-card-container']"));//卡片
 		action.moveToElement(card1).perform();
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).click();
 		Thread.sleep(1000);

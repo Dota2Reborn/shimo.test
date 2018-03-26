@@ -25,8 +25,9 @@ public class dashboard_used  extends TestInit {
 	@Test
 	public void used1() throws InterruptedException{
 		
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']")).click();
+		
+		
+		
 		login("zuijin@shimo.im", "123123");
 		
 	    action.moveToElement(desktop_new).perform();
@@ -49,8 +50,7 @@ public class dashboard_used  extends TestInit {
 	 */
 	    @Test
 	    public void used2() throws InterruptedException{
-		driver.navigate().to("https://release.shimodev.com");
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']")).click();
+		
 		login("zuijin7@shimo.im","123123" );
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_1));
 		dashboard_2.click();
@@ -87,8 +87,7 @@ public class dashboard_used  extends TestInit {
         @Test
 	    public void used3() throws InterruptedException{
         	    
-        	driver.navigate().to("https://release.shimodev.com");
-    		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']")).click();
+        	
     		login("zuijin7@shimo.im","123123" );
     		wait.until(ExpectedConditions.elementToBeClickable(dashboard_1));
     		dashboard_2.click();
@@ -158,8 +157,7 @@ public class dashboard_used  extends TestInit {
 		 *  **/
         @Test
         public   void used5() throws InterruptedException{
-        	driver.navigate().to("http://release.shimodev.com");
-        	driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']")).click();
+        
         	login("zuijin5@shimo.im", "123123");
         	wait.until(ExpectedConditions.elementToBeClickable(dashboard_1));
         	dashboard_2.click();
