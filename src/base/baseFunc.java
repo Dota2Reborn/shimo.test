@@ -63,9 +63,9 @@ public class baseFunc {
 	 */
 	public String getUrl() {
 		if (environment == 1) {
-			test_url = "https://release.shimodev.com/";
+			test_url = "https://release.shimodev.com/login";
 		} else if (environment == 2) {
-			test_url = "https://shimodev.com/";
+			test_url = "https://shimodev.com/login";
 		}
 		return test_url;
 	}
