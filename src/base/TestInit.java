@@ -602,6 +602,8 @@ public class TestInit {
 	public WebElement menu_Recovery;
 	@SearchWith(pageName = "menu", elementName = "menu_Completely_removed", noteName = "彻底删除")
 	public WebElement menu_Completely_removed;
+	@SearchWith(pageName = "menu", elementName = "menu_Point_Menu", noteName = "工作台-最近使用-第一个文件点点(仅有一个文件时使用)")
+	public WebElement menu_Point_Menu;
 	//文档表格编辑页点点等-菜单
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_version", noteName = "保存版本")
 	public WebElement file_menu_version;
