@@ -71,7 +71,7 @@ public class TestInit {
 		String className = new Exception().getStackTrace()[1].getMethodName();
 		printLog(className, user);
 
-		driver.navigate().to(test_url + "login");
+		driver.navigate().to(test_url);
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
 		userPwd.sendKeys(pwd);
@@ -90,7 +90,7 @@ public class TestInit {
 		String className = new Exception().getStackTrace()[1].getMethodName();
 		printLog(className, user);
 
-		driver.navigate().to(test_url + "login");
+		driver.navigate().to(test_url);
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
 		userPwd.sendKeys(pwd);
