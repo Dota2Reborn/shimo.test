@@ -415,6 +415,10 @@ public class TestInit {
 	public WebElement Exit_share_OK;
 	@SearchWith(pageName = "doc", elementName = "Collection_OK", noteName = "标题栏收藏按钮")
 	public WebElement Collection_OK;
+	@SearchWith(pageName = "doc", elementName = "End_Discussion",noteName = "结束讨论")
+	public WebElement End_Discussion;
+	@SearchWith(pageName = "doc", elementName = "End_Discussion_OK", noteName = "确定结束讨论")
+	public WebElement End_Discussion_OK;
 
 	// dashboard
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_time",noteName = "工作台-最近更新-更新时间")
