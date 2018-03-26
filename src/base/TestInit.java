@@ -36,6 +36,8 @@ public class TestInit {
 		driver = init.initData(this);
 		action = new Actions(driver);
 		driver.navigate().to(test_url + "login");
+//		driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+//		System.out.println("11111111111111111111111111111111111111");
 		wait = new WebDriverWait(driver, 20);
 	}
 
@@ -130,6 +132,8 @@ public class TestInit {
 	 */
 	public void logout() {
 		driver.navigate().to(test_url + "logout");
+//		driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+//		System.out.println("11111111111111111111111111111111111111");
 		action.sendKeys(Keys.ESCAPE);
 	}
 
@@ -224,20 +228,6 @@ public class TestInit {
 		}
 	}
 
-	/**
-	 * 判断元素是否存在
-	 * 
-	 * @author 刘晨
-	 * @Time 2018-03-26
-	 *
-	 */
-	public void doesWebElementExist_del(WebElement element) {
-		try {
-			wait.until(ExpectedConditions.visibilityOf(element));
-		} catch (NoSuchElementException e) {
-			System.out.println(element + "is missing");
-		}
-	}
 
 	/**
 	 * 右键点击
