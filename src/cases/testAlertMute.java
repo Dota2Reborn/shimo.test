@@ -88,7 +88,11 @@ public class testAlertMute extends TestInit {
 		click(menu_Point_Menu);
 		click(menu_mute);
 		dashboard_share_file.click();
+		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.sendKeys(Keys.CONTROL,'a'+"编辑文档并保存");
+		click(quick_access_point);
+		click(Back_to_Table);
+		//doesWebElementExist(dashboard_share_file,);
 		
 	}
 
