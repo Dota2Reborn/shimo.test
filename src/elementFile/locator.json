@@ -966,6 +966,12 @@
 				"locateUsing": "xpath",
 				"locator": "//li//div[contains(text(),'彻底删除')]",
 				"note": "彻底删除"
+			},
+			{
+				"elementName": "menu_Point_Menu",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='file-options-icon']",
+				"note": "工作台-最近使用-第一个文件点点(仅有一个文件时使用)"
 			}
 		]
 	},
