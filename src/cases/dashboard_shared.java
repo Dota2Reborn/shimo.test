@@ -235,7 +235,7 @@ public class dashboard_shared extends TestInit {
 	 *共享给我
 	 *先共享文件，再共享包含该文件的文件夹，生成两个卡片
 	 * @author 陈清杰
-	 * @Time2018-03-22
+	 * @Time2018-03-23
 	 * */
 	/*@Test
 	public void shared4()throws InterruptedException{

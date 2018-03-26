@@ -43,10 +43,8 @@ public class dashboard_own extends TestInit{
 		icon.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
 		menu_delete.click();
-		
-		WebElement icon4= driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-	    icon4.click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
+		driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]")).click();
 		
 	}
 	/**

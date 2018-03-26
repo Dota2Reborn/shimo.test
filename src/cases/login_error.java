@@ -19,7 +19,7 @@ public class login_error extends TestInit {
 	 * @Time 2018-01-08
 	 */
 
-	@SuppressWarnings("deprecation")
+
 	@Test
 	public void login_error66() throws InterruptedException {
 
@@ -43,7 +43,7 @@ public class login_error extends TestInit {
 	 * @Time 2018-01-08
 	 *
 	 */
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	public void login_error0() throws InterruptedException {
 
@@ -110,7 +110,7 @@ public class login_error extends TestInit {
 	 * @Time 2018-01-08
 	 *
 	 */
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	public void login_error3() throws Exception {
 
@@ -132,7 +132,7 @@ public class login_error extends TestInit {
 	 * @Time 2018-01-08
 	 *
 	 */
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	public void login_error4() throws Exception {
 
