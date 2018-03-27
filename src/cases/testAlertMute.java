@@ -73,7 +73,7 @@ public class testAlertMute extends TestInit {
 		
 	}
 	/**
-	 * 开启消息免打扰
+	 * 开启消息免打扰，在关闭消息免打扰，验证最近更新
 	 * 
 	 * @author 王继程
 	 * @Time 2018-03-23
@@ -112,7 +112,7 @@ public class testAlertMute extends TestInit {
         }
 	}
 	/**
-	 * 关闭消息免打扰，协作这评论，收到消息通知
+	 * 关闭消息免打扰，协作者编辑文档，出现在最近更新中
 	 * 
 	 * @author 王继程
 	 * @Time 2018-03-23
@@ -122,7 +122,6 @@ public class testAlertMute extends TestInit {
 	public void Collaboration_notifications() throws InterruptedException {
 		login("AlertMute3@shimo.im", "123123");
 		click(dashboard_2);
-		
 		click(menu_Point_Menu);
 		click(menu_mute);
 		logout();
@@ -149,13 +148,11 @@ public class testAlertMute extends TestInit {
         	click(menu_mute);
         	assertTrue(exist1);
         }else {
-        	System.out.println("接收消息提醒验证未通过，请登录AlertMute2@shimo.im自行验证");
+        	System.out.println("接收消息提醒验证未通过，请登录AlertMute3@shimo.im自行验证");
         	click(dashboard_2);
         	click(menu_Point_Menu);
         	click(menu_mute);
         }
-		
-		
 	}
 	
 }
