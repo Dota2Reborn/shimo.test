@@ -159,5 +159,19 @@ public class testAlertMute extends TestInit {
         	click(menu_mute);//关闭消息通知
         }
 	}
+	/**
+	 * 消息通知，文件夹相关
+	  
+	 * @author 王继程
+	 * @Time 2018-03-23
+	 *
+	 */
+	@Test(enabled = true)
+	public void Folder_notifications() throws InterruptedException {
+		login("AlertMute5@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		
+	}
 	
 }
