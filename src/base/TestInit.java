@@ -218,7 +218,7 @@ public class TestInit {
 	 * @Time 2017-11-21
 	 *
 	 */
-	public boolean doesWebElementExist(WebDriver driver, By selector) {
+	public boolean doesWebElementExist(By selector) {
 
 		try {
 			driver.findElement(selector);
