@@ -12,6 +12,7 @@ import base.TestInit;
 
 public class testAddCollaborator extends TestInit {
 
+	private TestInit dr;
 	/**
 	 * 基础版用户，文件协作者为5人，不能继续添加协作者
 	 * 
@@ -185,28 +186,15 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_5() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-		// desktop.click();
 		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-		String msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
-
-		action.contextClick(desktop1_1_folder).perform();
-		menu_cooperation.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		String msg_a = addCollaborator_total.getText();
-		button_addCollaborator.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(addCollaborator_1_add));
-		addCollaborator_1_add.click();
-
-		b_addCollaborator_back.click();
+		contextClick(desktop1_1_folder);
+		click(menu_cooperation);
+		String msg_a = getText(addCollaborator_total);
+		click(button_addCollaborator);
+		click(addCollaborator_1_add);
+		click(b_addCollaborator_back);
 		Thread.sleep(500);
-		String msg_b = addCollaborator_total.getText();
-
+		String msg_b = getText(addCollaborator_total);
 		assertEquals(msg_a, msg_b);
 	}
 
@@ -220,53 +208,24 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_6() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-		// desktop.click();
 		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-		String msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
-
-		action.contextClick(desktop1_1_folder).perform();
-		menu_cooperation.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		button_addCollaborator.click();
-
+		contextClick(desktop1_1_folder);
+		click(menu_cooperation);
+		click(button_addCollaborator);
 		input_addCollaborator.sendKeys("autoTest04@shimo.im");
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		b_addCollaborator_1_add.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
-		b_addCollaborator_ok.click();
-
+		click(b_addCollaborator_1_add);
+		click(b_addCollaborator_ok);
 		logout();
 		login("autoTest04@shimo.im", "123123");
-
 		desktop.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-		String msg1 = desktop_show_type.getText();
-		if (msg1.equals("平铺")) {
-			desktop_show_type.click();
-		}
-
-		action = new Actions(driver);
-		action.contextClick(desktop1_1_folder).perform();
-		menu_cooperation.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
-		b_addCollaborator_2_list.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
-		list_addCollaborator_4.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_confirm));
-		b_addCollaborator_confirm.click();
-
+		contextClick(desktop1_1_folder);
+		click(menu_cooperation);
+		click(b_addCollaborator_2_list);
+		click(list_addCollaborator_4);
+		click(b_addCollaborator_confirm);
 		Thread.sleep(500);
-		String fileName = desktop1_1_folder.getText();
+		String fileName = getText(desktop1_1_folder);
 		assertNotEquals(fileName, "添加协作者测试");
 	}
 
@@ -498,7 +457,7 @@ public class testAddCollaborator extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_confirm));
 		b_addCollaborator_confirm.click();
 		// wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
-		Thread.sleep(500);
+		Thread.sleep(1000);
 
 		String email = addCollaborator_1_list_userName.getText();
 		assertEquals(email, "autoTest01");

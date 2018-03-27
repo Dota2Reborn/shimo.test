@@ -36,8 +36,8 @@ public class TestInit {
 		driver = init.initData(this);
 		action = new Actions(driver);
 		driver.navigate().to(test_url + "login");
-//		driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-//		System.out.println("11111111111111111111111111111111111111");
+		// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		// System.out.println("11111111111111111111111111111111111111");
 		wait = new WebDriverWait(driver, 20);
 	}
 
@@ -119,7 +119,7 @@ public class TestInit {
 			Pwd.sendKeys(pwd);
 			Next.click();
 		} else {
-
+            return;
 		}
 	}
 
@@ -132,8 +132,7 @@ public class TestInit {
 	 */
 	public void logout() {
 		driver.navigate().to(test_url + "logout");
-//		driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-//		System.out.println("11111111111111111111111111111111111111");
+		// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		action.sendKeys(Keys.ESCAPE);
 	}
 
@@ -145,24 +144,28 @@ public class TestInit {
 	 *
 	 */
 	public void clickDesktop() {
-		desktop.click();
-		String msg = desktop_order.getText();
-		if (msg.equals("更新时间")) {
-			desktop_order.click();
-			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-			desktop_orderByFolderUP.click();
+		String msg = "";
+		try {
+			desktop.click();
+			msg = desktop_order.getText();
+			if (msg.equals("更新时间")) {
+				desktop_order.click();
+				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+				desktop_orderByFolderUP.click();
 
-			desktop_order.click();
-			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
-			desktop_orderByDefault.click();
-		} else {
-			return;
+				desktop_order.click();
+				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+				desktop_orderByDefault.click();
+			} else {
+				return;
+			}
+		} finally {
+			msg = desktop_show_type.getText();
+			if (msg.equals("平铺")) {
+				desktop_show_type.click();
+			}
 		}
 
-		msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
 	}
 
 	/**
@@ -227,7 +230,6 @@ public class TestInit {
 			return false;
 		}
 	}
-
 
 	/**
 	 * 右键点击
