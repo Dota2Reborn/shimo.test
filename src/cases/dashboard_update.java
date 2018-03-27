@@ -2,6 +2,10 @@ package cases;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.Date;
+
+import javax.xml.crypto.Data;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -290,9 +294,103 @@ public class dashboard_update  extends TestInit{
 	 * */
 	@Test
 	public void update9() throws InterruptedException{
-		login("gengxin12@dhimo.im", "123123");
+		login("gengxin13@shimo.im", "123123");
+		click(dashboard_4);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
+		driver.findElement(By.xpath("//div[@class='card-content-update']")).click();
+	    click(doc_edit);
+	    doc_edit.sendKeys("q");
+	    Thread.sleep(1000);
+	    b_back.click();
+	    click(dashboard_1);
+	    logout();
+	    
+	    login("gengxin12@shimo.im", "123123");
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
+	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+	    click(menu_cooperation);
+	    click(b_addCollaborator_2_list);
+	    click(list_addCollaborator_4);
+	    wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
+	    Shut_down_sm_modal_close_x.click();
+	    
+	    logout();
+	    login("gengxin13@shimo.im", "123123");
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
+		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+		assertEquals(text2, "没有文件");
+		
+		logout();
+		login("gengxin12@shimo.im", "123123");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
+		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+		Thread.sleep(1000);
+		menu_cooperation.click();
+		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
+	    input_addCollaborator.sendKeys("gengxin13@shimo.im");
+	    //验证添加按钮是否加载出来
+	    wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+	    b_addCollaborator_1_add.click();
+	    wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
+	    Shut_down_sm_modal_close_x.click();
+	    
 		
 	}
+	/**
+	 *最近更新
+	 * 删除后再恢复
+	 * @author 陈清杰
+	 * @Time2018-03-27
+	 * */
+	@Test
+	public void update10() throws InterruptedException{
+		login("gengxin14@shimo.im", "123123");
+		click(desktop_new);
+		click(desktop_newDoc);
+		click(doc_edit);
+		doc_edit.sendKeys("1");
+	    Thread.sleep(1000);
+	    b_back.click();
+	    
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
+	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+	    click(menu_delete);
+	    WebElement icon = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
+	    icon.click();
+	    Thread.sleep(1000);
+	    click(trash);
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-icon doc']")));
+	    driver.findElement(By.xpath("//div[@class='file-icon doc']")).click();
+	    click(menu_Recovery);
+	    Thread.sleep(300);
+	    click(dashboard);
+	    
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
+		String text1 = driver.findElement(By.xpath("//div[@class='card-content-update']")).getText();
+	    assertEquals(text1, "刚刚 我 更新");
+	    
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
+	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+	    wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+	    menu_delete.click();
+	    WebElement icon1 = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
+	    icon1.click();
+	    
+	    
+		
+		
+	}
+	/**
+	 *最近更新
+	 * 新卡片覆盖就卡片
+	 * @author 陈清杰
+	 * @Time2018-03-27
+	 * */
+	
+	
+	
 
 	
 	
