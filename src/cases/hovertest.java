@@ -3,14 +3,11 @@ package cases;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByLinkText;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.server.handler.GetCurrentUrl;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import base.TestInit;
-import elementFile.SearchWith;
 
 public class hovertest extends TestInit{
 	
