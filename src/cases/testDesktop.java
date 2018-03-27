@@ -162,11 +162,11 @@ public class testDesktop extends TestInit {
 		desktop_show_type.click();
 
 		Boolean result = false;
-		Boolean exist1 = doesWebElementExist(driver, By.className("table-head-cell"));
+		Boolean exist1 = doesWebElementExist(By.className("table-head-cell"));
 
 		desktop_show_type.click();
 
-		Boolean exist2 = doesWebElementExist(driver, By.className("table-head-cell"));
+		Boolean exist2 = doesWebElementExist(By.className("table-head-cell"));
 
 		if (exist1 == true && exist2 == false) {
 			result = true;
