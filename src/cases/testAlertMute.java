@@ -1,11 +1,14 @@
 package cases;
 
+
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -83,17 +86,76 @@ public class testAlertMute extends TestInit {
 		click(menu_Point_Menu);
 		click(menu_mute);
 		driver.navigate().refresh();
-		//doesWebElementExist();
+		Boolean exist = doesWebElementExist(By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[2]"));
+		assertFalse(exist);
 		click(dashboard_2);
 		click(menu_Point_Menu);
 		click(menu_mute);
 		dashboard_share_file.click();
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
-		doc_edit.sendKeys(Keys.CONTROL,'a'+"编辑文档并保存");
+		doc_edit.sendKeys(Keys.CONTROL,'a'+"编辑文档并保存"+Keys.ENTER);
 		click(quick_access_point);
 		click(Back_to_Table);
-		//doesWebElementExist(dashboard_share_file,);
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard));
+		Boolean exist1 = doesWebElementExist(By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[2]"));
+		int i=1;
+        while(exist1==false&&i<6){
+        	driver.navigate().refresh();
+        	wait.until(ExpectedConditions.elementToBeClickable(dashboard));
+            exist1 = doesWebElementExist(By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[2]"));
+            i++;
+        }
+        if(exist1=true) {
+        	assertTrue(exist1);
+        }else {
+        	System.out.println("接收消息提醒验证未通过，请登录AlertMute2@shimo.im自行验证");
+        }
+	}
+	/**
+	 * 关闭消息免打扰，协作这评论，收到消息通知
+	 * 
+	 * @author 王继程
+	 * @Time 2018-03-23
+	 *
+	 */
+	@Test(enabled = true)
+	public void Collaboration_notifications() throws InterruptedException {
+		login("AlertMute3@shimo.im", "123123");
+		click(dashboard_2);
+		
+		click(menu_Point_Menu);
+		click(menu_mute);
+		logout();
+		login("AlertMute4@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		//已经打开文档
+		click(doc_edit);
+		doc_edit.sendKeys(Keys.CONTROL,'a'+"编辑文档并保存"+Keys.ENTER);
+		Thread.sleep(500);
+		logout();
+		login("AlertMute3@shimo.im", "123123");
+		click(dashboard);
+		Boolean exist1 = doesWebElementExist(By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[2]"));
+		int i=1;
+        while(exist1==false&&i<6){
+        	driver.navigate().refresh();
+        	wait.until(ExpectedConditions.elementToBeClickable(menu_Point_Menu));
+            exist1 = doesWebElementExist(By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[2]"));
+            i++;
+        }
+        if(exist1=true) {
+        	click(menu_Point_Menu);
+        	click(menu_mute);
+        	assertTrue(exist1);
+        }else {
+        	System.out.println("接收消息提醒验证未通过，请登录AlertMute2@shimo.im自行验证");
+        	click(dashboard_2);
+        	click(menu_Point_Menu);
+        	click(menu_mute);
+        }
+		
 		
 	}
-
+	
 }
