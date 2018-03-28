@@ -143,10 +143,10 @@ public class TestInit {
 	 * @Time 2017-11-21
 	 *
 	 */
-	public void clickDesktop(WebElement element) {
+	public void clickDesktop() {
 		String msg = "";
 		try {
-			element.click();
+			desktop.click();
 			msg = desktop_order.getText();
 			if (msg.equals("更新时间")) {
 				desktop_order.click();
