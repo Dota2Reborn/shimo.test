@@ -159,23 +159,53 @@ public class testAlertMute extends TestInit {
         	click(menu_mute);//关闭消息通知
         }
 	}
-	/**
-	 * 消息通知，文件夹相关
-	  
-	 * @author 王继程
-	 * @Time 2018-03-23
-	 *
-	 */
-	@Test(enabled = true)
-	public void Folder_notifications() throws InterruptedException {
-		login("AlertMute5@shimo.im", "123123");
-		clickDesktop();
-		click(desktop1_1);
-		contextClick(desktop1_1);
-		click(menu_mute);
-		
-		
-		
-	}
+//	/**
+//	 * 消息通知，文件夹相关
+//	 * 
+//	 * 文件夹是打扰的，文件夹内文件是免打扰的，改成打扰的，再该文件夹免打扰，看文件夹内文件消息验证，文件夹改成打扰的，文件夹内文件免打扰
+//	 * 
+//	 * @author 王继程
+//	 * @Time 2018-03-23
+//	 *
+//	 */
+//	@Test(enabled = true)
+//	public void Folder_notifications() throws InterruptedException {
+//		login("AlertMute5@shimo.im", "123123");
+//		clickDesktop();
+//		click(desktop1_1);
+//		contextClick(desktop1_1);
+//		click(menu_mute);
+//		driver.navigate().refresh();
+//    	wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//		Boolean exist1 = doesWebElementExist(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[@class='tile']//svg[1]"));
+//		int i = 0;
+//		if(exist1==true) {
+//			click(Folder_settings);
+//			click(menu_mute);
+//			driver.navigate().refresh();
+//	    	wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//	    	Boolean exist2 = doesWebElementExist(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[@class='tile']//svg[1]"));
+//	    	i = 1;
+//	    	assertFalse(exist2);
+//		}else {
+//			click(Folder_settings);
+//			click(menu_mute);
+//			driver.navigate().refresh();
+//	    	wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//			Boolean exist2 = doesWebElementExist(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[@class='tile']//svg[1]"));
+//			i = 2;
+//			assertTrue(exist2);
+//		}
+//		contextClick(desktop1_1);
+//		click(menu_mute);
+//		driver.navigate().refresh();
+//    	wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//    	exist1 = doesWebElementExist(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[@class='tile']//svg[1]"));
+//		if(i==1) {
+//			assertTrue(exist1);
+//    	}else if(i==2) {
+//    		assertFalse(exist1);
+//    	}
+//	}
 	
 }
