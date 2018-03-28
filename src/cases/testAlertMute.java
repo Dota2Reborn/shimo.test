@@ -169,8 +169,12 @@ public class testAlertMute extends TestInit {
 	@Test(enabled = true)
 	public void Folder_notifications() throws InterruptedException {
 		login("AlertMute5@shimo.im", "123123");
-		click(desktop);
+		clickDesktop();
 		click(desktop1_1);
+		contextClick(desktop1_1);
+		click(menu_mute);
+		
+		
 		
 	}
 	
