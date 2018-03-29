@@ -6,10 +6,10 @@
 			<package name="cases" />
 		</packages>-->
 		<classes>
-            <class name="cases.testSearch" />
+            <!--<class name="cases.testSearch" /> -->
             <class name="cases.testNotice" />
-            <class name="cases.testDesktop" />
-            <class name="cases.testDashboard" />
+           <!-- <class name="cases.testDesktop" /> -->
+            <!--<class name="cases.testDashboard" /> -->
         </classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
