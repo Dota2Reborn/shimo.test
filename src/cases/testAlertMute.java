@@ -181,6 +181,7 @@ public class testAlertMute extends TestInit {
     	wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		Boolean exist1 = doesWebElementExist(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[@class='tile']//svg[1]"));
 		int i = 0;
+		
 		if(exist1==true) {
 			click(Folder_settings);
 			click(menu_mute);
