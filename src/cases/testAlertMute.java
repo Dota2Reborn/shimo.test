@@ -206,9 +206,9 @@ public class testAlertMute extends TestInit {
     	wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
     	exist1 = doesWebElementExist(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]//*[name()='svg']"));
 		if(i==1) {
-			assertFalse(exist1);
+			assertTrue(exist1);
     	}else if(i==2) {
-    		assertTrue(exist1);
+    		assertFalse(exist1);
     	}
 	}
 	
