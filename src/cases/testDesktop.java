@@ -605,8 +605,9 @@ public class testDesktop extends TestInit {
 		uploadButton.sendKeys(url);
 
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(b_back));
-		b_back.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(b_back));
+//		b_back.click();
+		click(b_back);
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop1_1.getText();
