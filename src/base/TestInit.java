@@ -258,8 +258,14 @@ public class TestInit {
 	 */
 	public void click(WebElement element) {
 		try {
-			wait.until(ExpectedConditions.elementToBeClickable(element));
-			element.click();
+			if(element.equals(b_back)) {
+				wait.until(ExpectedConditions.elementToBeClickable(element));
+				wait.until(ExpectedConditions.textToBe(By.xpath("//span[@id='save-status']//span[2]"), "自动保存成功"));
+				element.click();
+			}else {
+				wait.until(ExpectedConditions.elementToBeClickable(element));
+				element.click();
+			}
 		} catch (NoSuchElementException e) {
 			// TODO
 			System.out.println(element + "is missing");
