@@ -125,7 +125,7 @@ public class hovertest extends TestInit{
 		}
 
 	/**
-	 * hover头像(因环境问题没写完)
+	 * hover头像没写完
 	 * 鼠标 hover头像，点击邀请好友（基础版）
 	 * @author 陈清杰
 	 * @Time 2018-01-12
@@ -135,7 +135,7 @@ public class hovertest extends TestInit{
 	public void hover_person3() throws InterruptedException{
 		
 		
-		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']"));
+		
 		login("autoTesthover@shimo.im", "123123");
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
 		action.moveToElement(img).perform();
