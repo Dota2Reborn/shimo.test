@@ -2,9 +2,8 @@ package cases;
 
 import static org.testng.Assert.assertEquals;
 
-import java.util.Date;
 
-import javax.xml.crypto.Data;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -377,17 +376,19 @@ public class dashboard_update  extends TestInit{
 	    WebElement icon1 = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
 	    icon1.click();
-	    
+	    Thread.sleep(1000);
+	    click(trash);
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-icon doc']")));
+	    driver.findElement(By.xpath("//div[@class='file-icon doc']")).click();
+	    click(menu_Completely_removed);
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
+	    driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]")).click();
 	    
 		
 		
 	}
-	/**
-	 *最近更新
-	 * 新卡片覆盖就卡片
-	 * @author 陈清杰
-	 * @Time2018-03-27
-	 * */
+	
+	
 	
 	
 	

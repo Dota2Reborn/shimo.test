@@ -161,6 +161,7 @@ public class dashboard_used  extends TestInit {
         public   void used5() throws InterruptedException{
         
         	login("zuijin5@shimo.im", "123123");
+        	
         	wait.until(ExpectedConditions.elementToBeClickable(dashboard_1));
         	dashboard_2.click();
         	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a")));

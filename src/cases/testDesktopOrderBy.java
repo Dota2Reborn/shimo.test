@@ -19,7 +19,6 @@ public class testDesktopOrderBy extends TestInit {
 	public void order_setting_byUpdate() throws InterruptedException {
 		login("autoTest02@shimo.im", "123123");
 
-		// desktop.click();
 		clickDesktop();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
