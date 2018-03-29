@@ -32,8 +32,7 @@ public class testDashboard extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.sendKeys("la");
-		Thread.sleep(500);
-		b_back.click();
+		click(b_back);
 		logout();
 		login("autoTest05@shimo.im", "123123");
 
@@ -61,8 +60,7 @@ public class testDashboard extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		desktop1_1.click();
 
-		wait.until(ExpectedConditions.elementToBeClickable(b_back));
-		b_back.click();
+		click(b_back);
 
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard));
 		dashboard.click();
@@ -94,7 +92,7 @@ public class testDashboard extends TestInit {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		String time = format.format(date);
 		driver.findElement(By.id("ql-title-input")).sendKeys(time);
-		b_back.click();
+		click(b_back);
 
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard));
 		dashboard_3.click();
