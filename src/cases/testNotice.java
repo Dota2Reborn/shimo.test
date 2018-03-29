@@ -224,7 +224,7 @@ public class testNotice extends TestInit {
 		dashboard_notice_list_1.click();
 
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
+		wait.until(ExpectedConditions.elementToBeClickable(End_Discussion));
 		Boolean resutl = doc_discuss_input.isDisplayed();
 		assertTrue(resutl);
 	}
