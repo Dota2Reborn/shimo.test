@@ -42,7 +42,7 @@ public class testRecycleBin extends TestInit{
 		assertEquals(name1, "删除恢复测试");
 	}
 	/**
-	 * 删除文件后恢复
+	 * 删除文件后彻底删除
 	 * 
 	 * @author 王继程
 	 * @Time 2018-03-12
