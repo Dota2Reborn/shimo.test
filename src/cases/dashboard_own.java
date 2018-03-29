@@ -220,15 +220,16 @@ public class dashboard_own extends TestInit{
 		logout();
 		login("own7@shimo.im", "123123");
 		String n = dashboard_shareTime_1.getText();
-
+		String time1 = n.substring(0,2);
 		String m="刚刚";
-		if(n.equals(m)) {
+		if(time1.equals(m)) {
 			assertEquals(n,"刚刚");
 			a = true;
-		}else if(n!=m) {
-			String name2 = n.substring(n.length()-5);
-			name2=name2.replace(":",""); 
-			int dat2=Integer.parseInt(name2);
+		}else if(time1!=m) {
+			String time3 = n.substring(0,8);
+			time3 = time3.substring(time3.length()-5);
+			time3=time3.replace(":","");
+			int dat2=Integer.parseInt(time3);
 			if(dat2==dat1||dat2>dat1) {
 				a = true;
 			}
