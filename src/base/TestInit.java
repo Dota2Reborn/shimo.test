@@ -260,7 +260,8 @@ public class TestInit {
 		try {
 			if(element.equals(b_back)) {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
-				wait.until(ExpectedConditions.textToBe(By.xpath("//span[@id='save-status']//span[2]"), "自动保存成功"));
+				wait.until(ExpectedConditions.attributeToBe(doc_saveStatus, "class", "save-status-icon save-status-online-done animation-online-done"));
+//				wait.until(ExpectedConditions.textToBe(By.xpath("//span[@id='save-status']//span[2]"), "自动保存成功"));
 				element.click();
 			}else {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -382,7 +383,7 @@ public class TestInit {
 	// doc
 	@SearchWith(pageName = "doc", elementName = "b_back", noteName = "后退")
 	public WebElement b_back;
-	@SearchWith(pageName = "doc", elementName = "doc_saveStatus", noteName = "文档/表格提示状态-灰字")
+	@SearchWith(pageName = "doc", elementName = "doc_saveStatus", noteName = "文档/表格提示同步完成状态")
 	public WebElement doc_saveStatus;
 	@SearchWith(pageName = "doc", elementName = "quick_access_point", noteName = "收索&快速打开")
 	public WebElement quick_access_point;
