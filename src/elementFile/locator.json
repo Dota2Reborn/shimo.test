@@ -591,8 +591,8 @@
 			{
 				"elementName": "doc_saveStatus",
 				"locateUsing": "xpath",
-				"locator": "//span[@id='save-status']//span[2]",
-				"note": "文档/表格提示状态-灰字"
+				"locator": "//span[@id='save-status']//span[1]",
+				"note": "文档/表格提示同步完成状态"
 			},
 			{
 				"elementName": "doc_notice_user",
