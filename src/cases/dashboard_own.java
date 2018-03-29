@@ -234,12 +234,13 @@ public class dashboard_own extends TestInit{
 				a = true;
 			}
 		}
-		assertTrue(a);
 		contextClick(New_Share_1);
 		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
 		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
 		desktop_newFolder_name_ok.click();
+		assertTrue(a);
+		
 		
 	     
 	}
