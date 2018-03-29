@@ -253,15 +253,16 @@ public class TestInit {
 	 * 左键点击
 	 * 
 	 * @author 刘晨
+	 * @throws InterruptedException 
 	 * @Time 2018-03-23
 	 *
 	 */
-	public void click(WebElement element) {
+	public void click(WebElement element) throws InterruptedException {
 		try {
 			if(element.equals(b_back)) {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				wait.until(ExpectedConditions.attributeToBe(doc_saveStatus, "class", "save-status-icon save-status-online-done animation-online-done"));
-//				wait.until(ExpectedConditions.textToBe(By.xpath("//span[@id='save-status']//span[2]"), "自动保存成功"));
+				Thread.sleep(1000);
 				element.click();
 			}else {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
