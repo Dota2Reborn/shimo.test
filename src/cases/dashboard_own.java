@@ -226,8 +226,8 @@ public class dashboard_own extends TestInit{
 			assertEquals(n,"刚刚");
 			a = true;
 		}else if(time1!=m) {
-			String time3 = n.substring(0,8);
-			time3 = time3.substring(time3.length()-5);
+			//String time3 = n.substring(0,8);
+			String time3 = n.substring(n.length()-5);
 			time3=time3.replace(":","");
 			int dat2=Integer.parseInt(time3);
 			if(dat2==dat1||dat2>dat1) {
@@ -235,7 +235,7 @@ public class dashboard_own extends TestInit{
 			}
 		}
 		assertTrue(a);
-		action.contextClick(New_Share_1).perform();
+		contextClick(New_Share_1);
 		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
 		menu_delete.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
