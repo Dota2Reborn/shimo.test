@@ -60,7 +60,6 @@ public class testCollection extends TestInit {
 		desktop_newSheet.click();
 		wait.until(ExpectedConditions.elementToBeClickable(Collection_OK));
 		Collection_OK.click();
-		
 		click(b_back);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		favorites.click();
