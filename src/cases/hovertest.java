@@ -144,7 +144,9 @@ public class hovertest extends TestInit{
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[7]//span")));
 		driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[7]//span")).click();
 		
-		
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-title']//div[1]")));
+		String text = driver.findElement(By.xpath("//div[@class='sm-modal-title']//div[1]")).getText();
+		assertEquals(text, "免费获得石墨文档高级版！ ?");
 		
 		
 	}
