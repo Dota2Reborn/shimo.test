@@ -275,7 +275,7 @@ public class TestInit {
 	 */
 	public void click(WebElement element) throws InterruptedException {
 		try {
-			if (element.toString().equals(b_back.toString())) {
+			if (element.toString().equals(b_back.toString()) ||element.toString().equals(Back_to_Table.toString())||element.toString().equals(Back_to_Desktop.toString())) {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				// wait.until(ExpectedConditions.attributeToBe(doc_saveStatus, "class",
 				// "save-status-icon save-status-online-done animation-online-done"));
