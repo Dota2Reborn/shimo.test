@@ -5,8 +5,14 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.ElementNotVisibleException;
+import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -119,7 +125,7 @@ public class TestInit {
 			Pwd.sendKeys(pwd);
 			Next.click();
 		} else {
-            return;
+			return;
 		}
 	}
 
@@ -131,9 +137,19 @@ public class TestInit {
 	 *
 	 */
 	public void logout() {
-		driver.navigate().to(test_url + "logout");
-		// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		action.sendKeys(Keys.ESCAPE);
+		try {
+			driver.navigate().to(test_url + "logout");
+			// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+			action.sendKeys(Keys.ESCAPE);
+		}catch (UnhandledAlertException e) {
+			// 报错
+			driver.switchTo().alert().accept();
+			driver.navigate().to(test_url + "logout");
+			System.out.println("Unhandled Alert!!!!");
+		} catch (NoAlertPresentException e) {
+			String msg = driver.switchTo().alert().getText();
+			System.out.println("Unhandled Alert :" + msg);
+		} 
 	}
 
 	/**
@@ -253,25 +269,47 @@ public class TestInit {
 	 * 左键点击
 	 * 
 	 * @author 刘晨
-	 * @throws InterruptedException 
+	 * @throws InterruptedException
 	 * @Time 2018-03-23
 	 *
 	 */
 	public void click(WebElement element) throws InterruptedException {
 		try {
-			if(element.equals(b_back)) {
+			if (element.toString().equals(b_back.toString())) {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
-				wait.until(ExpectedConditions.attributeToBe(doc_saveStatus, "class", "save-status-icon save-status-online-done animation-online-done"));
-				Thread.sleep(1000);
+				// wait.until(ExpectedConditions.attributeToBe(doc_saveStatus, "class",
+				// "save-status-icon save-status-online-done animation-online-done"));
+				wait.until(ExpectedConditions
+						.invisibilityOfElementWithText(By.xpath("//span[@id='save-status']//span[2]"), "正在保存..."));
 				element.click();
-			}else {
+			} else {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				element.click();
 			}
 		} catch (NoSuchElementException e) {
 			// TODO
 			System.out.println(element + "is missing");
-		}
+		} catch (ElementClickInterceptedException e) {
+			// 被遮挡
+			System.out.println(element + "is obscuring");
+		} catch (ElementNotVisibleException e) {
+			// 不可见
+			System.out.println(element + "is not visible");
+		} catch (UnhandledAlertException e) {
+			// 报错
+			driver.switchTo().alert().accept();
+			System.out.println("Unhandled Alert!!!!");
+		} catch (TimeoutException e) {
+			// 超时
+			System.out.println("time out ->" + element);
+		} catch (NoAlertPresentException e) {
+			String msg = driver.switchTo().alert().getText();
+			System.out.println("Unhandled Alert :" + msg);
+		} catch(JavascriptException e) {
+			String msg = driver.switchTo().alert().getText();
+			System.out.println("Unhandled Alert :" + msg);
+			System.out.println("javascript");
+		} 
 	}
 
 	/**
@@ -285,7 +323,7 @@ public class TestInit {
 		String msg = "";
 		try {
 			wait.until(ExpectedConditions.visibilityOf(element));
-			msg = addCollaborator_total.getText();
+			msg = element.getText();
 		} catch (NoSuchElementException e) {
 			// TODO
 			System.out.println(element + "is missing");

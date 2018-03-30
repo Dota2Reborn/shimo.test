@@ -1,7 +1,7 @@
 package cases;
 
-import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.util.List;
@@ -102,40 +102,50 @@ public class testNotice extends TestInit {
 		login("autoTest13@shimo.im", "123123");
 		// desktop.click();
 		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop_show_type.getText();
+//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//		String msg = desktop_show_type.getText();
+		String msg = getText(desktop_show_type);
 		if (msg.equals("平铺")) {
 			desktop_show_type.click();
 		}
 
-		action.contextClick(desktop1_1).perform();
-		menu_cooperation.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		button_addCollaborator.click();
+//		action.contextClick(desktop1_1).perform();
+		contextClick(desktop1_1);
+//		menu_cooperation.click();
+		click(menu_cooperation);
+		
+//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+//		button_addCollaborator.click();
+		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("autoTest12@shimo.im");
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		b_addCollaborator_1_add.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+//		b_addCollaborator_1_add.click();
+		click(b_addCollaborator_1_add);
 
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
-		b_addCollaborator_ok.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
+//		b_addCollaborator_ok.click();
+		click(b_addCollaborator_ok);
 		// Thread.sleep(500);
 
 		logout();
 		login("autoTest12@shimo.im", "123123");
 		action.moveToElement(dashboard_notice).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
-		dashboard_notice_list_1.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
+//		dashboard_notice_list_1.click();
+		click(dashboard_notice_list_1);
 
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(doc_menu));
-		doc_menu.click();
-		wait.until(ExpectedConditions.elementToBeClickable(doc_menu_delete));
-		doc_menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(doc_menu_delete_OK));
-		doc_menu_delete_OK.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(doc_menu));
+//		doc_menu.click();
+		click(doc_menu);
+//		wait.until(ExpectedConditions.elementToBeClickable(doc_menu_delete));
+//		doc_menu_delete.click();
+		click(doc_menu_delete);
+//		wait.until(ExpectedConditions.elementToBeClickable(doc_menu_delete_OK));
+//		doc_menu_delete_OK.click();
+		click(doc_menu_delete_OK);
 
 		assertTrue(true);
 	}
@@ -152,37 +162,46 @@ public class testNotice extends TestInit {
 		login("autoTest13@shimo.im", "123123");
 		// desktop.click();
 		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop_show_type.getText();
+//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//		String msg = desktop_show_type.getText();
+		String msg = getText(desktop_show_type);
 		if (msg.equals("平铺")) {
 			desktop_show_type.click();
 		}
 
-		action.contextClick(desktop1_1).perform();
-		menu_cooperation.click();
+//		action.contextClick(desktop1_1).perform();
+		contextClick(desktop1_1);
+//		menu_cooperation.click();
+		click(menu_cooperation);
 
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		button_addCollaborator.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+//		button_addCollaborator.click();
+		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("autoTest12@shimo.im");
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		b_addCollaborator_1_add.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+//		b_addCollaborator_1_add.click();
+		click(b_addCollaborator_1_add);
 
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
-		b_addCollaborator_ok.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
+//		b_addCollaborator_ok.click();
+		click(b_addCollaborator_ok);
 
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		b_addCollaborator_2_list.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+//		b_addCollaborator_2_list.click();
+		click(b_addCollaborator_2_list);
 
-		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
-		list_addCollaborator_4.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
+//		list_addCollaborator_4.click();
+		click(list_addCollaborator_4);
 
 		logout();
 		login("autoTest12@shimo.im", "123123");
 		action.moveToElement(dashboard_notice).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
-		dashboard_notice_list_1.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
+//		dashboard_notice_list_1.click();
+		click(dashboard_notice_list_1);
 
 		switchToPage(1);
 		String result = driver.findElement(By.xpath("//div[@class='info-word']//p")).getText();
@@ -202,8 +221,9 @@ public class testNotice extends TestInit {
 		// desktop.click();
 		clickDesktop();
 
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		desktop1_1.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//		desktop1_1.click();
+		click(desktop1_1);
 
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
@@ -211,8 +231,9 @@ public class testNotice extends TestInit {
 		doc_discuss.click();
 		doc_discuss_input.sendKeys("yoyoyo");
 		action.sendKeys(Keys.ENTER);
-		wait.until(ExpectedConditions.elementToBeClickable(doc_discuss_input_ok));
-		doc_discuss_input_ok.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(doc_discuss_input_ok));
+//		doc_discuss_input_ok.click();
+		click(doc_discuss_input_ok);
 		wait.until(
 				ExpectedConditions.textToBe(By.className("doc-comment-input-placeholder"), "按enter发送，shift+enter换行"));
 
@@ -220,8 +241,9 @@ public class testNotice extends TestInit {
 		logout();
 		login("autoTest12@shimo.im", "123123");
 		action.moveToElement(dashboard_notice).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
-		dashboard_notice_list_1.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
+//		dashboard_notice_list_1.click();
+		click(dashboard_notice_list_1);
 
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(End_Discussion));
@@ -242,22 +264,25 @@ public class testNotice extends TestInit {
 		// desktop.click();
 		clickDesktop();
 
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		desktop1_1.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//		desktop1_1.click();
+		click(desktop1_1);
 
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		doc_edit.sendKeys("@autoTest12");
-		wait.until(ExpectedConditions.elementToBeClickable(doc_notice_user));
-		doc_notice_user.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(doc_notice_user));
+//		doc_notice_user.click();
+		click(doc_notice_user);
 
 		click(b_back);
 		logout();
 		login("autoTest12@shimo.im", "123123");
 		action.moveToElement(dashboard_notice).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
-
-		dashboard_notice_list_unread.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
+//
+//		dashboard_notice_list_unread.click();
+		click(dashboard_notice_list_unread);
 
 		String result = dashboard_notice_list_unread.getAttribute("data-test");
 		List<WebElement> elements;
