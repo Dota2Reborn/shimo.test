@@ -29,7 +29,7 @@ public class testCollection extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(Collection_OK));
 		Collection_OK.click();
 		
-		b_back.click();
+		click(b_back);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		favorites.click();
 
@@ -60,8 +60,7 @@ public class testCollection extends TestInit {
 		desktop_newSheet.click();
 		wait.until(ExpectedConditions.elementToBeClickable(Collection_OK));
 		Collection_OK.click();
-		
-		b_back.click();
+		click(b_back);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		favorites.click();
 		String name=desktop1_1.getText();

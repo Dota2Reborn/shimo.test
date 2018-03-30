@@ -16,6 +16,7 @@ import base.TestInit;
 
 public class dashboard_own extends TestInit{
 	
+	
 	/**
 	 *我创建的
 	 * 卡片样式验证
@@ -29,7 +30,7 @@ public class dashboard_own extends TestInit{
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
 		desktop_newDoc.click();
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
-		b_back.click();
+		click(b_back);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_3));
 		dashboard_3.click();
@@ -60,7 +61,7 @@ public class dashboard_own extends TestInit{
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
 		desktop_newDoc.click();
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
-		b_back.click();
+		click(b_back);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_3));
 		dashboard_3.click();
@@ -151,7 +152,7 @@ public class dashboard_own extends TestInit{
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
 		desktop_newDoc.click();
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
-		b_back.click();
+		click(b_back);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 		Thread.sleep(1000);

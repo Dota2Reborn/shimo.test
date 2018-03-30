@@ -26,7 +26,7 @@ public class dashboard_update  extends TestInit{
 		click(desktop_newDoc);
 		click(doc_edit);
 		Thread.sleep(1000);
-		b_back.click();
+		click(b_back);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
 		
 		boolean b = driver.findElement(By.xpath("//div[@class='card-icon']//div")).isDisplayed();//卡片图标
@@ -66,7 +66,7 @@ public class dashboard_update  extends TestInit{
 		click(desktop_new);
 		click(desktop_newDoc);
 		click(doc_edit);
-		b_back.click();
+		click(b_back);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 	    wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
@@ -111,7 +111,7 @@ public class dashboard_update  extends TestInit{
 		click(doc_edit);
 		doc_edit.sendKeys("1");
 		Thread.sleep(1000);
-		b_back.click();
+		click(b_back);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
 		String text1 = driver.findElement(By.xpath("//div[@class='card-content-update']")).getText();
 	    assertEquals(text1, "刚刚 我 更新");
@@ -134,7 +134,7 @@ public class dashboard_update  extends TestInit{
 		click(doc_edit);
 		doc_edit.sendKeys("1");
 		Thread.sleep(1000);
-		b_back.click();
+		click(b_back);
 		logout();
 		
 		login("gengxin4@shimo.im", "123123");
@@ -159,7 +159,7 @@ public class dashboard_update  extends TestInit{
 		doc_discuss_input.sendKeys("通过");
 		click(doc_discuss_input_ok);
 		Thread.sleep(1000);
-		b_back.click();
+		click(b_back);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
 		String text1 = driver.findElement(By.xpath("//div[@class='card-content-update']")).getText();
@@ -227,7 +227,7 @@ public class dashboard_update  extends TestInit{
 		click(doc_edit);
 		doc_edit.sendKeys("1");
 		Thread.sleep(1000);
-		b_back.click();
+		click(b_back);
 		click(dashboard_1);
 		 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-title']//div[1]")));
 	    String text = driver.findElement(By.xpath("//div[@class='card-content-title']//div[1]")).getText();
@@ -271,7 +271,7 @@ public class dashboard_update  extends TestInit{
 		click(doc_edit);
 	    doc_edit.sendKeys("1");
 	    Thread.sleep(1000);
-	    b_back.click();
+	    click(b_back);
 	    
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
 	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
@@ -300,8 +300,9 @@ public class dashboard_update  extends TestInit{
 	    click(doc_edit);
 	    doc_edit.sendKeys("q");
 	    Thread.sleep(1000);
-	    b_back.click();
+	    click(b_back);
 	    click(dashboard_1);
+	    
 	    logout();
 	    
 	    login("gengxin12@shimo.im", "123123");
@@ -349,7 +350,7 @@ public class dashboard_update  extends TestInit{
 		click(doc_edit);
 		doc_edit.sendKeys("1");
 	    Thread.sleep(1000);
-	    b_back.click();
+	    click(b_back);
 	    
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
 	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();

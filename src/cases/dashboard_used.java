@@ -36,7 +36,7 @@ public class dashboard_used  extends TestInit {
 	    wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
 	    desktop_newDoc.click();
 	    wait.until(ExpectedConditions.elementToBeClickable(b_back));
-	    b_back.click();
+	    click(b_back);
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
 	    dashboard_2.click();
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
@@ -136,7 +136,7 @@ public class dashboard_used  extends TestInit {
     		wait.until(ExpectedConditions.elementToBeClickable(dashboard_1));
     	    driver.navigate().to("https://release.shimodev.com/docs/M5pgZFusSg8T1krl/");
     	    wait.until(ExpectedConditions.elementToBeClickable(b_back));
-    	    b_back.click();
+    	    click(b_back);
     	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
     	    dashboard_2.click();
     	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
@@ -168,7 +168,7 @@ public class dashboard_used  extends TestInit {
        	WebElement icon2 = driver.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a"));
        	icon2.click();
        	wait.until(ExpectedConditions.elementToBeClickable(b_back));
-	    b_back.click();
+	    click(b_back);
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
 	    dashboard_2.click();
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
@@ -179,7 +179,7 @@ public class dashboard_used  extends TestInit {
        	WebElement icon3 = driver.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a"));
        	icon3.click();
        	wait.until(ExpectedConditions.elementToBeClickable(b_back));
-	    b_back.click();
+	    click(b_back);
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
 	    dashboard_2.click();
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
@@ -202,7 +202,7 @@ public class dashboard_used  extends TestInit {
         		  wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
         		  desktop_newDoc.click();
         		  wait.until(ExpectedConditions.elementToBeClickable(b_back));
-        		  b_back.click();
+        		  click(b_back);
         		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
         	      dashboard_2.click();
         	      
@@ -234,7 +234,7 @@ public class dashboard_used  extends TestInit {
         		  wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
         		  desktop_newDoc.click();
         		  wait.until(ExpectedConditions.elementToBeClickable(b_back));
-        		  b_back.click();
+        		  click(b_back);
         		  
         		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
         	      WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
@@ -253,7 +253,7 @@ public class dashboard_used  extends TestInit {
         	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-content file-text']")));
         	      driver.findElement(By.xpath("//div[@class='file-content file-text']")).click();
         	      wait.until(ExpectedConditions.elementToBeClickable(b_back));
-        		  b_back.click();
+        		  click(b_back);
         		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
         		  dashboard_2.click();
         		  
@@ -295,12 +295,13 @@ public class dashboard_used  extends TestInit {
         *  **/
         @Test
         public void used8() throws InterruptedException{
+        	
         	       login("zuijin9@shimo.im","123123");
         	       action.moveToElement(desktop_new).perform();
       		   wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
       		   desktop_newDoc.click();
                wait.until(ExpectedConditions.elementToBeClickable(b_back));
-      	       b_back.click();
+      	       click(b_back);
       	       wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
    	           dashboard_2.click();
    	           wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
@@ -319,7 +320,7 @@ public class dashboard_used  extends TestInit {
    	           wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-content file-text']")));
   	           driver.findElement(By.xpath("//div[@class='file-content file-text']")).click();
   	           wait.until(ExpectedConditions.elementToBeClickable(b_back));
-  	           b_back.click();
+  	           click(b_back);
   	           Thread.sleep(300);
   		       logout();
   		       
