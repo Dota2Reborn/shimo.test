@@ -46,6 +46,9 @@ public class dashboard_own extends TestInit{
 		click(menu_delete);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
 		driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
+		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+		assertEquals(text2, "没有文件");
 		
 	}
 	/**
@@ -95,6 +98,9 @@ public class dashboard_own extends TestInit{
 	    WebElement icon4= driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
 	    icon4.click();
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
+		String text3 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+		assertEquals(text3, "没有文件");
 		
 		
 		}
@@ -177,6 +183,9 @@ public class dashboard_own extends TestInit{
 	     WebElement icon = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
 	     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
 	     icon.click();
+	     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
+	     String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+	     assertEquals(text2, "没有文件");
 	     
 	}
 	
