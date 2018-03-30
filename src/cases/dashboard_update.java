@@ -63,10 +63,7 @@ public class dashboard_update  extends TestInit{
 	@Test
 	public void update2() throws InterruptedException{
 		login("gengxin2@shimo.im", "123123");
-		click(desktop_new);
-		click(desktop_newDoc);
-		click(doc_edit);
-		click(b_back);
+		click(dashboard_1);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 	    wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
@@ -90,12 +87,7 @@ public class dashboard_update  extends TestInit{
 	    assertEquals(text11, "创建副本");
 	    String  text13 = menu_delete.getText();
 	    assertEquals(text13, "删除");
-	    Thread.sleep(200);
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-	    menu_delete.click();
-	    WebElement icon = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-	    icon.click();
+	    
         }
 	/**
 	 *最近更新
