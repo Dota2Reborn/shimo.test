@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import base.TestInit;
 
 public class dashboard_shared extends TestInit {
+	
 	/**
 	 *共享给我
 	 * 卡片样式
@@ -30,7 +31,7 @@ public class dashboard_shared extends TestInit {
 		doc_edit.click();
         doc_edit.sendKeys("石墨测试组");
         Thread.sleep(1000);
-   	    b_back.click();
+   	    click(b_back);
    	    
    	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
@@ -104,7 +105,7 @@ public class dashboard_shared extends TestInit {
 		doc_edit.click();
         doc_edit.sendKeys("石墨测试组");
         Thread.sleep(1000);
-   	    b_back.click();
+   	    click(b_back);
    	    
    	    
    	    
@@ -176,7 +177,7 @@ public class dashboard_shared extends TestInit {
 		doc_edit.click();
         doc_edit.sendKeys("石墨测试组");
         Thread.sleep(1000);
-   	    b_back.click();
+   	    click(b_back);
    	    
    	    
    	    
@@ -267,7 +268,7 @@ public class dashboard_shared extends TestInit {
 	    assertEquals(text, "我是文件");
 	    driver.findElement(By.xpath("//div[@class='card-content-update']")).click();
 	    wait.until(ExpectedConditions.elementToBeClickable(b_back));
-	    b_back.click();
+	    click(b_back);
 	    
 	    
 	    logout();
