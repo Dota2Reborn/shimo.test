@@ -27,14 +27,10 @@ public class dashboard_own extends TestInit{
 	@Test
 	public void own1() throws InterruptedException{
 		login("own1@shimo.im", "123123");
-		desktop_new.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
-		desktop_newDoc.click();
-		wait.until(ExpectedConditions.elementToBeClickable(b_back));
+		click(desktop_new);
+		click(desktop_newDoc);
 		click(b_back);
-		
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_3));
-		dashboard_3.click();
+	    click(dashboard_3);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-title']")));
 		String text = driver.findElement(By.xpath("//div[@class='file-title']")).getText();

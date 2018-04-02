@@ -18,6 +18,7 @@ public class dashboard_update  extends TestInit{
 	 * 卡片样式
 	 * @author 陈清杰
 	 * @Time2018-03-26
+	 * 账号状态：没有文件
 	 * */
 	@Test
 	public void update1() throws InterruptedException{
@@ -25,7 +26,6 @@ public class dashboard_update  extends TestInit{
 		click(desktop_new);
 		click(desktop_newDoc);
 		click(doc_edit);
-		Thread.sleep(1000);
 		click(b_back);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
 		
@@ -45,11 +45,13 @@ public class dashboard_update  extends TestInit{
 		assertEquals(e, true);
 		Thread.sleep(200);
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-	    menu_delete.click();
+	    click(menu_delete);
 	    WebElement icon = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
 	    icon.click();
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
+		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+		assertEquals(text2, "没有文件");
 		
 		//勿扰没写呢
 		
@@ -59,6 +61,7 @@ public class dashboard_update  extends TestInit{
 	 * 点点点
 	 * @author 陈清杰
 	 * @Time2018-03-26
+	 * 账号状态：有一个固定文件
 	 * */
 	@Test
 	public void update2() throws InterruptedException{
@@ -94,6 +97,7 @@ public class dashboard_update  extends TestInit{
 	 * 所有者编辑内容更新
 	 * @author 陈清杰
 	 * @Time2018-03-26
+	 * 账号状态：有一个固定文件
 	 * */
 	@Test
 	public void update3() throws InterruptedException{
@@ -117,6 +121,7 @@ public class dashboard_update  extends TestInit{
 	 * 协作者编辑内容更新
 	 * @author 陈清杰
 	 * @Time2018-03-26
+	 * 账号状态：两个账号有一个固定文件
 	 * */
 	@Test
 	public void update4() throws InterruptedException{
@@ -139,6 +144,7 @@ public class dashboard_update  extends TestInit{
 	 * 所有者评论
 	 * @author 陈清杰
 	 * @Time2018-03-26
+	 * 账号状态：有一个固定文件
 	 * */
 	@Test
 	public void update5() throws InterruptedException{
@@ -164,7 +170,7 @@ public class dashboard_update  extends TestInit{
 	    driver.findElement(By.xpath("//span[@class='doc-comment-close-icon']")).click();
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='confirm-dialog-footer dialog-foot']//button[1]")));
 	    driver.findElement(By.xpath("//div[@class='confirm-dialog-footer dialog-foot']//button[1]")).click();
-	    Thread.sleep(500);
+	    Thread.sleep(1000);
 	    
 		
 		
@@ -176,6 +182,7 @@ public class dashboard_update  extends TestInit{
 	 * 协作者评论
 	 * @author 陈清杰
 	 * @Time2018-03-27
+	 * 账号状态：两个账号有一个固定文件
 	 * */
 	@Test
 	public void update6() throws  InterruptedException{
@@ -209,6 +216,7 @@ public class dashboard_update  extends TestInit{
 	 * 自己退出共享，已经生成的卡片从最近更新消失
 	 * @author 陈清杰
 	 * @Time2018-03-27
+	 * 
 	 * */
 	@Test
 	public void update7() throws InterruptedException{
@@ -317,14 +325,11 @@ public class dashboard_update  extends TestInit{
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 		Thread.sleep(1000);
-		menu_cooperation.click();
+		click(menu_cooperation);
 		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
 	    input_addCollaborator.sendKeys("gengxin13@shimo.im");
-	    //验证添加按钮是否加载出来
-	    wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-	    b_addCollaborator_1_add.click();
-	    wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
-	    Shut_down_sm_modal_close_x.click();
+	    click(b_addCollaborator_1_add);
+	    click(Shut_down_sm_modal_close_x);
 	    
 		
 	}
@@ -364,8 +369,7 @@ public class dashboard_update  extends TestInit{
 	    
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
 	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-	    menu_delete.click();
+	    click(menu_delete);
 	    WebElement icon1 = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
 	    icon1.click();
