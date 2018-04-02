@@ -399,6 +399,12 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[1]//div[1]//a[1]//div[2]",
 				"note": "平铺模式第一行第一个名称"
+			},
+			{
+				"elementName": "desktop_orderByFolderUP_Hook",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='change-table-sort-folder-priority']/following-sibling::div[1]",
+				"note": "桌面排序-文件夹置顶-对钩"
 			}
 		]
 	},

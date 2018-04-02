@@ -418,6 +418,8 @@ public class TestInit {
 	public WebElement desktop_orderHeader_3;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1_name", noteName = "获取第一个文件名称")
 	public WebElement desktop1_1_name;
+	@SearchWith(pageName = "desktop", elementName = "desktop_orderByFolderUP_Hook", noteName = "桌面排序-文件夹置顶-对钩")
+	public WebElement desktop_orderByFolderUP_Hook;
 
 	// doc
 	@SearchWith(pageName = "doc", elementName = "b_back", noteName = "后退")
