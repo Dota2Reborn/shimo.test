@@ -22,25 +22,18 @@ public class testCollection extends TestInit {
 	public void New_Document() throws InterruptedException {
 		login("New_collection@shimo.im", "123123");
 		favorites.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
-		desktop_new.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
-		desktop_newDoc.click();
-		wait.until(ExpectedConditions.elementToBeClickable(Collection_OK));
-		Collection_OK.click();
-		
+		click(desktop_new);
+		click(desktop_newDoc);
+		click(Collection_OK);
 		click(b_back);
+		click(favorites);
+		Tile();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		favorites.click();
-
 		String name=desktop1_1.getText();
 		assertEquals(name, "无标题");
 		action.contextClick(desktop1_1).perform();
-		
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 		
 	}
 	/**
@@ -54,23 +47,18 @@ public class testCollection extends TestInit {
 	public void Create_Table() throws InterruptedException {
 		login("New_collection@shimo.im", "123123");
 		favorites.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
-		desktop_new.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newSheet));
-		desktop_newSheet.click();
-		wait.until(ExpectedConditions.elementToBeClickable(Collection_OK));
-		Collection_OK.click();
+		click(desktop_new);
+		click(desktop_newSheet);
+		click(Collection_OK);
 		click(b_back);
+		click(favorites);
+		Tile();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		favorites.click();
 		String name=desktop1_1.getText();
 		assertEquals(name, "无标题");
 		action.contextClick(desktop1_1).perform();
-		
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 		
 	}
 	/**
@@ -85,18 +73,7 @@ public class testCollection extends TestInit {
 
 		login("Collection@shimo.im", "123123");
 		favorites.click();
-		String msg = desktop_order.getText();
-		int i=1;
-		if (msg.equals("更新时间")) {
-			desktop_order.click();
-			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-			desktop_orderByFolderUP.click();
-
-			desktop_order.click();
-			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
-			desktop_orderByDefault.click();
-			i = 10;
-		}
+		Sort();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
 		desktop_show_type.click();
 
@@ -112,11 +89,6 @@ public class testCollection extends TestInit {
 		}
 		//driver.manage().deleteAllCookies();
 		assertTrue(result);
-		if(i==10) {
-			desktop_order.click();
-			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-			desktop_orderByFolderUP.click();
-		}
 
 	}
 	/**
@@ -132,25 +104,17 @@ public class testCollection extends TestInit {
 		favorites.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
 		Tile();
+		Sort();
 		desktop_order.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-		desktop_orderByFolderUP.click();
-		desktop_order.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
-		desktop_orderByCreate.click();
+		click(desktop_orderByCreate);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_name));
 		String name = desktop1_1_name.getText();
 		assertEquals(name, "第四个创建的");
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_moveToFolder));
-		menu_moveToFolder.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		click(menu_moveToFolder);
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.className("final"))));
-		String Folder_name=driver.findElement(By.className("final")).getText();
+		String Folder_name = driver.findElement(By.className("final")).getText();
 		assertEquals(Folder_name, "第三个创建的");
-		desktop_order.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-		desktop_orderByFolderUP.click();
 		
 	}
 	/**
@@ -166,33 +130,22 @@ public class testCollection extends TestInit {
 		favorites.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
 		Tile();
+		Sort();
 		desktop_order.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-		desktop_orderByFolderUP.click();
-//		boolean bl = driver.findElement(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span")).isDisplayed();
-//		if(bl==true) {
-//			desktop_orderByFolderUP.click();
-//		}
-		
-		desktop_order.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFile));
-		desktop_orderByFile.click();
+		click(desktop_orderByFile);
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name1 = desktop1_1_name.getText();
 		assertEquals(name1, "第二个创建的");
 		desktop_order.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFile));
-		desktop_orderByFile.click();
+		click(desktop_orderByFile);
 		String name2 = desktop1_1_name.getText();
 		assertEquals(name2, "第一个创建的");
-		desktop_order.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-		desktop_orderByFolderUP.click();
+		
 	}
 	/**
 	 * 文件夹下文件在收藏页面创建副本
-	 * 
+	 * 文件夹下是第四个创建的文件
 	 * @author 王继程
 	 * @Time 2018-03-20
 	 *
@@ -203,53 +156,70 @@ public class testCollection extends TestInit {
 		favorites.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
 		Tile();
+		Sort();
 		desktop_order.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-		desktop_orderByFolderUP.click();
-		desktop_order.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByCreate));
-		desktop_orderByCreate.click();
+		click(desktop_orderByCreate);
+		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name1 = desktop1_1_name.getText();
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_creatCopy));
-		menu_creatCopy.click();
+		click(menu_creatCopy);
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_moveToFolder));
-		menu_moveToFolder.click();
+		contextClick(desktop1_1);
+		click(menu_moveToFolder);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name = desktop1_1_name.getText();
-//		if(name=="第四个创建的") {
-//			action.contextClick(desktop1_2).perform();
-//			wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-//			menu_delete.click();
-//			wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-//			desktop_newFolder_name_ok.click();
-//		}else 
 		if(name1!=name) {
-			action.contextClick(desktop1_1).perform();
-			wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-			menu_delete.click();
-			wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-			desktop_newFolder_name_ok.click();
+			contextClick(desktop1_1);
+			click(menu_delete);
+			click(desktop_newFolder_name_ok);
+
 		}
+//		}else {
+//			contextClick(desktop1_2);
+//			click(menu_delete);
+//			click(desktop_newFolder_name_ok);
+//			System.out.println("桌面创建时间排序有问题");
+//			
+//		}
 		String msg ="副本"+" "+"第四个创建的";
 		assertEquals(msg, name);
-		desktop_order.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-		desktop_orderByFolderUP.click();
 		
 	}
 	//验证是否平铺
-		public void Tile() throws InterruptedException {
-			
-			String msg = desktop_show_type.getText();
-			if (msg.equals("平铺")) {
-				desktop_show_type.click();
-			}
-			
+	public void Tile() throws InterruptedException {
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
+		String msg = desktop_show_type.getText();
+		if (msg.equals("平铺")) {
+			desktop_show_type.click();
 		}
+			
+	}
+	//验证排序是否初始化
+	public void Sort() throws InterruptedException {
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
+		String msg = desktop_order.getText();
+		if (msg.equals("排序")) {
+			desktop_order.click();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+			Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+			desktop_orderByDefault.click();
+			if(exist==true) {
+				desktop_order.click();
+				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+				desktop_orderByFolderUP.click();
+			}
+		}else {
+			desktop_order.click();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+			Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+			if(exist==true) {
+				desktop_orderByFolderUP.click();
+			}
+		}
+					
+	}
+	
+	
 
 }
