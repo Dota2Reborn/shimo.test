@@ -44,7 +44,7 @@ public class TestInit {
 		driver.navigate().to(test_url + "login");
 		// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		// System.out.println("11111111111111111111111111111111111111");
-		wait = new WebDriverWait(driver, 20);
+		wait = new WebDriverWait(driver, 6);
 	}
 
 	@BeforeMethod
