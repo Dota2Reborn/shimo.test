@@ -172,7 +172,7 @@ public class dashboard_used  extends TestInit {
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
 	    dashboard_2.click();
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-	    String text = driver.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[2]//div//a//div//div//div[2]//div")).getText();
+	    String text = driver.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[2]//div//a//div//div//div[2]//div[1]//div[1]")).getText();
 	    assertEquals(text, "22222");
 	    
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a")));
@@ -183,7 +183,7 @@ public class dashboard_used  extends TestInit {
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
 	    dashboard_2.click();
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-	    String text1 = driver.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[2]//div//a//div//div//div[2]//div")).getText();
+	    String text1 = driver.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[2]//div//a//div//div//div[2]//div[1]//div[1]")).getText();
 	    assertEquals(text1, "11111");
 		
 	    
