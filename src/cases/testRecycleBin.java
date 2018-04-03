@@ -71,7 +71,7 @@ public class testRecycleBin extends TestInit{
 		
 	}
 	
-	//验证排序是否初始化
+	//排序初始化
 	public void Sort() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
 		String msg = desktop_order.getText();
