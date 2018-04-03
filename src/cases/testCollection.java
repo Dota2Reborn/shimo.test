@@ -215,6 +215,8 @@ public class testCollection extends TestInit {
 			Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
 			if(exist==true) {
 				desktop_orderByFolderUP.click();
+			}else {
+				desktop_orderByDefault.click();
 			}
 		}
 					
