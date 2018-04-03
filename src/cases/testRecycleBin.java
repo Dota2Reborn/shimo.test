@@ -20,8 +20,9 @@ public class testRecycleBin extends TestInit{
 	@Test(enabled = true)
 	public void New_Document() throws InterruptedException {
 		login("RecycleBin@shimo.im", "123123");
-		Sort();
+		
 		desktop.click();
+		Sort();
 		contextClick(desktop1_1);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
@@ -46,8 +47,9 @@ public class testRecycleBin extends TestInit{
 	@Test(enabled = true)
 	public void Completely_removed() throws InterruptedException {
 		login("Completely@shimo.im", "123123");
-		Sort();
+		
 		click(desktop);
+		Sort();
 		click(desktop_new);
 		click(desktop_newDoc);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));

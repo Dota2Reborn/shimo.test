@@ -138,7 +138,7 @@ public class testAlertMute extends TestInit {
 		click(desktop1_1);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.sendKeys(Keys.CONTROL,'a'+"编辑文档并保存"+Keys.ENTER);
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		logout();
 		login("AlertMute3@shimo.im", "123123");
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard));
