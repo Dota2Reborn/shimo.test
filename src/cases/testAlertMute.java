@@ -17,7 +17,7 @@ import base.TestInit;
 
 public class testAlertMute extends TestInit {
 	/**
-	 * 关闭消息免打扰，协作这评论，收到消息通知
+	 * 关闭消息免打扰，协作者评论，收到消息通知
 	 * 
 	 * 已开启免打扰AlertMute@shimo.im
 	 * 
@@ -99,7 +99,6 @@ public class testAlertMute extends TestInit {
 		dashboard_share_file.click();
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.sendKeys(Keys.CONTROL,'a'+"编辑文档并保存"+Keys.ENTER);
-		Thread.sleep(500);
 		click(quick_access_point);
 		click(Back_to_Table);
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard));
@@ -138,7 +137,7 @@ public class testAlertMute extends TestInit {
 		click(desktop1_1);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.sendKeys(Keys.CONTROL,'a'+"编辑文档并保存"+Keys.ENTER);
-		Thread.sleep(1000);
+		click(b_back);
 		logout();
 		login("AlertMute3@shimo.im", "123123");
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard));
