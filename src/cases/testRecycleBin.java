@@ -20,23 +20,18 @@ public class testRecycleBin extends TestInit{
 	@Test(enabled = true)
 	public void New_Document() throws InterruptedException {
 		login("RecycleBin@shimo.im", "123123");
-		
+		Sort();
 		desktop.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
-		trash.click();
+		contextClick(desktop1_1);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
+		click(trash);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name = desktop1_1.getText();
 		assertEquals(name, "删除恢复测试");
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_Recovery));
-		menu_Recovery.click();
-		desktop.click();
+		contextClick(desktop1_1);
+		click(menu_Recovery);
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name1 = desktop1_1.getText();
 		assertEquals(name1, "删除恢复测试");
@@ -51,37 +46,55 @@ public class testRecycleBin extends TestInit{
 	@Test(enabled = true)
 	public void Completely_removed() throws InterruptedException {
 		login("Completely@shimo.im", "123123");
-		
-		desktop.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
-		desktop_new.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
-		desktop_newDoc.click();
+		Sort();
+		click(desktop);
+		click(desktop_new);
+		click(desktop_newDoc);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
-		doc_edit.sendKeys("文档内输入内容，可进入回收站"+Keys.ENTER);//.send_keys(Keys.ENTER);
-		Thread.sleep(1000);
+		doc_edit.sendKeys("文档内输入内容，可进入回收站"+Keys.ENTER);
 		//点点点
-		doc_menu.click();
+		click(doc_menu);
 		//删除按钮
-		wait.until(ExpectedConditions.elementToBeClickable(file_menu_delete));
-		file_menu_delete.click();
+		click(file_menu_delete);
 		//删除文档，确认删除
-		wait.until(ExpectedConditions.elementToBeClickable(doc_menu_delete_OK));
-		doc_menu_delete_OK.click();
-		wait.until(ExpectedConditions.elementToBeClickable(trash));
-		trash.click();
+		click(doc_menu_delete_OK);
+		click(trash);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name = desktop1_1.getText();
 		assertEquals(name, "无标题");
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_Completely_removed));
-		menu_Completely_removed.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("none-file")));
-		boolean bl = driver.findElement(By.className("none-file")).isDisplayed();
+		click(menu_Completely_removed);
+		click(desktop_newFolder_name_ok);
+		Thread.sleep(500);
+		boolean bl = doesWebElementExist(By.className("none-file"));
 		assertEquals(bl,true);
 		
 	}
-
+	
+	//验证排序是否初始化
+	public void Sort() throws InterruptedException {
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
+		String msg = desktop_order.getText();
+		if (msg.equals("排序")) {
+			desktop_order.click();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+			Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+			desktop_orderByDefault.click();
+			if(exist==true) {
+				desktop_order.click();
+				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+				desktop_orderByFolderUP.click();
+			}
+		}else {
+			desktop_order.click();
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+			Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+			if(exist==true) {
+				desktop_orderByFolderUP.click();
+			}else {
+				desktop_orderByDefault.click();
+			}
+		}
+					
+	}
 }
