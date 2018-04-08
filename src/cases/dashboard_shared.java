@@ -115,8 +115,8 @@ public class dashboard_shared extends TestInit {
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']")));
 	    WebElement card = driver.findElement(By.xpath("//div[@class='category-card-container']"));
 		action.moveToElement(card).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
-		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")));
+		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
 		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='tile-inner']//div//a//div[2]")));
 		String text=driver.findElement(By.xpath("//div[@class='tile-inner']//div//a//div[2]")).getText();
@@ -128,7 +128,8 @@ public class dashboard_shared extends TestInit {
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']")));
 		WebElement card1 = driver.findElement(By.xpath("//div[@class='category-card-container']"));//卡片
 		action.moveToElement(card1).perform();
-		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).click();
+		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
+		Thread.sleep(300);
 		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
 		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
