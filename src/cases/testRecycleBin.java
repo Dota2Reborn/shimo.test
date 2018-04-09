@@ -74,29 +74,34 @@ public class testRecycleBin extends TestInit{
 	}
 	
 	//排序初始化
-	public void Sort() throws InterruptedException {
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
-		String msg = desktop_order.getText();
-		if (msg.equals("排序")) {
-			desktop_order.click();
-			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
-			Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
-			desktop_orderByDefault.click();
-			if(exist==true) {
+	//验证排序是否初始化
+		public void Sort() throws InterruptedException {
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
+			String msg = desktop_show_type.getText();
+			if (msg.equals("平铺")) {
+				desktop_show_type.click();
+			}
+			msg = desktop_order.getText();
+			if (msg.equals("排序")) {
+				desktop_order.click();
+				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+				Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+				desktop_orderByDefault.click();
+				if(exist==true) {
+					desktop_order.click();
+					wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+					desktop_orderByFolderUP.click();
+				}
+			}else {
 				desktop_order.click();
 				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-				desktop_orderByFolderUP.click();
+				Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+				if(exist==true) {
+					desktop_orderByFolderUP.click();
+				}else {
+					desktop_orderByDefault.click();
+				}
 			}
-		}else {
-			desktop_order.click();
-			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-			Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
-			if(exist==true) {
-				desktop_orderByFolderUP.click();
-			}else {
-				desktop_orderByDefault.click();
-			}
+						
 		}
-					
-	}
 }

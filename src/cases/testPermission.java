@@ -22,7 +22,7 @@ public class testPermission extends TestInit {
 		desktop.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		Tile();
+		Sort();
 		//右键第一个文件
 		action.contextClick(desktop1_1).perform();
 		click(menu_cooperation);
@@ -33,7 +33,7 @@ public class testPermission extends TestInit {
 		login("testing_2@test.im","123123");
 		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		Tile();
+		Sort();
 		desktop1_1_folder.click();
 		click(desktop1_1);
 		wait.until(ExpectedConditions.elementToBeClickable(ql_comment_Comments));
@@ -64,7 +64,7 @@ public class testPermission extends TestInit {
 		desktop.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-		Tile();
+		Sort();
 		//右键第一个文件
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_cooperation));
@@ -79,7 +79,7 @@ public class testPermission extends TestInit {
 		click(desktop);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-		Tile();
+		Sort();
 		desktop1_1_folder.click();
 		
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
@@ -93,14 +93,36 @@ public class testPermission extends TestInit {
 		desktop_newFolder_name_ok.click();
 	}
 	//验证是否平铺
-	public void Tile() throws InterruptedException {
-		
-		String msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
+	//验证排序是否初始化
+		public void Sort() throws InterruptedException {
+			wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
+			String msg = desktop_show_type.getText();
+			if (msg.equals("平铺")) {
+				desktop_show_type.click();
+			}
+			msg = desktop_order.getText();
+			if (msg.equals("排序")) {
+				desktop_order.click();
+				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+				Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+				desktop_orderByDefault.click();
+				if(exist==true) {
+					desktop_order.click();
+					wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+					desktop_orderByFolderUP.click();
+				}
+			}else {
+				desktop_order.click();
+				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+				Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+				if(exist==true) {
+					desktop_orderByFolderUP.click();
+				}else {
+					desktop_orderByDefault.click();
+				}
+			}
+						
 		}
-		
-	}
 
 	//添加协作
 	public void Add(int Judgment,String Emil_1) throws InterruptedException {
