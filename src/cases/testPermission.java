@@ -20,8 +20,6 @@ public class testPermission extends TestInit {
 	public void Add_to1() throws InterruptedException {
 		login("testing_1@test.im","123123");
 		desktop.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		Sort();
 		//右键第一个文件
 		action.contextClick(desktop1_1).perform();
@@ -32,12 +30,10 @@ public class testPermission extends TestInit {
 		logout();
 		login("testing_2@test.im","123123");
 		click(desktop);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		Sort();
 		desktop1_1_folder.click();
 		click(desktop1_1);
 		wait.until(ExpectedConditions.elementToBeClickable(ql_comment_Comments));
-
 		driver.findElement(By.xpath("//div[@id='ql-container']//div[1]//p")).click();
 		wait.until(ExpectedConditions.elementToBeClickable(doc_discuss));
 		ql_comment_Comments.click();
@@ -62,8 +58,6 @@ public class testPermission extends TestInit {
 	public void Add_to2() throws InterruptedException {
 		login("testing_3@test.im","123123");
 		desktop.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		Sort();
 		//右键第一个文件
 		action.contextClick(desktop1_1).perform();
@@ -75,10 +69,7 @@ public class testPermission extends TestInit {
 		logout();
 		login("testing_5@test.im","123123");
 		desktop.click();
-		
 		click(desktop);
-		
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		Sort();
 		desktop1_1_folder.click();
 		
