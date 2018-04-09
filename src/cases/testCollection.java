@@ -198,7 +198,11 @@ public class testCollection extends TestInit {
 	//验证排序是否初始化
 	public void Sort() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
-		String msg = desktop_order.getText();
+		String msg = desktop_show_type.getText();
+		if (msg.equals("平铺")) {
+			desktop_show_type.click();
+		}
+		msg = desktop_order.getText();
 		if (msg.equals("排序")) {
 			desktop_order.click();
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
