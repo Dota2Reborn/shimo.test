@@ -184,7 +184,6 @@ public class testCollection extends TestInit {
 //		}
 		String msg ="副本"+" "+"第四个创建的";
 		assertEquals(msg, name);
-		
 	}
 	//验证是否平铺
 	public void Tile() throws InterruptedException {
