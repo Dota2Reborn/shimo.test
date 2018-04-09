@@ -322,6 +322,7 @@ public class dashboard_update  extends TestInit{
 		
 		logout();
 		login("gengxin12@shimo.im", "123123");
+		click(dashboard_3);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 		Thread.sleep(1000);
