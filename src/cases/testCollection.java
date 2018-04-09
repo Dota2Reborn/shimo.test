@@ -159,6 +159,7 @@ public class testCollection extends TestInit {
 		Sort();
 		desktop_order.click();
 		click(desktop_orderByCreate);
+		//刷新
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name1 = desktop1_1_name.getText();
