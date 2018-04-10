@@ -334,7 +334,7 @@ public class TestInit {
 	}
 	
 	/**
-	 * 等待页面加载完毕
+	 * 通过JS判断页面是否加载完毕
 	 * 
 	 * @author 刘晨
 	 * @Time 2018-04-10
