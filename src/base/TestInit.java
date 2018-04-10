@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
@@ -44,7 +45,7 @@ public class TestInit {
 		driver.navigate().to(test_url + "login");
 		// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		// System.out.println("11111111111111111111111111111111111111");
-		wait = new WebDriverWait(driver, 6);
+		wait = new WebDriverWait(driver, 20);
 	}
 
 	@BeforeMethod
@@ -279,6 +280,7 @@ public class TestInit {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				// wait.until(ExpectedConditions.attributeToBe(doc_saveStatus, "class",
 				// "save-status-icon save-status-online-done animation-online-done"));
+				checkPageIsReady();
 				wait.until(ExpectedConditions
 						.invisibilityOfElementWithText(By.xpath("//span[@id='save-status']//span[2]"), "正在保存..."));
 				element.click();
@@ -329,6 +331,21 @@ public class TestInit {
 			System.out.println(element + "is missing");
 		}
 		return msg;
+	}
+	
+	public void checkPageIsReady() {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    for (int i = 0; i < 10; i++) {
+	        if ("complete".equals(js
+	                .executeScript("return document.readyState").toString())) {
+	            break;
+	        }
+	        try {
+	            Thread.sleep(500);
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+	    }
 	}
 
 	/**
