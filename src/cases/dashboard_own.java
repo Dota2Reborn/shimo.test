@@ -195,30 +195,26 @@ public class dashboard_own extends TestInit{
 	public void own5() throws InterruptedException{
 		login("own6@shimo.im", "123123");
 		desktop.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_cooperation));
-		menu_cooperation.click();
+		contextClick(desktop1_1);
+		click(menu_cooperation);
 		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
 		Thread.sleep(500);
 		input_addCollaborator.sendKeys("own7@shimo.im");
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		b_addCollaborator_1_add.click();
+		click(b_addCollaborator_1_add);
 		//获取当前时间
 		Boolean a = false;
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("HHmm");
 		String time = format.format(date);
 		int dat1=Integer.parseInt(time);
-		wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
-		Shut_down_sm_modal_close_x.click();
+		click(Shut_down_sm_modal_close_x);
 		logout();
 		login("own7@shimo.im", "123123");
 		String n = dashboard_shareTime_1.getText();
 		String time1 = n.substring(0,2);
 		String m="刚刚";
 		if(time1.equals(m)) {
-			assertEquals(n,"刚刚");
+			//assertEquals(n,"刚刚");
 			a = true;
 		}else if(time1!=m) {
 			String time3 = n.substring(0,8);
@@ -230,16 +226,10 @@ public class dashboard_own extends TestInit{
 			}
 		}
 		contextClick(New_Share_1);
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
-		assertTrue(a);
-		
-		
-	     
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
+		Thread.sleep(500);
+		assertTrue(a);  
 	}
-
-
 
 }

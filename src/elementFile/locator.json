@@ -663,7 +663,7 @@
 			{
 				"elementName": "Exit_share_OK",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-footer']",
+				"locator": "//div[@class='sm-modal-footer']//button[2]",
 				"note": "管理员删除文档-选择退出共享"
 			},
 			{

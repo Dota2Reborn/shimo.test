@@ -31,7 +31,7 @@ public class testPermission extends TestInit {
 		login("testing_2@test.im","123123");
 		click(desktop);
 		Sort();
-		desktop1_1_folder.click();
+		click(desktop1_1_folder);
 		click(desktop1_1);
 		wait.until(ExpectedConditions.elementToBeClickable(ql_comment_Comments));
 		driver.findElement(By.xpath("//div[@id='ql-container']//div[1]//p")).click();
@@ -41,9 +41,8 @@ public class testPermission extends TestInit {
 		String M = doc_discuss_input.getAttribute("spellcheck");
 		assertEquals(M,"false");
 		quick_access_point.click();
-		click(Back_to_Desktop);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		action.contextClick(desktop1_1).perform();
+		click(Back_to_Table);
+		contextClick(desktop1_1);
 		click(menu_delete);
 		click(Exit_share_OK);
 	}
