@@ -3,6 +3,7 @@ package base;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -43,9 +44,10 @@ public class TestInit {
 		driver = init.initData(this);
 		action = new Actions(driver);
 		driver.navigate().to(test_url + "login");
+//		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		// System.out.println("11111111111111111111111111111111111111");
-		wait = new WebDriverWait(driver, 20);
+		wait = new WebDriverWait(driver, 6);
 	}
 
 	@BeforeMethod
@@ -66,7 +68,7 @@ public class TestInit {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-		driver.quit();
+		 driver.quit();
 	}
 
 	/**
@@ -86,7 +88,12 @@ public class TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
 		userPwd.sendKeys(pwd);
-		login_submit.click();
+		try {
+			click(login_submit);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
 	}
 
@@ -105,7 +112,13 @@ public class TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
 		userPwd.sendKeys(pwd);
-		login_submit.click();
+		// login_submit.click();
+		try {
+			click(login_submit);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -142,7 +155,7 @@ public class TestInit {
 			driver.navigate().to(test_url + "logout");
 			// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 			action.sendKeys(Keys.ESCAPE);
-		}catch (UnhandledAlertException e) {
+		} catch (UnhandledAlertException e) {
 			// 报错
 			driver.switchTo().alert().accept();
 			driver.navigate().to(test_url + "logout");
@@ -150,7 +163,7 @@ public class TestInit {
 		} catch (NoAlertPresentException e) {
 			String msg = driver.switchTo().alert().getText();
 			System.out.println("Unhandled Alert :" + msg);
-		} 
+		}
 	}
 
 	/**
@@ -276,7 +289,8 @@ public class TestInit {
 	 */
 	public void click(WebElement element) throws InterruptedException {
 		try {
-			if (element.toString().equals(b_back.toString()) ||element.toString().equals(Back_to_Table.toString())||element.toString().equals(Back_to_Desktop.toString())) {
+			if (element.toString().equals(b_back.toString()) || element.toString().equals(Back_to_Table.toString())
+					|| element.toString().equals(Back_to_Desktop.toString())) {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				// wait.until(ExpectedConditions.attributeToBe(doc_saveStatus, "class",
 				// "save-status-icon save-status-online-done animation-online-done"));
@@ -307,11 +321,11 @@ public class TestInit {
 		} catch (NoAlertPresentException e) {
 			String msg = driver.switchTo().alert().getText();
 			System.out.println("Unhandled Alert :" + msg);
-		} catch(JavascriptException e) {
+		} catch (JavascriptException e) {
 			String msg = driver.switchTo().alert().getText();
 			System.out.println("Unhandled Alert :" + msg);
 			System.out.println("javascript");
-		} 
+		}
 	}
 
 	/**
@@ -332,7 +346,7 @@ public class TestInit {
 		}
 		return msg;
 	}
-	
+
 	/**
 	 * 通过JS判断页面是否加载完毕
 	 * 
@@ -341,18 +355,17 @@ public class TestInit {
 	 *
 	 */
 	public void checkPageIsReady() {
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	    for (int i = 0; i < 10; i++) {
-	        if ("complete".equals(js
-	                .executeScript("return document.readyState").toString())) {
-	            break;
-	        }
-	        try {
-	            Thread.sleep(500);
-	        } catch (InterruptedException e) {
-	            e.printStackTrace();
-	        }
-	    }
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		for (int i = 0; i < 10; i++) {
+			if ("complete".equals(js.executeScript("return document.readyState").toString())) {
+				break;
+			}
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	/**
