@@ -3,6 +3,7 @@ package base;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -43,6 +44,7 @@ public class TestInit {
 		driver = init.initData(this);
 		action = new Actions(driver);
 		driver.navigate().to(test_url + "login");
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		// System.out.println("11111111111111111111111111111111111111");
 		wait = new WebDriverWait(driver, 6);
@@ -86,7 +88,12 @@ public class TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.sendKeys(user);
 		userPwd.sendKeys(pwd);
-		login_submit.click();
+		try {
+			click(login_submit);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
 	}
 
