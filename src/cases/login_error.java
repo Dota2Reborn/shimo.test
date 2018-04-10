@@ -143,7 +143,7 @@ public class login_error extends TestInit {
 	 * @Time 2018-01-09
 	 *
 	 */
-	@Test
+	@Test(enabled = false)
 	public void login_error5() throws Exception {
 
 		
