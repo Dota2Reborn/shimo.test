@@ -153,6 +153,7 @@ public class TestInit {
 	public void logout() {
 		try {
 			driver.navigate().to(test_url + "logout");
+			driver.switchTo().alert().accept();
 			// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 			action.sendKeys(Keys.ESCAPE);
 		} catch (UnhandledAlertException e) {
@@ -161,8 +162,8 @@ public class TestInit {
 			driver.navigate().to(test_url + "logout");
 			System.out.println("Unhandled Alert!!!!");
 		} catch (NoAlertPresentException e) {
-			String msg = driver.switchTo().alert().getText();
-			System.out.println("Unhandled Alert :" + msg);
+			//正常情况
+			System.out.println("111111");
 		}
 	}
 
@@ -298,6 +299,7 @@ public class TestInit {
 				wait.until(ExpectedConditions
 						.invisibilityOfElementWithText(By.xpath("//span[@id='save-status']//span[2]"), "正在保存..."));
 				element.click();
+				driver.switchTo().alert().accept();
 			} else {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				element.click();
@@ -319,12 +321,11 @@ public class TestInit {
 			// 超时
 			System.out.println("time out ->" + element);
 		} catch (NoAlertPresentException e) {
-			String msg = driver.switchTo().alert().getText();
-			System.out.println("Unhandled Alert :" + msg);
+			//正常情况
 		} catch (JavascriptException e) {
 			String msg = driver.switchTo().alert().getText();
 			System.out.println("Unhandled Alert :" + msg);
-			System.out.println("javascript");
+			System.out.println("javascript Error:" + e.getMessage());
 		}
 	}
 
