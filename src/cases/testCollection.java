@@ -30,11 +30,11 @@ public class testCollection extends TestInit {
 		Tile();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name=desktop1_1.getText();
-		assertEquals(name, "无标题");
 		action.contextClick(desktop1_1).perform();
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
-		
+		Thread.sleep(500);
+		assertEquals(name, "无标题");
 	}
 	/**
 	 * 新建表格收藏
@@ -55,10 +55,11 @@ public class testCollection extends TestInit {
 		Tile();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name=desktop1_1.getText();
-		assertEquals(name, "无标题");
 		action.contextClick(desktop1_1).perform();
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
+		Thread.sleep(500);
+		assertEquals(name, "无标题");
 		
 	}
 	/**
