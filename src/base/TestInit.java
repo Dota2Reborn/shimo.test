@@ -44,7 +44,7 @@ public class TestInit {
 		driver = init.initData(this);
 		action = new Actions(driver);
 		driver.navigate().to(test_url + "login");
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+//		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		// System.out.println("11111111111111111111111111111111111111");
 		wait = new WebDriverWait(driver, 6);
@@ -68,7 +68,7 @@ public class TestInit {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-		// driver.quit();
+		 driver.quit();
 	}
 
 	/**
