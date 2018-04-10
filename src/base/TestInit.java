@@ -163,7 +163,7 @@ public class TestInit {
 			System.out.println("Unhandled Alert!!!!");
 		} catch (NoAlertPresentException e) {
 			//正常情况
-			System.out.println("111111");
+			action.sendKeys(Keys.ESCAPE);
 		}
 	}
 
