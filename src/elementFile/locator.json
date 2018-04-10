@@ -580,13 +580,13 @@
 				"elementName": "Back_to_Desktop",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='qa-ancestor']//div[1]//a[1]",
-				"note": "一级文件夹下的文档或者表格中，下箭头直接返回桌面"
+				"note": "桌面下的文档或者表格下箭头返回桌面"
 			},
 			{
 				"elementName": "Back_to_Table",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='qa-ancestor']//div[2]//a[1]",
-				"note": "一级文件夹下的文档或者表格中，下箭头直接返回工作台"
+				"note": "桌面下的文档或者表格下箭头返回工作台，一级文件夹下箭头返回桌面"
 			},
 			{
 				"elementName": "doc_edit",
