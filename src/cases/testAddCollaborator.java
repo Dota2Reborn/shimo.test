@@ -12,7 +12,6 @@ import base.TestInit;
 
 public class testAddCollaborator extends TestInit {
 
-	private TestInit dr;
 	/**
 	 * 基础版用户，文件协作者为5人，不能继续添加协作者
 	 * 
