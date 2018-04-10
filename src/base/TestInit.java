@@ -333,6 +333,13 @@ public class TestInit {
 		return msg;
 	}
 	
+	/**
+	 * 等待页面加载完毕
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-04-10
+	 *
+	 */
 	public void checkPageIsReady() {
 	    JavascriptExecutor js = (JavascriptExecutor) driver;
 	    for (int i = 0; i < 10; i++) {
