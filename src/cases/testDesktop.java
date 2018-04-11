@@ -504,7 +504,8 @@ public class testDesktop extends TestInit {
 		desktop_newFolder_name_ok.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.className("settings")));
-		desktop.click();
+//		desktop.click();
+		clickDesktop();
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 
