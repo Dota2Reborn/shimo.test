@@ -27,17 +27,15 @@ public class dashboard_update  extends TestInit{
 		click(desktop_newDoc);
 		click(doc_edit);
 		click(b_back);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
-		
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
 		boolean b = driver.findElement(By.xpath("//div[@class='card-icon']//div")).isDisplayed();//卡片图标
 	    assertEquals(b, true);
 	    String text = driver.findElement(By.xpath("//div[@class='card-content-title']//div[1]")).getText();
 	    assertEquals(text, "无标题");
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
-	    String text1 = driver.findElement(By.xpath("//div[@class='card-content-update']")).getText();
+	    
+	    String text1 = dashboard_update_time.getText();
 	    assertEquals(text1, "刚刚 我 更新");
-	    WebElement card = driver.findElement(By.xpath("//div[@class='category-card-container']"));//卡片
-		action.moveToElement(card).perform();
+		action.moveToElement(dashboard_update_time).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
 		boolean d = driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).isDisplayed();
 		assertEquals(d, true);
@@ -46,13 +44,7 @@ public class dashboard_update  extends TestInit{
 		Thread.sleep(200);
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 	    click(menu_delete);
-	    WebElement icon = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-	    icon.click();
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
-		assertEquals(text2, "没有文件");
-		
+	    click(desktop_newFolder_name_ok);
 		//勿扰没写呢
 		
 	}
@@ -108,8 +100,8 @@ public class dashboard_update  extends TestInit{
 		doc_edit.sendKeys("1");
 		Thread.sleep(1000);
 		click(b_back);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
-		String text1 = driver.findElement(By.xpath("//div[@class='card-content-update']")).getText();
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
+		String text1 = dashboard_update_time.getText();
 	    assertEquals(text1, "刚刚 我 更新");
 		
 		
@@ -135,8 +127,8 @@ public class dashboard_update  extends TestInit{
 		logout();
 		
 		login("gengxin4@shimo.im", "123123");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
-		String text1 = driver.findElement(By.xpath("//div[@class='card-content-update']")).getText();
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
+		String text1 = dashboard_update_time.getText();
 	    assertEquals(text1, "刚刚 AA 更新");
 	}
 	/**
@@ -149,8 +141,7 @@ public class dashboard_update  extends TestInit{
 	@Test
 	public void update5() throws InterruptedException{
 		login("gengxin6@shimo.im", "123123");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
-		driver.findElement(By.xpath("//div[@class='card-content-update']")).click();
+		click(dashboard_update_time);
 		click(doc_edit);
 		click(doc_discuss);
 		click(doc_discuss_input);
@@ -159,11 +150,11 @@ public class dashboard_update  extends TestInit{
 		Thread.sleep(1000);
 		click(b_back);
 		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
-		String text1 = driver.findElement(By.xpath("//div[@class='card-content-update']")).getText();
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
+		String text1 = dashboard_update_time.getText();
 	    assertEquals(text1, "刚刚 我 评论：通过");
 	    
-	    driver.findElement(By.xpath("//div[@class='card-content-update']")).click();
+	    click(dashboard_update_time);
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='doc-comment-text']")));
 	    driver.findElement(By.xpath("//div[@class='doc-comment-text']")).click();
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='doc-comment-close-icon']")));
@@ -198,17 +189,16 @@ public class dashboard_update  extends TestInit{
 		logout();
 		
 		login("gengxin8@shimo.im", "123123");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
-		String text1 = driver.findElement(By.xpath("//div[@class='card-content-update']")).getText();
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
+		String text1 = dashboard_update_time.getText();
 	    assertEquals(text1, "刚刚 cc 评论：通过");
-	    driver.findElement(By.xpath("//div[@class='card-content-update']")).click();
+	    click(dashboard_update_time);
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='doc-comment-text']")));
 	    driver.findElement(By.xpath("//div[@class='doc-comment-text']")).click();
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='doc-comment-close-icon']")));
 	    driver.findElement(By.xpath("//span[@class='doc-comment-close-icon']")).click();
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='confirm-dialog-footer dialog-foot']//button[1]")));
 	    driver.findElement(By.xpath("//div[@class='confirm-dialog-footer dialog-foot']//button[1]")).click();
-	    Thread.sleep(500);
 		
 	}
 	/**
@@ -216,22 +206,21 @@ public class dashboard_update  extends TestInit{
 	 * 自己退出共享，已经生成的卡片从最近更新消失
 	 * @author 陈清杰
 	 * @Time2018-03-27
-	 * 
+	 * 账号状态：
 	 * */
 	@Test
 	public void update7() throws InterruptedException{
 		login("gengxin10@shimo.im", "123123");
 		click(dashboard_4);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
-		driver.findElement(By.xpath("//div[@class='card-content-update']")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
+		click(dashboard_update_time);
 		click(doc_edit);
 		doc_edit.sendKeys("1");
 		Thread.sleep(1000);
 		click(b_back);
 		click(dashboard_1);
-		 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-title']//div[1]")));
-	    String text = driver.findElement(By.xpath("//div[@class='card-content-title']//div[1]")).getText();
-	    assertEquals(text, "突然想起你");
+		 wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
+	    assertEquals(dashboard_update_name, "突然想起你");
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
 	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 	    click(menu_cooperation);
@@ -246,16 +235,11 @@ public class dashboard_update  extends TestInit{
 		login("gengxin9@shimo.im", "123123");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
-		Thread.sleep(1000);
-		menu_cooperation.click();
-		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
-	    input_addCollaborator.sendKeys("gengxin10@shimo.im");
-	    //验证添加按钮是否加载出来
-	    wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-	    b_addCollaborator_1_add.click();
-	    wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
-	    Shut_down_sm_modal_close_x.click();
-		
+		click(menu_cooperation);
+		click(button_addCollaborator);
+		click(addCollaborator_1_add);
+		click(b_addCollaborator_ok);
+		click(Shut_down_sm_modal_close_x);
 	}
 	/**
 	 *最近更新
@@ -295,8 +279,7 @@ public class dashboard_update  extends TestInit{
 	public void update9() throws InterruptedException{
 		login("gengxin13@shimo.im", "123123");
 		click(dashboard_4);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
-		driver.findElement(By.xpath("//div[@class='card-content-update']")).click();
+		click(dashboard_update_time);
 	    click(doc_edit);
 	    doc_edit.sendKeys("q");
 	    Thread.sleep(1000);
@@ -364,8 +347,8 @@ public class dashboard_update  extends TestInit{
 	    Thread.sleep(300);
 	    click(dashboard);
 	    
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
-		String text1 = driver.findElement(By.xpath("//div[@class='card-content-update']")).getText();
+	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
+		String text1 = dashboard_update_time.getText();
 	    assertEquals(text1, "刚刚 我 更新");
 	    
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));

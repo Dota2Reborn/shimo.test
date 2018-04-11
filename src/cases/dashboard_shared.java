@@ -21,26 +21,21 @@ public class dashboard_shared extends TestInit {
 	 * 卡片样式
 	 * @author 陈清杰
 	 * @Time2018-03-21
-	 * 账号状态：两个账号都没有文件
+	 * 账号状态：gx1有，gx2没有
 	 * */
 	@Test
 	public void shared1() throws InterruptedException{
 		login("gx1@shimo.im", "123123");
-		click(desktop_new);
-		click(desktop_newDoc);
-		click(doc_edit);
-        doc_edit.sendKeys("石墨测试组");
-        click(b_back);
+        click(dashboard_3);
    	    
    	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 		Thread.sleep(1000);
 		click(menu_cooperation);
-		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
-	    input_addCollaborator.sendKeys("gx2@shimo.im");
-	    click(b_addCollaborator_1_add);
-	    click(Shut_down_sm_modal_close_x);
-	    
+		click(button_addCollaborator);
+		click(addCollaborator_1_add);
+		click(b_addCollaborator_ok);
+		click(button_addCollaborator_close);
 	    logout();
 	    login("gx2@shimo.im", "123123");
 	    click(dashboard_4);
@@ -53,8 +48,8 @@ public class dashboard_shared extends TestInit {
 	    assertEquals(c, true);
 	    String text = driver.findElement(By.xpath("//div[@class='card-content-title']//div[1]")).getText();
 	    assertEquals(text, "无标题");
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
-	    String text1 = driver.findElement(By.xpath("//div[@class='card-content-update']")).getText();
+	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
+	    String text1 = dashboard_update_time.getText();
 	    assertEquals(text1, "2人共享 · 刚刚 共享 共享");
 	    WebElement card = driver.findElement(By.xpath("//div[@class='category-card-container']"));
 		action.moveToElement(card).perform();
@@ -64,70 +59,40 @@ public class dashboard_shared extends TestInit {
 		boolean e = driver.findElement(By.xpath("//div[@class='file-options-icon']")).isDisplayed();
 		assertEquals(e, true);
 		Thread.sleep(200);
-		
-		
-		logout();
-		login("gx1@shimo.im","123123");
-		click(dashboard_3);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-	    menu_delete.click();
-	    WebElement icon = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-	    icon.click();
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
-		assertEquals(text2, "没有文件");
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 		
 		
-   	    
+		
+		
 	}
 	/**
 	 *共享给我
 	 * hover收藏
 	 * @author 陈清杰
 	 * @Time2018-03-22
-	 * 账号状态：两个账号都没有文件
+	 * 账号状态：gx4有gx3共享的文件
 	 * */
 	@Test
 	public void shared2() throws InterruptedException{
-		login("gx3@shimo.im", "123123");
-		click(desktop_new);
-		click(desktop_newDoc);
-		click(doc_edit);
-        doc_edit.sendKeys("石墨测试组");
-   	    click(b_back);
-   	    
-   	    
-   	    
-   	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
-		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
-		click(menu_cooperation);
-		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
-	    input_addCollaborator.sendKeys("gx4@shimo.im");
-	    click(b_addCollaborator_1_add);
-	    click(Shut_down_sm_modal_close_x);
-	    logout();
-	    
-	    login("gx4@shimo.im", "123123");
+		login("gx4@shimo.im", "123123");
 	    click(dashboard_4);
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']")));
-	    WebElement card = driver.findElement(By.xpath("//div[@class='category-card-container']"));
-		action.moveToElement(card).perform();
+	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_share_file));
+		action.moveToElement(dashboard_share_file).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")));
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
 		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='tile-inner']//div//a//div[2]")));
 		String text=driver.findElement(By.xpath("//div[@class='tile-inner']//div//a//div[2]")).getText();
-		assertEquals(text, "无标题");
+		assertEquals(text, "共享");
 		
 		
 		click(dashboard);
 	    click(dashboard_4);
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']")));
-		WebElement card1 = driver.findElement(By.xpath("//div[@class='category-card-container']"));//卡片
-		action.moveToElement(card1).perform();
+	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_share_file));
+		action.moveToElement(dashboard_share_file).perform();
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
 		Thread.sleep(300);
 		click(favorites);
@@ -135,17 +100,6 @@ public class dashboard_shared extends TestInit {
 		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
 		assertEquals(text2, "没有文件");
 		
-		logout();
-		login("gx3@shimo.im", "123123");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
-		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
-	    click(menu_delete);
-	    WebElement icon = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-	    icon.click();
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-		String text3 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
-		assertEquals(text3, "没有文件");
 		
 	}
 	
