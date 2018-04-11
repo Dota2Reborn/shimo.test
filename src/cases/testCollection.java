@@ -27,7 +27,7 @@ public class testCollection extends TestInit {
 		click(Collection_OK);
 		click(b_back);
 		click(favorites);
-		Tile();
+		Sort();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name=desktop1_1.getText();
 		action.contextClick(desktop1_1).perform();
@@ -52,7 +52,7 @@ public class testCollection extends TestInit {
 		click(Collection_OK);
 		click(b_back);
 		click(favorites);
-		Tile();
+		Sort();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name=desktop1_1.getText();
 		action.contextClick(desktop1_1).perform();
@@ -104,7 +104,6 @@ public class testCollection extends TestInit {
 		login(" Collection@shimo.im", "123123");
 		favorites.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
-		Tile();
 		Sort();
 		desktop_order.click();
 		click(desktop_orderByCreate);
@@ -130,7 +129,6 @@ public class testCollection extends TestInit {
 		login(" Collection@shimo.im", "123123");
 		favorites.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
-		Tile();
 		Sort();
 		desktop_order.click();
 		click(desktop_orderByFile);
@@ -156,7 +154,6 @@ public class testCollection extends TestInit {
 		login(" Collection@shimo.im", "123123");
 		favorites.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
-		Tile();
 		Sort();
 		desktop_order.click();
 		click(desktop_orderByCreate);
@@ -187,15 +184,7 @@ public class testCollection extends TestInit {
 		String msg ="副本"+" "+"第四个创建的";
 		assertEquals(msg, name);
 	}
-	//验证是否平铺
-	public void Tile() throws InterruptedException {
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
-		String msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
-			
-	}
+	
 	//验证排序是否初始化
 	public void Sort() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
