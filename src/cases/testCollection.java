@@ -137,11 +137,11 @@ public class testCollection extends TestInit {
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name1 = desktop1_1_name.getText();
-		assertEquals(name1, "第二个创建的");
+		assertEquals(name1, "第一个创建的");
 		desktop_order.click();
 		click(desktop_orderByFile);
 		String name2 = desktop1_1_name.getText();
-		assertEquals(name2, "第一个创建的");
+		assertEquals(name2, "第四个创建的");
 		
 	}
 	/**
