@@ -23,23 +23,17 @@ public class dashboard_used  extends TestInit {
 	 * 卡片样式验证
 	 * @author 陈清杰
 	 * @Time 2018-03-06
+	 * 账号状态：没有文件
 	 */
 	@Test
 	public void used1() throws InterruptedException{
 		
-		
-		
-		
 		login("zuijin@shimo.im", "123123");
-		
-	    action.moveToElement(desktop_new).perform();
-	    wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
-	    desktop_newDoc.click();
-	    wait.until(ExpectedConditions.elementToBeClickable(b_back));
+		click(desktop_new);
+	    click(desktop_newDoc);
 	    click(b_back);
-	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
-	    dashboard_2.click();
-	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
+	    click(dashboard_2);
+	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
 		String text = dashboard_update_time.getText();
 		assertEquals(text, "刚刚 我 打开");
 
@@ -49,32 +43,29 @@ public class dashboard_used  extends TestInit {
 	 * hover卡片收藏验证
 	 * @author 陈清杰
 	 * @Time 2018-03-06
+	 * 账号状态：有一个固定文件名为：最近使用
 	 */
 	    @Test
 	    public void used2() throws InterruptedException{
 		
 		login("zuijin7@shimo.im","123123" );
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_1));
-		dashboard_2.click();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-		WebElement card = driver.findElement(By.xpath("//div[@class='category-card-container']"));
-		action.moveToElement(card).perform();
+		click(dashboard_2);
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
+		action.moveToElement(dashboard_update_name).perform();
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).click();
 		Thread.sleep(1000);
-	    favorites.click();
+	    click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='tile-inner']//div//a//div[2]")));
 		String text=driver.findElement(By.xpath("//div[@class='tile-inner']//div//a//div[2]")).getText();
 		assertEquals(text, "最近使用");
 		
-		dashboard.click();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
-	    dashboard_2.click();
-	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-		WebElement card1 = driver.findElement(By.xpath("//div[@class='category-card-container']"));
-		action.moveToElement(card1).perform();
+		click(dashboard);
+	    click(dashboard_2);
+	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
+		action.moveToElement(dashboard_update_name).perform();
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).click();
 		Thread.sleep(1000);
-		favorites.click();
+		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
 		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
 		assertEquals(text2, "没有文件");
@@ -85,15 +76,13 @@ public class dashboard_used  extends TestInit {
 		 * 卡片点点点选项验证（正常）
 		 * @author 陈清杰
 		 * @Time2018-03-07
+		 * 账号状态：有一个固定文件
 		 *  **/
         @Test
 	    public void used3() throws InterruptedException{
         	    
-        	
-    		login("zuijin7@shimo.im","123123" );
-    		wait.until(ExpectedConditions.elementToBeClickable(dashboard_1));
-    		dashboard_2.click();
-    		
+        login("zuijin7@shimo.im","123123" );
+    		click(dashboard_2);
     		
     		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
         WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
@@ -126,19 +115,14 @@ public class dashboard_used  extends TestInit {
 		 * 卡片点点点，链接打开
 		 * @author 陈清杰
 		 * @Time2018-03-14
+		 * 账号状态：有一个链接打开的文件，地址为：https://release.shimodev.com/docs/M5pgZFusSg8T1krl/
 		 *  **/
         
         @Test
         public void used4() throws InterruptedException{
-        	driver.navigate().to("https://release.shimodev.com");
-    		driver.findElement(By.xpath("//li[@class='home-nav-item']//a[@class='home-button btn-middle login-shimo']")).click();
+        	
     		login("zuijin3@shimo.im","123123" );
-    		wait.until(ExpectedConditions.elementToBeClickable(dashboard_1));
-    	    driver.navigate().to("https://release.shimodev.com/docs/M5pgZFusSg8T1krl/");
-    	    wait.until(ExpectedConditions.elementToBeClickable(b_back));
-    	    click(b_back);
-    	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
-    	    dashboard_2.click();
+    	    click(dashboard_2);
     	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
     	    WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
     		icon.click();
@@ -156,9 +140,10 @@ public class dashboard_used  extends TestInit {
 		 * 卡片，最近打开的排在第一位
 		 * @author 陈清杰
 		 * @Time2018-03-14
+		 * 账号状态：有两个文件
 		 *  **/
         @Test
-        public   void used5() throws InterruptedException{
+        public void used5() throws InterruptedException{
         
         	login("zuijin5@shimo.im", "123123");
         	
