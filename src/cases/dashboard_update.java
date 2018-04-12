@@ -18,14 +18,15 @@ public class dashboard_update  extends TestInit{
 	 * 卡片样式
 	 * @author 陈清杰
 	 * @Time2018-03-26
-	 * 账号状态：没有文件
+	 * 账号状态：有一个文件
 	 * */
 	@Test
 	public void update1() throws InterruptedException{
 		login("gengxin1@shimo.im","123123");
-		click(desktop_new);
-		click(desktop_newDoc);
+		click(dashboard_1);
+		click(dashboard_update_time);
 		click(doc_edit);
+		doc_edit.sendKeys("1");
 		click(b_back);
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
 		boolean b = driver.findElement(By.xpath("//div[@class='card-icon']//div")).isDisplayed();//卡片图标
@@ -41,10 +42,6 @@ public class dashboard_update  extends TestInit{
 		assertEquals(d, true);
 		boolean e = driver.findElement(By.xpath("//div[@class='file-options-icon']")).isDisplayed();
 		assertEquals(e, true);
-		Thread.sleep(200);
-		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
-	    click(menu_delete);
-	    click(desktop_newFolder_name_ok);
 		//勿扰没写呢
 		
 	}
@@ -206,7 +203,7 @@ public class dashboard_update  extends TestInit{
 	 * 自己退出共享，已经生成的卡片从最近更新消失
 	 * @author 陈清杰
 	 * @Time2018-03-27
-	 * 账号状态：
+	 * 账号状态：gengxin10里面有一个9恭喜的文件
 	 * */
 	@Test
 	public void update7() throws InterruptedException{
@@ -219,8 +216,9 @@ public class dashboard_update  extends TestInit{
 		Thread.sleep(1000);
 		click(b_back);
 		click(dashboard_1);
-		 wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
-	    assertEquals(dashboard_update_name, "突然想起你");
+	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
+	    String text1 = dashboard_update_name.getText();
+	    assertEquals(text1, "突然想起你");
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
 	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 	    click(menu_cooperation);
@@ -246,17 +244,16 @@ public class dashboard_update  extends TestInit{
 	 * 自己删除自己文件，已经在最近更新生成卡片的
 	 * @author 陈清杰
 	 * @Time2018-03-27
+	 * 账号状态：有一个文件
 	 * */
 	@Test
 	public void update8() throws InterruptedException{
 		login("gengxin11@shimo.im", "123123");
-		click(desktop_new);
-		click(desktop_newDoc);
-		click(doc_edit);
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
+	    click(dashboard_update_time);
+	    click(doc_edit);
 	    doc_edit.sendKeys("1");
-	    Thread.sleep(1000);
 	    click(b_back);
-	    
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
 	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 	    wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
@@ -264,16 +261,23 @@ public class dashboard_update  extends TestInit{
 	    WebElement icon = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
 	    icon.click();
-	    
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
 		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
 		assertEquals(text2, "没有文件");
+		click(desktop_new);
+		click(desktop_newDoc);
+		click(b_back);
+		
+		
+		
+		
 	}
 	/**
 	 *最近更新
 	 * 被所有者移除协作，已经在最近更新生成过卡片
 	 * @author 陈清杰
 	 * @Time2018-03-27
+	 * 账号状态：gengxin13有12共享的文件
 	 * */
 	@Test
 	public void update9() throws InterruptedException{
@@ -282,7 +286,6 @@ public class dashboard_update  extends TestInit{
 		click(dashboard_update_time);
 	    click(doc_edit);
 	    doc_edit.sendKeys("q");
-	    Thread.sleep(1000);
 	    click(b_back);
 	    click(dashboard_1);
 	    
@@ -308,13 +311,11 @@ public class dashboard_update  extends TestInit{
 		click(dashboard_3);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
 		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
-		Thread.sleep(1000);
 		click(menu_cooperation);
-		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
-	    input_addCollaborator.sendKeys("gengxin13@shimo.im");
-	    click(b_addCollaborator_1_add);
+		click(button_addCollaborator);
+		click(addCollaborator_1_add);
+		click(b_addCollaborator_ok);
 	    click(Shut_down_sm_modal_close_x);
-	    
 		
 	}
 	/**
@@ -322,6 +323,7 @@ public class dashboard_update  extends TestInit{
 	 * 删除后再恢复
 	 * @author 陈清杰
 	 * @Time2018-03-27
+	 * 账号状态：没有文件
 	 * */
 	@Test
 	public void update10() throws InterruptedException{
@@ -331,20 +333,14 @@ public class dashboard_update  extends TestInit{
 		click(doc_edit);
 		doc_edit.sendKeys("1");
 	    Thread.sleep(1000);
-	    click(b_back);
-	    
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
-	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
-	    click(menu_delete);
-	    WebElement icon = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-	    icon.click();
-	    Thread.sleep(1000);
+	    click(doc_menu);
+	    click(doc_menu_delete);
+	    click(doc_menu_delete_OK);
+	 
 	    click(trash);
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-icon doc']")));
 	    driver.findElement(By.xpath("//div[@class='file-icon doc']")).click();
 	    click(menu_Recovery);
-	    Thread.sleep(300);
 	    click(dashboard);
 	    
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
