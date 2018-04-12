@@ -1,8 +1,10 @@
 package cases;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -37,7 +39,7 @@ public class testMenu_Doc_Sheet extends TestInit {
 		assertTrue(R1);
 
 	}
-	
+
 	/**
 	 * 表格编辑页菜单，点击文档信息
 	 * 
@@ -66,5 +68,23 @@ public class testMenu_Doc_Sheet extends TestInit {
 		assertTrue(R1);
 
 	}
-	
+
+	@Test(enabled = false)
+	public void test() throws InterruptedException {
+		login("autoTest15@shimo.im", "123123");
+
+		clickDesktop();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg = desktop_show_type.getText();
+		if (msg.equals("平铺")) {
+			desktop_show_type.click();
+		}
+		desktop1_1.click();
+		wait.until(ExpectedConditions.elementToBeClickable(doc_menu));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String msg1 = js.executeScript("return pad.quill.constructor.version").toString();
+		System.out.println(">>>>>>>>>result<<<<<<<<<<<:" + msg1);
+		assertEquals("1.26.0", msg1);
+	}
 }

@@ -188,7 +188,7 @@ public class testNotice extends TestInit {
 //		b_addCollaborator_ok.click();
 		click(b_addCollaborator_ok);
 
-//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 //		b_addCollaborator_2_list.click();
 		click(b_addCollaborator_2_list);
 
