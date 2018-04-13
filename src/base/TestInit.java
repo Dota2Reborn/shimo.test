@@ -338,6 +338,7 @@ public class TestInit {
 	public void clickDesktop(WebElement element) {
 		String msg = "";
 		try {
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
 			msg = desktop_order.getText();
 			if (msg.equals("更新时间")) {
