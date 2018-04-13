@@ -44,7 +44,7 @@ public class TestInit {
 		driver = init.initData(this);
 		action = new Actions(driver);
 		driver.navigate().to(test_url + "login");
-//		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		// driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		// System.out.println("11111111111111111111111111111111111111");
 		wait = new WebDriverWait(driver, 6);
@@ -68,7 +68,7 @@ public class TestInit {
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-		 driver.quit();
+		driver.quit();
 	}
 
 	/**
@@ -162,7 +162,7 @@ public class TestInit {
 			driver.navigate().to(test_url + "logout");
 			System.out.println("Unhandled Alert!!!!");
 		} catch (NoAlertPresentException e) {
-			//正常情况
+			// 正常情况
 			action.sendKeys(Keys.ESCAPE);
 		}
 	}
@@ -286,7 +286,7 @@ public class TestInit {
 	 * @author 刘晨
 	 * @throws InterruptedException
 	 * @Time 2018-03-23
-	 *
+	 * 
 	 */
 	public void click(WebElement element) throws InterruptedException {
 		try {
@@ -300,6 +300,8 @@ public class TestInit {
 						.invisibilityOfElementWithText(By.xpath("//span[@id='save-status']//span[2]"), "正在保存..."));
 				element.click();
 				driver.switchTo().alert().accept();
+			} else if (element.toString().equals(desktop.toString())|| element.toString().equals(favorites.toString())) {
+				clickDesktop();
 			} else {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				element.click();
@@ -321,7 +323,7 @@ public class TestInit {
 			// 超时
 			System.out.println("time out ->" + element);
 		} catch (NoAlertPresentException e) {
-			//正常情况
+			// 正常情况
 		} catch (JavascriptException e) {
 			String msg = driver.switchTo().alert().getText();
 			System.out.println("Unhandled Alert :" + msg);
