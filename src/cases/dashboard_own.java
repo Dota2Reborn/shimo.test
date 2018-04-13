@@ -208,10 +208,8 @@ public class dashboard_own extends TestInit{
 			}
 		}
 		contextClick(New_Share_1);
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 		assertTrue(a);
 		
 		
