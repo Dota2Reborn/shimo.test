@@ -26,7 +26,8 @@ public class testCollection extends TestInit {
 		click(desktop_newDoc);
 		click(Collection_OK);
 		click(b_back);
-		click(favorites);
+		wait.until(ExpectedConditions.elementToBeClickable(favorites));
+		favorites.click();
 		Sort();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name=desktop1_1.getText();
@@ -51,7 +52,8 @@ public class testCollection extends TestInit {
 		click(desktop_newSheet);
 		click(Collection_OK);
 		click(b_back);
-		click(favorites);
+		wait.until(ExpectedConditions.elementToBeClickable(favorites));
+		favorites.click();
 		Sort();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name=desktop1_1.getText();
