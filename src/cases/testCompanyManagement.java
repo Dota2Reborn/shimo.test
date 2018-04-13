@@ -29,24 +29,19 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void inviteMember_allMember() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(invite_member));
-		invite_member.click();
-		wait.until(ExpectedConditions.elementToBeClickable(invite_member_OK));
-		invite_member_1.click();
-		invite_member_OK.click();
+		click(company_setting);
+		click(invite_member);
+		click(invite_member_1);
+		click(invite_member_OK);
 
 		logout();
 		login("amei@qq.com", "123123");
 
 		action.moveToElement(desktop_user_icon).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_user_icon_companyManagement));
-		desktop_user_icon_companyManagement.click();
-		wait.until(ExpectedConditions.elementToBeClickable(addMember));
-		addMember.click();
+		click(desktop_user_icon_companyManagement);
+		click(addMember);
 
 		wait.until(ExpectedConditions.elementToBeClickable(address_cppy));
 		Boolean clickAble = address_cppy.isDisplayed();
@@ -64,27 +59,22 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void inviteMember_ManagerAndCreater() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(invite_member));
-		invite_member.click();
-		wait.until(ExpectedConditions.elementToBeClickable(invite_member_OK));
-		invite_member_2.click();
-		invite_member_OK.click();
+		click(company_setting);
+		click(invite_member);
+		click(invite_member_2);
+		click(invite_member_OK);
 
 		logout();
 		login("amei@qq.com", "123123");
 
 		action.moveToElement(desktop_user_icon).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_user_icon_companyManagement));
-		desktop_user_icon_companyManagement.click();
-		wait.until(ExpectedConditions.elementToBeClickable(addMember));
-		addMember.click();
+		click(desktop_user_icon_companyManagement);
+		click(addMember);
 		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
 
-		String msg = message_warning.getText();
+		String msg = getText(message_warning);
 		assertEquals(msg, "没有权限，请联系企业管理员添加");
 	}
 
@@ -98,27 +88,22 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void inviteMember_JustByCreater() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(invite_member));
-		invite_member.click();
-		wait.until(ExpectedConditions.elementToBeClickable(invite_member_OK));
-		invite_member_3.click();
-		invite_member_OK.click();
+		click(company_setting);
+		click(invite_member);
+		click(invite_member_3);
+		click(invite_member_OK);
 
 		logout();
 		login("pipi@qq.com", "123123");
 
 		action.moveToElement(desktop_user_icon).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_user_icon_companyManagement));
-		desktop_user_icon_companyManagement.click();
-		wait.until(ExpectedConditions.elementToBeClickable(addMember));
-		addMember.click();
+		click(desktop_user_icon_companyManagement);
+		click(addMember);
 		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
 
-		String msg = message_warning.getText();
+		String msg = getText(message_warning);
 		assertEquals(msg, "没有权限，请联系企业创建者添加");
 	}
 
@@ -136,19 +121,17 @@ public class testCompanyManagement extends TestInit {
 		String time = format.format(date);
 
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(button_companyName));
-		button_companyName.click();
+		click(company_setting);
+		click(button_companyName);
 		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
 		input_companyName.clear();
 		input_companyName.sendKeys(time);
-		message_ok.click();
+		click(message_ok);
 
 		wait.until(ExpectedConditions.textToBePresentInElement(text_companyName, time));
-		String companyName = text_companyName.getText();
+		String companyName = getText(text_companyName);
 
 		assertEquals("您的企业名称为 " + time, companyName);
 
@@ -164,22 +147,18 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void setManager_Creater() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(setAdmin));
-		setAdmin.click();
-		wait.until(ExpectedConditions.elementToBeClickable(setAdmin_Creater));
-		setAdmin_Creater.click();
-		message_ok.click();
+		click(company_setting);
+		click(setAdmin);
+		click(setAdmin_Creater);
+		click(message_ok);
 
 		logout();
 		login("pipi@qq.com", "123123");
 
 		action.moveToElement(desktop_user_icon).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_user_icon_companyManagement));
-		desktop_user_icon_companyManagement.click();
+		click(desktop_user_icon_companyManagement);
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 
 		List<WebElement> elements = driver.findElements(By.className("member-row"));
@@ -216,22 +195,18 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void setManager_ManagerAndCreater() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(setAdmin));
-		setAdmin.click();
-		wait.until(ExpectedConditions.elementToBeClickable(setAdmin_Creater));
-		setAdmin_ManagerAndCreater.click();
-		message_ok.click();
+		click(company_setting);
+		click(setAdmin);
+		click(setAdmin_ManagerAndCreater);
+		click(message_ok);
 
 		logout();
 		login("pipi@qq.com", "123123");
 
 		action.moveToElement(desktop_user_icon).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_user_icon_companyManagement));
-		desktop_user_icon_companyManagement.click();
+		click(desktop_user_icon_companyManagement);
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 
 		List<WebElement> elements = driver.findElements(By.className("member-row"));
@@ -268,15 +243,12 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborators_ManagerAndCreater() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborators));
-		button_addCollaborators.click();
-		wait.until(ExpectedConditions.elementToBeClickable(addCollaborators_2));
-		addCollaborators_2.click();
-		message_ok.click();
+		click(company_setting);
+		click(button_addCollaborators);
+		click(addCollaborators_2);
+		click(message_ok);
 
 		logout();
 		login("amei@qq.com", "123123");
@@ -288,11 +260,9 @@ public class testCompanyManagement extends TestInit {
 			desktop_show_type.click();
 		}
 
-		action.contextClick(desktop1_1).perform();
-		menu_cooperation.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		button_addCollaborator.click();
+		contextClick(desktop1_1);
+		click(menu_cooperation);
+		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
 		Thread.sleep(500);
@@ -306,35 +276,22 @@ public class testCompanyManagement extends TestInit {
 		login("pipi@qq.com", "123123");
 
 		click(desktop);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
 
-		action.contextClick(desktop1_1).perform();
-		menu_cooperation.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		button_addCollaborator.click();
+		contextClick(desktop1_1);
+		click(menu_cooperation);
+		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		b_addCollaborator_1_add.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
-		b_addCollaborator_ok.click();
+		click(b_addCollaborator_1_add);
+		click(b_addCollaborator_ok);
 
 		Thread.sleep(500);
 		String m1 = driver.findElement(By.className("sm-toast")).getText();
 		Boolean R2 = m1.equals("成功添加 1 个协作者");
 
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
-		b_addCollaborator_2_list.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
-		list_addCollaborator_4.click();
+		click(b_addCollaborator_2_list);
+		click(list_addCollaborator_4);
 
 		assertTrue(R1 && R2);
 	}
@@ -349,49 +306,33 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborators_all() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborators));
-		button_addCollaborators.click();
-		wait.until(ExpectedConditions.elementToBeClickable(addCollaborators_1));
-		addCollaborators_1.click();
-		message_ok.click();
+		click(company_setting);
+		click(button_addCollaborators);
+		click(addCollaborators_1);
+		click(message_ok);
 
 		logout();
 		login("amei@qq.com", "123123");
 
 		click(desktop);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
-
-		action.contextClick(desktop1_1).perform();
-		menu_cooperation.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		button_addCollaborator.click();
+		contextClick(desktop1_1);
+		click(menu_cooperation);
+		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		b_addCollaborator_1_add.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
-		b_addCollaborator_ok.click();
+		click(b_addCollaborator_1_add);
+		click(b_addCollaborator_ok);
 
 		Thread.sleep(500);
 		String m1 = driver.findElement(By.className("sm-toast")).getText();
 		Boolean R2 = m1.equals("成功添加 1 个协作者");
 
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		b_addCollaborator_2_list.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
-		list_addCollaborator_4.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+		click(b_addCollaborator_2_list);
+		click(list_addCollaborator_4);
 
 		assertTrue(R2);
 	}
@@ -406,31 +347,20 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborators_ownerManagerAndCreater() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborators));
-		button_addCollaborators.click();
-		wait.until(ExpectedConditions.elementToBeClickable(addCollaborators_3));
-		addCollaborators_3.click();
-		message_ok.click();
+		click(company_setting);
+		click(button_addCollaborators);
+		click(addCollaborators_3);
+		click(message_ok);
 
 		logout();
 		login("shimo03@sina.com", "123123");
 
 		click(desktop);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-		String msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
-
-		action.contextClick(desktop1_1).perform();
-		menu_cooperation.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		button_addCollaborator.click();
+		contextClick(desktop1_1);
+		click(menu_cooperation);
+		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
 		Thread.sleep(500);
@@ -442,69 +372,41 @@ public class testCompanyManagement extends TestInit {
 		login("amei@qq.com", "123123");
 
 		click(desktop);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
-
-		action.contextClick(desktop1_1).perform();
-		menu_cooperation.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		button_addCollaborator.click();
+		contextClick(desktop1_1);
+		click(menu_cooperation);
+		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		b_addCollaborator_1_add.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
-		b_addCollaborator_ok.click();
-
+		click(b_addCollaborator_1_add);
+		click(b_addCollaborator_ok);
 		Thread.sleep(500);
 		String m1 = driver.findElement(By.className("sm-toast")).getText();
 		Boolean R2 = m1.equals("成功添加 1 个协作者");
 
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
-		b_addCollaborator_2_list.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
-		list_addCollaborator_4.click();
+		click(b_addCollaborator_2_list);
+		click(list_addCollaborator_4);
 
 		logout();
 		login("pipi@qq.com", "123123");
 
 		click(desktop);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
 
-		action.contextClick(desktop1_1).perform();
-		menu_cooperation.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
-		button_addCollaborator.click();
+		contextClick(desktop1_1);
+		click(menu_cooperation);
+		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		b_addCollaborator_1_add.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_ok));
-		b_addCollaborator_ok.click();
+		click(b_addCollaborator_1_add);
+		click(b_addCollaborator_ok);
 
 		Thread.sleep(500);
 		String m2 = driver.findElement(By.className("sm-toast")).getText();
 		Boolean R3 = m2.equals("成功添加 1 个协作者");
 
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
-		b_addCollaborator_2_list.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
-		list_addCollaborator_4.click();
+		click(b_addCollaborator_2_list);
+		click(list_addCollaborator_4);
 
 		assertTrue(R1 && R2 && R3);
 	}
@@ -519,14 +421,12 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void transferCompany() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
+		click(company_setting);
 
 		Preconditions.checkArgument(transferCompany.isDisplayed(), "Creater is not panpan");
-		wait.until(ExpectedConditions.elementToBeClickable(transferCompany));
-		transferCompany.click();
+		click(transferCompany);
 
 		wait.until(ExpectedConditions.elementToBeClickable(transferCompany_button));
 		List<WebElement> elements = driver.findElements(By.xpath("//div[@class='ui-list']//div[@class='ui-list-row']"));
@@ -545,7 +445,7 @@ public class testCompanyManagement extends TestInit {
 		}
 
 		driver.findElement(By.xpath("//div[@class='ui-list']//div[" + n + "]//div//span[1]")).click();
-		transferCompany_button.click();
+		click(transferCompany_button);
 
 		Thread.sleep(500);
 		Boolean R1 = transferCompany.isDisplayed();
@@ -553,13 +453,10 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("pipi@qq.com", "123123");
 
-		company_Management.click();
+		click(company_Management);
 		switchToPage(2);
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(transferCompany));
-		transferCompany.click();
+		click(company_setting);
+		click(transferCompany);
 
 		wait.until(ExpectedConditions.elementToBeClickable(transferCompany_button));
 		elements = driver.findElements(By.xpath("//div[@class='ui-list']//div[@class='ui-list-row']"));
@@ -576,7 +473,7 @@ public class testCompanyManagement extends TestInit {
 		}
 
 		driver.findElement(By.xpath("//div[@class='ui-list']//div[" + n + "]//div//span[1]")).click();
-		transferCompany_button.click();
+		click(transferCompany_button);
 
 		Thread.sleep(500);
 		Boolean R2 = transferCompany.isDisplayed();
@@ -593,7 +490,7 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void memberSearch() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
 		memberSearch.sendKeys("刘晨");
 
@@ -613,7 +510,7 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void banUser() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
 
 		List<WebElement> elements = driver.findElements(By.className("email"));
@@ -640,13 +537,10 @@ public class testCompanyManagement extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(bb)));
 		driver.findElement(By.xpath(bb)).click();
 
-		xpath_banUser_2.click();
-		wait.until(ExpectedConditions.elementToBeClickable(xpath_banUser_ok));
-		xpath_banUser_ok.click();
+		click(xpath_banUser_2);
+		click(xpath_banUser_ok);
 		driver.navigate().refresh();
-
-		wait.until(ExpectedConditions.elementToBeClickable(xpath_userTab_3));
-		xpath_userTab_3.click();
+		click(xpath_userTab_3);
 
 		String cc = "//div[@class='member-list']//div[1]//div[@class='action']//div//div[@class='dropdown-toggle']";
 		String dd = "//div[@class='member-list']//div[1]//div[@class='action']//div//div[@class='dropdown-menu dropdown-menu-right']//span";
@@ -655,7 +549,7 @@ public class testCompanyManagement extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(dd)));
 		driver.findElement(By.xpath(dd)).click();
 
-		xpath_userTab_1.click();
+		click(xpath_userTab_1);
 		Thread.sleep(500);
 
 		elements = driver.findElements(By.className("email"));
@@ -682,11 +576,10 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void exitCompany() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
 
-		wait.until(ExpectedConditions.elementToBeClickable(addMember));
-		addMember.click();
+		click(addMember);
 		String xpath_email = "//div[@class='tab-head-wrap']//div[2]";
 		driver.findElement(By.xpath(xpath_email)).click();
 		Thread.sleep(1000);
@@ -707,16 +600,11 @@ public class testCompanyManagement extends TestInit {
 		login("testQiYe@qq.com", "123123");
 
 		action.moveToElement(dashboard_notice).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1_button));
-		// String msg = dashboard_notice_list_1_time.getText();
-		dashboard_notice_list_1_button.click();
-		wait.until(ExpectedConditions.elementToBeClickable(company_setting));
-		company_setting.click();
+		click(dashboard_notice_list_1_button);
+		click(company_setting);
 
-		wait.until(ExpectedConditions.elementToBeClickable(button_exitCompany));
-		button_exitCompany.click();
-		wait.until(ExpectedConditions.elementToBeClickable(transferCompany_button));
-		transferCompany_button.click();
+		click(button_exitCompany);
+		click(transferCompany_button);
 
 		Thread.sleep(500);
 		Boolean R2 = driver.findElement(By.xpath(xpath_msg)).getText().equals("操作成功");
@@ -734,14 +622,13 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void copyLink() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(addMember));
-		addMember.click();
+		click(addMember);
 		wait.until(ExpectedConditions.elementToBeClickable(addmember_copyLink_open));
 		Boolean R1 = addmember_copyLink_open.getText().equals("开启链接");
 		// TODO
-		addmember_copyLink_open.click();
+		click(addmember_copyLink_open);
 		Thread.sleep(100);
 		if (R1.equals(true)) {
 			Boolean R2 = address_cppy.getAttribute("class").equals("sm-btn sm-btn-primary invitation-link-copy");
@@ -764,10 +651,9 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void addMember() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(addMember));
-		addMember.click();
+		click(addMember);
 		String xpath_email = "//div[@class='tab-head-wrap']//div[2]";
 		driver.findElement(By.xpath(xpath_email)).click();
 		Thread.sleep(1000);
@@ -791,11 +677,10 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void addMember_1() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
 
-		wait.until(ExpectedConditions.elementToBeClickable(addMember));
-		addMember.click();
+		click(addMember);
 		String xpath_email = "//div[@class='tab-head-wrap']//div[2]";
 		driver.findElement(By.xpath(xpath_email)).click();
 		Thread.sleep(500);
@@ -818,7 +703,7 @@ public class testCompanyManagement extends TestInit {
 	@Test(enabled = true)
 	public void member_setting() throws InterruptedException {
 		login("panpan@qq.com", "123123");
-		company_Management.click();
+		click(company_Management);
 		switchToPage(1);
 		String xpath_setting = "//div[@class='waterfall-inner']//div[1]//div[@class='action']";
 

@@ -23,16 +23,9 @@ public class testMenu_Doc_Sheet extends TestInit {
 		login("autoTest15@shimo.im", "123123");
 
 		click(desktop);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
-		desktop1_1.click();
-		wait.until(ExpectedConditions.elementToBeClickable(doc_menu));
-		doc_menu.click();
-		wait.until(ExpectedConditions.elementToBeClickable(file_menu_msg));
-		file_menu_msg.click();
+		click(desktop1_1);
+		click(doc_menu);
+		click(file_menu_msg);
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn confirm-btn btn-ok']")));
 		Boolean R1 = driver.findElement(By.xpath("//div[@class='confirm-dialog dialog ']")).isDisplayed();
@@ -52,16 +45,9 @@ public class testMenu_Doc_Sheet extends TestInit {
 		login("autoTest16@shimo.im", "123123");
 
 		click(desktop);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
-		desktop1_1.click();
-		wait.until(ExpectedConditions.elementToBeClickable(doc_menu));
-		doc_menu.click();
-		wait.until(ExpectedConditions.elementToBeClickable(file_menu_msg));
-		file_menu_msg.click();
+		click(desktop1_1);
+		click(doc_menu);
+		click(file_menu_msg);
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn confirm-btn btn-ok']")));
 		Boolean R1 = driver.findElement(By.xpath("//div[@class='confirm-dialog dialog ']")).isDisplayed();
@@ -74,12 +60,7 @@ public class testMenu_Doc_Sheet extends TestInit {
 		login("autoTest15@shimo.im", "123123");
 
 		click(desktop);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
-		desktop1_1.click();
+		click(desktop1_1);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_menu));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;

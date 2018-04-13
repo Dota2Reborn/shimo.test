@@ -1,5 +1,7 @@
 package base;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -278,25 +280,31 @@ public class TestInit {
 		} catch (NoSuchElementException e) {
 			// TODO
 			System.out.println(element + "is missing");
+			assertTrue(false);
 		} catch (ElementClickInterceptedException e) {
 			// 被遮挡
 			System.out.println(element + "is obscuring");
+			assertTrue(false);
 		} catch (ElementNotVisibleException e) {
 			// 不可见
 			System.out.println(element + "is not visible");
+			assertTrue(false);
 		} catch (UnhandledAlertException e) {
 			// 报错
 			driver.switchTo().alert().accept();
 			System.out.println("Unhandled Alert!!!!");
+			assertTrue(false);
 		} catch (TimeoutException e) {
 			// 超时
 			System.out.println("time out ->" + element);
+			assertTrue(false);
 		} catch (NoAlertPresentException e) {
 			// 正常情况
 		} catch (JavascriptException e) {
 			String msg = driver.switchTo().alert().getText();
 			System.out.println("Unhandled Alert :" + msg);
 			System.out.println("javascript Error:" + e.getMessage());
+			assertTrue(false);
 		}
 	}
 
