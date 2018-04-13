@@ -179,26 +179,22 @@ public class dashboard_used  extends TestInit {
 		 * 卡片，自己删除文件，最近使用对应卡片消失
 		 * @author 陈清杰
 		 * @Time2018-03-16
+		 * 账号状态：没有文件
 		 *  **/
         @Test
         public void used6() throws InterruptedException{
-        	      login("zuijin8@shimo.im", "123123");
-        	      action.moveToElement(desktop_new).perform();
-        		  wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
-        		  desktop_newDoc.click();
-        		  wait.until(ExpectedConditions.elementToBeClickable(b_back));
+        	      login("zuijin66@shimo.im", "123123");
+        	      click(desktop_new);
+        		  click(desktop_newDoc);
         		  click(b_back);
-        		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
-        	      dashboard_2.click();
+        		  click(dashboard_2);
         	      
         	      wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
         	      WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
         	      icon.click();
-        	      
-        	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//div[2]//div//div//ul//li[13]")));
-        	      driver.findElement(By.xpath("//div[@class='category-card-container']//div//div[2]//div//div//ul//li[13]")).click();
-        	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-content']//div[3]//button[1]")));
-        	      driver.findElement(By.xpath("//div[@class='sm-modal-content']//div[3]//button[1]")).click();
+        	      click(menu_delete);
+        	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
+        		  driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]")).click();
         	      
         	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
         	      String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
@@ -211,33 +207,30 @@ public class dashboard_used  extends TestInit {
 		 * 卡片，自己退出共享，最近使用对应卡片消失
 		 * @author 陈清杰
 		 * @Time2018-03-16
+		 * 账号状态：没有文件
         *  **/
         @Test
         public void used7() throws InterruptedException{
         	      login("zuijin9@shimo.im", "123123");
-        	      action.moveToElement(desktop_new).perform();
-        		  wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
-        		  desktop_newDoc.click();
-        		  wait.until(ExpectedConditions.elementToBeClickable(b_back));
-        		  click(b_back);
+        	      click(desktop_new);
+        	      click(desktop_newDoc);
+        	      click(b_back);
+        	      click(dashboard_2);
         		  
-        		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
+        		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
         	      WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
         	      icon.click();
-        	      Thread.sleep(500);
-        	      driver.findElement(By.xpath("//div[@class='category-card-container']//div//div[2]//div//div//ul//li[6]")).click();
+        	      click(menu_cooperation);
+        	      click(button_addCollaborator);
+        	      click(addCollaborator_1_add);
+        	      click(b_addCollaborator_ok);
+        	      click(button_addCollaborator_close);
         	      
-        	      wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
-        	      input_addCollaborator.sendKeys("zuijin8@shimo.im");
-        	      //验证添加按钮是否加载出来
-        	      wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-        	      b_addCollaborator_1_add.click();
         	      logout();
         	      login("zuijin8@shimo.im", "123123");
         	      
-        	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-content file-text']")));
-        	      driver.findElement(By.xpath("//div[@class='file-content file-text']")).click();
-        	      wait.until(ExpectedConditions.elementToBeClickable(b_back));
+        	      click(dashboard_4);
+        	      click(dashboard_update_name);
         		  click(b_back);
         		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
         		  dashboard_2.click();
@@ -245,26 +238,20 @@ public class dashboard_used  extends TestInit {
         		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
         	      WebElement icon1 = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
         	      icon1.click();
-        	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//div[2]//div//div//ul//li[13]")));
-        	      driver.findElement(By.xpath("//div[@class='category-card-container']//div//div[2]//div//div//ul//li[13]")).click();
-        	      
-        	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button")));
-        	      driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button")).click();
-        	      
+        	      click(menu_delete);
+        	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
+        		  driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]")).click();
         	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
         	      String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
         		  assertEquals(text2, "没有文件");
+        		  
         		  logout();
         		  login("zuijin9@shimo.im", "123123");
-        		  
-        		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
-        		  dashboard_2.click();
-        		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
+        		  click(dashboard_2);
+        		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
         	      WebElement icon3 = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
         	      icon3.click();
-        	      wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-        	      menu_delete.click();
-        	      
+        	      click(menu_delete);
         	      WebElement icon4= driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
         	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
         	      icon4.click();
@@ -281,63 +268,47 @@ public class dashboard_used  extends TestInit {
         @Test
         public void used8() throws InterruptedException{
         	
-        	       login("zuijin9@shimo.im","123123");
-        	       action.moveToElement(desktop_new).perform();
-      		   wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
-      		   desktop_newDoc.click();
-               wait.until(ExpectedConditions.elementToBeClickable(b_back));
+        	       login("zuijin55@shimo.im","123123");
+        	       click(desktop_new);
+               click(desktop_newDoc);
       	       click(b_back);
-      	       wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
-   	           dashboard_2.click();
+      	       click(dashboard_2);
    	           wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
   	           WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
   	           icon.click();
-  	           Thread.sleep(500);
-  	           driver.findElement(By.xpath("//div[@class='category-card-container']//div//div[2]//div//div//ul//li[6]")).click();
+  	           click(menu_cooperation);
+  	           click(button_addCollaborator);
+   	           click(addCollaborator_1_add);
+   	           click(b_addCollaborator_ok);
+   	           click(button_addCollaborator_close);
    	           
-  	           wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
-   	           input_addCollaborator.sendKeys("zuijin8@shimo.im");
-   	           //验证添加按钮是否加载出来
-   	           wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-   	           b_addCollaborator_1_add.click();
    	           logout();  
-   	           login("zuijin8@shimo.im", "123123");
-   	           wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-content file-text']")));
-  	           driver.findElement(By.xpath("//div[@class='file-content file-text']")).click();
-  	           wait.until(ExpectedConditions.elementToBeClickable(b_back));
+   	           login("zuijin77@shimo.im", "123123");
+   	           click(dashboard_4);
+   	           click(dashboard_update_name);
   	           click(b_back);
-  	           Thread.sleep(300);
   		       logout();
   		       
-  		       login("zuijin9@shimo.im", "123123");
-  		       wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
- 	           dashboard_2.click();
+  		       login("zuijin55@shimo.im", "123123");
+  		       click(dashboard_2);
  	           wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
     	           WebElement icon1 = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
     	           icon1.click();  
-    	           wait.until(ExpectedConditions.elementToBeClickable(menu_cooperation));
-    	           menu_cooperation.click();
-       	       wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
-       	       b_addCollaborator_2_list.click();
-       	       wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
-       	       list_addCollaborator_4.click();
-       	       Thread.sleep(1000);
-       	       wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
-       	       Shut_down_sm_modal_close_x.click();
+    	           click(menu_cooperation);
+       	       click(b_addCollaborator_2_list);
+       	       click(list_addCollaborator_4);
+       	       click(Shut_down_sm_modal_close_x);
        	       wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
   	           WebElement icon3 = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
   	           icon3.click();
-  	           wait.until(ExpectedConditions.elementToBeClickable(menu_delete)); 
-  	           menu_delete.click();
-  	      
+  	           click(menu_delete);
   	           WebElement icon4= driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
   	           wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
   	           icon4.click();
        	       logout();
        	       
-       	       login("zuijin8@shimo.im", "123123");
- 	           wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
- 	           dashboard_2.click();
+       	       login("zuijin77@shimo.im", "123123");
+ 	           click(dashboard_2);
  	           wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
  	           String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
  	 		   assertEquals(text2, "没有文件");
