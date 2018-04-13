@@ -157,7 +157,7 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		doc_edit.sendKeys("lala");
-		doc_discuss.click();
+		click(doc_discuss);
 		doc_discuss_input.sendKeys("yoyoyo");
 		action.sendKeys(Keys.ENTER);
 		click(doc_discuss_input_ok);
