@@ -168,38 +168,6 @@ public class TestInit {
 	}
 
 	/**
-	 * 点击切换到我的桌面
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-11-21
-	 *
-	 */
-	public void clickDesktop() {
-		String msg = "";
-		try {
-			desktop.click();
-			msg = desktop_order.getText();
-			if (msg.equals("更新时间")) {
-				desktop_order.click();
-				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-				desktop_orderByFolderUP.click();
-
-				desktop_order.click();
-				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
-				desktop_orderByDefault.click();
-			} else {
-				return;
-			}
-		} finally {
-			msg = desktop_show_type.getText();
-			if (msg.equals("平铺")) {
-				desktop_show_type.click();
-			}
-		}
-
-	}
-
-	/**
 	 * 页签切换
 	 * 
 	 * @author 刘晨
@@ -293,15 +261,16 @@ public class TestInit {
 			if (element.toString().equals(b_back.toString()) || element.toString().equals(Back_to_Table.toString())
 					|| element.toString().equals(Back_to_Desktop.toString())) {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
-				// wait.until(ExpectedConditions.attributeToBe(doc_saveStatus, "class",
-				// "save-status-icon save-status-online-done animation-online-done"));
 				checkPageIsReady();
 				wait.until(ExpectedConditions
 						.invisibilityOfElementWithText(By.xpath("//span[@id='save-status']//span[2]"), "正在保存..."));
 				element.click();
 				driver.switchTo().alert().accept();
-			} else if (element.toString().equals(desktop.toString())|| element.toString().equals(favorites.toString())) {
-				clickDesktop();
+			} else if (element.toString().equals(desktop.toString())
+					|| element.toString().equals(favorites.toString())) {
+				clickDesktop(element);
+			} else if (element.toString().equals(menu_shortcut.toString())) {
+				clickShortcut();
 			} else {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				element.click();
@@ -329,6 +298,58 @@ public class TestInit {
 			System.out.println("Unhandled Alert :" + msg);
 			System.out.println("javascript Error:" + e.getMessage());
 		}
+	}
+
+	/**
+	 * 点击切换到我的桌面
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-4-13
+	 *
+	 */
+	public void clickShortcut() {
+		String setting_2 = getText(menu_shortcut);
+		if (setting_2.equals("从快捷方式移除")) {
+			menu_shortcut.click();
+			contextClick(desktop1_1);
+			wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
+			menu_shortcut.click();
+		} else {
+			wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
+			menu_shortcut.click();
+		}
+	}
+
+	/**
+	 * 点击切换到我的桌面
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
+	public void clickDesktop(WebElement element) {
+		String msg = "";
+		try {
+			element.click();
+			msg = desktop_order.getText();
+			if (msg.equals("更新时间")) {
+				desktop_order.click();
+				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+				desktop_orderByFolderUP.click();
+
+				desktop_order.click();
+				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+				desktop_orderByDefault.click();
+			} else {
+				return;
+			}
+		} finally {
+			msg = desktop_show_type.getText();
+			if (msg.equals("平铺")) {
+				desktop_show_type.click();
+			}
+		}
+
 	}
 
 	/**

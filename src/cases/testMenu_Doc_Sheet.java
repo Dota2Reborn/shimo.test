@@ -22,7 +22,7 @@ public class testMenu_Doc_Sheet extends TestInit {
 	public void doc_msg() throws InterruptedException {
 		login("autoTest15@shimo.im", "123123");
 
-		clickDesktop();
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {
@@ -51,7 +51,7 @@ public class testMenu_Doc_Sheet extends TestInit {
 	public void sheet_msg() throws InterruptedException {
 		login("autoTest16@shimo.im", "123123");
 
-		clickDesktop();
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {
@@ -73,7 +73,7 @@ public class testMenu_Doc_Sheet extends TestInit {
 	public void test() throws InterruptedException {
 		login("autoTest15@shimo.im", "123123");
 
-		clickDesktop();
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {

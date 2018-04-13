@@ -281,7 +281,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("amei@qq.com", "123123");
 
-		clickDesktop();
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {
@@ -305,7 +305,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("pipi@qq.com", "123123");
 
-		clickDesktop();
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {
@@ -362,7 +362,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("amei@qq.com", "123123");
 
-		clickDesktop();
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {
@@ -419,7 +419,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("shimo03@sina.com", "123123");
 
-		clickDesktop();
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {
@@ -441,7 +441,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("amei@qq.com", "123123");
 
-		clickDesktop();
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {
@@ -475,7 +475,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("pipi@qq.com", "123123");
 
-		clickDesktop();
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {

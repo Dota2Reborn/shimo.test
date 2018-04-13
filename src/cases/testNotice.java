@@ -26,7 +26,7 @@ public class testNotice extends TestInit {
 	public void notice_1() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
 		// desktop.click();
-		clickDesktop();
+		click(desktop);
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		desktop1_1.click();
@@ -65,7 +65,7 @@ public class testNotice extends TestInit {
 	public void notice_2() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
 		// desktop.click();
-		clickDesktop();
+		click(desktop);
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		desktop1_1.click();
@@ -101,7 +101,7 @@ public class testNotice extends TestInit {
 	public void notice_3() throws InterruptedException {
 		login("autoTest13@shimo.im", "123123");
 		// desktop.click();
-		clickDesktop();
+		click(desktop);
 //		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 //		String msg = desktop_show_type.getText();
 		String msg = getText(desktop_show_type);
@@ -161,7 +161,7 @@ public class testNotice extends TestInit {
 	public void notice_4() throws InterruptedException {
 		login("autoTest13@shimo.im", "123123");
 		// desktop.click();
-		clickDesktop();
+		click(desktop);
 //		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 //		String msg = desktop_show_type.getText();
 		String msg = getText(desktop_show_type);
@@ -219,7 +219,7 @@ public class testNotice extends TestInit {
 	public void notice_5() throws InterruptedException {
 		login("autoTest14@shimo.im", "123123");
 		// desktop.click();
-		clickDesktop();
+		click(desktop);
 
 //		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 //		desktop1_1.click();
@@ -262,7 +262,7 @@ public class testNotice extends TestInit {
 	public void notice_6() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
 		// desktop.click();
-		clickDesktop();
+		click(desktop);
 
 //		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 //		desktop1_1.click();

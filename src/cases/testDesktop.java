@@ -28,30 +28,19 @@ public class testDesktop extends TestInit {
 	 */
 	@Test
 	public void desktop_newDoc() throws InterruptedException {
-
 		login("autoTest@shimo.im", "123123");
 
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop1_1.getText();
-		desktop_new.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newDoc));
-		desktop_newDoc.click();
-		wait.until(ExpectedConditions.elementToBeClickable(b_back));
-		b_back.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		// action.moveToElement(desktop1_1).perform();
-		// desktop_setting.click();
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
+		click(desktop);
+		String msg = getText(desktop1_1);
+		click(desktop_new);
+		click(desktop_newDoc);
+		click(b_back);
+		contextClick(desktop1_1);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg1 = desktop1_1.getText();
+		String msg1 = getText(desktop1_1);
 
 		assertEquals(msg, msg1);
 
@@ -61,37 +50,27 @@ public class testDesktop extends TestInit {
 	 * 新建表格
 	 * 
 	 * @author 刘晨
+	 * @throws InterruptedException
 	 * @Time 2017-11-20
 	 *
 	 */
 	@Test
-	public void desktop_newSheet() {
+	public void desktop_newSheet() throws InterruptedException {
 
 		login("autoTest@shimo.im", "123123");
 
-		// desktop.click();
-		clickDesktop();
-
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop1_1.getText();
-		desktop_new.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newSheet));
-		desktop_newSheet.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(b_back));
-		b_back.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		// action.moveToElement(desktop1_1).perform();
-		// desktop_setting.click();
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
+		String msg = getText(desktop1_1);
+		click(desktop_new);
+		click(desktop_newSheet);
+		click(b_back);
+		contextClick(desktop1_1);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg1 = desktop1_1.getText();
+		String msg1 = getText(desktop1_1);
 
 		assertEquals(msg, msg1);
 
@@ -101,45 +80,33 @@ public class testDesktop extends TestInit {
 	 * 新建文件夹
 	 * 
 	 * @author 刘晨
+	 * @throws InterruptedException
 	 * @Time 2017-11-20
 	 *
 	 */
 	@Test
-	public void desktop_newFolder() {
+	public void desktop_newFolder() throws InterruptedException {
 
 		login("autoTest@shimo.im", "123123");
 
-		// desktop.click();
-		clickDesktop();
+		click(desktop);
 
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop1_1.getText();
-		desktop_new.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder));
-		desktop_newFolder.click();
+		String msg = getText(desktop1_1);
+		click(desktop_new);
+		click(desktop_newFolder);
 
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		String time = format.format(date);
 
 		desktop_newFolder_name.sendKeys(time);
-		desktop_newFolder_name_ok.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("settings")));
-		desktop.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		// action.moveToElement(desktop1_1).perform();
-		// desktop_setting.click();
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
-
+		click(desktop_newFolder_name_ok);
+		click(desktop);
+		contextClick(desktop1_1);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg1 = desktop1_1.getText();
+		String msg1 = getText(desktop1_1);
 
 		assertEquals(msg, msg1);
 	}
@@ -156,15 +123,13 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
-		desktop_show_type.click();
+		click(desktop);
+		click(desktop_show_type);
 
 		Boolean result = false;
 		Boolean exist1 = doesWebElementExist(By.className("table-head-cell"));
 
-		desktop_show_type.click();
+		click(desktop_show_type);
 
 		Boolean exist2 = doesWebElementExist(By.className("table-head-cell"));
 
@@ -180,18 +145,16 @@ public class testDesktop extends TestInit {
 	 * 右键文档-在新标签页中打开
 	 * 
 	 * @author 刘晨
+	 * @throws InterruptedException
 	 * @Time 2017-11-20
 	 *
 	 */
 	@Test
-	public void desktop_doc_setting_1() {
+	public void desktop_doc_setting_1() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-
-		action.contextClick(desktop1_1).perform();
-		menu_newPage.click();
+		click(desktop);
+		contextClick(desktop1_1);
+		click(menu_newPage);
 
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -209,30 +172,17 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_2() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
-		String setting_2 = menu_shortcut.getText();
-		if (setting_2.equals("从快捷方式移除")) {
-			menu_shortcut.click();
-			action.contextClick(desktop1_1).perform();
-			wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
-		}
-
-		menu_shortcut.click();
+		click(desktop);
+		contextClick(desktop1_1);
+		click(menu_shortcut);
 
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop_shortcut_1.getText();
-		String doc_name = desktop1_1.getText();
+		String msg = getText(desktop_shortcut_1);
+		String doc_name = getText(desktop1_1);
 
-		action.contextClick(desktop1_1).perform();
+		contextClick(desktop1_1);
 		Thread.sleep(200);
-		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
-		menu_shortcut.click();
+		click(menu_shortcut);
 
 		assertEquals(doc_name, msg);
 
@@ -248,21 +198,16 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_3() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		click(desktop);
 
-		String doc_name = desktop1_1.getText();
+		String doc_name = getText(desktop1_1);
 		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
-		menu_collection.click();
+		click(menu_collection);
 
-		favorites.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String doc_name1 = desktop1_1.getText();
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
-		menu_collection.click();
+		click(favorites);
+		String doc_name1 = getText(desktop1_1);
+		contextClick(desktop1_1);
+		click(menu_collection);
 
 		assertEquals(doc_name, doc_name1);
 	}
@@ -277,46 +222,27 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_6() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		click(desktop);
 
-		String msg = desktop1_1.getText();
+		String msg = getText(desktop1_1);
+		contextClick(desktop1_1);
+		click(menu_move);
+		click(desktop_moveFolder_list_1);
+		click(desktop_moveFolder_button);
 
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_move));
-		menu_move.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_list_1));
-		desktop_moveFolder_list_1.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_button));
-		desktop_moveFolder_button.click();
-
-		// driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-		desktop1_1_folder.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_move));
-		menu_move.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_back_button));
-		desktop_moveFolder_back_button.click();
+		click(desktop1_1_folder);
+		contextClick(desktop1_1);
+		click(menu_move);
+		click(desktop_moveFolder_back_button);
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_button));
-		desktop_moveFolder_button.click();
+		click(desktop_moveFolder_button);
 
-		// driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop));
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop));
-		desktop.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg1 = desktop1_1.getText();
+		click(desktop);
+		String msg1 = getText(desktop1_1);
 
 		assertEquals(msg, msg1);
 	}
@@ -332,26 +258,20 @@ public class testDesktop extends TestInit {
 	public void desktop_doc_setting_8() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
 		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-
-		desktop1_1_folder.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_rename));
-		menu_rename.click();
+		click(desktop);
+		click(desktop1_1_folder);
+		contextClick(desktop1_1);
+		click(menu_rename);
 
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		String time = format.format(date);
 
 		desktop_newFolder_name.sendKeys(time);
-		desktop_newFolder_name_ok.click();
+		click(desktop_newFolder_name_ok);
 
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop1_1.getText();
+		String msg = getText(desktop1_1);
 
 		assertEquals(time, msg);
 	}
@@ -367,23 +287,18 @@ public class testDesktop extends TestInit {
 	public void desktop_doc_setting_9() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
 		// desktop.click();
-		clickDesktop();
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
-		String msg = desktop1_1.getText();
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_creatCopy));
-		menu_creatCopy.click();
+		String msg = getText(desktop1_1);
+		contextClick(desktop1_1);
+		click(menu_creatCopy);
 
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg1 = desktop1_1.getText();
-
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
+		String msg1 = getText(desktop1_1);
+		contextClick(desktop1_1);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 
 		assertEquals(msg1, "副本 " + msg);
 	}
@@ -392,18 +307,17 @@ public class testDesktop extends TestInit {
 	 * 右键文件夹-在新标签页打开
 	 * 
 	 * @author 刘晨
+	 * @throws InterruptedException
 	 * @Time 2017-11-20
 	 *
 	 */
 	@Test
-	public void desktop_folder_setting_1() {
+	public void desktop_folder_setting_1() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		click(desktop);
 
-		action.contextClick(desktop1_1_folder).perform();
-		menu_newPage.click();
+		contextClick(desktop1_1_folder);
+		click(menu_newPage);
 
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -421,30 +335,17 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_folder_setting_2() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		click(desktop);
 
-		action.contextClick(desktop1_1_folder).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
-
-		String setting_2 = menu_shortcut.getText();
-		if (setting_2.equals("从快捷方式移除")) {
-			menu_shortcut.click();
-			action.contextClick(desktop1_1_folder).perform();
-			wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
-		}
-
-		Thread.sleep(200);
-		menu_shortcut.click();
+		contextClick(desktop1_1_folder);
+		click(menu_shortcut);
 		Thread.sleep(100);
-		String msg = desktop_shortcut_1.getText();
-		String doc_name = desktop1_1_folder.getText();
+		String msg = getText(desktop_shortcut_1);
+		String doc_name = getText(desktop1_1_folder);
 
-		action.contextClick(desktop1_1_folder).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
+		contextClick(desktop1_1_folder);
 		Thread.sleep(200);
-		menu_shortcut.click();
+		click(menu_shortcut);
 
 		assertEquals(doc_name, msg);
 
@@ -460,21 +361,16 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_folder_setting_3() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
+		click(desktop);
 
-		String doc_name = desktop1_1_folder.getText();
-		action.contextClick(desktop1_1_folder).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
-		menu_collection.click();
+		String doc_name = getText(desktop1_1_folder);
+		contextClick(desktop1_1_folder);
+		click(menu_collection);
 
-		favorites.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-		String doc_name1 = desktop1_1_folder.getText();
-		action.contextClick(desktop1_1_folder).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
-		menu_collection.click();
+		click(favorites);
+		String doc_name1 = getText(desktop1_1_folder);
+		contextClick(desktop1_1_folder);
+		click(menu_collection);
 
 		assertEquals(doc_name, doc_name1);
 	}
@@ -492,56 +388,30 @@ public class testDesktop extends TestInit {
 
 		login("autoTest@shimo.im", "123123");
 
-		// desktop.click();
-		clickDesktop();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		desktop_new.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder));
-		desktop_newFolder.click();
-
+		click(desktop);
+		click(desktop_new);
+		click(desktop_newFolder);
 		desktop_newFolder_name.sendKeys("FFFFF");
-		desktop_newFolder_name_ok.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(By.className("settings")));
-//		desktop.click();
-		clickDesktop();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_move));
-		menu_move.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_list_2));
-		desktop_moveFolder_list_2.click();
-
+		click(desktop_newFolder_name_ok);
+		// wait.until(ExpectedConditions.elementToBeClickable(By.className("settings")));
+		click(desktop);
+		contextClick(desktop1_1);
+		click(menu_move);
+		click(desktop_moveFolder_list_2);
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_moveFolder_button));
-		desktop_moveFolder_button.click();
-
+		click(desktop_moveFolder_button);
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-		desktop1_1_folder.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_rename));
-		menu_rename.click();
-
+		click(desktop1_1_folder);
+		contextClick(desktop1_1);
+		click(menu_rename);
 		desktop_newFolder_name.sendKeys("删除文件夹");
-		desktop_newFolder_name_ok.click();
+		click(desktop_newFolder_name_ok);
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop1_1.getText();
+		String msg = getText(desktop1_1);
 
-		// action.moveToElement(desktop1_1).perform();
-		// desktop_setting.click();
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
+		contextClick(desktop1_1);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 
 		assertEquals(msg, "删除文件夹");
 	}
@@ -556,9 +426,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_import_doc() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		click(desktop);
 
 		WebElement uploadButton = desktop_import;
 		String url = System.getProperty("user.dir") + "/doc/test_doc.doc";
@@ -566,21 +434,12 @@ public class testDesktop extends TestInit {
 		uploadButton.sendKeys(url);
 
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(b_back));
-		b_back.click();
+		click(b_back);
 
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop1_1.getText();
-		// action.moveToElement(desktop1_1).perform();
-		// desktop_setting.click();
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
-
-		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg = getText(desktop1_1);
+		contextClick(desktop1_1);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 
 		assertEquals(msg, "test_doc");
 
@@ -596,9 +455,7 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_import_docx() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		click(desktop);
 
 		WebElement uploadButton = desktop_import;
 		String url = System.getProperty("user.dir") + "/doc/test_docx.docx";
@@ -606,22 +463,12 @@ public class testDesktop extends TestInit {
 		uploadButton.sendKeys(url);
 
 		Thread.sleep(2000);
-//		wait.until(ExpectedConditions.elementToBeClickable(b_back));
-//		b_back.click();
 		click(b_back);
 
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop1_1.getText();
-		// action.moveToElement(desktop1_1).perform();
-		// desktop_setting.click();
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
-
-		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		String msg = getText(desktop1_1);
+		contextClick(desktop1_1);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 
 		assertEquals(msg, "test_docx");
 
@@ -637,28 +484,18 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_import_sheet() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		click(desktop);
 
 		WebElement uploadButton = desktop_import;
 		String url = System.getProperty("user.dir") + "/doc/test_sheet.xlsx";
 		System.out.println(url);
 		uploadButton.sendKeys(url);
 
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_cancel));
-		desktop_newFolder_name_cancel.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop1_1.getText();
-
-		// action.moveToElement(desktop1_1).perform();
-		// desktop_setting.click();
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
+		click(desktop_newFolder_name_cancel);
+		String msg = getText(desktop1_1);
+		contextClick(desktop1_1);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 
 		assertEquals(msg, "test_sheet");
 
@@ -668,21 +505,18 @@ public class testDesktop extends TestInit {
 	 * hover文档/表格，齿轮-在新标签页中打开
 	 * 
 	 * @author 刘晨
+	 * @throws InterruptedException
 	 * @Time 2018-03-19
 	 *
 	 */
 	@Test
-	public void desktop_doc_newPage() {
+	public void desktop_doc_newPage() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		click(desktop);
 
 		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(menu_newPage));
-		menu_newPage.click();
+		click(desktop_setting);
+		click(menu_newPage);
 
 		Set<String> winHandels = driver.getWindowHandles();
 		List<String> it = new ArrayList<String>(winHandels);
@@ -700,31 +534,19 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_shortcut() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+		click(desktop);
 
 		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
-		String setting_2 = menu_shortcut.getText();
-		if (setting_2.equals("从快捷方式移除")) {
-			menu_shortcut.click();
-			action.contextClick(desktop1_1).perform();
-			wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
-		}
-
-		menu_shortcut.click();
+		click(desktop_setting);
+		click(menu_shortcut);
 
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop_shortcut_1.getText();
-		String doc_name = desktop1_1.getText();
+		String msg = getText(desktop_shortcut_1);
+		String doc_name = getText(desktop1_1);
 
-		action.contextClick(desktop1_1).perform();
+		contextClick(desktop1_1);
 		Thread.sleep(200);
-		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
-		menu_shortcut.click();
+		click(menu_shortcut);
 
 		assertEquals(doc_name, msg);
 
@@ -741,21 +563,16 @@ public class testDesktop extends TestInit {
 	public void desktop_doc_collection() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
 		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-
-		String doc_name = desktop1_1.getText();
+		click(desktop);
+		String doc_name = getText(desktop1_1);
 		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
-		menu_collection.click();
+		click(desktop_setting);
+		click(menu_collection);
 
-		favorites.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String doc_name1 = desktop1_1.getText();
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_collection));
-		menu_collection.click();
+		click(favorites);
+		String doc_name1 = getText(desktop1_1);
+		contextClick(desktop1_1);
+		click(menu_collection);
 
 		assertEquals(doc_name, doc_name1);
 	}
@@ -770,28 +587,22 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_rename() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-
-		desktop1_1_folder.click();
+		click(desktop);
+		click(desktop1_1_folder);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-
 		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_rename));
-		menu_rename.click();
+		click(desktop_setting);
+		click(menu_rename);
 
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		String time = format.format(date);
 
 		desktop_newFolder_name.sendKeys(time);
-		desktop_newFolder_name_ok.click();
+		click(desktop_newFolder_name_ok);
 
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg = desktop1_1.getText();
+		String msg = getText(desktop1_1);
 
 		assertEquals(time, msg);
 	}
@@ -806,26 +617,19 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_creatCopy() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
-		clickDesktop();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-
-		String msg = desktop1_1.getText();
+		click(desktop);
+		String msg = getText(desktop1_1);
 		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_creatCopy));
-		menu_creatCopy.click();
+		click(desktop_setting);
+		click(menu_creatCopy);
 
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String msg1 = desktop1_1.getText();
+		String msg1 = getText(desktop1_1);
 
 		action.moveToElement(desktop1_1).perform();
-		desktop_setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
+		click(desktop_setting);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
 
 		assertEquals(msg1, "副本 " + msg);
 	}

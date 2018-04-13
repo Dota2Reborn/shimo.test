@@ -25,7 +25,7 @@ public class testDashboard extends TestInit {
 	public void dashboard_update() throws InterruptedException {
 		login("autoTest06@shimo.im", "123123");
 //		desktop.click();
-		clickDesktop();
+		click(desktop);
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		desktop1_1.click();
@@ -55,7 +55,7 @@ public class testDashboard extends TestInit {
 	public void dashboard_used() throws InterruptedException {
 		login("autoTest06@shimo.im", "123123");
 //		desktop.click();
-		clickDesktop();
+		click(desktop);
 
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		desktop1_1.click();
@@ -121,7 +121,7 @@ public class testDashboard extends TestInit {
 		login("autoTest06@shimo.im", "123123");
 
 //		desktop.click();
-		clickDesktop();
+		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
 		if (msg.equals("平铺")) {
