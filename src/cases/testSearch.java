@@ -22,8 +22,7 @@ public class testSearch extends TestInit {
 		action.moveToElement(dashboard_search_button).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_search_input));
 		dashboard_search_input.sendKeys("搜索测试");
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_search_result_1));
-		dashboard_search_result_1.click();
+		click(dashboard_search_result_1);
 		Thread.sleep(2000);
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));

@@ -286,7 +286,6 @@ public class testDesktopOrderBy extends TestInit {
 	public void order_setting_byFileName_Reverse() throws InterruptedException {
 		login("autoTest02@shimo.im", "123123");
 
-		// desktop.click();
 		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		String msg = desktop_show_type.getText();
