@@ -4,6 +4,7 @@ package cases;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -24,12 +25,13 @@ public class testPermission extends TestInit {
 		//右键第一个文件
 		action.contextClick(desktop1_1).perform();
 		click(menu_cooperation);
-		Add(0,"testing_2@test.im");
+		Add("testing_2@test.im");
 		Modify(2,2);
 		click(Shut_down_sm_modal_close_x);
 		logout();
 		login("testing_2@test.im","123123");
-		click(desktop);
+		wait.until(ExpectedConditions.elementToBeClickable(desktop));
+		desktop.click();
 		Sort();
 		click(desktop1_1_folder);
 		click(desktop1_1);
@@ -61,7 +63,7 @@ public class testPermission extends TestInit {
 		action.contextClick(desktop1_1).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_cooperation));
 		menu_cooperation.click();
-		Add(0,"testing_5@test.im");
+		Add("testing_5@test.im");
 		Modify(3,2);
 		Shut_down_sm_modal_close_x.click();
 		logout();
@@ -113,28 +115,51 @@ public class testPermission extends TestInit {
 						
 		}
 
-	//添加协作
-	public void Add(int Judgment,String Emil_1) throws InterruptedException {
-		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
-		int[] integers = {2,3,4,5,6};
-		//int[] integers = {2};
-		if(Judgment==1){
-			for (int j = 0; j < integers.length; j++) {
-				String Emil="testing_"+integers[j]+"@test.im";
+//	//添加协作
+//	public void Add(int Judgment,String Emil_1) throws InterruptedException {
+//		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
+//		int[] integers = {2,3,4,5,6};
+//		//int[] integers = {2};
+//		if(Judgment==1){
+//			for (int j = 0; j < integers.length; j++) {
+//				String Emil="testing_"+integers[j]+"@test.im";
+//				input_addCollaborator.sendKeys(Emil);
+//				//验证添加按钮是否加载出来
+//				wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+//				b_addCollaborator_1_add.click();
+//			}
+//		}
+//		
+//		if(Emil_1!=""){
+//			input_addCollaborator.sendKeys(Emil_1);
+//			wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+//			b_addCollaborator_1_add.click();
+//		}
+//		
+//	}
+		
+		//添加协作
+		public void Add(String Emil) throws InterruptedException {
+			try {
+				wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
 				input_addCollaborator.sendKeys(Emil);
-				//验证添加按钮是否加载出来
 				wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-				b_addCollaborator_1_add.click();
+				String name = wait.until(ExpectedConditions.visibilityOf(b_addCollaborator_1_add)).getText();
+				if (!name.equals("添加")) {
+					System.out.println("添加"+Emil+"时已经是协作者了");
+					b_addCollaborator_1_add.click();
+					click(list_addCollaborator_4);
+					wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
+					input_addCollaborator.sendKeys(Emil);
+					click(b_addCollaborator_1_add);
+				}else {
+					b_addCollaborator_1_add.click();	
+				}
+			} catch (NoSuchElementException e) {
+					// TODO
+				System.out.println(Emil + "is missing");
 			}
 		}
-		
-		if(Emil_1!=""){
-			input_addCollaborator.sendKeys(Emil_1);
-			wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-			b_addCollaborator_1_add.click();
-		}
-		
-	}
 
 	//选择权限
 	public void Modify(int Permissions,int Several) throws InterruptedException {

@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -173,23 +174,18 @@ public class dashboard_own extends TestInit{
 	public void own5() throws InterruptedException{
 		login("own6@shimo.im", "123123");
 		desktop.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		action.contextClick(desktop1_1).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_cooperation));
-		menu_cooperation.click();
+		contextClick(desktop1_1);
+		click(menu_cooperation);
 		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
 		Thread.sleep(500);
-		input_addCollaborator.sendKeys("own7@shimo.im");
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		b_addCollaborator_1_add.click();
+		Add("own7@shimo.im");
 		//获取当前时间
 		Boolean a = false;
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("HHmm");
 		String time = format.format(date);
 		int dat1=Integer.parseInt(time);
-		wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
-		Shut_down_sm_modal_close_x.click();
+		click(Shut_down_sm_modal_close_x);
 		logout();
 		login("own7@shimo.im", "123123");
 		String n = dashboard_shareTime_1.getText();
@@ -208,16 +204,32 @@ public class dashboard_own extends TestInit{
 			}
 		}
 		contextClick(New_Share_1);
-		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-		menu_delete.click();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
-		desktop_newFolder_name_ok.click();
-		assertTrue(a);
-		
-		
-	     
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
+		assertTrue(a); 
 	}
-
+	//添加协作
+		public void Add(String Emil) throws InterruptedException {
+			try {
+				wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
+				input_addCollaborator.sendKeys(Emil);
+				wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+				String name = wait.until(ExpectedConditions.visibilityOf(b_addCollaborator_1_add)).getText();
+				if (!name.equals("添加")) {
+					System.out.println("添加"+Emil+"时已经是协作者了");
+					b_addCollaborator_1_add.click();
+					click(list_addCollaborator_4);
+					wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
+					input_addCollaborator.sendKeys(Emil);
+					click(b_addCollaborator_1_add);
+				}else {
+					b_addCollaborator_1_add.click();	
+				}
+			} catch (NoSuchElementException e) {
+					// TODO
+				System.out.println(Emil + "is missing");
+			}
+		}
 
 
 }
