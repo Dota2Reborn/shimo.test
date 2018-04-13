@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -177,8 +178,7 @@ public class dashboard_own extends TestInit{
 		click(menu_cooperation);
 		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
 		Thread.sleep(500);
-		input_addCollaborator.sendKeys("own7@shimo.im");
-		click(b_addCollaborator_1_add);
+		Add("own7@shimo.im");
 		//获取当前时间
 		Boolean a = false;
 		Date date = new Date();
@@ -206,12 +206,30 @@ public class dashboard_own extends TestInit{
 		contextClick(New_Share_1);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
-		assertTrue(a);
-		
-		
-	     
+		assertTrue(a); 
 	}
-
+	//添加协作
+		public void Add(String Emil) throws InterruptedException {
+			try {
+				wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
+				input_addCollaborator.sendKeys(Emil);
+				wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+				String name = wait.until(ExpectedConditions.visibilityOf(b_addCollaborator_1_add)).getText();
+				if (!name.equals("添加")) {
+					System.out.println("添加"+Emil+"时已经是协作者了");
+					b_addCollaborator_1_add.click();
+					click(list_addCollaborator_4);
+					wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
+					input_addCollaborator.sendKeys(Emil);
+					click(b_addCollaborator_1_add);
+				}else {
+					b_addCollaborator_1_add.click();	
+				}
+			} catch (NoSuchElementException e) {
+					// TODO
+				System.out.println(Emil + "is missing");
+			}
+		}
 
 
 }
