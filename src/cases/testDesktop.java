@@ -181,7 +181,7 @@ public class testDesktop extends TestInit {
 		String doc_name = getText(desktop1_1);
 
 		contextClick(desktop1_1);
-		Thread.sleep(200);
+//		Thread.sleep(200);
 		click(menu_shortcut);
 
 		assertEquals(doc_name, msg);
@@ -339,12 +339,12 @@ public class testDesktop extends TestInit {
 
 		contextClick(desktop1_1_folder);
 		click(menu_shortcut);
-		Thread.sleep(100);
+		
+		driver.navigate().refresh();
 		String msg = getText(desktop_shortcut_1);
 		String doc_name = getText(desktop1_1_folder);
 
 		contextClick(desktop1_1_folder);
-		Thread.sleep(200);
 		click(menu_shortcut);
 
 		assertEquals(doc_name, msg);

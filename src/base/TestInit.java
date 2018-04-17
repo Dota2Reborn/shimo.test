@@ -5,7 +5,6 @@ import static org.testng.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -48,7 +47,6 @@ public class TestInit {
 		driver.navigate().to(test_url + "login");
 		// driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		// System.out.println("11111111111111111111111111111111111111");
 		wait = new WebDriverWait(driver, 6);
 	}
 
@@ -233,6 +231,22 @@ public class TestInit {
 	}
 
 	/**
+	 * 判断元素是否存在
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-21
+	 *
+	 */
+	public boolean doesWebElementExist(WebElement element) {
+		try {
+			return element.isDisplayed();
+		} catch (NoSuchElementException e) {
+			// TODO
+			return false;
+		}
+	}
+
+	/**
 	 * 右键点击
 	 * 
 	 * @author 刘晨
@@ -262,6 +276,7 @@ public class TestInit {
 		try {
 			if (element.toString().equals(b_back.toString()) || element.toString().equals(Back_to_Table.toString())
 					|| element.toString().equals(Back_to_Desktop.toString())) {
+				// 离开文档表格编辑页
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				checkPageIsReady();
 				wait.until(ExpectedConditions
@@ -270,9 +285,8 @@ public class TestInit {
 				driver.switchTo().alert().accept();
 			} else if (element.toString().equals(desktop.toString())
 					|| element.toString().equals(favorites.toString())) {
+				// 点击我的桌面，我的收藏
 				clickDesktop(element);
-			} else if (element.toString().equals(menu_shortcut.toString())) {
-				clickShortcut();
 			} else {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				element.click();
@@ -305,26 +319,15 @@ public class TestInit {
 			System.out.println("Unhandled Alert :" + msg);
 			System.out.println("javascript Error:" + e.getMessage());
 			assertTrue(false);
-		}
-	}
-
-	/**
-	 * 点击切换到我的桌面
-	 * 
-	 * @author 刘晨
-	 * @Time 2018-4-13
-	 *
-	 */
-	public void clickShortcut() {
-		String setting_2 = getText(menu_shortcut);
-		if (setting_2.equals("从快捷方式移除")) {
-			menu_shortcut.click();
-			contextClick(desktop1_1);
-			wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
-			menu_shortcut.click();
-		} else {
-			wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
-			menu_shortcut.click();
+		} finally {
+			Thread.sleep(150);
+			Boolean n = doesWebElementExist(By.className("sm-toast"));
+			if (n.equals(true)) {
+				String msg = driver.findElement(By.className("sm-toast")).getText();
+				wait.until(ExpectedConditions.textToBe(By.className("sm-toast"), msg));
+				System.out.println("提示信息--------->" + msg);
+			}
+			checkPageIsReady();
 		}
 	}
 
@@ -378,6 +381,20 @@ public class TestInit {
 			System.out.println(element + "is missing");
 		}
 		return msg;
+	}
+
+	/**
+	 * 输入内容
+	 * 
+	 * @param
+	 * @author 刘晨
+	 * @Time 2018-04-16
+	 *
+	 */
+	public void sendKeys(WebElement element, String msg) {
+		wait.until(ExpectedConditions.visibilityOf(element));
+		element.sendKeys(msg);
+
 	}
 
 	/**
