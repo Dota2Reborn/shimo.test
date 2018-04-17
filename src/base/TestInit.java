@@ -330,6 +330,7 @@ public class TestInit {
 				wait.until(ExpectedConditions.textToBe(By.className("sm-toast"), msg));
 				System.out.println("提示信息--------->" + msg);
 			}
+			checkPageIsReady();
 		}
 	}
 
@@ -341,6 +342,7 @@ public class TestInit {
 	 *
 	 */
 	public void clickShortcut() {
+		wait.until(ExpectedConditions.elementToBeClickable(menu_shortcut));
 		String setting_2 = getText(menu_shortcut);
 		if (setting_2.equals("从快捷方式移除")) {
 			menu_shortcut.click();
@@ -386,27 +388,28 @@ public class TestInit {
 
 	}
 
-//	/**
-//	 * 移除协作者
-//	 * 
-//	 * @author 刘晨
-//	 * @Time 2018-04-16
-//	 *
-//	 */
-//	public void addCollaborator_delete(WebElement element) {
-//		try {
-//			wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
-//			list_addCollaborator_4.click();
-//			Boolean result = doesWebElementExist(b_addCollaborator_confirm);
-//			if (result) {
-//				return;
-//			}
-//		} catch (TimeoutException e) {
-//			// 超时
-//			System.out.println("移除失败 ->" + driver.findElement(By.className("sm-toast")).getText());
-//			assertTrue(false);
-//		}
-//	}
+	// /**
+	// * 移除协作者
+	// *
+	// * @author 刘晨
+	// * @Time 2018-04-16
+	// *
+	// */
+	// public void addCollaborator_delete(WebElement element) {
+	// try {
+	// wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
+	// list_addCollaborator_4.click();
+	// Boolean result = doesWebElementExist(b_addCollaborator_confirm);
+	// if (result) {
+	// return;
+	// }
+	// } catch (TimeoutException e) {
+	// // 超时
+	// System.out.println("移除失败 ->" +
+	// driver.findElement(By.className("sm-toast")).getText());
+	// assertTrue(false);
+	// }
+	// }
 
 	/**
 	 * 获取文本信息
