@@ -340,7 +340,6 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_fail() throws InterruptedException {
 		login("autoTest10@shimo.im", "123123");
-		// desktop.click();
 		click(desktop);
 		click(desktop1_1_folder);
 		String t = desktop_new.getAttribute("disabled");
