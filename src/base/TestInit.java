@@ -325,7 +325,6 @@ public class TestInit {
 		} finally {
 			Thread.sleep(150);
 			Boolean n = doesWebElementExist(By.className("sm-toast"));
-			System.out.println(n);
 			if (n.equals(true)) {
 				String msg = driver.findElement(By.className("sm-toast")).getText();
 				wait.until(ExpectedConditions.textToBe(By.className("sm-toast"), msg));
