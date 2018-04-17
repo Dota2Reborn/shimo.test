@@ -58,6 +58,7 @@ public class testAddCollaborator extends TestInit {
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
+		
 
 //		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		click(b_addCollaborator_2_list);
@@ -173,6 +174,7 @@ public class testAddCollaborator extends TestInit {
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
+		
 		logout();
 		login("autoTest04@shimo.im", "123123");
 		desktop.click();
@@ -206,7 +208,7 @@ public class testAddCollaborator extends TestInit {
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
-
+		
 		logout();
 		login("autoTest04@shimo.im", "123123");
 
@@ -279,6 +281,8 @@ public class testAddCollaborator extends TestInit {
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
+		
+		
 //		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
