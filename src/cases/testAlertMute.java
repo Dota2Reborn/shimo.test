@@ -112,7 +112,7 @@ public class testAlertMute extends TestInit {
             exist1 = doesWebElementExist(By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[@class='category-card-container']"));
             i++;
         }
-        if(exist1=true) {
+        if(exist1==true) {
         	assertTrue(exist1);
         }else {
         	System.out.println("接收消息提醒验证未通过，请登录AlertMute2@shimo.im自行验证");
@@ -151,7 +151,7 @@ public class testAlertMute extends TestInit {
             exist2 = doesWebElementExist(By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[@class='category-card-container']"));
             i++;
         }
-        if(exist2=true) {
+        if(exist2==true) {
         	click(menu_Point_Menu);
         	click(menu_mute);//关闭消息通知
         	assertTrue(exist2);
