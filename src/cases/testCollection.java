@@ -29,7 +29,9 @@ public class testCollection extends TestInit {
 		click(favorites);
 		Sort();
 		String name=getText(desktop1_1);
-		contextClick(desktop1_1);
+		//contextClick(desktop1_1);
+		action.moveToElement(desktop1_1).perform();
+		click(desktop_setting);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
 		Thread.sleep(500);
@@ -53,7 +55,9 @@ public class testCollection extends TestInit {
 		click(favorites);
 		Sort();
 		String name=getText(desktop1_1);
-		contextClick(desktop1_1);
+		//contextClick(desktop1_1);
+		action.moveToElement(desktop1_1).perform();
+		click(desktop_setting);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
 		Thread.sleep(500);
