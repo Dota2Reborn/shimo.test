@@ -201,7 +201,7 @@ public class testDesktop extends TestInit {
 		click(desktop);
 
 		String doc_name = getText(desktop1_1);
-		action.contextClick(desktop1_1).perform();
+		contextClick(desktop1_1);
 		click(menu_collection);
 
 		click(favorites);
@@ -230,7 +230,6 @@ public class testDesktop extends TestInit {
 		click(desktop_moveFolder_list_1);
 		click(desktop_moveFolder_button);
 
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
 		driver.navigate().refresh();
 		click(desktop1_1_folder);
 		contextClick(desktop1_1);
@@ -239,7 +238,7 @@ public class testDesktop extends TestInit {
 		Thread.sleep(500);
 		click(desktop_moveFolder_button);
 
-		wait.until(ExpectedConditions.elementToBeClickable(desktop));
+//		wait.until(ExpectedConditions.elementToBeClickable(desktop));
 		driver.navigate().refresh();
 		click(desktop);
 		String msg1 = getText(desktop1_1);
@@ -257,7 +256,6 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_8() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
 		click(desktop);
 		click(desktop1_1_folder);
 		contextClick(desktop1_1);
@@ -286,7 +284,6 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_setting_9() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
 		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
@@ -562,7 +559,6 @@ public class testDesktop extends TestInit {
 	@Test
 	public void desktop_doc_collection() throws InterruptedException {
 		login("autoTest@shimo.im", "123123");
-		// desktop.click();
 		click(desktop);
 		String doc_name = getText(desktop1_1);
 		action.moveToElement(desktop1_1).perform();

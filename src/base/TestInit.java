@@ -352,8 +352,6 @@ public class TestInit {
 				desktop_order.click();
 				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 				desktop_orderByDefault.click();
-			} else {
-				return;
 			}
 		} finally {
 			msg = desktop_show_type.getText();

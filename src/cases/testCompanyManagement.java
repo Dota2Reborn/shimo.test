@@ -254,11 +254,6 @@ public class testCompanyManagement extends TestInit {
 		login("amei@qq.com", "123123");
 
 		click(desktop);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_folder));
-		String msg = desktop_show_type.getText();
-		if (msg.equals("平铺")) {
-			desktop_show_type.click();
-		}
 
 		contextClick(desktop1_1);
 		click(menu_cooperation);
@@ -267,7 +262,6 @@ public class testCompanyManagement extends TestInit {
 		input_addCollaborator.sendKeys("erdan@qq.com");
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-		// b_addCollaborator_1_add.click();
 
 		String t = b_addCollaborator_1_add.getAttribute("disabled");
 		Boolean R1 = t.equals("true");

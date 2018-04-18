@@ -44,7 +44,6 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_2() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-		// desktop.click();
 		click(desktop);
 
 		contextClick(desktop1_1_folder);
@@ -80,7 +79,6 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_3() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-		// desktop.click();
 		click(desktop);
 
 		contextClick(desktop1_1_folder);
@@ -177,7 +175,7 @@ public class testAddCollaborator extends TestInit {
 		
 		logout();
 		login("autoTest04@shimo.im", "123123");
-		desktop.click();
+		click(desktop);
 		contextClick(desktop1_1_folder);
 		click(menu_cooperation);
 		click(b_addCollaborator_2_list);
@@ -212,7 +210,7 @@ public class testAddCollaborator extends TestInit {
 		logout();
 		login("autoTest04@shimo.im", "123123");
 
-		desktop.click();
+		click(desktop);
 
 		contextClick(desktop1_1_folder);
 		click(menu_cooperation);
@@ -235,7 +233,6 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_8() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-		// desktop.click();
 		click(desktop);
 
 		contextClick(desktop1_1_folder);
@@ -271,7 +268,6 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_9() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-		// desktop.click();
 		click(desktop);
 		click(desktop1_1_folder);
 		click(addCollaborator_folder_add);
@@ -303,7 +299,6 @@ public class testAddCollaborator extends TestInit {
 	@Test(enabled = true)
 	public void addCollaborator_10() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
-		// desktop.click();
 		click(desktop);
 		contextClick(desktop1_2_folder);
 		click(menu_cooperation);
@@ -316,7 +311,7 @@ public class testAddCollaborator extends TestInit {
 
 		logout();
 		login("autoTest_addCollabor@shimo.im", "123123");
-		desktop.click();
+		click(desktop);
 
 		contextClick(desktop1_1_folder);
 		click(menu_cooperation);
