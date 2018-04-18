@@ -27,9 +27,7 @@ public class dashboard_shared extends TestInit {
 	public void shared1() throws InterruptedException{
 		login("gx1@shimo.im", "123123");
         click(dashboard_3);
-   	    
-   	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
-		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+   	    click(menu_Point_Menu);
 		Thread.sleep(1000);
 		click(menu_cooperation);
 		click(button_addCollaborator);
@@ -39,7 +37,7 @@ public class dashboard_shared extends TestInit {
 	    logout();
 	    login("gx2@shimo.im", "123123");
 	    click(dashboard_4);
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
+	    wait.until(ExpectedConditions.elementToBeClickable(menu_Point_Menu));
 	    boolean a = driver.findElement(By.xpath("//div[@class='card-ribbon']")).isDisplayed();//未读蓝色标记
 	    assertEquals(a,true);
 	    boolean b = driver.findElement(By.xpath("//div[@class='card-icon']//div")).isDisplayed();//卡片图标
@@ -48,8 +46,7 @@ public class dashboard_shared extends TestInit {
 	    assertEquals(c, true);
 	    String text = driver.findElement(By.xpath("//div[@class='card-content-title']//div[1]")).getText();
 	    assertEquals(text, "无标题");
-	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
-	    String text1 = dashboard_update_time.getText();
+	    String text1 = getText(dashboard_update_time);
 	    assertEquals(text1, "2人共享 · 刚刚 共享 共享");
 	    WebElement card = driver.findElement(By.xpath("//div[@class='category-card-container']"));
 		action.moveToElement(card).perform();
@@ -59,8 +56,7 @@ public class dashboard_shared extends TestInit {
 		boolean e = driver.findElement(By.xpath("//div[@class='file-options-icon']")).isDisplayed();
 		assertEquals(e, true);
 		Thread.sleep(200);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
-		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+		click(menu_Point_Menu);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
 		
@@ -116,28 +112,26 @@ public class dashboard_shared extends TestInit {
 	    
 	    login("gx6@shimo.im", "123123");
 	    click(dashboard_4);
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
-	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
-	    Thread.sleep(500);
-		String text1 = menu_newPage.getText();
+	    click(menu_Point_Menu);
+		String text1 = getText(menu_newPage);
 		assertEquals(text1, "在新标签页中打开");
-	    String text2 = menu_mute.getText();
+	    String text2 = getText(menu_mute);
 	    assertEquals(text2, "消息免打扰");
-	    String text3 = menu_shortcut.getText();
+	    String text3 = getText(menu_shortcut);
 	    assertEquals(text3, "添加到快捷方式");
-	    String text4 = menu_collection.getText();
+	    String text4 = getText(menu_collection);
 	    assertEquals(text4, "收藏");
-	    String text6 = menu_cooperation.getText();
+	    String text6 = getText(menu_cooperation);
 	    assertEquals(text6, "2 人协作");
-	    String text7 = menu_move.getText();
+	    String text7 = getText(menu_move);
 	    assertEquals(text7, "移动");
-	    String text9 = menu_moveToFolder.getText();
+	    String text9 = getText(menu_moveToFolder);
 	    assertEquals(text9, "定位到所在文件夹");
-	    String text10 = menu_rename.getText();
+	    String text10 = getText(menu_rename);
 	    assertEquals(text10, "重命名");
-	    String text11 = menu_creatCopy.getText();
+	    String text11 = getText(menu_creatCopy);
 	    assertEquals(text11, "创建副本");
-	    String  text13 = menu_delete.getText();
+	    String  text13 = getText(menu_delete);
 	    assertEquals(text13, "删除");
 	    
 	    

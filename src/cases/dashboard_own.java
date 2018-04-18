@@ -17,32 +17,10 @@ import base.TestInit;
 public class dashboard_own extends TestInit{
 	
 	
-	/**
-	 *我创建的
-	 * 卡片样式验证
-	 * @author 陈清杰
-	 * @Time 2018-03-20
-	 * 账号状态：无文件
-	 */
-	@Test
-	public void own1() throws InterruptedException{
-		login("own1@shimo.im", "123123");
-		click(desktop_new);
-		click(desktop_newDoc);
-		click(b_back);
-	    click(dashboard_3);
-		
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
-		String text = getText(dashboard_update_name);
-		assertEquals(text, "无标题");
-		
-		Thread.sleep(200);
-	    click(menu_Point_Menu);
-		click(menu_delete);
-		click(desktop_newFolder_name_ok);
+
 
 		
-	}
+	
 	/**
 	 *我创建的
 	 * 卡片收藏验证
@@ -143,17 +121,13 @@ public class dashboard_own extends TestInit{
 	     
 	     login("own5@shimo.im", "123123");
 	     click(dashboard_3);
-	     wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
-	     String text = dashboard_update_name.getText();
+	     String text = getText(dashboard_update_name);
 	     assertEquals(text, "无标题");
 	     
 	     Thread.sleep(300);
-	     driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+	     click(menu_Point_Menu);
 	     click(menu_delete);
 	     click(desktop_newFolder_name_ok);
-	     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-	     String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
-	     assertEquals(text2, "没有文件");
 	     
 	}
 	
