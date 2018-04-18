@@ -89,7 +89,7 @@ public class testAlertMute extends TestInit {
 	@Test(enabled = true)
 	public void Notification_shutdown() throws InterruptedException {
 		login("AlertMute2@shimo.im", "123123");
-		click(dashboard_2);
+		click(dashboard_1);
 		click(menu_Point_Menu);
 		click(menu_mute);//关闭消息通知
 		driver.navigate().refresh();
