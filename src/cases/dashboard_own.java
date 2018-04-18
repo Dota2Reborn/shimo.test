@@ -8,7 +8,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -34,15 +33,13 @@ public class dashboard_own extends TestInit{
 	    click(dashboard_3);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
-		String text = dashboard_update_name.getText();
+		String text = getText(dashboard_update_name);
 		assertEquals(text, "无标题");
 		
 		Thread.sleep(200);
-		WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
-		icon.click();
+	    click(menu_Point_Menu);
 		click(menu_delete);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-		driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]")).click();
+		click(desktop_newFolder_name_ok);
 
 		
 	}
@@ -58,8 +55,8 @@ public class dashboard_own extends TestInit{
 		login("own2@shimo.im", "123123");
 		click(dashboard_3);
 		
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
-		action.moveToElement(dashboard_update_time).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
+		action.moveToElement(dashboard_update_name).perform();
         driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).click();//hover收藏
         Thread.sleep(600);
         click(favorites);
@@ -91,28 +88,27 @@ public class dashboard_own extends TestInit{
 	public void own3() throws InterruptedException{
 		login("own3@shimo.im", "123123");
 		click(dashboard_3);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
-		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+		click(menu_Point_Menu);
 		Thread.sleep(500);
-		String text1 = menu_newPage.getText();
+		String text1 = getText(menu_newPage);
 		assertEquals(text1, "在新标签页中打开");
-	    String text2 = menu_mute.getText();
+	    String text2 = getText(menu_mute);
 	    assertEquals(text2, "消息免打扰");
-	    String text3 = menu_shortcut.getText();
+	    String text3 = getText(menu_shortcut);
 	    assertEquals(text3, "添加到快捷方式");
-	    String text4 = menu_collection.getText();
+	    String text4 =getText(menu_collection);
 	    assertEquals(text4, "收藏");
-	    String text6 = menu_cooperation.getText();
+	    String text6 = getText(menu_cooperation);
 	    assertEquals(text6, "1 人协作");
-	    String text7 = menu_move.getText();
+	    String text7 = getText(menu_move);
 	    assertEquals(text7, "移动");
-	    String text9 = menu_moveToFolder.getText();
+	    String text9 = getText(menu_moveToFolder);
 	    assertEquals(text9, "定位到所在文件夹");
-	    String text10 = menu_rename.getText();
+	    String text10 = getText(menu_rename);
 	    assertEquals(text10, "重命名");
-	    String text11 = menu_creatCopy.getText();
+	    String text11 = getText(menu_creatCopy);
 	    assertEquals(text11, "创建副本");
-	    String  text13 = menu_delete.getText();
+	    String  text13 = getText(menu_delete);
 	    assertEquals(text13, "删除");
 		
 		
@@ -131,8 +127,7 @@ public class dashboard_own extends TestInit{
 		click(desktop_newDoc);
 		click(b_back);
 		click(dashboard_3);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
-		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+		click(menu_Point_Menu);
 		click(menu_cooperation);
 		click(button_addCollaborator);
 	    click(addCollaborator_1_add);
@@ -155,9 +150,7 @@ public class dashboard_own extends TestInit{
 	     Thread.sleep(300);
 	     driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
 	     click(menu_delete);
-	     WebElement icon = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
-	     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-	     icon.click();
+	     click(desktop_newFolder_name_ok);
 	     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
 	     String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
 	     assertEquals(text2, "没有文件");
@@ -173,22 +166,25 @@ public class dashboard_own extends TestInit{
 	@Test
 	public void own5() throws InterruptedException{
 		login("own6@shimo.im", "123123");
-		desktop.click();
+		click(desktop);
 		contextClick(desktop1_1);
 		click(menu_cooperation);
 		wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
 		Thread.sleep(500);
-		Add("own7@shimo.im");
+		input_addCollaborator.sendKeys("own7@shimo.im");
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
+		b_addCollaborator_1_add.click();
 		//获取当前时间
 		Boolean a = false;
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("HHmm");
 		String time = format.format(date);
 		int dat1=Integer.parseInt(time);
-		click(Shut_down_sm_modal_close_x);
+		wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
+		Shut_down_sm_modal_close_x.click();
 		logout();
 		login("own7@shimo.im", "123123");
-		String n = dashboard_shareTime_1.getText();
+		String n = getText(dashboard_shareTime_1);
 		String time1 = n.substring(0,2);
 		String m="刚刚";
 		if(time1.equals(m)) {
@@ -204,32 +200,16 @@ public class dashboard_own extends TestInit{
 			}
 		}
 		contextClick(New_Share_1);
-		click(menu_delete);
-		click(desktop_newFolder_name_ok);
-		assertTrue(a); 
+		wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
+		menu_delete.click();
+		wait.until(ExpectedConditions.elementToBeClickable(desktop_newFolder_name_ok));
+		desktop_newFolder_name_ok.click();
+		assertTrue(a);
+		
+		
+	     
 	}
-	//添加协作
-		public void Add(String Emil) throws InterruptedException {
-			try {
-				wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
-				input_addCollaborator.sendKeys(Emil);
-				wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-				String name = wait.until(ExpectedConditions.visibilityOf(b_addCollaborator_1_add)).getText();
-				if (!name.equals("添加")) {
-					System.out.println("添加"+Emil+"时已经是协作者了");
-					b_addCollaborator_1_add.click();
-					click(list_addCollaborator_4);
-					wait.until(ExpectedConditions.elementToBeClickable(input_addCollaborator));
-					input_addCollaborator.sendKeys(Emil);
-					click(b_addCollaborator_1_add);
-				}else {
-					b_addCollaborator_1_add.click();	
-				}
-			} catch (NoSuchElementException e) {
-					// TODO
-				System.out.println(Emil + "is missing");
-			}
-		}
+
 
 
 }

@@ -264,6 +264,7 @@ public class dashboard_used  extends TestInit {
 		 * 卡片，自己被移除协作
 		 * @author 陈清杰
 		 * @Time2018-03-19
+		 * 账号状态:没有文件
         *  **/
         @Test
         public void used8() throws InterruptedException{
@@ -312,7 +313,7 @@ public class dashboard_used  extends TestInit {
  	           wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
  	           String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
  	 		   assertEquals(text2, "没有文件");
-   	             
+   	            
   		 
    	           
    	           
