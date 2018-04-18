@@ -189,12 +189,9 @@ public class dashboard_used  extends TestInit {
         		  click(b_back);
         		  click(dashboard_2);
         	      
-        	      wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-        	      WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
-        	      icon.click();
+        	      click(menu_Point_Menu);
         	      click(menu_delete);
-        	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-        		  driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]")).click();
+        	      click(desktop_newFolder_name_ok);
         	      
         	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
         	      String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();

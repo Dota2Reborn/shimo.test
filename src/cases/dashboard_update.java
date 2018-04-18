@@ -146,9 +146,7 @@ public class dashboard_update  extends TestInit{
 		click(doc_discuss_input_ok);
 		Thread.sleep(1000);
 		click(b_back);
-		
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
-		String text1 = dashboard_update_time.getText();
+		String text1 = getText(dashboard_update_time);
 	    assertEquals(text1, "刚刚 我 评论：通过");
 	    
 	    click(dashboard_update_time);
@@ -156,9 +154,8 @@ public class dashboard_update  extends TestInit{
 	    driver.findElement(By.xpath("//div[@class='doc-comment-text']")).click();
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='doc-comment-close-icon']")));
 	    driver.findElement(By.xpath("//span[@class='doc-comment-close-icon']")).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='confirm-dialog-footer dialog-foot']//button[1]")));
-	    driver.findElement(By.xpath("//div[@class='confirm-dialog-footer dialog-foot']//button[1]")).click();
-	    Thread.sleep(1000);
+	    click(doc_menu_delete_OK);
+	    
 	    
 		
 		
