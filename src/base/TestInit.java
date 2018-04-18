@@ -360,6 +360,7 @@ public class TestInit {
 			if (msg.equals("平铺")) {
 				desktop_show_type.click();
 			}
+			checkPageIsReady();
 		}
 
 	}
