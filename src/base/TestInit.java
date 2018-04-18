@@ -506,6 +506,8 @@ public class TestInit {
 	public WebElement desktop1_1_name;
 	@SearchWith(pageName = "desktop", elementName = "desktop_orderByFolderUP_Hook", noteName = "桌面排序-文件夹置顶-对钩")
 	public WebElement desktop_orderByFolderUP_Hook;
+	@SearchWith(pageName = "desktop", elementName = "folder_backToDesktop", noteName = "文件夹中，点击文件路径返回我的桌面")
+	public WebElement folder_backToDesktop;
 
 	// doc
 	@SearchWith(pageName = "doc", elementName = "b_back", noteName = "后退")

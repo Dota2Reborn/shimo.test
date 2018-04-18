@@ -391,7 +391,7 @@ public class testDesktop extends TestInit {
 		desktop_newFolder_name.sendKeys("FFFFF");
 		click(desktop_newFolder_name_ok);
 		// wait.until(ExpectedConditions.elementToBeClickable(By.className("settings")));
-		click(desktop);
+		click(folder_backToDesktop);
 		contextClick(desktop1_1);
 		click(menu_move);
 		click(desktop_moveFolder_list_2);
