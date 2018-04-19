@@ -4,10 +4,6 @@ package cases;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 //import org.openqa.selenium.WebDriver;

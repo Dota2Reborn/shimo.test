@@ -80,7 +80,6 @@ public class login_error extends TestInit {
 	 * @Time 2018-01-08
 	 *
 	 */
-	@SuppressWarnings("deprecation")
 	@Test
 	public void login_error2() throws InterruptedException {
 		
