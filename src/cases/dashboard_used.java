@@ -1,8 +1,7 @@
 package cases;
 
 import static org.testng.Assert.assertEquals;
-
-
+import static org.testng.Assert.assertTrue;
 
 import javax.print.DocFlavor.STRING;
 
@@ -69,26 +68,18 @@ public class dashboard_used  extends TestInit {
         WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
     		icon.click();
     		Thread.sleep(500);
-    		String text1 = menu_newPage.getText();
-    		assertEquals(text1, "在新标签页中打开");
-    	    String text2 = menu_mute.getText();
-    	    assertEquals(text2, "消息免打扰");
-    	    String text3 = menu_shortcut.getText();
-    	    assertEquals(text3, "添加到快捷方式");
-    	    String text4 = menu_collection.getText();
-    	    assertEquals(text4, "收藏");
-    	    String text6 = menu_cooperation.getText();
-    	    assertEquals(text6, "1 人协作");
-    	    String text7 = menu_move.getText();
-    	    assertEquals(text7, "移动");
-    	    String text9 = menu_moveToFolder.getText();
-    	    assertEquals(text9, "定位到所在文件夹");
-    	    String text10 = menu_rename.getText();
-    	    assertEquals(text10, "重命名");
-    	    String text11 = menu_creatCopy.getText();
-    	    assertEquals(text11, "创建副本");
-    	    String  text13 = menu_delete.getText();
-    	    assertEquals(text13, "删除");
+    		boolean text1 = getText(menu_newPage).equals("在新标签页中打开");
+    	    boolean text2 = getText(menu_mute).equals("消息免打扰");
+    	    boolean text3 = getText(menu_shortcut).equals("添加到快捷方式");
+    	    boolean text4 = getText(menu_collection).equals("收藏");
+    	    boolean text6 = getText(menu_cooperation).equals("1 人协作");
+    	    boolean text7 = getText(menu_move).equals("移动");
+    	    boolean text9 = getText(menu_moveToFolder).equals("定位到所在文件夹");
+    	    boolean text10 = getText(menu_rename).equals("重命名");
+    	    boolean text11 = getText(menu_creatCopy).equals("创建副本");
+    	    boolean  text13 = getText(menu_delete).equals( "删除");
+    	    assertTrue(text1||text2||text3||text4||text6||text9||text7||text10||text11||text13);
+    	   
     	    
     	   }
         /**
@@ -104,9 +95,7 @@ public class dashboard_used  extends TestInit {
         	
     		login("zuijin3@shimo.im","123123" );
     	    click(dashboard_2);
-    	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-    	    WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
-    		icon.click();
+    	    click(menu_Point_Menu);
     		Thread.sleep(500);
     		String text = driver.findElement(By.xpath("//div[@class='category-card-container']//div//div[2]//div//div//ul//li")).getText();
     		assertEquals(text, "在新标签页中打开");
@@ -127,16 +116,12 @@ public class dashboard_used  extends TestInit {
         public void used5() throws InterruptedException{
         
         	login("zuijin5@shimo.im", "123123");
-        	
-        	wait.until(ExpectedConditions.elementToBeClickable(dashboard_1));
-        	dashboard_2.click();
+        	click(dashboard_2);
         	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a")));
        	WebElement icon2 = driver.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a"));
        	icon2.click();
-       	wait.until(ExpectedConditions.elementToBeClickable(b_back));
 	    click(b_back);
-	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
-	    dashboard_2.click();
+	    click(dashboard_2);
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
 	    String text = driver.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[2]//div//a//div//div//div[2]//div[1]//div[1]")).getText();
 	    assertEquals(text, "22222");
@@ -144,10 +129,8 @@ public class dashboard_used  extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a")));
        	WebElement icon3 = driver.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a"));
        	icon3.click();
-       	wait.until(ExpectedConditions.elementToBeClickable(b_back));
 	    click(b_back);
-	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
-	    dashboard_2.click();
+	    click(dashboard_2);
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
 	    String text1 = driver.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[2]//div//a//div//div//div[2]//div[1]//div[1]")).getText();
 	    assertEquals(text1, "11111");
@@ -170,7 +153,7 @@ public class dashboard_used  extends TestInit {
         		  click(b_back);
         		  click(dashboard_2);
         	      
-        	      click(menu_Point_Menu);
+        	      contextClick(dashboard_update_name);;
         	      click(menu_delete);
         	      click(desktop_newFolder_name_ok);
         	      
@@ -195,9 +178,7 @@ public class dashboard_used  extends TestInit {
         	      click(b_back);
         	      click(dashboard_2);
         		  
-        		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
-        	      WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
-        	      icon.click();
+        		  contextClick(dashboard_update_name);
         	      click(menu_cooperation);
         	      click(button_addCollaborator);
         	      click(addCollaborator_1_add);
@@ -214,11 +195,9 @@ public class dashboard_used  extends TestInit {
         		  dashboard_2.click();
         		  
         		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-        	      WebElement icon1 = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
-        	      icon1.click();
+        	      contextClick(dashboard_update_name);
         	      click(menu_delete);
-        	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-        		  driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]")).click();
+        	      click(desktop_newFolder_name_ok);
         	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
         	      String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
         		  assertEquals(text2, "没有文件");
@@ -226,13 +205,9 @@ public class dashboard_used  extends TestInit {
         		  logout();
         		  login("zuijin9@shimo.im", "123123");
         		  click(dashboard_2);
-        		  wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
-        	      WebElement icon3 = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
-        	      icon3.click();
+        		  contextClick(dashboard_update_name);
         	      click(menu_delete);
-        	      WebElement icon4= driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
-        	      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-        	      icon4.click();
+        	      click(desktop_newFolder_name_ok);
         	     
         	      
         	      
@@ -252,9 +227,7 @@ public class dashboard_used  extends TestInit {
                click(desktop_newDoc);
       	       click(b_back);
       	       click(dashboard_2);
-   	           wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-  	           WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
-  	           icon.click();
+   	           contextClick(dashboard_update_name);
   	           click(menu_cooperation);
   	           click(button_addCollaborator);
    	           click(addCollaborator_1_add);
@@ -270,20 +243,14 @@ public class dashboard_used  extends TestInit {
   		       
   		       login("zuijin55@shimo.im", "123123");
   		       click(dashboard_2);
- 	           wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-    	           WebElement icon1 = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
-    	           icon1.click();  
+ 	           contextClick(dashboard_update_name); 
     	           click(menu_cooperation);
        	       click(b_addCollaborator_2_list);
        	       click(list_addCollaborator_4);
        	       click(Shut_down_sm_modal_close_x);
-       	       wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
-  	           WebElement icon3 = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
-  	           icon3.click();
+       	       contextClick(dashboard_update_name);
   	           click(menu_delete);
-  	           WebElement icon4= driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
-  	           wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-  	           icon4.click();
+  	           click(desktop_newFolder_name_ok);
        	       logout();
        	       
        	       login("zuijin77@shimo.im", "123123");
