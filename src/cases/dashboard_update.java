@@ -34,7 +34,7 @@ public class dashboard_update  extends TestInit{
 	    String text = driver.findElement(By.xpath("//div[@class='card-content-title']//div[1]")).getText();
 	    assertEquals(text, "无标题");
 	    
-	    String text1 = dashboard_update_time.getText();
+	    String text1 = getText(dashboard_update_time);
 	    assertEquals(text1, "刚刚 我 更新");
 		action.moveToElement(dashboard_update_time).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
@@ -56,28 +56,27 @@ public class dashboard_update  extends TestInit{
 	public void update2() throws InterruptedException{
 		login("gengxin2@shimo.im", "123123");
 		click(dashboard_1);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
-		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+		click(menu_Point_Menu);
 	    wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-	    	String text1 = menu_newPage.getText();
+	    	String text1 = getText(menu_newPage);
 		assertEquals(text1, "在新标签页中打开");
-	    String text2 = menu_mute.getText();
+	    String text2 = getText(menu_mute);
 	    assertEquals(text2, "消息免打扰");
-	    String text3 = menu_shortcut.getText();
+	    String text3 = getText(menu_shortcut);
 	    assertEquals(text3, "添加到快捷方式");
-	    String text4 = menu_collection.getText();
+	    String text4 = getText(menu_collection);
 	    assertEquals(text4, "收藏");
-		String text6 = menu_cooperation.getText();
+		String text6 = getText(menu_cooperation);
 	    assertEquals(text6, "1 人协作");
-	    String text7 = menu_move.getText();
+	    String text7 = getText(menu_move);
 	    assertEquals(text7, "移动");
-	    String text9 = menu_moveToFolder.getText();
+	    String text9 = getText(menu_moveToFolder);
 	    assertEquals(text9, "定位到所在文件夹");
-	    String text10 = menu_rename.getText();
+	    String text10 = getText(menu_rename);
 	    assertEquals(text10, "重命名");
-	    String text11 = menu_creatCopy.getText();
+	    String text11 = getText(menu_creatCopy);
 	    assertEquals(text11, "创建副本");
-	    String  text13 = menu_delete.getText();
+	    String  text13 = getText(menu_creatCopy);
 	    assertEquals(text13, "删除");
 	    
         }
@@ -91,14 +90,12 @@ public class dashboard_update  extends TestInit{
 	@Test
 	public void update3() throws InterruptedException{
 		login("gengxin3@shimo.im", "123123");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='card-content-update']")));
-		driver.findElement(By.xpath("//div[@class='card-content-update']")).click();
+		click(dashboard_update_name);
 		click(doc_edit);
 		doc_edit.sendKeys("1");
 		Thread.sleep(1000);
 		click(b_back);
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
-		String text1 = dashboard_update_time.getText();
+		String text1 = getText(dashboard_update_time);
 	    assertEquals(text1, "刚刚 我 更新");
 		
 		
@@ -124,8 +121,7 @@ public class dashboard_update  extends TestInit{
 		logout();
 		
 		login("gengxin4@shimo.im", "123123");
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
-		String text1 = dashboard_update_time.getText();
+		String text1 = getText(dashboard_update_time);
 	    assertEquals(text1, "刚刚 AA 更新");
 	}
 	/**
@@ -183,16 +179,14 @@ public class dashboard_update  extends TestInit{
 		logout();
 		
 		login("gengxin8@shimo.im", "123123");
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
-		String text1 = dashboard_update_time.getText();
+		String text1 = getText(dashboard_update_time);
 	    assertEquals(text1, "刚刚 cc 评论：通过");
 	    click(dashboard_update_time);
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='doc-comment-text']")));
 	    driver.findElement(By.xpath("//div[@class='doc-comment-text']")).click();
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='doc-comment-close-icon']")));
 	    driver.findElement(By.xpath("//span[@class='doc-comment-close-icon']")).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='confirm-dialog-footer dialog-foot']//button[1]")));
-	    driver.findElement(By.xpath("//div[@class='confirm-dialog-footer dialog-foot']//button[1]")).click();
+	    click(doc_menu_delete_OK);
 		
 	}
 	/**
@@ -206,18 +200,15 @@ public class dashboard_update  extends TestInit{
 	public void update7() throws InterruptedException{
 		login("gengxin10@shimo.im", "123123");
 		click(dashboard_4);
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
 		click(dashboard_update_time);
 		click(doc_edit);
 		doc_edit.sendKeys("1");
 		Thread.sleep(1000);
 		click(b_back);
 		click(dashboard_1);
-	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
-	    String text1 = dashboard_update_name.getText();
+	    String text1 = getText(dashboard_update_name);
 	    assertEquals(text1, "突然想起你");
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
-	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+	    click(menu_Point_Menu);
 	    click(menu_cooperation);
 	    click(b_addCollaborator_2_list);
 	    click(list_addCollaborator_4);
@@ -228,8 +219,7 @@ public class dashboard_update  extends TestInit{
 		
 		logout();
 		login("gengxin9@shimo.im", "123123");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
-		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+		click(menu_Point_Menu);
 		click(menu_cooperation);
 		click(button_addCollaborator);
 		click(addCollaborator_1_add);
@@ -246,18 +236,13 @@ public class dashboard_update  extends TestInit{
 	@Test
 	public void update8() throws InterruptedException{
 		login("gengxin11@shimo.im", "123123");
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
 	    click(dashboard_update_time);
 	    click(doc_edit);
 	    doc_edit.sendKeys("1");
 	    click(b_back);
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
-	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(menu_delete));
-	    menu_delete.click();
-	    WebElement icon = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-	    icon.click();
+	    click(menu_Point_Menu);
+	    click(menu_delete);
+	    click(desktop_newFolder_name_ok);
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
 		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
 		assertEquals(text2, "没有文件");
@@ -289,13 +274,11 @@ public class dashboard_update  extends TestInit{
 	    logout();
 	    
 	    login("gengxin12@shimo.im", "123123");
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
-	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+	    click(menu_Point_Menu);
 	    click(menu_cooperation);
 	    click(b_addCollaborator_2_list);
 	    click(list_addCollaborator_4);
-	    wait.until(ExpectedConditions.elementToBeClickable(Shut_down_sm_modal_close_x));
-	    Shut_down_sm_modal_close_x.click();
+	    click(Shut_down_sm_modal_close_x);
 	    
 	    logout();
 	    login("gengxin13@shimo.im", "123123");
@@ -306,8 +289,7 @@ public class dashboard_update  extends TestInit{
 		logout();
 		login("gengxin12@shimo.im", "123123");
 		click(dashboard_3);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));//点点点
-		driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+		click(menu_Point_Menu);
 		click(menu_cooperation);
 		click(button_addCollaborator);
 		click(addCollaborator_1_add);
