@@ -41,16 +41,13 @@ public class testAlertMute extends TestInit {
 		click(doc_edit);
 		click(ql_comment_Comments);
 		Boolean a = false;
-		Date date = new Date();
-		DateFormat format = new SimpleDateFormat("HHmm");
-		String time1 = format.format(date);
+		String time1 = getDate();
 		int dat1=Integer.parseInt(time1);
 		doc_discuss_input.sendKeys("输入评论收到通知");
 		doc_discuss_input_ok.click();
 		logout();
 		login("AlertMute@shimo.im", "123123");
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice));
-		action.moveToElement(dashboard_notice).perform();
+		moveToElement(dashboard_notice);
 		//String time2 = getText(dashboard_notice_list_1_time);
 		wait.until(ExpectedConditions.visibilityOf(dashboard_notice_list_1_time));
 		String time2 = dashboard_notice_list_1_time.getText();

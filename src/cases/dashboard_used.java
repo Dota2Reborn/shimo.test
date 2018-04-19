@@ -3,17 +3,12 @@ package cases;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-import javax.print.DocFlavor.STRING;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
-
 import base.TestInit;
-import cases.testPermission;
 
 public class dashboard_used  extends TestInit {
 
@@ -31,7 +26,7 @@ public class dashboard_used  extends TestInit {
 		login("zuijin7@shimo.im","123123" );
 		click(dashboard_2);
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
-		action.moveToElement(dashboard_update_name).perform();
+		moveToElement(dashboard_update_name);
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).click();
 		Thread.sleep(1000);
 	    click(favorites);
@@ -42,7 +37,7 @@ public class dashboard_used  extends TestInit {
 		click(dashboard);
 	    click(dashboard_2);
 	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
-		action.moveToElement(dashboard_update_name).perform();
+		moveToElement(dashboard_update_name);
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).click();
 		Thread.sleep(1000);
 		click(favorites);

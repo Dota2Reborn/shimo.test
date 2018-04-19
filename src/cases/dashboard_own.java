@@ -3,12 +3,7 @@ package cases;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -27,11 +22,9 @@ public class dashboard_own extends TestInit {
 		login("own2@shimo.im", "123123");
 		click(dashboard_3);
 
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
-		action.moveToElement(dashboard_update_name).perform();
+		moveToElement(dashboard_update_name);
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
 				.click();// hover收藏
-		Thread.sleep(600);
 		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String text = driver.findElement(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]")).getText();
@@ -39,11 +32,9 @@ public class dashboard_own extends TestInit {
 
 		click(dashboard);
 		click(dashboard_3);
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
-		action.moveToElement(dashboard_update_time).perform();
+		moveToElement(dashboard_update_time);
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
 				.click();
-		Thread.sleep(1000);
 		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
 		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
@@ -131,9 +122,7 @@ public class dashboard_own extends TestInit {
 		click(b_addCollaborator_1_add);
 		// 获取当前时间
 		Boolean a = false;
-		Date date = new Date();
-		DateFormat format = new SimpleDateFormat("HHmm");
-		String time = format.format(date);
+		String time = getDate();
 		int dat1 = Integer.parseInt(time);
 		click(Shut_down_sm_modal_close_x);
 		logout();

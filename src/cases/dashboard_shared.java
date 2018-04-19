@@ -49,7 +49,7 @@ public class dashboard_shared extends TestInit {
 	    String text1 = getText(dashboard_update_time);
 	    assertEquals(text1, "2人共享 · 刚刚 共享 共享");
 	    WebElement card = driver.findElement(By.xpath("//div[@class='category-card-container']"));
-		action.moveToElement(card).perform();
+		moveToElement(card);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
 		boolean d = driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).isDisplayed();
 		assertEquals(d, true);
@@ -75,8 +75,7 @@ public class dashboard_shared extends TestInit {
 	public void shared2() throws InterruptedException{
 		login("gx4@shimo.im", "123123");
 	    click(dashboard_4);
-	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_share_file));
-		action.moveToElement(dashboard_share_file).perform();
+		moveToElement(dashboard_share_file);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")));
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
 		click(favorites);
@@ -87,10 +86,8 @@ public class dashboard_shared extends TestInit {
 		
 		click(dashboard);
 	    click(dashboard_4);
-	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_share_file));
-		action.moveToElement(dashboard_share_file).perform();
+		moveToElement(dashboard_share_file);
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
-		Thread.sleep(300);
 		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
 		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();

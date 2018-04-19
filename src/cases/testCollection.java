@@ -30,7 +30,7 @@ public class testCollection extends TestInit {
 		Sort();
 		String name=getText(desktop1_1);
 		//contextClick(desktop1_1);
-		action.moveToElement(desktop1_1).perform();
+		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
@@ -56,7 +56,7 @@ public class testCollection extends TestInit {
 		Sort();
 		String name=getText(desktop1_1);
 		//contextClick(desktop1_1);
-		action.moveToElement(desktop1_1).perform();
+		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);

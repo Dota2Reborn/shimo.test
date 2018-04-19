@@ -2,11 +2,7 @@ package cases;
 
 import static org.testng.Assert.assertEquals;
 
-
-
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -36,7 +32,7 @@ public class dashboard_update  extends TestInit{
 	    
 	    String text1 = getText(dashboard_update_time);
 	    assertEquals(text1, "刚刚 我 更新");
-		action.moveToElement(dashboard_update_time).perform();
+		moveToElement(dashboard_update_time);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
 		boolean d = driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).isDisplayed();
 		assertEquals(d, true);
