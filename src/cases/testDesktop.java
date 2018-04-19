@@ -99,9 +99,9 @@ public class testDesktop extends TestInit {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		String time = format.format(date);
 
-		desktop_newFolder_name.sendKeys(time);
+		sendKeys(desktop_newFolder_name,time);
 		click(desktop_newFolder_name_ok);
-		click(desktop);
+		click(folder_backToDesktop);
 		contextClick(desktop1_1);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
@@ -265,7 +265,7 @@ public class testDesktop extends TestInit {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		String time = format.format(date);
 
-		desktop_newFolder_name.sendKeys(time);
+		sendKeys(desktop_newFolder_name,time);
 		click(desktop_newFolder_name_ok);
 
 		driver.navigate().refresh();
@@ -388,7 +388,7 @@ public class testDesktop extends TestInit {
 		click(desktop);
 		click(desktop_new);
 		click(desktop_newFolder);
-		desktop_newFolder_name.sendKeys("FFFFF");
+		sendKeys(desktop_newFolder_name,"FFFFF");
 		click(desktop_newFolder_name_ok);
 		// wait.until(ExpectedConditions.elementToBeClickable(By.className("settings")));
 		click(folder_backToDesktop);
@@ -401,7 +401,7 @@ public class testDesktop extends TestInit {
 		click(desktop1_1_folder);
 		contextClick(desktop1_1);
 		click(menu_rename);
-		desktop_newFolder_name.sendKeys("删除文件夹");
+		sendKeys(desktop_newFolder_name,"删除文件夹");
 		click(desktop_newFolder_name_ok);
 		driver.navigate().refresh();
 		String msg = getText(desktop1_1);
@@ -594,7 +594,7 @@ public class testDesktop extends TestInit {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		String time = format.format(date);
 
-		desktop_newFolder_name.sendKeys(time);
+		sendKeys(desktop_newFolder_name,time);
 		click(desktop_newFolder_name_ok);
 
 		driver.navigate().refresh();

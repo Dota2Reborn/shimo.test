@@ -27,7 +27,7 @@ public class testDashboard extends TestInit {
 		click(desktop);
 		click(desktop1_1);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
-		doc_edit.sendKeys("la");
+		sendKeys(doc_edit,"la");
 		click(b_back);
 		logout();
 		login("autoTest05@shimo.im", "123123");
@@ -73,7 +73,7 @@ public class testDashboard extends TestInit {
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		String time = format.format(date);
-		driver.findElement(By.id("ql-title-input")).sendKeys(time);
+		sendKeys(doc_title_input,time);
 		click(b_back);
 		click(dashboard_3);
 		String msg = getText(dashboard_update_name);
@@ -100,7 +100,7 @@ public class testDashboard extends TestInit {
 		click(menu_cooperation);
 		click(button_addCollaborator);
 
-		input_addCollaborator.sendKeys("autoTest07@shimo.im");
+		sendKeys(input_addCollaborator,"autoTest07@shimo.im");
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);

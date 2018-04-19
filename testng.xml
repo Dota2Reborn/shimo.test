@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="shimo" parallel="none">
+	<listeners>  
+        <listener class-name="testNG.RetryListener"></listener> 
+        <listener class-name="testNG.TestListener"></listener>  
+		</listeners>   
+
 	<test name="Desktop">
-		<packages>
+		 <packages>
 			<package name="cases" />
-		</packages>
+		</packages> 
 		<classes>
-            <!--<class name="cases.testSearch" /> -->
+            <!-- <class name="cases.testAddCollaborator" />  -->
            <!-- <class name="cases.testNotice" /> -->
            <!-- <class name="cases.testDesktop" /> -->
             <!--<class name="cases.testDashboard" /> -->
         </classes>
+        
+        
 	</test> <!-- Test -->
+	
 </suite> <!-- Suite -->

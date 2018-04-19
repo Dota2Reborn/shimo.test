@@ -324,6 +324,17 @@ public class TestInit {
 			Thread.sleep(150);
 			Boolean n = doesWebElementExist(By.className("sm-toast"));
 			if (n.equals(true)) {
+//				List<WebElement> elements = driver.findElements(By.className("sm-toast-notice"));
+//				int number = elements.size();
+//				if (number > 1) {
+//					String msg = driver.findElement(By.xpath("div[@class='sm-toast-notice'][1]")).getText();
+//					wait.until(ExpectedConditions.textToBe(By.className("sm-toast"), msg));
+//					System.out.println("提示信息--------->" + msg);
+//				} else {
+//					String msg = driver.findElement(By.className("sm-toast")).getText();
+//					wait.until(ExpectedConditions.textToBe(By.className("sm-toast"), msg));
+//					System.out.println("提示信息--------->" + msg);
+//				}
 				String msg = driver.findElement(By.className("sm-toast")).getText();
 				wait.until(ExpectedConditions.textToBe(By.className("sm-toast"), msg));
 				System.out.println("提示信息--------->" + msg);
@@ -394,7 +405,6 @@ public class TestInit {
 	public void sendKeys(WebElement element, String msg) {
 		wait.until(ExpectedConditions.visibilityOf(element));
 		element.sendKeys(msg);
-
 	}
 
 	/**
@@ -513,6 +523,8 @@ public class TestInit {
 	// doc
 	@SearchWith(pageName = "doc", elementName = "b_back", noteName = "后退")
 	public WebElement b_back;
+	@SearchWith(pageName = "doc", elementName = "doc_title_input", noteName = "文档标题编辑")
+	public WebElement doc_title_input;
 	@SearchWith(pageName = "doc", elementName = "doc_saveStatus", noteName = "文档/表格提示同步完成状态")
 	public WebElement doc_saveStatus;
 	@SearchWith(pageName = "doc", elementName = "quick_access_point", noteName = "收索&快速打开")

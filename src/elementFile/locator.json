@@ -583,6 +583,12 @@
 				"note": "收索&快速打开"
 			},
 			{
+				"elementName": "doc_title_input",
+				"locateUsing": "id",
+				"locator": "ql-title-input",
+				"note": "文档标题编辑"
+			},
+			{
 				"elementName": "Back_to_Desktop",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='qa-ancestor']//div[1]//a[1]",

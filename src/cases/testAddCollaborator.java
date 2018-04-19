@@ -3,6 +3,7 @@ package cases;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertNotEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -56,7 +57,6 @@ public class testAddCollaborator extends TestInit {
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
-		
 
 //		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		click(b_addCollaborator_2_list);
@@ -340,5 +340,5 @@ public class testAddCollaborator extends TestInit {
 
 		assertEquals(t, "true");
 	}
-
+	
 }
