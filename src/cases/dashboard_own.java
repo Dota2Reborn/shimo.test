@@ -124,7 +124,7 @@ public class dashboard_own extends TestInit {
 		Boolean a = false;
 		String time = getDate();
 		int dat1 = Integer.parseInt(time);
-		click(Shut_down_sm_modal_close_x);
+//		click(Shut_down_sm_modal_close_x);
 		logout();
 		login("own7@shimo.im", "123123");
 		String n = getText(dashboard_shareTime_1);
