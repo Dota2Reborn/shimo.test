@@ -225,7 +225,7 @@ public class TestInit {
 	 */
 	public String getDate() {
 		Date date = new Date();
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+		DateFormat format = new SimpleDateFormat("HHmm");
 		String time = format.format(date);
 		return time;
 	}

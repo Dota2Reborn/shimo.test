@@ -100,7 +100,7 @@ public class dashboard_own extends TestInit {
 		assertEquals(text, "无标题");
 
 		Thread.sleep(300);
-		contextClick(dashboard_update_name);
+		contextClick(dashboard_share_file);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
 
