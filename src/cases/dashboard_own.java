@@ -90,18 +90,17 @@ public class dashboard_own extends TestInit {
 		click(desktop_newDoc);
 		click(b_back);
 		click(dashboard_3);
-		click(menu_Point_Menu);
+		contextClick(dashboard_update_name);
 		click(menu_cooperation);
 		click(button_addCollaborator);
 		click(addCollaborator_1_add);
 		click(b_addCollaborator_ok);
 
-//		Thread.sleep(1000);
 		click(b_addCollaborator_1_list);
 		click(list_addCollaborator_1);
 		click(list_addCollaborator_changeOwner_1);
 		click(b_addCollaborator_confirm);
-//		Thread.sleep(500);
+
 		logout();
 
 		login("own5@shimo.im", "123123");
@@ -110,7 +109,7 @@ public class dashboard_own extends TestInit {
 		assertEquals(text, "无标题");
 
 		Thread.sleep(300);
-		click(menu_Point_Menu);
+		contextClick(dashboard_update_name);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
 

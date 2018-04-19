@@ -42,7 +42,7 @@ public class dashboard_update  extends TestInit{
 		assertEquals(d, true);
 		boolean e = driver.findElement(By.xpath("//div[@class='file-options-icon']")).isDisplayed();
 		assertEquals(e, true);
-		//勿扰没写呢
+		
 		
 	}
 	/**
@@ -219,7 +219,7 @@ public class dashboard_update  extends TestInit{
 		
 		logout();
 		login("gengxin9@shimo.im", "123123");
-		click(menu_Point_Menu);
+		contextClick(dashboard_update_name);
 		click(menu_cooperation);
 		click(button_addCollaborator);
 		click(addCollaborator_1_add);
@@ -240,7 +240,7 @@ public class dashboard_update  extends TestInit{
 	    click(doc_edit);
 	    doc_edit.sendKeys("1");
 	    click(b_back);
-	    click(menu_Point_Menu);
+	    contextClick(dashboard_update_name);
 	    click(menu_delete);
 	    click(desktop_newFolder_name_ok);
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
@@ -274,7 +274,7 @@ public class dashboard_update  extends TestInit{
 	    logout();
 	    
 	    login("gengxin12@shimo.im", "123123");
-	    click(menu_Point_Menu);
+	    contextClick(dashboard_update_name);;
 	    click(menu_cooperation);
 	    click(b_addCollaborator_2_list);
 	    click(list_addCollaborator_4);
@@ -289,7 +289,7 @@ public class dashboard_update  extends TestInit{
 		logout();
 		login("gengxin12@shimo.im", "123123");
 		click(dashboard_3);
-		click(menu_Point_Menu);
+		contextClick(dashboard_update_name);;
 		click(menu_cooperation);
 		click(button_addCollaborator);
 		click(addCollaborator_1_add);
@@ -322,23 +322,18 @@ public class dashboard_update  extends TestInit{
 	    click(menu_Recovery);
 	    click(dashboard);
 	    
-	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
-		String text1 = dashboard_update_time.getText();
+	    String text1 = getText(dashboard_update_time);
 	    assertEquals(text1, "刚刚 我 更新");
 	    
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-options-icon']")));
-	    driver.findElement(By.xpath("//div[@class='file-options-icon']")).click();
+	    contextClick(dashboard_update_name);
 	    click(menu_delete);
-	    WebElement icon1 = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]"));
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-	    icon1.click();
+	    click(desktop_newFolder_name_ok);
 	    Thread.sleep(1000);
 	    click(trash);
 	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-icon doc']")));
 	    driver.findElement(By.xpath("//div[@class='file-icon doc']")).click();
 	    click(menu_Completely_removed);
-	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button[1]")));
-	    driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button[1]")).click();
+	    click(desktop_newFolder_name_ok);
 	    
 		
 		

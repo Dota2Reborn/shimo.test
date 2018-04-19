@@ -18,26 +18,7 @@ import cases.testPermission;
 
 public class dashboard_used  extends TestInit {
 
-	/**
-	 *最近使用
-	 * 卡片样式验证
-	 * @author 陈清杰
-	 * @Time 2018-03-06
-	 * 账号状态：没有文件
-	 */
-	@Test
-	public void used1() throws InterruptedException{
-		
-		login("zuijin@shimo.im", "123123");
-		click(desktop_new);
-	    click(desktop_newDoc);
-	    click(b_back);
-	    click(dashboard_2);
-	    wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
-		String text = dashboard_update_time.getText();
-		assertEquals(text, "刚刚 我 打开");
-
-	    }
+	
 	/**
 	 *最近使用
 	 * hover卡片收藏验证

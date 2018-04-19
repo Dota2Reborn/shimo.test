@@ -27,7 +27,7 @@ public class dashboard_shared extends TestInit {
 	public void shared1() throws InterruptedException{
 		login("gx1@shimo.im", "123123");
         click(dashboard_3);
-   	    click(menu_Point_Menu);
+   	    contextClick(dashboard_update_name);
 		Thread.sleep(1000);
 		click(menu_cooperation);
 		click(button_addCollaborator);
@@ -56,7 +56,7 @@ public class dashboard_shared extends TestInit {
 		boolean e = driver.findElement(By.xpath("//div[@class='file-options-icon']")).isDisplayed();
 		assertEquals(e, true);
 		Thread.sleep(200);
-		click(menu_Point_Menu);
+		contextClick(dashboard_update_name);;
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
 		
