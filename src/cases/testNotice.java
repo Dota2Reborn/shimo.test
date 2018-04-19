@@ -35,7 +35,7 @@ public class testNotice extends TestInit {
 		click(b_back);
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		action.moveToElement(dashboard_notice).perform();
+		moveToElement(dashboard_notice);
 		click(dashboard_notice_list_1);
 
 		switchToPage(1);
@@ -63,7 +63,7 @@ public class testNotice extends TestInit {
 		click(b_back);
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		action.moveToElement(dashboard_notice).perform();
+		moveToElement(dashboard_notice);
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
 
 		String msg1 = getText(dashboard_notice_list_unread);
@@ -97,7 +97,7 @@ public class testNotice extends TestInit {
 
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		action.moveToElement(dashboard_notice).perform();
+		moveToElement(dashboard_notice);
 		click(dashboard_notice_list_1);
 
 		switchToPage(1);
@@ -135,7 +135,7 @@ public class testNotice extends TestInit {
 
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		action.moveToElement(dashboard_notice).perform();
+		moveToElement(dashboard_notice);
 		click(dashboard_notice_list_1);
 		switchToPage(1);
 		String result = driver.findElement(By.xpath("//div[@class='info-word']//p")).getText();
@@ -167,7 +167,7 @@ public class testNotice extends TestInit {
 		click(b_back);
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		action.moveToElement(dashboard_notice).perform();
+		moveToElement(dashboard_notice);
 		click(dashboard_notice_list_1);
 
 		switchToPage(1);
@@ -198,7 +198,7 @@ public class testNotice extends TestInit {
 		click(b_back);
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		action.moveToElement(dashboard_notice).perform();
+		moveToElement(dashboard_notice);
 		click(dashboard_notice_list_unread);
 
 		String result = dashboard_notice_list_unread.getAttribute("data-test");

@@ -19,7 +19,7 @@ public class testSearch extends TestInit {
 	@Test(enabled = true)
 	public void searchResult() throws InterruptedException {
 		login("liuchen@shimo.im", "123123");
-		action.moveToElement(dashboard_search_button).perform();
+		moveToElement(dashboard_search_button);
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_search_input));
 		dashboard_search_input.sendKeys("搜索测试");
 		click(dashboard_search_result_1);
@@ -42,11 +42,11 @@ public class testSearch extends TestInit {
 	@Test(enabled = true)
 	public void search_move() throws InterruptedException {
 		login("liuchen@shimo.im", "123123");
-		action.moveToElement(dashboard_search_button).perform();
+		moveToElement(dashboard_search_button);
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_search_input));
 		dashboard_search_input.sendKeys("搜索测试");
 
-		action.moveToElement(desktop).perform();
+		moveToElement(desktop);
 		Boolean result = dashboard_search_input.isDisplayed();
 		assertTrue(result);
 	}
@@ -61,7 +61,7 @@ public class testSearch extends TestInit {
 	@Test(enabled = true)
 	public void search_moveAndClick() throws InterruptedException {
 		login("liuchen@shimo.im", "123123");
-		action.moveToElement(dashboard_search_button).perform();
+		moveToElement(dashboard_search_button);
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_search_input));
 		dashboard_search_input.sendKeys("搜索测试");
 

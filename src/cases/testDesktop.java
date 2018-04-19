@@ -95,9 +95,7 @@ public class testDesktop extends TestInit {
 		click(desktop_new);
 		click(desktop_newFolder);
 
-		Date date = new Date();
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
-		String time = format.format(date);
+		String time = getDate();
 
 		sendKeys(desktop_newFolder_name,time);
 		click(desktop_newFolder_name_ok);
@@ -261,9 +259,7 @@ public class testDesktop extends TestInit {
 		contextClick(desktop1_1);
 		click(menu_rename);
 
-		Date date = new Date();
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
-		String time = format.format(date);
+		String time = getDate();
 
 		sendKeys(desktop_newFolder_name,time);
 		click(desktop_newFolder_name_ok);
@@ -511,7 +507,7 @@ public class testDesktop extends TestInit {
 		login("autoTest@shimo.im", "123123");
 		click(desktop);
 
-		action.moveToElement(desktop1_1).perform();
+		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_newPage);
 
@@ -533,7 +529,7 @@ public class testDesktop extends TestInit {
 		login("autoTest@shimo.im", "123123");
 		click(desktop);
 
-		action.moveToElement(desktop1_1).perform();
+		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_shortcut);
 
@@ -561,7 +557,7 @@ public class testDesktop extends TestInit {
 		login("autoTest@shimo.im", "123123");
 		click(desktop);
 		String doc_name = getText(desktop1_1);
-		action.moveToElement(desktop1_1).perform();
+		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_collection);
 
@@ -586,14 +582,11 @@ public class testDesktop extends TestInit {
 		click(desktop);
 		click(desktop1_1_folder);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		action.moveToElement(desktop1_1).perform();
+		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_rename);
 
-		Date date = new Date();
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
-		String time = format.format(date);
-
+		String time = getDate();
 		sendKeys(desktop_newFolder_name,time);
 		click(desktop_newFolder_name_ok);
 
@@ -615,14 +608,14 @@ public class testDesktop extends TestInit {
 		login("autoTest@shimo.im", "123123");
 		click(desktop);
 		String msg = getText(desktop1_1);
-		action.moveToElement(desktop1_1).perform();
+		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_creatCopy);
 
 		driver.navigate().refresh();
 		String msg1 = getText(desktop1_1);
 
-		action.moveToElement(desktop1_1).perform();
+		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);

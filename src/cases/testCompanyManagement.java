@@ -39,7 +39,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("amei@qq.com", "123123");
 
-		action.moveToElement(desktop_user_icon).perform();
+		moveToElement(desktop_user_icon);
 		click(desktop_user_icon_companyManagement);
 		click(addMember);
 
@@ -69,7 +69,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("amei@qq.com", "123123");
 
-		action.moveToElement(desktop_user_icon).perform();
+		moveToElement(desktop_user_icon);
 		click(desktop_user_icon_companyManagement);
 		click(addMember);
 		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
@@ -98,7 +98,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("pipi@qq.com", "123123");
 
-		action.moveToElement(desktop_user_icon).perform();
+		moveToElement(desktop_user_icon);
 		click(desktop_user_icon_companyManagement);
 		click(addMember);
 		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
@@ -116,9 +116,7 @@ public class testCompanyManagement extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void inviteMember_changeCompanyName() throws InterruptedException {
-		Date date = new Date();
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
-		String time = format.format(date);
+		String time = getDate();
 
 		login("panpan@qq.com", "123123");
 		click(company_Management);
@@ -157,7 +155,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("pipi@qq.com", "123123");
 
-		action.moveToElement(desktop_user_icon).perform();
+		moveToElement(desktop_user_icon);
 		click(desktop_user_icon_companyManagement);
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 
@@ -205,7 +203,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("pipi@qq.com", "123123");
 
-		action.moveToElement(desktop_user_icon).perform();
+		moveToElement(desktop_user_icon);
 		click(desktop_user_icon_companyManagement);
 		wait.until(ExpectedConditions.elementToBeClickable(addMember));
 
@@ -593,7 +591,7 @@ public class testCompanyManagement extends TestInit {
 		logout();
 		login("testQiYe@qq.com", "123123");
 
-		action.moveToElement(dashboard_notice).perform();
+		moveToElement(dashboard_notice);
 		click(dashboard_notice_list_1_button);
 		click(company_setting);
 

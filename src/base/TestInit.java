@@ -2,7 +2,10 @@ package base;
 
 import static org.testng.Assert.assertTrue;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -212,6 +215,20 @@ public class TestInit {
 		System.out.println(classname + "[" + userID + "]");
 
 	}
+	
+	/**
+	 * 获取当前时间
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-04-19
+	 *
+	 */
+	public String getDate() {
+		Date date = new Date();
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+		String time = format.format(date);
+		return time;
+	}
 
 	/**
 	 * 判断元素是否存在
@@ -247,7 +264,7 @@ public class TestInit {
 	}
 
 	/**
-	 * 右键点击
+	 * 右键点击moveToElement
 	 * 
 	 * @author 刘晨
 	 * @Time 2018-03-23
@@ -263,6 +280,26 @@ public class TestInit {
 		}
 
 	}
+	
+	/**
+	 * 鼠标移动到元素
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-04-19
+	 *
+	 */
+	public void moveToElement(WebElement element) {
+		try {
+			wait.until(ExpectedConditions.visibilityOf(element));
+			action.moveToElement(element).perform();
+		} catch (NoSuchElementException e) {
+			// TODO
+			System.out.println(element + "is missing");
+		}
+
+	}
+	
+	
 
 	/**
 	 * 左键点击
@@ -321,24 +358,13 @@ public class TestInit {
 			System.out.println("javascript Error:" + e.getMessage());
 			assertTrue(false);
 		} finally {
-			Thread.sleep(150);
-			Boolean n = doesWebElementExist(By.className("sm-toast"));
-			if (n.equals(true)) {
-//				List<WebElement> elements = driver.findElements(By.className("sm-toast-notice"));
-//				int number = elements.size();
-//				if (number > 1) {
-//					String msg = driver.findElement(By.xpath("div[@class='sm-toast-notice'][1]")).getText();
-//					wait.until(ExpectedConditions.textToBe(By.className("sm-toast"), msg));
-//					System.out.println("提示信息--------->" + msg);
-//				} else {
-//					String msg = driver.findElement(By.className("sm-toast")).getText();
-//					wait.until(ExpectedConditions.textToBe(By.className("sm-toast"), msg));
-//					System.out.println("提示信息--------->" + msg);
-//				}
-				String msg = driver.findElement(By.className("sm-toast")).getText();
-				wait.until(ExpectedConditions.textToBe(By.className("sm-toast"), msg));
-				System.out.println("提示信息--------->" + msg);
-			}
+			Thread.sleep(100);
+//			Boolean n = doesWebElementExist(By.className("sm-toast"));
+//			if (n.equals(true)) {
+//				String msg = driver.findElement(By.className("sm-toast")).getText();
+//				wait.until(ExpectedConditions.textMatches(locator, pattern)textToBe(By.className("sm-toast"), msg));
+//				System.out.println("提示信息--------->" + msg);
+//			}
 			checkPageIsReady();
 		}
 	}

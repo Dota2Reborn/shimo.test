@@ -70,9 +70,7 @@ public class testDashboard extends TestInit {
 
 		click(desktop_new);
 		click(desktop_newDoc);
-		Date date = new Date();
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
-		String time = format.format(date);
+		String time = getDate();
 		sendKeys(doc_title_input,time);
 		click(b_back);
 		click(dashboard_3);
@@ -109,7 +107,7 @@ public class testDashboard extends TestInit {
 		login("autoTest07@shimo.im", "123123");
 
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_shareTime_1));
-		action.moveToElement(dashboard_shareTime_1).perform();
+		moveToElement(dashboard_shareTime_1);
 		click(dashboard_shareTime_unread);
 		click(dashboard_4);
 		contextClick(dashboard_share_file);
@@ -161,7 +159,7 @@ public class testDashboard extends TestInit {
 		click(menu_moveToFolder);
 		String fileName = getText(desktop1_1);
 
-		action.moveToElement(desktop1_1).perform();
+		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
