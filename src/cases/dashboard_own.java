@@ -153,7 +153,9 @@ public class dashboard_own extends TestInit {
 				a = true;
 			}
 		}
-		contextClick(New_Share_1);
+		//contextClick(New_Share_1);
+		action.moveToElement(desktop1_1).perform();
+		click(desktop_setting);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
 		assertTrue(a);
