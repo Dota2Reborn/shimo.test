@@ -1,4 +1,4 @@
-package cases;
+package cases.docSheet;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;

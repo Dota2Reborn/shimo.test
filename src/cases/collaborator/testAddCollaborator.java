@@ -1,4 +1,4 @@
-package cases;
+package cases.collaborator;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;

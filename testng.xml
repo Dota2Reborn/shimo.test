@@ -8,7 +8,7 @@
 
 	<test name="Desktop">
 		 <packages>
-			<package name="cases" />
+			<package name="cases.*" />
 		</packages> 
 		<classes>
             <!-- <class name="cases.testAddCollaborator" />  -->

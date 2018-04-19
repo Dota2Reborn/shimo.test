@@ -1,4 +1,4 @@
-package cases;
+package cases.desktop;
 
 
 import static org.testng.Assert.assertFalse;

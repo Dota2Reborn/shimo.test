@@ -1,4 +1,4 @@
-package cases;
+package cases.loginRegistered;
 
 import static org.testng.Assert.assertEquals;
 

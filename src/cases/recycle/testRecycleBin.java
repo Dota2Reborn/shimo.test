@@ -1,4 +1,4 @@
-package cases;
+package cases.recycle;
 
 import static org.testng.Assert.assertEquals;
 
