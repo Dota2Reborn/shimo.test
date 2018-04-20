@@ -1,6 +1,7 @@
 package cases.dashboard;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -210,14 +211,27 @@ public class dashboard_update extends TestInit {
 		login("gengxin11@shimo.im", "123123");
 		click(desktop_new);
 		click(desktop_newDoc);
+		String time = getDate();
+		sendKeys(doc_title_input,time);
 		sendKeys(doc_edit,"la");
 		click(b_back);
-		contextClick(dashboard_update_name);
+		contextClick(dashboard_update_file);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
-		assertEquals(text2, "没有文件");
+		
+		Boolean f = doesWebElementExist(dashboard_update_file);
+		Boolean result;
+		if(f.equals(true)) {
+			result = getText(dashboard_update_file).equals(time);
+		}else {
+			result = false;
+		}
+		assertFalse(result);
+		
+//		
+//		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
+//		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+//		assertEquals(text2, "没有文件");
 
 	}
 
@@ -255,7 +269,6 @@ public class dashboard_update extends TestInit {
 		login("gengxin12@shimo.im", "123123");
 		click(dashboard_3);
 		contextClick(dashboard_update_name);
-		;
 		click(menu_cooperation);
 		click(button_addCollaborator);
 		click(addCollaborator_1_add);
