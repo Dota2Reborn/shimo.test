@@ -76,8 +76,7 @@ public class hovertest extends TestInit {
 		login("autoTesthover@shimo.im", "123123");
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
 		moveToElement(img);
-		// action.clickAndHold(img).perform();
-		// Thread.sleep(1000);
+		Thread.sleep(500);
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@target='_blank']")));
 
@@ -85,9 +84,6 @@ public class hovertest extends TestInit {
 
 		switchToPage(1);
 
-		// Thread.sleep(1000);
-		// String aa = "//div[@class='glyph glyph-title']";
-		// String result = driver.findElement(By.xpath(aa)).getText();
 		String url = driver.getCurrentUrl();
 		assertEquals(url, "https://release.shimodev.com/pricing");
 
@@ -313,10 +309,12 @@ public class hovertest extends TestInit {
 
 		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
 		moveToElement(img);
-		// Thread.sleep(1000);
+		Thread.sleep(500);
 
-		String aa = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span";
-		String result = driver.findElement(By.xpath(aa)).getText();
+		WebElement aa = driver
+				.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span"));
+
+		String result = getText(aa);
 		assertEquals(result, "购买企业版");
 
 		String bb = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]";
