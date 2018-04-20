@@ -31,7 +31,7 @@ import org.testng.annotations.BeforeMethod;
 
 import elementFile.elementFile;
 
-public class TestInit extends elementFile{
+public class TestInit extends elementFile {
 	public WebDriver driver = null;
 	public WebDriverWait wait = null;
 	public Actions action = null;
@@ -71,6 +71,7 @@ public class TestInit extends elementFile{
 	public void lastMethod() {
 		System.out.println("--------------------------------------------");
 		// 关闭浏览器
+		driver.close();
 		driver.quit();
 	}
 
@@ -215,7 +216,7 @@ public class TestInit extends elementFile{
 		System.out.println(classname + "[" + userID + "]");
 
 	}
-	
+
 	/**
 	 * 获取当前时间
 	 * 
@@ -280,7 +281,7 @@ public class TestInit extends elementFile{
 		}
 
 	}
-	
+
 	/**
 	 * 鼠标移动到元素
 	 * 
@@ -298,8 +299,6 @@ public class TestInit extends elementFile{
 		}
 
 	}
-	
-	
 
 	/**
 	 * 左键点击
@@ -359,12 +358,13 @@ public class TestInit extends elementFile{
 			assertTrue(false);
 		} finally {
 			Thread.sleep(100);
-//			Boolean n = doesWebElementExist(By.className("sm-toast"));
-//			if (n.equals(true)) {
-//				String msg = driver.findElement(By.className("sm-toast")).getText();
-//				wait.until(ExpectedConditions.textMatches(locator, pattern)textToBe(By.className("sm-toast"), msg));
-//				System.out.println("提示信息--------->" + msg);
-//			}
+			// Boolean n = doesWebElementExist(By.className("sm-toast"));
+			// if (n.equals(true)) {
+			// String msg = driver.findElement(By.className("sm-toast")).getText();
+			// wait.until(ExpectedConditions.textMatches(locator,
+			// pattern)textToBe(By.className("sm-toast"), msg));
+			// System.out.println("提示信息--------->" + msg);
+			// }
 			checkPageIsReady();
 		}
 	}
@@ -464,5 +464,5 @@ public class TestInit extends elementFile{
 	public void waitFor() {
 
 	}
-	
+
 }

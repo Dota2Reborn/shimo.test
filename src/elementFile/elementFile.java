@@ -3,6 +3,12 @@ package elementFile;
 import org.openqa.selenium.WebElement;
 
 public class elementFile {
+	/**
+	 * Login
+	 * homePage
+	 * 登录页面
+	 *
+	 */
 	@SearchWith(pageName = "homePage", elementName = "userEmail", noteName = "用户名")
 	public WebElement userEmail;
 	@SearchWith(pageName = "homePage", elementName = "userPwd", noteName = "密码")
@@ -10,7 +16,12 @@ public class elementFile {
 	@SearchWith(pageName = "homePage", elementName = "login_submit", noteName = "登录按钮")
 	public WebElement login_submit;
 
-	// desktop
+	/**
+	 * 
+	 * desktop
+	 * 我的桌面
+	 *
+	 */
 	@SearchWith(pageName = "desktop", elementName = "desktop_new", noteName = "新建文件按钮")
 	public WebElement desktop_new;
 	@SearchWith(pageName = "desktop", elementName = "desktop_show_type", noteName = "列表平铺模式切换")
@@ -84,7 +95,11 @@ public class elementFile {
 	@SearchWith(pageName = "desktop", elementName = "folder_backToDesktop", noteName = "文件夹中，点击文件路径返回我的桌面")
 	public WebElement folder_backToDesktop;
 
-	// doc
+	/**
+	 * doc
+	 * 文档表格相关
+	 *
+	 */
 	@SearchWith(pageName = "doc", elementName = "b_back", noteName = "后退")
 	public WebElement b_back;
 	@SearchWith(pageName = "doc", elementName = "doc_title_input", noteName = "文档标题编辑")
@@ -128,7 +143,11 @@ public class elementFile {
 	@SearchWith(pageName = "doc", elementName = "End_Discussion_OK", noteName = "确定结束讨论")
 	public WebElement End_Discussion_OK;
 
-	// dashboard
+	/**
+	 * dashboard
+	 * 工作台
+	 *
+	 */
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_time", noteName = "工作台-最近更新-更新时间")
 	public WebElement dashboard_update_time;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_file", noteName = "工作台-共享给我的-文件")
@@ -176,7 +195,11 @@ public class elementFile {
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_allRead", noteName = "桌面通知铃铛-标记全部已读")
 	public WebElement dashboard_notice_list_allRead;
 
-	// addCollaborator
+	/**
+	 * addCollaborator
+	 * 协作者相关
+	 *
+	 */
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_close", noteName = "关闭添加协作者弹框")
 	public WebElement button_addCollaborator_close;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_list", noteName = "协作者列表第一个协作者权限下拉框")
@@ -227,7 +250,11 @@ public class elementFile {
 	@SearchWith(pageName = "addCollaborator", elementName = "Shut_down_sm_modal_close_x", noteName = "关闭添加协作窗口")
 	public WebElement Shut_down_sm_modal_close_x;
 
-	// 企业管理
+	/**
+	 * companyManagement
+	 * 企业管理相关
+	 *
+	 */
 	@SearchWith(pageName = "companyManagement", elementName = "company_Management", noteName = "桌面-企业管理入口")
 	public WebElement company_Management;
 	@SearchWith(pageName = "companyManagement", elementName = "company_setting", noteName = "企业管理-企业设置")
@@ -294,7 +321,11 @@ public class elementFile {
 	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_companyManagement", noteName = "桌面-右上角头像-我的企业")
 	public WebElement desktop_user_icon_companyManagement;
 
-	// Registered
+	/**
+	 * Registered
+	 * 注册页面相关
+	 *
+	 */
 	@SearchWith(pageName = "Registered", elementName = "userName", noteName = "昵称")
 	public WebElement userName;
 	@SearchWith(pageName = "Registered", elementName = "userEmail", noteName = "登录邮箱")
@@ -304,7 +335,11 @@ public class elementFile {
 	@SearchWith(pageName = "Registered", elementName = "Next", noteName = "下一步")
 	public WebElement Next;
 
-	// 桌面/工作台-菜单
+	/**
+	 * menu
+	 * 桌面工作台菜单
+	 *
+	 */
 	@SearchWith(pageName = "menu", elementName = "menu_newPage", noteName = "新标签页中打开")
 	public WebElement menu_newPage;
 	@SearchWith(pageName = "menu", elementName = "menu_shortcut", noteName = "添加到快捷方式")
@@ -332,7 +367,11 @@ public class elementFile {
 	@SearchWith(pageName = "menu", elementName = "menu_Point_Menu", noteName = "工作台-最近使用-第一个文件点点(仅有一个文件时使用)")
 	public WebElement menu_Point_Menu;
 
-	// 文档表格编辑页点点等-菜单
+	/**
+	 * file_menu
+	 * 文档表格编辑页点点等-菜单
+	 *
+	 */
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_version", noteName = "保存版本")
 	public WebElement file_menu_version;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_shortcut", noteName = "添加快捷方式")
