@@ -37,10 +37,7 @@ public class baseFunc {
 		if (os.startsWith("Windows")) {
 			System.setProperty("webdriver.chrome.driver",
 					"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-		} else {
-
-		}
-
+		} 
 //		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		ChromeOptions capabilities = new ChromeOptions();
 		capabilities.setCapability("marionette", true);

@@ -22,7 +22,6 @@ public class testDashboard extends TestInit {
 		login("autoTest06@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		sendKeys(doc_edit,"la");
 		click(b_back);
 		logout();
