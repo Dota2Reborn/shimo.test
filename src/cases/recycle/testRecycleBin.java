@@ -20,7 +20,6 @@ public class testRecycleBin extends TestInit{
 	@Test(enabled = true)
 	public void New_Document() throws InterruptedException {
 		login("RecycleBin@shimo.im", "123123");
-		
 		desktop.click();
 		Sort();
 		contextClick(desktop1_1);
