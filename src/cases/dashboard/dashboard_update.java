@@ -12,38 +12,7 @@ import base.TestInit;
 
 
 public class dashboard_update extends TestInit {
-	/**
-	 * 最近更新 卡片样式
-	 * 
-	 * @author 陈清杰 @Time2018-03-26 账号状态：有一个文件
-	 */
-	@Test
-	public void update1() throws InterruptedException {
-		login("gengxin1@shimo.im", "123123");
-		click(dashboard_1);
-		click(dashboard_update_time);
-		click(doc_edit);
-		doc_edit.sendKeys("1");
-		click(b_back);
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_time));
-		boolean b = driver.findElement(By.xpath("//div[@class='card-icon']//div")).isDisplayed();// 卡片图标
-		assertEquals(b, true);
-		String text = driver.findElement(By.xpath("//div[@class='card-content-title']//div[1]")).getText();
-		assertEquals(text, "无标题");
 
-		String text1 = getText(dashboard_update_time);
-		assertEquals(text1, "刚刚 我 更新");
-		moveToElement(dashboard_update_time);
-		wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
-		boolean d = driver
-				.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
-				.isDisplayed();
-		assertEquals(d, true);
-		boolean e = driver.findElement(By.xpath("//div[@class='file-options-icon']")).isDisplayed();
-		assertEquals(e, true);
-
-	}
 
 	/**
 	 * 最近更新 点点点
@@ -168,7 +137,7 @@ public class dashboard_update extends TestInit {
 	/**
 	 * 最近更新 自己退出共享，已经生成的卡片从最近更新消失
 	 * 
-	 * @author 陈清杰 @Time2018-03-27 账号状态：gengxin10里面有一个9恭喜的文件
+	 * @author 陈清杰 @Time2018-03-27 账号状态：gengxin10里面有一个9共享的文件
 	 */
 	@Test
 	public void update7() throws InterruptedException {
@@ -284,8 +253,9 @@ public class dashboard_update extends TestInit {
 		login("gengxin14@shimo.im", "123123");
 		click(desktop_new);
 		click(desktop_newDoc);
-		click(doc_edit);
-		doc_edit.sendKeys("1");
+		String time = getDate();
+		sendKeys(doc_title_input, time);
+		sendKeys(doc_edit, "c");
 		Thread.sleep(1000);
 		click(doc_menu);
 		click(doc_menu_delete);
@@ -297,8 +267,20 @@ public class dashboard_update extends TestInit {
 		click(menu_Recovery);
 		click(dashboard);
 
-		String text1 = getText(dashboard_update_time);
-		assertEquals(text1, "刚刚 我 更新");
+		
+	
+		Boolean f = doesWebElementExist(dashboard_update_file);
+		Boolean result;
+		if(f.equals(true)) {
+			result = getText(dashboard_update_file).equals(time);
+		}else {
+			result = false;
+		}
+		
+		
+		boolean text1 = getText(dashboard_update_time).equals("刚刚 我 更新");
+		assertFalse(result);
+		assertTrue(text1);
 
 		contextClick(dashboard_update_name);
 		click(menu_delete);
