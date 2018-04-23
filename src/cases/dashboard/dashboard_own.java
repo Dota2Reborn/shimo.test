@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import base.TestInit;
+import net.bytebuddy.implementation.bytecode.Throw;
 
 public class dashboard_own extends TestInit {
 
@@ -42,6 +43,11 @@ public class dashboard_own extends TestInit {
 		assertEquals(text2, "没有文件");
 
 	}
+	
+	
+	
+	
+	
 
 	/**
 	 * 我创建的 点点点
@@ -101,6 +107,7 @@ public class dashboard_own extends TestInit {
 		login("own5@shimo.im", "123123");
 		click(dashboard_3);
 		Boolean	result = getText(dashboard_share_file).equals(time);
+		Thread.sleep(500);
         contextClick(dashboard_share_file);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
