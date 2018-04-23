@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import base.TestInit;
 
+
 public class dashboard_update extends TestInit {
 	/**
 	 * 最近更新 卡片样式
