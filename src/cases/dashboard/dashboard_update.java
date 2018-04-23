@@ -228,10 +228,6 @@ public class dashboard_update extends TestInit {
 		}
 		assertFalse(result);
 		
-//		
-//		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-//		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
-//		assertEquals(text2, "没有文件");
 
 	}
 

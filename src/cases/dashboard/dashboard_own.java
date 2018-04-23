@@ -1,6 +1,7 @@
 package cases.dashboard;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -79,9 +80,12 @@ public class dashboard_own extends TestInit {
 		login("own4@shimo.im", "123123");
 		click(desktop_new);
 		click(desktop_newDoc);
+		String time = getDate();
+		sendKeys(doc_title_input,time);
+		sendKeys(doc_edit,"la");
 		click(b_back);
 		click(dashboard_3);
-		contextClick(dashboard_update_name);
+		contextClick(dashboard_update_file);
 		click(menu_cooperation);
 		click(button_addCollaborator);
 		click(addCollaborator_1_add);
@@ -96,13 +100,12 @@ public class dashboard_own extends TestInit {
 
 		login("own5@shimo.im", "123123");
 		click(dashboard_3);
-		String text = getText(dashboard_update_name);
-		assertEquals(text, "无标题");
-
-		Thread.sleep(300);
-		contextClick(dashboard_share_file);
+		Boolean	result = getText(dashboard_share_file).equals(time);
+        contextClick(dashboard_share_file);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
+		assertFalse(result);
+		
 
 	}
 
