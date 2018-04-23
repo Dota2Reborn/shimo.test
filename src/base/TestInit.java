@@ -226,7 +226,7 @@ public class TestInit extends elementFile {
 	 */
 	public String getDate() {
 		Date date = new Date();
-		DateFormat format = new SimpleDateFormat("HHmm");
+		DateFormat format = new SimpleDateFormat("yyMMddHHmmss");
 		String time = format.format(date);
 		return time;
 	}
