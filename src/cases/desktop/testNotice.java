@@ -30,7 +30,7 @@ public class testNotice extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
-		doc_edit.sendKeys("@autoTest12");
+		sendKeys(doc_edit, "@autoTest12");
 		click(doc_notice_user);
 		click(b_back);
 		logout();
@@ -58,7 +58,7 @@ public class testNotice extends TestInit {
 		click(desktop1_1);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
-		doc_edit.sendKeys("@autoTest12");
+		sendKeys(doc_edit, "@autoTest12");
 		click(doc_notice_user);
 		click(b_back);
 		logout();
@@ -90,7 +90,7 @@ public class testNotice extends TestInit {
 		click(menu_cooperation);
 		click(button_addCollaborator);
 
-		input_addCollaborator.sendKeys("autoTest12@shimo.im");
+		sendKeys(input_addCollaborator, "autoTest12@shimo.im");
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
@@ -124,7 +124,7 @@ public class testNotice extends TestInit {
 		click(menu_cooperation);
 		click(button_addCollaborator);
 
-		input_addCollaborator.sendKeys("autoTest12@shimo.im");
+		sendKeys(input_addCollaborator, "autoTest12@shimo.im");
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
@@ -156,9 +156,9 @@ public class testNotice extends TestInit {
 		click(desktop1_1);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
-		doc_edit.sendKeys("lala");
+		sendKeys(doc_edit, "lala");
 		click(doc_discuss);
-		doc_discuss_input.sendKeys("yoyoyo");
+		sendKeys(doc_discuss_input, "yoyoyo");
 		action.sendKeys(Keys.ENTER);
 		click(doc_discuss_input_ok);
 		wait.until(
@@ -192,7 +192,7 @@ public class testNotice extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
-		doc_edit.sendKeys("@autoTest12");
+		sendKeys(doc_edit, "@autoTest12");
 		click(doc_notice_user);
 
 		click(b_back);

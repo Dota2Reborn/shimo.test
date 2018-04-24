@@ -33,8 +33,7 @@ import org.testng.annotations.Listeners;
 import elementFile.elementFile;
 import testNG.TestListener;
 
-
-@Listeners({TestListener.class})
+@Listeners({ TestListener.class })
 public class TestInit extends elementFile {
 	public WebDriver driver = null;
 	public WebDriverWait wait = null;
@@ -329,6 +328,9 @@ public class TestInit extends elementFile {
 					|| element.toString().equals(favorites.toString())) {
 				// 点击我的桌面，我的收藏
 				clickDesktop(element);
+			} else if (element.toString().equals(b_addCollaborator_1_add.toString())) {
+				// 点击添加协作者
+				addCollaborator(element);
 			} else {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				element.click();
@@ -371,6 +373,19 @@ public class TestInit extends elementFile {
 			// System.out.println("提示信息--------->" + msg);
 			// }
 			checkPageIsReady();
+		}
+	}
+
+	public void addCollaborator(WebElement element) {
+		String msg = getText(element);
+		if (msg.equals("添加")) {
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			element.click();
+		} else {
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			element.click();
+			wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
+			list_addCollaborator_4.click();
 		}
 	}
 
@@ -458,11 +473,11 @@ public class TestInit extends elementFile {
 			}
 		}
 	}
-	
+
 	public WebDriver getDriver() {
-        return driver;
-    }
-	
+		return driver;
+	}
+
 	/**
 	 * 等待元素加载
 	 * 
