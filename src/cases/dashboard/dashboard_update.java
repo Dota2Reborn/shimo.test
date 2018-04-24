@@ -10,9 +10,7 @@ import org.testng.annotations.Test;
 
 import base.TestInit;
 
-
 public class dashboard_update extends TestInit {
-
 
 	/**
 	 * 最近更新 点点点
@@ -47,7 +45,7 @@ public class dashboard_update extends TestInit {
 		login("gengxin3@shimo.im", "123123");
 		click(dashboard_update_name);
 		click(doc_edit);
-		doc_edit.sendKeys("1");
+		sendKeys(doc_edit, "1");
 		Thread.sleep(1000);
 		click(b_back);
 		String text1 = getText(dashboard_update_time);
@@ -66,7 +64,7 @@ public class dashboard_update extends TestInit {
 		click(desktop);
 		click(desktop1_1);
 		click(doc_edit);
-		doc_edit.sendKeys("1");
+		sendKeys(doc_edit, "1");
 		Thread.sleep(1000);
 		click(b_back);
 		logout();
@@ -88,7 +86,7 @@ public class dashboard_update extends TestInit {
 		click(doc_edit);
 		click(doc_discuss);
 		click(doc_discuss_input);
-		doc_discuss_input.sendKeys("通过");
+		sendKeys(doc_discuss_input, "通过");
 		click(doc_discuss_input_ok);
 		Thread.sleep(1000);
 		click(b_back);
@@ -117,7 +115,7 @@ public class dashboard_update extends TestInit {
 		click(doc_edit);
 		click(doc_discuss);
 		click(doc_discuss_input);
-		doc_discuss_input.sendKeys("通过");
+		sendKeys(doc_discuss_input, "通过");
 		click(doc_discuss_input_ok);
 		Thread.sleep(1000);
 		logout();
@@ -145,7 +143,7 @@ public class dashboard_update extends TestInit {
 		click(dashboard_4);
 		click(dashboard_update_time);
 		click(doc_edit);
-		doc_edit.sendKeys("1");
+		sendKeys(doc_edit, "1");
 		Thread.sleep(1000);
 		click(b_back);
 		click(dashboard_1);
@@ -173,8 +171,7 @@ public class dashboard_update extends TestInit {
 	/**
 	 * 最近更新 自己删除自己文件，已经在最近更新生成卡片的
 	 * 
-	 * @author 陈清杰 
-	 * @Time2018-03-27 账号状态：有一个文件
+	 * @author 陈清杰 @Time2018-03-27 账号状态：有一个文件
 	 */
 	@Test
 	public void update8() throws InterruptedException {
@@ -182,22 +179,21 @@ public class dashboard_update extends TestInit {
 		click(desktop_new);
 		click(desktop_newDoc);
 		String time = getDate();
-		sendKeys(doc_title_input,time);
-		sendKeys(doc_edit,"la");
+		sendKeys(doc_title_input, time);
+		sendKeys(doc_edit, "la");
 		click(b_back);
 		contextClick(dashboard_update_file);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
-		
+
 		Boolean f = doesWebElementExist(dashboard_update_file);
 		Boolean result;
-		if(f.equals(true)) {
+		if (f.equals(true)) {
 			result = getText(dashboard_update_file).equals(time);
-		}else {
+		} else {
 			result = false;
 		}
 		assertFalse(result);
-		
 
 	}
 
@@ -267,17 +263,14 @@ public class dashboard_update extends TestInit {
 		click(menu_Recovery);
 		click(dashboard);
 
-		
-	
 		Boolean f = doesWebElementExist(dashboard_update_file);
 		Boolean result;
-		if(f.equals(true)) {
+		if (f.equals(true)) {
 			result = getText(dashboard_update_file).equals(time);
-		}else {
+		} else {
 			result = false;
 		}
-		
-		
+
 		boolean text1 = getText(dashboard_update_time).equals("刚刚 我 更新");
 		assertFalse(result);
 		assertTrue(text1);
