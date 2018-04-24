@@ -153,6 +153,7 @@ public class testAlertMute extends TestInit {
         	click(dashboard_2);
         	click(menu_Point_Menu);
         	click(menu_mute);//关闭消息通知
+        	assertTrue(exist2);
         }
 	}
 	/**
