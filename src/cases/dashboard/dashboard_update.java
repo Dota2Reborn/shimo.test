@@ -113,6 +113,7 @@ public class dashboard_update extends TestInit {
 		click(desktop);
 		click(desktop1_1);
 		click(doc_edit);
+		sendKeys(doc_edit,"哈哈");
 		click(doc_discuss);
 		click(doc_discuss_input);
 		sendKeys(doc_discuss_input, "通过");
@@ -124,11 +125,13 @@ public class dashboard_update extends TestInit {
 		String text1 = getText(dashboard_update_time);
 		assertEquals(text1, "刚刚 cc 评论：通过");
 		click(dashboard_update_time);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='doc-comment-text']")));
-		driver.findElement(By.xpath("//div[@class='doc-comment-text']")).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='doc-comment-close-icon']")));
-		driver.findElement(By.xpath("//span[@class='doc-comment-close-icon']")).click();
-		click(doc_menu_delete_OK);
+//		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='doc-comment-text']")));
+//		driver.findElement(By.xpath("//div[@class='doc-comment-text']")).click();
+//		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='doc-comment-close-icon']")));
+//		driver.findElement(By.xpath("//span[@class='doc-comment-close-icon']")).click();
+//		click(doc_menu_delete_OK);
+		click(doc_edit);
+		doc_edit.clear();
 
 	}
 

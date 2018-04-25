@@ -351,7 +351,7 @@ public class hovertest extends TestInit {
 
 		login("pijiu@shimo.im", "123123");
 		moveToElement(desktop_user_icon);
-		Boolean r1 = getText(desktop_user_icon_status_L).equals("高级版");
+		Boolean r1 = getText(desktop_user_icon_status_L).equals("基础版");
 		Boolean r2 = getText(desktop_user_icon_status_R).equals("续费或升级到企业版");
 
 		assertTrue(r1 || r2);
