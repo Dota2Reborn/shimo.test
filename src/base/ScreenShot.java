@@ -43,18 +43,12 @@ public class ScreenShot {
 		String SCREEN_SHOT_NAME = methodName + ".jpg";
 		File dir = new File(SCREEN_SHOT_PATH);
 		String screenPath = dir.getAbsolutePath() + "/" + SCREEN_SHOT_NAME;
-		removePic1(screenPath);
+		this.removePic1(screenPath);
 	}
 
 	public void removePic1(String methodName) {
-		try {
-			File del = new File(methodName);
-			if (del.exists())
-
-				FileUtils.deleteDirectory(del);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		File del = new File(methodName);
+		if (del.exists())
+			del.delete();
 	}
 }

@@ -1,6 +1,7 @@
 package cases.desktop;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -35,7 +36,7 @@ public class hovertest extends TestInit {
 
 		String cc = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//a";
 		String result3 = driver.findElement(By.xpath(cc)).getText();
-		assertEquals(result3, "升级");
+		assertEquals(result3, "升级到企业版或高级版");
 
 		String dd = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div[2]";
 		String result4 = driver.findElement(By.xpath(dd)).getText();
@@ -80,7 +81,7 @@ public class hovertest extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@target='_blank']")));
 
-		driver.findElement(By.linkText("升级")).click();
+		driver.findElement(By.linkText("升级到企业版或高级版")).click();
 
 		switchToPage(1);
 
@@ -307,27 +308,39 @@ public class hovertest extends TestInit {
 
 		login("shiyongtest@shimo.im", "123123");
 
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-		Thread.sleep(500);
+		// WebElement img =
+		// driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
+		// moveToElement(img);
+		// Thread.sleep(500);
+		//
+		// WebElement aa = driver
+		// .findElement(By.xpath("//ul[contains(@class,'sm-menu
+		// sm-menu-vertical')]//li[3]//div//div//span"));
+		//
+		// String result = getText(aa);
+		// assertEquals(result, "购买企业版");
+		//
+		// String bb = "//ul[contains(@class,'sm-menu
+		// sm-menu-vertical')]//li[3]//div//div//span[2]";
+		// String result1 = driver.findElement(By.xpath(bb)).getText();
+		// assertEquals(result1, "shiyongyixia");
+		//
+		// String cc = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]";
+		// String result2 = driver.findElement(By.xpath(cc)).getText();
+		// assertEquals(result2, "企业管理");
+		moveToElement(desktop_user_icon);
+		Boolean r1 = getText(desktop_user_icon_status_L).equals("购买企业版");
+		Boolean r2 = getText(desktop_user_icon_status_R).equals("企业版试用中");
+		Boolean r4 = getText(desktop_user_icon_companyManagement).equals("企业管理");
+		click(desktop_user_icon_status_L);
+		switchToPage(1);
+		Boolean r3 = driver.getCurrentUrl().equals("https://release.shimodev.com/enterprise/billing");
+		assertTrue(r1 || r2 || r3 || r4);
 
-		WebElement aa = driver
-				.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span"));
-
-		String result = getText(aa);
-		assertEquals(result, "购买企业版");
-
-		String bb = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]";
-		String result1 = driver.findElement(By.xpath(bb)).getText();
-		assertEquals(result1, "shiyongyixia");
-
-		String cc = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]";
-		String result2 = driver.findElement(By.xpath(cc)).getText();
-		assertEquals(result2, "企业管理");
 	}
 
 	/**
-	 * 企业试用版 hover头像 鼠标 hover 到头像上，点击购买企业版
+	 * 高级版过期，hover到头像上
 	 * 
 	 * @author 陈清杰
 	 * @Time 2018-01-16
@@ -336,20 +349,12 @@ public class hovertest extends TestInit {
 	@Test
 	public void hover_person11() throws InterruptedException {
 
-		login("shiyongtest@shimo.im", "123123");
+		login("pijiu@shimo.im", "123123");
+		moveToElement(desktop_user_icon);
+		Boolean r1 = getText(desktop_user_icon_status_L).equals("高级版");
+		Boolean r2 = getText(desktop_user_icon_status_R).equals("续费或升级到企业版");
 
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-		// Thread.sleep(1000);
-
-		wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span")));
-		driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span"))
-				.click();
-
-		switchToPage(1);
-		String url = driver.getCurrentUrl();
-		assertEquals(url, "https://release.shimodev.com/enterprise/billing");
+		assertTrue(r1 || r2);
 	}
 
 	/**
@@ -363,13 +368,10 @@ public class hovertest extends TestInit {
 	public void hover_person12() throws InterruptedException {
 
 		login("shiyongtest@shimo.im", "123123");
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-
-		wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]")));
-		driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]")).click();
-
+		moveToElement(desktop_user_icon);
+		click(desktop_user_icon_companyManagement);
+		Boolean r1 = driver.getCurrentUrl().equals("https://release.shimodev.com/enterprise/members");
+		assertTrue(r1);
 	}
 
 	/**
@@ -383,12 +385,8 @@ public class hovertest extends TestInit {
 	public void hover_person13() throws InterruptedException {
 
 		login("fufei1@shimo.im", "123456");
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-
-		wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[5]")));
-		driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[5]")).click();
+		moveToElement(desktop_user_icon);
+		click(desktop_user_icon_personSetting);
 
 		String url = driver.getCurrentUrl();
 		assertEquals(url, "https://release.shimodev.com/profile");
@@ -400,39 +398,70 @@ public class hovertest extends TestInit {
 	 * 
 	 * @author 陈清杰
 	 * @Time 2018-01-24
-	 *
+	 * 
 	 */
 	@Test
 	public void hover_person14() throws InterruptedException {
 
 		login("fufei1@shimo.im", "123456");
 
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-
-		wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]")));
-		driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]")).click();
+		moveToElement(desktop_user_icon);
+		click(desktop_user_icon_companyManagement);
 
 		String url = driver.getCurrentUrl();
 		assertEquals(url, "https://release.shimodev.com/enterprise/members");
 	}
 
 	/**
-	 * 企业版 hover头像 鼠标 hover 到头像上，点击下载石墨文档app
+	 * 鼠标 hover 到头像上，点击下载石墨文档app
 	 * 
 	 * @author 陈清杰
 	 * @Time 2018-01-24
 	 *
 	 */
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void hover_person15() throws InterruptedException {
 
 		login("fufei1@shimo.im", "123456");
+		moveToElement(desktop_user_icon);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-test='usermenu-container']//ul//li[contains(text(),'下载石墨文档 App')]")));
+		WebElement download = driver
+				.findElement(By.xpath("//div[@data-test='usermenu-container']//ul//li[contains(text(),'下载石墨文档 App')]"));
+		click(download);
 
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
+		WebElement header = driver.findElement(By.xpath("//div[@class='sm-modal-body']//div//h3"));
+		wait.until(ExpectedConditions.visibilityOf(header));
+		Boolean r1 = getText(header).equals("扫码下载 石墨文档 App");
 
+		Boolean r2 = driver.findElement(By.xpath("//div[@class='sm-modal-body']//div[1]//img")).getAttribute("src")
+				.startsWith("data:image/png;");
+
+		WebElement download_IOS = driver.findElement(By.xpath("//div[@class='sm-modal-body']//div[2]//a[1]"));
+		click(download_IOS);
+		Boolean r3 = driver.getCurrentUrl()
+				.equals("https://itunes.apple.com/cn/app/shi-mo-wen-dang-zui-mei-xie/id1013727678?l=en&mt=8");
+
+		assertTrue(r1 || r2 || r3);
+	}
+	
+	/**
+	 * 过期企业版 hover头像 鼠标 hover 到头像上
+	 * 
+	 * @author 陈清杰
+	 * @Time 2018-01-24
+	 *
+	 */
+	@Test(enabled = true)
+	public void hover_person16() throws InterruptedException {
+
+		login("monvzhaijibian@morsin.com", "123123");
+		moveToElement(desktop_user_icon);
+		
+		Boolean r1 = getText(desktop_user_icon_status_L).equals("购买企业版");
+		Boolean r2 = getText(desktop_user_icon_status_R).equals("企业版已过期");
+
+		assertTrue(r1 || r2);
 	}
 
 }

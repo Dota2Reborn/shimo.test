@@ -194,7 +194,18 @@ public class elementFile {
 	public WebElement dashboard_notice_list_unread;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_allRead", noteName = "桌面通知铃铛-标记全部已读")
 	public WebElement dashboard_notice_list_allRead;
-
+	
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon", noteName = "桌面-右上角头像")
+	public WebElement desktop_user_icon;
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_companyManagement", noteName = "桌面-右上角头像-我的企业")
+	public WebElement desktop_user_icon_companyManagement;
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_personSetting", noteName = "桌面-右上角头像-账号设置")
+	public WebElement desktop_user_icon_personSetting;
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_status_L", noteName = "桌面-右上角头像-当前账号状态-左边，如高级版，购买企业版")
+	public WebElement desktop_user_icon_status_L;
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_status_R", noteName = "桌面-右上角头像-当前账号状态-右边，如企业版过期，企业试用中，企业名称等")
+	public WebElement desktop_user_icon_status_R;
+	
 	/**
 	 * addCollaborator
 	 * 协作者相关
@@ -316,10 +327,7 @@ public class elementFile {
 	@SearchWith(pageName = "companyManagement", elementName = "addmember_copyLink_open", noteName = "企业设置-打开或者关闭邀请链接")
 	public WebElement addmember_copyLink_open;
 
-	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon", noteName = "桌面-右上角头像")
-	public WebElement desktop_user_icon;
-	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_companyManagement", noteName = "桌面-右上角头像-我的企业")
-	public WebElement desktop_user_icon_companyManagement;
+	
 
 	/**
 	 * Registered
