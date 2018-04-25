@@ -9,7 +9,7 @@
 	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="run.classpath" />
 	<target name="clean">
 		<delete dir="build" />
-		<delete dir="test-output" />
+		<delete dir="test-output/screen-shot" />
 	</target>
 	<target name="compile" depends="clean">
 		<echo message="mkdir" />
