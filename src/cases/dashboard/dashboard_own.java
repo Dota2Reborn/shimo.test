@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import base.TestInit;
-import net.bytebuddy.implementation.bytecode.Throw;
 
 public class dashboard_own extends TestInit {
 
