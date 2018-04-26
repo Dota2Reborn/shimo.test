@@ -30,12 +30,10 @@ public class hovertest extends TestInit {
 		String result = driver.findElement(By.xpath(aa)).getText();
 		assertEquals(result, "基础版");
 
-		String bb = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[1]";
-		String result2 = driver.findElement(By.xpath(bb)).getText();
+		String result2 = getText(desktop_user_icon_status_L);
 		assertEquals(result2, "基础版");
 
-		String cc = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//a";
-		String result3 = driver.findElement(By.xpath(cc)).getText();
+		String result3 = getText(desktop_user_icon_status_R);
 		assertEquals(result3, "升级到企业版或高级版");
 
 		String dd = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div[2]";
@@ -75,19 +73,12 @@ public class hovertest extends TestInit {
 	public void hover_person1() throws InterruptedException {
 
 		login("autoTesthover@shimo.im", "123123");
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-		Thread.sleep(500);
-
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@target='_blank']")));
-
-		driver.findElement(By.linkText("升级到企业版或高级版")).click();
+		moveToElement(desktop_user_icon);
+		click(desktop_user_icon_status_R);
 
 		switchToPage(1);
-
 		String url = driver.getCurrentUrl();
 		assertEquals(url, "https://release.shimodev.com/pricing");
-
 	}
 
 	/**
@@ -101,13 +92,8 @@ public class hovertest extends TestInit {
 	public void hover_person2() throws InterruptedException {
 
 		login("autoTesthover@shimo.im", "123123");
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-		// Thread.sleep(1000);
-
-		wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[5]")));
-		driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[5]")).click();
+		moveToElement(desktop_user_icon);
+		click(desktop_user_icon_personSetting);
 
 		String url = driver.getCurrentUrl();
 		assertEquals(url, "https://release.shimodev.com/profile");
@@ -125,9 +111,7 @@ public class hovertest extends TestInit {
 	public void hover_person3() throws InterruptedException {
 
 		login("autoTesthover@shimo.im", "123123");
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-		// Thread.sleep(1000);
+		moveToElement(desktop_user_icon);
 
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[7]//span")));
@@ -150,9 +134,7 @@ public class hovertest extends TestInit {
 	public void hover_person4() throws InterruptedException {
 
 		login("autoTesthover@shimo.im", "123123");
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-		// Thread.sleep(1000);
+		moveToElement(desktop_user_icon);
 
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]")));
@@ -175,9 +157,7 @@ public class hovertest extends TestInit {
 	public void hover_person5() throws InterruptedException {
 
 		login("autoTesthover@shimo.im", "123123");
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-		// Thread.sleep(1000);
+		moveToElement(desktop_user_icon);
 
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]")));
@@ -198,9 +178,7 @@ public class hovertest extends TestInit {
 	public void hover_person6() throws InterruptedException {
 
 		login("autoTest@shimo.im", "123123");
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-		// Thread.sleep(1000);
+		moveToElement(desktop_user_icon);
 
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")));
@@ -222,7 +200,6 @@ public class hovertest extends TestInit {
 
 		login("gaoji1@shimo.im", "123456");
 		moveToElement(desktop_user_icon);
-		// Thread.sleep(1000);
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]")));
 		String cc = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]";
@@ -254,9 +231,7 @@ public class hovertest extends TestInit {
 	public void hover_person8() throws InterruptedException {
 
 		login("gaoji1@shimo.im", "123456");
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
-		// Thread.sleep(1000);
+		moveToElement(desktop_user_icon);
 
 		wait.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//span//a")));
@@ -281,8 +256,7 @@ public class hovertest extends TestInit {
 	public void hover_person9() throws InterruptedException {
 
 		login("gaoji1@shimo.im", "123456");
-		WebElement img = driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		moveToElement(img);
+		moveToElement(desktop_user_icon);
 
 		wait.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//span//a[2]")));
@@ -308,26 +282,6 @@ public class hovertest extends TestInit {
 
 		login("shiyongtest@shimo.im", "123123");
 
-		// WebElement img =
-		// driver.findElement(By.xpath("//div[@id='header']//div//div[3]//img"));
-		// moveToElement(img);
-		// Thread.sleep(500);
-		//
-		// WebElement aa = driver
-		// .findElement(By.xpath("//ul[contains(@class,'sm-menu
-		// sm-menu-vertical')]//li[3]//div//div//span"));
-		//
-		// String result = getText(aa);
-		// assertEquals(result, "购买企业版");
-		//
-		// String bb = "//ul[contains(@class,'sm-menu
-		// sm-menu-vertical')]//li[3]//div//div//span[2]";
-		// String result1 = driver.findElement(By.xpath(bb)).getText();
-		// assertEquals(result1, "shiyongyixia");
-		//
-		// String cc = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]";
-		// String result2 = driver.findElement(By.xpath(cc)).getText();
-		// assertEquals(result2, "企业管理");
 		moveToElement(desktop_user_icon);
 		Boolean r1 = getText(desktop_user_icon_status_L).equals("购买企业版");
 		Boolean r2 = getText(desktop_user_icon_status_R).equals("企业版试用中");
@@ -424,8 +378,9 @@ public class hovertest extends TestInit {
 
 		login("fufei1@shimo.im", "123456");
 		moveToElement(desktop_user_icon);
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-test='usermenu-container']//ul//li[contains(text(),'下载石墨文档 App')]")));
+
+		wait.until(ExpectedConditions.elementToBeClickable(
+				By.xpath("//div[@data-test='usermenu-container']//ul//li[contains(text(),'下载石墨文档 App')]")));
 		WebElement download = driver
 				.findElement(By.xpath("//div[@data-test='usermenu-container']//ul//li[contains(text(),'下载石墨文档 App')]"));
 		click(download);
@@ -444,7 +399,7 @@ public class hovertest extends TestInit {
 
 		assertTrue(r1 || r2 || r3);
 	}
-	
+
 	/**
 	 * 过期企业版 hover头像 鼠标 hover 到头像上
 	 * 
@@ -457,11 +412,29 @@ public class hovertest extends TestInit {
 
 		login("monvzhaijibian@morsin.com", "123123");
 		moveToElement(desktop_user_icon);
-		
+
 		Boolean r1 = getText(desktop_user_icon_status_L).equals("购买企业版");
 		Boolean r2 = getText(desktop_user_icon_status_R).equals("企业版已过期");
 
 		assertTrue(r1 || r2);
+	}
+
+	/**
+	 * 企业成员 hover头像 鼠标 hover 到头像上，显示【我的企业】
+	 * 
+	 * @author 陈清杰
+	 * @Time 2018-01-24
+	 *
+	 */
+	@Test(enabled = true)
+	public void hover_person17() throws InterruptedException {
+
+		login("liuchen@shimo.im", "123123");
+		moveToElement(desktop_user_icon);
+
+		Boolean r1 = getText(desktop_user_icon_companyManagement).equals("我的企业");
+
+		assertTrue(r1);
 	}
 
 }
