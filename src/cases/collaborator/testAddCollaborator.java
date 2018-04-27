@@ -48,16 +48,14 @@ public class testAddCollaborator extends TestInit {
 		contextClick(desktop1_1_folder);
 		click(menu_cooperation);
 
-//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		String msg_a = getText(addCollaborator_total);
 		click(button_addCollaborator);
 
-		input_addCollaborator.sendKeys("11@cc.ccc");
+		sendKeys(input_addCollaborator, "11@cc.ccc");
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
 
-//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
 
@@ -82,13 +80,11 @@ public class testAddCollaborator extends TestInit {
 		contextClick(desktop1_1_folder);
 		click(menu_cooperation);
 
-//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		String msg_a = getText(addCollaborator_total);
 		click(button_addCollaborator);
 		click(addCollaborator_1_add);
 		click(b_addCollaborator_ok);
 
-//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
 
@@ -113,14 +109,12 @@ public class testAddCollaborator extends TestInit {
 		contextClick(desktop1_1_folder);
 		click(menu_cooperation);
 
-//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		String msg_a = getText(addCollaborator_total);
 		click(button_addCollaborator);
 		click(addCollaborator_company_list);
 		click(addCollaborator_companyList_2_add);
 		click(b_addCollaborator_ok);
 
-//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
 
@@ -166,11 +160,11 @@ public class testAddCollaborator extends TestInit {
 		contextClick(desktop1_1_folder);
 		click(menu_cooperation);
 		click(button_addCollaborator);
-		input_addCollaborator.sendKeys("autoTest04@shimo.im");
+		sendKeys(input_addCollaborator, "autoTest04@shimo.im");
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
-		
+
 		logout();
 		login("autoTest04@shimo.im", "123123");
 		click(desktop);
@@ -200,11 +194,11 @@ public class testAddCollaborator extends TestInit {
 		click(menu_cooperation);
 		click(button_addCollaborator);
 
-		input_addCollaborator.sendKeys("autoTest04@shimo.im");
+		sendKeys(input_addCollaborator, "autoTest04@shimo.im");
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
-		
+
 		logout();
 		login("autoTest04@shimo.im", "123123");
 
@@ -251,7 +245,8 @@ public class testAddCollaborator extends TestInit {
 		click(list_addCollaborator_1);
 		click(list_addCollaborator_changeOwner_1);
 		click(b_addCollaborator_confirm);
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
+
+		Thread.sleep(500);
 		String email = getText(addCollaborator_1_list_userName);
 		assertEquals(email, "autoTest01");
 	}
@@ -270,14 +265,11 @@ public class testAddCollaborator extends TestInit {
 		click(desktop1_1_folder);
 		click(addCollaborator_folder_add);
 
-		input_addCollaborator.sendKeys("11@cc.ccc");
+		sendKeys(input_addCollaborator, "11@cc.ccc");
 
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
-		
-		
-//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
 
@@ -317,8 +309,7 @@ public class testAddCollaborator extends TestInit {
 		click(list_addCollaborator_1);
 		click(list_addCollaborator_changeOwner_1);
 		click(b_addCollaborator_confirm);
-		// wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_list));
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		String email = getText(addCollaborator_1_list_userName);
 		assertEquals(email, "autoTest01");
 	}
@@ -339,5 +330,5 @@ public class testAddCollaborator extends TestInit {
 
 		assertEquals(t, "true");
 	}
-	
+
 }
