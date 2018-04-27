@@ -37,12 +37,12 @@ public class baseFunc {
 		if (os.startsWith("Windows")) {
 			System.setProperty("webdriver.chrome.driver",
 					"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-		} 
-//		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		}
+		// DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		ChromeOptions capabilities = new ChromeOptions();
 		capabilities.setCapability("marionette", true);
 		driver = new ChromeDriver(capabilities);
-//		driver.manage().window().setSize(new Dimension(1400, 1000));
+		// driver.manage().window().setSize(new Dimension(1400, 1000));
 		driver.manage().window().maximize();
 		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
 		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
