@@ -5,7 +5,6 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import base.TestInit;
@@ -27,8 +26,7 @@ public class dashboard_own extends TestInit {
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
 				.click();// hover收藏
 		click(favorites);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String text = driver.findElement(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]")).getText();
+		String text = getText(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]"));
 		assertEquals(text, "无标题");
 
 		click(dashboard);
@@ -37,8 +35,7 @@ public class dashboard_own extends TestInit {
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
 				.click();
 		click(favorites);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+		String text2 = getText(By.xpath("//div[@class='none-file']//span"));
 		assertEquals(text2, "没有文件");
 
 	}

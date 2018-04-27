@@ -365,13 +365,6 @@ public class TestInit extends elementFile {
 			assertTrue(false);
 		} finally {
 			Thread.sleep(100);
-			// Boolean n = doesWebElementExist(By.className("sm-toast"));
-			// if (n.equals(true)) {
-			// String msg = driver.findElement(By.className("sm-toast")).getText();
-			// wait.until(ExpectedConditions.textMatches(locator,
-			// pattern)textToBe(By.className("sm-toast"), msg));
-			// System.out.println("提示信息--------->" + msg);
-			// }
 			checkPageIsReady();
 		}
 	}
@@ -434,6 +427,25 @@ public class TestInit extends elementFile {
 		try {
 			wait.until(ExpectedConditions.visibilityOf(element));
 			msg = element.getText();
+		} catch (NoSuchElementException e) {
+			// TODO
+			System.out.println(element + "is missing");
+		}
+		return msg;
+	}
+	
+	/**
+	 * 获取文本信息
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-03-23
+	 *
+	 */
+	public String getText(By element) {
+		String msg = "";
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+			msg = driver.findElement(element).getText();
 		} catch (NoSuchElementException e) {
 			// TODO
 			System.out.println(element + "is missing");
