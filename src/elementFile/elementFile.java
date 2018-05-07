@@ -74,6 +74,10 @@ public class elementFile {
 	public WebElement desktop_setting;
 	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_1", noteName = "桌面快捷方式第一个")
 	public WebElement desktop_shortcut_1;
+	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_Increase", noteName = "新增桌面快捷方式区域")
+	public WebElement desktop_shortcut_Increase;
+	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_Tips", noteName = "新增快捷方式区域提示")
+	public WebElement desktop_shortcut_Tips;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_button", noteName = "移动到测试文件夹")
 	public WebElement desktop_moveFolder_button;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_back_button", noteName = "移动文件到文件夹，列表中后退按钮")

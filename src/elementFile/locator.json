@@ -323,6 +323,18 @@
 				"note": "桌面快捷方式第一个"
 			},
 			{
+				"elementName": "desktop_shortcut_Increase",
+				"locateUsing": "xpath",
+				"locator": "//ul[@id='right-sidebar-shortcuts']//li[2]",
+				"note": "添加快捷方式区域"
+			},
+			{
+				"elementName": "desktop_shortcut_Tips",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='tip-text']//li[1]",
+				"note": "添加快捷方式区域提示"
+			},
+			{
 				"elementName": "desktop_orderByUpdate",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='change-table-sort-updatetime']",
