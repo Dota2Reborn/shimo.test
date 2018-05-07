@@ -94,8 +94,8 @@ public class TestInit extends elementFile {
 			driver.navigate().to(test_url + "login");
 		}
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
-		userEmail.sendKeys(user);
-		userPwd.sendKeys(pwd);
+		sendKeys(userEmail, user);
+		sendKeys(userPwd, pwd);
 		try {
 			click(login_submit);
 		} catch (InterruptedException e) {
@@ -433,7 +433,7 @@ public class TestInit extends elementFile {
 		}
 		return msg;
 	}
-	
+
 	/**
 	 * 获取文本信息
 	 * 
@@ -465,6 +465,7 @@ public class TestInit extends elementFile {
 		wait.until(ExpectedConditions.visibilityOf(element));
 		element.sendKeys(msg);
 	}
+
 
 	/**
 	 * 通过JS判断页面是否加载完毕
