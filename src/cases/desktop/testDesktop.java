@@ -578,7 +578,7 @@ public class testDesktop extends TestInit {
 		login("autoTest@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1_folder);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_rename);
@@ -619,4 +619,5 @@ public class testDesktop extends TestInit {
 
 		assertEquals(msg1, "副本 " + msg);
 	}
+	
 }

@@ -20,8 +20,7 @@ public class testSearch extends TestInit {
 	public void searchResult() throws InterruptedException {
 		login("liuchen@shimo.im", "123123");
 		moveToElement(dashboard_search_button);
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_search_input));
-		dashboard_search_input.sendKeys("搜索测试");
+		sendKeys(dashboard_search_input, "搜索测试");
 		click(dashboard_search_result_1);
 		Thread.sleep(2000);
 		switchToPage(1);
@@ -43,8 +42,7 @@ public class testSearch extends TestInit {
 	public void search_move() throws InterruptedException {
 		login("liuchen@shimo.im", "123123");
 		moveToElement(dashboard_search_button);
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_search_input));
-		dashboard_search_input.sendKeys("搜索测试");
+		sendKeys(dashboard_search_input, "搜索测试");
 
 		moveToElement(desktop);
 		Boolean result = dashboard_search_input.isDisplayed();
@@ -62,8 +60,7 @@ public class testSearch extends TestInit {
 	public void search_moveAndClick() throws InterruptedException {
 		login("liuchen@shimo.im", "123123");
 		moveToElement(dashboard_search_button);
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_search_input));
-		dashboard_search_input.sendKeys("搜索测试");
+		sendKeys(dashboard_search_input, "搜索测试");
 
 		action.moveToElement(dashboard_search_input, -100, 0).click().perform();
 
