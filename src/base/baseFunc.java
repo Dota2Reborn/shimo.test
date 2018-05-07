@@ -41,9 +41,10 @@ public class baseFunc {
 		// DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		ChromeOptions capabilities = new ChromeOptions();
 		capabilities.setCapability("marionette", true);
+		capabilities.addArguments("--start-maximized");
 		driver = new ChromeDriver(capabilities);
 		// driver.manage().window().setSize(new Dimension(1400, 1000));
-		driver.manage().window().maximize();
+//		driver.manage().window().maximize();
 		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
 		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
 		PageFactory.initElements(customFieldDecorator, xx);
