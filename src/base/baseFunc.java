@@ -41,6 +41,7 @@ public class baseFunc {
 		// DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		ChromeOptions capabilities = new ChromeOptions();
 		capabilities.setCapability("marionette", true);
+		//浏览器全屏
 		if (os.startsWith("Windows")) {
 			capabilities.addArguments("--start-maximized");
 		}else {
