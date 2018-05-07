@@ -108,7 +108,7 @@
 			{
 				"elementName": "dashboard_notice",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='header']//div//div[2]/*[name()='svg']",
+				"locator": "//div[@id='header']//div//div[last()-1]/*[name()='svg']",
 				"note": "桌面通知铃铛"
 			},
 			{
