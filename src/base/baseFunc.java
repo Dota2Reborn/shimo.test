@@ -41,7 +41,11 @@ public class baseFunc {
 		// DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		ChromeOptions capabilities = new ChromeOptions();
 		capabilities.setCapability("marionette", true);
-		capabilities.addArguments("--start-maximized");
+		if (os.startsWith("Windows")) {
+			capabilities.addArguments("--start-maximized");
+		}else {
+			capabilities.addArguments("--kiosk");
+		}
 		driver = new ChromeDriver(capabilities);
 		// driver.manage().window().setSize(new Dimension(1400, 1000));
 //		driver.manage().window().maximize();
