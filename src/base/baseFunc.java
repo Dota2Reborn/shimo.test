@@ -45,6 +45,7 @@ public class baseFunc {
 		if (os.startsWith("Windows")) {
 			capabilities.addArguments("--start-maximized");
 		}else {
+			
 			capabilities.addArguments("--kiosk");
 		}
 		driver = new ChromeDriver(capabilities);
