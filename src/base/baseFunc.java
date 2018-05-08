@@ -1,6 +1,8 @@
 package base;
 
 import org.apache.commons.lang3.StringUtils;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -32,6 +34,9 @@ public class baseFunc {
 	 */
 	public WebDriver initData(Object xx) {
 
+		int screenWidth=((int)java.awt.Toolkit.getDefaultToolkit().getScreenSize().width);
+		int screenHeight = ((int)java.awt.Toolkit.getDefaultToolkit().getScreenSize().height); 
+		
 		os = System.getProperties().getProperty("os.name");
 		Preconditions.checkArgument(StringUtils.isNotEmpty(os), "OS info is missing.");
 		if (os.startsWith("Windows")) {
@@ -42,15 +47,15 @@ public class baseFunc {
 		ChromeOptions capabilities = new ChromeOptions();
 		capabilities.setCapability("marionette", true);
 		//浏览器全屏
-		if (os.startsWith("Windows")) {
-			capabilities.addArguments("--start-maximized");
-		}else {
-			
-			capabilities.addArguments("--kiosk");
-		}
+//		if (os.startsWith("Windows")) {
+//			capabilities.addArguments("--start-maximized");
+//		}else {
+//			
+//			capabilities.addArguments("--kiosk");
+//		}
 		driver = new ChromeDriver(capabilities);
-		// driver.manage().window().setSize(new Dimension(1400, 1000));
-//		driver.manage().window().maximize();
+		driver.manage().window().setPosition(new Point(0, 0));
+		driver.manage().window().setSize(new Dimension(screenWidth, screenHeight));
 		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
 		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
 		PageFactory.initElements(customFieldDecorator, xx);
