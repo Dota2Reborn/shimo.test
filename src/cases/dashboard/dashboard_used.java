@@ -116,31 +116,18 @@ public class dashboard_used extends TestInit {
 
 		login("zuijin5@shimo.im", "123123");
 		click(dashboard_2);
-		wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a")));
-		WebElement icon2 = driver
-				.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a"));
-		icon2.click();
+		click(dashboard_share_file_2);
+		click(b_back);
+		click(dashboard_2);
+//		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
+		String text = getText(dashboard_update_name);
+		
+		click(dashboard_share_file_2);
 		click(b_back);
 		click(dashboard_2);
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-		String text = driver.findElement(By.xpath(
-				"//div[@id='content']//div//div//div//div//div//div[2]//div[2]//div//a//div//div//div[2]//div[1]//div[1]"))
-				.getText();
-		assertEquals(text, "22222");
-
-		wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a")));
-		WebElement icon3 = driver
-				.findElement(By.xpath("//div[@id='content']//div//div//div//div//div//div[2]//div[3]//div//a"));
-		icon3.click();
-		click(b_back);
-		click(dashboard_2);
-		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-		String text1 = driver.findElement(By.xpath(
-				"//div[@id='content']//div//div//div//div//div//div[2]//div[2]//div//a//div//div//div[2]//div[1]//div[1]"))
-				.getText();
-		assertEquals(text1, "11111");
+		String text1 = getText(dashboard_update_name);
+		assertFalse(text.equals(text1));
 
 	}
 

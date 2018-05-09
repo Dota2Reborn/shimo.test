@@ -91,7 +91,7 @@ public class testAlertMute extends TestInit {
 		click(dashboard_2);
 		click(menu_Point_Menu);
 		click(menu_mute);//开启消息通知
-		click(dashboard_share_file);
+		click(dashboard_share_file_1);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.sendKeys(Keys.CONTROL,'a'+"编辑文档并保存"+Keys.ENTER);
 		click(quick_access_point);

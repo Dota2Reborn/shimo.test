@@ -70,7 +70,7 @@ public class dashboard_shared extends TestInit {
 	public void shared2() throws InterruptedException{
 		login("gx4@shimo.im", "123123");
 	    click(dashboard_4);
-		moveToElement(dashboard_share_file);
+		moveToElement(dashboard_share_file_1);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")));
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
 		click(favorites);
@@ -81,7 +81,7 @@ public class dashboard_shared extends TestInit {
 		
 		click(dashboard);
 	    click(dashboard_4);
-		moveToElement(dashboard_share_file);
+		moveToElement(dashboard_share_file_1);
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
 		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));

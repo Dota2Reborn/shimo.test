@@ -162,8 +162,10 @@ public class elementFile {
 	public WebElement dashboard_shareTime_1;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_shareTime_unread", noteName = "新的共享-大标签-标记已读")
 	public WebElement dashboard_shareTime_unread;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file", noteName = "工作台-共享给我的-文件")
-	public WebElement dashboard_share_file;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file_1", noteName = "工作台第一行第一个文件")
+	public WebElement dashboard_share_file_1;
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file_2", noteName = "工作台第一行第二个文件")
+	public WebElement dashboard_share_file_2;
 	@SearchWith(pageName = "dashboard", elementName = "New_Share_1", noteName = "新的共享第一个")
 	public WebElement New_Share_1;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_1", noteName = "工作台-最近更新")

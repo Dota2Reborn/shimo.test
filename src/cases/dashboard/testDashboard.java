@@ -105,7 +105,7 @@ public class testDashboard extends TestInit {
 		moveToElement(dashboard_shareTime_1);
 		click(dashboard_shareTime_unread);
 		click(dashboard_4);
-		contextClick(dashboard_share_file);
+		contextClick(dashboard_share_file_1);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
 

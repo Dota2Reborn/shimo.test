@@ -102,9 +102,9 @@ public class dashboard_own extends TestInit {
 
 		login("own5@shimo.im", "123123");
 		click(dashboard_3);
-		Boolean	result = getText(dashboard_share_file).equals(time);
+		Boolean	result = getText(dashboard_share_file_1).equals(time);
 		Thread.sleep(500);
-        contextClick(dashboard_share_file);
+        contextClick(dashboard_share_file_1);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
 		assertFalse(result);

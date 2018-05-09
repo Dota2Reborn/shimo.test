@@ -77,13 +77,12 @@ public class testCollection extends TestInit {
 		login("Collection@shimo.im", "123123");
 		favorites.click();
 		Sort();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
-		desktop_show_type.click();
+		click(desktop_show_type);
 
 		Boolean result = false;
 		Boolean exist1 = doesWebElementExist(By.className("table-head-cell"));
 
-		desktop_show_type.click();
+		click(desktop_show_type);
 
 		Boolean exist2 = doesWebElementExist(By.className("table-head-cell"));
 

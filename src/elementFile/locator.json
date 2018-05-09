@@ -64,10 +64,16 @@
 				"note": "工作台-最近更新-文件名"
 			},
 			{
-				"elementName": "dashboard_share_file",
+				"elementName": "dashboard_share_file_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='category-card-container']//div[1]",
-				"note": "工作台-共享给我的(最近使用、我创建的)-第一个文件"
+				"locator": "//*[@role='rowgroup']/div[2]/div/div[1]/div/div",
+				"note": "工作台第一行第一个文件"
+			},
+			{
+				"elementName": "dashboard_share_file_2",
+				"locateUsing": "xpath",
+				"locator": "//*[@role='rowgroup']/div[2]/div/div[2]/div/div",
+				"note": "工作台第一行第二个文件"
 			},
 			{
 				"elementName": "New_Share_1",
