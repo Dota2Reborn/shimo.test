@@ -23,7 +23,7 @@ public class testDragShortcut extends TestInit {
 	 * @Time 2018-05-07
 	 *
 	 */
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Dragging_folders() throws InterruptedException {
 		login("Dragging_folders@shimo.im", "123123");
 		click(desktop);
