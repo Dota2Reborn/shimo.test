@@ -62,7 +62,7 @@ public class dashboard_used extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
 		WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
 		icon.click();
-		Thread.sleep(500);
+//		Thread.sleep(500);
 		boolean text1 = getText(menu_newPage).equals("在新标签页中打开");
 		boolean text2 = getText(menu_mute).equals("消息免打扰");
 		boolean text3 = getText(menu_shortcut).equals("添加到快捷方式");

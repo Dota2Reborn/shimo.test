@@ -1,8 +1,6 @@
 package base;
 
 import org.apache.commons.lang3.StringUtils;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -33,29 +31,22 @@ public class baseFunc {
 	 *
 	 */
 	public WebDriver initData(Object xx) {
-
-		int screenWidth=((int)java.awt.Toolkit.getDefaultToolkit().getScreenSize().width);
-		int screenHeight = ((int)java.awt.Toolkit.getDefaultToolkit().getScreenSize().height); 
-		
 		os = System.getProperties().getProperty("os.name");
 		Preconditions.checkArgument(StringUtils.isNotEmpty(os), "OS info is missing.");
 		if (os.startsWith("Windows")) {
 			System.setProperty("webdriver.chrome.driver",
 					"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 		}
-		// DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		ChromeOptions capabilities = new ChromeOptions();
-		capabilities.setCapability("marionette", true);
-		//浏览器全屏
-//		if (os.startsWith("Windows")) {
-//			capabilities.addArguments("--start-maximized");
-//		}else {
-//			
-//			capabilities.addArguments("--kiosk");
-//		}
-		driver = new ChromeDriver(capabilities);
-		driver.manage().window().setPosition(new Point(0, 0));
-		driver.manage().window().setSize(new Dimension(screenWidth, screenHeight));
+//		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		ChromeOptions option = new ChromeOptions();
+//		FirefoxOptions option = new FirefoxOptions();
+//		SafariOptions option = new SafariOptions();
+//		option.merge(capabilities);
+//		option.addArguments("--test-type", "--start-maximized");
+//		option.setCapability("marionette", true);
+		option.addArguments("disable-infobars");
+		driver = new ChromeDriver(option);
+		driver.manage().window().maximize();
 		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
 		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
 		PageFactory.initElements(customFieldDecorator, xx);
