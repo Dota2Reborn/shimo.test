@@ -30,9 +30,10 @@ public class dashboard_shared extends TestInit {
 		Thread.sleep(1000);
 		click(menu_cooperation);
 		click(button_addCollaborator);
-		click(addCollaborator_1_add);
+		sendKeys(input_addCollaborator, "gx2@shimo.im");
+		Thread.sleep(500);
+		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
-		click(button_addCollaborator_close);
 	    logout();
 	    login("gx2@shimo.im", "123123");
 	    click(dashboard_4);
@@ -42,22 +43,16 @@ public class dashboard_shared extends TestInit {
 	    boolean c = driver.findElement(By.xpath("//div[@class='card-icon']//span")).isDisplayed();//卡片图标
 	    boolean text = driver.findElement(By.xpath("//div[@class='card-content-title']//div[1]")).getText().equals("无标题");
 	    boolean text1 = getText(dashboard_update_time).equals("2人共享 · 刚刚 共享 共享");
-	    assertTrue(a||b||c||text||text1);
 	    WebElement card = driver.findElement(By.xpath("//div[@class='category-card-container']"));
 		moveToElement(card);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
 		boolean d = driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).isDisplayed();
-		assertEquals(d, true);
 		boolean e = driver.findElement(By.xpath("//div[@class='file-options-icon']")).isDisplayed();
-		assertEquals(e, true);
+		assertTrue(a||b||c||text||text1||d||e);
 		Thread.sleep(200);
 		contextClick(dashboard_update_name);;
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
-		
-		
-		
-		
 	}
 	/**
 	 *共享给我
