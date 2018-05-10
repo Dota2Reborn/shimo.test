@@ -176,10 +176,13 @@ public class testDesktop extends TestInit {
 		String doc_name = getText(desktop1_1);
 
 		contextClick(desktop1_1);
-//		Thread.sleep(200);
 		click(menu_shortcut);
+		if(!doc_name.equals(msg)) {
+			contextClick(desktop1_1);
+			click(menu_shortcut);
+		}
 
-		assertEquals(doc_name, msg);
+		assertTrue(doc_name.equals(msg));
 
 	}
 
@@ -337,7 +340,12 @@ public class testDesktop extends TestInit {
 		contextClick(desktop1_1_folder);
 		click(menu_shortcut);
 
-		assertEquals(doc_name, msg);
+		if(!doc_name.equals(msg)) {
+			contextClick(desktop1_1);
+			click(menu_shortcut);
+		}
+
+		assertTrue(doc_name.equals(msg));
 
 	}
 
@@ -535,10 +543,14 @@ public class testDesktop extends TestInit {
 		String doc_name = getText(desktop1_1);
 
 		contextClick(desktop1_1);
-		Thread.sleep(200);
 		click(menu_shortcut);
 
-		assertEquals(doc_name, msg);
+		if(!doc_name.equals(msg)) {
+			contextClick(desktop1_1);
+			click(menu_shortcut);
+		}
+
+		assertTrue(doc_name.equals(msg));
 
 	}
 
