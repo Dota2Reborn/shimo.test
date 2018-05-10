@@ -66,8 +66,9 @@ public class dashboard_shared extends TestInit {
 		login("gx4@shimo.im", "123123");
 	    click(dashboard_4);
 		moveToElement(dashboard_share_file_1);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")));
-		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
+//		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")));
+//		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
+		click(dashboard_share_file_favorites);
 		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='tile-inner']//div//a//div[2]")));
 		String text=driver.findElement(By.xpath("//div[@class='tile-inner']//div//a//div[2]")).getText();
@@ -77,7 +78,8 @@ public class dashboard_shared extends TestInit {
 		click(dashboard);
 	    click(dashboard_4);
 		moveToElement(dashboard_share_file_1);
-		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
+//		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div[2]//div[1]//div[2]")).click();
+		click(dashboard_share_file_favorites);
 		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
 		String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();

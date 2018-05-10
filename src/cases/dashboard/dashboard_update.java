@@ -114,7 +114,8 @@ public class dashboard_update extends TestInit {
 		click(desktop1_1);
 		click(doc_edit);
 		doc_edit.clear();
-		sendKeys(doc_edit,"哈哈");
+		sendKeys(doc_edit,"哈哈哈哈哈哈哈哈哈哈哈哈哈哈");
+//		Thread.sleep(1000);
 		click(doc_discuss);
 		click(doc_discuss_input);
 		sendKeys(doc_discuss_input, "通过");

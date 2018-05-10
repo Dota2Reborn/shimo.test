@@ -66,8 +66,14 @@
 			{
 				"elementName": "dashboard_share_file_1",
 				"locateUsing": "xpath",
-				"locator": "//*[@role='rowgroup']/div[2]/div/div[1]/div/div",
+				"locator": "//*[@class='category-card-container'][1]",
 				"note": "工作台第一行第一个文件"
+			},
+			{
+				"elementName": "dashboard_share_file_favorites",
+				"locateUsing": "xpath",
+				"locator": "//*[@id='content']/div/div/div/div/div/div[2]/div/div/div[2]/div/div/div/a/div/div[1]/div[2]/div[1]/div[2]/*[name()='svg']",
+				"note": "工作台第一行第一个文件收藏按钮"
 			},
 			{
 				"elementName": "dashboard_share_file_2",
