@@ -1,46 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="shimo" parallel="tests" thread-count="5">
-	<listeners>  
-        <listener class-name="testNG.RetryListener"></listener> 
-        <listener class-name="testNG.TestListener"></listener>  
-		</listeners>   
+<suite name="shimo" parallel="tests" thread-count="6">
+	<listeners>
+		<listener class-name="testNG.RetryListener"></listener>
+		<listener class-name="testNG.TestListener"></listener>
+	</listeners>
 	<parameter name="browser" value="chrome" />
 	<parameter name="nodeIp" value="http://localhost:4444" />
 	<parameter name="local" value="false" />
-		
-	<test name="collection">
-		 <packages>
-			<package name="cases.collection.*" />
-		</packages> 
+	<test name="test1">
+		<classes>
+			<class name="cases.dashboard.dashboard_own" />
+			<class name="cases.dashboard.dashboard_shared" />
+		</classes>
 	</test>
-	<test name="dashboard">
-		 <packages>
-			<package name="cases.dashboard.*" />
-		</packages> 
-		<!-- <classes> -->
-            <!-- <class name="cases.testAddCollaborator" />  -->
-           <!-- <class name="cases.testNotice" /> -->
-           <!-- <class name="cases.testDesktop" /> -->
-            <!--<class name="cases.testDashboard" /> -->
-        <!-- </classes> -->
+	<test name="test2">
+		<classes>
+			<class name="cases.dashboard.dashboard_update" />
+			<class name="cases.dashboard.dashboard_used" />
+			<class name="cases.dashboard.testDashboard" />
+		</classes>
 	</test>
-	<test name="desktop">
-		 <packages>
-			<package name="cases.desktop.*" />
-		</packages> 
+	<test name="test3">
+		<classes>
+			<class name="cases.desktop.testDesktop" />
+		</classes>
 	</test>
-	<test name="loginRegistered">
-		 <packages>
-			<package name="cases.loginRegistered.*" />
-			<package name="cases.recycle.*" />
-			<package name="cases.docSheet.*" />
-			<package name="cases.collaborator.*" />
-		</packages> 
+	<test name="test4">
+		<classes>
+			<class name="cases.management.testCompanyManagement" />
+		</classes>
 	</test>
-	<test name="management">
-		 <packages>
-			<package name="cases.management.*" />
-		</packages> 
+	<test name="test5">
+		<classes>
+			<class name="cases.desktop.hovertest" />
+			<class name="cases.desktop.testAlertMute" />
+			<class name="cases.desktop.testDesktopOrderBy" />
+			<class name="cases.desktop.testNotice" />
+			<class name="cases.desktop.testSearch" />
+		</classes>
+	</test>
+	<test name="test6">
+		<classes>
+			<class name="cases.collection.testCollection" />
+			<class name="cases.loginRegistered.login_error" />
+			<class name="cases.loginRegistered.testRegistered" />
+			<class name="cases.recycle.testRecycleBin" />
+			<class name="cases.docSheet.testMenu_Doc_Sheet" />
+			<class name="cases.collaborator.testAddCollaborator" />
+			<class name="cases.collaborator.testPermission" />
+		</classes>
 	</test>
 </suite>

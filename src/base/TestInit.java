@@ -65,7 +65,7 @@ public class TestInit extends elementFile {
 
 	@BeforeMethod
 	public void setUp() throws Exception {
-		System.out.println("--------------------------------------------");
+//		System.out.println("--------------------------------------------");
 		String url = driver.getCurrentUrl();
 		if (!url.equals(test_url + "login")) {
 			logout();
@@ -79,7 +79,7 @@ public class TestInit extends elementFile {
 
 	@AfterClass
 	public void lastMethod() {
-		System.out.println("--------------------------------------------");
+//		System.out.println("--------------------------------------------");
 		// 关闭浏览器
 		driver.close();
 		driver.quit();
@@ -93,8 +93,8 @@ public class TestInit extends elementFile {
 	 *
 	 */
 	public void login(String user, String pwd) {
-		className = new Exception().getStackTrace()[1].getMethodName();
-		printLog(className, user);
+//		className = new Exception().getStackTrace()[1].getMethodName();
+//		printLog(className, user);
 
 		if (!driver.getCurrentUrl().equals(test_url + "login")) {
 			driver.navigate().to(test_url + "login");
@@ -119,8 +119,8 @@ public class TestInit extends elementFile {
 	 *
 	 */
 	public void login_error(String user, String pwd) {
-		className = new Exception().getStackTrace()[1].getMethodName();
-		printLog(className, user);
+//		className = new Exception().getStackTrace()[1].getMethodName();
+//		printLog(className, user);
 
 		driver.navigate().to(test_url + "login");
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
