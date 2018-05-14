@@ -2,6 +2,7 @@ package base;
 
 import static org.testng.Assert.assertTrue;
 
+import java.net.MalformedURLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 
 import elementFile.elementFile;
 import testNG.TestListener;
@@ -41,15 +43,19 @@ public class TestInit extends elementFile {
 	String test_url;
 	baseFunc init = new baseFunc();
 	public String className;
+	String browser;
+	String nodeIp;
+	String local;
 
 	public TestInit() {
 
 	}
 
+	@Parameters({ "browser", "nodeIp", "local"})
 	@BeforeClass
-	public void firstMethod() {
+	public void firstMethod(String browser, String nodeIp,String local) throws MalformedURLException {
 		test_url = init.getUrl();
-		driver = init.initData(this);
+		driver = init.initData(this, browser, nodeIp, local);
 		action = new Actions(driver);
 		driver.navigate().to(test_url + "login");
 		// driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);

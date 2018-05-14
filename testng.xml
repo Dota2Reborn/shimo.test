@@ -1,23 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="shimo" parallel="none">
+<suite name="shimo" parallel="tests" thread-count="5">
 	<listeners>  
         <listener class-name="testNG.RetryListener"></listener> 
         <listener class-name="testNG.TestListener"></listener>  
 		</listeners>   
-
-	<test name="Desktop">
+	<parameter name="browser" value="chrome" />
+	<parameter name="nodeIp" value="http://10.0.1.31:4444" />
+	<parameter name="local" value="false" />
+		
+	<test name="collection">
 		 <packages>
-			<package name="cases.*" />
+			<package name="cases.collection.*" />
 		</packages> 
-		<classes>
+	</test>
+	<test name="dashboard">
+		 <packages>
+			<package name="cases.dashboard.*" />
+		</packages> 
+		<!-- <classes> -->
             <!-- <class name="cases.testAddCollaborator" />  -->
            <!-- <class name="cases.testNotice" /> -->
            <!-- <class name="cases.testDesktop" /> -->
             <!--<class name="cases.testDashboard" /> -->
-        </classes>
-        
-        
-	</test> <!-- Test -->
-	
-</suite> <!-- Suite -->
+        <!-- </classes> -->
+	</test>
+	<test name="desktop">
+		 <packages>
+			<package name="cases.desktop.*" />
+		</packages> 
+	</test>
+	<test name="loginRegistered">
+		 <packages>
+			<package name="cases.loginRegistered.*" />
+			<package name="cases.recycle.*" />
+			<package name="cases.docSheet.*" />
+			<package name="cases.collaborator.*" />
+		</packages> 
+	</test>
+	<test name="management">
+		 <packages>
+			<package name="cases.management.*" />
+		</packages> 
+	</test>
+</suite>

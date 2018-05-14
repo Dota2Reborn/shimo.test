@@ -427,7 +427,7 @@ public class testDesktop extends TestInit {
 		click(desktop);
 
 		WebElement uploadButton = desktop_import;
-		String url = System.getProperty("user.dir") + "/doc/test_doc.doc";
+		String url = System.getProperty("user.dir") + "\\doc\\test_doc.doc";
 		System.out.println(url);
 		uploadButton.sendKeys(url);
 
@@ -456,7 +456,7 @@ public class testDesktop extends TestInit {
 		click(desktop);
 
 		WebElement uploadButton = desktop_import;
-		String url = System.getProperty("user.dir") + "/doc/test_docx.docx";
+		String url = System.getProperty("user.dir") + "\\doc\\test_docx.docx";
 		System.out.println(url);
 		uploadButton.sendKeys(url);
 
@@ -485,7 +485,7 @@ public class testDesktop extends TestInit {
 		click(desktop);
 
 		WebElement uploadButton = desktop_import;
-		String url = System.getProperty("user.dir") + "/doc/test_sheet.xlsx";
+		String url = System.getProperty("user.dir") + "\\doc\\test_sheet.xlsx";
 		System.out.println(url);
 		uploadButton.sendKeys(url);
 
