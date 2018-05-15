@@ -7,7 +7,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariOptions;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.FieldDecorator;
@@ -48,28 +51,41 @@ public class baseFunc {
 				driver = new ChromeDriver(option);
 			}
 		} else {
-			// DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-			// capabilities.setBrowserName("chrome");
-			// capabilities.setVersion("66");
-			// capabilities.setPlatform(Platform.WINDOWS);
-
-			ChromeOptions option = new ChromeOptions();
-			option.addArguments("disable-infobars");
-			option.setCapability("browserName", "chrome");
-			option.setCapability("version", "66");
-			option.setCapability("plaform", "WINDOWS");
-			option.setCapability("chrome_binary", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\");
-			URL remoteAddress = new URL(nodeIp + "/wd/hub");
-			driver = new RemoteWebDriver(remoteAddress, option);
+			if (browser.equals("ie")) {
+				InternetExplorerOptions option = new InternetExplorerOptions();
+				option.setCapability("browserName", "IE");
+				option.setCapability("version", "11");
+				option.setCapability("plaform", "WINDOWS");
+				URL remoteAddress = new URL(nodeIp + "/wd/hub");
+				driver = new RemoteWebDriver(remoteAddress, option);
+			} else if (browser.equals("safari")) {
+				SafariOptions option = new SafariOptions();
+				option.setCapability("browserName", "safari");
+				option.setCapability("version", "");
+				option.setCapability("plaform", "MAC");
+				URL remoteAddress = new URL(nodeIp + "/wd/hub");
+				driver = new RemoteWebDriver(remoteAddress, option);
+			} else if (browser.equals("firefox")) {
+				FirefoxOptions option = new FirefoxOptions();
+				option.addArguments("disable-infobars");
+				option.setCapability("browserName", "firefox");
+				option.setCapability("version", "60");
+				option.setCapability("plaform", "WINDOWS");
+				URL remoteAddress = new URL(nodeIp + "/wd/hub");
+				driver = new RemoteWebDriver(remoteAddress, option);
+			} else {
+				ChromeOptions option = new ChromeOptions();
+				option.addArguments("disable-infobars");
+				option.setCapability("browserName", "chrome");
+				option.setCapability("version", "66");
+				option.setCapability("plaform", "WINDOWS");
+				URL remoteAddress = new URL(nodeIp + "/wd/hub");
+				driver = new RemoteWebDriver(remoteAddress, option);
+			}
+			// option.setCapability("chrome_binary", "C:\\Program Files
+			// (x86)\\Google\\Chrome\\Application\\");
 		}
 
-		// ChromeOptions option = new ChromeOptions();
-		// FirefoxOptions option = new FirefoxOptions();
-		// SafariOptions option = new SafariOptions();
-		// option.merge(capabilities);
-		// option.addArguments("--test-type", "--start-maximized");
-		// option.setCapability("marionette", true);
-		// option.addArguments("disable-infobars");
 		driver.manage().window().maximize();
 		ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
 		FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
