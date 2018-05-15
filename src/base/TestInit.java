@@ -166,7 +166,9 @@ public class TestInit extends elementFile {
 	 */
 	public void logout() {
 		try {
-			driver.navigate().to(test_url + "logout");
+			driver.manage().deleteAllCookies();
+			driver.navigate().to(test_url + "login");
+//			driver.navigate().to(test_url + "logout");
 			driver.switchTo().alert().accept();
 			// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 			action.sendKeys(Keys.ESCAPE);

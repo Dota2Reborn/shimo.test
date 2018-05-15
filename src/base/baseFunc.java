@@ -58,8 +58,8 @@ public class baseFunc {
 			option.setCapability("browserName", "chrome");
 			option.setCapability("version", "66");
 			option.setCapability("plaform", "WINDOWS");
+			option.setCapability("chrome_binary", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\");
 			URL remoteAddress = new URL(nodeIp + "/wd/hub");
-			// driver = new RemoteWebDriver(remoteAddress,capabilities);
 			driver = new RemoteWebDriver(remoteAddress, option);
 		}
 
