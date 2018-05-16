@@ -19,7 +19,6 @@
 	<parameter name="nodeIp" value="http://localhost:4444" />
 	<parameter name="local" value="false" />
 		<classes>
-			<!-- <class name="cases.dashboard.dashboard_update" /> -->
 			<class name="cases.dashboard.dashboard_used" />
 			<class name="cases.dashboard.testDashboard" />
 		</classes>
@@ -61,6 +60,7 @@
 			<class name="cases.loginRegistered.login_error" />
 			<class name="cases.loginRegistered.testRegistered" />
 			<class name="cases.recycle.testRecycleBin" />
+			<class name="cases.dashboard.dashboard_update" />
 		</classes>
 	</test>
 	<test name="test7">
