@@ -60,7 +60,7 @@
 			<class name="cases.loginRegistered.login_error" />
 			<class name="cases.loginRegistered.testRegistered" />
 			<class name="cases.recycle.testRecycleBin" />
-			<class name="cases.dashboard.dashboard_update" />
+			<!-- <class name="cases.dashboard.dashboard_update" /> -->
 		</classes>
 	</test>
 	<test name="test7">
