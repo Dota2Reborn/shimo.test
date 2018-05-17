@@ -49,6 +49,10 @@ public class baseFunc {
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("disable-infobars");
 				driver = new ChromeDriver(option);
+			}else {
+				ChromeOptions option = new ChromeOptions();
+				option.addArguments("disable-infobars");
+				driver = new ChromeDriver(option);
 			}
 		} else {
 			if (browser.equals("ie")) {
