@@ -38,7 +38,6 @@ public class dashboard_shared extends TestInit {
 	    login("gx2@shimo.im", "123123");
 	    click(dashboard_4);
 	    wait.until(ExpectedConditions.elementToBeClickable(menu_Point_Menu));
-	    boolean a = driver.findElement(By.xpath("//div[@class='card-ribbon']")).isDisplayed();
 	    boolean b = driver.findElement(By.xpath("//div[@class='card-icon']//div")).isDisplayed();//卡片图标
 	    boolean c = driver.findElement(By.xpath("//div[@class='card-icon']//span")).isDisplayed();//卡片图标
 	    boolean text = driver.findElement(By.xpath("//div[@class='card-content-title']//div[1]")).getText().equals("无标题");
@@ -48,7 +47,7 @@ public class dashboard_shared extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
 		boolean d = driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).isDisplayed();
 		boolean e = driver.findElement(By.xpath("//div[@class='file-options-icon']")).isDisplayed();
-		assertTrue(a||b||c||text||text1||d||e);
+		assertTrue(b||c||text||text1||d||e);
 		Thread.sleep(200);
 		contextClick(dashboard_update_name);;
 		click(menu_delete);
