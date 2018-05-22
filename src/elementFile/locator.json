@@ -662,8 +662,8 @@
 			},
 			{
 				"elementName": "doc_menu",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-dropdown-button operations inactive']",
+				"locateUsing": "className",
+				"locator": "options-icon",
 				"note": "文档编辑页面中右上角 点点点"
 			},
 			{
