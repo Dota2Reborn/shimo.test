@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="shimo" parallel="tests" thread-count="2">
+<suite name="shimo" parallel="tests" thread-count="7">
 	<listeners>
 		<listener class-name="testNG.RetryListener"></listener>
 		<listener class-name="testNG.TestListener"></listener>
@@ -60,7 +60,7 @@
 			<class name="cases.loginRegistered.login_error" />
 			<class name="cases.loginRegistered.testRegistered" />
 			<class name="cases.recycle.testRecycleBin" />
-			<!-- <class name="cases.dashboard.dashboard_update" /> -->
+			<class name="cases.dashboard.dashboard_update" />
 		</classes>
 	</test>
 	<test name="test7">
