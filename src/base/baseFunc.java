@@ -82,7 +82,7 @@ public class baseFunc {
 				option.addArguments("disable-infobars");
 				option.setCapability("browserName", "chrome");
 				option.setCapability("version", "66");
-				option.setCapability("plaform", "WINDOWS");
+				option.setCapability("plaform", "MAC");
 				URL remoteAddress = new URL(nodeIp + "/wd/hub");
 				driver = new RemoteWebDriver(remoteAddress, option);
 			}
