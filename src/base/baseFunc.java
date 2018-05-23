@@ -80,7 +80,7 @@ public class baseFunc {
 			} else {
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("disable-infobars");
-				option.addArguments("--kiosk");
+//				option.addArguments("--kiosk");
 				option.setCapability("browserName", "chrome");
 				option.setCapability("version", "66");
 				option.setCapability("plaform", "MAC");
