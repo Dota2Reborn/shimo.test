@@ -37,10 +37,13 @@ public class TestListener implements ITestListener {
 
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		TestInit tb = (TestInit) result.getInstance();
-		WebDriver driver = tb.getDriver();
-		ScreenShot st = new ScreenShot(driver);
-		st.removePic(result.getMethod().getMethodName());
+		String className = result.getMethod().getRealClass().toString();
+		if(!className.startsWith("class ui.test")) {
+			TestInit tb = (TestInit) result.getInstance();
+			WebDriver driver = tb.getDriver();
+			ScreenShot st = new ScreenShot(driver);
+			st.removePic(result.getMethod().getMethodName());
+		}
 	}
 
 	public void onTestFailure(ITestResult result) {

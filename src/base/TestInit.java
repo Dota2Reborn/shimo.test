@@ -510,5 +510,18 @@ public class TestInit extends elementFile {
 	public void waitFor() {
 
 	}
-
+	
+	/**
+	 * UI像素比对截图
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-05-23
+	 *
+	 */
+	public void screenShot() {
+		String className = new Exception().getStackTrace()[1].getMethodName();
+		ScreenShot st = new ScreenShot(driver);
+		st.takeScreenshot(className);
+	}
+	
 }
