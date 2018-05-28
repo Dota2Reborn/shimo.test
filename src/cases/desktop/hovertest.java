@@ -289,7 +289,7 @@ public class hovertest extends TestInit {
 		click(desktop_user_icon_status_L);
 		switchToPage(1);
 		Boolean r3 = driver.getCurrentUrl().equals("https://release.shimodev.com/enterprise/billing");
-		assertTrue(r1 || r2 || r3 || r4);
+		assertTrue(r1 && r2 && r3 && r4);
 
 	}
 
@@ -308,7 +308,7 @@ public class hovertest extends TestInit {
 		Boolean r1 = getText(desktop_user_icon_status_L).equals("基础版");
 		Boolean r2 = getText(desktop_user_icon_status_R).equals("续费或升级到企业版");
 
-		assertTrue(r1 || r2);
+		assertTrue(r1 && r2);
 	}
 
 	/**
@@ -397,7 +397,7 @@ public class hovertest extends TestInit {
 		Boolean r3 = driver.getCurrentUrl()
 				.equals("https://itunes.apple.com/cn/app/shi-mo-wen-dang-zui-mei-xie/id1013727678?l=en&mt=8");
 
-		assertTrue(r1 || r2 || r3);
+		assertTrue(r1 && r2 && r3);
 	}
 
 	/**
@@ -416,7 +416,7 @@ public class hovertest extends TestInit {
 		Boolean r1 = getText(desktop_user_icon_status_L).equals("购买企业版");
 		Boolean r2 = getText(desktop_user_icon_status_R).equals("企业版已过期");
 
-		assertTrue(r1 || r2);
+		assertTrue(r1 && r2);
 	}
 
 	/**

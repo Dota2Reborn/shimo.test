@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariOptions;
@@ -42,13 +43,20 @@ public class baseFunc {
 		if (local.equals("true")) {
 			os = System.getProperties().getProperty("os.name");
 			Preconditions.checkArgument(StringUtils.isNotEmpty(os), "OS info is missing.");
-			if (os.startsWith("Windows")) {
+			if (os.startsWith("Windows")&&browser.equals("chrome")) {
 				System.setProperty("webdriver.chrome.driver",
 						"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("disable-infobars");
 				driver = new ChromeDriver(option);
+			} else if(os.startsWith("Windows")&&browser.equals("firefox")){
+				System.setProperty("webdriver.gecko.driver",
+						"D:\\软件\\Mozilla Firefox\\geckodriver.exe");
+				FirefoxOptions option = new FirefoxOptions();
+				option.addArguments("disable-infobars");
+				option.setBinary("D:\\软件\\Mozilla Firefox\\firefox.exe");
+				driver = new FirefoxDriver(option);
 			}else {
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("disable-infobars");
@@ -67,6 +75,8 @@ public class baseFunc {
 				option.setCapability("browserName", "safari");
 				option.setCapability("version", "11");
 				option.setCapability("plaform", "MAC");
+				option.setCapability("javascriptEnabled", true);
+				option.useCleanSession(true);
 				URL remoteAddress = new URL(nodeIp + "/wd/hub");
 				driver = new RemoteWebDriver(remoteAddress, option);
 			} else if (browser.equals("firefox")) {
@@ -74,16 +84,16 @@ public class baseFunc {
 				option.addArguments("disable-infobars");
 				option.setCapability("browserName", "firefox");
 				option.setCapability("version", "60");
-				option.setCapability("plaform", "WINDOWS");
+				option.setCapability("plaform", "ANY");
 				URL remoteAddress = new URL(nodeIp + "/wd/hub");
 				driver = new RemoteWebDriver(remoteAddress, option);
 			} else {
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("disable-infobars");
-//				option.addArguments("--kiosk");
+				// option.addArguments("--kiosk");
 				option.setCapability("browserName", "chrome");
 				option.setCapability("version", "66");
-				option.setCapability("plaform", "MAC");
+				option.setCapability("plaform", "ANY");
 				URL remoteAddress = new URL(nodeIp + "/wd/hub");
 				driver = new RemoteWebDriver(remoteAddress, option);
 			}

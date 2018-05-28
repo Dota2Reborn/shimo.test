@@ -59,7 +59,7 @@ public class TestInit extends elementFile {
 		action = new Actions(driver);
 		driver.navigate().to(test_url + "login");
 		// driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		wait = new WebDriverWait(driver, 6);
 	}
 
@@ -81,7 +81,7 @@ public class TestInit extends elementFile {
 	public void lastMethod() {
 //		System.out.println("--------------------------------------------");
 		// 关闭浏览器
-		driver.close();
+//		driver.close();
 		driver.quit();
 	}
 
@@ -102,12 +102,7 @@ public class TestInit extends elementFile {
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		sendKeys(userEmail, user);
 		sendKeys(userPwd, pwd);
-		try {
-			click(login_submit);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		click(login_submit);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
 	}
 
@@ -127,12 +122,7 @@ public class TestInit extends elementFile {
 		userEmail.sendKeys(user);
 		userPwd.sendKeys(pwd);
 		// login_submit.click();
-		try {
-			click(login_submit);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		click(login_submit);
 	}
 
 	/**
@@ -167,8 +157,8 @@ public class TestInit extends elementFile {
 	public void logout() {
 		try {
 			driver.manage().deleteAllCookies();
-//			driver.navigate().to(test_url + "login");
-			driver.navigate().to(test_url + "logout");
+			driver.navigate().to(test_url + "login");
+//			driver.navigate().to(test_url + "logout");
 			driver.switchTo().alert().accept();
 			// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 			action.sendKeys(Keys.ESCAPE);
@@ -320,7 +310,7 @@ public class TestInit extends elementFile {
 	 * @Time 2018-03-23
 	 * 
 	 */
-	public void click(WebElement element) throws InterruptedException {
+	public void click(WebElement element) {
 		try {
 			if (element.toString().equals(b_back.toString()) || element.toString().equals(Back_to_Table.toString())
 					|| element.toString().equals(Back_to_Desktop.toString())
@@ -372,7 +362,12 @@ public class TestInit extends elementFile {
 			System.out.println("javascript Error:" + e.getMessage());
 			assertTrue(false);
 		} finally {
-			Thread.sleep(100);
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			checkPageIsReady();
 		}
 	}

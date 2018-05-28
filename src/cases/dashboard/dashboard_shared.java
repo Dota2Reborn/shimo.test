@@ -47,7 +47,7 @@ public class dashboard_shared extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
 		boolean d = driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).isDisplayed();
 		boolean e = driver.findElement(By.xpath("//div[@class='file-options-icon']")).isDisplayed();
-		assertTrue(b||c||text||text1||d||e);
+		assertTrue(b&&c&&text&&text1&&d&&e);
 		Thread.sleep(200);
 		contextClick(dashboard_update_name);;
 		click(menu_delete);
@@ -111,7 +111,7 @@ public class dashboard_shared extends TestInit {
         boolean text10 = getText(menu_rename).equals("重命名");
 	    boolean text11 = getText(menu_creatCopy).equals("创建副本");
 	    boolean  text13 = getText(menu_delete).equals("删除");
-	    assertTrue(text1||text2||text3||text4||text6||text7||text9||text10||text11||text13);
+	    assertTrue(text1&&text2&&text3&&text4&&text6&&text7&&text9&&text10&&text11&&text13);
 	    
 	    
 	    

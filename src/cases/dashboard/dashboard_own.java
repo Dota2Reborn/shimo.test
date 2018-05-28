@@ -22,7 +22,7 @@ public class dashboard_own extends TestInit {
 		login("own2@shimo.im", "123123");
 		click(dashboard_3);
 
-		moveToElement(dashboard_update_name);
+		moveToElement(dashboard_share_file_1);
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
 				.click();// hover收藏
 		click(favorites);
@@ -31,7 +31,7 @@ public class dashboard_own extends TestInit {
 
 		click(dashboard);
 		click(dashboard_3);
-		moveToElement(dashboard_update_time);
+		moveToElement(dashboard_share_file_1);
 		driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
 				.click();
 		click(favorites);
@@ -67,7 +67,7 @@ public class dashboard_own extends TestInit {
 		boolean text10 = getText(menu_rename).equals("重命名");
 		boolean text11 = getText(menu_creatCopy).equals("创建副本");
 		boolean text13 = getText(menu_delete).equals("删除");
-		assertTrue(text1 || text2 || text3 || text4 || text6 || text7 || text9 || text10 || text11 || text13);
+		assertTrue(text1 && text2 && text3 && text4 && text6 && text7 && text9 && text10 && text11 && text13);
 
 	}
 

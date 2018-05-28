@@ -32,7 +32,7 @@ public class dashboard_update extends TestInit {
 		boolean text10 = getText(menu_rename).equals("重命名");
 		boolean text11 = getText(menu_creatCopy).equals("创建副本");
 		boolean text13 = getText(menu_delete).equals("删除");
-		assertTrue(text1 || text2 || text3 || text4 || text6 || text7 || text9 || text10 || text11 || text13);
+		assertTrue(text1 && text2 && text3 && text4 && text6 && text7 && text9 && text10 && text11 && text13);
 	}
 
 	/**
