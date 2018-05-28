@@ -65,7 +65,7 @@ public class baseFunc {
 			} else if (browser.equals("safari")) {
 				SafariOptions option = new SafariOptions();
 				option.setCapability("browserName", "safari");
-				option.setCapability("version", "");
+				option.setCapability("version", "11");
 				option.setCapability("plaform", "MAC");
 				URL remoteAddress = new URL(nodeIp + "/wd/hub");
 				driver = new RemoteWebDriver(remoteAddress, option);

@@ -3,7 +3,6 @@ package ui.test;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
-import base.ScreenShot;
 import base.TestInit;
 
 public class uiDashboard extends TestInit {
