@@ -7,6 +7,7 @@
 	<parameter name="local" value="false" />
 		<classes>
 			<class name="ui.test.uiDashboard" />
+			<class name="ui.test.uiDesktop" />
 		</classes>
 	</test>
 </suite>
