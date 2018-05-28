@@ -67,7 +67,7 @@
 				"elementName": "dashboard_share_file_1",
 				"locateUsing": "xpath",
 				"locator": "(//div[@class='category-card-container'])[1]",
-				"note": "工作台第一行第一个文件"
+				"note": "工作台第一个文件"
 			},
 			{
 				"elementName": "dashboard_share_file_favorites",
@@ -79,7 +79,7 @@
 				"elementName": "dashboard_share_file_2",
 				"locateUsing": "xpath",
 				"locator": "(//div[@class='category-card-container'])[2]",
-				"note": "工作台第一行第二个文件"
+				"note": "工作台第二个文件"
 			},
 			{
 				"elementName": "New_Share_1",
