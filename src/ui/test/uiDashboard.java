@@ -24,10 +24,12 @@ public class uiDashboard extends TestInit {
 	public void pic_dashboard_2() throws InterruptedException {
 		login("UITest@shimo.im", "123123");
 		click(dashboard_2);
-
+//file-title
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript(
 				"document.querySelectorAll('.divider-label-wrapper').forEach(node => node.innerHTML = '1月27日')");
+		js.executeScript(
+				"document.querySelectorAll('.file-title').forEach(node => node.innerHTML = 'test')");
 		js.executeScript(
 				"document.querySelectorAll('.card-content-update').forEach(node => node.innerHTML = '1月27日 14:45 我 打开')");
 		js.executeScript(
