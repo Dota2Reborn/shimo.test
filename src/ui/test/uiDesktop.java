@@ -41,4 +41,13 @@ public class uiDesktop extends TestInit{
 		
 		screenShot();
 	}
+	
+	@Test
+	public void pic_Desktop_5() throws InterruptedException {
+		login("UITest@shimo.im", "123123");
+		click(desktop);
+		moveToElement(desktop_user_icon);
+		Thread.sleep(500);
+		screenShot();
+	}
 }
