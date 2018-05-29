@@ -8,10 +8,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariOptions;
-import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.FieldDecorator;
@@ -55,6 +58,15 @@ public class baseFunc {
 						"D:\\软件\\Mozilla Firefox\\geckodriver.exe");
 				FirefoxOptions option = new FirefoxOptions();
 				option.addArguments("disable-infobars");
+				option.addPreference("browser.startup.page", 1);
+				option.addPreference("browser.startup.homepage", "about:blank");
+//				option.setHeadless(true);
+				ProfilesIni pi = new ProfilesIni();
+//				File profile_directory = new File("C:\\Users\\LiuC\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\95djexwa.default");
+//				FirefoxProfile profile = new FirefoxProfile(profile_directory);
+				FirefoxProfile profile = pi.getProfile("default");
+				option.setProfile(profile);
+				option.setLogLevel(FirefoxDriverLogLevel.ERROR);
 				option.setBinary("D:\\软件\\Mozilla Firefox\\firefox.exe");
 				driver = new FirefoxDriver(option);
 			}else {
@@ -90,6 +102,7 @@ public class baseFunc {
 			} else {
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("disable-infobars");
+//				option.addArguments("--headless");
 				// option.addArguments("--kiosk");
 				option.setCapability("browserName", "chrome");
 				option.setCapability("version", "66");

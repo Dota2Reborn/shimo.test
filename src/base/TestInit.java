@@ -100,6 +100,8 @@ public class TestInit extends elementFile {
 			driver.navigate().to(test_url + "login");
 		}
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
+		userEmail.clear();
+		userPwd.clear();
 		sendKeys(userEmail, user);
 		sendKeys(userPwd, pwd);
 		click(login_submit);
