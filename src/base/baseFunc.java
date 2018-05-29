@@ -52,6 +52,7 @@ public class baseFunc {
 
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("disable-infobars");
+//				option.addArguments("--headless");
 				driver = new ChromeDriver(option);
 			} else if(os.startsWith("Windows")&&browser.equals("firefox")){
 				System.setProperty("webdriver.gecko.driver",
@@ -102,7 +103,7 @@ public class baseFunc {
 			} else {
 				ChromeOptions option = new ChromeOptions();
 				option.addArguments("disable-infobars");
-//				option.addArguments("--headless");
+				option.addArguments("--headless");
 				// option.addArguments("--kiosk");
 				option.setCapability("browserName", "chrome");
 				option.setCapability("version", "66");

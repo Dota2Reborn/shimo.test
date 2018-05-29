@@ -396,7 +396,7 @@ public class hovertest extends TestInit {
 		click(download_IOS);
 		Boolean r3 = driver.getCurrentUrl()
 				.equals("https://itunes.apple.com/cn/app/shi-mo-wen-dang-zui-mei-xie/id1013727678?l=en&mt=8");
-
+		driver.navigate().back();
 		assertTrue(r1 && r2 && r3);
 	}
 
