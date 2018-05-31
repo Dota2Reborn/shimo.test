@@ -10,6 +10,7 @@ public class uiDashboard extends TestInit {
 	@Test
 	public void pic_dashboard_1() throws InterruptedException {
 		login("UITest@shimo.im", "123123");
+		Thread.sleep(500);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript(
 				"document.querySelectorAll('.divider-label-wrapper').forEach(node => node.innerHTML = '1月27日')");
@@ -24,6 +25,7 @@ public class uiDashboard extends TestInit {
 	public void pic_dashboard_2() throws InterruptedException {
 		login("UITest@shimo.im", "123123");
 		click(dashboard_2);
+		Thread.sleep(500);
 //file-title
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript(
@@ -42,6 +44,7 @@ public class uiDashboard extends TestInit {
 	public void pic_dashboard_3() throws InterruptedException {
 		login("UITest@shimo.im", "123123");
 		click(dashboard_3);
+		Thread.sleep(500);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript(
@@ -57,6 +60,7 @@ public class uiDashboard extends TestInit {
 	public void pic_dashboard_4() throws InterruptedException {
 		login("UITest@shimo.im", "123123");
 		click(dashboard_4);
+		Thread.sleep(500);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript(

@@ -10,6 +10,7 @@ public class uiDesktop extends TestInit{
 	public void pic_Desktop_1() throws InterruptedException {
 		login("UITest@shimo.im", "123123");
 		click(desktop);
+		Thread.sleep(500);
 		
 		screenShot();
 	}
@@ -19,6 +20,7 @@ public class uiDesktop extends TestInit{
 		login("UITest@shimo.im", "123123");
 		click(desktop);
 		click(desktop_show_type);
+		Thread.sleep(500);
 		
 		screenShot();
 	}
@@ -28,6 +30,7 @@ public class uiDesktop extends TestInit{
 		login("UITest@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1_folder);
+		Thread.sleep(500);
 		
 		screenShot();
 	}
@@ -38,6 +41,7 @@ public class uiDesktop extends TestInit{
 		click(desktop);
 		click(desktop1_1_folder);
 		click(desktop_show_type);
+		Thread.sleep(500);
 		
 		screenShot();
 	}
