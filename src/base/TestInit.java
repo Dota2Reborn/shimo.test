@@ -101,8 +101,8 @@ public class TestInit extends elementFile {
 		}
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.clear();
-		userPwd.clear();
 		sendKeys(userEmail, user);
+		userPwd.clear();
 		sendKeys(userPwd, pwd);
 		click(login_submit);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
@@ -136,8 +136,6 @@ public class TestInit extends elementFile {
 	 */
 	public void Registered(String name, String user, String pwd, int yanzheng) {
 		if (yanzheng == 1) {
-			String className = new Exception().getStackTrace()[1].getMethodName();
-			printLog(className, className);
 			driver.navigate().to(test_url + "register");
 			wait.until(ExpectedConditions.elementToBeClickable(Next));
 			userName.sendKeys(name);
@@ -162,7 +160,6 @@ public class TestInit extends elementFile {
 			driver.navigate().to(test_url + "login");
 //			driver.navigate().to(test_url + "logout");
 			driver.switchTo().alert().accept();
-			// driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 			action.sendKeys(Keys.ESCAPE);
 		} catch (UnhandledAlertException e) {
 			// 报错
@@ -516,6 +513,12 @@ public class TestInit extends elementFile {
 	 *
 	 */
 	public void screenShot() {
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		String className = new Exception().getStackTrace()[1].getMethodName();
 		ScreenShot st = new ScreenShot(driver);
 		st.takeScreenshot(className);
