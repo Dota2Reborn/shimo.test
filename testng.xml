@@ -7,7 +7,7 @@
 	</listeners>
 	<test name="test1">
 	<parameter name="browser" value="chrome" />
-	<parameter name="nodeIp" value="http://10.18.19.36:4444" />
+	<parameter name="nodeIp" value="http://192.168.255.130:4444" />
 	<parameter name="local" value="false" />
 		<classes>
 			<class name="cases.dashboard.dashboard_own" />
@@ -17,7 +17,7 @@
 	</test>
 	<test name="test2">
 	<parameter name="browser" value="chrome" />
-	<parameter name="nodeIp" value="http://10.18.19.36:4444" />
+	<parameter name="nodeIp" value="http://192.168.255.130:4444" />
 	<parameter name="local" value="false" />
 		<classes>
 			<class name="cases.dashboard.testDashboard" />
@@ -26,7 +26,7 @@
 	</test>
 	<test name="test3">
 	<parameter name="browser" value="chrome" />
-	<parameter name="nodeIp" value="http://10.18.19.36:4444" />
+	<parameter name="nodeIp" value="http://192.168.255.130:4444" />
 	<parameter name="local" value="false" />
 		<classes>
 			<class name="cases.desktop.testDesktop" />
@@ -34,7 +34,7 @@
 	</test>
 	<test name="test4">
 	<parameter name="browser" value="chrome" />
-	<parameter name="nodeIp" value="http://10.18.19.36:4444" />
+	<parameter name="nodeIp" value="http://192.168.255.130:4444" />
 	<parameter name="local" value="false" />
 		<classes>
 			<class name="cases.management.testCompanyManagement" />
@@ -42,7 +42,7 @@
 	</test>
 	<test name="test5">
 	<parameter name="browser" value="chrome" />
-	<parameter name="nodeIp" value="http://10.18.19.36:4444" />
+	<parameter name="nodeIp" value="http://192.168.255.130:4444" />
 	<parameter name="local" value="false" />
 		<classes>
 			<class name="cases.desktop.hovertest" />
@@ -52,7 +52,7 @@
 	</test>
 	<test name="test6">
 	<parameter name="browser" value="chrome" />
-	<parameter name="nodeIp" value="http://10.18.19.36:4444" />
+	<parameter name="nodeIp" value="http://192.168.255.130:4444" />
 	<parameter name="local" value="false" />
 		<classes>
 			<class name="cases.dashboard.dashboard_update" />
@@ -61,7 +61,7 @@
 	</test>
 	<test name="test7">
 	<parameter name="browser" value="chrome" />
-	<parameter name="nodeIp" value="http://10.18.19.36:4444" />
+	<parameter name="nodeIp" value="http://192.168.255.130:4444" />
 	<parameter name="local" value="false" />
 		<classes>
 			<class name="cases.collaborator.testAddCollaborator" />
@@ -70,7 +70,7 @@
 	</test>
 	<test name="test8">
 	<parameter name="browser" value="chrome" />
-	<parameter name="nodeIp" value="http://10.18.19.36:4444" />
+	<parameter name="nodeIp" value="http://192.168.255.130:4444" />
 	<parameter name="local" value="false" />
 		<classes>
 			<class name="cases.dashboard.dashboard_used" />
@@ -78,7 +78,7 @@
 	</test>
 	<test name="test9">
 	<parameter name="browser" value="chrome" />
-	<parameter name="nodeIp" value="http://10.18.19.36:4444" />
+	<parameter name="nodeIp" value="http://192.168.255.130:4444" />
 	<parameter name="local" value="false" />
 		<classes>
 			<class name="cases.collection.testCollection" />
