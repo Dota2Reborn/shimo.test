@@ -125,13 +125,13 @@ public class dashboard_update extends TestInit {
 
 		login("gengxin8@shimo.im", "123123");
 		String text1 = getText(dashboard_update_time);
-		assertEquals(text1, "1 评论刚刚 cc 评论：通过");
 		click(dashboard_update_time);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='doc-comment-text']")));
 		driver.findElement(By.xpath("//div[@class='doc-comment-text']")).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='doc-comment-close-icon']")));
 		driver.findElement(By.xpath("//span[@class='doc-comment-close-icon']")).click();
 		click(doc_menu_delete_OK);
+		assertEquals(text1, "1 评论刚刚 cc 评论：通过");
 
 	}
 
