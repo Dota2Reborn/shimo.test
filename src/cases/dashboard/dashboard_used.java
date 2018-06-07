@@ -92,15 +92,15 @@ public class dashboard_used extends TestInit {
 		click(menu_Point_Menu);
 		Thread.sleep(500);
 		String text = driver
-				.findElement(By.xpath("//div[@class='category-card-container']//div//div[2]//div//div//ul//li"))
+				.findElement(By.xpath("(//li[@role='menuitem'])[1]"))
 				.getText();
 		assertEquals(text, "在新标签页中打开");
 		String text2 = driver
-				.findElement(By.xpath("//div[@class='category-card-container']//div//div[2]//div//div//ul//li[2]"))
+				.findElement(By.xpath("(//li[@role='menuitem'])[2]"))
 				.getText();
 		assertEquals(text2, "收藏");
 		String text4 = driver
-				.findElement(By.xpath("//div[@class='category-card-container']//div//div[2]//div//div//ul//li[4]"))
+				.findElement(By.xpath("(//li[@role='menuitem'])[3]"))
 				.getText();
 		assertEquals(text4, "创建副本");
 
