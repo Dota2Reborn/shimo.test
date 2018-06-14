@@ -393,7 +393,7 @@ public class TestInit extends elementFile {
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
 			wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
-			list_addCollaborator_4.click();
+			click(list_addCollaborator_4);
 			assertTrue(false);
 		}
 	}
