@@ -87,7 +87,7 @@ public class testNotice extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(button_addCollaborator);
 
 		sendKeys(input_addCollaborator, "autoTest12@shimo.im");
@@ -121,7 +121,7 @@ public class testNotice extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(button_addCollaborator);
 
 		sendKeys(input_addCollaborator, "autoTest12@shimo.im");

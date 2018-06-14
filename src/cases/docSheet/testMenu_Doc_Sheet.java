@@ -25,6 +25,7 @@ public class testMenu_Doc_Sheet extends TestInit {
 		click(desktop);
 		click(desktop1_1);
 		click(doc_menu);
+		moveToElement(file_menu_help);
 		click(file_menu_msg);
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn confirm-btn btn-ok']")));
@@ -47,6 +48,7 @@ public class testMenu_Doc_Sheet extends TestInit {
 		click(desktop);
 		click(desktop1_1);
 		click(doc_menu);
+		moveToElement(file_menu_help);
 		click(file_menu_msg);
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn confirm-btn btn-ok']")));

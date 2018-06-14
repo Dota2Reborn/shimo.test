@@ -24,7 +24,7 @@ public class testAddCollaborator extends TestInit {
 
 		click(desktop);
 		contextClick(desktop1_1);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
 		Boolean exist = button_addCollaborator.isEnabled();
@@ -44,9 +44,8 @@ public class testAddCollaborator extends TestInit {
 	public void addCollaborator_2() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
 		click(desktop);
-
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 
 		String msg_a = getText(addCollaborator_total);
 		click(button_addCollaborator);
@@ -78,7 +77,7 @@ public class testAddCollaborator extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 
 		String msg_a = getText(addCollaborator_total);
 		click(button_addCollaborator);
@@ -107,7 +106,7 @@ public class testAddCollaborator extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 
 		String msg_a = getText(addCollaborator_total);
 		click(button_addCollaborator);
@@ -131,12 +130,13 @@ public class testAddCollaborator extends TestInit {
 	 * @Time 2017-11-29
 	 *
 	 */
-	@Test(enabled = true)
+	//!!!!!!!!!!!!!!!!!!!!!!!返回按钮取消，需要修正用例
+	@Test(enabled = false)
 	public void addCollaborator_5() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
 		click(desktop);
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		String msg_a = getText(addCollaborator_total);
 		click(button_addCollaborator);
 		click(addCollaborator_1_add);
@@ -158,7 +158,7 @@ public class testAddCollaborator extends TestInit {
 		login("autoTest01@shimo.im", "123123");
 		click(desktop);
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(button_addCollaborator);
 		sendKeys(input_addCollaborator, "autoTest04@shimo.im");
 		Thread.sleep(500);
@@ -169,10 +169,10 @@ public class testAddCollaborator extends TestInit {
 		login("autoTest04@shimo.im", "123123");
 		click(desktop);
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
-		click(b_addCollaborator_confirm);
+//		click(b_addCollaborator_confirm);
 		Thread.sleep(500);
 		String fileName = getText(desktop1_1_folder);
 		assertNotEquals(fileName, "添加协作者测试");
@@ -189,9 +189,9 @@ public class testAddCollaborator extends TestInit {
 	public void addCollaborator_7() throws InterruptedException {
 		login("autoTest03@shimo.im", "123123");
 		click(desktop);
-
+		
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(button_addCollaborator);
 
 		sendKeys(input_addCollaborator, "autoTest04@shimo.im");
@@ -205,10 +205,10 @@ public class testAddCollaborator extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
-		click(b_addCollaborator_confirm);
+//		click(b_addCollaborator_confirm);
 
 		Thread.sleep(500);
 		String fileName = desktop1_1_folder.getText();
@@ -228,7 +228,7 @@ public class testAddCollaborator extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(b_addCollaborator_1_list);
 		click(list_addCollaborator_1);
 		click(list_addCollaborator_changeOwner_1);
@@ -240,7 +240,7 @@ public class testAddCollaborator extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(b_addCollaborator_1_list);
 		click(list_addCollaborator_1);
 		click(list_addCollaborator_changeOwner_1);
@@ -291,7 +291,7 @@ public class testAddCollaborator extends TestInit {
 		login("autoTest01@shimo.im", "123123");
 		click(desktop);
 		contextClick(desktop1_2_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(b_addCollaborator_1_list);
 		click(list_addCollaborator_1);
 		click(list_addCollaborator_changeOwner_1);
@@ -304,7 +304,7 @@ public class testAddCollaborator extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(b_addCollaborator_1_list);
 		click(list_addCollaborator_1);
 		click(list_addCollaborator_changeOwner_1);

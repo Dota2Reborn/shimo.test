@@ -1,7 +1,6 @@
 package cases.management;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.util.List;
@@ -11,223 +10,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import com.google.common.base.Preconditions;
-
 import base.TestInit;
 
 public class testCompanyManagement extends TestInit {
-	/**
-	 * 谁能邀请新成员进企业-所有企业成员
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-01-08
-	 *
-	 */
-	@Test(enabled = true)
-	public void inviteMember_allMember() throws InterruptedException {
-		login("panpan@qq.com", "123123");
-		click(company_Management);
-		switchToPage(1);
-		click(company_setting);
-		click(invite_member);
-		click(invite_member_1);
-		click(invite_member_OK);
-
-		logout();
-		login("amei@qq.com", "123123");
-
-		moveToElement(desktop_user_icon);
-		click(desktop_user_icon_companyManagement);
-		click(addMember);
-
-		wait.until(ExpectedConditions.elementToBeClickable(address_cppy));
-		Boolean clickAble = address_cppy.isDisplayed();
-
-		assertTrue(clickAble);
-	}
-
-	/**
-	 * 谁能邀请新成员进企业-仅企业创建者和管理员
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-01-08
-	 *
-	 */
-	@Test(enabled = true)
-	public void inviteMember_ManagerAndCreater() throws InterruptedException {
-		login("panpan@qq.com", "123123");
-		click(company_Management);
-		switchToPage(1);
-		click(company_setting);
-		click(invite_member);
-		click(invite_member_2);
-		click(invite_member_OK);
-
-		logout();
-		login("amei@qq.com", "123123");
-
-		moveToElement(desktop_user_icon);
-		click(desktop_user_icon_companyManagement);
-		click(addMember);
-		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
-
-		String msg = getText(message_warning);
-		assertEquals(msg, "没有权限，请联系企业管理员添加");
-	}
-
-	/**
-	 * 谁能邀请新成员进企业-仅企业创建者
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-01-08
-	 *
-	 */
-	@Test(enabled = true)
-	public void inviteMember_JustByCreater() throws InterruptedException {
-		login("panpan@qq.com", "123123");
-		click(company_Management);
-		switchToPage(1);
-		click(company_setting);
-		click(invite_member);
-		click(invite_member_3);
-		click(invite_member_OK);
-
-		logout();
-		login("pipi@qq.com", "123123");
-
-		moveToElement(desktop_user_icon);
-		click(desktop_user_icon_companyManagement);
-		click(addMember);
-		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
-
-		String msg = getText(message_warning);
-		assertEquals(msg, "没有权限，请联系企业创建者添加");
-	}
-
-	/**
-	 * 谁能邀请新成员进企业-仅企业创建者
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-01-08
-	 *
-	 */
-	@Test(enabled = true)
-	public void inviteMember_changeCompanyName() throws InterruptedException {
-		String time = getDate();
-
-		login("panpan@qq.com", "123123");
-		click(company_Management);
-		switchToPage(1);
-		click(company_setting);
-		click(button_companyName);
-		wait.until(ExpectedConditions.elementToBeClickable(message_ok));
-		input_companyName.clear();
-		input_companyName.sendKeys(time);
-		click(message_ok);
-
-		wait.until(ExpectedConditions.textToBePresentInElement(text_companyName, time));
-		String companyName = getText(text_companyName);
-
-		assertEquals("您的企业名称为 " + time, companyName);
-
-	}
-
-	/**
-	 * 谁能设置管理员-仅企业创建者
-	 * 
-	 * @author 刘晨
-	 * @Time 2017-01-08
-	 *
-	 */
-	@Test(enabled = true)
-	public void setManager_Creater() throws InterruptedException {
-		login("panpan@qq.com", "123123");
-		click(company_Management);
-		switchToPage(1);
-		click(company_setting);
-		click(setAdmin);
-		click(setAdmin_Creater);
-		click(message_ok);
-
-		logout();
-		login("pipi@qq.com", "123123");
-
-		moveToElement(desktop_user_icon);
-		click(desktop_user_icon_companyManagement);
-		wait.until(ExpectedConditions.elementToBeClickable(addMember));
-
-		List<WebElement> elements = driver.findElements(By.className("member-row"));
-		int number = elements.size(); // 成员列表
-		String kk;
-		String pp;
-		int n = 1;
-		for (int i = 1; i <= number; i++) {
-			kk = "//div[@class='waterfall-inner']//div[" + i + "]//div[@class='action']//div//div[1]//span[1]";
-			pp = driver.findElement(By.xpath(kk)).getText();
-			if (pp.equals("成员")) {
-				n = i;
-				break;
-			}
-		}
-
-		String ii = "//div[@class='waterfall-inner']//div[" + n + "]//div[@class='action']";
-		String jj = "//div[@class='waterfall-inner']//div[" + n + "]//div[@class='action']//div//div[2]//span[1]";
-		driver.findElement(By.xpath(ii)).click();
-		String text = "";
-		text = driver.findElement(By.xpath(jj)).getText();
-		System.out.println(text);
-
-		assertEquals("移除成员", text);
-	}
-
-	/**
-	 * 谁能设置管理员-仅企业创建者和管理者
-	 * 
-	 * @author 刘晨
-	 * @Time 2018-03-05
-	 *
-	 */
-	@Test(enabled = true)
-	public void setManager_ManagerAndCreater() throws InterruptedException {
-		login("panpan@qq.com", "123123");
-		click(company_Management);
-		switchToPage(1);
-		click(company_setting);
-		click(setAdmin);
-		click(setAdmin_ManagerAndCreater);
-		click(message_ok);
-
-		logout();
-		login("pipi@qq.com", "123123");
-
-		moveToElement(desktop_user_icon);
-		click(desktop_user_icon_companyManagement);
-		wait.until(ExpectedConditions.elementToBeClickable(addMember));
-
-		List<WebElement> elements = driver.findElements(By.className("member-row"));
-		int number = elements.size(); // 成员列表
-		String kk;
-		String pp;
-		int n = 1;
-		for (int i = 1; i <= number; i++) {
-			kk = "//div[@class='waterfall-inner']//div[" + i + "]//div[@class='action']//div//div[1]//span[1]";
-			pp = driver.findElement(By.xpath(kk)).getText();
-			if (pp.equals("成员")) {
-				n = i;
-				break;
-			}
-		}
-
-		String ii = "//div[@class='waterfall-inner']//div[" + n + "]//div[@class='action']";
-		String jj = "//div[@class='waterfall-inner']//div[" + n + "]//div[@class='action']//div//div[2]//span[1]";
-		driver.findElement(By.xpath(ii)).click();
-		String text = "";
-		text = driver.findElement(By.xpath(jj)).getText();
-		System.out.println(text);
-
-		assertEquals("设置为管理员", text);
-	}
-
+	
 	/**
 	 * 谁能添加外部协作者-仅企业创建者和管理员
 	 * 
@@ -251,7 +37,7 @@ public class testCompanyManagement extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
@@ -267,7 +53,7 @@ public class testCompanyManagement extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
@@ -276,8 +62,8 @@ public class testCompanyManagement extends TestInit {
 		click(b_addCollaborator_ok);
 
 		Thread.sleep(500);
-		String m1 = driver.findElement(By.className("sm-toast")).getText();
-		Boolean R2 = m1.equals("成功添加 1 个协作者");
+		String m1 = driver.findElement(By.xpath("//div[@class='Toastify__toast-body']//div//span")).getText();
+		Boolean R2 = m1.equals("二蛋 已添加");
 
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
@@ -307,7 +93,7 @@ public class testCompanyManagement extends TestInit {
 
 		click(desktop);
 		contextClick(desktop1_1);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
@@ -316,8 +102,8 @@ public class testCompanyManagement extends TestInit {
 		click(b_addCollaborator_ok);
 
 		Thread.sleep(500);
-		String m1 = driver.findElement(By.className("sm-toast")).getText();
-		Boolean R2 = m1.equals("成功添加 1 个协作者");
+		String m1 = driver.findElement(By.xpath("//div[@class='Toastify__toast-body']//div//span")).getText();
+		Boolean R2 = m1.equals("二蛋 已添加");
 
 //		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
 		click(b_addCollaborator_2_list);
@@ -348,7 +134,7 @@ public class testCompanyManagement extends TestInit {
 
 		click(desktop);
 		contextClick(desktop1_1);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
@@ -362,7 +148,7 @@ public class testCompanyManagement extends TestInit {
 
 		click(desktop);
 		contextClick(desktop1_1);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
@@ -370,8 +156,8 @@ public class testCompanyManagement extends TestInit {
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
 		Thread.sleep(500);
-		String m1 = driver.findElement(By.className("sm-toast")).getText();
-		Boolean R2 = m1.equals("成功添加 1 个协作者");
+		String m1 = driver.findElement(By.xpath("//div[@class='Toastify__toast-body']//div//span")).getText();
+		Boolean R2 = m1.equals("二蛋 已添加");
 
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
@@ -382,7 +168,7 @@ public class testCompanyManagement extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(button_addCollaborator);
 
 		input_addCollaborator.sendKeys("erdan@qq.com");
@@ -391,8 +177,8 @@ public class testCompanyManagement extends TestInit {
 		click(b_addCollaborator_ok);
 
 		Thread.sleep(500);
-		String m2 = driver.findElement(By.className("sm-toast")).getText();
-		Boolean R3 = m2.equals("成功添加 1 个协作者");
+		String m2 = driver.findElement(By.xpath("//div[@class='Toastify__toast-body']//div//span")).getText();
+		Boolean R3 = m2.equals("二蛋 已添加");
 
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
@@ -400,74 +186,7 @@ public class testCompanyManagement extends TestInit {
 		assertTrue(R1 && R2 && R3);
 	}
 
-	/**
-	 * 移交企业
-	 * 
-	 * @author 刘晨
-	 * @Time 2018-03-06
-	 *
-	 */
-	@Test(enabled = true)
-	public void transferCompany() throws InterruptedException {
-		login("panpan@qq.com", "123123");
-		click(company_Management);
-		switchToPage(1);
-		click(company_setting);
-
-		Preconditions.checkArgument(transferCompany.isDisplayed(), "Creater is not panpan");
-		click(transferCompany);
-
-		wait.until(ExpectedConditions.elementToBeClickable(transferCompany_button));
-		List<WebElement> elements = driver.findElements(By.xpath("//div[@class='ui-list']//div[@class='ui-list-row']"));
-		int number = elements.size();
-
-		String kk;
-		String pp;
-		int n = 1;
-		for (int i = 1; i <= number; i++) {
-			kk = "//div[@class='ui-list']//div[" + i + "]//div//span[1]";
-			pp = driver.findElement(By.xpath(kk)).getText();
-			if (pp.equals("pipi")) {
-				n = i;
-				break;
-			}
-		}
-
-		driver.findElement(By.xpath("//div[@class='ui-list']//div[" + n + "]//div//span[1]")).click();
-		click(transferCompany_button);
-
-		Thread.sleep(500);
-		Boolean R1 = transferCompany.isDisplayed();
-
-		logout();
-		login("pipi@qq.com", "123123");
-
-		click(company_Management);
-		switchToPage(2);
-		click(company_setting);
-		click(transferCompany);
-
-		wait.until(ExpectedConditions.elementToBeClickable(transferCompany_button));
-		elements = driver.findElements(By.xpath("//div[@class='ui-list']//div[@class='ui-list-row']"));
-		number = elements.size();
-
-		n = 1;
-		for (int i = 1; i <= number; i++) {
-			kk = "//div[@class='ui-list']//div[" + i + "]//div//span[1]";
-			pp = driver.findElement(By.xpath(kk)).getText();
-			if (pp.equals("panpan")) {
-				n = i;
-				break;
-			}
-		}
-
-		driver.findElement(By.xpath("//div[@class='ui-list']//div[" + n + "]//div//span[1]")).click();
-		click(transferCompany_button);
-
-		Thread.sleep(500);
-		Boolean R2 = transferCompany.isDisplayed();
-		assertFalse(R1 && R2);
-	}
+	
 
 	/**
 	 * 企业管理-成员列表-搜索
@@ -678,7 +397,6 @@ public class testCompanyManagement extends TestInit {
 		Thread.sleep(500);
 		String msg = driver.findElement(By.xpath("//span[@class='share-user-email ellipsis invitation-user-email']"))
 				.getText();
-		System.out.println(msg);
 		assertEquals(msg, "pipi@qq.com（已是企业成员）");
 	}
 

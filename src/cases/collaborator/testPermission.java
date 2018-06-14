@@ -25,17 +25,17 @@ public class testPermission extends TestInit {
 		click(desktop);
 		// 右键第一个文件
 		contextClick(desktop1_1);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		// Add("testing_2@test.im");
 
-		sendKeys(input_addCollaborator, "testing_2@test.im");
+		sendKeys(input_addCollaborator, "testing_6@test.im");
 		click(b_addCollaborator_1_add);
 //		click(list_addCollaborator_4);
 
 		Modify(2, 2);
 		click(Shut_down_sm_modal_close_x);
 		logout();
-		login("testing_2@test.im", "123123");
+		login("testing_6@test.im", "123123");
 		// wait.until(ExpectedConditions.elementToBeClickable(desktop));
 		// desktop.click();
 		// Sort();
@@ -70,7 +70,7 @@ public class testPermission extends TestInit {
 		click(desktop);
 		// 右键第一个文件
 		contextClick(desktop1_1);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 //		Add("testing_5@test.im");
 		sendKeys(input_addCollaborator, "testing_5@test.im");
 		click(b_addCollaborator_1_add);

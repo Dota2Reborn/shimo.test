@@ -231,6 +231,8 @@ public class elementFile {
 	public WebElement list_addCollaborator_1;
 	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4", noteName = "协作者权限列表--移除")
 	public WebElement list_addCollaborator_4;
+	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4_ok", noteName = "协作者权限列表--移除--确认移除")
+	public WebElement list_addCollaborator_4_ok;
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_total", noteName = "协作者人数")
 	public WebElement addCollaborator_total;
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_1_add", noteName = "最近协作者列表第一个添加按钮")
@@ -382,6 +384,10 @@ public class elementFile {
 	public WebElement menu_Completely_removed;
 	@SearchWith(pageName = "menu", elementName = "menu_Point_Menu", noteName = "工作台-最近使用-第一个文件点点(仅有一个文件时使用)")
 	public WebElement menu_Point_Menu;
+	@SearchWith(pageName = "menu", elementName = "menu_cooperation_1", noteName = "添加协作者-二级菜单（添加协作者）")
+	public WebElement menu_cooperation_1;
+	@SearchWith(pageName = "menu", elementName = "menu_cooperation_2", noteName = "添加协作者-二级菜单（查看协作者）")
+	public WebElement menu_cooperation_2;
 
 	/**
 	 * file_menu
@@ -408,4 +414,6 @@ public class elementFile {
 	public WebElement file_menu_mute;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_msg", noteName = "文档信息")
 	public WebElement file_menu_msg;
+	@SearchWith(pageName = "file_menu", elementName = "file_menu_help", noteName = "帮助")
+	public WebElement file_menu_help;
 }

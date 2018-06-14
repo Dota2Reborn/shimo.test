@@ -292,8 +292,16 @@ public class TestInit extends elementFile {
 	 */
 	public void moveToElement(WebElement element) {
 		try {
-			wait.until(ExpectedConditions.visibilityOf(element));
-			action.moveToElement(element).perform();
+			if (element.toString().equals(menu_cooperation.toString())) {
+				// 点击添加协作者
+				wait.until(ExpectedConditions.visibilityOf(element));
+				action.moveToElement(element).perform();
+				click(menu_cooperation_2);
+			} else {
+				wait.until(ExpectedConditions.visibilityOf(element));
+				action.moveToElement(element).perform();
+			}
+			
 		} catch (NoSuchElementException e) {
 			// TODO
 			System.out.println(element + "is missing");
@@ -328,6 +336,11 @@ public class TestInit extends elementFile {
 			} else if (element.toString().equals(b_addCollaborator_1_add.toString())) {
 				// 点击添加协作者
 				addCollaborator(element);
+			} else if(element.toString().equals(list_addCollaborator_4.toString())){
+				wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
+				list_addCollaborator_4.click();
+				wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4_ok));
+				list_addCollaborator_4_ok.click();
 			} else {
 				wait.until(ExpectedConditions.elementToBeClickable(element));
 				element.click();

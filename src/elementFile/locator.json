@@ -72,7 +72,7 @@
 			{
 				"elementName": "dashboard_share_file_favorites",
 				"locateUsing": "xpath",
-				"locator": "//*[@id='content']/div/div/div/div/div/div[2]/div/div/div[2]/div/div/div/a/div/div[1]/div[2]/div[1]/div[2]/*[name()='svg']",
+				"locator": "//*[@class='card-content-title']/div[2]/*[name()='svg']",
 				"note": "工作台第一行第一个文件收藏按钮"
 			},
 			{
@@ -529,7 +529,7 @@
 			{
 				"elementName": "list_addCollaborator_1",
 				"locateUsing": "xpath",
-				"locator": "//span[@data-test='collab-control-transfer']",
+				"locator": "//p[@data-test='collab-control-transfer']",
 				"note": "协作者权限列表--转让所有权"
 			},
 			{
@@ -543,6 +543,12 @@
 				"locateUsing": "xpath",
 				"locator": "//p[@data-test='collab-control-remove']",
 				"note": "协作者权限列表--移除"
+			},
+			{
+				"elementName": "list_addCollaborator_4_ok",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'确定')]",
+				"note": "协作者权限列表--移除--确认移除"
 			},
 			{
 				"elementName": "addCollaborator_total",
@@ -717,7 +723,7 @@
 			{
 				"elementName": "Exit_share_OK",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-footer']//button[2]",
+				"locator": "//div[@class='sm-modal-footer']//button",
 				"note": "管理员删除文档-选择退出共享"
 			},
 			{
@@ -994,31 +1000,43 @@
 			{
 				"elementName": "menu_cooperation",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'协作')]",
+				"locator": "//div[@class='sm-menu-submenu-title']",
 				"note": "添加协作者"
+			},
+			{
+				"elementName": "menu_cooperation_1",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-menu sm-menu-vertical-right  sm-menu-sub']//li[1]",
+				"note": "添加协作者-二级菜单（添加协作者）"
+			},
+			{
+				"elementName": "menu_cooperation_2",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-menu sm-menu-vertical-right  sm-menu-sub']//li[2]",
+				"note": "添加协作者-二级菜单（查看协作者）"
 			},
 			{
 				"elementName": "menu_move",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'移动')]",
+				"locator": "//li//div//span[contains(text(),'移动')]",
 				"note": "移动"
 			},
 			{
 				"elementName": "menu_rename",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'重命名')]",
+				"locator": "//li//div//span[contains(text(),'重命名')]",
 				"note": "重命名"
 			},
 			{
 				"elementName": "menu_creatCopy",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'创建副本')]",
+				"locator": "//li//div//span[contains(text(),'创建副本')]",
 				"note": "创建副本"
 			},
 			{
 				"elementName": "menu_delete",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'删除')]",
+				"locator": "//li//div//span[contains(text(),'删除')]",
 				"note": "删除按钮"
 			},
 			{
@@ -1030,7 +1048,7 @@
 			{
 				"elementName": "menu_moveToFolder",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'定位到所在文件夹')]",
+				"locator": "//li//div//span[contains(text(),'定位到所在文件夹')]",
 				"note": "定位到所在文件夹"
 			},
 			{
@@ -1042,7 +1060,7 @@
 			{
 				"elementName": "menu_Completely_removed",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'彻底删除')]",
+				"locator": "//li//div//span[contains(text(),'彻底删除')]",
 				"note": "彻底删除"
 			},
 			{
@@ -1110,6 +1128,12 @@
 				"locateUsing": "xpath",
 				"locator": "//li[contains(text(),'消息')]",
 				"note": "消息免打扰"
+			},
+			{
+				"elementName": "file_menu_help",
+				"locateUsing": "xpath",
+				"locator": "//span[contains(text(),'帮助')]",
+				"note": "帮助"
 			},
 			{
 				"elementName": "file_menu_msg",

@@ -90,7 +90,7 @@ public class testDashboard extends TestInit {
 
 		click(desktop);
 		contextClick(desktop1_1_folder);
-		click(menu_cooperation);
+		moveToElement(menu_cooperation);
 		click(button_addCollaborator);
 
 		sendKeys(input_addCollaborator,"autoTest07@shimo.im");

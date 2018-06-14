@@ -102,7 +102,7 @@ public class testCollection extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void Collection_Sort_1() throws InterruptedException {
-		login(" Collection@shimo.im", "123123");
+		login("Collection@shimo.im", "123123");
 		favorites.click();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
 		Sort();
