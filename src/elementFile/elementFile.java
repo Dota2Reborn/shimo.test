@@ -241,7 +241,7 @@ public class elementFile {
 	public WebElement addCollaborator_companyList_2_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_company_list", noteName = "协作者页面切换到企业成员列表")
 	public WebElement addCollaborator_company_list;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_back", noteName = "从协作者列表反馈按钮")
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_back", noteName = "从协作者列表返回按钮")
 	public WebElement b_addCollaborator_back;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_confirm", noteName = "协作者移除或者降低自己权限时提示弹窗的确定按钮")
 	public WebElement b_addCollaborator_confirm;
