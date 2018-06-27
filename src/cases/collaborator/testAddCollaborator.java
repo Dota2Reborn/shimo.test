@@ -130,8 +130,7 @@ public class testAddCollaborator extends TestInit {
 	 * @Time 2017-11-29
 	 *
 	 */
-	//!!!!!!!!!!!!!!!!!!!!!!!返回按钮取消，需要修正用例
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void addCollaborator_5() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
 		click(desktop);
