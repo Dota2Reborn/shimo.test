@@ -184,5 +184,34 @@ public class testDesktop_new extends TestInit{
 		assertEquals(msg, "test_sheet");
 
 	}
+	
+	/**
+	 * 导入md
+	 * 
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
+	@Test
+	public void desktop_import_md() throws InterruptedException {
+		login("autoTest_new@shimo.im", "123123");
+		click(desktop);
+
+		WebElement uploadButton = desktop_import;
+		String url = System.getProperty("user.dir") + "/doc/test.md";
+		System.out.println(url);
+		uploadButton.sendKeys(url);
+
+		Thread.sleep(2000);
+		click(b_back);
+
+		String msg = getText(desktop1_1);
+		contextClick(desktop1_1);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
+
+		assertEquals(msg, "test");
+
+	}
 
 }
