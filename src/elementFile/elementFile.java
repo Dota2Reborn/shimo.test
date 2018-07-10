@@ -368,6 +368,10 @@ public class elementFile {
 	public WebElement menu_cooperation;
 	@SearchWith(pageName = "menu", elementName = "menu_move", noteName = "移动")
 	public WebElement menu_move;
+	@SearchWith(pageName = "menu", elementName = "menu_share", noteName = "分享")
+	public WebElement menu_share;
+	@SearchWith(pageName = "menu", elementName = "menu_share_1", noteName = "分享-公开分享")
+	public WebElement menu_share_1;
 	@SearchWith(pageName = "menu", elementName = "menu_rename", noteName = "重命名")
 	public WebElement menu_rename;
 	@SearchWith(pageName = "menu", elementName = "menu_creatCopy", noteName = "创建副本")

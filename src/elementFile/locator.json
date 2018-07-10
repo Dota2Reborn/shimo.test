@@ -283,14 +283,14 @@
 			{
 				"elementName": "desktop1_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[1]",
+				"locator": "(//div[@class='tile-inner'])[1]",
 				"note": "平铺模式第一行第一个文件"
 			},
 			{
 				"elementName": "desktop1_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[2]",
-				"note": "平铺模式第一行第一个文件"
+				"locator": "(//div[@class='tile-inner'])[2]",
+				"note": "平铺模式第一行第二个文件"
 			},
 			{
 				"elementName": "desktop1_1_folder",
@@ -439,8 +439,8 @@
 			{
 				"elementName": "desktop1_1_name",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[1]//div[1]//a[1]//div[2]",
-				"note": "平铺模式第一行第一个名称"
+				"locator": "//div[@class='tile-inner']//div//a//div[@class='title']",
+				"note": "平铺模式第一行第一个文件名称"
 			},
 			{
 				"elementName": "desktop_orderByFolderUP_Hook",
@@ -982,13 +982,13 @@
 			{
 				"elementName": "menu_newPage",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'在新标签页中打开')]",
+				"locator": "//li//div//span[contains(text(),'在新标签页中打开')]",
 				"note": "新标签页中打开"
 			},
 			{
 				"elementName": "menu_shortcut",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'快捷方式')]",
+				"locator": "//li//div//span[contains(text(),'快捷方式')]",
 				"note": "添加快捷方式"
 			},
 			{
@@ -1000,13 +1000,13 @@
 			{
 				"elementName": "menu_cooperation",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-menu-submenu-title']",
+				"locator": "//div[@aria-owns='file-menu-collab$Menu']",
 				"note": "添加协作者"
 			},
 			{
 				"elementName": "menu_cooperation_1",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-menu sm-menu-vertical-right  sm-menu-sub']//li[1]",
+				"locator": "//ul[@class='sm-menu sm-menu-vertical-right  sm-menu-sub']//li[1]//div",
 				"note": "添加协作者-二级菜单（添加协作者）"
 			},
 			{
@@ -1018,13 +1018,13 @@
 			{
 				"elementName": "menu_move",
 				"locateUsing": "xpath",
-				"locator": "//li//div//span[contains(text(),'移动')]",
+				"locator": "//li//div//span[contains(text(),'移动')]/..",
 				"note": "移动"
 			},
 			{
 				"elementName": "menu_rename",
 				"locateUsing": "xpath",
-				"locator": "//li//div//span[contains(text(),'重命名')]",
+				"locator": "//li//div//span[contains(text(),'重命名')]/..",
 				"note": "重命名"
 			},
 			{
@@ -1032,6 +1032,18 @@
 				"locateUsing": "xpath",
 				"locator": "//li//div//span[contains(text(),'创建副本')]",
 				"note": "创建副本"
+			},
+			{
+				"elementName": "menu_share",
+				"locateUsing": "xpath",
+				"locator": "//div[@aria-owns='file-menu-share$Menu']",
+				"note": "分享"
+			},
+			{
+				"elementName": "menu_share_1",
+				"locateUsing": "xpath",
+				"locator": "//ul[@id='file-menu-share$Menu']//li//div",
+				"note": "分享-公开分享"
 			},
 			{
 				"elementName": "menu_delete",
@@ -1042,7 +1054,7 @@
 			{
 				"elementName": "menu_mute",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'消息')]",
+				"locator": "//li//div//span[contains(text(),'消息')]",
 				"note": "消息免打扰"
 			},
 			{
@@ -1054,7 +1066,7 @@
 			{
 				"elementName": "menu_Recovery",
 				"locateUsing": "xpath",
-				"locator": "//li//div[contains(text(),'恢复文件')]",
+				"locator": "//li//div//span[contains(text(),'恢复文件')]",
 				"note": "恢复文件"
 			},
 			{
