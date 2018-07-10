@@ -1144,6 +1144,78 @@
 		]
 	},
 	{
+		"note": "PPT_演示页面",
+		"pageName": "ppt",
+		"elements": [
+			{
+				"elementName": "add_page",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//div[1]//button[1]",
+				"note": "添加页面"
+			},
+			{
+				"elementName": "template_list",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//div[1]//button[2]",
+				"note": "下箭头"
+			},
+			{
+				"elementName": "Revoke",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//span[1]",
+				"note": "撤销"
+			},
+			{
+				"elementName": "Redo",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//span[2]",
+				"note": "重做"
+			},
+			{
+				"elementName": "file_menu_move",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'移动')]",
+				"note": "移动"
+			},
+			{
+				"elementName": "file_menu_history",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'查看历史')]",
+				"note": "重命名"
+			},
+			{
+				"elementName": "file_menu_creatCopy",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'创建副本')]",
+				"note": "创建副本"
+			},
+			{
+				"elementName": "file_menu_delete",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'删除')]",
+				"note": "删除按钮"
+			},
+			{
+				"elementName": "file_menu_mute",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'消息')]",
+				"note": "消息免打扰"
+			},
+			{
+				"elementName": "file_menu_help",
+				"locateUsing": "xpath",
+				"locator": "//span[contains(text(),'帮助')]",
+				"note": "帮助"
+			},
+			{
+				"elementName": "file_menu_msg",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'信息')]",
+				"note": "文档/表格信息"
+			}
+		]
+	},
+	{
 		"pageName": "--------------------------------------------------------------------",
 		"test":"123123123123123"
 	}
