@@ -1222,31 +1222,31 @@
 			{
 				"elementName": "ppt_page_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]div[2]",
+				"locator": "//div[@id='filmstrip']//div[1]//div[1]div[2]",
 				"note": "左边栏第一个页面"
 			},
 			{
 				"elementName": "ppt_page_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]div[2]",
+				"locator": "//div[@id='filmstrip']//div[1]//div[2]div[2]",
 				"note": "左边栏第二个页面"
 			},
 			{
 				"elementName": "ppt_page_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[3]div[2]",
+				"locator": "//div[@id='filmstrip']//div[1]//div[3]div[2]",
 				"note": "左边栏第三个页面"
 			},
 			{
 				"elementName": "ppt_page_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[4]div[2]",
+				"locator": "//div[@id='filmstrip']//div[1]//div[4]div[2]",
 				"note": "左边栏第四个页面"
 			},
 			{
 				"elementName": "ppt_page_5",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[5]div[2]",
+				"locator": "//div[@id='filmstrip']//div[1]//div[5]div[2]",
 				"note": "左边栏第五个页面"
 			}
 		]
