@@ -1160,13 +1160,13 @@
 				"note": "下箭头"
 			},
 			{
-				"elementName": "Revoke",
+				"elementName": "ppt_Revoke",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[1]//span[1]",
 				"note": "撤销"
 			},
 			{
-				"elementName": "Redo",
+				"elementName": "ppt_Redo",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[1]//span[2]",
 				"note": "重做"
@@ -1174,38 +1174,38 @@
 			{
 				"elementName": "file_menu_move",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'移动')]",
-				"note": "移动"
+				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[1]",
+				"note": "添加标题"
 			},
 			{
 				"elementName": "file_menu_history",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'查看历史')]",
-				"note": "重命名"
+				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[2]",
+				"note": "添加文本"
 			},
 			{
 				"elementName": "file_menu_creatCopy",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'创建副本')]",
-				"note": "创建副本"
+				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[3]",
+				"note": "添加图片"
 			},
 			{
 				"elementName": "file_menu_delete",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'删除')]",
-				"note": "删除按钮"
+				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[4]",
+				"note": "添加箭头"
 			},
 			{
 				"elementName": "file_menu_mute",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'消息')]",
-				"note": "消息免打扰"
+				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[5]",
+				"note": "添加矩形"
 			},
 			{
 				"elementName": "file_menu_help",
 				"locateUsing": "xpath",
-				"locator": "//span[contains(text(),'帮助')]",
-				"note": "帮助"
+				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[6]",
+				"note": "添加圆形"
 			},
 			{
 				"elementName": "file_menu_msg",
