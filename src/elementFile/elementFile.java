@@ -420,4 +420,13 @@ public class elementFile {
 	public WebElement file_menu_msg;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_help", noteName = "帮助")
 	public WebElement file_menu_help;
+	
+	
+	/**
+	 * ppt
+	 * PPT_演示页面
+	 *
+	 */
+	@SearchWith(pageName = "ppt", elementName = "add_page", noteName = "添加页面")
+	public WebElement add_page;
 }
