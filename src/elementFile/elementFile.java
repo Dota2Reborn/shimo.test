@@ -420,4 +420,41 @@ public class elementFile {
 	public WebElement file_menu_msg;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_help", noteName = "帮助")
 	public WebElement file_menu_help;
+	
+	
+	/**
+	 * ppt
+	 * PPT_演示页面
+	 *
+	 */
+	@SearchWith(pageName = "ppt", elementName = "add_page", noteName = "添加页面")
+	public WebElement add_page;
+	@SearchWith(pageName = "ppt", elementName = "down_arrow", noteName = "下箭头")
+	public WebElement down_arrow;
+	@SearchWith(pageName = "ppt", elementName = "ppt_revoke", noteName = "撤销")
+	public WebElement ppt_revoke;
+	@SearchWith(pageName = "ppt", elementName = "ppt_redo", noteName = "重做")
+	public WebElement ppt_redo;
+	@SearchWith(pageName = "ppt", elementName = "add_title", noteName = "添加标题")
+	public WebElement add_title;
+	@SearchWith(pageName = "ppt", elementName = "add_text", noteName = "添加文本")
+	public WebElement add_text;
+	@SearchWith(pageName = "ppt", elementName = "add_diagram", noteName = "添加图片")
+	public WebElement add_diagram;
+	@SearchWith(pageName = "ppt", elementName = "add_arrows", noteName = "添加箭头")
+	public WebElement add_arrows;
+	@SearchWith(pageName = "ppt", elementName = "add_Rectangle", noteName = "添加矩形")
+	public WebElement add_Rectangle;
+	@SearchWith(pageName = "ppt", elementName = "add_circular", noteName = "添加圆形")
+	public WebElement add_circular;
+	@SearchWith(pageName = "ppt", elementName = "ppt_page_1", noteName = "左边栏第一个页面")
+	public WebElement ppt_page_1;
+	@SearchWith(pageName = "ppt", elementName = "ppt_page_2", noteName = "左边栏第二个页面")
+	public WebElement ppt_page_2;
+	@SearchWith(pageName = "ppt", elementName = "ppt_page_3", noteName = "左边栏第三个页面")
+	public WebElement ppt_page_3;
+	@SearchWith(pageName = "ppt", elementName = "ppt_page_4", noteName = "左边栏第四个页面")
+	public WebElement ppt_page_4;
+	@SearchWith(pageName = "ppt", elementName = "ppt_page_5", noteName = "左边栏第五个页面")
+	public WebElement ppt_page_5;
 }
