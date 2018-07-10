@@ -1172,19 +1172,19 @@
 				"note": "重做"
 			},
 			{
-				"elementName": "file_menu_move",
+				"elementName": "Add_title",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[1]",
 				"note": "添加标题"
 			},
 			{
-				"elementName": "file_menu_history",
+				"elementName": "Add_text",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[2]",
 				"note": "添加文本"
 			},
 			{
-				"elementName": "file_menu_creatCopy",
+				"elementName": "Add_diagram",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[3]",
 				"note": "添加图片"
