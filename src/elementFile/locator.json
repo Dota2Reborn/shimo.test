@@ -1166,55 +1166,55 @@
 				"note": "添加页面"
 			},
 			{
-				"elementName": "template_list",
+				"elementName": "down_arrow",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[1]//div[1]//button[2]",
 				"note": "下箭头"
 			},
 			{
-				"elementName": "ppt_Revoke",
+				"elementName": "ppt_revoke",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[1]//span[1]",
 				"note": "撤销"
 			},
 			{
-				"elementName": "ppt_Redo",
+				"elementName": "ppt_redo",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[1]//span[2]",
 				"note": "重做"
 			},
 			{
-				"elementName": "Add_title",
+				"elementName": "add_title",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[1]",
 				"note": "添加标题"
 			},
 			{
-				"elementName": "Add_text",
+				"elementName": "add_text",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[2]",
 				"note": "添加文本"
 			},
 			{
-				"elementName": "Add_diagram",
+				"elementName": "add_diagram",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[3]",
 				"note": "添加图片"
 			},
 			{
-				"elementName": "file_menu_delete",
+				"elementName": "add_arrows",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[4]",
 				"note": "添加箭头"
 			},
 			{
-				"elementName": "file_menu_mute",
+				"elementName": "add_Rectangle",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[5]",
 				"note": "添加矩形"
 			},
 			{
-				"elementName": "file_menu_help",
+				"elementName": "add_circular",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[6]",
 				"note": "添加圆形"
