@@ -65,7 +65,7 @@ public class testCompanyManagement extends TestInit {
 		String m1 = driver.findElement(By.xpath("//div[@class='Toastify__toast-body']//div//span")).getText();
 		Boolean R2 = m1.equals("二蛋 已添加");
 
-		click(b_addCollaborator_2_list);
+		click(b_addCollaborator_3_list);
 		click(list_addCollaborator_4);
 
 		assertTrue(R1 && R2);
