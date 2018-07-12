@@ -180,7 +180,7 @@ public class testCompanyManagement extends TestInit {
 		String m2 = driver.findElement(By.xpath("//div[@class='Toastify__toast-body']//div//span")).getText();
 		Boolean R3 = m2.equals("二蛋 已添加");
 
-		click(b_addCollaborator_2_list);
+		click(b_addCollaborator_3_list);
 		click(list_addCollaborator_4);
 
 		assertTrue(R1 && R2 && R3);
