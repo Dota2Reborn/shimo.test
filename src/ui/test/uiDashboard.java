@@ -18,6 +18,8 @@ public class uiDashboard extends TestInit {
 				"document.querySelectorAll('.card-content-update').forEach(node => node.innerHTML = '1月27日 14:45 我 更新')");
 		js.executeScript(
 				"document.querySelectorAll('.update-time').forEach(node => node.innerHTML = '刚刚')");
+
+		Thread.sleep(500);
 		screenShot();
 	}
 
@@ -37,6 +39,7 @@ public class uiDashboard extends TestInit {
 		js.executeScript(
 				"document.querySelectorAll('.update-time').forEach(node => node.innerHTML = '刚刚')");
 
+		Thread.sleep(500);
 		screenShot();
 	}
 
@@ -53,6 +56,8 @@ public class uiDashboard extends TestInit {
 				"document.querySelectorAll('.card-content-update').forEach(node => node.innerHTML = 'test')");
 		js.executeScript(
 				"document.querySelectorAll('.update-time').forEach(node => node.innerHTML = '刚刚')");
+
+		Thread.sleep(500);
 		screenShot();
 	}
 
@@ -69,6 +74,8 @@ public class uiDashboard extends TestInit {
 				"document.querySelectorAll('.card-content-update').forEach(node => node.innerHTML = '1月27日 14:45 我 更新')");
 		js.executeScript(
 				"document.querySelectorAll('.update-time').forEach(node => node.innerHTML = '刚刚')");
+
+		Thread.sleep(500);
 		screenShot();
 	}
 }
