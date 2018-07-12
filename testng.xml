@@ -11,14 +11,11 @@
 	<test name="test1">
 		<classes>
 			<class name="cases.dashboard.dashboard_own" />
-			<class name="cases.dashboard.dashboard_shared" />
-			<class name="cases.recycle.testRecycleBin" />
 		</classes>
 	</test>
 	<test name="test2">
 		<classes>
 			<class name="cases.dashboard.testDashboard" />
-			<class name="cases.desktop.testNotice" />
 		</classes>
 	</test>
 	<test name="test3">
@@ -34,7 +31,6 @@
 	<test name="test5">
 		<classes>
 			<class name="cases.desktop.hovertest" />
-			<class name="cases.desktop.testAlertMute" />
 			<class name="cases.desktop.testDesktopOrderBy" />
 		</classes>
 	</test>
@@ -47,7 +43,6 @@
 	<test name="test7">
 		<classes>
 			<class name="cases.collaborator.testAddCollaborator" />
-			<class name="cases.collaborator.testPermission" />
 		</classes>
 	</test>
 	<test name="test8">
@@ -59,8 +54,6 @@
 		<classes>
 			<class name="cases.collection.testCollection" />
 			<class name="cases.loginRegistered.login_error" />
-			<class name="cases.loginRegistered.testRegistered" />
-			<class name="cases.docSheet.testMenu_Doc_Sheet" />
 		</classes>
 	</test>
 	<test name="test10">
@@ -81,6 +74,37 @@
 	<test name="test13">
 		<classes>
 			<class name="cases.management.testCompanyManagement_1" />
+		</classes>
+	</test>
+	<test name="test14">
+		<classes>
+			<class name="cases.desktop.testAlertMute" />
+		</classes>
+	</test>
+	<test name="test15">
+		<classes>
+			<class name="cases.collaborator.testPermission" />
+		</classes>
+	</test>
+	<test name="test16">
+		<classes>
+			<class name="cases.desktop.testNotice" />
+		</classes>
+	</test>
+	<test name="test17">
+		<classes>
+			<class name="cases.dashboard.dashboard_shared" />
+		</classes>
+	</test>
+	<test name="test18">
+		<classes>
+			<class name="cases.recycle.testRecycleBin" />
+		</classes>
+	</test>
+	<test name="test19">
+		<classes>
+			<class name="cases.loginRegistered.testRegistered" />
+			<class name="cases.docSheet.testMenu_Doc_Sheet" />
 		</classes>
 	</test>
 </suite>
