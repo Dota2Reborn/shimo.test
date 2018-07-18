@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="6" passed="0" failed="0" skipped="6">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-07-18T09:43:42Z" name="Default suite" finished-at="2018-07-18T09:43:42Z" duration-ms="103">
+    <groups>
+    </groups>
+    <test started-at="2018-07-18T09:43:42Z" name="Default test" finished-at="2018-07-18T09:43:42Z" duration-ms="103">
+      <class name="cases.desktop.testDesktop">
+        <test-method is-config="true" signature="firstMethod(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="firstMethod" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by @Configuration on method firstMethod but has not been marked @Optional or defined
+in /private/var/folders/tr/7jblm7hd58s5thxv77yztrkw0000gn/T/testng-eclipse--1408246683/testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by @Configuration on method firstMethod but has not been marked @Optional or defined
+in /private/var/folders/tr/7jblm7hd58s5thxv77yztrkw0000gn/T/testng-eclipse--1408246683/testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:155)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:358)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:199)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="setUp" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="desktop_doc_setting_1()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="desktop_doc_setting_1" finished-at="2018-07-18T17:43:42Z" duration-ms="7" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_doc_setting_1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="tearDown" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="setUp" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="desktop_doc_setting_2()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="desktop_doc_setting_2" finished-at="2018-07-18T17:43:42Z" duration-ms="1" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_doc_setting_2 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="tearDown" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="setUp" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="desktop_doc_setting_3()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="desktop_doc_setting_3" finished-at="2018-07-18T17:43:42Z" duration-ms="3" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_doc_setting_3 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="tearDown" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="setUp" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="desktop_doc_setting_6()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="desktop_doc_setting_6" finished-at="2018-07-18T17:43:42Z" duration-ms="2" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_doc_setting_6 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="tearDown" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="setUp" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="desktop_doc_setting_8()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="desktop_doc_setting_8" finished-at="2018-07-18T17:43:42Z" duration-ms="3" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_doc_setting_8 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="tearDown" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="setUp" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="desktop_doc_setting_9()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="desktop_doc_setting_9" finished-at="2018-07-18T17:43:42Z" duration-ms="3" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- desktop_doc_setting_9 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="tearDown" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="lastMethod()[pri:0, instance:cases.desktop.testDesktop@445b295b]" started-at="2018-07-18T17:43:42Z" name="lastMethod" finished-at="2018-07-18T17:43:42Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lastMethod -->
+      </class> <!-- cases.desktop.testDesktop -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
