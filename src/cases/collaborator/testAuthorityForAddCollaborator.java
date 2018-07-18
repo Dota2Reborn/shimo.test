@@ -193,6 +193,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
 		login("AddCollaborator_04_1@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1_folder);
+		String file_name = getText(desktop1_1);
 		contextClick(desktop1_1);
 		moveToElement(menu_cooperation);
 
@@ -206,7 +207,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
 		login("AddCollaborator_04_2@shimo.im", "123123");
 		click(desktop);
 
-		Boolean r1 = getText(desktop1_1).equals("Wow");
+		Boolean r1 = getText(desktop1_1).equals(file_name);
 
 		logout();
 		login("AddCollaborator_04_1@shimo.im", "123123");
@@ -220,7 +221,6 @@ public class testAuthorityForAddCollaborator extends TestInit {
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
-
 		logout();
 		login("AddCollaborator_04_2@shimo.im", "123123");
 		click(desktop);
@@ -229,7 +229,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
 		Boolean r3 = doesWebElementExist(desktop1_2);
 
 		click(desktop1_1_folder);
-		Boolean r4 = getText(desktop1_1).equals("Wow");
+		Boolean r4 = getText(desktop1_1).equals(file_name);
 
 		click(desktop);
 		contextClick(desktop1_1);
