@@ -40,6 +40,8 @@ public class elementFile {
 	public WebElement desktop1_1_folder;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_2_folder", noteName = "平铺模式第一行第二个文件夹")
 	public WebElement desktop1_2_folder;
+	@SearchWith(pageName = "desktop", elementName = "desktop1_3_folder", noteName = "平铺模式第一行第三个文件夹")
+	public WebElement desktop1_3_folder;
 	@SearchWith(pageName = "desktop", elementName = "desktop_list_1_file", noteName = "列表模式第一个文件")
 	public WebElement desktop_list_1_file;
 	@SearchWith(pageName = "desktop", elementName = "desktop_list_2_file", noteName = "列表模式第二个文件")

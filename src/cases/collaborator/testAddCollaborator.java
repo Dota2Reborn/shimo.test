@@ -261,7 +261,7 @@ public class testAddCollaborator extends TestInit {
 	public void addCollaborator_9() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
 		click(desktop);
-		click(desktop1_1_folder);
+		click(desktop1_3_folder);
 		click(addCollaborator_folder_add);
 
 		sendKeys(input_addCollaborator, "11@cc.ccc");
@@ -269,12 +269,12 @@ public class testAddCollaborator extends TestInit {
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
+
+		String username = getText(addCollaborator_2_list_userName);
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
 
-		Thread.sleep(500);
-		String username = getText(addCollaborator_2_list_userName);
-		assertNotEquals(username, "李磊");
+		assertEquals(username, "李磊");
 
 	}
 
