@@ -305,6 +305,12 @@
 				"note": "平铺模式第一行第二个文件夹"
 			},
 			{
+				"elementName": "desktop1_3_folder",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')][3]",
+				"note": "平铺模式第一行第三个文件夹"
+			},
+			{
 				"elementName": "desktop_list_1_file",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[1]//div//a//div[3]//div",
