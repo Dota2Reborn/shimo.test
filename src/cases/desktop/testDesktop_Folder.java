@@ -14,6 +14,7 @@ import base.TestInit;
 
 public class testDesktop_Folder extends TestInit {
 
+	String test_url = "https://release.shimodev.com/";
 	/**
 	 * 桌面-列表/平铺 模式切换
 	 * 
