@@ -182,25 +182,6 @@ public class testDesktop_Folder extends TestInit {
 		assertTrue(r1);
 	}
 
-	/**
-	 * hover文件夹，齿轮-收藏
-	 * 
-	 * @author 刘晨
-	 * @Time 2018-07-19
-	 *
-	 */
-	@Test
-	public void desktop_folder_Collection() {
-		login("autoTest_Folder@shimo.im", "123123");
-		click(desktop);
-
-		moveToElement(desktop1_1);
-		click(desktop_setting);
-		click(menu_collection);
-		boolean r1 = driver.getCurrentUrl().equals(test_url + "desktop");
-
-		assertTrue(r1);
-	}
 	
 	/**
 	 * hover文件夹，齿轮-消息免打扰
