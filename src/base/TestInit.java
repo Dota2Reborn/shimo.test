@@ -40,7 +40,7 @@ public class TestInit extends elementFile {
 	public WebDriver driver = null;
 	public WebDriverWait wait = null;
 	public Actions action = null;
-	String test_url;
+	public String test_url;
 	baseFunc init = new baseFunc();
 	public String className;
 	String browser;
