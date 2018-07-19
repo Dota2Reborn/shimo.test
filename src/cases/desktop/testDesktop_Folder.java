@@ -12,8 +12,8 @@ import org.testng.annotations.Test;
 
 import base.TestInit;
 
-public class testDesktop_Folder extends TestInit{
-	
+public class testDesktop_Folder extends TestInit {
+
 	/**
 	 * 桌面-列表/平铺 模式切换
 	 * 
@@ -43,7 +43,7 @@ public class testDesktop_Folder extends TestInit{
 		assertTrue(result);
 
 	}
-	
+
 	/**
 	 * 右键文件夹-在新标签页打开
 	 * 
@@ -80,7 +80,7 @@ public class testDesktop_Folder extends TestInit{
 
 		contextClick(desktop1_1_folder);
 		click(menu_shortcut);
-		
+
 		driver.navigate().refresh();
 		String msg = getText(desktop_shortcut_1);
 		String doc_name = getText(desktop1_1_folder);
@@ -88,7 +88,7 @@ public class testDesktop_Folder extends TestInit{
 		contextClick(desktop1_1_folder);
 		click(menu_shortcut);
 
-		if(!doc_name.equals(msg)) {
+		if (!doc_name.equals(msg)) {
 			contextClick(desktop1_1);
 			click(menu_shortcut);
 		}
@@ -137,7 +137,7 @@ public class testDesktop_Folder extends TestInit{
 		click(desktop);
 		click(desktop_new);
 		click(desktop_newFolder);
-		sendKeys(desktop_newFolder_name,"FFFFF");
+		sendKeys(desktop_newFolder_name, "FFFFF");
 		click(desktop_newFolder_name_ok);
 		// wait.until(ExpectedConditions.elementToBeClickable(By.className("settings")));
 		click(folder_backToDesktop);
@@ -150,7 +150,7 @@ public class testDesktop_Folder extends TestInit{
 		click(desktop1_1_folder);
 		contextClick(desktop1_1);
 		click(menu_rename);
-		sendKeys(desktop_newFolder_name,"删除文件夹");
+		sendKeys(desktop_newFolder_name, "删除文件夹");
 		click(desktop_newFolder_name_ok);
 		driver.navigate().refresh();
 		String msg = getText(desktop1_1);
@@ -161,4 +161,65 @@ public class testDesktop_Folder extends TestInit{
 
 		assertEquals(msg, "删除文件夹");
 	}
+
+	/**
+	 * hover文件夹，齿轮-重命名
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-07-19
+	 *
+	 */
+	@Test
+	public void desktop_folder_rename() {
+		login("autoTest_Folder@shimo.im", "123123");
+		click(desktop);
+
+		moveToElement(desktop1_1);
+		click(desktop_setting);
+		click(menu_rename);
+		boolean r1 = driver.getCurrentUrl().equals(test_url + "desktop");
+
+		assertTrue(r1);
+	}
+
+	/**
+	 * hover文件夹，齿轮-收藏
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-07-19
+	 *
+	 */
+	@Test
+	public void desktop_folder_Collection() {
+		login("autoTest_Folder@shimo.im", "123123");
+		click(desktop);
+
+		moveToElement(desktop1_1);
+		click(desktop_setting);
+		click(menu_collection);
+		boolean r1 = driver.getCurrentUrl().equals(test_url + "desktop");
+
+		assertTrue(r1);
+	}
+	
+	/**
+	 * hover文件夹，齿轮-消息免打扰
+	 * 
+	 * @author 刘晨
+	 * @Time 2018-07-19
+	 *
+	 */
+	@Test
+	public void desktop_folder_notice() {
+		login("autoTest_Folder@shimo.im", "123123");
+		click(desktop);
+
+		moveToElement(desktop1_1);
+		click(desktop_setting);
+		click(menu_mute);
+		boolean r1 = driver.getCurrentUrl().equals(test_url + "desktop");
+
+		assertTrue(r1);
+	}
+
 }
