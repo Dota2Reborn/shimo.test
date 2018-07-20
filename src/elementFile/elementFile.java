@@ -239,6 +239,10 @@ public class elementFile {
 	public WebElement addCollaborator_total;
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_1_add", noteName = "最近协作者列表第一个添加按钮")
 	public WebElement addCollaborator_1_add;
+	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_2_add", noteName = "最近协作者列表第二个添加按钮")
+	 public WebElement addCollaborator_2_add;
+	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_companyList_1_add", noteName = "企业协作者列表第一个添加按钮")
+	public WebElement addCollaborator_companyList_1_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_companyList_2_add", noteName = "企业协作者列表第二个添加按钮")
 	public WebElement addCollaborator_companyList_2_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_company_list", noteName = "协作者页面切换到企业成员列表")
