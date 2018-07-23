@@ -517,7 +517,7 @@
 			{
 				"elementName": "b_addCollaborator_3_list",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[3]//div//div",
+				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[3]//div//div//div//a",
 				"note": "协作者列表第三个协作者权限下拉框"
 			},
 			{
