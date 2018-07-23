@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import base.TestInit;
 
-public class TransferOwner extends TestInit{
+public class testTransferOwner extends TestInit{
 	
 	/**
 	 * 管理员转移所有权（企业与权限相关88）
