@@ -1,17 +1,26 @@
 package cases.drag;
-import java.util.concurrent.TimeUnit;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.remote.server.handler.SendKeys;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import com.gargoylesoftware.htmlunit.javascript.host.Window;
 
-import org.openqa.selenium.interactions.Action;
+import base.TestInit;
 
 public class testtest extends TestInit  {
 	/**
@@ -86,6 +95,100 @@ public class testtest extends TestInit  {
 		
 	   }
 
+	@Test(enabled = false)
+	 public void Add_circle() throws InterruptedException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		Thread.sleep(2000);
+		click(desktop1_1);
+		Thread.sleep(5000);
+		click(add_circular);
+		boolean result = driver.findElement(By.xpath("//div[@class='smslide-only-container']//div[1]//div[3]//div[1]")).isDisplayed();
+		assertTrue(result);	
+	}
 	
+	
+	@Test(enabled = false)
+	 public void Dragging_circle() throws InterruptedException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		Thread.sleep(2000);
+		click(desktop1_1);
+		Thread.sleep(5000);
+		click(add_circular);
+		WebElement circle = driver.findElement(By.xpath("//div[@class='smslide-only-container']//div[1]//div[3]//div[1]"));
+		moveToElement(circle);
+		System.out.println("=========");
+		Actions action = new Actions(driver);
+		for (int i = 1; i < 6; i++) {
+			action.dragAndDropBy(circle, i*40, i*20).build().perform();
+		}
+		for (int i = 1; i < 6; i++) {
+			action.dragAndDropBy(circle, -i*40, -i*20).build().perform();
+		}
+		Thread.sleep(6000);
+		action.release().perform();
+	}
+	
+	
+	@Test(enabled = false)
+	 public void Delete_circle() throws InterruptedException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		Thread.sleep(2000);
+		click(desktop1_1);
+		Thread.sleep(5000);
+		click(add_circular);
+		WebElement circle = driver.findElement(By.xpath("//div[@class='smslide-only-container']//div[1]//div[3]//div[1]"));
+		moveToElement(circle);
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.DELETE).perform();
+		//action.moveToElement(ppt_revoke).click();
+		//click(ppt_revoke);
+		//click(ppt_redo);
+	}
 
+	
+	@Test(enabled = false)
+	 public void Add_page() throws InterruptedException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		Thread.sleep(2000);
+		click(desktop1_1);
+		Thread.sleep(5000);
+		click(add_page);
+		boolean result = driver.findElement(By.xpath("//div[@class='sm-slide-filmstrip-container']//div[1]//div[2]")).isDisplayed();
+		System.out.println(result);
+		assertTrue(result);	
+		Actions action = new Actions(driver);
+		WebElement input = driver.findElement(By.xpath("//div[@class='smslide-only-container']//div[1]//div[3]//div[1]"));
+		action.moveToElement(input, 0, 200).click().perform();
+		action.sendKeys(Keys.DELETE).perform();
+		
+	}
+	
+	
+	@Test(enabled = false)
+	 public void Add_img() throws InterruptedException, AWTException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		Thread.sleep(2000);
+		click(desktop1_1);
+		Thread.sleep(5000);//"E:\\testImg\\11.png" "E:\\testImg\\12.jpg" "E:\\testImg\\13.jpg"
+		StringSelection sel = new StringSelection( " \"E:\\testImg\\11.png\" \"E:\\testImg\\12.jpg\" \"E:\\testImg\\13.jpg\" " );
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel,null);
+		click(add_diagram);
+		Robot robot = new Robot();
+		Thread.sleep(1000);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_V);    
+		Thread.sleep(1000); 
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		boolean result = driver.findElement(By.xpath("//div[@class='smslide-only-container']//div[1]//div[3]//div[1]")).isDisplayed();
+		assertTrue(result);	
+	}
+	
 }
