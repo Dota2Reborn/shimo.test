@@ -64,6 +64,8 @@ public class elementFile {
 	public WebElement desktop_orderByDefault;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newSheet", noteName = "新建表格")
 	public WebElement desktop_newSheet;
+	@SearchWith(pageName = "desktop", elementName = "desktop_newslides", noteName = "新建幻灯片")
+	public WebElement desktop_newslides;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder", noteName = "新建文件夹")
 	public WebElement desktop_newFolder;
 	@SearchWith(pageName = "desktop", elementName = "desktop_import", noteName = "导入")

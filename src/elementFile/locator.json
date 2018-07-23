@@ -257,6 +257,12 @@
 				"note": "新建表格"
 			},
 			{
+				"elementName": "desktop_newslides",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-slide']",
+				"note": "新建幻灯片"
+			},
+			{
 				"elementName": "desktop_newFolder",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='create-file-folder']",
