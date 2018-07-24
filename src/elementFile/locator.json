@@ -1240,7 +1240,7 @@
 			{
 				"elementName": "ppt_page_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[@id='filmstrip']//div[1]//div)[2]",
+				"locator": "(//div[contains(@class,'smslide-viewport smslide-readonly')])[2]",
 				"note": "左边栏第二个页面"
 			},
 			{
