@@ -469,4 +469,14 @@ public class elementFile {
 	public WebElement ppt_page_8;
 	@SearchWith(pageName = "ppt", elementName = "ppt_page_9", noteName = "左边栏第九个页面")
 	public WebElement ppt_page_9;
+	@SearchWith(pageName = "ppt", elementName = "page_elements_1", noteName = "幻灯片页面第一个元素")
+	public WebElement page_elements_1;
+	@SearchWith(pageName = "ppt", elementName = "page_elements_2", noteName = "幻灯片页面第二个元素")
+	public WebElement page_elements_2;
+	@SearchWith(pageName = "ppt", elementName = "page_elements_3", noteName = "幻灯片页面第三个元素")
+	public WebElement page_elements_3;
+	@SearchWith(pageName = "ppt", elementName = "page_elements_4", noteName = "幻灯片页面第四个元素")
+	public WebElement page_elements_4;
+	@SearchWith(pageName = "ppt", elementName = "page_elements_5", noteName = "幻灯片页面第五个元素")
+	public WebElement page_elements_5;
 }
