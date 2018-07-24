@@ -1186,13 +1186,13 @@
 			{
 				"elementName": "ppt_revoke",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//span[1]",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[1]",
 				"note": "撤销"
 			},
 			{
 				"elementName": "ppt_redo",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//span[2]",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[2]",
 				"note": "重做"
 			},
 			{
@@ -1234,13 +1234,13 @@
 			{
 				"elementName": "ppt_page_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filmstrip']//div[1]//div[1]",
+				"locator": "(//div[@id='filmstrip']//div[1]//div)[1]",
 				"note": "左边栏第一个页面"
 			},
 			{
 				"elementName": "ppt_page_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filmstrip']//div[1]//div[2]",
+				"locator": "(//div[@id='filmstrip']//div[1]//div)[2]",
 				"note": "左边栏第二个页面"
 			},
 			{
