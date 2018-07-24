@@ -51,8 +51,6 @@ public class testTextboxEdit extends TestInit{
 		Boolean chexiao = doesWebElementExist(ppt_revoke);
 		System.out.println(chexiao);
 		click(ppt_revoke);
-		//click(ppt_revoke);
-		//click(down_arrow);
 		result = doesWebElementExist(ppt_page_2);
 		assertTrue(result);
 	}
