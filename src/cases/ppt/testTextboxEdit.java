@@ -1,6 +1,7 @@
 package cases.ppt;
 
 
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.Keys;
@@ -40,17 +41,20 @@ public class testTextboxEdit extends TestInit{
 	@Test(enabled = true)
 	public void Add_pages() throws InterruptedException {
 		login("Addpages@shimo.im","123123");
-		click(desktop_new);
-		click(desktop_newslides);
-		click(add_page);
-//		Boolean result = doesWebElementExist(ppt_page_2);
-//		assertTrue(result);
+		click(desktop);
+		click(desktop1_1);
 		click(ppt_page_2);
-		click(ppt_page_2);
-		click(ppt_page_1);
-		action.sendKeys(Keys.BACK_SPACE);
-
-		
+		action.sendKeys(Keys.DELETE).perform();
+		Boolean result = doesWebElementExist(ppt_page_2);
+		assertFalse(result);
+		Thread.sleep(4000);
+		Boolean chexiao = doesWebElementExist(ppt_revoke);
+		System.out.println(chexiao);
+		click(ppt_revoke);
+		//click(ppt_revoke);
+		//click(down_arrow);
+		result = doesWebElementExist(ppt_page_2);
+		assertTrue(result);
 	}
 
 
