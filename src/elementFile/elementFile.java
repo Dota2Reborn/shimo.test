@@ -64,6 +64,8 @@ public class elementFile {
 	public WebElement desktop_orderByDefault;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newSheet", noteName = "新建表格")
 	public WebElement desktop_newSheet;
+	@SearchWith(pageName = "desktop", elementName = "desktop_newslides", noteName = "新建幻灯片")
+	public WebElement desktop_newslides;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder", noteName = "新建文件夹")
 	public WebElement desktop_newFolder;
 	@SearchWith(pageName = "desktop", elementName = "desktop_import", noteName = "导入")
@@ -463,4 +465,22 @@ public class elementFile {
 	public WebElement ppt_page_4;
 	@SearchWith(pageName = "ppt", elementName = "ppt_page_5", noteName = "左边栏第五个页面")
 	public WebElement ppt_page_5;
+	@SearchWith(pageName = "ppt", elementName = "ppt_page_6", noteName = "左边栏第六个页面")
+	public WebElement ppt_page_6;
+	@SearchWith(pageName = "ppt", elementName = "ppt_page_7", noteName = "左边栏第七个页面")
+	public WebElement ppt_page_7;
+	@SearchWith(pageName = "ppt", elementName = "ppt_page_8", noteName = "左边栏第八个页面")
+	public WebElement ppt_page_8;
+	@SearchWith(pageName = "ppt", elementName = "ppt_page_9", noteName = "左边栏第九个页面")
+	public WebElement ppt_page_9;
+	@SearchWith(pageName = "ppt", elementName = "page_elements_1", noteName = "幻灯片页面第一个元素")
+	public WebElement page_elements_1;
+	@SearchWith(pageName = "ppt", elementName = "page_elements_2", noteName = "幻灯片页面第二个元素")
+	public WebElement page_elements_2;
+	@SearchWith(pageName = "ppt", elementName = "page_elements_3", noteName = "幻灯片页面第三个元素")
+	public WebElement page_elements_3;
+	@SearchWith(pageName = "ppt", elementName = "page_elements_4", noteName = "幻灯片页面第四个元素")
+	public WebElement page_elements_4;
+	@SearchWith(pageName = "ppt", elementName = "page_elements_5", noteName = "幻灯片页面第五个元素")
+	public WebElement page_elements_5;
 }

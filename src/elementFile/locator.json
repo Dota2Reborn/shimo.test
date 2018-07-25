@@ -257,6 +257,12 @@
 				"note": "新建表格"
 			},
 			{
+				"elementName": "desktop_newslides",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-slide']",
+				"note": "新建幻灯片"
+			},
+			{
 				"elementName": "desktop_newFolder",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='create-file-folder']",
@@ -1192,13 +1198,13 @@
 			{
 				"elementName": "ppt_revoke",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//span[1]",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[1]/*[name()='svg']",
 				"note": "撤销"
 			},
 			{
 				"elementName": "ppt_redo",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//span[2]",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[2]/*[name()='svg']",
 				"note": "重做"
 			},
 			{
@@ -1240,32 +1246,86 @@
 			{
 				"elementName": "ppt_page_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filmstrip']//div[1]//div[1]//div[2]",
+				"locator": "(//div[@id='filmstrip']//div[1]//div)[1]",
 				"note": "左边栏第一个页面"
 			},
 			{
 				"elementName": "ppt_page_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filmstrip']//div[1]//div[2]//div[2]",
+				"locator": "(//div[contains(@class,'smslide-viewport smslide-readonly')])[2]",
 				"note": "左边栏第二个页面"
 			},
 			{
 				"elementName": "ppt_page_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filmstrip']//div[1]//div[3]//div[2]",
+				"locator": "//div[@id='filmstrip']//div[1]//div[3]",
 				"note": "左边栏第三个页面"
 			},
 			{
 				"elementName": "ppt_page_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filmstrip']//div[1]//div[4]//div[2]",
+				"locator": "//div[@id='filmstrip']//div[1]//div[4]",
 				"note": "左边栏第四个页面"
 			},
 			{
 				"elementName": "ppt_page_5",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filmstrip']//div[1]//div[5]//div[2]",
+				"locator": "//div[@id='filmstrip']//div[1]//div[5]",
 				"note": "左边栏第五个页面"
+			},
+			{
+				"elementName": "ppt_page_6",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='filmstrip']//div[1]//div[6]",
+				"note": "左边栏第六个页面"
+			},
+			{
+				"elementName": "ppt_page_7",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='filmstrip']//div[1]//div[7]",
+				"note": "左边栏第七个页面"
+			},
+			{
+				"elementName": "ppt_page_8",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='filmstrip']//div[1]//div[8]",
+				"note": "左边栏第八个页面"
+			},
+			{
+				"elementName": "ppt_page_9",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='filmstrip']//div[1]//div[9]",
+				"note": "左边栏第九个页面"
+			},
+			{
+				"elementName": "page_elements_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[1]",
+				"note": "幻灯片页面第一个元素"
+			},
+			{
+				"elementName": "page_elements_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[2]",
+				"note": "幻灯片页面第二个元素"
+			},
+			{
+				"elementName": "page_elements_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[3]",
+				"note": "幻灯片页面第三个元素"
+			},
+			{
+				"elementName": "page_elements_4",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[4]",
+				"note": "幻灯片页面第四个元素"
+			},
+			{
+				"elementName": "page_elements_5",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[5]",
+				"note": "幻灯片页面第五个元素"
 			}
 		]
 	},

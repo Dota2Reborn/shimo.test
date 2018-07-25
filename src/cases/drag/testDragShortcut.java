@@ -27,8 +27,10 @@ public class testDragShortcut extends TestInit {
 	public void Dragging_folders() throws InterruptedException {
 		login("Dragging_folders@shimo.im", "123123");
 		click(desktop);
-//		action.clickAndHold(desktop1_1).perform();
-//		action.moveToElement(desktop_shortcut_Increase).perform();
+		
+		desktop.click();
+		action.clickAndHold(desktop1_1).perform();
+		action.moveToElement(desktop_shortcut_Increase).perform();
 //		action.release(desktop1_1).perform();
 //		 new Actions(driver).dragAndDropBy(desktop1_1, 0, 10).build().perform();
 //		//new Actions(driver).DragAndDrop(desktop1_1,desktop_shortcut_Increase).Perform();
