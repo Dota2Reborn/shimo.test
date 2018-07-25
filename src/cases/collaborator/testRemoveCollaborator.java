@@ -91,7 +91,7 @@ public class testRemoveCollaborator  extends TestInit{
 		 moveToElement(menu_cooperation);
 		 click(button_addCollaborator);
 		 sendKeys(input_addCollaborator, "remove2@shimo.im");
-		 click(b_addCollaborator_1_list);
+		 click(b_addCollaborator_1_add);
 		 click(b_addCollaborator_ok);
 		 click(button_addCollaborator_close);
 		 

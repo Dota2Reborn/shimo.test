@@ -88,4 +88,19 @@
 			<class name="cases.collaborator.testAuthorityForAddCollaborator" />
 		</classes>
 	</test>
+	<test name="test15">
+		<classes>
+			<class name="cases.collaborator.testModifyPermissions" />
+		</classes>
+	</test>
+	<test name="test16">
+		<classes>
+			<class name="cases.collaborator.testRemoveCollaborator" />
+		</classes>
+	</test>
+	<test name="test17">
+		<classes>
+			<class name="cases.collaborator.testTransferOwner" />
+		</classes>
+	</test>
 </suite>
