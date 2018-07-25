@@ -1186,13 +1186,13 @@
 			{
 				"elementName": "ppt_revoke",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[1]",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[1]/*[name()='svg']",
 				"note": "撤销"
 			},
 			{
 				"elementName": "ppt_redo",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[2]",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[2]/*[name()='svg']",
 				"note": "重做"
 			},
 			{
