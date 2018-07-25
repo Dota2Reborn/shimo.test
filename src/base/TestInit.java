@@ -75,7 +75,6 @@ public class TestInit extends elementFile {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		pageInit();
-		logout();
 	}
 
 	@AfterClass
@@ -97,9 +96,9 @@ public class TestInit extends elementFile {
 //		className = new Exception().getStackTrace()[1].getMethodName();
 //		printLog(className, user);
 
-		if (!driver.getCurrentUrl().equals(test_url + "login")) {
+//		if (!driver.getCurrentUrl().equals(test_url + "login")) {
 			driver.navigate().to(test_url + "login");
-		}
+//		}
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
 		userEmail.clear();
 		sendKeys(userEmail, user);
