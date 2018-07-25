@@ -75,6 +75,7 @@ public class TestInit extends elementFile {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		pageInit();
+		logout();
 	}
 
 	@AfterClass
