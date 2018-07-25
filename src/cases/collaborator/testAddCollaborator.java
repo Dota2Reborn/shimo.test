@@ -44,7 +44,7 @@ public class testAddCollaborator extends TestInit {
 	public void addCollaborator_2() throws InterruptedException {
 		login("autoTest01@shimo.im", "123123");
 		click(desktop);
-		contextClick(desktop1_1_folder);
+		contextClick(desktop1_3_folder);
 		moveToElement(menu_cooperation);
 
 		String msg_a = getText(addCollaborator_total);
