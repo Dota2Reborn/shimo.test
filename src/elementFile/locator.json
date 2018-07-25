@@ -1298,6 +1298,12 @@
 				"note": "左边栏第九个页面"
 			},
 			{
+				"elementName": "ppt_text",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]",
+				"note": "幻灯片页面第一个元素"
+			},
+			{
 				"elementName": "page_elements_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[1]",
