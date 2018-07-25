@@ -177,7 +177,7 @@ public class hovertest extends TestInit {
 	@Test
 	public void hover_person6() throws InterruptedException {
 
-		login("autoTest@shimo.im", "123123");
+		login(" logoutTest@shimo.im", "123123");
 		moveToElement(desktop_user_icon);
 
 		wait.until(ExpectedConditions
