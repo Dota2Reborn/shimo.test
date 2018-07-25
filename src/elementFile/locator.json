@@ -1288,31 +1288,31 @@
 			{
 				"elementName": "page_elements_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']//div[1]//div[contains(@class,'smslide-only-container]')//div[1]//div[1]",
+				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[1]",
 				"note": "幻灯片页面第一个元素"
 			},
 			{
 				"elementName": "page_elements_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']//div[1]//div[contains(@class,'smslide-only-container]')//div[1]//div[2]",
+				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[2]",
 				"note": "幻灯片页面第二个元素"
 			},
 			{
 				"elementName": "page_elements_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']//div[1]//div[contains(@class,'smslide-only-container]')//div[1]//div[3]",
+				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[3]",
 				"note": "幻灯片页面第三个元素"
 			},
 			{
 				"elementName": "page_elements_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']//div[1]//div[contains(@class,'smslide-only-container]')//div[1]//div[4]",
+				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[4]",
 				"note": "幻灯片页面第四个元素"
 			},
 			{
 				"elementName": "page_elements_5",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']//div[1]//div[contains(@class,'smslide-only-container]')//div[1]//div[5]",
+				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[5]",
 				"note": "幻灯片页面第五个元素"
 			}
 		]
