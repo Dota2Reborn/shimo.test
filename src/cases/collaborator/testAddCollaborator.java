@@ -42,9 +42,9 @@ public class testAddCollaborator extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void addCollaborator_2() throws InterruptedException {
-		login("autoTest01@shimo.im", "123123");
+		login("folder_addCollaborat@shimo.im", "123123");
 		click(desktop);
-		contextClick(desktop1_3_folder);
+		contextClick(desktop1_1_folder);
 		moveToElement(menu_cooperation);
 
 		String msg_a = getText(addCollaborator_total);
@@ -259,9 +259,9 @@ public class testAddCollaborator extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void addCollaborator_9() throws InterruptedException {
-		login("autoTest01@shimo.im", "123123");
+		login("folder_addCollaborat@shimo.im", "123123");
 		click(desktop);
-		click(desktop1_3_folder);
+		click(desktop1_1_folder);
 		click(addCollaborator_folder_add);
 
 		sendKeys(input_addCollaborator, "11@cc.ccc");
