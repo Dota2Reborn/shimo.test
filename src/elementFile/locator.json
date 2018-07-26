@@ -1337,7 +1337,7 @@
 	},
 	{
 		"note": "PPT_header",
-		"pageName": "ppt_header",
+		"pageName": "PPT_header",
 		"elements": [
 			{
 				"elementName": "ppt_return",
