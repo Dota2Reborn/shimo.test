@@ -485,4 +485,48 @@ public class elementFile {
 	public WebElement page_elements_4;
 	@SearchWith(pageName = "ppt", elementName = "page_elements_5", noteName = "幻灯片页面第五个元素")
 	public WebElement page_elements_5;
+	/**
+	 * ppt
+	 * PPT_header
+	 *
+	 */
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_return", noteName = "幻灯片内返回")
+	public WebElement ppt_return;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_down", noteName = "幻灯片内下箭头")
+	public WebElement ppt_down;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_plus_sign", noteName = "幻灯片中加号")
+	public WebElement ppt_plus_sign;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_filename", noteName = "幻灯片标题")
+	public WebElement ppt_filename;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_collect", noteName = "收藏标签")
+	public WebElement ppt_collect;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_comment", noteName = "幻灯片讨论")
+	public WebElement ppt_comment;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_broadcast", noteName = "播放幻灯片")
+	public WebElement ppt_broadcast;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_cooperation", noteName = "添加协作者")
+	public WebElement ppt_cooperation;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_share", noteName = "分享")
+	public WebElement ppt_share;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_dotdotdot", noteName = "左上角点点点")
+	public WebElement ppt_dotdotdot;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_shortcut", noteName = "快捷方式设置")
+	public WebElement ppt_shortcut;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_news", noteName = "消息设置")
+	public WebElement ppt_news;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_collection", noteName = "收藏&取消收藏")
+	public WebElement ppt_collection;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_move", noteName = "移动")
+	public WebElement ppt_move;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_now_copy", noteName = "创建副本")
+	public WebElement ppt_now_copy;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_export", noteName = "导出")
+	public WebElement ppt_export;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_view_history", noteName = "查看历史")
+	public WebElement ppt_view_history;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_Information", noteName = "幻灯片信息")
+	public WebElement ppt_Information;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete", noteName = "删除幻灯片")
+	public WebElement ppt_delete;
+	
 }
