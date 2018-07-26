@@ -28,26 +28,21 @@ public class testTextboxEdit extends TestInit {
 		
 		
 		click(desktop_new);
-		click(desktop_newslides);
-		click(add_page);
-		click(ppt_page_2);
-		click(ppt_revoke);
-		click(ppt_redo);
-		
-		Thread.sleep(1000);
-		
-//		WebElement revoke = driver.findElement(By.xpath("//div[@id='toolbar']//div[1]//div[1]//button[1]"));
-//		click(revoke);
-		
-		
-//		for (int i = 1; i < 9; i++) {
-//			click(down_arrow);
-//			WebElement template = driver
-//					.findElement(By.xpath("//div[@class='smslide-only-container']//div[1]//div[3]//div[1]"));
-//			click(template);
-//		}
-//		Boolean result = doesWebElementExist(ppt_page_9);
-//		assertTrue(result);
+//		click(desktop_newslides);
+//		click(add_page);
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_dotdotdot);
+		for (int i = 1; i < 9; i++) {
+			click(down_arrow);
+			WebElement template = driver
+					.findElement(By.xpath("//ul[@id='sm-slide-layout']//li["+i+"]"));
+			click(template);
+		}
+		Boolean result = doesWebElementExist(ppt_page_9);
+		click(ppt_delete);
+		click(desktop_newFolder_name_ok);
+		assertTrue(result);
 
 	}
 
@@ -91,6 +86,26 @@ public class testTextboxEdit extends TestInit {
 		click(ppt_revoke);
 		Boolean result2 = doesWebElementExist(page_elements_2);
 		assertTrue(result1 && !result2);
+	}
+	
+	/**
+	 * 调整页面排序
+	 * 
+	 * @author 王继程
+	 * @Time 2018-07-23
+	 *
+	 */
+	@Test(enabled = true)
+	public void Sorting_Order() throws InterruptedException {
+		login(" SortingOrder@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_page_1);
+		moveToElement(ppt_page_1);
+		action.clickAndHold(ppt_page_1).perform();
+		moveToElement(ppt_page_5);
+		action.release().perform();
+		//action.dragAndDropBy(ppt_page_1, 0, 100).perform();
 	}
 
 }
