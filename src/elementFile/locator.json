@@ -1461,14 +1461,50 @@
 			{
 				"elementName": "element_setTop",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[1]",
-				"note": "元素置顶"
+				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[2]//div[1]//button[1]",
+				"note": "图片元素置顶"
+			},
+			{
+				"elementName": "element_setThe",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[2]//div[1]//button[2]",
+				"note": "图片元素置底"
 			},
 			{
 				"elementName": "element_moveUp",
 				"locateUsing": "xpath",
+				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[2]//div[1]//button[3]",
+				"note": "图片元素上移一层"
+			},
+			{
+				"elementName": "element_moveDown",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[2]//div[1]//button[4]",
+				"note": "图片元素下移一层"
+			},
+			{
+				"elementName": "element_setTop1",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[1]",
+				"note": "文本形状元素置顶"
+			},
+			{
+				"elementName": "element_setThe1",
+				"locateUsing": "xpath",
 				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[2]",
-				"note": "元素上移一层"
+				"note": "文本形状元素置底"
+			},
+			{
+				"elementName": "element_moveUp1",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[3]",
+				"note": "文本形状元素上移一层"
+			},
+			{
+				"elementName": "element_moveDown1",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[4]",
+				"note": "文本形状元素下移一层"
 			}
 		]
 	},
