@@ -1,5 +1,4 @@
 package cases.drag;
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.awt.AWTException;
@@ -7,18 +6,12 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.server.handler.SendKeys;
 import org.testng.annotations.Test;
-
-import com.gargoylesoftware.htmlunit.javascript.host.Window;
 
 import base.TestInit;
 

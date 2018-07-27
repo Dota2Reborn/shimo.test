@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -18,7 +19,7 @@ public class testShapeArrow extends TestInit{
 	
 	
 	public void makeSure() {
-		WebElement arrowCopy = driver.findElement(By.xpath("//div[@class='smslide-only-container']//div[1]//div[6]"));
+		WebElement arrowCopy = driver.findElement(By.xpath("//div[@id='editor']//div[1]//div[1]//div[1]//div[6]"));
 		boolean result = arrowCopy.isDisplayed();
 		assertTrue(result);	
 		action.moveToElement(arrowCopy).click().perform();
@@ -26,6 +27,13 @@ public class testShapeArrow extends TestInit{
 		
 	}
 	
+	public int  formateData(Point point) {
+		String data = point.toString();
+		String dataSub = data.substring(1, data.length()-1);
+		String[] dataSp = dataSub.split(",");
+		int dataX = Integer.parseInt(dataSp[0]);
+		return dataX;
+	}
 	/**
 	 * 新增箭头
 	 * 
@@ -87,7 +95,7 @@ public class testShapeArrow extends TestInit{
 	 * @Time 2018-07-24
 	 *
 	 */
-	@Test(enabled = true)
+	@Test(enabled = false)
 	 public void copyArrow_clickTextbox() throws InterruptedException, AWTException{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
@@ -195,6 +203,39 @@ public class testShapeArrow extends TestInit{
 		robot.keyRelease(KeyEvent.VK_V);
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertTrue(result);
+		click(page_elements_1);
+		action.sendKeys(Keys.DELETE).perform();
+	}
+	
+	
+	/**
+	 * 复制后删除箭头粘贴
+	 * 
+	 * @author 张家晶
+	 * @throws AWTException 
+	 * @Time 2018-07-27
+	 *
+	 */
+	@Test(enabled = true)
+	 public void DeleteCopy_arrow() throws InterruptedException, AWTException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(add_arrows);
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_C);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_C);
+		click(page_elements_1);
+		action.sendKeys(Keys.DELETE).perform();
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_V);
+		Boolean result = doesWebElementExist(page_elements_1);
+		assertFalse(result);
+		
 	}
 	
 	/**
@@ -209,7 +250,8 @@ public class testShapeArrow extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(page_elements_1);
+		click(add_arrows);
+		//click(page_elements_1);
 		WebElement beforeArrow = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
 		//int beforeH = Integer.parseInt(beforeArrow.getCssValue("height"));
 		String beforeH = beforeArrow.getCssValue("height");
@@ -230,6 +272,8 @@ public class testShapeArrow extends TestInit{
 		System.out.println("heg="+heg);
 		System.out.println(heightN == heg + px);
 		assertTrue(heightN == heg + px);
+		click(page_elements_1);
+		action.sendKeys(Keys.DELETE).perform();
 		
 	}
 	
@@ -253,13 +297,43 @@ public class testShapeArrow extends TestInit{
 	}
 	
 	/**
-	 * 调整箭头层级
+	 * 拖拽箭头
 	 * 
 	 * @author 张家晶
 	 * @Time 2018-07-27
 	 *
 	 */
 	@Test(enabled = true)
+	 public void Drag_arrow() throws InterruptedException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(add_arrows);
+		//click(page_elements_1);
+		Point location = page_elements_1.getLocation();
+		int loc = formateData(location);
+		System.out.println("loc="+loc);
+		action.clickAndHold(page_elements_1);
+		action.dragAndDropBy(page_elements_1, 100, 0).build().perform();
+		action.release();
+		Point location1 = page_elements_1.getLocation();
+		int loc1 = formateData(location1);
+		System.out.println("loc1="+loc1);
+		assertTrue(loc1-loc == 100);
+		click(page_elements_1);
+		action.sendKeys(Keys.DELETE).perform();
+	}
+	
+	
+	
+	/**
+	 * 调整箭头层级
+	 * 
+	 * @author 张家晶
+	 * @Time 2018-07-27
+	 *
+	 */
+	@Test(enabled = false)
 	 public void Arrow_AjustLevel() throws InterruptedException{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
@@ -290,7 +364,7 @@ public class testShapeArrow extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(page_elements_1);
+		click(add_arrows);
 		action.sendKeys(Keys.DELETE).perform();
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertFalse(result);
@@ -301,5 +375,8 @@ public class testShapeArrow extends TestInit{
 		result = doesWebElementExist(page_elements_1);
 		assertFalse(result);
 	}
+	
+	
+	
 
 }
