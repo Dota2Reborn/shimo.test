@@ -10,7 +10,6 @@ import java.awt.event.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import base.TestInit;
@@ -202,7 +201,7 @@ public class testShapeArrow extends TestInit{
 	 * 调整箭头
 	 * 
 	 * @author 张家晶
-	 * @Time 2018-07-25
+	 * @Time 2018-07-26
 	 *
 	 */
 	@Test(enabled = true)
@@ -211,15 +210,73 @@ public class testShapeArrow extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(page_elements_1);
-		WebElement arrowStart = driver.findElement(By.xpath("//div[@class='smslide-only-container']//div[3]//div[1]//div[2]//div[1]//div[1]"));
+		WebElement beforeArrow = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
+		//int beforeH = Integer.parseInt(beforeArrow.getCssValue("height"));
+		String beforeH = beforeArrow.getCssValue("height");
+		String bef = beforeH.substring(0 , beforeH.length()-2);
+		int heightN = (int)Float.parseFloat(bef);
+		System.out.println("heightN="+heightN);
+		WebElement arrowStart = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]//div[1]//div[1]"));
 		moveToElement(arrowStart);
-		System.out.println(arrowStart);
-		//action.clickAndHold(arrowStart);
-		for (int j = 1; j < 6; j++) {
-			//action.dragAndDropBy(arrowStart, j*30, -j*50).build().perform();
-			action.clickAndHold(arrowStart).dragAndDropBy(arrowStart, j*30, j*50).build().perform();
-		}
+		action.clickAndHold(arrowStart);
+		int px = 30;
+		action.dragAndDropBy(arrowStart, 0, px).build().perform();
+		driver.navigate().refresh();
+		click(page_elements_1);
+		WebElement arrow = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
+		String afterH = arrow.getCssValue("height");
+		String afH = afterH.substring(0 , afterH.length()-2);
+		int heg = (int)Float.parseFloat(afH);
+		System.out.println("heg="+heg);
+		System.out.println(heightN == heg + px);
+		assertTrue(heightN == heg + px);
+		
 	}
+	
+	
+	/**
+	 * 设置箭头样式
+	 * 
+	 * @author 张家晶
+	 * @Time 2018-07-27
+	 *
+	 */
+	@Test(enabled = false)
+	 public void Arrow_Style() throws InterruptedException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(page_elements_1);
+		String stroke = page_elements_1.getCssValue("stroke");
+		System.out.println("stroke="+stroke);
+		
+	}
+	
+	/**
+	 * 调整箭头层级
+	 * 
+	 * @author 张家晶
+	 * @Time 2018-07-27
+	 *
+	 */
+	@Test(enabled = true)
+	 public void Arrow_AjustLevel() throws InterruptedException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_page_3);
+		action.moveToElement(page_elements_3).click();
+		String stroke = page_elements_3.getCssValue("z-index");
+		System.out.println("stroke="+stroke);
+		WebElement setTop = driver.findElement(By.xpath("//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[1]"));
+		System.out.println("setTop="+setTop);
+		action.moveToElement(setTop).click();
+		String stroke1 = page_elements_3.getCssValue("z-index");
+		System.out.println("stroke1="+stroke1);
+		
+		
+	}
+	
 	
 	/**
 	 * 删除箭头后撤销，撤销后重做

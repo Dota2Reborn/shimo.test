@@ -108,7 +108,7 @@ public class testtest extends TestInit  {
 	}
 	
 	
-	@Test(enabled = false)
+	@Test(enabled = true)
 	 public void Dragging_circle() throws InterruptedException{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
@@ -116,17 +116,8 @@ public class testtest extends TestInit  {
 		click(desktop1_1);
 		Thread.sleep(5000);
 		click(add_circular);
-		WebElement circle = driver.findElement(By.xpath("//div[@class='smslide-only-container']//div[1]//div[3]//div[1]"));
-		moveToElement(circle);
-		System.out.println("=========");
-		Actions action = new Actions(driver);
-		for (int i = 1; i < 6; i++) {
-			action.dragAndDropBy(circle, i*40, i*20).build().perform();
-		}
-		for (int i = 1; i < 6; i++) {
-			action.dragAndDropBy(circle, -i*40, -i*20).build().perform();
-		}
-		Thread.sleep(6000);
+		action.clickAndHold(page_elements_1);
+		action.dragAndDropBy(page_elements_1, 40, 0).build().perform();
 		action.release().perform();
 	}
 	

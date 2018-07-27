@@ -529,4 +529,15 @@ public class elementFile {
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete", noteName = "删除幻灯片")
 	public WebElement ppt_delete;
 	
+	
+	/**
+	 * ppt
+	 * PPT_rightBar
+	 *
+	 */
+	@SearchWith(pageName = "PPT_rightBar", elementName = "element_setTop", noteName = "元素置顶")
+	public WebElement element_setTop;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "element_moveUp", noteName = "元素上移一层")
+	public WebElement element_moveUp;
+	
 }

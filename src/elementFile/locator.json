@@ -1198,13 +1198,13 @@
 			{
 				"elementName": "ppt_revoke",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[1]/*[name()='svg']",
+				"locator": "//button[@id='sm-slide-undo']",
 				"note": "撤销"
 			},
 			{
 				"elementName": "ppt_redo",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[1]/*[name()='svg']",
+				"locator": "//button[@id='sm-slide-redo']",
 				"note": "重做"
 			},
 			{
@@ -1258,7 +1258,7 @@
 			{
 				"elementName": "ppt_page_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filmstrip']//div[1]//div[3]",
+				"locator": "(//div[contains(@class,'smslide-viewport smslide-readonly')])[3]",
 				"note": "左边栏第三个页面"
 			},
 			{
@@ -1452,6 +1452,23 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[12]",
 				"note": "删除"
+			}
+		]
+	},{
+		"note": "PPT_rightBar",
+		"pageName": "PPT_rightBar",
+		"elements": [
+			{
+				"elementName": "element_setTop",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[1]",
+				"note": "元素置顶"
+			},
+			{
+				"elementName": "element_moveUp",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[2]",
+				"note": "元素上移一层"
 			}
 		]
 	},
