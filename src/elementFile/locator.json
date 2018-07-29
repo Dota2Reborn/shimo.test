@@ -1244,6 +1244,24 @@
 				"note": "添加圆形"
 			},
 			{
+				"elementName": "narrow_trying",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='toolbar']//div[1]//div[3]//button[1]",
+				"note": "减小视图"
+			},
+			{
+				"elementName": "enlarge_trying",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='toolbar']//div[1]//div[3]//button[3]",
+				"note": "放大视图"
+			},
+			{
+				"elementName": "ppt_zoom",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='toolbar']//div[1]//div[3]//button[2]",
+				"note": "缩放视图"
+			},
+			{
 				"elementName": "ppt_page_1",
 				"locateUsing": "xpath",
 				"locator": "(//div[@id='filmstrip']//div[1]//div)[1]",

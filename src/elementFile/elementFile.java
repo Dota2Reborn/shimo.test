@@ -455,6 +455,12 @@ public class elementFile {
 	public WebElement add_Rectangle;
 	@SearchWith(pageName = "ppt", elementName = "add_circular", noteName = "添加圆形")
 	public WebElement add_circular;
+	@SearchWith(pageName = "ppt", elementName = "narrow_trying", noteName = "减小视图")
+	public WebElement narrow_trying;
+	@SearchWith(pageName = "ppt", elementName = "enlarge_trying", noteName = "放大视图")
+	public WebElement enlarge_trying;
+	@SearchWith(pageName = "ppt", elementName = "ppt_zoom", noteName = "缩放视图")
+	public WebElement ppt_zoom;
 	@SearchWith(pageName = "ppt", elementName = "ppt_page_1", noteName = "左边栏第一个页面")
 	public WebElement ppt_page_1;
 	@SearchWith(pageName = "ppt", elementName = "ppt_page_2", noteName = "左边栏第二个页面")
