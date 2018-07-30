@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import base.TestInit;
 
-public class testGlobalOther extends TestInit {
+public class testGlobalOther extends TestInit {//全局其他
 	/**
 	 * 页面缩放调整
 	 * 
