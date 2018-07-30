@@ -67,7 +67,8 @@ public class testShapeRound extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		Thread.sleep(2000);
-		click(add_circular);
+		click(ppt_page_2);
+		click(page_elements_4);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
@@ -77,8 +78,7 @@ public class testShapeRound extends TestInit{
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_V);
-		click(page_elements_2);
-		action.sendKeys(Keys.DELETE).perform();
+		makeSure();
 	}
 	
 	/**
@@ -95,20 +95,19 @@ public class testShapeRound extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		Thread.sleep(2000);
-		click(add_circular);
+		click(ppt_page_2);
+		click(page_elements_4);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_C);
-		click(ppt_page_2);
-		click(page_elements_1);
+		click(page_elements_5);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_V);
-		click(page_elements_2);
-		action.sendKeys(Keys.DELETE).perform();
+		makeSure();
 	}
 	
 	/**
@@ -125,14 +124,14 @@ public class testShapeRound extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		Thread.sleep(2000);
-		click(add_circular);
+		click(ppt_page_2);
+		click(page_elements_4);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_C);
-		click(ppt_page_2);
-		click(page_elements_5);
+		click(page_elements_2);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -155,13 +154,13 @@ public class testShapeRound extends TestInit{
 		click(desktop1_1);
 		Thread.sleep(2000);
 		click(ppt_page_2);
-		click(page_elements_2);
+		click(page_elements_4);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_C);
-		click(page_elements_3);
+		click(page_elements_1);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -184,7 +183,7 @@ public class testShapeRound extends TestInit{
 		click(desktop1_1);
 		Thread.sleep(2000);
 		click(ppt_page_2);
-		click(page_elements_2);
+		click(page_elements_4);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
