@@ -7,10 +7,8 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import base.TestInit;
@@ -18,10 +16,8 @@ import base.TestInit;
 public class testShapeRectangle extends TestInit{
 	
 	public void makeSure() {
-		WebElement arrowCopy = driver.findElement(By.xpath("//div[@id='editor']//div[1]//div[1]//div[1]//div[6]"));
-		boolean result = arrowCopy.isDisplayed();
+		boolean result = page_elements_2.isDisplayed();
 		assertTrue(result);	
-		action.moveToElement(arrowCopy).click().perform();
 		action.sendKeys(Keys.DELETE).perform();
 	}
 	
@@ -67,8 +63,8 @@ public class testShapeRectangle extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		Thread.sleep(2000);
-		click(ppt_page_2);
-		click(page_elements_3);
+		click(ppt_page_3);
+		click(page_elements_1);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
@@ -95,14 +91,16 @@ public class testShapeRectangle extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		Thread.sleep(2000);
-		click(ppt_page_2);
-		click(page_elements_3);
+		click(ppt_page_3);
+		click(page_elements_1);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C); 
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_C);
-		click(page_elements_5);
+		click(ppt_page_6);
+		click(page_elements_1);
+		click(ppt_page_3);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -124,14 +122,16 @@ public class testShapeRectangle extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		Thread.sleep(2000);
-		click(ppt_page_2);
-		click(page_elements_3);
+		click(ppt_page_3);
+		click(page_elements_1);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_C);
-		click(page_elements_2);
+		click(ppt_page_4);
+		click(page_elements_1);
+		click(ppt_page_3);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -153,14 +153,16 @@ public class testShapeRectangle extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		Thread.sleep(2000);
-		click(ppt_page_2);
-		click(page_elements_3);
+		click(ppt_page_3);
+		click(page_elements_1);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_C);
+		click(ppt_page_5);
 		click(page_elements_1);
+		click(ppt_page_3);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -182,8 +184,8 @@ public class testShapeRectangle extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		Thread.sleep(2000);
-		click(ppt_page_2);
-		click(page_elements_3);
+		click(ppt_page_3);
+		click(page_elements_1);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);

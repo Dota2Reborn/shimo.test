@@ -19,10 +19,8 @@ public class testShapeArrow extends TestInit{
 	
 	
 	public void makeSure() {
-		WebElement arrowCopy = driver.findElement(By.xpath("//div[@id='editor']//div[1]//div[1]//div[1]//div[6]"));
-		boolean result = arrowCopy.isDisplayed();
+		boolean result = page_elements_2.isDisplayed();
 		assertTrue(result);	
-		action.moveToElement(arrowCopy).click().perform();
 		action.sendKeys(Keys.DELETE).perform();
 		
 	}
@@ -73,7 +71,7 @@ public class testShapeArrow extends TestInit{
 		click(desktop1_1);
 		Thread.sleep(2000);
 		click(ppt_page_2);
-		click(page_elements_2);
+		click(page_elements_1);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
@@ -102,13 +100,15 @@ public class testShapeArrow extends TestInit{
 		click(desktop1_1);
 		Thread.sleep(2000);
 		click(ppt_page_2);
-		click(page_elements_2);
+		click(page_elements_1);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_C);
-		click(page_elements_5);
+		click(ppt_page_6);
+		click(page_elements_1);
+		click(ppt_page_2);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -131,13 +131,15 @@ public class testShapeArrow extends TestInit{
 		click(desktop1_1);
 		Thread.sleep(2000);
 		click(ppt_page_2);
-		click(page_elements_2);
+		click(page_elements_1);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_C);
-		click(page_elements_3);
+		click(ppt_page_3);
+		click(page_elements_1);
+		click(ppt_page_2);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -161,13 +163,15 @@ public class testShapeArrow extends TestInit{
 		click(desktop1_1);
 		Thread.sleep(2000);
 		click(ppt_page_2);
-		click(page_elements_2);
+		click(page_elements_1);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_C);
+		click(ppt_page_5);
 		click(page_elements_1);
+		click(ppt_page_2);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -190,7 +194,7 @@ public class testShapeArrow extends TestInit{
 		click(desktop1_1);
 		Thread.sleep(2000);
 		click(ppt_page_2);
-		click(page_elements_2);
+		click(page_elements_1);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_C);

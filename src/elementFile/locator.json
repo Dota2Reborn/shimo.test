@@ -1282,19 +1282,19 @@
 			{
 				"elementName": "ppt_page_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filmstrip']//div[1]//div[4]",
+				"locator": "(//div[contains(@class,'smslide-viewport smslide-readonly')])[4]",
 				"note": "左边栏第四个页面"
 			},
 			{
 				"elementName": "ppt_page_5",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filmstrip']//div[1]//div[5]",
+				"locator": "(//div[contains(@class,'smslide-viewport smslide-readonly')])[5]",
 				"note": "左边栏第五个页面"
 			},
 			{
 				"elementName": "ppt_page_6",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filmstrip']//div[1]//div[6]",
+				"locator": "(//div[contains(@class,'smslide-viewport smslide-readonly')])[6]",
 				"note": "左边栏第六个页面"
 			},
 			{
