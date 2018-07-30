@@ -40,12 +40,8 @@ public class testTextboxEdit extends TestInit {//编辑文本框
 			action.sendKeys(Keys.BACK_SPACE).click().perform();
 		}
 		//action.sendKeys(time1);
-		WebElement circle = driver.findElement(By.xpath("//div[@id='editor']//div[1]//div[1]//div[1]//div[1]//div[1]"));
-		circle.sendKeys(time1);
-//		String text = "input text";
-//		String js = "var sum=document.getElementById('id'); sum.value='" + text + "';";
-//		((JavascriptExecutor)driver).executeScript(js);
-//		sendKeys(page_elements_1,time1);
+		WebElement circle = driver.findElement(By.xpath("//div[@id='editor']//div[1]//div[1]//div[1]//div[1]//div[2]"));
+		action.sendKeys(time1);
 		driver.navigate().refresh();
 		String time2=getText(page_elements_1);
 		assertEquals(time1, time2);
