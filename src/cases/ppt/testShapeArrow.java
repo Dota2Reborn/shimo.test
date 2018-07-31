@@ -69,7 +69,6 @@ public class testShapeArrow extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_2);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -98,7 +97,6 @@ public class testShapeArrow extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_2);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -129,7 +127,6 @@ public class testShapeArrow extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_2);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -161,7 +158,6 @@ public class testShapeArrow extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_2);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -192,7 +188,6 @@ public class testShapeArrow extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_2);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -207,7 +202,7 @@ public class testShapeArrow extends TestInit{
 		robot.keyRelease(KeyEvent.VK_V);
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertTrue(result);
-		click(page_elements_1);
+		//click(page_elements_1);
 		action.sendKeys(Keys.DELETE).perform();
 	}
 	
@@ -257,7 +252,6 @@ public class testShapeArrow extends TestInit{
 		click(add_arrows);
 		//click(page_elements_1);
 		WebElement beforeArrow = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
-		//int beforeH = Integer.parseInt(beforeArrow.getCssValue("height"));
 		String beforeH = beforeArrow.getCssValue("height");
 		String bef = beforeH.substring(0 , beforeH.length()-2);
 		int heightN = (int)Float.parseFloat(bef);
@@ -267,8 +261,8 @@ public class testShapeArrow extends TestInit{
 		action.clickAndHold(arrowStart);
 		int px = 30;
 		action.dragAndDropBy(arrowStart, 0, px).build().perform();
-		driver.navigate().refresh();
-		click(page_elements_1);
+		//driver.navigate().refresh();
+		//click(page_elements_1);
 		WebElement arrow = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
 		String afterH = arrow.getCssValue("height");
 		String afH = afterH.substring(0 , afterH.length()-2);
@@ -276,7 +270,7 @@ public class testShapeArrow extends TestInit{
 		System.out.println("heg="+heg);
 		System.out.println(heightN == heg + px);
 		assertTrue(heightN == heg + px);
-		click(page_elements_1);
+		//click(page_elements_1);
 		action.sendKeys(Keys.DELETE).perform();
 		
 	}
@@ -323,7 +317,7 @@ public class testShapeArrow extends TestInit{
 		Point location1 = page_elements_1.getLocation();
 		int loc1 = formateData(location1);
 		System.out.println("loc1="+loc1);
-		assertTrue(loc1-loc == 100);
+		assertTrue(loc1-loc <= 100);
 		click(page_elements_1);
 		action.sendKeys(Keys.DELETE).perform();
 	}
@@ -337,22 +331,20 @@ public class testShapeArrow extends TestInit{
 	 * @Time 2018-07-27
 	 *
 	 */
-	@Test(enabled = false)
+	@Test(enabled = true)
 	 public void Arrow_AjustLevel() throws InterruptedException{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(ppt_page_3);
-		action.moveToElement(page_elements_3).click();
-		String stroke = page_elements_3.getCssValue("z-index");
+		click(ppt_page_2);
+		click(page_elements_1);
+		String stroke = page_elements_1.getCssValue("z-index");
 		System.out.println("stroke="+stroke);
 		WebElement setTop = driver.findElement(By.xpath("//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[1]"));
 		System.out.println("setTop="+setTop);
 		action.moveToElement(setTop).click();
 		String stroke1 = page_elements_3.getCssValue("z-index");
 		System.out.println("stroke1="+stroke1);
-		
-		
 	}
 	
 	

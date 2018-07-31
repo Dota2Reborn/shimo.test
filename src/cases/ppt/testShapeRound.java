@@ -62,7 +62,6 @@ public class testShapeRound extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_4);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -90,7 +89,6 @@ public class testShapeRound extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_4);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -121,7 +119,6 @@ public class testShapeRound extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_4);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -152,7 +149,6 @@ public class testShapeRound extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_4);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -183,7 +179,6 @@ public class testShapeRound extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_4);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -198,7 +193,7 @@ public class testShapeRound extends TestInit{
 		robot.keyRelease(KeyEvent.VK_V);
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertTrue(result);
-		click(page_elements_1);
+		//click(page_elements_1);
 		action.sendKeys(Keys.DELETE).perform();
 	}
 	
@@ -254,7 +249,7 @@ public class testShapeRound extends TestInit{
 		Point location1 = page_elements_1.getLocation();
 		int loc1 = formateData(location1);
 		System.out.println("loc1="+loc1);
-		assertTrue(loc1-loc == 100);
+		assertTrue(loc1-loc <= 100);
 		click(page_elements_1);
 		action.sendKeys(Keys.DELETE).perform();
 	}

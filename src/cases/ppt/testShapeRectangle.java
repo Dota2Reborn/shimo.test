@@ -7,8 +7,10 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import base.TestInit;
@@ -28,6 +30,12 @@ public class testShapeRectangle extends TestInit{
 		String[] dataSp = dataSub.split(",");
 		int dataX = Integer.parseInt(dataSp[0]);
 		return dataX;
+	}
+	
+	public int  formate(String data) {
+		String bef = data.substring(0 , data.length()-2);
+		int dat = (int)Float.parseFloat(bef);
+		return dat;
 	}
 	
 	/**
@@ -62,7 +70,6 @@ public class testShapeRectangle extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_3);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -90,7 +97,6 @@ public class testShapeRectangle extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_3);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -121,7 +127,6 @@ public class testShapeRectangle extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_3);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -152,7 +157,6 @@ public class testShapeRectangle extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_3);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -183,7 +187,6 @@ public class testShapeRectangle extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(2000);
 		click(ppt_page_3);
 		click(page_elements_1);
 		Robot robot = new Robot();
@@ -198,7 +201,7 @@ public class testShapeRectangle extends TestInit{
 		robot.keyRelease(KeyEvent.VK_V);
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertTrue(result);
-		click(page_elements_1);
+		//click(page_elements_1);
 		action.sendKeys(Keys.DELETE).perform();
 	}
 	
@@ -254,9 +257,49 @@ public class testShapeRectangle extends TestInit{
 		Point location1 = page_elements_1.getLocation();
 		int loc1 = formateData(location1);
 		System.out.println("loc1="+loc1);
-		assertTrue(loc1-loc == 100);
+		assertTrue(loc1-loc <= 100);
 		click(page_elements_1);
 		action.sendKeys(Keys.DELETE).perform();
+	}
+	
+	
+	/**
+	 * 缩放矩形
+	 * 
+	 * @author 张家晶
+	 * @Time 2018-07-31
+	 *
+	 */
+	@Test(enabled = false)
+	 public void Resize_rect() throws InterruptedException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_page_3);
+		click(page_elements_1);
+		WebElement beforeImg = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[5]"));
+		int beforeH = formate(beforeImg.getCssValue("height"));
+		int beforeW = formate(beforeImg.getCssValue("width"));
+		System.out.println("beforeH="+beforeH);
+		System.out.println("beforeW="+beforeW);
+		int px = 10;
+		//for(int i = 1; i < 4; i++ ) {
+			//int j = 2*i-1;
+			WebElement northEast = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]//div[1]//div[3]"));
+			moveToElement(northEast);
+			action.clickAndHold(northEast);
+			action.dragAndDropBy(northEast, 0, px).build().perform();
+			action.release();
+			//driver.navigate().refresh();
+			//click(ppt_page_3);
+			//click(page_elements_1);
+		//}
+		WebElement afterImg = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
+		int afterH = formate(afterImg.getCssValue("height"));
+		int afterW = formate(afterImg.getCssValue("width"));
+		System.out.println("afterH="+afterH);
+		System.out.println("afterW="+afterW);
+		//assertTrue();
 	}
 	
 	/**
