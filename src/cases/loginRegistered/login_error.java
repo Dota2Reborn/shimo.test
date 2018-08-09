@@ -107,11 +107,11 @@ public class login_error extends TestInit {
 	
 
 		login_error("chenqingjie@shimo.im", " ");
-		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "密码有误"));
+		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "密码错误，请重新输入"));
 
 		String toast = "";
 		toast = driver.findElement(By.className("error-block")).getText();
-		assertEquals(toast, "密码有误");
+		assertEquals(toast, "密码错误，请重新输入");
 	}
 
 	/**
@@ -128,11 +128,11 @@ public class login_error extends TestInit {
 		
 		
 		login_error("chenqingjie@shimo.im", "8294854");
-		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "密码有误"));
+		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "密码错误，请重新输入"));
 
 		String toast = "";
 		toast = driver.findElement(By.className("error-block")).getText();
-		assertEquals(toast, "密码有误");
+		assertEquals(toast, "密码错误，请重新输入");
 	}
 
 	/**
