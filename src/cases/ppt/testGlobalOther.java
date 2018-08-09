@@ -1,7 +1,10 @@
 package cases.ppt;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.ie.InternetExplorerDriverEngine;
 import org.testng.annotations.Test;
 
 import base.TestInit;
@@ -19,18 +22,24 @@ public class testGlobalOther extends TestInit {//全局其他
 		login("pagestyle@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		for(int i=1;i<5;i++) {
-			click(narrow_trying);
-		}
-		
+		//boolean bl = true;
+		String zomm = getText(ppt_zoom);
+		zomm = zomm.substring(0,zomm.length() - 1);
+		click(narrow_trying);
 		String zomm1 = getText(ppt_zoom);
+		zomm1 = zomm1.substring(0,zomm1.length() - 1);
 		driver.navigate().refresh();
-		for(int i=1;i<5;i++) {
-			click(enlarge_trying);
-		}
+		click(enlarge_trying);
 		String zomm2 = getText(ppt_zoom);
-		assertEquals(zomm1,"25%");
-		assertEquals(zomm2,"400%");
+		zomm2 = zomm2.substring(0,zomm2.length() - 1);
+		int a = Integer.parseInt(zomm);
+		int b = Integer.parseInt(zomm1);
+		int c = Integer.parseInt(zomm2);
+		if(c>a&&a>b) {
+			assertTrue(true);
+		}else {
+			assertFalse(true);
+		}
 		
 	}
 
