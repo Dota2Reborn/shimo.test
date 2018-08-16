@@ -370,7 +370,7 @@ public class testCompanyManagement extends TestInit {
 
 		String xpath_msg = "//div[@class='title']//span";
 		Thread.sleep(500);
-		Boolean R1 = driver.findElement(By.xpath(xpath_msg)).getText().equals("请输入正确的邮箱");
+		Boolean R1 = driver.findElement(By.xpath(xpath_msg)).getText().equals("请输入正确的邮箱或手机号");
 
 		assertTrue(R1);
 	}

@@ -20,20 +20,20 @@ public class testRecycleBin extends TestInit{
 	@Test(enabled = true)
 	public void New_Document() throws InterruptedException {
 		login("RecycleBin@shimo.im", "123123");
-		desktop.click();
+		click(desktop);
 		Sort();
 		contextClick(desktop1_1);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
 		click(trash);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String name = desktop1_1.getText();
+		String name = getText(desktop1_1);
 		assertEquals(name, "删除恢复测试");
 		contextClick(desktop1_1);
 		click(menu_Recovery);
 		click(desktop);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String name1 = desktop1_1.getText();
+		String name1 = getText(desktop1_1);
 		assertEquals(name1, "删除恢复测试");
 	}
 	/**

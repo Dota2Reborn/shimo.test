@@ -47,7 +47,7 @@ public class testCollection extends TestInit {
 	@Test(enabled = true)
 	public void Create_Table() throws InterruptedException {
 		login("New_collection@shimo.im", "123123");
-		favorites.click();
+		click(favorites);
 		click(desktop_new);
 		click(desktop_newSheet);
 		click(Collection_OK);
@@ -75,7 +75,7 @@ public class testCollection extends TestInit {
 	public void desktop_show_type() throws InterruptedException {
 
 		login("Collection@shimo.im", "123123");
-		favorites.click();
+		click(favorites);
 		Sort();
 		click(desktop_show_type);
 
@@ -103,15 +103,14 @@ public class testCollection extends TestInit {
 	@Test(enabled = true)
 	public void Collection_Sort_1() throws InterruptedException {
 		login("Collection@shimo.im", "123123");
-		favorites.click();
+		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
 		Sort();
-		desktop_order.click();
+		click(desktop_order);
 		click(desktop_orderByCreate);
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1_name));
-		String name = desktop1_1_name.getText();
+		String name = getText(desktop1_1_name);
 		assertEquals(name, "第四个创建的");
-		action.contextClick(desktop1_1).perform();
+		contextClick(desktop1_1);
 		click(menu_moveToFolder);
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.className("final"))));
 		String Folder_name = driver.findElement(By.className("final")).getText();
@@ -127,19 +126,18 @@ public class testCollection extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void Collection_Sort_2() throws InterruptedException {
-		login(" Collection@shimo.im", "123123");
-		favorites.click();
+		login("Collection@shimo.im", "123123");
+		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
 		Sort();
-		desktop_order.click();
+		click(desktop_order);
 		click(desktop_orderByFile);
 		driver.navigate().refresh();
-		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String name1 = desktop1_1_name.getText();
+		String name1 = getText(desktop1_1_name);
 		assertEquals(name1, "第一个创建的");
-		desktop_order.click();
+		click(desktop_order);
 		click(desktop_orderByFile);
-		String name2 = desktop1_1_name.getText();
+		String name2 = getText(desktop1_1_name);
 		assertEquals(name2, "第四个创建的");
 		
 	}
@@ -153,22 +151,22 @@ public class testCollection extends TestInit {
 	@Test(enabled = true)
 	public void Collection_Sort_3() throws InterruptedException {
 		login("Collection@shimo.im", "123123");
-		favorites.click();
+		click(favorites);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
 		Sort();
-		desktop_order.click();
+		click(desktop_order);
 		click(desktop_orderByCreate);
 		//刷新
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String name1 = desktop1_1_name.getText();
-		action.contextClick(desktop1_1).perform();
+		String name1 = getText(desktop1_1_name);
+		contextClick(desktop1_1);
 		click(menu_creatCopy);
 		driver.navigate().refresh();
 		contextClick(desktop1_1);
 		click(menu_moveToFolder);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-		String name = desktop1_1_name.getText();
+		String name = getText(desktop1_1_name);
 		if(name1!=name) {
 			contextClick(desktop1_1);
 			click(menu_delete);
@@ -189,29 +187,29 @@ public class testCollection extends TestInit {
 	//验证排序是否初始化
 	public void Sort() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
-		String msg = desktop_show_type.getText();
+		String msg = getText(desktop_show_type);
 		if (msg.equals("平铺")) {
-			desktop_show_type.click();
+			click(desktop_show_type);
 		}
-		msg = desktop_order.getText();
+		msg = getText(desktop_order);
 		if (msg.equals("排序")) {
-			desktop_order.click();
+			click(desktop_order);
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
 			Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
-			desktop_orderByDefault.click();
+			click(desktop_orderByDefault);
 			if(exist==true) {
-				desktop_order.click();
+				click(desktop_order);
 				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-				desktop_orderByFolderUP.click();
+				click(desktop_orderByFolderUP);
 			}
 		}else {
-			desktop_order.click();
+			click(desktop_order);
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
 			Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
 			if(exist==true) {
-				desktop_orderByFolderUP.click();
+				click(desktop_orderByFolderUP);
 			}else {
-				desktop_orderByDefault.click();
+				click(desktop_orderByDefault);
 			}
 		}
 					
