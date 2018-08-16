@@ -21,15 +21,15 @@ public class testCollection extends TestInit {
 	@Test(enabled = true)
 	public void New_Document() throws InterruptedException {
 		login("New_collection@shimo.im", "123123");
-		favorites.click();
+		click(favorites);
 		click(desktop_new);
 		click(desktop_newDoc);
 		click(Collection_OK);
 		click(b_back);
 		click(favorites);
 		Sort();
-		String name=getText(desktop1_1);
-		//contextClick(desktop1_1);
+		String name = getText(desktop1_1);
+		// contextClick(desktop1_1);
 		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_delete);
@@ -37,6 +37,7 @@ public class testCollection extends TestInit {
 		Thread.sleep(500);
 		assertEquals(name, "无标题");
 	}
+
 	/**
 	 * 新建表格收藏
 	 * 
@@ -54,20 +55,21 @@ public class testCollection extends TestInit {
 		click(b_back);
 		click(favorites);
 		Sort();
-		String name=getText(desktop1_1);
-		//contextClick(desktop1_1);
+		String name = getText(desktop1_1);
+		// contextClick(desktop1_1);
 		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_delete);
 		click(desktop_newFolder_name_ok);
 		Thread.sleep(500);
 		assertEquals(name, "无标题");
-		
+
 	}
+
 	/**
 	 * 我的收藏-列表/平铺 模式切换
 	 * 
-	 * @author 
+	 * @author
 	 * @Time 2018-03-19
 	 *
 	 */
@@ -89,10 +91,11 @@ public class testCollection extends TestInit {
 		if (exist1 == true && exist2 == false) {
 			result = true;
 		}
-		//driver.manage().deleteAllCookies();
+		// driver.manage().deleteAllCookies();
 		assertTrue(result);
 
 	}
+
 	/**
 	 * 收藏页面按创建时间排序，并且定位第一个文件夹所在位置
 	 * 
@@ -115,8 +118,9 @@ public class testCollection extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.className("final"))));
 		String Folder_name = driver.findElement(By.className("final")).getText();
 		assertEquals(Folder_name, "第三个创建的");
-		
+
 	}
+
 	/**
 	 * 收藏页面按文件名排序，并且定位第一个文件夹所在位置
 	 * 
@@ -139,11 +143,12 @@ public class testCollection extends TestInit {
 		click(desktop_orderByFile);
 		String name2 = getText(desktop1_1_name);
 		assertEquals(name2, "第四个创建的");
-		
+
 	}
+
 	/**
-	 * 文件夹下文件在收藏页面创建副本
-	 * 文件夹下是第四个创建的文件
+	 * 文件夹下文件在收藏页面创建副本 文件夹下是第四个创建的文件
+	 * 
 	 * @author 王继程
 	 * @Time 2018-03-20
 	 *
@@ -156,7 +161,7 @@ public class testCollection extends TestInit {
 		Sort();
 		click(desktop_order);
 		click(desktop_orderByCreate);
-		//刷新
+		// 刷新
 		driver.navigate().refresh();
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name1 = getText(desktop1_1_name);
@@ -167,24 +172,24 @@ public class testCollection extends TestInit {
 		click(menu_moveToFolder);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 		String name = getText(desktop1_1_name);
-		if(name1!=name) {
+		if (name1 != name) {
 			contextClick(desktop1_1);
 			click(menu_delete);
 			click(desktop_newFolder_name_ok);
 
 		}
-//		}else {
-//			contextClick(desktop1_2);
-//			click(menu_delete);
-//			click(desktop_newFolder_name_ok);
-//			System.out.println("桌面创建时间排序有问题");
-//			
-//		}
-		String msg ="副本"+" "+"第四个创建的";
+		// }else {
+		// contextClick(desktop1_2);
+		// click(menu_delete);
+		// click(desktop_newFolder_name_ok);
+		// System.out.println("桌面创建时间排序有问题");
+		//
+		// }
+		String msg = "副本" + " " + "第四个创建的";
 		assertEquals(msg, name);
 	}
-	
-	//验证排序是否初始化
+
+	// 验证排序是否初始化
 	public void Sort() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
 		String msg = getText(desktop_show_type);
@@ -195,26 +200,26 @@ public class testCollection extends TestInit {
 		if (msg.equals("排序")) {
 			click(desktop_order);
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
-			Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+			Boolean exist = doesWebElementExist(
+					By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
 			click(desktop_orderByDefault);
-			if(exist==true) {
+			if (exist == true) {
 				click(desktop_order);
 				wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
 				click(desktop_orderByFolderUP);
 			}
-		}else {
+		} else {
 			click(desktop_order);
 			wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-			Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
-			if(exist==true) {
+			Boolean exist = doesWebElementExist(
+					By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+			if (exist == true) {
 				click(desktop_orderByFolderUP);
-			}else {
+			} else {
 				click(desktop_orderByDefault);
 			}
 		}
-					
+
 	}
-	
-	
 
 }
