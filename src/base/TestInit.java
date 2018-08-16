@@ -108,7 +108,6 @@ public class TestInit extends elementFile {
 		sendKeys(userPwd, pwd);
 		click(login_submit);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
-		driver.navigate().refresh();
 	}
 
 	/**
