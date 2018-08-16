@@ -89,6 +89,7 @@ public class TestInit extends elementFile {
 	 * 登录
 	 * 
 	 * @author 刘晨
+	 * @throws InterruptedException 
 	 * @Time 2017-11-21
 	 *
 	 */
@@ -99,13 +100,15 @@ public class TestInit extends elementFile {
 //		if (!driver.getCurrentUrl().equals(test_url + "login")) {
 			driver.navigate().to(test_url + "login");
 //		}
-		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
+		wait.until(ExpectedConditions.elementToBeClickable(tab_loginByEmail));
+		click(tab_loginByEmail);
 		userEmail.clear();
 		sendKeys(userEmail, user);
 		userPwd.clear();
 		sendKeys(userPwd, pwd);
 		click(login_submit);
 		wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
+		driver.navigate().refresh();
 	}
 
 	/**

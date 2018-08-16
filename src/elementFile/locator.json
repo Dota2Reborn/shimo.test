@@ -974,28 +974,34 @@
 		"pageName": "homePage",
 		"elements": [
 			{
-				"note": "用户名",
+				"note": "用户名_邮箱",
 				"elementName": "userEmail",
-				"locateUsing": "name",
-				"locator": "email"
+				"locateUsing": "xpath",
+				"locator": "//div[@type='email']//div//input"
 			},
 			{
 				"note": "密码",
 				"elementName": "userPwd",
-				"locateUsing": "name",
-				"locator": "password"
-			},
-			{
-				"note": "用户名",
-				"elementName": "xpath_login",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='home-begin-use']//a[@href='/register']"
+				"locator": "(//input[@type='password'])[2]"
 			},
 			{
 				"note": "登录按钮",
 				"elementName": "login_submit",
-				"locateUsing": "id",
-				"locator": "bd-login-submit"
+				"locateUsing": "xpath",
+				"locator": "(//button[contains(text(),'立即登录')])[2]"
+			},
+			{
+				"note": "邮箱登录",
+				"elementName": "tab_loginByEmail",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'邮箱登录')]"
+			},
+			{
+				"note": "手机登录",
+				"elementName": "tab_loginByMobile",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'手机登录')]"
 			}
 		]
 	},

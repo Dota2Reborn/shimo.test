@@ -15,6 +15,10 @@ public class elementFile {
 	public WebElement userPwd;
 	@SearchWith(pageName = "homePage", elementName = "login_submit", noteName = "登录按钮")
 	public WebElement login_submit;
+	@SearchWith(pageName = "homePage", elementName = "tab_loginByEmail", noteName = "邮箱登录")
+	public WebElement tab_loginByEmail;
+	@SearchWith(pageName = "homePage", elementName = "tab_loginByMobile", noteName = "手机登录")
+	public WebElement tab_loginByMobile;
 
 	/**
 	 * 
