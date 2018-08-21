@@ -1186,8 +1186,8 @@
 		]
 	},
 	{
-		"note": "PPT_演示页面",
-		"pageName": "ppt",
+		"note": "PPT_顶部工具栏",
+		"pageName": "ppt_top",
 		"elements": [
 			{
 				"elementName": "add_page",
@@ -1266,11 +1266,17 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@id='toolbar']//div[1]//div[3]//button[2]",
 				"note": "缩放视图"
-			},
+			}
+		]
+	},
+	{
+		"note": "PPT_左边栏",
+		"pageName": "ppt_left",
+		"elements": [
 			{
 				"elementName": "ppt_page_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[@id='filmstrip']//div[1]//div)[1]",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[1]",
 				"note": "左边栏第一个页面"
 			},
 			{
@@ -1320,7 +1326,13 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@id='filmstrip']//div[1]//div[9]",
 				"note": "左边栏第九个页面"
-			},
+			}
+		]
+	},		
+	{
+		"note": "PPT_页面",
+		"pageName": "ppt_page",
+		"elements": [
 			{
 				"elementName": "ppt_text",
 				"locateUsing": "xpath",
@@ -1478,10 +1490,157 @@
 				"note": "删除"
 			}
 		]
-	},{
-		"note": "PPT_rightBar",
+	},
+	{
+		"note": "PPT_幻灯片右边栏",
 		"pageName": "PPT_rightBar",
 		"elements": [
+			{
+				"elementName": "ppt_type",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='filmstrip']//div[1]//div[1]//button[1]",
+				"note": "样式"
+			},
+			{
+				"elementName": "ppt_animation",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='filmstrip']//div[1]//div[1]//button[2]",
+				"note": "动画"
+			},
+			{
+				"elementName": "ppt_theme",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='filmstrip']//div[1]//div[1]//button[3]",
+				"note": "主题"
+			},
+			{
+				"elementName": "ppt_right_ttf",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-size']//div[1]//button[1]",
+				"note": "字体"
+			},
+			{
+				"elementName": "ppt_right_ttfa",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-size']//div[1]//button[1]",
+				"note": "字体下箭头"
+			},
+			{
+				"elementName": "ppt_right_size",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-size']//div[1]//button[2]",
+				"note": "字号"
+			},
+			{
+				"elementName": "ppt_right_sizea",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-size']//div[1]//button[2]",
+				"note": "字号下箭头"
+			},
+			{
+				"elementName": "ppt_right_color",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[1]//button[1]",
+				"note": "颜色"
+			},
+			{
+				"elementName": "ppt_right_colora",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[1]//button[2]",
+				"note": "颜色下箭头"
+			},
+			{
+				"elementName": "ppt_right_laid",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[2]//button[1]",
+				"note": "高亮"
+			},
+			{
+				"elementName": "ppt_right_laida",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[2]//button[2]",
+				"note": "高亮下箭头"
+			},
+			{
+				"elementName": "ppt_right_end",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[3]//button[1]",
+				"note": "背景色"
+			},
+			{
+				"elementName": "ppt_right_enda",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[3]//button[2]",
+				"note": "背景色下箭头"
+			},
+			{
+				"elementName": "ppt_right_thickness",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[1]",
+				"note": "加粗"
+			},
+			{
+				"elementName": "ppt_right_italic",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[2]",
+				"note": "斜体"
+			},
+			{
+				"elementName": "ppt_right_underline",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[3]",
+				"note": "下划线"
+			},
+			{
+				"elementName": "ppt_right_of",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[4]",
+				"note": "中划线"
+			},
+			{
+				"elementName": "ppt_right_top",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[1]",
+				"note": "顶部对齐"
+			},
+			{
+				"elementName": "ppt_right_middle",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[2]",
+				"note": "中部对齐"
+			},
+			{
+				"elementName": "ppt_right_bottom",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[3]",
+				"note": "底部对齐"
+			},
+			{
+				"elementName": "ppt_right_of",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[4]",
+				"note": "中划线"
+			},
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			{
 				"elementName": "element_setTop",
 				"locateUsing": "xpath",
