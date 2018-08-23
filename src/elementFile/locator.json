@@ -977,31 +977,19 @@
 				"note": "用户名_邮箱",
 				"elementName": "userEmail",
 				"locateUsing": "xpath",
-				"locator": "//div[@type='email']//div//input"
+				"locator": "//input[@name='mobileOrEmail']"
 			},
 			{
 				"note": "密码",
 				"elementName": "userPwd",
 				"locateUsing": "xpath",
-				"locator": "(//input[@type='password'])[2]"
+				"locator": "//input[@name='password']"
 			},
 			{
 				"note": "登录按钮",
 				"elementName": "login_submit",
 				"locateUsing": "xpath",
-				"locator": "(//button[contains(text(),'立即登录')])[2]"
-			},
-			{
-				"note": "邮箱登录",
-				"elementName": "tab_loginByEmail",
-				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'邮箱登录')]"
-			},
-			{
-				"note": "手机登录",
-				"elementName": "tab_loginByMobile",
-				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'手机登录')]"
+				"locator": "//button[contains(text(),'立即登录')]"
 			}
 		]
 	},
