@@ -431,65 +431,75 @@ public class elementFile {
 	
 	
 	/**
-	 * ppt
-	 * PPT_演示页面
+	 * 顶部工具栏
+	 * ppt_top
 	 *
 	 */
-	@SearchWith(pageName = "ppt", elementName = "add_page", noteName = "添加页面")
+	@SearchWith(pageName = "ppt_top", elementName = "add_page", noteName = "添加页面")
 	public WebElement add_page;
-	@SearchWith(pageName = "ppt", elementName = "down_arrow", noteName = "下箭头")
+	@SearchWith(pageName = "ppt_top", elementName = "down_arrow", noteName = "下箭头")
 	public WebElement down_arrow;
-	@SearchWith(pageName = "ppt", elementName = "ppt_revoke", noteName = "撤销")
+	@SearchWith(pageName = "ppt_top", elementName = "ppt_revoke", noteName = "撤销")
 	public WebElement ppt_revoke;
-	@SearchWith(pageName = "ppt", elementName = "ppt_redo", noteName = "重做")
+	@SearchWith(pageName = "ppt_top", elementName = "ppt_redo", noteName = "重做")
 	public WebElement ppt_redo;
-	@SearchWith(pageName = "ppt", elementName = "add_title", noteName = "添加标题")
+	@SearchWith(pageName = "ppt_top", elementName = "add_title", noteName = "添加标题")
 	public WebElement add_title;
-	@SearchWith(pageName = "ppt", elementName = "add_text", noteName = "添加文本")
+	@SearchWith(pageName = "ppt_top", elementName = "add_text", noteName = "添加文本")
 	public WebElement add_text;
-	@SearchWith(pageName = "ppt", elementName = "add_diagram", noteName = "添加图片")
+	@SearchWith(pageName = "ppt_top", elementName = "add_diagram", noteName = "添加图片")
 	public WebElement add_diagram;
-	@SearchWith(pageName = "ppt", elementName = "add_arrows", noteName = "添加箭头")
+	@SearchWith(pageName = "ppt_top", elementName = "add_arrows", noteName = "添加箭头")
 	public WebElement add_arrows;
-	@SearchWith(pageName = "ppt", elementName = "add_Rectangle", noteName = "添加矩形")
+	@SearchWith(pageName = "ppt_top", elementName = "add_Rectangle", noteName = "添加矩形")
 	public WebElement add_Rectangle;
-	@SearchWith(pageName = "ppt", elementName = "add_circular", noteName = "添加圆形")
+	@SearchWith(pageName = "ppt_top", elementName = "add_circular", noteName = "添加圆形")
 	public WebElement add_circular;
-	@SearchWith(pageName = "ppt", elementName = "narrow_trying", noteName = "减小视图")
+	@SearchWith(pageName = "ppt_top", elementName = "narrow_trying", noteName = "减小视图")
 	public WebElement narrow_trying;
-	@SearchWith(pageName = "ppt", elementName = "enlarge_trying", noteName = "放大视图")
+	@SearchWith(pageName = "ppt_top", elementName = "enlarge_trying", noteName = "放大视图")
 	public WebElement enlarge_trying;
-	@SearchWith(pageName = "ppt", elementName = "ppt_zoom", noteName = "缩放视图")
+	@SearchWith(pageName = "ppt_top", elementName = "ppt_zoom", noteName = "缩放视图")
 	public WebElement ppt_zoom;
-	@SearchWith(pageName = "ppt", elementName = "ppt_page_1", noteName = "左边栏第一个页面")
+	/**
+	 * 左边栏
+	 * ppt_left
+	 *
+	 */
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_1", noteName = "左边栏第一个页面")
 	public WebElement ppt_page_1;
-	@SearchWith(pageName = "ppt", elementName = "ppt_page_2", noteName = "左边栏第二个页面")
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_2", noteName = "左边栏第二个页面")
 	public WebElement ppt_page_2;
-	@SearchWith(pageName = "ppt", elementName = "ppt_page_3", noteName = "左边栏第三个页面")
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_3", noteName = "左边栏第三个页面")
 	public WebElement ppt_page_3;
-	@SearchWith(pageName = "ppt", elementName = "ppt_page_4", noteName = "左边栏第四个页面")
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_4", noteName = "左边栏第四个页面")
 	public WebElement ppt_page_4;
-	@SearchWith(pageName = "ppt", elementName = "ppt_page_5", noteName = "左边栏第五个页面")
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_5", noteName = "左边栏第五个页面")
 	public WebElement ppt_page_5;
-	@SearchWith(pageName = "ppt", elementName = "ppt_page_6", noteName = "左边栏第六个页面")
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_6", noteName = "左边栏第六个页面")
 	public WebElement ppt_page_6;
-	@SearchWith(pageName = "ppt", elementName = "ppt_page_7", noteName = "左边栏第七个页面")
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_7", noteName = "左边栏第七个页面")
 	public WebElement ppt_page_7;
-	@SearchWith(pageName = "ppt", elementName = "ppt_page_8", noteName = "左边栏第八个页面")
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_8", noteName = "左边栏第八个页面")
 	public WebElement ppt_page_8;
-	@SearchWith(pageName = "ppt", elementName = "ppt_page_9", noteName = "左边栏第九个页面")
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_9", noteName = "左边栏第九个页面")
 	public WebElement ppt_page_9;
-	@SearchWith(pageName = "ppt", elementName = "ppt_text", noteName = "幻灯片页面第一个元素")
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_text", noteName = "幻灯片页面第一个元素")
 	public WebElement ppt_text;
-	@SearchWith(pageName = "ppt", elementName = "page_elements_1", noteName = "幻灯片页面第一个元素")
+	/**
+	 * 页面
+	 * ppt_page
+	 *
+	 */
+	@SearchWith(pageName = "ppt_page", elementName = "page_elements_1", noteName = "幻灯片页面第一个元素")
 	public WebElement page_elements_1;
-	@SearchWith(pageName = "ppt", elementName = "page_elements_2", noteName = "幻灯片页面第二个元素")
+	@SearchWith(pageName = "ppt_page", elementName = "page_elements_2", noteName = "幻灯片页面第二个元素")
 	public WebElement page_elements_2;
-	@SearchWith(pageName = "ppt", elementName = "page_elements_3", noteName = "幻灯片页面第三个元素")
+	@SearchWith(pageName = "ppt_page", elementName = "page_elements_3", noteName = "幻灯片页面第三个元素")
 	public WebElement page_elements_3;
-	@SearchWith(pageName = "ppt", elementName = "page_elements_4", noteName = "幻灯片页面第四个元素")
+	@SearchWith(pageName = "ppt_page", elementName = "page_elements_4", noteName = "幻灯片页面第四个元素")
 	public WebElement page_elements_4;
-	@SearchWith(pageName = "ppt", elementName = "page_elements_5", noteName = "幻灯片页面第五个元素")
+	@SearchWith(pageName = "ppt_page", elementName = "page_elements_5", noteName = "幻灯片页面第五个元素")
 	public WebElement page_elements_5;
 	/**
 	 * ppt
@@ -541,6 +551,59 @@ public class elementFile {
 	 * PPT_rightBar
 	 *
 	 */
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_type", noteName = "样式")
+	public WebElement ppt_type;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_animation", noteName = "动画")
+	public WebElement ppt_animation;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_theme", noteName = "主题")
+	public WebElement ppt_theme;
+	
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_ttf", noteName = "字体")
+	public WebElement ppt_right_ttf;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_ttfa", noteName = "字体下箭头")
+	public WebElement ppt_right_ttfa;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_size", noteName = "字号")
+	public WebElement ppt_right_size;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_sizea", noteName = "字号下箭头")
+	public WebElement ppt_right_sizea;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_color", noteName = "字体颜色")
+	public WebElement ppt_right_color;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_colora", noteName = "字体颜色下箭头")
+	public WebElement ppt_right_colora;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_laid", noteName = "高亮")
+	public WebElement ppt_right_laid;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_laida", noteName = "高亮下箭头")
+	public WebElement ppt_right_laida;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_end", noteName = "背景色")
+	public WebElement ppt_right_end;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_enda", noteName = "背景色下箭头")
+	public WebElement ppt_right_enda;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_thickness", noteName = "加粗")
+	public WebElement ppt_right_thickness;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_italic", noteName = "斜体")
+	public WebElement ppt_right_italic;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_underline", noteName = "下划线")
+	public WebElement ppt_right_underline;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_of", noteName = "中划线")
+	public WebElement ppt_right_of;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@SearchWith(pageName = "PPT_rightBar", elementName = "element_setTop", noteName = "元素置顶")
 	public WebElement element_setTop;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "element_setThe", noteName = "元素置底")
