@@ -488,13 +488,13 @@ public class elementFile {
 	public WebElement ppt_page_8;
 	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_9", noteName = "左边栏第九个页面")
 	public WebElement ppt_page_9;
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_text", noteName = "幻灯片页面第一个元素")
-	public WebElement ppt_text;
 	/**
 	 * 页面
 	 * ppt_page
 	 *
 	 */
+	@SearchWith(pageName = "ppt_page", elementName = "ppt_text", noteName = "幻灯片页面第一个元素")
+	public WebElement ppt_text;
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_1", noteName = "幻灯片页面第一个元素")
 	public WebElement page_elements_1;
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_2", noteName = "幻灯片页面第二个元素")
