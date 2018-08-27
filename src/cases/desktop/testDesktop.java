@@ -145,7 +145,7 @@ public class testDesktop extends TestInit {
 		driver.navigate().refresh();
 		String msg = getText(desktop1_1);
 
-		assertEquals(time, msg);
+		assertEquals(msg, time);
 	}
 
 	/**
