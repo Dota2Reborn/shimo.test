@@ -24,12 +24,11 @@ public class login_error extends TestInit {
 	public void login_error66() throws InterruptedException {
 
 
-		login_error("chenqingjie", "123123");
-		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "请输入一个有效的邮箱地址"));
-		String toast = "";
-		toast = driver.findElement(By.className("error-block")).getText();
+		login_error("chenqingjie@", "123123");
+		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "邮箱格式不正确，请重新填写"));
+		String toast = driver.findElement(By.className("error-block")).getText();
 
-		assertEquals(toast, "请输入一个有效的邮箱地址");
+		assertEquals(toast, "邮箱格式不正确，请重新填写");
 
 	}
 
