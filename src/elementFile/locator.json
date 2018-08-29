@@ -199,7 +199,7 @@
 				"note": "昵称",
 				"elementName": "userName",
 				"locateUsing": "name",
-				"locator": "name"
+				"locator": "nickname"
 			},
 			{
 				"note": "登录邮箱",
@@ -208,16 +208,58 @@
 				"locator": "email"
 			},
 			{
+				"note": "登录手机号",
+				"elementName": "userMobile",
+				"locateUsing": "name",
+				"locator": "mobileWithPrefix"
+			},
+			{
 				"note": "密码",
 				"elementName": "userPwd",
 				"locateUsing": "name",
 				"locator": "password"
 			},
 			{
-				"note": "下一步",
+				"note": "确认密码",
+				"elementName": "reUserPwd",
+				"locateUsing": "name",
+				"locator": "rePassword"
+			},
+			{
+				"note": "验证码",
+				"elementName": "verifyCode",
+				"locateUsing": "name",
+				"locator": "verifyCode"
+			},
+			{
+				"note": "免费注册",
 				"elementName": "Next",
-				"locateUsing": "id",
-				"locator": "bd-register-submit"
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'免费注册')]"
+			},
+			{
+				"note": "免费注册个人账号",
+				"elementName": "personalRegister",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'免费注册个人帐号')]"
+			},
+			{
+				"note": "邮箱注册",
+				"elementName": "emailRegister",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'邮箱注册')]"
+			},
+			{
+				"note": "手机注册",
+				"elementName": "mobileRegister",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'手机注册')]"
+			},
+			{
+				"note": "微信注册",
+				"elementName": "wechatRegister",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'微信注册')]"
 			}
 			
 		]
