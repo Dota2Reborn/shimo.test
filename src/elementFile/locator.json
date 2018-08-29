@@ -581,6 +581,24 @@
 				"note": "协作者列表第二个协作者用户名"
 			},
 			{
+				"elementName": "collaborator_1_list_emailOrMobile",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]//div//div[1]//span)[4]",
+				"note": "协作者列表第一个协作者邮箱"
+			},
+			{
+				"elementName": "collaborator_2_list_emailOrMobile",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]//div//div[2]//span)[4]",
+				"note": "协作者列表第二个协作者邮箱"
+			},
+			{
+				"elementName": "collaborator_3_list_emailOrMobile",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]//div//div[3]//span)[4]",
+				"note": "协作者列表第三个协作者邮箱"
+			},
+			{
 				"elementName": "list_addCollaborator_1",
 				"locateUsing": "xpath",
 				"locator": "//p[@data-test='collab-control-transfer']",

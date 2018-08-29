@@ -259,6 +259,12 @@ public class elementFile {
 	public WebElement addCollaborator_1_list_userName;
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_2_list_userName", noteName = "协作者列表第二个协作者用户名")
 	public WebElement addCollaborator_2_list_userName;
+	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_1_list_emailOrMobile", noteName = "协作者列表第一个协作者邮箱")
+	public WebElement collaborator_1_list_emailOrMobile;
+	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_2_list_emailOrMobile", noteName = "协作者列表第二个协作者邮箱")
+	public WebElement collaborator_2_list_emailOrMobile;
+	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_3_list_emailOrMobile", noteName = "协作者列表第三个协作者邮箱")
+	public WebElement collaborator_3_list_emailOrMobile;
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_folder_add", noteName = "文件夹内右侧(加号)添加协作人按钮")
 	public WebElement addCollaborator_folder_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator", noteName = "添加协作者按钮")
