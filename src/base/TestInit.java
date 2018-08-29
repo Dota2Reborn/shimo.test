@@ -110,7 +110,7 @@ public class TestInit extends elementFile {
 	}
 
 	/**
-	 * 登录（For登录报错验证）
+	 * 登录（登录报错验证）
 	 * 
 	 * @author 刘晨
 	 * @Time 2017-01-08
@@ -122,14 +122,14 @@ public class TestInit extends elementFile {
 
 		driver.navigate().to(test_url + "login");
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
-		userEmail.sendKeys(user);
-		userPwd.sendKeys(pwd);
+		sendKeys(userEmail, user);
+		sendKeys(userPwd, pwd);
 		// login_submit.click();
 		click(login_submit);
 	}
 
 	/**
-	 * 注册(yanzheng=1时，仅作错误输入验证使用)
+	 * 注册
 	 * 
 	 * @author 王继程
 	 * @Time 2017-11-21
@@ -146,7 +146,7 @@ public class TestInit extends elementFile {
 			sendKeys(userName, name);
 			sendKeys(userMobile, user);
 			sendKeys(Pwd, pwd);
-			sendKeys(verifyCode,"2222");
+			sendKeys(verifyCode, "2222");
 			click(Next);
 		} else if (type == 2) {
 			driver.navigate().to(test_url + "register");
@@ -174,7 +174,7 @@ public class TestInit extends elementFile {
 		try {
 			driver.manage().deleteAllCookies();
 			// driver.navigate().to(test_url + "login");
-			// driver.navigate().to(test_url + "logout");
+			driver.navigate().to(test_url + "logout");
 			driver.switchTo().alert().accept();
 			action.sendKeys(Keys.ESCAPE);
 		} catch (UnhandledAlertException e) {
