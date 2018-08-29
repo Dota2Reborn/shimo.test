@@ -19,7 +19,7 @@ public class testRegistered extends TestInit {
 	 */
 	@Test(enabled = true)
 	public void Registered_1() throws InterruptedException {
-		Registered("", "qazwsx@qaz.cn", "123123", 1);
+		Registered("", "qazwsx@qaz.cn", "123123", 1 );
 		String tishi = driver.findElement(By.xpath("//div[@class='error-block active']")).getText();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='error-block active']")));
 		// System.out.println(tishi);
