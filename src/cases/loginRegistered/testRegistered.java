@@ -150,7 +150,7 @@ public class testRegistered extends TestInit {
 	 * @author 王继程
 	 * @Time 2018-01-08
 	 *
-	 */
+	 
 	 
 	@Test(enabled = true)
 	public void Registered_9() throws InterruptedException {
@@ -162,6 +162,6 @@ public class testRegistered extends TestInit {
 		// System.out.println(tishi);
 		assertEquals(tishi, "邮箱已被注册");
 
-	}
+	}*/
 
 }
