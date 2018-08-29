@@ -103,4 +103,14 @@
 			<class name="cases.collaborator.testTransferOwner" />
 		</classes>
 	</test>
+	<test name="test18">
+		<classes>
+			<class name="cases.collaborator.testAuthorityForMoveFile" />
+		</classes>
+	</test>
+	<test name="test19">
+		<classes>
+			<class name="cases.collaborator.testCollaboratorUI" />
+		</classes>
+	</test>
 </suite>
