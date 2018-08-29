@@ -134,13 +134,13 @@ public class login_error extends TestInit {
 		assertEquals(toast, "密码错误，请重新输入");
 	}
 
-	/**
+	/*
 	 * 登录 密码连续输错
 	 * 
 	 * @author 陈清杰
 	 * @Time 2018-01-09
 	 *
-	 */
+	 
 	@Test(enabled = false)
 	public void login_error5() throws Exception {
 
@@ -164,6 +164,7 @@ public class login_error extends TestInit {
 		Boolean ii = driver.findElement(By.xpath("//div[@class='inline']//div[2]")).isDisplayed();
 		assertTrue(ii);
 
-	}
+	}*/
 
 }
+
