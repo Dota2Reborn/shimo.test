@@ -571,13 +571,13 @@
 			{
 				"elementName": "addCollaborator_1_list_userName",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//span[1]//span[1]",
+				"locator": "//div[contains(@class,'collab-modal-user-list-wrapper')]//div[1]//div[1]//span[1]//span[1]",
 				"note": "协作者列表第一个协作者用户名"
 			},
 			{
 				"elementName": "addCollaborator_2_list_userName",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[2]//span[1]//span[1]",
+				"locator": "//div[contains(@class,'collab-modal-user-list-wrapper')]//div[1]//div[2]//span[1]//span[1]",
 				"note": "协作者列表第二个协作者用户名"
 			},
 			{
