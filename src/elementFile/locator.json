@@ -1699,7 +1699,60 @@
 				"locator": "//div[@data-test='slide-align-horizontal']//div[2]//button[2]",
 				"note": "无序列表"
 			},
-			
+			{
+				"elementName": "ppt_right_row1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='row-spacing']//div[1]//button[1]",
+				"note": "行间距输入"
+			},
+			{
+				"elementName": "ppt_right_row2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='row-spacing']//div[1]//button[2]",
+				"note": "行间距下三角"
+			},
+			{
+				"elementName": "ppt_right_front1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[1]//div[1]",
+				"note": "段前间距输入"
+			},
+			{
+				"elementName": "ppt_right_front2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[3]//button[1]",
+				"note": "段前间距上箭头"
+			},
+			{
+				"elementName": "ppt_right_front3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[3]//button[2]",
+				"note": "段前间距下箭头"
+			},
+			{
+				"elementName": "ppt_right_rear1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[1]//div[1]",
+				"note": "段后间距输入"
+			},
+			{
+				"elementName": "ppt_right_rear2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[3]//button[1]",
+				"note": "段后间距上箭头"
+			},
+			{
+				"elementName": "ppt_right_rear3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[3]//button[2]",
+				"note": "段后间距下箭头"
+			},
+			{
+				"elementName": "ppt_right_adaptive",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-size']//div[5]//div[1]//dev[1]",
+				"note": "文本框自适应"
+			},
 			
 			
 			
