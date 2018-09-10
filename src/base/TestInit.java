@@ -173,8 +173,8 @@ public class TestInit extends elementFile {
 	public void logout() {
 		try {
 			driver.manage().deleteAllCookies();
-			// driver.navigate().to(test_url + "login");
-			driver.navigate().to(test_url + "logout");
+			driver.navigate().to(test_url + "login");
+			// driver.navigate().to(test_url + "logout");
 			driver.switchTo().alert().accept();
 			action.sendKeys(Keys.ESCAPE);
 		} catch (UnhandledAlertException e) {
