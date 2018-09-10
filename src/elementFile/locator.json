@@ -1384,37 +1384,37 @@
 			{
 				"elementName": "ppt_text",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']//div//div[1]//div[1]",
+				"locator": "//div[@data-test=''viewport']//div//div[1]//div[1]",
 				"note": "幻灯片页面(不是很好用，需优化)"
 			},
 			{
 				"elementName": "page_elements_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[1]",
+				"locator": "//div[@data-test=''viewport']//div[1]//div[1]//div[1]//div[1]",
 				"note": "幻灯片页面第一个元素"
 			},
 			{
 				"elementName": "page_elements_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[2]",
+				"locator": "//div[@data-test=''viewport']//div[1]//div[1]//div[1]//div[2]",
 				"note": "幻灯片页面第二个元素"
 			},
 			{
 				"elementName": "page_elements_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[3]",
+				"locator": "//div[@data-test=''viewport']//div[1]//div[1]//div[1]//div[3]",
 				"note": "幻灯片页面第三个元素"
 			},
 			{
 				"elementName": "page_elements_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[4]",
+				"locator": "//div[@data-test=''viewport']//div[1]//div[1]//div[1]//div[4]",
 				"note": "幻灯片页面第四个元素"
 			},
 			{
 				"elementName": "page_elements_5",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']//div[1]//div[1]//div[1]//div[5]",
+				"locator": "//div[@data-test=''viewport']//div[1]//div[1]//div[1]//div[5]",
 				"note": "幻灯片页面第五个元素"
 			}
 		]
