@@ -553,7 +553,7 @@ public class elementFile {
 	 */
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_type", noteName = "样式")
 	public WebElement ppt_type;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_animation", noteName = "动画")
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_animation", noteName = "文本")
 	public WebElement ppt_animation;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_theme", noteName = "主题")
 	public WebElement ppt_theme;
