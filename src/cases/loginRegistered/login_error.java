@@ -24,12 +24,11 @@ public class login_error extends TestInit {
 	public void login_error66() throws InterruptedException {
 
 
-		login_error("chenqingjie", "123123");
-		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "请输入一个有效的邮箱地址"));
-		String toast = "";
-		toast = driver.findElement(By.className("error-block")).getText();
+		login_error("chenqingjie@", "123123");
+		wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='main']//div[2]//div[1]//div[1]//div[1]"), "邮箱格式不正确，请重新输入"));
+		String toast = driver.findElement(By.xpath("//div[@class='main']//div[2]//div[1]//div[1]//div[1]")).getText();
 
-		assertEquals(toast, "请输入一个有效的邮箱地址");
+		assertEquals(toast, "邮箱格式不正确，请重新输入");
 
 	}
 
@@ -47,21 +46,21 @@ public class login_error extends TestInit {
 		
 
 		login_error("", "123123");
-		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "请输入邮箱"));
+		wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='main']//div[2]//div[1]//div[1]//div[1]"), "请填写手机号或邮箱"));
 
 		String toast = "";
-		toast = driver.findElement(By.className("error-block")).getText();
-		assertEquals(toast, "请输入邮箱");
+		toast = driver.findElement(By.xpath("//div[@class='main']//div[2]//div[1]//div[1]//div[1]")).getText();
+		assertEquals(toast, "请填写手机号或邮箱");
 
 	}
 
-	/**
+	/*
 	 * 登录 输入未注册的邮箱登录
 	 * 
 	 * @author 陈清杰
 	 * @Time 2018-01-08
 	 *
-	 */
+	 
 	@Test
 	public void login_error1() throws InterruptedException {
 		
@@ -71,7 +70,7 @@ public class login_error extends TestInit {
 		String toast = "";
 		toast = driver.findElement(By.className("error-block")).getText();
 		assertEquals(toast, "用户不存在");
-	}
+	}*/
 
 	/**
 	 * 登录 密码输入为空
@@ -85,11 +84,11 @@ public class login_error extends TestInit {
 		
 
 		login_error("chenqingjie@shimo.im", "");
-		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "请输入密码"));
+		wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]"), "请填写密码"));
 
 		String toast = "";
-		toast = driver.findElement(By.className("error-block")).getText();
-		assertEquals(toast, "请输入密码");
+		toast = driver.findElement(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]")).getText();
+		assertEquals(toast, "请填写密码");
 
 	}
 
@@ -107,11 +106,11 @@ public class login_error extends TestInit {
 	
 
 		login_error("chenqingjie@shimo.im", " ");
-		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "密码错误，请重新输入"));
+		wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]"), "请填写 6-72 位的密码"));
 
 		String toast = "";
-		toast = driver.findElement(By.className("error-block")).getText();
-		assertEquals(toast, "密码错误，请重新输入");
+		toast = driver.findElement(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]")).getText();
+		assertEquals(toast, "请填写 6-72 位的密码");
 	}
 
 	/**
@@ -128,20 +127,20 @@ public class login_error extends TestInit {
 		
 		
 		login_error("chenqingjie@shimo.im", "8294854");
-		wait.until(ExpectedConditions.textToBe(By.className("error-block"), "密码错误，请重新输入"));
+		wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]"), "密码错误，请重新输入"));
 
 		String toast = "";
-		toast = driver.findElement(By.className("error-block")).getText();
+		toast = driver.findElement(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]")).getText();
 		assertEquals(toast, "密码错误，请重新输入");
 	}
 
-	/**
+	/*
 	 * 登录 密码连续输错
 	 * 
 	 * @author 陈清杰
 	 * @Time 2018-01-09
 	 *
-	 */
+	 
 	@Test(enabled = false)
 	public void login_error5() throws Exception {
 
@@ -165,6 +164,7 @@ public class login_error extends TestInit {
 		Boolean ii = driver.findElement(By.xpath("//div[@class='inline']//div[2]")).isDisplayed();
 		assertTrue(ii);
 
-	}
+	}*/
 
 }
+

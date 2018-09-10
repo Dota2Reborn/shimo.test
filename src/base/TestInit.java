@@ -51,9 +51,9 @@ public class TestInit extends elementFile {
 
 	}
 
-	@Parameters({ "browser", "nodeIp", "local"})
+	@Parameters({ "browser", "nodeIp", "local" })
 	@BeforeClass
-	public void firstMethod(String browser, String nodeIp,String local) throws MalformedURLException {
+	public void firstMethod(String browser, String nodeIp, String local) throws MalformedURLException {
 		test_url = init.getUrl();
 		driver = init.initData(this, browser, nodeIp, local);
 		action = new Actions(driver);
@@ -65,7 +65,7 @@ public class TestInit extends elementFile {
 
 	@BeforeMethod
 	public void setUp() throws Exception {
-//		System.out.println("--------------------------------------------");
+		// System.out.println("--------------------------------------------");
 		String url = driver.getCurrentUrl();
 		if (!url.equals(test_url + "login")) {
 			logout();
@@ -79,9 +79,9 @@ public class TestInit extends elementFile {
 
 	@AfterClass
 	public void lastMethod() {
-//		System.out.println("--------------------------------------------");
+		// System.out.println("--------------------------------------------");
 		// 关闭浏览器
-//		driver.close();
+		// driver.close();
 		driver.quit();
 	}
 
@@ -89,13 +89,13 @@ public class TestInit extends elementFile {
 	 * 登录
 	 * 
 	 * @author 刘晨
-	 * @throws InterruptedException 
+	 * @throws InterruptedException
 	 * @Time 2017-11-21
 	 *
 	 */
 	public void login(String user, String pwd) {
-//		className = new Exception().getStackTrace()[1].getMethodName();
-//		printLog(className, user);
+		// className = new Exception().getStackTrace()[1].getMethodName();
+		// printLog(className, user);
 
 		if (!driver.getCurrentUrl().equals(test_url + "login")) {
 			driver.navigate().to(test_url + "login");
@@ -110,39 +110,54 @@ public class TestInit extends elementFile {
 	}
 
 	/**
-	 * 登录（For登录报错验证）
+	 * 登录（登录报错验证）
 	 * 
 	 * @author 刘晨
 	 * @Time 2017-01-08
 	 *
 	 */
 	public void login_error(String user, String pwd) {
-//		className = new Exception().getStackTrace()[1].getMethodName();
-//		printLog(className, user);
+		// className = new Exception().getStackTrace()[1].getMethodName();
+		// printLog(className, user);
 
 		driver.navigate().to(test_url + "login");
 		wait.until(ExpectedConditions.elementToBeClickable(login_submit));
-		userEmail.sendKeys(user);
-		userPwd.sendKeys(pwd);
+		sendKeys(userEmail, user);
+		sendKeys(userPwd, pwd);
 		// login_submit.click();
 		click(login_submit);
 	}
 
 	/**
-	 * 注册(yanzheng=1时，仅作错误输入验证使用)
+	 * 注册
 	 * 
 	 * @author 王继程
 	 * @Time 2017-11-21
+	 * @param type
+	 *            1为手机注册 2为邮箱注册
 	 *
 	 */
-	public void Registered(String name, String user, String pwd, int yanzheng) {
-		if (yanzheng == 1) {
+	public void Registered(String name, String user, String pwd, int type, String repwd) {
+		if (type == 1) {
 			driver.navigate().to(test_url + "register");
-			wait.until(ExpectedConditions.elementToBeClickable(Next));
-			userName.sendKeys(name);
-			Email.sendKeys(user);
-			Pwd.sendKeys(pwd);
-			Next.click();
+			wait.until(ExpectedConditions.elementToBeClickable(personalRegister));
+			click(personalRegister);
+			click(mobileRegister);
+			sendKeys(userName, name);
+			sendKeys(userMobile, user);
+			sendKeys(Pwd, pwd);
+			sendKeys(verifyCode, "2222");
+			click(Next);
+		} else if (type == 2) {
+			driver.navigate().to(test_url + "register");
+			wait.until(ExpectedConditions.elementToBeClickable(personalRegister));
+			click(personalRegister);
+			click(emailRegister);
+			sendKeys(userName, name);
+			sendKeys(Email, user);
+			sendKeys(Pwd, pwd);
+			sendKeys(rePwd, repwd);
+			click(Next);
 		} else {
 			return;
 		}
@@ -158,8 +173,8 @@ public class TestInit extends elementFile {
 	public void logout() {
 		try {
 			driver.manage().deleteAllCookies();
-//			driver.navigate().to(test_url + "login");
-//			driver.navigate().to(test_url + "logout");
+			// driver.navigate().to(test_url + "login");
+			driver.navigate().to(test_url + "logout");
 			driver.switchTo().alert().accept();
 			action.sendKeys(Keys.ESCAPE);
 		} catch (UnhandledAlertException e) {
@@ -302,7 +317,7 @@ public class TestInit extends elementFile {
 				wait.until(ExpectedConditions.visibilityOf(element));
 				action.moveToElement(element).perform();
 			}
-			
+
 		} catch (NoSuchElementException e) {
 			// TODO
 			System.out.println(element + "is missing");
@@ -337,7 +352,7 @@ public class TestInit extends elementFile {
 			} else if (element.toString().equals(b_addCollaborator_1_add.toString())) {
 				// 点击添加协作者
 				addCollaborator(element);
-			} else if(element.toString().equals(list_addCollaborator_4.toString())){
+			} else if (element.toString().equals(list_addCollaborator_4.toString())) {
 				wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
 				list_addCollaborator_4.click();
 				wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4_ok));
@@ -482,7 +497,6 @@ public class TestInit extends elementFile {
 		element.sendKeys(msg);
 	}
 
-
 	/**
 	 * 通过JS判断页面是否加载完毕
 	 * 
@@ -518,7 +532,7 @@ public class TestInit extends elementFile {
 	public void waitFor() {
 
 	}
-	
+
 	/**
 	 * UI像素比对截图
 	 * 
@@ -537,5 +551,5 @@ public class TestInit extends elementFile {
 		ScreenShot st = new ScreenShot(driver);
 		st.takeScreenshot(className);
 	}
-	
+
 }

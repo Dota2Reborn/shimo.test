@@ -259,6 +259,12 @@ public class elementFile {
 	public WebElement addCollaborator_1_list_userName;
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_2_list_userName", noteName = "协作者列表第二个协作者用户名")
 	public WebElement addCollaborator_2_list_userName;
+	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_1_list_emailOrMobile", noteName = "协作者列表第一个协作者邮箱")
+	public WebElement collaborator_1_list_emailOrMobile;
+	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_2_list_emailOrMobile", noteName = "协作者列表第二个协作者邮箱")
+	public WebElement collaborator_2_list_emailOrMobile;
+	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_3_list_emailOrMobile", noteName = "协作者列表第三个协作者邮箱")
+	public WebElement collaborator_3_list_emailOrMobile;
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_folder_add", noteName = "文件夹内右侧(加号)添加协作人按钮")
 	public WebElement addCollaborator_folder_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator", noteName = "添加协作者按钮")
@@ -356,10 +362,24 @@ public class elementFile {
 	public WebElement userName;
 	@SearchWith(pageName = "Registered", elementName = "userEmail", noteName = "登录邮箱")
 	public WebElement Email;
+	@SearchWith(pageName = "Registered", elementName = "userMobile", noteName = "登录手机号")
+	public WebElement userMobile;
 	@SearchWith(pageName = "Registered", elementName = "userPwd", noteName = "密码")
 	public WebElement Pwd;
-	@SearchWith(pageName = "Registered", elementName = "Next", noteName = "下一步")
+	@SearchWith(pageName = "Registered", elementName = "reUserPwd", noteName = "确认密码")
+	public WebElement rePwd;
+	@SearchWith(pageName = "Registered", elementName = "verifyCode", noteName = "验证码")
+	public WebElement verifyCode;
+	@SearchWith(pageName = "Registered", elementName = "Next", noteName = "免费注册")
 	public WebElement Next;
+	@SearchWith(pageName = "Registered", elementName = "personalRegister", noteName = "免费注册个人账号")
+	public WebElement personalRegister;
+	@SearchWith(pageName = "Registered", elementName = "emailRegister", noteName = "邮箱注册")
+	public WebElement emailRegister;
+	@SearchWith(pageName = "Registered", elementName = "mobileRegister", noteName = "手机注册")
+	public WebElement mobileRegister;
+	@SearchWith(pageName = "Registered", elementName = "wechatRegister", noteName = "微信注册")
+	public WebElement wechatRegister;
 
 	/**
 	 * menu
