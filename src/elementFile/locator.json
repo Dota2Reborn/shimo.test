@@ -1500,7 +1500,7 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[3]",
 				"note": "收藏&取消收藏"
-			},
+			}, 
 			{
 				"elementName": "ppt_move",
 				"locateUsing": "xpath",
@@ -1648,28 +1648,57 @@
 			{
 				"elementName": "ppt_right_top",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-style']//button[1]",
+				"locator": "//div[@data-test='slide-align-vertical']//div[1]//button[1]",
 				"note": "顶部对齐"
 			},
 			{
 				"elementName": "ppt_right_middle",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-style']//button[2]",
-				"note": "中部对齐"
+				"locator": "//div[@data-test='slide-align-vertical']//div[1]//button[2]",
+				"note": "垂直中部对齐"
 			},
 			{
 				"elementName": "ppt_right_bottom",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-style']//button[3]",
+				"locator": "//div[@data-test='slide-align-vertical']//div[1]//button[3]",
 				"note": "底部对齐"
 			},
 			{
-				"elementName": "ppt_right_of",
+				"elementName": "ppt_right_L",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-style']//button[4]",
-				"note": "中划线"
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[1]",
+				"note": "左对齐"
 			},
-			
+			{
+				"elementName": "ppt_right_center",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[2]",
+				"note": "水平中对齐"
+			},
+			{
+				"elementName": "ppt_right_R",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[3]",
+				"note": "右对齐"
+			},
+			{
+				"elementName": "ppt_right_ends",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[4]",
+				"note": "两端对齐"
+			},
+			{
+				"elementName": "ppt_right_order",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[2]//button[1]",
+				"note": "有序列表"
+			},
+			{
+				"elementName": "ppt_right_disorder",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[2]//button[2]",
+				"note": "无序列表"
+			},
 			
 			
 			
