@@ -606,7 +606,42 @@ public class elementFile {
 	public WebElement ppt_right_underline;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_of", noteName = "中划线")
 	public WebElement ppt_right_of;
-	
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_top", noteName = "顶部对齐")
+	public WebElement ppt_right_top;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_middle", noteName = "垂直中部对齐")
+	public WebElement ppt_right_middle;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_bottom", noteName = "底部对齐")
+	public WebElement ppt_right_bottom;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_L", noteName = "左对齐")
+	public WebElement ppt_right_L;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_center", noteName = "水平中对齐")
+	public WebElement ppt_right_center;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_R", noteName = "右对齐")
+	public WebElement ppt_right_R;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_ends", noteName = "两端对齐")
+	public WebElement ppt_right_ends;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_order", noteName = "有序列表")
+	public WebElement ppt_right_order;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_disorder", noteName = "无序列表")
+	public WebElement ppt_right_disorder;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_row1", noteName = "行间距输入")
+	public WebElement ppt_right_row1;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_row2", noteName = "行间距下三角")
+	public WebElement ppt_right_row2;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_front1", noteName = "段前间距输入")
+	public WebElement ppt_right_front1;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_front2", noteName = "段前间距上箭头")
+	public WebElement ppt_right_front2;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_front3", noteName = "段前间距下箭头")
+	public WebElement ppt_right_front3;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_rear1", noteName = "段后间距输入")
+	public WebElement ppt_right_rear1;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_rear2", noteName = "段后间距上箭头")
+	public WebElement ppt_right_rear2;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_rear3", noteName = "段后间距下箭头")
+	public WebElement ppt_right_rear3;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_adaptive", noteName = "文本框自适应")
+	public WebElement ppt_right_adaptive;
 	
 	
 	
