@@ -118,6 +118,12 @@
 				"note": "桌面搜索结果第一行"
 			},
 			{
+				"elementName": "confirmJoinCompany",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'确认加入')]",
+				"note": "确认加入企业"
+			},
+			{
 				"elementName": "dashboard_notice",
 				"locateUsing": "xpath",
 				"locator": "//div[@id='header']//div//div[last()-1]/*[name()='svg']",

@@ -309,6 +309,8 @@ public class testCompanyManagement extends TestInit {
 
 		moveToElement(dashboard_notice);
 		click(dashboard_notice_list_1_button);
+		click(confirmJoinCompany);
+		
 		click(company_setting);
 
 		click(button_exitCompany);

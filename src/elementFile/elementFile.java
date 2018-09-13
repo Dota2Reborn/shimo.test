@@ -196,6 +196,8 @@ public class elementFile {
 	public WebElement dashboard_search_result_1;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice", noteName = "桌面通知铃铛")
 	public WebElement dashboard_notice;
+	@SearchWith(pageName = "dashboard", elementName = "confirmJoinCompany", noteName = "确认加入企业")
+	public WebElement confirmJoinCompany;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1", noteName = "桌面通知铃铛-通知列表中第一个")
 	public WebElement dashboard_notice_list_1;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_1_button", noteName = "桌面通知铃铛-通知列表中第一个-按钮")
