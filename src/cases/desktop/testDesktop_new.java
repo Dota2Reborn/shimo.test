@@ -18,7 +18,7 @@ public class testDesktop_new extends TestInit{
 	 *
 	 */
 	@Test
-	public void desktop_newDoc() throws InterruptedException {
+	public void desktop_newDoc() {
 		login("autoTest_new@shimo.im", "123123");
 
 		click(desktop);
