@@ -17,7 +17,7 @@ public class testSearch extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void searchResult() throws InterruptedException {
+	public void searchResult() {
 		login("liuchen@shimo.im", "123123");
 		moveToElement(dashboard_search_button);
 		sendKeys(dashboard_search_input, "搜索测试");
@@ -39,7 +39,7 @@ public class testSearch extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void search_move() throws InterruptedException {
+	public void search_move() {
 		login("liuchen@shimo.im", "123123");
 		moveToElement(dashboard_search_button);
 		sendKeys(dashboard_search_input, "搜索测试");

@@ -23,7 +23,7 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_1() throws InterruptedException {
+	public void notice_1() {
 		login("autoTest11@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
@@ -150,7 +150,7 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_5() throws InterruptedException {
+	public void notice_5() {
 		login("autoTest14@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
