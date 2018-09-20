@@ -1552,19 +1552,19 @@
 			{
 				"elementName": "ppt_type",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[1]//button[1]",
+				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[1]",
 				"note": "样式"
 			},
 			{
 				"elementName": "ppt_animation",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[1]//button[2]",
+				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[2]",
 				"note": "文本_排列"
 			},
 			{
 				"elementName": "ppt_theme",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[1]//button[3]",
+				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[3]",
 				"note": "排列"
 			},
 			{
@@ -1780,7 +1780,7 @@
 			{
 				"elementName": "element_setTop",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[2]//div[1]//button[1]",
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[1]//div[2]//div[2]//div[1]//button[1]",
 				"note": "图片元素置顶"
 			},
 			{
