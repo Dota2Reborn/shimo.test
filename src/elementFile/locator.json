@@ -1552,20 +1552,114 @@
 			{
 				"elementName": "ppt_type",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[1]//button[1]",
+				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[1]",
 				"note": "样式"
 			},
 			{
-				"elementName": "ppt_animation",
+				"elementName": "border_style",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[1]//button[2]",
-				"note": "文本_排列"
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[1]//button[1]",
+				"note": "边框样式"
 			},
 			{
-				"elementName": "ppt_theme",
+				"elementName": "border_style_lines",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[1]//button[3]",
-				"note": "排列"
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[2]//button[1]",
+				"note": "边框线样式"
+			},
+			{
+				"elementName": "border_style_color",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[3]//div[1]//button[1]",
+				"note": "边框线颜色"
+			},
+			{
+				"elementName": "border_style_width",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[1]",
+				"note": "边框线粗细输入"
+			},
+			{
+				"elementName": "border_style_widths",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[3]//button[1]",
+				"note": "边框线粗细上箭头"
+			},
+			{
+				"elementName": "border_style_widthx",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[3]//button[2]",
+				"note": "边框线粗细下箭头"
+			},
+			{
+				"elementName": "transparency",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[3]//div[1]//div[1]",
+				"note": "透明度输入"
+			},
+			{
+				"elementName": "transparencys",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[3]//div[3]//button[1]",
+				"note": "透明度上箭头"
+			},
+			{
+				"elementName": "transparencyx",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[3]//div[3]//button[2]",
+				"note": "透明度下箭头"
+			},
+			{
+				"elementName": "type_text_template1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-presets']//div[1]//button[1]",
+				"note": "文本框样式模板1"
+			},
+			{
+				"elementName": "type_shapes_template1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-shape-presets']//div[1]//div[2]//div[1]//div[2]//div[1]",
+				"note": "形状样式模板1"
+			},
+			{
+				"elementName": "type_shapes_fill",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[1]//button[1]",
+				"note": "形状填充"
+			},
+			{
+				"elementName": "type_shapes_fillcolor",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"note": "形状填充颜色"
+			},
+			{
+				"elementName": "type_pictures_cut",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"note": "剪裁图片"
+			},
+			{
+				"elementName": "type_pictures_replace",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-info']//button[1]",
+				"note": "替换图片"
+			},
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			{
+				"elementName": "ppt_animation",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[2]",
+				"note": "文本_排列"
 			},
 			{
 				"elementName": "ppt_right_ttf",
@@ -1577,278 +1671,276 @@
 				"elementName": "ppt_right_ttfa",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-size']//div[1]//button[1]",
-				"note": "字体下箭头"
+				"note": "文本_字体下箭头"
 			},
 			{
 				"elementName": "ppt_right_size",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-size']//div[1]//button[2]",
-				"note": "字号"
+				"note": "文本_字号"
 			},
 			{
 				"elementName": "ppt_right_sizea",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-size']//div[1]//button[2]",
-				"note": "字号下箭头"
+				"note": "文本_字号下箭头"
 			},
 			{
 				"elementName": "ppt_right_color",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-color']//div[1]//button[1]",
-				"note": "颜色"
+				"note": "文本_颜色"
 			},
 			{
 				"elementName": "ppt_right_colora",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-color']//div[1]//button[2]",
-				"note": "颜色下箭头"
+				"note": "文本_颜色下箭头"
 			},
 			{
 				"elementName": "ppt_right_laid",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-color']//div[2]//button[1]",
-				"note": "高亮"
+				"note": "文本_高亮"
 			},
 			{
 				"elementName": "ppt_right_laida",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-color']//div[2]//button[2]",
-				"note": "高亮下箭头"
+				"note": "文本_高亮下箭头"
 			},
 			{
 				"elementName": "ppt_right_end",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-color']//div[3]//button[1]",
-				"note": "背景色"
+				"note": "文本_背景色"
 			},
 			{
 				"elementName": "ppt_right_enda",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-color']//div[3]//button[2]",
-				"note": "背景色下箭头"
+				"note": "文本_背景色下箭头"
 			},
 			{
 				"elementName": "ppt_right_thickness",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-style']//button[1]",
-				"note": "加粗"
+				"note": "文本_加粗"
 			},
 			{
 				"elementName": "ppt_right_italic",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-style']//button[2]",
-				"note": "斜体"
+				"note": "文本_斜体"
 			},
 			{
 				"elementName": "ppt_right_underline",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-style']//button[3]",
-				"note": "下划线"
+				"note": "文本_下划线"
 			},
 			{
 				"elementName": "ppt_right_of",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-style']//button[4]",
-				"note": "中划线"
+				"note": "文本_中划线"
 			},
 			{
 				"elementName": "ppt_right_top",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-align-vertical']//div[1]//button[1]",
-				"note": "顶部对齐"
+				"note": "文本_顶部对齐"
 			},
 			{
 				"elementName": "ppt_right_middle",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-align-vertical']//div[1]//button[2]",
-				"note": "垂直中部对齐"
+				"note": "文本_垂直中部对齐"
 			},
 			{
 				"elementName": "ppt_right_bottom",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-align-vertical']//div[1]//button[3]",
-				"note": "底部对齐"
+				"note": "文本_底部对齐"
 			},
 			{
 				"elementName": "ppt_right_L",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[1]",
-				"note": "左对齐"
+				"note": "文本_左对齐"
 			},
 			{
 				"elementName": "ppt_right_center",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[2]",
-				"note": "水平中对齐"
+				"note": "文本_水平中对齐"
 			},
 			{
 				"elementName": "ppt_right_R",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[3]",
-				"note": "右对齐"
+				"note": "文本_右对齐"
 			},
 			{
 				"elementName": "ppt_right_ends",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[4]",
-				"note": "两端对齐"
+				"note": "文本_两端对齐"
 			},
 			{
 				"elementName": "ppt_right_order",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-align-horizontal']//div[2]//button[1]",
-				"note": "有序列表"
+				"note": "文本_有序列表"
 			},
 			{
 				"elementName": "ppt_right_disorder",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-align-horizontal']//div[2]//button[2]",
-				"note": "无序列表"
+				"note": "文本_无序列表"
 			},
 			{
 				"elementName": "ppt_right_row1",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='row-spacing']//div[1]//button[1]",
-				"note": "行间距输入"
+				"note": "文本_行间距输入"
 			},
 			{
 				"elementName": "ppt_right_row2",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='row-spacing']//div[1]//button[2]",
-				"note": "行间距下三角"
+				"note": "文本_行间距下三角"
 			},
 			{
 				"elementName": "ppt_right_front1",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[1]//div[1]",
-				"note": "段前间距输入"
+				"note": "文本_段前间距输入"
 			},
 			{
 				"elementName": "ppt_right_front2",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[3]//button[1]",
-				"note": "段前间距上箭头"
+				"note": "文本_段前间距上箭头"
 			},
 			{
 				"elementName": "ppt_right_front3",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[3]//button[2]",
-				"note": "段前间距下箭头"
+				"note": "文本_段前间距下箭头"
 			},
 			{
 				"elementName": "ppt_right_rear1",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[1]//div[1]",
-				"note": "段后间距输入"
+				"note": "文本_段后间距输入"
 			},
 			{
 				"elementName": "ppt_right_rear2",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[3]//button[1]",
-				"note": "段后间距上箭头"
+				"note": "文本_段后间距上箭头"
 			},
 			{
 				"elementName": "ppt_right_rear3",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[3]//button[2]",
-				"note": "段后间距下箭头"
+				"note": "文本_段后间距下箭头"
 			},
 			{
 				"elementName": "ppt_right_adaptive",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-size']//div[5]//div[1]//dev[1]",
-				"note": "文本框自适应"
+				"note": "文本_文本框自适应"
+			},
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			{
+				"elementName": "ppt_theme",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[3]",
+				"note": "排列"
 			},
 			{
 				"elementName": "element_setTop",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[2]//div[1]//button[1]",
-				"note": "图片元素置顶"
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[1]//div[1]",
+				"note": "元素置顶"
 			},
 			{
 				"elementName": "element_setThe",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[2]//div[1]//button[2]",
-				"note": "图片元素置底"
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[1]//div[2]",
+				"note": "元素置底"
 			},
 			{
 				"elementName": "element_moveUp",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[2]//div[1]//button[3]",
-				"note": "图片元素上移一层"
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[1]//div[3]",
+				"note": "元素上移一层"
 			},
 			{
 				"elementName": "element_moveDown",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[2]//div[1]//button[4]",
-				"note": "图片元素下移一层"
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[1]//div[4]",
+				"note": "元素下移一层"
 			},
 			{
-				"elementName": "element_setTop1",
+				"elementName": "element_horizontal",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[1]",
-				"note": "文本形状元素置顶"
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[2]//button[1]",
+				"note": "水平对齐"
 			},
 			{
-				"elementName": "element_setThe1",
+				"elementName": "element_vertically",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[2]",
-				"note": "文本形状元素置底"
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[2]//button[2]",
+				"note": "垂直对齐"
 			},
 			{
-				"elementName": "element_moveUp1",
+				"elementName": "element_horizontal_xvalue",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[3]",
-				"note": "文本形状元素上移一层"
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[1]//div[1]",
+				"note": "X位置输入"
 			},
 			{
-				"elementName": "element_moveDown1",
+				"elementName": "element_horizontal_xvalues",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[4]",
-				"note": "文本形状元素下移一层"
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[2]//button[1]",
+				"note": "X位置上箭头"
+			},
+			{
+				"elementName": "element_horizontal_xvaluex",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[2]//button[2]",
+				"note": "X位置下箭头"
+			},
+			{
+				"elementName": "element_vertically_xvalue",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[1]//div[1]",
+				"note": "Y位置输入"
+			},
+			{
+				"elementName": "element_vertically_xvalues",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[2]//button[1]",
+				"note": "Y位置上箭头"
+			},
+			{
+				"elementName": "element_vertically_xvaluex",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[2]//button[2]",
+				"note": "Y位置下箭头"
 			}
-		]
-	},
-	{
-		"note": "个人账号设置页面",
-		"pageName": "profile",
-		"elements": [
-			{
-				"elementName": "mobile_setting",
-				"locateUsing": "xpath",
-				"locator": "//a[@class='edit-btn set-phone']",
-				"note": "绑定手机号按钮"
-			},
-			{
-				"elementName": "mobile_setting_input",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='phone-content']//input",
-				"note": "绑定手机号输入框"
-			},
-           {
-            "elementName": "mobile_setting_getVerifyCode",
-            "locateUsing": "xpath",
-            "locator": "//div[@class='m-verify-code']//button",
-            "note": "绑定手机号，获取验证码按钮"
-           },
-          {
-            "elementName": "mobile_setting_verifyCodeInput",
-            "locateUsing": "xpath",
-            "locator": "//div[@class='m-verify-code']//span//input",
-            "note": "绑定手机号，验证码输入框"
-          },
-          {
-            "elementName": "mobile_setting_confirm",
-            "locateUsing": "xpath",
-            "locator": "//button[@class='button btn-submit']",
-            "note": "绑定手机号，确认绑定按钮"
-          },
-          {
-            "elementName": "profile_toast",
-            "locateUsing": "xpath",
-            "locator": "//div[@class='m-toast']",
-            "note": "账号设置页面toast"
-          }
 		]
 	},
 	{
