@@ -384,6 +384,25 @@ public class elementFile {
 	public WebElement wechatRegister;
 
 	/**
+	 * profile
+	 * 个人账号设置页面
+	 *
+	 */
+	@SearchWith(pageName = "profile", elementName = "mobile_setting", noteName = "绑定手机号按钮")
+	public WebElement mobile_setting;
+	@SearchWith(pageName = "profile", elementName = "mobile_setting_input", noteName = "绑定手机号输入框")
+	public WebElement mobile_setting_input;
+	@SearchWith(pageName = "profile", elementName = "mobile_setting_getVerifyCode", noteName = "绑定手机号，获取验证码按钮")
+	public WebElement mobile_setting_getVerifyCode;
+	@SearchWith(pageName = "profile", elementName = "mobile_setting_verifyCodeInput", noteName = "绑定手机号，验证码输入框")
+	public WebElement mobile_setting_verifyCodeInput;
+	@SearchWith(pageName = "profile", elementName = "mobile_setting_confirm", noteName = "绑定手机号，确认绑定按钮")
+	public WebElement mobile_setting_confirm;
+	@SearchWith(pageName = "profile", elementName = "profile_toast", noteName = "账号设置页面toast")
+	public WebElement profile_toast;
+
+
+	/**
 	 * menu
 	 * 桌面工作台菜单
 	 *
@@ -644,23 +663,7 @@ public class elementFile {
 	public WebElement ppt_right_rear3;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_adaptive", noteName = "文本框自适应")
 	public WebElement ppt_right_adaptive;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	@SearchWith(pageName = "PPT_rightBar", elementName = "element_setTop", noteName = "元素置顶")
 	public WebElement element_setTop;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "element_setThe", noteName = "元素置底")
