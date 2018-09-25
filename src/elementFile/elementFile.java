@@ -672,13 +672,5 @@ public class elementFile {
 	public WebElement element_moveUp;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "element_moveDown", noteName = "元素下移一层")
 	public WebElement element_moveDown;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_setTop1", noteName = "元素置顶")
-	public WebElement element_setTop1;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_setThe1", noteName = "元素置底")
-	public WebElement element_setThe1;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_moveUp1", noteName = "元素上移一层")
-	public WebElement element_moveUp1;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_moveDown1", noteName = "元素下移一层")
-	public WebElement element_moveDown1;
 	
 }
