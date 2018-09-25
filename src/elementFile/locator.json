@@ -1633,6 +1633,18 @@
 				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
 				"note": "形状填充颜色"
 			},
+			{
+				"elementName": "type_pictures_cut",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"note": "剪裁图片"
+			},
+			{
+				"elementName": "type_pictures_replace",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-info']//button[1]",
+				"note": "替换图片"
+			},
 			
 			
 			
