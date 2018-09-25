@@ -1598,18 +1598,41 @@
 				"note": "透明度输入"
 			},
 			{
-				"elementName": "transparency",
+				"elementName": "transparencys",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[3]//div[3]//button[1]",
 				"note": "透明度上箭头"
 			},
 			{
-				"elementName": "transparency",
+				"elementName": "transparencyx",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[3]//div[3]//button[2]",
 				"note": "透明度下箭头"
 			},
-			
+			{
+				"elementName": "type_text_template1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-presets']//div[1]//button[1]",
+				"note": "文本框样式模板1"
+			},
+			{
+				"elementName": "type_shapes_template1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-shape-presets']//div[1]//div[2]//div[1]//div[2]//div[1]",
+				"note": "形状样式模板1"
+			},
+			{
+				"elementName": "type_shapes_fill",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[1]//button[1]",
+				"note": "形状填充"
+			},
+			{
+				"elementName": "type_shapes_fillcolor",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"note": "形状填充颜色"
+			},
 			
 			
 			
@@ -1857,6 +1880,54 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[1]//div[4]",
 				"note": "元素下移一层"
+			},
+			{
+				"elementName": "element_horizontal",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[2]//button[1]",
+				"note": "水平对齐"
+			},
+			{
+				"elementName": "element_vertically",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[2]//button[2]",
+				"note": "垂直对齐"
+			},
+			{
+				"elementName": "element_horizontal_xvalue",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[1]//div[1]",
+				"note": "X位置输入"
+			},
+			{
+				"elementName": "element_horizontal_xvalues",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[2]//button[1]",
+				"note": "X位置上箭头"
+			},
+			{
+				"elementName": "element_horizontal_xvaluex",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[2]//button[2]",
+				"note": "X位置下箭头"
+			},
+			{
+				"elementName": "element_vertically_xvalue",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[1]//div[1]",
+				"note": "Y位置输入"
+			},
+			{
+				"elementName": "element_vertically_xvalues",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[2]//button[1]",
+				"note": "Y位置上箭头"
+			},
+			{
+				"elementName": "element_vertically_xvaluex",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[2]//button[2]",
+				"note": "Y位置下箭头"
 			}
 		]
 	},
