@@ -1645,7 +1645,24 @@
 				"locator": "//div[@data-test='slide-sidebar-image-info']//button[1]",
 				"note": "替换图片"
 			},
-			
+			{
+				"elementName": "",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[2]",
+				"note": "图片剪裁比例"
+			},
+			{
+				"elementName": "",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"note": "输入图片宽"
+			},
+			{
+				"elementName": "",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-info']//button[1]",
+				"note": "输入图片高"
+			},
 			
 			
 			
