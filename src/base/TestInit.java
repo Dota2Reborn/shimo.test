@@ -235,6 +235,21 @@ public class TestInit extends elementFile {
 	}
 
 	/**
+	 * 删除桌面第一个文件
+	 *
+	 * @author 刘晨
+	 * @Time 2017-11-20
+	 *
+	 */
+	public void deleteFile() {
+	    click(desktop);
+		contextClick(desktop1_1);
+		click(menu_delete);
+		click(desktop_newFolder_name_ok);
+
+	}
+
+	/**
 	 * 获取当前时间
 	 * 
 	 * @author 刘晨

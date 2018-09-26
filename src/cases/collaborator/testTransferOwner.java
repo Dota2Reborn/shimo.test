@@ -46,11 +46,10 @@ public class testTransferOwner extends TestInit{
 		click(b_addCollaborator_confirm);
 		Thread.sleep(300);
 		Boolean result1 = getText(addCollaborator_1_list_userName).equals("transfer2 (我)");
+		click(Shut_down_sm_modal_close_x);
+		deleteFile();
 		assertTrue(result1);
-		
-		
-		
-		
+
 		}
 	@Test
 	public void Transfer_2() throws InterruptedException{
@@ -96,28 +95,10 @@ public class testTransferOwner extends TestInit{
 		contextClick(desktop1_1);
 		moveToElement(menu_cooperation);
 		Boolean result = getText(b_addCollaborator_3_list).equals("管理者");
+        click(Shut_down_sm_modal_close_x);
+		deleteFile();
+
 		assertTrue(result);
-		
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
