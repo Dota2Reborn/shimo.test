@@ -579,6 +579,8 @@ public class elementFile {
 	public WebElement ppt_now_copy;
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_export", noteName = "导出")
 	public WebElement ppt_export;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_template", noteName = "保存模板")
+	public WebElement ppt_template;
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_view_history", noteName = "查看历史")
 	public WebElement ppt_view_history;
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_Information", noteName = "幻灯片信息")

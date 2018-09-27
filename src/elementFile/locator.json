@@ -1526,21 +1526,27 @@
 				"note": "导出"
 			},
 			{
-				"elementName": "ppt_view_history",
+				"elementName": "ppt_template",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[9]",
+				"note": "保存模板"
+			},
+			{
+				"elementName": "ppt_view_history",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[10]",
 				"note": "查看历史"
 			},
 			{
 				"elementName": "ppt_Information",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[10]",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[11]",
 				"note": "幻灯片信息"
 			},
 			{
 				"elementName": "ppt_delete",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[12]",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[13]",
 				"note": "删除"
 			}
 		]
@@ -1646,21 +1652,21 @@
 				"note": "替换图片"
 			},
 			{
-				"elementName": "type_pictures_",
+				"elementName": "type_pictures_proportion",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[2]",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[1]//button[1]",
 				"note": "图片剪裁比例"
 			},
 			{
-				"elementName": "type_pictures_",
+				"elementName": "type_pictures_proportionk",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[1]//div[1]//div[1]",
 				"note": "输入图片宽"
 			},
 			{
-				"elementName": "type_pictures_",
+				"elementName": "type_pictures_proportiong",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-info']//button[1]",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[2]//div[1]//div[1]",
 				"note": "输入图片高"
 			},
 			
