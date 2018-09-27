@@ -596,6 +596,16 @@ public class elementFile {
 	 */
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_type", noteName = "样式")
 	public WebElement ppt_type;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "page_style", noteName = "背景填充")
+	public WebElement page_style;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "page_colour", noteName = "颜色选择")
+	public WebElement page_colour;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "image_size", noteName = "图片尺寸")
+	public WebElement image_size;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "image_chosen", noteName = "图片选择")
+	public WebElement image_chosen;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "style_all_applications", noteName = "应用至全部")
+	public WebElement style_all_applications;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "border_style", noteName = "边框样式")
 	public WebElement border_style;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "border_style_lines", noteName = "边框线样式")

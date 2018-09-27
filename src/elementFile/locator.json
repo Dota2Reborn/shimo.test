@@ -1562,6 +1562,43 @@
 				"note": "样式"
 			},
 			{
+				"elementName": "page_style",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[1]//button[1]",
+				"note": "背景填充"
+			},
+			{
+				"elementName": "page_colour",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"note": "颜色选择"
+			},
+			{
+				"elementName": "image_size",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//button[1]",
+				"note": "图片尺寸"
+			},
+			{
+				"elementName": "image_chosen",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//button[1]",
+				"note": "图片选择"
+			},
+			{
+				"elementName": "style_all_applications",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[2]//div[1]//div[1]//div[2]//button[1]",
+				"note": "应用至全部"
+			},
+			
+			
+			
+			
+			
+			
+			
+			{
 				"elementName": "border_style",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-border-style']//div[1]//button[1]",
