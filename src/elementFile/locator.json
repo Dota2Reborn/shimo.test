@@ -1300,20 +1300,20 @@
 			{
 				"elementName": "narrow_trying",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[3]//button[1]",
+				"locator": "//div[@data-test='slide-toolbar']//div[3]//button[1]",
 				"note": "减小视图"
 			},
 			{
 				"elementName": "enlarge_trying",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[3]//button[3]",
+				"locator": "//div[@data-test='slide-toolbar']//div[3]//button[3]",
 				"note": "放大视图"
 			},
 			{
 				"elementName": "ppt_zoom",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[3]//button[2]",
-				"note": "缩放视图"
+				"locator": "//div[@data-test='slide-toolbar']//div[3]//button[2]",
+				"note": "视图"
 			}
 		]
 	},
