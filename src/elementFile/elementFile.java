@@ -559,6 +559,8 @@ public class elementFile {
 	public WebElement ppt_comment;
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_broadcast", noteName = "播放幻灯片")
 	public WebElement ppt_broadcast;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_online_broadcast", noteName = "在线演示")
+	public WebElement ppt_online_broadcast;
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_cooperation", noteName = "添加协作者")
 	public WebElement ppt_cooperation;
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_share", noteName = "分享")
