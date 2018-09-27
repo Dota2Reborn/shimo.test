@@ -596,11 +596,45 @@ public class elementFile {
 	 */
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_type", noteName = "样式")
 	public WebElement ppt_type;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_animation", noteName = "文本")
-	public WebElement ppt_animation;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_theme", noteName = "主题")
-	public WebElement ppt_theme;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "border_style", noteName = "边框样式")
+	public WebElement border_style;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "border_style_lines", noteName = "边框线样式")
+	public WebElement border_style_lines;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "border_style_color", noteName = "边框线颜色")
+	public WebElement border_style_color;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "border_style_width", noteName = "边框线粗细输入")
+	public WebElement border_style_width;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "border_style_widths", noteName = "边框线粗细上箭头")
+	public WebElement border_style_widths;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "border_style_widthx", noteName = "边框线粗细下箭头")
+	public WebElement border_style_widthx;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "transparency", noteName = "透明度输入")
+	public WebElement transparency;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "transparencys", noteName = "透明度上箭头")
+	public WebElement transparencys;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "transparencyx", noteName = "透明度下箭头")
+	public WebElement transparencyx;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "type_text_template1", noteName = "文本样式模板1")
+	public WebElement type_text_template1;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "type_shapes_template1", noteName = "形状样式模板1")
+	public WebElement type_shapes_template1;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "type_shapes_fill", noteName = "形状填充")
+	public WebElement type_shapes_fill;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "type_shapes_fillcolor", noteName = "形状填充颜色")
+	public WebElement type_shapes_fillcolor;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "type_pictures_cut", noteName = "剪裁图片")
+	public WebElement type_pictures_cut;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "type_pictures_replace", noteName = "替换图片")
+	public WebElement type_pictures_replace;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "type_pictures_proportion", noteName = "图片剪裁比例")
+	public WebElement type_pictures_proportion;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "type_pictures_proportionk", noteName = "输入图片宽")
+	public WebElement type_pictures_proportionk;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "type_pictures_proportiong", noteName = "输入图片高")
+	public WebElement type_pictures_proportiong;
 	
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_animation", noteName = "文本排列")
+	public WebElement ppt_animation;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_ttf", noteName = "字体")
 	public WebElement ppt_right_ttf;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_ttfa", noteName = "字体下箭头")
@@ -666,6 +700,8 @@ public class elementFile {
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_adaptive", noteName = "文本框自适应")
 	public WebElement ppt_right_adaptive;
 
+	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_theme", noteName = "排列")
+	public WebElement ppt_theme;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "element_setTop", noteName = "元素置顶")
 	public WebElement element_setTop;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "element_setThe", noteName = "元素置底")
@@ -674,5 +710,21 @@ public class elementFile {
 	public WebElement element_moveUp;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "element_moveDown", noteName = "元素下移一层")
 	public WebElement element_moveDown;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "element_horizontal", noteName = "水平对齐")
+	public WebElement element_horizontal;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "element_vertically", noteName = "垂直对齐")
+	public WebElement element_vertically;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "element_horizontal_xvalue", noteName = "X位置输入")
+	public WebElement element_horizontal_xvalue;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "element_horizontal_xvalues", noteName = "X位置上箭头")
+	public WebElement element_horizontal_xvalues;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "element_horizontal_xvaluex", noteName = "X位置下箭头")
+	public WebElement element_horizontal_xvaluex;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "element_vertically_xvalue", noteName = "Y位置输入")
+	public WebElement element_vertically_xvalue;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "element_vertically_xvalues", noteName = "Y位置上箭头")
+	public WebElement element_vertically_xvalues;
+	@SearchWith(pageName = "PPT_rightBar", elementName = "element_vertically_xvaluex", noteName = "Y位置下箭头")
+	public WebElement element_vertically_xvaluex;
 	
 }
