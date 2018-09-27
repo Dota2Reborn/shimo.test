@@ -1246,13 +1246,13 @@
 			{
 				"elementName": "add_page",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//div[1]//button[1]",
+				"locator": "//div[@data-test='slide-toolbar']//div[1]//div[1]//button[1]",
 				"note": "添加页面"
 			},
 			{
 				"elementName": "down_arrow",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//div[1]//button[2]",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[2]",
 				"note": "下箭头"
 			},
 			{
@@ -1268,58 +1268,52 @@
 				"note": "重做"
 			},
 			{
-				"elementName": "add_title",
-				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[1]",
-				"note": "添加标题"
-			},
-			{
 				"elementName": "add_text",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[2]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[1]",
 				"note": "添加文本"
 			},
 			{
 				"elementName": "add_diagram",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[3]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[2]",
 				"note": "添加图片"
 			},
 			{
 				"elementName": "add_arrows",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[4]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[3]",
 				"note": "添加箭头"
 			},
 			{
 				"elementName": "add_Rectangle",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[5]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[4]",
 				"note": "添加矩形"
 			},
 			{
 				"elementName": "add_circular",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[6]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[5]",
 				"note": "添加圆形"
 			},
 			{
 				"elementName": "narrow_trying",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[3]//button[1]",
+				"locator": "//div[@data-test='slide-toolbar']//div[3]//button[1]",
 				"note": "减小视图"
 			},
 			{
 				"elementName": "enlarge_trying",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[3]//button[3]",
+				"locator": "//div[@data-test='slide-toolbar']//div[3]//button[3]",
 				"note": "放大视图"
 			},
 			{
 				"elementName": "ppt_zoom",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[3]//button[2]",
-				"note": "缩放视图"
+				"locator": "//div[@data-test='slide-toolbar']//div[3]//button[2]",
+				"note": "视图"
 			}
 		]
 	},
@@ -1472,21 +1466,27 @@
 				"note": "播放幻灯片"
 			},
 			{
-				"elementName": "ppt_cooperation",
+				"elementName": "ppt_online_broadcast",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-right']//button[2]",
+				"note": "在线演示"
+			},
+			{
+				"elementName": "ppt_cooperation",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//button[3]",
 				"note": "添加协作者"
 			},
 			{
 				"elementName": "ppt_share",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[3]",
+				"locator": "//div[@data-test='page-header-right']//button[4]",
 				"note": "分享"
 			},
 			{
 				"elementName": "ppt_dotdotdot",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[4]",
+				"locator": "//div[@data-test='page-header-right']//button[5]",
 				"note": "左上角点点点"
 			},
 			{
@@ -1526,21 +1526,27 @@
 				"note": "导出"
 			},
 			{
-				"elementName": "ppt_view_history",
+				"elementName": "ppt_template",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[9]",
+				"note": "保存模板"
+			},
+			{
+				"elementName": "ppt_view_history",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[10]",
 				"note": "查看历史"
 			},
 			{
 				"elementName": "ppt_Information",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[10]",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[11]",
 				"note": "幻灯片信息"
 			},
 			{
 				"elementName": "ppt_delete",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[12]",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[13]",
 				"note": "删除"
 			}
 		]
@@ -1554,6 +1560,36 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[1]",
 				"note": "样式"
+			},
+			{
+				"elementName": "page_style",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[1]//button[1]",
+				"note": "页面背景填充"
+			},
+			{
+				"elementName": "page_colour",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"note": "页面颜色选择"
+			},
+			{
+				"elementName": "image_size",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//button[1]",
+				"note": "页面图片尺寸"
+			},
+			{
+				"elementName": "image_chosen",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//button[1]",
+				"note": "页面图片选择"
+			},
+			{
+				"elementName": "style_all_applications",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[2]//div[1]//div[1]//div[2]//button[1]",
+				"note": "页面应用至全部"
 			},
 			{
 				"elementName": "border_style",
@@ -1646,28 +1682,23 @@
 				"note": "替换图片"
 			},
 			{
-				"elementName": "type_pictures_",
+				"elementName": "type_pictures_proportion",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[2]",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[1]//button[1]",
 				"note": "图片剪裁比例"
 			},
 			{
-				"elementName": "type_pictures_",
+				"elementName": "type_pictures_proportionk",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[1]//div[1]//div[1]",
 				"note": "输入图片宽"
 			},
 			{
-				"elementName": "type_pictures_",
+				"elementName": "type_pictures_proportiong",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-info']//button[1]",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[2]//div[1]//div[1]",
 				"note": "输入图片高"
 			},
-			
-			
-			
-			
-			
 			
 			
 			
@@ -1874,12 +1905,6 @@
 			
 			
 			
-			
-			
-			
-			
-			
-			
 			{
 				"elementName": "ppt_theme",
 				"locateUsing": "xpath",
@@ -1958,6 +1983,48 @@
 				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[2]//button[2]",
 				"note": "Y位置下箭头"
 			}
+		]
+	},
+	{
+		"note": "幻灯片中右键菜单与列表",
+		"pageName": "ppt_tabulation",
+		"elements": [
+			{
+				"elementName": "cutting",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[1]",
+				"note": "剪切"
+			},
+			{
+				"elementName": "replication",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[2]",
+				"note": "复制"
+			},
+			{
+				"elementName": "pasting",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[3]",
+				"note": "粘贴"
+			},
+			{
+				"elementName": "replication_pasting",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[4]",
+				"note": "复制并粘贴"
+			},
+			{
+				"elementName": "right_key_new",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[6]",
+				"note": "新建幻灯片"
+			},
+			{
+				"elementName": "delete_page",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[7]",
+				"note": "删除幻灯片"
+			},
 		]
 	},
 	{
