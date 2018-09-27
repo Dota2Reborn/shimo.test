@@ -1246,13 +1246,13 @@
 			{
 				"elementName": "add_page",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//div[1]//button[1]",
+				"locator": "//div[@data-test='slide-toolbar']//div[1]//div[1]//button[1]",
 				"note": "添加页面"
 			},
 			{
 				"elementName": "down_arrow",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//div[1]//button[2]",
+				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[2]",
 				"note": "下箭头"
 			},
 			{
@@ -1268,39 +1268,33 @@
 				"note": "重做"
 			},
 			{
-				"elementName": "add_title",
-				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[1]",
-				"note": "添加标题"
-			},
-			{
 				"elementName": "add_text",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[2]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[1]",
 				"note": "添加文本"
 			},
 			{
 				"elementName": "add_diagram",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[3]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[2]",
 				"note": "添加图片"
 			},
 			{
 				"elementName": "add_arrows",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[4]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[3]",
 				"note": "添加箭头"
 			},
 			{
 				"elementName": "add_Rectangle",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[5]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[4]",
 				"note": "添加矩形"
 			},
 			{
 				"elementName": "add_circular",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[2]//button[6]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[5]",
 				"note": "添加圆形"
 			},
 			{

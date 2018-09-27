@@ -484,8 +484,6 @@ public class elementFile {
 	public WebElement ppt_revoke;
 	@SearchWith(pageName = "ppt_top", elementName = "ppt_redo", noteName = "重做")
 	public WebElement ppt_redo;
-	@SearchWith(pageName = "ppt_top", elementName = "add_title", noteName = "添加标题")
-	public WebElement add_title;
 	@SearchWith(pageName = "ppt_top", elementName = "add_text", noteName = "添加文本")
 	public WebElement add_text;
 	@SearchWith(pageName = "ppt_top", elementName = "add_diagram", noteName = "添加图片")
