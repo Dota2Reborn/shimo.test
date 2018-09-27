@@ -39,10 +39,10 @@ public class testProfile extends TestInit {
         moveToElement(desktop_user_icon);
         click(desktop_user_icon_personSetting);
         click(mobile_setting);
-        sendKeys(mobile_setting_input, "13911658584");
+        sendKeys(mobile_setting_input, "13614641612");
         sendKeys(mobile_setting_verifyCodeInput,"2222");
         click(mobile_setting_confirm);
-        Boolean r1 = getText(profile_toast).equals("验证码已失效");
+        Boolean r1 = getText(profile_toast).equals("验证码不正确，请重新填写");
         assertTrue(r1);
     }
 }
