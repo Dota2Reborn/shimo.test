@@ -1986,6 +1986,48 @@
 		]
 	},
 	{
+		"note": "幻灯片中右键菜单与列表",
+		"pageName": "ppt_tabulation",
+		"elements": [
+			{
+				"elementName": "cutting",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[1]",
+				"note": "剪切"
+			},
+			{
+				"elementName": "replication",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[2]",
+				"note": "复制"
+			},
+			{
+				"elementName": "pasting",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[3]",
+				"note": "粘贴"
+			},
+			{
+				"elementName": "replication_pasting",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[4]",
+				"note": "复制并粘贴"
+			},
+			{
+				"elementName": "right_key_new",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[6]",
+				"note": "新建幻灯片"
+			},
+			{
+				"elementName": "delete_page",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[7]",
+				"note": "删除幻灯片"
+			},
+		]
+	},
+	{
 		"note": "个人账号设置页面",
 		"pageName": "profile",
 		"elements": [

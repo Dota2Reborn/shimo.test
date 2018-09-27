@@ -737,4 +737,21 @@ public class elementFile {
 	@SearchWith(pageName = "PPT_rightBar", elementName = "element_vertically_xvaluex", noteName = "Y位置下箭头")
 	public WebElement element_vertically_xvaluex;
 	
+	/**
+	 * 幻灯片中右键菜单与列表
+	 * ppt_tabulation
+	 *
+	 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "cutting", noteName = "剪切")
+	public WebElement cutting;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "replication", noteName = "复制")
+	public WebElement replication;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "pasting", noteName = "粘贴")
+	public WebElement pasting;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "replication_pasting", noteName = "复制并粘贴")
+	public WebElement replication_pasting;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "right_key_new", noteName = "新建幻灯片")
+	public WebElement right_key_new;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "delete_page", noteName = "删除幻灯片")
+	public WebElement delete_page;
 }
