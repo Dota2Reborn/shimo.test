@@ -20,6 +20,14 @@ public class dashboard_update extends TestInit {
 	@Test
 	public void update2() throws InterruptedException {
 		login("gengxin2@shimo.im", "123123");
+
+		click(desktop);
+		contextClick(desktop1_1);
+		click(menu_rename);
+		sendKeys(desktop_newFolder_name,getDate());
+		click(desktop_newFolder_name_ok);
+
+		click(dashboard);
 		click(dashboard_1);
 		click(menu_Point_Menu);
 		boolean text1 = getText(menu_newPage).equals("在新标签页中打开");
