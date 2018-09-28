@@ -1428,6 +1428,36 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[5]",
 				"note": "幻灯片页面第五个元素"
+			},
+			{
+				"elementName": "page_elements_1_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[1]//span",
+				"note": "幻灯片页面第一个元素"
+			},
+			{
+				"elementName": "page_elements_2_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[2]//span",
+				"note": "幻灯片页面第二个元素"
+			},
+			{
+				"elementName": "page_elements_3_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[3]//span",
+				"note": "幻灯片页面第三个元素"
+			},
+			{
+				"elementName": "page_elements_4_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[4]//span",
+				"note": "幻灯片页面第四个元素"
+			},
+			{
+				"elementName": "page_elements_5_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[5]//span",
+				"note": "幻灯片页面第五个元素"
 			}
 		]
 	},

@@ -544,6 +544,16 @@ public class elementFile {
 	public WebElement page_elements_4;
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_5", noteName = "幻灯片页面第五个元素")
 	public WebElement page_elements_5;
+	@SearchWith(pageName = "ppt_page", elementName = "page_elements_1_1", noteName = "图片占位符1上传图片按钮")
+	public WebElement page_elements_1_1;
+	@SearchWith(pageName = "ppt_page", elementName = "page_elements_2_1", noteName = "图片占位符2上传图片按钮")
+	public WebElement page_elements_2_1;
+	@SearchWith(pageName = "ppt_page", elementName = "page_elements_3_1", noteName = "图片占位符3上传图片按钮")
+	public WebElement page_elements_3_1;
+	@SearchWith(pageName = "ppt_page", elementName = "page_elements_4_1", noteName = "图片占位符4上传图片按钮")
+	public WebElement page_elements_4_1;
+	@SearchWith(pageName = "ppt_page", elementName = "page_elements_5_1", noteName = "图片占位符5上传图片按钮")
+	public WebElement page_elements_5_1;
 	/**
 	 * ppt
 	 * PPT_header
