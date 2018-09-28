@@ -523,6 +523,10 @@ public class elementFile {
 	public WebElement ppt_page_8;
 	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_9", noteName = "左边栏第九个页面")
 	public WebElement ppt_page_9;
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_10", noteName = "左边栏第十个页面")
+	public WebElement ppt_page_10;
+	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_11", noteName = "左边栏第十一个页面")
+	public WebElement ppt_page_11;
 	/**
 	 * 页面
 	 * ppt_page

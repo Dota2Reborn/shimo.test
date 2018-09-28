@@ -1374,6 +1374,18 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='filmstrip']//div[1]//div[9]",
 				"note": "左边栏第九个页面"
+			},
+			{
+				"elementName": "ppt_page_10",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='filmstrip']//div[1]//div[10]",
+				"note": "左边栏第十个页面"
+			},
+			{
+				"elementName": "ppt_page_11",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='filmstrip']//div[1]//div[11]",
+				"note": "左边栏第十一个页面"
 			}
 		]
 	},		
