@@ -1,6 +1,5 @@
 package cases.docSheet;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -55,19 +54,5 @@ public class testMenu_Doc_Sheet extends TestInit {
 		Boolean R1 = driver.findElement(By.xpath("//div[@class='confirm-dialog dialog ']")).isDisplayed();
 		assertTrue(R1);
 
-	}
-
-	@Test(enabled = false)
-	public void test() throws InterruptedException {
-		login("autoTest15@shimo.im", "123123");
-
-		click(desktop);
-		click(desktop1_1);
-		wait.until(ExpectedConditions.elementToBeClickable(doc_menu));
-
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		String msg1 = js.executeScript("return pad.quill.constructor.version").toString();
-		System.out.println(">>>>>>>>>result<<<<<<<<<<<:" + msg1);
-		assertEquals("1.26.0", msg1);
 	}
 }
