@@ -1252,7 +1252,7 @@
 			{
 				"elementName": "down_arrow",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='toolbar']//div[1]//div[1]//button[2]",
+				"locator": "//div[@data-test='slide-toolbar']//div[1]//div[1]//button[2]",
 				"note": "下箭头"
 			},
 			{
