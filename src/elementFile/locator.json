@@ -1330,61 +1330,61 @@
 			{
 				"elementName": "ppt_page_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[2]",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[2]",
 				"note": "左边栏第二个页面"
 			},
 			{
 				"elementName": "ppt_page_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[3]",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[3]",
 				"note": "左边栏第三个页面"
 			},
 			{
 				"elementName": "ppt_page_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[4]",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[4]",
 				"note": "左边栏第四个页面"
 			},
 			{
 				"elementName": "ppt_page_5",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[5]",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[5]",
 				"note": "左边栏第五个页面"
 			},
 			{
 				"elementName": "ppt_page_6",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[6]",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[6]",
 				"note": "左边栏第六个页面"
 			},
 			{
 				"elementName": "ppt_page_7",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[7]",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[7]",
 				"note": "左边栏第七个页面"
 			},
 			{
 				"elementName": "ppt_page_8",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[8]",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[8]",
 				"note": "左边栏第八个页面"
 			},
 			{
 				"elementName": "ppt_page_9",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[9]",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[9]",
 				"note": "左边栏第九个页面"
 			},
 			{
 				"elementName": "ppt_page_10",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[10]",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[10]",
 				"note": "左边栏第十个页面"
 			},
 			{
 				"elementName": "ppt_page_11",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='filmstrip']//div[1]//div[11]",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[11]",
 				"note": "左边栏第十一个页面"
 			}
 		]
