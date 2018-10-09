@@ -14,7 +14,7 @@ public class testDesktop_remove extends TestInit{
 	 *
 	 */
 	@Test
-	public void desktop_remove() throws InterruptedException {
+	public void desktop_remove() {
 		login("autoTest-cui@shimo.im", "123123");
 		
 		click(desktop);
@@ -39,7 +39,7 @@ public class testDesktop_remove extends TestInit{
 	 *
 	 */
 	@Test
-	public void desktop_recover() throws InterruptedException {
+	public void desktop_recover()  {
 		login("autoTest-cui@shimo.im", "123123");
 		
 		click(trash);
@@ -65,7 +65,7 @@ public class testDesktop_remove extends TestInit{
 	 *
 	 */
 	@Test
-	public void desktop_removeFolder() throws InterruptedException {
+	public void desktop_removeFolder() {
 		login("autoTest-removeFolder@shimo.im", "123123");
 		
 		click(desktop);
@@ -90,7 +90,7 @@ public class testDesktop_remove extends TestInit{
 	 *
 	 */
 	@Test
-	public void desktop_removeFileinFolder() throws InterruptedException {
+	public void desktop_removeFileinFolder()  {
 		login("autoTest-removeFolder@shimo.im", "123123");
 		
 		click(desktop);

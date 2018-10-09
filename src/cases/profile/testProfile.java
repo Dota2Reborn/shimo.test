@@ -12,11 +12,10 @@ public class testProfile extends TestInit {
      *
      * @author 刘晨
      * @Time 2019-09-25
-     *
      */
     @Test
     public void profile_mobile_1() {
-        login("liuchen@shimo.im","123123");
+        login("liuchen@shimo.im", "123123");
         moveToElement(desktop_user_icon);
         click(desktop_user_icon_personSetting);
         click(mobile_setting);
@@ -31,19 +30,18 @@ public class testProfile extends TestInit {
      *
      * @author 刘晨
      * @Time 2019-09-25
-     *
      */
     @Test
     public void profile_mobile_2() {
-        login("liuchen@shimo.im","123123");
+        login("liuchen@shimo.im", "123123");
         moveToElement(desktop_user_icon);
         click(desktop_user_icon_personSetting);
         click(mobile_setting);
         sendKeys(mobile_setting_input, "13614641612");
-        sendKeys(mobile_setting_verifyCodeInput,"2222");
+        sendKeys(mobile_setting_verifyCodeInput, "2222");
         click(mobile_setting_confirm);
         Boolean r1 = getText(profile_toast).equals("验证码不正确，请重新填写");
         Boolean r2 = getText(profile_toast).equals("验证码已失效");
-        assertTrue(r1||r2);
+        assertTrue(r1 || r2);
     }
 }
