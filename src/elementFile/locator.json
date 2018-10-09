@@ -1702,19 +1702,19 @@
 			{
 				"elementName": "transparency",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[3]//div[1]//div[1]",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//input[1]",
 				"note": "透明度输入"
 			},
 			{
 				"elementName": "transparencys",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[3]//div[3]//button[1]",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[1]",
 				"note": "透明度上箭头"
 			},
 			{
 				"elementName": "transparencyx",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[3]//div[3]//button[2]",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[2]",
 				"note": "透明度下箭头"
 			},
 			{
@@ -1980,7 +1980,7 @@
 			{
 				"elementName": "ppt_theme",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[3]",
+				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[2]",
 				"note": "排列"
 			},
 			{
@@ -2022,37 +2022,37 @@
 			{
 				"elementName": "element_horizontal_xvalue",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[1]//div[1]",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[1]//div[1]//input[1]",
 				"note": "X位置输入"
 			},
 			{
 				"elementName": "element_horizontal_xvalues",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[2]//button[1]",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[1]//div[1]//div[1]//div[1]//button[1]",
 				"note": "X位置上箭头"
 			},
 			{
 				"elementName": "element_horizontal_xvaluex",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[2]//button[2]",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[1]//div[1]//div[1]//div[1]//button[2]",
 				"note": "X位置下箭头"
 			},
 			{
 				"elementName": "element_vertically_xvalue",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[1]//div[1]",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[1]//div[1]//input[1]",
 				"note": "Y位置输入"
 			},
 			{
 				"elementName": "element_vertically_xvalues",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[2]//button[1]",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[1]//div[1]//div[1]//div[1]//button[1]",
 				"note": "Y位置上箭头"
 			},
 			{
 				"elementName": "element_vertically_xvaluex",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[2]//button[2]",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[1]//div[1]//div[1]//div[1]//button[2]",
 				"note": "Y位置下箭头"
 			}
 		]
