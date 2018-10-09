@@ -70,7 +70,7 @@ public class TestInit extends elementFile {
 
 	@BeforeMethod
 	public void setUp() throws Exception {
-		// System.out.println("--------------------------------------------");
+		System.out.println(">>>>>>>"+driver.manage().getCookieNamed("lizard-view-enabled").getValue()+"<<<<<<<<<<");
 		String url = driver.getCurrentUrl();
 		if (!url.equals(test_url + "login")) {
 			logout();
