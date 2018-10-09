@@ -43,6 +43,7 @@ public class testProfile extends TestInit {
         sendKeys(mobile_setting_verifyCodeInput,"2222");
         click(mobile_setting_confirm);
         Boolean r1 = getText(profile_toast).equals("验证码不正确，请重新填写");
-        assertTrue(r1);
+        Boolean r2 = getText(profile_toast).equals("验证码已失效");
+        assertTrue(r1||r2);
     }
 }

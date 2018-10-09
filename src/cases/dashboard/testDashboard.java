@@ -18,7 +18,7 @@ public class testDashboard extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void dashboard_update() throws InterruptedException {
+	public void dashboard_update() {
 		login("autoTest06@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
@@ -39,7 +39,7 @@ public class testDashboard extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void dashboard_used() throws InterruptedException {
+	public void dashboard_used() {
 		login("autoTest06@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
@@ -60,7 +60,7 @@ public class testDashboard extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void dashboard_create() throws InterruptedException {
+	public void dashboard_create() {
 		login("autoTest07@shimo.im", "123123");
 
 		click(desktop_new);
@@ -124,13 +124,13 @@ public class testDashboard extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void dashboard_setting_locatFolder() throws InterruptedException {
+	public void dashboard_setting_locatFolder() {
 		login("autoTest08@shimo.im", "123123");
 		click(dashboard_3);
 		contextClick(dashboard_update_name);
 		click(menu_moveToFolder);
 
-		String url_sample = "https://release.shimodev.com/folder/x2zSDzXqfQI9TaKr";
+		String url_sample = getURL()+"folder/x2zSDzXqfQI9TaKr";
 		wait.until(ExpectedConditions.urlToBe(url_sample));
 		String url = driver.getCurrentUrl();
 		assertEquals(url, url_sample);
@@ -144,7 +144,7 @@ public class testDashboard extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void dashboard_setting_createCopy() throws InterruptedException {
+	public void dashboard_setting_createCopy() {
 		login("autoTest09@shimo.im", "123123");
 		click(dashboard_3);
 
