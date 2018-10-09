@@ -1330,61 +1330,61 @@
 			{
 				"elementName": "ppt_page_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'sm-transparency-card sc-cSHVUG gswMeM')])[1]",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[2]",
 				"note": "左边栏第二个页面"
 			},
 			{
 				"elementName": "ppt_page_3",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'sm-transparency-card sc-cSHVUG gswMeM')])[2]",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[3]",
 				"note": "左边栏第三个页面"
 			},
 			{
 				"elementName": "ppt_page_4",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'sm-transparency-card sc-cSHVUG gswMeM')])[3]",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[4]",
 				"note": "左边栏第四个页面"
 			},
 			{
 				"elementName": "ppt_page_5",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'sm-transparency-card sc-cSHVUG gswMeM')])[4]",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[5]",
 				"note": "左边栏第五个页面"
 			},
 			{
 				"elementName": "ppt_page_6",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'sm-transparency-card sc-cSHVUG gswMeM')])[5]",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[6]",
 				"note": "左边栏第六个页面"
 			},
 			{
 				"elementName": "ppt_page_7",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'sm-transparency-card sc-cSHVUG gswMeM')])[6]",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[7]",
 				"note": "左边栏第七个页面"
 			},
 			{
 				"elementName": "ppt_page_8",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'sm-transparency-card sc-cSHVUG gswMeM')])[7]",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[8]",
 				"note": "左边栏第八个页面"
 			},
 			{
 				"elementName": "ppt_page_9",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'sm-transparency-card sc-cSHVUG gswMeM')])[8]",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[9]",
 				"note": "左边栏第九个页面"
 			},
 			{
 				"elementName": "ppt_page_10",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'sm-transparency-card sc-cSHVUG gswMeM')])[9]",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[10]",
 				"note": "左边栏第十个页面"
 			},
 			{
 				"elementName": "ppt_page_11",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'sm-transparency-card sc-cSHVUG gswMeM')])[10]",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[11]",
 				"note": "左边栏第十一个页面"
 			}
 		]
@@ -1396,7 +1396,7 @@
 			{
 				"elementName": "ppt_text",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div//div[1]//div[1]",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]",
 				"note": "幻灯片页面(不是很好用，需优化)"
 			},
 			{
@@ -1408,26 +1408,56 @@
 			{
 				"elementName": "page_elements_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[2]",
+				"locator": "(//div[@class='smslide-slot'])[2]",
 				"note": "幻灯片页面第二个元素"
 			},
 			{
 				"elementName": "page_elements_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[3]",
+				"locator": "(//div[@class='smslide-slot'])[3]",
 				"note": "幻灯片页面第三个元素"
 			},
 			{
 				"elementName": "page_elements_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[4]",
+				"locator": "(//div[@class='smslide-slot'])[4]",
 				"note": "幻灯片页面第四个元素"
 			},
 			{
 				"elementName": "page_elements_5",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[5]",
+				"locator": "(//div[@class='smslide-slot'])[5]",
 				"note": "幻灯片页面第五个元素"
+			},
+			{
+				"elementName": "page_placeholder_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'smslide-slot smslide-element-placeholder')])[1]",
+				"note": "幻灯片页面第一个占位符"
+			},
+			{
+				"elementName": "page_placeholder_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'smslide-slot smslide-element-placeholder')])[2]",
+				"note": "幻灯片页面第二个占位符"
+			},
+			{
+				"elementName": "page_placeholder_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'smslide-slot smslide-element-placeholder')])[3]",
+				"note": "幻灯片页面第三个占位符"
+			},
+			{
+				"elementName": "page_placeholder_4",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'smslide-slot smslide-element-placeholder')])[4]",
+				"note": "幻灯片页面第四个占位符"
+			},
+			{
+				"elementName": "page_placeholder_5",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'smslide-slot smslide-element-placeholder')])[5]",
+				"note": "幻灯片页面第五个占位符"
 			},
 			{
 				"elementName": "page_elements_1_1",
