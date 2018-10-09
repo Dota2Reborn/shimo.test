@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+import org.openqa.selenium.Cookie;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -60,6 +61,10 @@ public class TestInit extends elementFile {
 		driver.navigate().to(test_url + "login");
 		// driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Cookie cookie1 = new Cookie("lizard-view-enabled", "1", "/", null);
+		Cookie cookie2 = new Cookie("SM_FEATURES", "lizard-service-sheet%3Adevelopment%3Blizard-service-sheet-sdk%3Aaccess__lizard", "/", null);
+		driver.manage().addCookie(cookie1);
+		driver.manage().addCookie(cookie2);
 		wait = new WebDriverWait(driver, 6);
 	}
 
