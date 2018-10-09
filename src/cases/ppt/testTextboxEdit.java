@@ -21,7 +21,7 @@ import base.TestInit;
 public class testTextboxEdit extends TestInit {//编辑文本框
 
 	/**
-	 * 幻灯片中新增模板页面
+	 * 
 	 * 
 	 * @author 王继程
 	 * @Time 2018-07-24
