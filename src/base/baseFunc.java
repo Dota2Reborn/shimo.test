@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.apache.commons.lang3.StringUtils;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -31,7 +32,7 @@ public class baseFunc {
 	String os;// 系统信息
 
 	public baseFunc() {
-		environment = 1; // 1为release 2为dev
+		environment = 2; // 1为release 2为dev
 	}
 
 	/**
