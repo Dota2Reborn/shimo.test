@@ -517,6 +517,18 @@ public class TestInit extends elementFile {
 		element.sendKeys(msg);
 	}
 
+    /**
+     * 获取URL
+     *
+     * @param
+     * @author 刘晨
+     * @Time 2018-10-09
+     *
+     */
+    public String getURL() {
+        return test_url;
+    }
+
 	/**
 	 * 通过JS判断页面是否加载完毕
 	 * 

@@ -20,7 +20,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person() throws InterruptedException {
+	public void hover_person() {
 
 		login("autoTesthover@shimo.im", "123123");
 		moveToElement(desktop_user_icon);
@@ -70,7 +70,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person1() throws InterruptedException {
+	public void hover_person1() {
 
 		login("autoTesthover@shimo.im", "123123");
 		moveToElement(desktop_user_icon);
@@ -78,7 +78,7 @@ public class hovertest extends TestInit {
 
 		switchToPage(1);
 		String url = driver.getCurrentUrl();
-		assertEquals(url, "https://release.shimodev.com/pricing");
+		assertEquals(url,getURL()+"pricing");
 	}
 
 	/**
@@ -89,14 +89,14 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person2() throws InterruptedException {
+	public void hover_person2() {
 
 		login("autoTesthover@shimo.im", "123123");
 		moveToElement(desktop_user_icon);
 		click(desktop_user_icon_personSetting);
 
 		String url = driver.getCurrentUrl();
-		assertEquals(url, "https://release.shimodev.com/profile");
+		assertEquals(url, getURL()+"profile");
 
 	}
 
@@ -108,7 +108,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person3() throws InterruptedException {
+	public void hover_person3() {
 
 		login("autoTesthover@shimo.im", "123123");
 		moveToElement(desktop_user_icon);
@@ -131,7 +131,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person4() throws InterruptedException {
+	public void hover_person4() {
 
 		login("autoTesthover@shimo.im", "123123");
 		moveToElement(desktop_user_icon);
@@ -154,7 +154,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person5() throws InterruptedException {
+	public void hover_person5() {
 
 		login("autoTesthover@shimo.im", "123123");
 		moveToElement(desktop_user_icon);
@@ -164,7 +164,7 @@ public class hovertest extends TestInit {
 		driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]")).click();
 
 		String url = driver.getCurrentUrl();
-		assertEquals(url, "https://release.shimodev.com/help");
+		assertEquals(url, getURL()+"help");
 	}
 
 	/**
@@ -175,7 +175,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person6() throws InterruptedException {
+	public void hover_person6() {
 
 		login("logoutTest@shimo.im", "123123");
 		moveToElement(desktop_user_icon);
@@ -185,7 +185,7 @@ public class hovertest extends TestInit {
 		driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")).click();
 
 		String url = driver.getCurrentUrl();
-		assertEquals(url, "https://release.shimodev.com/");
+		assertEquals(url, getURL());
 	}
 
 	/**
@@ -196,7 +196,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person7() throws InterruptedException {
+	public void hover_person7() {
 
 		login("gaoji1@shimo.im", "123456");
 		moveToElement(desktop_user_icon);
@@ -228,7 +228,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person8() throws InterruptedException {
+	public void hover_person8() {
 
 		login("gaoji1@shimo.im", "123456");
 		moveToElement(desktop_user_icon);
@@ -241,7 +241,7 @@ public class hovertest extends TestInit {
 
 		switchToPage(1);
 		String url = driver.getCurrentUrl();
-		assertEquals(url, "https://release.shimodev.com/pricing?renew");
+		assertEquals(url, getURL()+"pricing?renew");
 
 	}
 
@@ -253,7 +253,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person9() throws InterruptedException {
+	public void hover_person9() {
 
 		login("gaoji1@shimo.im", "123456");
 		moveToElement(desktop_user_icon);
@@ -266,7 +266,7 @@ public class hovertest extends TestInit {
 
 		switchToPage(1);
 		String url = driver.getCurrentUrl();
-		assertEquals(url, "https://release.shimodev.com/company/register");
+		assertEquals(url, getURL()+"company/register");
 
 	}
 
@@ -278,7 +278,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person10() throws InterruptedException {
+	public void hover_person10() {
 
 		login("shiyongtest@shimo.im", "123123");
 
@@ -288,7 +288,7 @@ public class hovertest extends TestInit {
 		Boolean r4 = getText(desktop_user_icon_companyManagement).equals("企业管理");
 		click(desktop_user_icon_status_L);
 		switchToPage(1);
-		Boolean r3 = driver.getCurrentUrl().equals("https://release.shimodev.com/enterprise/billing");
+		Boolean r3 = driver.getCurrentUrl().equals(getURL()+"enterprise/billing");
 		assertTrue(r1 && r2 && r3 && r4);
 
 	}
@@ -301,7 +301,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person11() throws InterruptedException {
+	public void hover_person11() {
 
 		login("pijiu@shimo.im", "123123");
 		moveToElement(desktop_user_icon);
@@ -319,12 +319,12 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person12() throws InterruptedException {
+	public void hover_person12() {
 
 		login("shiyongtest@shimo.im", "123123");
 		moveToElement(desktop_user_icon);
 		click(desktop_user_icon_companyManagement);
-		Boolean r1 = driver.getCurrentUrl().equals("https://release.shimodev.com/enterprise/members");
+		Boolean r1 = driver.getCurrentUrl().equals(getURL()+"enterprise/members");
 		assertTrue(r1);
 	}
 
@@ -336,14 +336,14 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test
-	public void hover_person13() throws InterruptedException {
+	public void hover_person13() {
 
 		login("fufei1@shimo.im", "123456");
 		moveToElement(desktop_user_icon);
 		click(desktop_user_icon_personSetting);
 
 		String url = driver.getCurrentUrl();
-		assertEquals(url, "https://release.shimodev.com/profile");
+		assertEquals(url, getURL()+"profile");
 
 	}
 
@@ -355,7 +355,7 @@ public class hovertest extends TestInit {
 	 * 
 	 */
 	@Test
-	public void hover_person14() throws InterruptedException {
+	public void hover_person14() {
 
 		login("fufei1@shimo.im", "123456");
 
@@ -363,7 +363,7 @@ public class hovertest extends TestInit {
 		click(desktop_user_icon_companyManagement);
 
 		String url = driver.getCurrentUrl();
-		assertEquals(url, "https://release.shimodev.com/enterprise/members");
+		assertEquals(url, getURL()+"enterprise/members");
 	}
 
 	/**
@@ -374,7 +374,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void hover_person15() throws InterruptedException {
+	public void hover_person15(){
 
 		login("fufei1@shimo.im", "123456");
 		moveToElement(desktop_user_icon);
@@ -408,7 +408,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void hover_person16() throws InterruptedException {
+	public void hover_person16(){
 
 		login("monvzhaijibian@morsin.com", "123123");
 		moveToElement(desktop_user_icon);
@@ -427,7 +427,7 @@ public class hovertest extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void hover_person17() throws InterruptedException {
+	public void hover_person17() {
 
 		login("liuchen@shimo.im", "123123");
 		moveToElement(desktop_user_icon);

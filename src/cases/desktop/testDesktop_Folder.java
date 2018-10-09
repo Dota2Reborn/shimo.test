@@ -14,7 +14,6 @@ import base.TestInit;
 
 public class testDesktop_Folder extends TestInit {
 
-	String test_url = "https://release.shimodev.com/";
 	/**
 	 * 桌面-列表/平铺 模式切换
 	 * 
@@ -178,9 +177,15 @@ public class testDesktop_Folder extends TestInit {
 		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_rename);
-		boolean r1 = driver.getCurrentUrl().equals(test_url + "desktop");
 
-		assertTrue(r1);
+		String time = getDate();
+		sendKeys(desktop_newFolder_name,time);
+		click(desktop_newFolder_name_ok);
+
+		driver.navigate().refresh();
+		String msg = getText(desktop1_1);
+
+		assertEquals(time, msg);
 	}
 
 	
@@ -199,9 +204,11 @@ public class testDesktop_Folder extends TestInit {
 		moveToElement(desktop1_1);
 		click(desktop_setting);
 		click(menu_mute);
-		boolean r1 = driver.getCurrentUrl().equals(test_url + "desktop");
 
-		assertTrue(r1);
+		Boolean r1 = driver.findElement(By.xpath("//div[@class='Toastify__toast-container Toastify__toast-container--top-right']")).getText().contains("已设置为消息免打扰");
+        Boolean r2 = driver.findElement(By.xpath("//div[@class='Toastify__toast-container Toastify__toast-container--top-right']")).getText().contains("已设置为接收消息提醒");
+
+        assertTrue(r1||r2);
 	}
 
 }
