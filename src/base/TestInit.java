@@ -560,5 +560,25 @@ public class TestInit extends elementFile {
         ScreenShot st = new ScreenShot(driver);
         st.takeScreenshot(className);
     }
+    
+    /**
+	 * 元素透明度和X，Y坐标
+	 * 
+	 * @author 张家晶
+	 * @Time 2018-10-09
+	 * ele1 输入框，ele2上箭头， ele3下箭头
+	 */
+	public void opacityAndCoord(WebElement ele1,WebElement ele2,WebElement ele3) {
+		if(ele1.isDisplayed() && ele2.isDisplayed() && ele3.isDisplayed()) {
+			action.click(ele1).sendKeys(Keys.chord(Keys.CONTROL, "a"))
+			.sendKeys(Keys.NUMPAD7).sendKeys(Keys.NUMPAD0).build().perform();
+			for (int i = 1; i < 11; i++) {//上箭头
+				click(ele2);
+			}
+			for (int j = 1; j < 6; j++) {//下箭头
+				click(ele3);
+			}
+		}
+	}
 
 }
