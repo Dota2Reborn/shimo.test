@@ -1430,6 +1430,13 @@
 				"note": "幻灯片页面第五个元素"
 			},
 			{
+				"elementName": "page_elements_select",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-slot select-enabled'])[5]",
+				"note": "幻灯片页面选中的第一个元素"
+			},
+			
+			{
 				"elementName": "page_placeholder_1",
 				"locateUsing": "xpath",
 				"locator": "(//div[contains(@class,'smslide-slot smslide-element-placeholder')])[1]",
