@@ -32,7 +32,7 @@ public class baseFunc {
     String os;// 系统信息
 
     public baseFunc() {
-        environment = 2; // 1为release 2为dev
+        environment = 1; // 1为release 2为dev
     }
 
     /**
