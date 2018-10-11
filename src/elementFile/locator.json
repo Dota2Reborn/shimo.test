@@ -1645,6 +1645,16 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[13]",
 				"note": "删除"
+			},{
+				"elementName": "ppt_delete_sure",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[3]//button[1]",
+				"note": "确认删除"
+			},{
+				"elementName": "ppt_delete_cancel",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[3]//button[2]",
+				"note": "取消删除"
 			}
 		]
 	},
