@@ -113,9 +113,9 @@
 			<class name="cases.collaborator.testCollaboratorUI" />
 		</classes>
 	</test>
-	<test name="test20">
-		<classes>
-			<class name="cases.profile.testProfile" />
-		</classes>
-	</test>
+	<!--<test name="test20">-->
+		<!--<classes>-->
+			<!--<class name="cases.profile.testProfile" />-->
+		<!--</classes>-->
+	<!--</test>-->
 </suite>
