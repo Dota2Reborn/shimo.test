@@ -41,9 +41,8 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 
 	}
 
-	private void setClipbordContents(String texts) {
+	private void setClipbordContents(String texts) {// 写入系统剪贴板
 		StringSelection stringSelection = new StringSelection(texts);
-		// 系统剪贴板
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 		clipboard.setContents(stringSelection, null);
 
