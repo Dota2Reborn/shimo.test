@@ -1432,10 +1432,28 @@
 			{
 				"elementName": "page_elements_select",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot select-enabled'])[5]",
+				"locator": "(//div[@class='smslide-slot select-enabled'])[1]",
 				"note": "幻灯片页面选中的第一个元素"
 			},
 			
+			{
+				"elementName": "page_elements_special1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-slot smslide-element-placeholder'])[1]",
+				"note": "幻灯片特殊情况下第一个元素"
+			},
+			{
+				"elementName": "page_elements_special2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-slot smslide-element-placeholder'])[2]",
+				"note": "幻灯片特殊情况下第二个元素"
+			},
+			{
+				"elementName": "page_elements_special3",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-slot smslide-element-placeholder'])[3]",
+				"note": "幻灯片特殊情况下第三个元素"
+			},
 			{
 				"elementName": "page_placeholder_1",
 				"locateUsing": "xpath",
