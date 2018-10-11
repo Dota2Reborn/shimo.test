@@ -1432,7 +1432,7 @@
 			{
 				"elementName": "page_elements_select",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot select-enabled'])[5]",
+				"locator": "(//div[@class='smslide-slot select-enabled'])[1]",
 				"note": "幻灯片页面选中的第一个元素"
 			},
 			
