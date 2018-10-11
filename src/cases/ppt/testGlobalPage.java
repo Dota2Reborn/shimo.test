@@ -73,7 +73,7 @@ public class testGlobalPage extends TestInit {//全局页面
 		//click(ppt_text);
 		click(ppt_page_1);
 		action.sendKeys(Keys.DELETE).perform();
-		Boolean result1 = doesWebElementExist(page_elements_2);
+		Boolean result1 = doesWebElementExist(page_elements_special2);
 		click(ppt_revoke);
 		Boolean result2 = doesWebElementExist(page_elements_2);
 		assertTrue(result1 && !result2);
@@ -86,7 +86,7 @@ public class testGlobalPage extends TestInit {//全局页面
 	 * @Time 2018-07-23
 	 *false
 	 */
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Sorting_Order() throws InterruptedException {
 		login("SortingOrder@shimo.im", "123123");
 		click(desktop);
