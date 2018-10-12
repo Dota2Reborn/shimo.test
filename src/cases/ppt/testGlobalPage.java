@@ -48,7 +48,7 @@ public class testGlobalPage extends TestInit {// 全局页面
 	public void Remove_Pages() throws InterruptedException {
 		login("Addpages@shimo.im", "123123");
 		click(desktop);
-		click(desktop1_2);
+		click(desktop1_1);
 		click(ppt_page_2);
 		action.sendKeys(Keys.DELETE).perform();
 		Boolean result1 = doesWebElementExist(ppt_page_2);
@@ -68,7 +68,7 @@ public class testGlobalPage extends TestInit {// 全局页面
 	public void Remove_Pages_1() throws InterruptedException {
 		login("Addpages@shimo.im", "123123");
 		click(desktop);
-		click(desktop1_1);
+		click(desktop1_2);
 		// click(ppt_text);
 		click(ppt_page_1);
 		action.sendKeys(Keys.DELETE).perform();
