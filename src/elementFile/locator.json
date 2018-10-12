@@ -1402,57 +1402,32 @@
 			{
 				"elementName": "page_elements_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[1]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[1]",
 				"note": "幻灯片页面第一个元素"
 			},
 			{
 				"elementName": "page_elements_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot'])[2]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[2]",
 				"note": "幻灯片页面第二个元素"
 			},
 			{
 				"elementName": "page_elements_3",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot'])[3]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[3]",
 				"note": "幻灯片页面第三个元素"
 			},
 			{
 				"elementName": "page_elements_4",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot'])[4]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[4]",
 				"note": "幻灯片页面第四个元素"
 			},
 			{
 				"elementName": "page_elements_5",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot'])[5]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[5]",
 				"note": "幻灯片页面第五个元素"
-			},
-			{
-				"elementName": "page_elements_select",
-				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot select-enabled'])[1]",
-				"note": "幻灯片页面选中的第一个元素"
-			},
-			
-			{
-				"elementName": "page_elements_special1",
-				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot smslide-element-placeholder'])[1]",
-				"note": "幻灯片特殊情况下第一个元素"
-			},
-			{
-				"elementName": "page_elements_special2",
-				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot smslide-element-placeholder'])[2]",
-				"note": "幻灯片特殊情况下第二个元素"
-			},
-			{
-				"elementName": "page_elements_special3",
-				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot smslide-element-placeholder'])[3]",
-				"note": "幻灯片特殊情况下第三个元素"
 			},
 			{
 				"elementName": "page_placeholder_1",
