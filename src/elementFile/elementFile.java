@@ -532,7 +532,7 @@ public class elementFile {
 	 * ppt_page
 	 *
 	 */
-	@SearchWith(pageName = "ppt_page", elementName = "ppt_text", noteName = "幻灯片页面第一个元素")
+	@SearchWith(pageName = "ppt_page", elementName = "ppt_text", noteName = "幻灯片页面")
 	public WebElement ppt_text;
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_1", noteName = "幻灯片页面第一个元素")
 	public WebElement page_elements_1;
