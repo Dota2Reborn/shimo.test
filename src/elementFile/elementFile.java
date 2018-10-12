@@ -601,6 +601,10 @@ public class elementFile {
 	public WebElement ppt_Information;
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete", noteName = "删除幻灯片")
 	public WebElement ppt_delete;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete_sure", noteName = "确认删除")
+	public WebElement ppt_delete_sure;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete_cancel", noteName = "取消删除")
+	public WebElement ppt_delete_cancel;
 	
 	
 	/**
