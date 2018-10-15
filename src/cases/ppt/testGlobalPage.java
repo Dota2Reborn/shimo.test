@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import base.TestInit;
 
-public class testGlobalPage extends TestInit {//全局页面
+public class testGlobalPage extends TestInit {// 全局页面
 	/**
 	 * 幻灯片中新增模板页面
 	 * 
@@ -26,8 +26,7 @@ public class testGlobalPage extends TestInit {//全局页面
 		click(desktop_newslides);
 		for (int i = 1; i < 11; i++) {
 			click(down_arrow);
-			WebElement template = driver
-					.findElement(By.xpath("//ul[@id='sm-slide-layout']//li["+i+"]"));
+			WebElement template = driver.findElement(By.xpath("//ul[@id='sm-slide-layout']//li[" + i + "]"));
 			click(template);
 		}
 		Boolean result = doesWebElementExist(ppt_page_11);
@@ -49,7 +48,7 @@ public class testGlobalPage extends TestInit {//全局页面
 	public void Remove_Pages() throws InterruptedException {
 		login("Addpages@shimo.im", "123123");
 		click(desktop);
-		click(desktop1_2);
+		click(desktop1_1);
 		click(ppt_page_2);
 		action.sendKeys(Keys.DELETE).perform();
 		Boolean result1 = doesWebElementExist(ppt_page_2);
@@ -69,22 +68,21 @@ public class testGlobalPage extends TestInit {//全局页面
 	public void Remove_Pages_1() throws InterruptedException {
 		login("Addpages@shimo.im", "123123");
 		click(desktop);
-		click(desktop1_1);
-		//click(ppt_text);
+		click(desktop1_2);
+		// click(ppt_text);
 		click(ppt_page_1);
 		action.sendKeys(Keys.DELETE).perform();
-		Boolean result1 = doesWebElementExist(page_elements_special2);
+		Boolean result1 = doesWebElementExist(page_elements_2);
 		click(ppt_revoke);
 		Boolean result2 = doesWebElementExist(page_elements_2);
 		assertTrue(result1 && !result2);
 	}
-	
+
 	/**
 	 * 调整页面排序
 	 * 
 	 * @author 王继程
-	 * @Time 2018-07-23
-	 *false
+	 * @Time 2018-07-23 false
 	 */
 	@Test(enabled = false)
 	public void Sorting_Order() throws InterruptedException {
@@ -92,41 +90,61 @@ public class testGlobalPage extends TestInit {//全局页面
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_1);
+		//
+		// WebElement template1 =
+		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[1]"));
+		// String time1 = getText(template1);
+		// System.out.println(time1+"aaaaa");
 
-		click(page_elements_1);
-		click(page_elements_2);
-		click(page_elements_3);
-		click(page_elements_4);
-		click(page_elements_5);
-		click(page_elements_1);
-		click(page_elements_2);
-		click(page_elements_3);
-		click(page_elements_4);
-		click(page_elements_5);
-		click(page_elements_1);
-		click(page_elements_2);
-		click(page_elements_3);
-		click(page_elements_4);
-		click(page_elements_5);
-		click(ppt_page_1);
-		click(ppt_page_2);
-		click(ppt_page_3);
-		click(ppt_page_4);
-		click(ppt_page_5);
-		click(ppt_page_6);
-		click(ppt_page_7);
-		click(ppt_page_8);
-		click(ppt_page_1);
-		click(ppt_page_3);
-		click(ppt_page_4);
-		click(ppt_page_5);
-		click(ppt_page_6);
-		click(ppt_page_7);
+		// template1 =
+		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]"));
+		// 他腹肌标签1包含里面的元素
+		// 那就说明实际上已经取到了是吧，就是不是
 
-	}
-	public void Page_elements(int dian) {
-		int intArray[] = {0,1,2,3,4};
-		
+		// System.out.println(template1.getText());
+
+		// template1 =
+		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[2]"));
+		//
+		// System.out.println(template1.getText());
+		//// time1 = getText(template1);
+		//// System.out.println(time1+"bbbbbb");
+		// template1 =
+		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[3]"));
+		// time1 = getText(template1);
+		// System.out.println(time1+"cccccc");
+		// template1 =
+		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[4]"));
+		// time1 = getText(template1);
+		// System.out.println(time1+"ddddd");
+		// template1 =
+		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[5]"));
+		// time1 = getText(template1);
+		// System.out.println(time1+"eeeeee");
+		//
+		// List<WebElement> weList =
+		// driver.findElements(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div"));
+		//
+		// System.out.println(weList.size());
+
+		// driver.quit();
+		click(page_elements_1);
+		click(page_elements_2);
+		click(page_elements_3);
+		click(page_elements_4);
+		click(page_elements_5);
+		click(page_elements_1);
+		click(page_elements_2);
+		click(page_elements_3);
+		click(page_elements_4);
+		click(page_elements_5);
+		click(page_elements_1);
+		click(page_elements_2);
+		click(page_elements_3);
+		click(page_elements_4);
+		click(page_elements_5);
+
+
 	}
 
 }

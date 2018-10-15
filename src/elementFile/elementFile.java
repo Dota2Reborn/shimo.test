@@ -532,7 +532,7 @@ public class elementFile {
 	 * ppt_page
 	 *
 	 */
-	@SearchWith(pageName = "ppt_page", elementName = "ppt_text", noteName = "幻灯片页面第一个元素")
+	@SearchWith(pageName = "ppt_page", elementName = "ppt_text", noteName = "幻灯片页面")
 	public WebElement ppt_text;
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_1", noteName = "幻灯片页面第一个元素")
 	public WebElement page_elements_1;
@@ -544,14 +544,23 @@ public class elementFile {
 	public WebElement page_elements_4;
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_5", noteName = "幻灯片页面第五个元素")
 	public WebElement page_elements_5;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_select", noteName = "幻灯片页面选中的第一个元素")
-	public WebElement page_elements_select;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_special1", noteName = "幻灯片特殊情况下第一个元素")
-	public WebElement page_elements_special1;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_special2", noteName = "幻灯片特殊情况下第二个元素")
-	public WebElement page_elements_special2;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_special3", noteName = "幻灯片特殊情况下第三个元素")
-	public WebElement page_elements_special3;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_1", noteName = "选中文件后像素点-形状文本右中-图片右上")
+	public WebElement smslide_frame_anchor_1;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_2", noteName = "选中文件后像素点-形状文本左中-图片右下")
+	public WebElement smslide_frame_anchor_2;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_3", noteName = "选中文件后像素点-形状文本上中-图片左下")
+	public WebElement smslide_frame_anchor_3;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_4", noteName = "选中文件后像素点-形状文本下中-图片左上")
+	public WebElement smslide_frame_anchor_4;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_5", noteName = "选中文件后像素点-形状右上")
+	public WebElement smslide_frame_anchor_5;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_6", noteName = "选中文件后像素点-形状右下")
+	public WebElement smslide_frame_anchor_6;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_7", noteName = "选中文件后像素点-形状左下")
+	public WebElement smslide_frame_anchor_7;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_8", noteName = "选中文件后像素点-形状左上")
+	public WebElement smslide_frame_anchor_8;
+	
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_1_1", noteName = "图片占位符1上传图片按钮")
 	public WebElement page_elements_1_1;
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_2_1", noteName = "图片占位符2上传图片按钮")
@@ -609,6 +618,10 @@ public class elementFile {
 	public WebElement ppt_Information;
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete", noteName = "删除幻灯片")
 	public WebElement ppt_delete;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete_sure", noteName = "确认删除")
+	public WebElement ppt_delete_sure;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete_cancel", noteName = "取消删除")
+	public WebElement ppt_delete_cancel;
 	
 	
 	/**

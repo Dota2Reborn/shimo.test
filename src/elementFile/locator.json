@@ -1396,124 +1396,118 @@
 			{
 				"elementName": "ppt_text",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']",
 				"note": "幻灯片页面(不是很好用，需优化)"
 			},
 			{
 				"elementName": "page_elements_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[1]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[1]",
 				"note": "幻灯片页面第一个元素"
 			},
 			{
 				"elementName": "page_elements_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot'])[2]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[2]",
 				"note": "幻灯片页面第二个元素"
 			},
 			{
 				"elementName": "page_elements_3",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot'])[3]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[3]",
 				"note": "幻灯片页面第三个元素"
 			},
 			{
 				"elementName": "page_elements_4",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot'])[4]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[4]",
 				"note": "幻灯片页面第四个元素"
 			},
 			{
 				"elementName": "page_elements_5",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot'])[5]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[5]",
 				"note": "幻灯片页面第五个元素"
 			},
 			{
-				"elementName": "page_elements_select",
+				"elementName": "smslide_frame_anchor_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot select-enabled'])[1]",
-				"note": "幻灯片页面选中的第一个元素"
-			},
-			
-			{
-				"elementName": "page_elements_special1",
-				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot smslide-element-placeholder'])[1]",
-				"note": "幻灯片特殊情况下第一个元素"
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[1]",
+				"note": "选中文件后像素点-形状文本右中-图片右上"
 			},
 			{
-				"elementName": "page_elements_special2",
+				"elementName": "smslide_frame_anchor_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot smslide-element-placeholder'])[2]",
-				"note": "幻灯片特殊情况下第二个元素"
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[2]",
+				"note": "选中文件后像素点-形状文本左中-图片右下"
 			},
 			{
-				"elementName": "page_elements_special3",
+				"elementName": "smslide_frame_anchor_3",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slot smslide-element-placeholder'])[3]",
-				"note": "幻灯片特殊情况下第三个元素"
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[3]",
+				"note": "选中文件后像素点-形状文本上中-图片左下"
 			},
 			{
-				"elementName": "page_placeholder_1",
+				"elementName": "smslide_frame_anchor_4",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'smslide-slot smslide-element-placeholder')])[1]",
-				"note": "幻灯片页面第一个占位符"
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[4]",
+				"note": "选中文件后像素点-形状文本下中-图片左上"
 			},
 			{
-				"elementName": "page_placeholder_2",
+				"elementName": "smslide_frame_anchor_5",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'smslide-slot smslide-element-placeholder')])[2]",
-				"note": "幻灯片页面第二个占位符"
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[5]",
+				"note": "选中文件后像素点-形状右上"
 			},
 			{
-				"elementName": "page_placeholder_3",
+				"elementName": "smslide_frame_anchor_6",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'smslide-slot smslide-element-placeholder')])[3]",
-				"note": "幻灯片页面第三个占位符"
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[6]",
+				"note": "选中文件后像素点-形状右下"
 			},
 			{
-				"elementName": "page_placeholder_4",
+				"elementName": "smslide_frame_anchor_7",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'smslide-slot smslide-element-placeholder')])[4]",
-				"note": "幻灯片页面第四个占位符"
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[7]",
+				"note": "选中文件后像素点-形状左下"
 			},
 			{
-				"elementName": "page_placeholder_5",
+				"elementName": "smslide_frame_anchor_8",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'smslide-slot smslide-element-placeholder')])[5]",
-				"note": "幻灯片页面第五个占位符"
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[8]",
+				"note": "选中文件后像素点-形状左上"
 			},
 			{
 				"elementName": "page_elements_1_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[1]//span",
-				"note": "幻灯片页面第一个元素"
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[1]//span",
+				"note": "图片占位符1上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_2_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[2]//span",
-				"note": "幻灯片页面第二个元素"
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[2]//span",
+				"note": "图片占位符2上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_3_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[3]//span",
-				"note": "幻灯片页面第三个元素"
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[3]//span",
+				"note": "图片占位符3上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_4_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[4]//span",
-				"note": "幻灯片页面第四个元素"
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[4]//span",
+				"note": "图片占位符4上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_5_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[5]//span",
-				"note": "幻灯片页面第五个元素"
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[5]//span",
+				"note": "图片占位符5上传图片按钮"
 			}
+			
 		]
 	},
 	{
@@ -1645,6 +1639,16 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[13]",
 				"note": "删除"
+			},{
+				"elementName": "ppt_delete_sure",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[3]//button[1]",
+				"note": "确认删除"
+			},{
+				"elementName": "ppt_delete_cancel",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[3]//button[2]",
+				"note": "取消删除"
 			}
 		]
 	},
