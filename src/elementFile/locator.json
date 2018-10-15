@@ -2131,7 +2131,7 @@
 			{
 				"elementName": "mobile_setting",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='edit-btn set-phone']",
+				"locator": "//li[@class='m-profile-item m-profile-item-mobileAccount']//span[@class='action-label action-normal']",
 				"note": "绑定手机号按钮"
 			},
 			{
