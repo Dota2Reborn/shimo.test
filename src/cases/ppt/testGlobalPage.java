@@ -90,6 +90,8 @@ public class testGlobalPage extends TestInit {// 全局页面
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_1);
+		click(ppt_text);
+		click(ppt_text);
 		//
 		// WebElement template1 =
 		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[1]"));
@@ -128,21 +130,21 @@ public class testGlobalPage extends TestInit {// 全局页面
 		// System.out.println(weList.size());
 
 		// driver.quit();
-		click(page_elements_1);
-		click(page_elements_2);
-		click(page_elements_3);
-		click(page_elements_4);
-		click(page_elements_5);
-		click(page_elements_1);
-		click(page_elements_2);
-		click(page_elements_3);
-		click(page_elements_4);
-		click(page_elements_5);
-		click(page_elements_1);
-		click(page_elements_2);
-		click(page_elements_3);
-		click(page_elements_4);
-		click(page_elements_5);
+//		click(page_elements_1);
+//		click(page_elements_2);
+//		click(page_elements_3);
+//		click(page_elements_4);
+//		click(page_elements_5);
+//		click(page_elements_1);
+//		click(page_elements_2);
+//		click(page_elements_3);
+//		click(page_elements_4);
+//		click(page_elements_5);
+//		click(page_elements_1);
+//		click(page_elements_2);
+//		click(page_elements_3);
+//		click(page_elements_4);
+//		click(page_elements_5);
 
 
 	}

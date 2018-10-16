@@ -560,6 +560,18 @@ public class elementFile {
 	public WebElement smslide_frame_anchor_7;
 	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_8", noteName = "选中文件后像素点-形状左上")
 	public WebElement smslide_frame_anchor_8;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_ordered_1", noteName = "有序列表第1行是否存在")
+	public WebElement smslide_ordered_1;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_ordered_2", noteName = "有序列表第2行是否存在")
+	public WebElement smslide_ordered_2;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_ordered_3", noteName = "有序列表第3行是否存在")
+	public WebElement smslide_ordered_3;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_unordered_1", noteName = "无序列表第1行是否存在")
+	public WebElement smslide_unordered_1;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_unordered_2", noteName = "无序列表第2行是否存在")
+	public WebElement smslide_unordered_2;
+	@SearchWith(pageName = "ppt_page", elementName = "smslide_unordered_3", noteName = "无序列表第3行是否存在")
+	public WebElement smslide_unordered_3;
 	
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_1_1", noteName = "图片占位符1上传图片按钮")
 	public WebElement page_elements_1_1;
