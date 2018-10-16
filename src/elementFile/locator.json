@@ -1477,6 +1477,43 @@
 				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[8]",
 				"note": "选中文件后像素点-形状左上"
 			},
+			
+			{
+				"elementName": "smslide_ordered_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ol[@start='1']",
+				"note": "有序列表第1行是否存在"
+			},
+			{
+				"elementName": "smslide_ordered_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ol[@start='2']",
+				"note": "有序列表第2行是否存在"
+			},
+			{
+				"elementName": "smslide_ordered_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ol[@start='3']",
+				"note": "有序列表第3行是否存在"
+			},
+			{
+				"elementName": "smslide_unordered_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ul[@start='1']",
+				"note": "无序列表第1行是否存在"
+			},
+			{
+				"elementName": "smslide_unordered_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ul[@start='2']",
+				"note": "无序列表第2行是否存在"
+			},
+			{
+				"elementName": "smslide_unordered_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ul[@start='3']",
+				"note": "无序列表第3行是否存在"
+			},
 			{
 				"elementName": "page_elements_1_1",
 				"locateUsing": "xpath",
