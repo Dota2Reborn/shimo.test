@@ -2202,7 +2202,7 @@
 			{
 				"elementName": "profile_toast",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='m-toast']",
+				"locator": "//div[@class='m-toast m-toast-success']",
 				"note": "账号设置页面toast"
 			}
 		]
