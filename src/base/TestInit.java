@@ -69,7 +69,7 @@ public class TestInit extends elementFile {
     public void setUp() {
 //        Cookie cookie1 = new Cookie("lizard-view-enabled", "1", "/", null);
 //        driver.manage().addCookie(cookie1);
-        System.out.println(">>>>>>>" + driver.manage().getCookieNamed("lizard-view-enabled").getValue() + "<<<<<<<<<<");
+//        System.out.println(">>>>>>>" + driver.manage().getCookieNamed("lizard-view-enabled").getValue() + "<<<<<<<<<<");
         String url = driver.getCurrentUrl();
         if (!url.equals(test_url + "login")) {
             logout();
