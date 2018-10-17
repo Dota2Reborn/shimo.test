@@ -68,9 +68,7 @@ public class TestInit extends elementFile {
     @BeforeMethod
     public void setUp() {
 //        Cookie cookie1 = new Cookie("lizard-view-enabled", "1", "/", null);
-//        Cookie cookie2 = new Cookie("SM_FEATURES", "lizard-service-sheet%3Adevelopment%3Blizard-service-sheet-sdk%3Aaccess__lizard", "/", null);
 //        driver.manage().addCookie(cookie1);
-//        driver.manage().addCookie(cookie2);
         System.out.println(">>>>>>>" + driver.manage().getCookieNamed("lizard-view-enabled").getValue() + "<<<<<<<<<<");
         String url = driver.getCurrentUrl();
         if (!url.equals(test_url + "login")) {
