@@ -844,7 +844,7 @@
 			{
 				"elementName": "company_Management",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='left-sidebar']//div//a[2]",
+				"locator": "//div[@id='left-sidebar']//div//a[1]",
 				"note": "桌面-企业管理入口"
 			},
 			{
