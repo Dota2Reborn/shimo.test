@@ -14,6 +14,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import base.TestInit;
@@ -21,13 +22,14 @@ import base.TestInit;
 public class testPictureUP extends TestInit{
 	
 	
-	public int  formateData(Point point) {
+	public String[]  formateData(Point point) {
 		String data = point.toString();
 		String dataSub = data.substring(1, data.length()-1);
 		String[] dataSp = dataSub.split(",");
-		int dataX = Integer.parseInt(dataSp[0]);
-		return dataX;
+		//int dataX = Integer.parseInt(dataSp[0]);
+		return dataSp;
 	}
+	
 	
 	/**
 	 * 上方工具栏添加多张图片
@@ -179,8 +181,7 @@ public class testPictureUP extends TestInit{
 		click(desktop1_1);
 		click(ppt_page_5);
 		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c")).build().perform();
-		click(ppt_page_1);
-		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
+		action.click(ppt_page_1).sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertTrue(result);
 		action.sendKeys(Keys.DELETE).perform();
@@ -308,7 +309,7 @@ public class testPictureUP extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		//click(ppt_page_5);
+		click(ppt_page_5);
 		click(page_elements_1);
 		Dimension beforeCut = page_elements_1.getSize();
 		System.out.println("beforeCut="+beforeCut);
@@ -342,13 +343,15 @@ public class testPictureUP extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		click(ppt_page_5);
 		click(page_elements_1);
 		click(ppt_type);
 		StringSelection sel = new StringSelection("E:\\testImg\\11.png");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel,null);
 		click(type_pictures_replace);
+		Dimension size = page_elements_1.getSize();
+		System.out.println("size="+size);
 		Robot robot = new Robot();
 		Thread.sleep(1000);
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -357,16 +360,18 @@ public class testPictureUP extends TestInit{
 		robot.keyRelease(KeyEvent.VK_V);    
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
-		Thread.sleep(5000);
-		Boolean result = doesWebElementExist(page_elements_1);
-		assertTrue(result);
+		//Thread.sleep(5000);
+		wait.until(ExpectedConditions.visibilityOf(page_elements_1));
+		Dimension size1 = page_elements_1.getSize();
+		System.out.println("size1="+size1);
+		assertTrue(!size.equals(size1));
 		click(ppt_revoke);
 		click(ppt_revoke);
 	}
 
 	
 	/**
-	 * 图片的不透明度
+	 * 选中元素的不透明度
 	 * 
 	 * @author 张家晶
 	 * @throws AWTException 
@@ -374,21 +379,28 @@ public class testPictureUP extends TestInit{
 	 *
 	 */
 	@Test(enabled = true)
-	 public void Opacity_Img() throws InterruptedException, AWTException{
-		login("test_zjj@shimo.im", "123123");
+	 public void Opacity() throws InterruptedException, AWTException{
+		login("testLevel_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
 		Thread.sleep(5000);
-		click(ppt_page_5);
-		click(page_elements_1);
-		String  opacity1 = page_elements_1.getCssValue("opacity");
-		System.out.println("opacity1="+opacity1);
-		click(ppt_type);
-		opacityAndCoord(transparency,transparencys,transparencyx);
-		String  opacity2 = page_elements_1.getCssValue("opacity");
-		System.out.println("opacity2="+opacity2);
-		assertTrue(!opacity1.equals(opacity2));
-		action.click(transparency).sendKeys(Keys.NUMPAD9).build().perform();
+		for(int i = 1;i <3;i++) {
+			WebElement page = driver.findElement(By.xpath("(//div[contains(@class,'sm-transparency-card')])["+i+"]"));
+			click(page);
+			for(int j = 1;j < 3;j++) {
+				WebElement element = driver.findElement(By.xpath("(//div[@class='smslide-slide smslide-slide--shadowed']/div)["+j+"]"));
+				click(element);
+				click(ppt_type);
+				String  opacity1 = element.getCssValue("opacity");
+				System.out.println("opacity1="+opacity1);
+				click(ppt_type);
+				opacityAndCoord(transparency,transparencys,transparencyx);
+				String  opacity2 = element.getCssValue("opacity");
+				System.out.println("opacity2="+opacity2);
+				assertTrue(!opacity1.equals(opacity2));
+				action.click(transparency).sendKeys(Keys.NUMPAD9).build().perform();
+			}
+		}
 	}
 	
 	
@@ -404,48 +416,50 @@ public class testPictureUP extends TestInit{
 		login("testLevel_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(page_elements_3);
-		click(ppt_theme); 
 		Thread.sleep(5000);
-		/*for (int i = 1; i < 5; i++) {
-			System.out.println("==========================");
-			WebElement element = driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[1]"));
-			click(element);
-			click(ppt_theme);*/
-			String indexBefore = page_elements_3.getCssValue("z-index");
-			System.out.println("indexBefore="+indexBefore);
-			if (indexBefore.equals("0")) {//当index=0，则上移一层，下移一层，置顶，置底
-				click(element_moveUp);
-				click(element_moveDown);
-				click(element_setTop);
-				click(element_setThe);
-			}else if (indexBefore.equals("1")) {//当index=1，则置顶，下移一层，置底，上移一层
-				click(element_setTop);
-				click(element_moveDown);
-				click(element_setThe);
-				click(element_moveUp);
-			}else if (indexBefore.equals("2")) {//当index=2，则上移一层，置底，置顶，下移一层
-				click(element_moveUp);
-				click(element_setThe);
-				click(element_setTop);
-				click(element_moveDown);
-			}else{//当index=3，则下移一层，上移一层，置底，置顶
-				click(element_moveDown);
-				click(element_moveUp);
-				click(element_setThe);
-				click(element_setTop);
-			}
-			String indexAfter = page_elements_3.getCssValue("z-index");
+		for(int i = 1; i < 3; i++) {
+			WebElement page = driver.findElement(By.xpath("(//div[contains(@class,'sm-transparency-card')])["+i+"]"));
+			click(page);
+			for (int j = 1; j < 3; j++) {
+				System.out.println("==========================");
+				WebElement element = driver.findElement(By.xpath("(//div[@class='smslide-slide smslide-slide--shadowed']/div)["+j+"]"));
+				click(element);
+				click(ppt_theme);
+				String indexBefore = element.getCssValue("z-index");
+				System.out.println("indexBefore="+indexBefore);
+				if (indexBefore.equals("0")) {//当index=0，则上移一层，下移一层，置顶，置底
+					click(element_moveUp);
+					click(element_moveDown);
+					click(element_setTop);
+					click(element_setThe);
+				}else if (indexBefore.equals("1")) {//当index=1，则置底，置顶，下移一层，上移一层
+					click(element_setThe);
+					click(element_setTop);
+					click(element_moveDown);
+					click(element_moveUp);
+				}/*else if (indexBefore.equals("2")) {//当index=2，则上移一层，置底，置顶，下移一层
+					click(element_moveUp);
+					click(element_setThe);
+					click(element_setTop);
+					click(element_moveDown);
+				}else{//当index=3，则下移一层，上移一层，置底，置顶
+					click(element_moveDown);
+					click(element_moveUp);
+					click(element_setThe);
+					click(element_setTop);
+				}*/
+			String indexAfter = element.getCssValue("z-index");
 			System.out.println("indexAfter="+indexAfter);
 			assertTrue(indexBefore.equals(indexAfter));
+			}
 		}
 		
-	//}
+	}
 	
 	
 	
 	/**
-	 * 设置X坐标
+	 * 设置选中元素X,y坐标
 	 * 
 	 * @author 张家晶
 	 * @throws AWTException 
@@ -453,46 +467,36 @@ public class testPictureUP extends TestInit{
 	 *
 	 */
 	@Test(enabled = true)
-	 public void CoordinateX_Img() throws InterruptedException, AWTException{
-		login("test_zjj@shimo.im", "123123");
+	 public void Coordinate() throws InterruptedException, AWTException{
+		login("testCoordinate_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(ppt_page_5);
-		click(page_elements_1);
-		Point  location = page_elements_1.getLocation();
-		System.out.println("location="+location);
-		click(ppt_theme);
-		opacityAndCoord(element_horizontal_xvalue,element_horizontal_xvalues,element_horizontal_xvaluex);
-		Point  location1 = page_elements_1.getLocation();
-		System.out.println("location1="+location1);
-		assertTrue(!location.equals(location1));
+		Thread.sleep(5000);
+		click(ppt_dotdotdot);
+		click(ppt_now_copy);
+		for(int i = 1;i < 3;i++) {
+			WebElement page = driver.findElement(By.xpath("(//div[contains(@class,'sm-transparency-card')])["+i+"]"));
+			click(page);
+			for(int j = 1;j < 3;j++) {
+				WebElement element = driver.findElement(By.xpath("(//div[@class='smslide-slide smslide-slide--shadowed']/div)["+j+"]"));
+				click(element);
+				click(ppt_theme);
+				Point  location = element.getLocation();
+				System.out.println("location="+location);
+				opacityAndCoord(element_horizontal_xvalue,element_horizontal_xvalues,element_horizontal_xvaluex);
+				opacityAndCoord(element_vertically_xvalue,element_vertically_xvalues,element_vertically_xvaluex);
+				Point  location1 = element.getLocation();
+				System.out.println("location1="+location1);
+				assertTrue(!location.equals(location1));
+			}
+		}
+		click(ppt_dotdotdot);
+		click(ppt_delete);
+		click(ppt_delete_sure);
 	}
 	
-
 	
-	/**
-	 * 设置Y坐标
-	 * 
-	 * @author 张家晶
-	 * @throws AWTException 
-	 * @Time 2018-10-08
-	 *
-	 */
-	@Test(enabled = true)
-	 public void CoordinateY_Img() throws InterruptedException, AWTException{
-		login("test_zjj@shimo.im", "123123");
-		click(desktop);
-		click(desktop1_1);
-		click(ppt_page_5);
-		click(page_elements_1);
-		Point  location = page_elements_1.getLocation();
-		System.out.println("location="+location);
-		click(ppt_theme);
-		opacityAndCoord(element_vertically_xvalue,element_vertically_xvalues,element_vertically_xvaluex);
-		Point  location1 = page_elements_1.getLocation();
-		System.out.println("location1="+location1);
-		assertTrue(!location.equals(location1));
-	}
+	
 	
 	
 	

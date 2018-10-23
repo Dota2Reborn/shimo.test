@@ -4,10 +4,9 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
@@ -25,13 +24,7 @@ public class testShapeArrow extends TestInit{
 		
 	}
 	
-	public int  formateData(Point point) {
-		String data = point.toString();
-		String dataSub = data.substring(1, data.length()-1);
-		String[] dataSp = dataSub.split(",");
-		int dataX = Integer.parseInt(dataSp[0]);
-		return dataX;
-	}
+	
 	/**
 	 * 新增箭头
 	 * 
@@ -45,15 +38,12 @@ public class testShapeArrow extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(add_arrows);
+		action.click(ppt_text).build().perform();
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertTrue(result);
 		click(page_elements_1);
 		action.sendKeys(Keys.DELETE).perform();
 	}
-	
-	
-	
-	
 	
 	
 	/**
@@ -70,16 +60,8 @@ public class testShapeArrow extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_2);
-		click(page_elements_1);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c"))
+		.sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
 		makeSure();
 	}
 	
@@ -92,26 +74,17 @@ public class testShapeArrow extends TestInit{
 	 * @Time 2018-07-24
 	 *
 	 */
-	@Test(enabled = false)
+	@Test(enabled = true)
 	 public void copyArrow_clickTextbox() throws InterruptedException, AWTException{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_2);
-		click(page_elements_1);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c")).build().perform();
 		click(ppt_page_6);
-		click(page_elements_1);
-		click(ppt_page_2);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		makeSure();
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
+		Boolean result = doesWebElementExist(page_elements_2);
+		assertFalse(result);
 	}
 	
 	/**
@@ -128,19 +101,9 @@ public class testShapeArrow extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_2);
-		click(page_elements_1);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c")).build().perform();
 		click(ppt_page_3);
-		click(page_elements_1);
-		click(ppt_page_2);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
 		makeSure();
 	}
 	
@@ -159,19 +122,9 @@ public class testShapeArrow extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_2);
-		click(page_elements_1);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c")).build().perform();
 		click(ppt_page_5);
-		click(page_elements_1);
-		click(ppt_page_2);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
 		makeSure();
 	}
 	
@@ -189,17 +142,9 @@ public class testShapeArrow extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_2);
-		click(page_elements_1);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c")).build().perform();
 		click(ppt_page_1);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
+		action.sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertTrue(result);
 		//click(page_elements_1);
@@ -220,79 +165,14 @@ public class testShapeArrow extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(add_arrows);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
-		click(page_elements_1);
-		action.sendKeys(Keys.DELETE).perform();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
+		click(ppt_page_2);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c"))
+		.sendKeys(Keys.DELETE).sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertFalse(result);
-		
+		click(ppt_revoke);
 	}
 	
-	/**
-	 * 调整箭头
-	 * 
-	 * @author 张家晶
-	 * @Time 2018-07-26
-	 *
-	 */
-	@Test(enabled = true)
-	 public void Resize_arrow() throws InterruptedException{
-		login("test_zjj@shimo.im", "123123");
-		click(desktop);
-		click(desktop1_1);
-		click(add_arrows);
-		//click(page_elements_1);
-		WebElement beforeArrow = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
-		String beforeH = beforeArrow.getCssValue("height");
-		String bef = beforeH.substring(0 , beforeH.length()-2);
-		int heightN = (int)Float.parseFloat(bef);
-		System.out.println("heightN="+heightN);
-		WebElement arrowStart = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]//div[1]//div[1]"));
-		moveToElement(arrowStart);
-		action.clickAndHold(arrowStart);
-		int px = 30;
-		action.dragAndDropBy(arrowStart, 0, px).build().perform();
-		//driver.navigate().refresh();
-		//click(page_elements_1);
-		WebElement arrow = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
-		String afterH = arrow.getCssValue("height");
-		String afH = afterH.substring(0 , afterH.length()-2);
-		int heg = (int)Float.parseFloat(afH);
-		System.out.println("heg="+heg);
-		System.out.println(heightN == heg + px);
-		assertTrue(heightN == heg + px);
-		//click(page_elements_1);
-		action.sendKeys(Keys.DELETE).perform();
-		
-	}
-	
-	
-	/**
-	 * 设置箭头样式
-	 * 
-	 * @author 张家晶
-	 * @Time 2018-07-27
-	 *
-	 */
-	@Test(enabled = false)
-	 public void Arrow_Style() throws InterruptedException{
-		login("test_zjj@shimo.im", "123123");
-		click(desktop);
-		click(desktop1_1);
-		click(page_elements_1);
-		String stroke = page_elements_1.getCssValue("stroke");
-		System.out.println("stroke="+stroke);
-		
-	}
 	
 	/**
 	 * 拖拽箭头
@@ -306,45 +186,51 @@ public class testShapeArrow extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(add_arrows);
-		//click(page_elements_1);
+		click(ppt_page_2);
 		Point location = page_elements_1.getLocation();
-		int loc = formateData(location);
-		System.out.println("loc="+loc);
+		System.out.println("location="+location);
 		action.clickAndHold(page_elements_1);
-		action.dragAndDropBy(page_elements_1, 100, 0).build().perform();
+		action.dragAndDropBy(page_elements_1, 50, 50).build().perform();
 		action.release();
 		Point location1 = page_elements_1.getLocation();
-		int loc1 = formateData(location1);
-		System.out.println("loc1="+loc1);
-		assertTrue(loc1-loc <= 100);
-		click(page_elements_1);
-		action.sendKeys(Keys.DELETE).perform();
+		System.out.println("location1="+location1);
+		assertTrue(!location.equals(location1));
+		click(ppt_revoke);
 	}
 	
 	
 	
 	/**
-	 * 调整箭头层级
+	 * 缩放箭头
 	 * 
 	 * @author 张家晶
-	 * @Time 2018-07-27
+	 * @Time 2018-07-26
 	 *
 	 */
 	@Test(enabled = true)
-	 public void Arrow_AjustLevel() throws InterruptedException{
+	 public void Resize_arrow() throws InterruptedException{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(ppt_page_2);
+		click(add_arrows);
+		action.click(ppt_text).build().perform();
+		WebElement beforeArrow = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
+		Dimension size = beforeArrow.getSize();
+		System.out.println("size="+size);
+		WebElement arrowStart = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]//div[1]//div[1]"));
+		moveToElement(arrowStart);
+		action.clickAndHold(arrowStart);
+		action.dragAndDropBy(arrowStart, 0, 50).build().perform();
+		driver.navigate().refresh();
+		Thread.sleep(5000);
 		click(page_elements_1);
-		String stroke = page_elements_1.getCssValue("z-index");
-		System.out.println("stroke="+stroke);
-		WebElement setTop = driver.findElement(By.xpath("//div[@id='sidebar']//div[1]//div[2]//div[3]//div[1]//button[1]"));
-		System.out.println("setTop="+setTop);
-		action.moveToElement(setTop).click();
-		String stroke1 = page_elements_3.getCssValue("z-index");
-		System.out.println("stroke1="+stroke1);
+		WebElement arrow = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
+		Dimension size1 = arrow.getSize();
+		System.out.println("size1="+size1);
+		assertTrue(!size.equals(size1));
+		//click(page_elements_1);
+		action.sendKeys(Keys.DELETE).perform();
+		
 	}
 	
 	
@@ -361,6 +247,7 @@ public class testShapeArrow extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(add_arrows);
+		action.click(ppt_text).build().perform();
 		action.sendKeys(Keys.DELETE).perform();
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertFalse(result);
@@ -370,9 +257,35 @@ public class testShapeArrow extends TestInit{
 		click(ppt_redo);
 		result = doesWebElementExist(page_elements_1);
 		assertFalse(result);
+		click(ppt_revoke);
+		click(page_elements_1);
+		action.sendKeys(Keys.BACK_SPACE).perform();
+		result = doesWebElementExist(page_elements_1);
+		assertFalse(result);
 	}
 	
 	
+	
+	/**
+	 * 设置箭头样式
+	 * 
+	 * @author 张家晶
+	 * @Time 2018-08-08
+	 *
+	 */
+	@Test(enabled = false)
+	 public void arrow_styles() throws InterruptedException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		Thread.sleep(5000);
+		WebElement setTop = driver.findElement(By.xpath("//div[@class='container-section flex-align-center']//button[3]"));
+		click(setTop);
+		action.moveByOffset(0, 100).clickAndHold().moveByOffset(100, 100).click().build().perform();
+		String stroke = setTop.getCssValue("stroke");//形状边框线颜色
+		String strokeWidth = setTop.getCssValue("stroke-width"); //形状边框线宽度
+		System.out.println("stroke="+stroke + " ===== " +"strokeWidth="+ strokeWidth);
+	}
 	
 
 }

@@ -4,10 +4,9 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
@@ -23,21 +22,6 @@ public class testShapeRectangle extends TestInit{
 		action.sendKeys(Keys.DELETE).perform();
 	}
 	
-	
-	public int  formateData(Point point) {
-		String data = point.toString();
-		String dataSub = data.substring(1, data.length()-1);
-		String[] dataSp = dataSub.split(",");
-		int dataX = Integer.parseInt(dataSp[0]);
-		return dataX;
-	}
-	
-	public int  formate(String data) {
-		String bef = data.substring(0 , data.length()-2);
-		int dat = (int)Float.parseFloat(bef);
-		return dat;
-	}
-	
 	/**
 	 * 新增矩形
 	 * 
@@ -51,6 +35,7 @@ public class testShapeRectangle extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(add_Rectangle);
+		action.click(ppt_text).build().perform();
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertTrue(result);
 		click(page_elements_1);
@@ -71,16 +56,8 @@ public class testShapeRectangle extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_3);
-		click(page_elements_1);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c"))
+		.sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
 		makeSure();
 	}
 	
@@ -92,26 +69,17 @@ public class testShapeRectangle extends TestInit{
 	 * @Time 2018-07-26
 	 *
 	 */
-	@Test(enabled = false)
+	@Test(enabled = true)
 	 public void copyRectangle_clickTextbox() throws InterruptedException, AWTException{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_3);
-		click(page_elements_1);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C); 
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c")).build().perform();
 		click(ppt_page_6);
-		click(page_elements_1);
-		click(ppt_page_3);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		makeSure();
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
+		Boolean result = doesWebElementExist(page_elements_2);
+		assertFalse(result);
 	}
 	
 	/**
@@ -128,19 +96,9 @@ public class testShapeRectangle extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_3);
-		click(page_elements_1);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c")).build().perform();
 		click(ppt_page_4);
-		click(page_elements_1);
-		click(ppt_page_3);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
 		makeSure();
 	}
 	
@@ -158,19 +116,9 @@ public class testShapeRectangle extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_3);
-		click(page_elements_1);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c")).build().perform();
 		click(ppt_page_5);
-		click(page_elements_1);
-		click(ppt_page_3);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
 		makeSure();
 	}
 	
@@ -188,17 +136,9 @@ public class testShapeRectangle extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_3);
-		click(page_elements_1);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c")).build().perform();
 		click(ppt_page_1);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
+		action.sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertTrue(result);
 		//click(page_elements_1);
@@ -218,20 +158,12 @@ public class testShapeRectangle extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(add_Rectangle);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
-		click(page_elements_1);
-		action.sendKeys(Keys.DELETE).perform();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
+		click(ppt_page_3);
+		action.click(page_elements_1).sendKeys(Keys.chord(Keys.CONTROL,"c"))
+		.sendKeys(Keys.DELETE).sendKeys(Keys.chord(Keys.CONTROL,"v")).build().perform();
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertFalse(result);
+		click(ppt_revoke);
 	}
 	
 	/**
@@ -246,20 +178,16 @@ public class testShapeRectangle extends TestInit{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(add_Rectangle);
-		//click(page_elements_1);
+		click(ppt_page_3);
 		Point location = page_elements_1.getLocation();
-		int loc = formateData(location);
-		System.out.println("loc="+loc);
+		System.out.println("location="+location);
 		action.clickAndHold(page_elements_1);
-		action.dragAndDropBy(page_elements_1, 100, 0).build().perform();
+		action.dragAndDropBy(page_elements_1, 50, 50).build().perform();
 		action.release();
 		Point location1 = page_elements_1.getLocation();
-		int loc1 = formateData(location1);
-		System.out.println("loc1="+loc1);
-		assertTrue(loc1-loc <= 100);
-		click(page_elements_1);
-		action.sendKeys(Keys.DELETE).perform();
+		System.out.println("location1="+location1);
+		assertTrue(!location.equals(location1));
+		click(ppt_revoke);
 	}
 	
 	
@@ -270,36 +198,31 @@ public class testShapeRectangle extends TestInit{
 	 * @Time 2018-07-31
 	 *
 	 */
-	@Test(enabled = false)
+	@Test(enabled = true)
 	 public void Resize_rect() throws InterruptedException{
 		login("test_zjj@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(ppt_page_3);
-		click(page_elements_1);
-		WebElement beforeImg = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[5]"));
-		int beforeH = formate(beforeImg.getCssValue("height"));
-		int beforeW = formate(beforeImg.getCssValue("width"));
-		System.out.println("beforeH="+beforeH);
-		System.out.println("beforeW="+beforeW);
-		int px = 10;
-		//for(int i = 1; i < 4; i++ ) {
-			//int j = 2*i-1;
-			WebElement northEast = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]//div[1]//div[3]"));
+		click(add_Rectangle);
+		action.click(ppt_text).build().perform();
+		WebElement beforeRect = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
+		Dimension size = beforeRect.getSize();
+		System.out.println("size="+size);
+		for(int i = 1; i < 4; i++ ) {
+			int j = 2*i-1;
+			WebElement northEast = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]//div[1]//div["+j+"]"));
 			moveToElement(northEast);
 			action.clickAndHold(northEast);
-			action.dragAndDropBy(northEast, 0, px).build().perform();
+			action.dragAndDropBy(northEast, 50, 50).build().perform();
 			action.release();
-			//driver.navigate().refresh();
-			//click(ppt_page_3);
-			//click(page_elements_1);
-		//}
-		WebElement afterImg = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
-		int afterH = formate(afterImg.getCssValue("height"));
-		int afterW = formate(afterImg.getCssValue("width"));
-		System.out.println("afterH="+afterH);
-		System.out.println("afterW="+afterW);
-		//assertTrue();
+			driver.navigate().refresh();
+			click(page_elements_1);
+		}
+		WebElement afterRect = driver.findElement(By.xpath("//div[@class='smslide-action-layer']//div[1]//div[2]"));
+		Dimension size1 = afterRect.getSize();
+		System.out.println("size1="+size1);
+		assertTrue(!size.equals(size1));
+		action.sendKeys(Keys.DELETE).perform();
 	}
 	
 	/**
@@ -315,6 +238,7 @@ public class testShapeRectangle extends TestInit{
 		click(desktop);
 		click(desktop1_1);
 		click(add_Rectangle);
+		action.click(ppt_text).build().perform();
 		action.sendKeys(Keys.DELETE).perform();
 		Boolean result = doesWebElementExist(page_elements_1);
 		assertFalse(result);
@@ -324,7 +248,50 @@ public class testShapeRectangle extends TestInit{
 		click(ppt_redo);
 		result = doesWebElementExist(page_elements_1);
 		assertFalse(result);
+		click(ppt_revoke);
+		click(page_elements_1);
+		action.sendKeys(Keys.BACK_SPACE).perform();
+		result = doesWebElementExist(page_elements_1);
+		assertFalse(result);
 	}
+	
+	/**
+	 * 设置矩形样式
+	 * 
+	 * @author 张家晶
+	 * @Time 2018-08-14
+	 *
+	 */
+	@Test(enabled = true)
+	 public void Rectangle_styles() throws InterruptedException{
+		login("test_zjj@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_page_3);
+		click(page_elements_1);
+		String fill = page_elements_1.getCssValue("fill"); 
+		System.out.println("fill="+fill);
+		click(type_shapes_template1);
+		String fill2 = page_elements_1.getCssValue("fill"); 
+		System.out.println("fill2="+fill2);
+		assertTrue(!fill.equals(fill2));
+		click(ppt_revoke);
+		
+		/*WebElement setTop = driver.findElement(By.xpath("//div[@class='container-section flex-align-center']//button[4]"));
+		click(setTop);
+		action.moveByOffset(0, 100).clickAndHold().moveByOffset(100, 100).click().build().perform();
+		String stroke = setTop.getCssValue("stroke");//形状边框线颜色
+		String strokeWidth = setTop.getCssValue("stroke-width"); //形状边框线宽度
+		String fill = setTop.getCssValue("fill"); //矩形，圆形填充色
+		System.out.println("stroke="+stroke + " ===== " +"strokeWidth="+ strokeWidth + "====="+ "fill=" + fill);*/
+		
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 }
