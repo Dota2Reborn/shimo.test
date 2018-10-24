@@ -59,7 +59,7 @@ public class TestInit extends elementFile {
         test_url = init.getUrl();
         driver = init.initData(this, browser, nodeIp, local);
         action = new Actions(driver);
-        driver.navigate().to("https://release.shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-login%3Afeature-bugfix-windows-edge&redirect=https%3A%2F%2Frelease.shimodev.com%2Flogin");
+        driver.navigate().to("https://release.shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-desktop%3Afeature-ads&redirect=https%3A%2F%2Frelease.shimodev.com%2Flogin");
         driver.navigate().to(test_url + "login");
         // driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
