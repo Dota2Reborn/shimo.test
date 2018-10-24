@@ -59,7 +59,8 @@ public class TestInit extends elementFile {
         test_url = init.getUrl();
         driver = init.initData(this, browser, nodeIp, local);
         action = new Actions(driver);
-        driver.navigate().to(test_url + "login");
+        String url = driver.getCurrentUrl();
+        driver.navigate().to(url + "login");
         // driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 6);

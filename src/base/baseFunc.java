@@ -131,7 +131,7 @@ public class baseFunc {
      */
     public String getUrl() {
         if (environment == 1) {
-            test_url = "https://release.shimodev.com/";
+            test_url = "https://release.shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-desktop%3Afeature-scroll-fix&redirect=https%3A%2F%2Frelease.shimodev.com%2F";
         } else if (environment == 2) {
             test_url = "https://shimodev.com/";
         }
