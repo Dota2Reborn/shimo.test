@@ -59,8 +59,8 @@ public class TestInit extends elementFile {
         test_url = init.getUrl();
         driver = init.initData(this, browser, nodeIp, local);
         action = new Actions(driver);
-        String url = driver.getCurrentUrl();
-        driver.navigate().to(url + "login");
+        driver.navigate().to("https://shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-desktop%3Afeature-scroll-fix&redirect=https%3A%2F%2Frelease.shimodev.com%2Flogin");
+        driver.navigate().to(test_url + "login");
         // driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 6);
