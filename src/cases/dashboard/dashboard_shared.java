@@ -40,7 +40,8 @@ public class dashboard_shared extends TestInit {
         boolean b = driver.findElement(By.xpath("//div[@class='card-icon']//div")).isDisplayed();//卡片图标
         boolean c = driver.findElement(By.xpath("//div[@class='card-icon']//span")).isDisplayed();//卡片图标
         boolean text = driver.findElement(By.xpath("//div[@class='card-content-title']//div[1]")).getText().equals("无标题");
-        boolean text1 = getText(dashboard_update_time).equals("2人共享 · 刚刚 共享 共享");
+//        boolean text1 = getText(dashboard_update_time).equals("2人共享 · 刚刚 共享 共享");
+        boolean text1 = getText(dashboard_update_time).equals("刚刚 共享 共享");
         WebElement card = driver.findElement(By.xpath("//div[@class='category-card-container']"));
         moveToElement(card);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
