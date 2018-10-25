@@ -21,9 +21,9 @@ public class configurationResource {
      * @Time 2017-11-20
      */
     public String getUrl() {
-        if (testEnvironment == "release") {
+        if (testEnvironment.equals("release")) {
             test_url = "https://release.shimodev.com/";
-        } else if (testEnvironment == "dev") {
+        } else if (testEnvironment.equals("dev")) {
             test_url = "https://shimodev.com/";
         }
         return test_url;
