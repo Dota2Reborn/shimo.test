@@ -44,10 +44,8 @@ public class TestInit extends elementFile {
     public Actions action = null;
     String test_url;
     baseFunc init = new baseFunc();
+    configurationResource baseURL = new configurationResource();
     public String className;
-    String browser;
-    String nodeIp;
-    String local;
 
     public TestInit() {
 
@@ -56,10 +54,14 @@ public class TestInit extends elementFile {
     @Parameters({"browser", "nodeIp", "local"})
     @BeforeClass
     public void firstMethod(String browser, String nodeIp, String local) throws MalformedURLException {
-        test_url = init.getUrl();
+        test_url = baseURL.getUrl();
         driver = init.initData(this, browser, nodeIp, local);
         action = new Actions(driver);
-        driver.navigate().to("https://release.shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-desktop%3Afeature-ads&redirect=https%3A%2F%2Frelease.shimodev.com%2Flogin");
+
+        String urlWithCookie = baseURL.getUrlWithCookie();
+        if(!urlWithCookie.isEmpty()){
+            driver.navigate().to(urlWithCookie);
+        }
         driver.navigate().to(test_url + "login");
         // driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

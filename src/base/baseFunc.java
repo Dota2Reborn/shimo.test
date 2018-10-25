@@ -26,13 +26,11 @@ import elementFile.CustomFieldDecorator;
 import elementFile.MyElementLocatorFactory;
 
 public class baseFunc {
-    private int environment;// 切换测试环境
-    private String test_url;// 测试地址
     public WebDriver driver;
     String os;// 系统信息
 
     public baseFunc() {
-        environment = 1; // 1为release 2为dev
+
     }
 
     /**
@@ -121,21 +119,6 @@ public class baseFunc {
         PageFactory.initElements(customFieldDecorator, xx);
         return driver;
 
-    }
-
-    /**
-     * 获取测试地址
-     *
-     * @author 刘晨
-     * @Time 2017-11-20
-     */
-    public String getUrl() {
-        if (environment == 1) {
-            test_url = "https://release.shimodev.com/";
-        } else if (environment == 2) {
-            test_url = "https://shimodev.com/";
-        }
-        return test_url;
     }
 
 }
