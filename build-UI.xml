@@ -21,6 +21,8 @@
 	<target name="copy_mkdir" depends="compile">
 		<copy file="src\elementFile\locator.json" tofile="src\elementFile\locator_1.json" />
 		<move file="src\elementFile\locator_1.json" tofile="build/classes/elementFile/locator.json" />
+		<copy file="src\base\resourceFile" tofile="src\base\resourceFile_1" />
+		<move file="src\base\resourceFile_1" tofile="build/classes/base/resourceFile" />
 	</target>
 	<path id="runpath">
 		<path refid="run.classpath" />
