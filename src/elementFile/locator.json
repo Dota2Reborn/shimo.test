@@ -1590,31 +1590,31 @@
 			{
 				"elementName": "ppt_broadcast",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[1]",
+				"locator": "//div[@data-test='page-header-right']/button[1]",
 				"note": "播放幻灯片"
 			},
 			{
 				"elementName": "ppt_online_broadcast",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[2]",
+				"locator": "//div[@data-test='page-header-right']//span[2]//button[1]",
 				"note": "在线演示"
 			},
 			{
 				"elementName": "ppt_cooperation",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[3]",
+				"locator": "//div[@data-test='page-header-right']//button[2]",
 				"note": "添加协作者"
 			},
 			{
 				"elementName": "ppt_share",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[4]",
+				"locator": "//div[@data-test='page-header-right']//button[3]",
 				"note": "分享"
 			},
 			{
 				"elementName": "ppt_dotdotdot",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[5]",
+				"locator": "//div[@data-test='page-header-right']//button[4]",
 				"note": "左上角点点点"
 			},
 			{
