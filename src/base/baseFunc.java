@@ -74,6 +74,7 @@ public class baseFunc {
                 driver = new ChromeDriver(option);
             }
         } else {
+            os = System.getProperties().getProperty("os.name");
             if (browser.equals("ie")) {
                 InternetExplorerOptions option = new InternetExplorerOptions();
                 option.setCapability("browserName", "IE");
@@ -113,7 +114,7 @@ public class baseFunc {
             // (x86)\\Google\\Chrome\\Application\\");
         }
 
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         ElementLocatorFactory locatorFactory = new MyElementLocatorFactory(driver);
         FieldDecorator customFieldDecorator = new CustomFieldDecorator(locatorFactory);
         PageFactory.initElements(customFieldDecorator, xx);
