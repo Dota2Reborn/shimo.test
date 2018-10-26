@@ -104,7 +104,7 @@ public class baseFunc {
 //				option.addArguments("--headless");
                 // option.addArguments("--kiosk");
                 option.setCapability("browserName", "chrome");
-                option.setCapability("version", "70");
+                option.setCapability("version", "67");
                 option.setCapability("plaform", "ANY");
                 URL remoteAddress = new URL(nodeIp + "/wd/hub");
                 driver = new RemoteWebDriver(remoteAddress, option);
