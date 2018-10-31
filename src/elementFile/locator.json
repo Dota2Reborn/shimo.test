@@ -509,6 +509,12 @@
 				"note": "桌面排序-文件夹置顶-对钩"
 			},
 			{
+				"elementName": "desktop_position",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list-crumb']/span",
+				"note": "当前桌面所处页面"
+			},
+			{
 				"elementName": "folder_backToDesktop",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='list-crumb']//span//a[contains(text(),'我的桌面')]",

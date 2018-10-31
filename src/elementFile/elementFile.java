@@ -68,6 +68,8 @@ public class elementFile {
 	public WebElement desktop_newslides;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder", noteName = "新建文件夹")
 	public WebElement desktop_newFolder;
+	@SearchWith(pageName = "desktop", elementName = "desktop_position", noteName = "当前桌面所处页面")
+	public WebElement desktop_position;
 	@SearchWith(pageName = "desktop", elementName = "desktop_import", noteName = "导入")
 	public WebElement desktop_import;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name", noteName = "文件夹命名")
