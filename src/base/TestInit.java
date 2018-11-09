@@ -110,7 +110,6 @@ public class TestInit extends elementFile {
         wait.until(ExpectedConditions.elementToBeClickable(login_submit));
         sendKeys(userEmail, user);
         sendKeys(userPwd, pwd);
-        // login_submit.click();
         click(login_submit);
     }
 
@@ -155,7 +154,7 @@ public class TestInit extends elementFile {
      */
     public void logout() {
         try {
-//            driver.manage().deleteAllCookies();
+            //driver.manage().deleteAllCookies();
             driver.manage().deleteCookieNamed("userId");
             driver.manage().deleteCookieNamed("shimo_dev_sid");
             driver.navigate().to(test_url + "login");
@@ -199,6 +198,7 @@ public class TestInit extends elementFile {
             driver.switchTo().window(it.get(i));
             driver.close();
         }
+
 
         winHandels = driver.getWindowHandles();
         it = new ArrayList<String>(winHandels);
@@ -247,7 +247,7 @@ public class TestInit extends elementFile {
      * 判断元素是否存在
      *
      * @author 刘晨
-     * @Time 2017-11-21
+     * @Time 2017-11-22
      */
     public boolean doesWebElementExist(By selector) {
 
