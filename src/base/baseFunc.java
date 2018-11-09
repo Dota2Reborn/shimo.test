@@ -3,7 +3,7 @@ package base;
 import com.google.common.base.Preconditions;
 import elementFile.CustomFieldDecorator;
 import elementFile.MyElementLocatorFactory;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
