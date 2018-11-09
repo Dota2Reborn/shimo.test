@@ -1,11 +1,11 @@
 package cases.desktop;
 
-import static org.testng.Assert.assertEquals;
+import base.TestInit;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import static org.testng.Assert.assertEquals;
 
-public class testDesktop_remove extends TestInit{
+public class testDesktop_remove extends TestInit {
 	/**
 	 * 右键文档-删除文件
 	 * 

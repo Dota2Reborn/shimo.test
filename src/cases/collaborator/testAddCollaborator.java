@@ -1,13 +1,10 @@
 package cases.collaborator;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertNotEquals;
-
+import base.TestInit;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import static org.testng.Assert.*;
 
 public class testAddCollaborator extends TestInit {
 

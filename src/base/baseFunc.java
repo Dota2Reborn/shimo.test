@@ -1,10 +1,9 @@
 package base;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import org.apache.commons.lang3.StringUtils;
-import org.openqa.selenium.Cookie;
+import com.google.common.base.Preconditions;
+import elementFile.CustomFieldDecorator;
+import elementFile.MyElementLocatorFactory;
+import org.apache.commons.lang.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,10 +19,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.FieldDecorator;
 
-import com.google.common.base.Preconditions;
-
-import elementFile.CustomFieldDecorator;
-import elementFile.MyElementLocatorFactory;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class baseFunc {
     public WebDriver driver;

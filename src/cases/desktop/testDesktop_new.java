@@ -1,12 +1,14 @@
 package cases.desktop;
 
-import static org.testng.Assert.assertEquals;
-
+import base.TestInit;
+import elementFile.ByGenerator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import java.io.File;
+
+import static org.testng.Assert.assertEquals;
 
 public class testDesktop_new extends TestInit {
 
@@ -107,7 +109,8 @@ public class testDesktop_new extends TestInit {
         click(desktop);
 
         WebElement uploadButton = desktop_import;
-        String url = System.getProperty("user.dir") + "/doc/test_doc.doc";
+
+        String url = new File(ByGenerator.class.getClassLoader().getResource("file/test_doc.doc").getFile()).getPath();
         System.out.println(url);
         uploadButton.sendKeys(url);
 
@@ -135,7 +138,7 @@ public class testDesktop_new extends TestInit {
         click(desktop);
 
         WebElement uploadButton = desktop_import;
-        String url = System.getProperty("user.dir") + "/doc/test_docx.docx";
+        String url = new File(ByGenerator.class.getClassLoader().getResource("file/test_docx.docx").getFile()).getPath();
         System.out.println(url);
         uploadButton.sendKeys(url);
 
@@ -163,7 +166,7 @@ public class testDesktop_new extends TestInit {
         click(desktop);
 
         WebElement uploadButton = desktop_import;
-        String url = System.getProperty("user.dir") + "/doc/test_sheet.xlsx";
+        String url = new File(ByGenerator.class.getClassLoader().getResource("file/test_sheet.xlsx").getFile()).getPath();
         System.out.println(url);
         uploadButton.sendKeys(url);
 
@@ -189,7 +192,8 @@ public class testDesktop_new extends TestInit {
         click(desktop);
 
         WebElement uploadButton = desktop_import;
-        String url = System.getProperty("user.dir") + "/doc/test.md";
+
+        String url = new File(ByGenerator.class.getClassLoader().getResource("file/test.md").getFile()).getPath();
         System.out.println(url);
         uploadButton.sendKeys(url);
 

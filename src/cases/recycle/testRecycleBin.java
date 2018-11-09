@@ -1,13 +1,12 @@
 package cases.recycle;
 
-import static org.testng.Assert.assertEquals;
-
+import base.TestInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import static org.testng.Assert.assertEquals;
 
 public class testRecycleBin extends TestInit {
     /**
@@ -17,7 +16,7 @@ public class testRecycleBin extends TestInit {
      * @Time 2018-03-12
      */
     @Test(enabled = true)
-    public void New_Document() throws InterruptedException {
+    public void New_Document() {
         login("RecycleBin@shimo.im", "123123");
         click(desktop);
         Sort();

@@ -1,18 +1,15 @@
 package cases.desktop;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
-
-import java.util.List;
-
+import base.TestInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import java.util.List;
+
+import static org.testng.Assert.*;
 
 public class testNotice extends TestInit {
 	/**
@@ -138,8 +135,8 @@ public class testNotice extends TestInit {
 		moveToElement(dashboard_notice);
 		click(dashboard_notice_list_1);
 		switchToPage(1);
-		String result = driver.findElement(By.xpath("//div[@class='info-word']//p")).getText();
-		assertEquals(result, "当前登录帐号 autoTest12@shimo.im 没有权限访问这个文档");
+		String result = getText(By.xpath("//div[@id='root']/div/div[2]/div"));
+		assertEquals(result, "当前登录账号 autoTest12@shimo.im 没有权限访问这个 文档");
 	}
 
 	/**
@@ -157,12 +154,12 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "lala");
-		click(doc_discuss);
+		click(ql_comment_Comments);
 		sendKeys(doc_discuss_input, "yoyoyo");
 		action.sendKeys(Keys.ENTER);
 		click(doc_discuss_input_ok);
-		wait.until(
-				ExpectedConditions.textToBe(By.className("doc-comment-input-placeholder"), "按enter发送，shift+enter换行"));
+//		wait.until(
+//				ExpectedConditions.textToBe(By.className("doc-comment-input-placeholder"), "按enter发送，shift+enter换行"));
 
 		click(b_back);
 		logout();

@@ -1,16 +1,16 @@
 package cases.desktop;
 
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
-
+import base.TestInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-//import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
+//import org.openqa.selenium.WebDriver;
 
 public class testAlertMute extends TestInit {
 
@@ -33,13 +33,20 @@ public class testAlertMute extends TestInit {
         click(desktop);
         click(desktop1_1);
         //已经打开文档
-        click(doc_edit);
+//        click(doc_edit);
+//        click(ql_comment_Comments);
+        wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
+        doc_edit.clear();
+        sendKeys(doc_edit, "lala");
         click(ql_comment_Comments);
+        sendKeys(doc_discuss_input, "输入评论收到通知");
+        action.sendKeys(Keys.ENTER);
+        click(doc_discuss_input_ok);
         Boolean a = false;
         String time1 = getDate();
         int dat1 = Integer.parseInt(time1);
-        doc_discuss_input.sendKeys("输入评论收到通知");
-        doc_discuss_input_ok.click();
+//        sendKeys(doc_discuss_input,"输入评论收到通知");
+//        doc_discuss_input_ok.click();
         logout();
         login("AlertMute@shimo.im", "123123");
         moveToElement(dashboard_notice);

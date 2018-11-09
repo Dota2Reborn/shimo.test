@@ -1,12 +1,11 @@
 package cases.desktop;
 
-import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.assertEquals;
-
+import base.TestInit;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class testSearch extends TestInit {
 	/**

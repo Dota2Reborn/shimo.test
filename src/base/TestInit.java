@@ -1,6 +1,12 @@
 package base;
 
-import static org.testng.Assert.assertTrue;
+import elementFile.elementFile;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.*;
+import testNG.TestListener;
 
 import java.net.MalformedURLException;
 import java.text.DateFormat;
@@ -10,32 +16,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-import org.openqa.selenium.Cookie;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.ElementNotVisibleException;
-import org.openqa.selenium.JavascriptException;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.UnhandledAlertException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Parameters;
-
-import elementFile.elementFile;
-import testNG.TestListener;
+import static org.testng.Assert.assertTrue;
 
 @Listeners({TestListener.class})
 public class TestInit extends elementFile {
@@ -175,8 +156,10 @@ public class TestInit extends elementFile {
     public void logout() {
         try {
 //            driver.manage().deleteAllCookies();
-//            driver.navigate().to(test_url + "login");
-            driver.navigate().to(test_url + "logout");
+            driver.manage().deleteCookieNamed("userId");
+            driver.manage().deleteCookieNamed("shimo_dev_sid");
+            driver.navigate().to(test_url + "login");
+//            driver.navigate().to(test_url + "logout");
             driver.switchTo().alert().accept();
             action.sendKeys(Keys.ESCAPE);
         } catch (UnhandledAlertException e) {
@@ -569,7 +552,7 @@ public class TestInit extends elementFile {
 	 * @Time 2018-10-09
 	 * ele1 输入框，ele2上箭头， ele3下箭头
 	 */
-	public void opacityAndCoord(WebElement ele1,WebElement ele2,WebElement ele3) {
+	public void opacityAndCoord(WebElement ele1, WebElement ele2, WebElement ele3) {
 		if(ele1.isDisplayed() && ele2.isDisplayed() && ele3.isDisplayed()) {
 			action.click(ele1).sendKeys(Keys.chord(Keys.CONTROL, "a"))
 			.sendKeys(Keys.NUMPAD7).sendKeys(Keys.NUMPAD0).build().perform();

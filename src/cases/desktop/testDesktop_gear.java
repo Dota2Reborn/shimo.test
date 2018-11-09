@@ -1,15 +1,14 @@
 package cases.desktop;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import base.TestInit;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import org.testng.annotations.Test;
-
-import base.TestInit;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class testDesktop_gear extends TestInit {
 

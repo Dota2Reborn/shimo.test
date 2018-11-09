@@ -1,19 +1,15 @@
 package cases.management;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
-
-import java.util.List;
-
+import base.TestInit;
+import com.google.common.base.Preconditions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import com.google.common.base.Preconditions;
+import java.util.List;
 
-import base.TestInit;
+import static org.testng.Assert.*;
 
 public class testCompanyManagement_1 extends TestInit {
 

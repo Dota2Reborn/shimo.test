@@ -1,13 +1,10 @@
 package cases.dashboard;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
-
+import base.TestInit;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import static org.testng.Assert.*;
 
 public class dashboard_own extends TestInit {
 

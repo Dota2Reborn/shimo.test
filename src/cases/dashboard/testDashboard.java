@@ -1,12 +1,11 @@
 package cases.dashboard;
 
-import static org.testng.Assert.assertEquals;
-
+import base.TestInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import static org.testng.Assert.assertEquals;
 
 public class testDashboard extends TestInit {
 

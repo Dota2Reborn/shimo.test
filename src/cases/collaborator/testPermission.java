@@ -1,13 +1,11 @@
 package cases.collaborator;
 
-import static org.testng.Assert.assertEquals;
-
+import base.TestInit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import static org.testng.Assert.assertEquals;
 
 public class testPermission extends TestInit {
     /**
@@ -41,12 +39,13 @@ public class testPermission extends TestInit {
         click(desktop);
         click(desktop1_1_folder);
         click(desktop1_1);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='ql-container']//div[1]//p")));
-        driver.findElement(By.xpath("//div[@id='ql-container']//div[1]//p")).click();
+//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='ql-container']//div[1]//p")));
+//        driver.findElement(By.xpath("//div[@id='ql-container']//div[1]//p")).click();
+        click(doc_edit);
         click(ql_comment_Comments);
         wait.until(ExpectedConditions.elementToBeClickable(doc_discuss_input));
-        String M = doc_discuss_input.getAttribute("spellcheck");
-        assertEquals(M, "false");
+        String M = doc_discuss_input.getAttribute("contenteditable");
+        assertEquals(M, "true");
         click(quick_access_point);
         click(Back_to_Table);
         contextClick(desktop1_1);

@@ -21,7 +21,7 @@ public class ByGenerator {
 
 		File file = new File(ByGenerator.class.getResource(locatorFile).getFile());
 		Preconditions.checkArgument(file.exists(), "Unable to locate " + locatorFile);
-		JSONObject foundObject = getElementJson(file, pageName, elementName, noteName);
+		JSONObject foundObject = getElementJson(file, pageName, elementName);
 
 		Preconditions.checkState(foundObject != null, "No entry found for the page [" + pageName + "] and element ["
 				+ elementName + "] in the " + "locators file [" + locatorFile + "]");
@@ -60,7 +60,7 @@ public class ByGenerator {
 	}
 
 	@SuppressWarnings("resource")
-	private static JSONObject getElementJson(File file, String pageName, String elementName, String noteName) {
+	private static JSONObject getElementJson(File file, String pageName, String elementName) {
 		FileReader fileReader = null;
 		BufferedReader bufferedReader = null;
 		StringBuilder stringBuilder = new StringBuilder();

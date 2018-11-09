@@ -1,14 +1,13 @@
 package cases.desktop;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
-
+import base.TestInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class hovertest extends TestInit {
 
@@ -178,7 +177,7 @@ public class hovertest extends TestInit {
         driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")).click();
 
         String url = driver.getCurrentUrl();
-        assertEquals(url, getURL()+"login");
+        assertEquals(url, getURL());
     }
 
     /**

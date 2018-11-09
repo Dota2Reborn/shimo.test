@@ -1,10 +1,9 @@
 package cases.desktop;
 
-import static org.testng.Assert.assertTrue;
-
+import base.TestInit;
 import org.testng.annotations.Test;
 
-import base.TestInit;
+import static org.testng.Assert.assertTrue;
 
 public class testDesktopOrderBy extends TestInit {
     /**
