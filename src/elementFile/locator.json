@@ -718,7 +718,7 @@
 				"elementName": "b_back",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-left']/button[1]",
-				"note": "后退"
+				"note": "文件header后退"
 			},
 			{
 				"elementName": "quick_access_point",
