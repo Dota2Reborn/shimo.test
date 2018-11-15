@@ -1,12 +1,9 @@
 package cases.desktop;
 
 import base.TestInit;
-import elementFile.ByGenerator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
-
-import java.io.File;
 
 import static org.testng.Assert.assertEquals;
 
@@ -109,8 +106,7 @@ public class testDesktop_new extends TestInit {
         click(desktop);
 
         WebElement uploadButton = desktop_import;
-
-        String url = new File(ByGenerator.class.getClassLoader().getResource("file/test_doc.doc").getFile()).getPath();
+        String url = System.getProperty("user.dir") + "/doc/test_doc.doc";
         System.out.println(url);
         uploadButton.sendKeys(url);
 
@@ -138,7 +134,7 @@ public class testDesktop_new extends TestInit {
         click(desktop);
 
         WebElement uploadButton = desktop_import;
-        String url = new File(ByGenerator.class.getClassLoader().getResource("file/test_docx.docx").getFile()).getPath();
+        String url = System.getProperty("user.dir") + "/doc/test_docx.docx";
         System.out.println(url);
         uploadButton.sendKeys(url);
 
@@ -166,7 +162,7 @@ public class testDesktop_new extends TestInit {
         click(desktop);
 
         WebElement uploadButton = desktop_import;
-        String url = new File(ByGenerator.class.getClassLoader().getResource("file/test_sheet.xlsx").getFile()).getPath();
+        String url = System.getProperty("user.dir") + "/doc/test_sheet.xlsx";
         System.out.println(url);
         uploadButton.sendKeys(url);
 
@@ -192,8 +188,7 @@ public class testDesktop_new extends TestInit {
         click(desktop);
 
         WebElement uploadButton = desktop_import;
-
-        String url = new File(ByGenerator.class.getClassLoader().getResource("file/test.md").getFile()).getPath();
+        String url = System.getProperty("user.dir") + "/doc/test.md";
         System.out.println(url);
         uploadButton.sendKeys(url);
 

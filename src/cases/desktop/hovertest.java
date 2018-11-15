@@ -50,11 +50,15 @@ public class hovertest extends TestInit {
         String result7 = driver.findElement(By.xpath(gg)).getText();
         assertEquals(result7, "下载石墨文档 App");
 
-        String hh = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]";
+        String zz = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]";
+        String result10 = driver.findElement(By.xpath(zz)).getText();
+        assertEquals(result10, "石墨官网");
+
+        String hh = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]";
         String result8 = driver.findElement(By.xpath(hh)).getText();
         assertEquals(result8, "使用帮助");
 
-        String ii = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]";
+        String ii = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[last()]";
         String result9 = driver.findElement(By.xpath(ii)).getText();
         assertEquals(result9, "退出登录");
 
@@ -153,8 +157,8 @@ public class hovertest extends TestInit {
         moveToElement(desktop_user_icon);
 
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]")));
-        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]")).click();
+                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]")));
+        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]")).click();
 
         String url = driver.getCurrentUrl();
         assertEquals(url, getURL() + "help");
@@ -173,8 +177,8 @@ public class hovertest extends TestInit {
         moveToElement(desktop_user_icon);
 
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")));
-        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")).click();
+                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[last()]")));
+        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[last()]")).click();
 
         String url = driver.getCurrentUrl();
         assertEquals(url, getURL());
