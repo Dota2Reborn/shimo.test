@@ -5,7 +5,7 @@
     "elements": [
       {
         "testEnvironment": "release",
-        "testURL": "https://release.shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-bootstrap%3Ahotfix-body-overflow&redirect=https%3A%2F%2Frelease.shimodev.com%2Flogin&lizard-view-enabled=1",
+        "testURL": "https://release.shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-doc%3Ahotfix-body-style&redirect=https%3A%2F%2Frelease.shimodev.com%2Flogin&lizard-view-enabled=1",
         "note": "仅修改 testURL"
       },
       {
