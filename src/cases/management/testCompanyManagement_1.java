@@ -169,7 +169,7 @@ public class testCompanyManagement_1 extends TestInit {
         text = driver.findElement(By.xpath(jj)).getText();
         System.out.println(text);
 
-        assertEquals("移除成员", text);
+        assertEquals("设置为席位成员", text);
     }
 
     /**
