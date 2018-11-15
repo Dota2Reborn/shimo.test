@@ -2168,7 +2168,7 @@
 				"locateUsing": "xpath",
 				"locator": "//a[@class='fixed-context-menu']//ul//li[7]",
 				"note": "删除幻灯片"
-			},
+			}
 		]
 	},
 	{
