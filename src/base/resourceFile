@@ -10,7 +10,7 @@
       },
       {
         "testEnvironment": "dev",
-        "testURL": "https://shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-desktop%3Afeature-ads&redirect=https%3A%2F%2Frelease.shimodev.com%2Flogin",
+        "testURL": "https://shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-desktop%3Ahotfix-limit-collab&redirect=https%3A%2F%2Fshimodev.com%2Flogin&lizard-view-enabled=1",
         "note": "仅修改 testURL"
       }
     ]
