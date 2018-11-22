@@ -14,7 +14,7 @@ public class testAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2017-11-22
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void addCollaborator_1() {
         login("autoTest01@shimo.im", "123123");
 
@@ -306,7 +306,7 @@ public class testAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2017-12-07
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void addCollaborator_fail() throws InterruptedException {
         login("autoTest10@shimo.im", "123123");
         click(desktop);

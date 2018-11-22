@@ -20,8 +20,9 @@ public class testCompanyManagement_1 extends TestInit {
      * @Time 2017-01-08
      */
     @Test(enabled = true)
-    public void inviteMember_allMember() {
+    public void inviteMember_allMember() throws InterruptedException {
         login("autoTest_company_1@shimo.im", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(company_setting);
@@ -49,8 +50,9 @@ public class testCompanyManagement_1 extends TestInit {
      * @Time 2017-01-08
      */
     @Test(enabled = true)
-    public void inviteMember_ManagerAndCreater() {
+    public void inviteMember_ManagerAndCreater() throws InterruptedException {
         login("autoTest_company_1@shimo.im", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(company_setting);
@@ -77,8 +79,9 @@ public class testCompanyManagement_1 extends TestInit {
      * @Time 2017-01-08
      */
     @Test(enabled = true)
-    public void inviteMember_JustByCreater() {
+    public void inviteMember_JustByCreater() throws InterruptedException {
         login("autoTest_company_1@shimo.im", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(company_setting);
@@ -105,10 +108,11 @@ public class testCompanyManagement_1 extends TestInit {
      * @Time 2017-01-08
      */
     @Test(enabled = true)
-    public void inviteMember_changeCompanyName() {
+    public void inviteMember_changeCompanyName() throws InterruptedException {
         String time = getDate();
 
         login("autoTest_company_1@shimo.im", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(company_setting);
@@ -132,8 +136,9 @@ public class testCompanyManagement_1 extends TestInit {
      * @Time 2017-01-08
      */
     @Test(enabled = true)
-    public void setManager_Creater() {
+    public void setManager_Creater() throws InterruptedException {
         login("autoTest_company_1@shimo.im", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(company_setting);
@@ -179,8 +184,9 @@ public class testCompanyManagement_1 extends TestInit {
      * @Time 2018-03-05
      */
     @Test(enabled = true)
-    public void setManager_ManagerAndCreater() {
+    public void setManager_ManagerAndCreater() throws InterruptedException {
         login("autoTest_company_1@shimo.im", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(company_setting);
@@ -228,6 +234,7 @@ public class testCompanyManagement_1 extends TestInit {
     @Test(enabled = true)
     public void transferCompany() throws InterruptedException {
         login("autoTest_company_1@shimo.im", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(company_setting);
@@ -259,6 +266,7 @@ public class testCompanyManagement_1 extends TestInit {
 
         logout();
         login("autoTest_company_2@shimo.im", "123123");
+        Thread.sleep(500);
 
         click(company_Management);
         switchToPage(2);

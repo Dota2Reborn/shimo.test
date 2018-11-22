@@ -22,6 +22,7 @@ public class testCompanyManagement extends TestInit {
     @Test(enabled = true)
     public void addCollaborators_ManagerAndCreater() throws InterruptedException {
         login("panpan@qq.com", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(company_setting);
@@ -78,6 +79,7 @@ public class testCompanyManagement extends TestInit {
     @Test(enabled = true)
     public void addCollaborators_all() throws InterruptedException {
         login("panpan@qq.com", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(company_setting);
@@ -118,6 +120,7 @@ public class testCompanyManagement extends TestInit {
     @Test(enabled = true)
     public void addCollaborators_ownerManagerAndCreater() throws InterruptedException {
         login("panpan@qq.com", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(company_setting);
@@ -192,6 +195,7 @@ public class testCompanyManagement extends TestInit {
     @Test(enabled = true)
     public void memberSearch() throws InterruptedException {
         login("panpan@qq.com", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         memberSearch.sendKeys("刘晨");
@@ -211,6 +215,7 @@ public class testCompanyManagement extends TestInit {
     @Test(enabled = true)
     public void banUser() throws InterruptedException {
         login("panpan@qq.com", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
 
@@ -276,6 +281,7 @@ public class testCompanyManagement extends TestInit {
     @Test(enabled = true)
     public void exitCompany() throws InterruptedException {
         login("panpan@qq.com", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
 
@@ -323,6 +329,7 @@ public class testCompanyManagement extends TestInit {
     @Test(enabled = true)
     public void copyLink() throws InterruptedException {
         login("panpan@qq.com", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(addMember);
@@ -351,6 +358,7 @@ public class testCompanyManagement extends TestInit {
     @Test(enabled = true)
     public void addMember() throws InterruptedException {
         login("panpan@qq.com", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         click(addMember);
@@ -376,6 +384,7 @@ public class testCompanyManagement extends TestInit {
     @Test(enabled = true)
     public void addMember_1() throws InterruptedException {
         login("panpan@qq.com", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
 
@@ -400,6 +409,7 @@ public class testCompanyManagement extends TestInit {
     @Test(enabled = true)
     public void member_setting() throws InterruptedException {
         login("panpan@qq.com", "123123");
+        Thread.sleep(500);
         click(company_Management);
         switchToPage(1);
         String xpath_setting = "//div[@class='waterfall-inner']//div[1]//div[@class='action']";
