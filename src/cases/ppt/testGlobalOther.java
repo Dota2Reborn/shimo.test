@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.ie.InternetExplorerDriverEngine;
 import org.testng.annotations.Test;
 
@@ -41,6 +42,27 @@ public class testGlobalOther extends TestInit {//全局其他
 			assertFalse(true);
 		}
 		
+	}
+	/**
+	 * 全局与页面的快捷键测试
+	 * 
+	 * @author 王继程
+	 * @Time 2018-07-23
+	 *
+	 */
+	@Test(enabled = true)
+	public void Shortcuts_1() throws InterruptedException {
+		login("Shortcuts1@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_page_1);
+		action.sendKeys(Keys.chord(Keys.CONTROL, "c")).build().perform();
+		click(ppt_page_3);
+		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
+		click(ppt_page_4);
+		String time = getText(page_elements_1);
+		action.sendKeys(Keys.DELETE).perform();
+		assertEquals(time, "第一页");
 	}
 
 }
