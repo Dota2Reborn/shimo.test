@@ -1668,19 +1668,19 @@
 			{
 				"elementName": "ppt_view_history",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[10]",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[9]",
 				"note": "查看历史"
 			},
 			{
 				"elementName": "ppt_Information",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[11]",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[10]",
 				"note": "幻灯片信息"
 			},
 			{
 				"elementName": "ppt_delete",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[13]",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[12]",
 				"note": "删除"
 			},{
 				"elementName": "ppt_delete_sure",
