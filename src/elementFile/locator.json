@@ -1245,6 +1245,155 @@
 			}
 		]
 	},
+	
+	
+	
+	
+	{
+		"note": "PPT_header",
+		"pageName": "PPT_header",
+		"elements": [
+			{
+				"elementName": "ppt_return",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//button[1]",
+				"note": "幻灯片内返回"
+			},
+			{
+				"elementName": "ppt_down",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//button[2]",
+				"note": "幻灯片内下箭头"
+			},
+			{
+				"elementName": "ppt_plus_sign",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//div[1]",
+				"note": "幻灯片中加号"
+			},
+			{
+				"elementName": "ppt_filename",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//div[2]",
+				"note": "幻灯片标题"
+			},
+			{
+				"elementName": "ppt_collect",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//button[3]",
+				"note": "收藏标签"
+			},
+			{
+				"elementName": "ppt_comment",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//span[1]",
+				"note": "幻灯片讨论"
+			},
+			{
+				"elementName": "ppt_broadcast",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']/button[1]",
+				"note": "播放幻灯片"
+			},
+			{
+				"elementName": "ppt_online_broadcast",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//span[2]//button[1]",
+				"note": "在线演示"
+			},
+			{
+				"elementName": "ppt_cooperation",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//button[2]",
+				"note": "添加协作者"
+			},
+			{
+				"elementName": "ppt_share",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//button[3]",
+				"note": "分享"
+			},
+			{
+				"elementName": "ppt_dotdotdot",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//button[4]",
+				"note": "左上角点点点"
+			},
+			{
+				"elementName": "ppt_shortcut",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[1]",
+				"note": "快捷方式设置"
+			},
+			{
+				"elementName": "ppt_news",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[2]",
+				"note": "消息设置"
+			},
+			{
+				"elementName": "ppt_collection",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[3]",
+				"note": "收藏&取消收藏"
+			}, 
+			{
+				"elementName": "ppt_move",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[5]",
+				"note": "移动"
+			},
+			{
+				"elementName": "ppt_now_copy",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[6]",
+				"note": "创建副本"
+			},
+			{
+				"elementName": "ppt_export",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[7]",
+				"note": "导出"
+			},
+			{
+				"elementName": "ppt_template",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[9]",
+				"note": "保存模板"
+			},
+			{
+				"elementName": "ppt_view_history",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[9]",
+				"note": "查看历史"
+			},
+			{
+				"elementName": "ppt_Information",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[10]",
+				"note": "幻灯片信息"
+			},
+			{
+				"elementName": "ppt_delete",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[12]",
+				"note": "删除"
+			},{
+				"elementName": "ppt_delete_sure",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[3]//button[1]",
+				"note": "确认删除"
+			},{
+				"elementName": "ppt_delete_cancel",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[3]//button[2]",
+				"note": "取消删除"
+			}
+		]
+	},
+	
+	
+	
 	{
 		"note": "PPT_顶部工具栏",
 		"pageName": "ppt_top",
@@ -1553,148 +1702,7 @@
 			
 		]
 	},
-	{
-		"note": "PPT_header",
-		"pageName": "PPT_header",
-		"elements": [
-			{
-				"elementName": "ppt_return",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[1]",
-				"note": "幻灯片内返回"
-			},
-			{
-				"elementName": "ppt_down",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[2]",
-				"note": "幻灯片内下箭头"
-			},
-			{
-				"elementName": "ppt_plus_sign",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//div[1]",
-				"note": "幻灯片中加号"
-			},
-			{
-				"elementName": "ppt_filename",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//div[2]",
-				"note": "幻灯片标题"
-			},
-			{
-				"elementName": "ppt_collect",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[3]",
-				"note": "收藏标签"
-			},
-			{
-				"elementName": "ppt_comment",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//span[1]",
-				"note": "幻灯片讨论"
-			},
-			{
-				"elementName": "ppt_broadcast",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']/button[1]",
-				"note": "播放幻灯片"
-			},
-			{
-				"elementName": "ppt_online_broadcast",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//span[2]//button[1]",
-				"note": "在线演示"
-			},
-			{
-				"elementName": "ppt_cooperation",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[2]",
-				"note": "添加协作者"
-			},
-			{
-				"elementName": "ppt_share",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[3]",
-				"note": "分享"
-			},
-			{
-				"elementName": "ppt_dotdotdot",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[4]",
-				"note": "左上角点点点"
-			},
-			{
-				"elementName": "ppt_shortcut",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[1]",
-				"note": "快捷方式设置"
-			},
-			{
-				"elementName": "ppt_news",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[2]",
-				"note": "消息设置"
-			},
-			{
-				"elementName": "ppt_collection",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[3]",
-				"note": "收藏&取消收藏"
-			}, 
-			{
-				"elementName": "ppt_move",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[5]",
-				"note": "移动"
-			},
-			{
-				"elementName": "ppt_now_copy",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[6]",
-				"note": "创建副本"
-			},
-			{
-				"elementName": "ppt_export",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[7]",
-				"note": "导出"
-			},
-			{
-				"elementName": "ppt_template",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[9]",
-				"note": "保存模板"
-			},
-			{
-				"elementName": "ppt_view_history",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[9]",
-				"note": "查看历史"
-			},
-			{
-				"elementName": "ppt_Information",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[10]",
-				"note": "幻灯片信息"
-			},
-			{
-				"elementName": "ppt_delete",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[12]",
-				"note": "删除"
-			},{
-				"elementName": "ppt_delete_sure",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-content']//div[3]//button[1]",
-				"note": "确认删除"
-			},{
-				"elementName": "ppt_delete_cancel",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-content']//div[3]//button[2]",
-				"note": "取消删除"
-			}
-		]
-	},
+	
 	{
 		"note": "PPT_幻灯片右边栏",
 		"pageName": "PPT_rightBar",

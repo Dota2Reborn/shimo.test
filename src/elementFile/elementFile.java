@@ -490,6 +490,8 @@ public class elementFile {
 	public WebElement add_text;
 	@SearchWith(pageName = "ppt_top", elementName = "add_diagram", noteName = "添加图片")
 	public WebElement add_diagram;
+	@SearchWith(pageName = "ppt_top", elementName = "add_line", noteName = "添加直线")
+	public WebElement add_line;
 	@SearchWith(pageName = "ppt_top", elementName = "add_arrows", noteName = "添加箭头")
 	public WebElement add_arrows;
 	@SearchWith(pageName = "ppt_top", elementName = "add_Rectangle", noteName = "添加矩形")
