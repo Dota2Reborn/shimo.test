@@ -548,6 +548,8 @@ public class elementFile {
 	public WebElement page_elements_4;
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_5", noteName = "幻灯片页面第五个元素")
 	public WebElement page_elements_5;
+	@SearchWith(pageName = "ppt_page", elementName = "page_elements_6", noteName = "幻灯片页面第六个元素")
+	public WebElement page_elements_6;
 	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_1", noteName = "选中文件后像素点-形状文本右中-图片右上")
 	public WebElement smslide_frame_anchor_1;
 	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_2", noteName = "选中文件后像素点-形状文本左中-图片右下")

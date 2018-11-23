@@ -1378,12 +1378,14 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[12]",
 				"note": "删除"
-			},{
+			},
+			{
 				"elementName": "ppt_delete_sure",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-content']//div[3]//button[1]",
 				"note": "确认删除"
-			},{
+			},
+			{
 				"elementName": "ppt_delete_cancel",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-content']//div[3]//button[2]",
@@ -1435,21 +1437,27 @@
 				"note": "添加图片"
 			},
 			{
-				"elementName": "add_arrows",
+				"elementName": "add_line",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[3]",
+				"note": "添加直线"
+			},
+			{
+				"elementName": "add_arrows",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[4]",
 				"note": "添加箭头"
 			},
 			{
 				"elementName": "add_Rectangle",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[4]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[5]",
 				"note": "添加矩形"
 			},
 			{
 				"elementName": "add_circular",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[5]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[6]",
 				"note": "添加圆形"
 			},
 			{
@@ -1557,32 +1565,38 @@
 			{
 				"elementName": "page_elements_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[1]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[2]",
 				"note": "幻灯片页面第一个元素"
 			},
 			{
 				"elementName": "page_elements_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[2]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[3]",
 				"note": "幻灯片页面第二个元素"
 			},
 			{
 				"elementName": "page_elements_3",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[3]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[4]",
 				"note": "幻灯片页面第三个元素"
 			},
 			{
 				"elementName": "page_elements_4",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[4]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[5]",
 				"note": "幻灯片页面第四个元素"
 			},
 			{
 				"elementName": "page_elements_5",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[5]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[6]",
 				"note": "幻灯片页面第五个元素"
+			},
+			{
+				"elementName": "page_elements_6",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[7]",
+				"note": "幻灯片页面第六个元素"
 			},
 			{
 				"elementName": "smslide_frame_anchor_1",
