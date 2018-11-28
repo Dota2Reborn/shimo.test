@@ -38,7 +38,7 @@ public class testNotice extends TestInit {
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
 		String url = driver.getCurrentUrl();
-		assertTrue(url.startsWith(getURL()+"docs/MQHNJBqnsUQUPuYV"));
+		assertTrue(url.startsWith(getURL()+"docs/xYJJ2iz37uAhYVe9"));
 	}
 
 	/**
