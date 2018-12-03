@@ -1256,7 +1256,7 @@
 			{
 				"elementName": "ppt_return",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[1]",
+				"locator": "//div[@data-test='page-header-left']/button[1]",
 				"note": "幻灯片内返回"
 			},
 			{
@@ -1268,7 +1268,7 @@
 			{
 				"elementName": "ppt_plus_sign",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//div[1]",
+				"locator": "//div[@data-test='page-header-left']/div[1]",
 				"note": "幻灯片中加号"
 			},
 			{
@@ -1286,7 +1286,7 @@
 			{
 				"elementName": "ppt_comment",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//span[1]",
+				"locator": "//div[@data-test='page-header-right']/span[1]",
 				"note": "幻灯片讨论"
 			},
 			{
@@ -1686,31 +1686,31 @@
 			{
 				"elementName": "page_elements_1_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[1]//span",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[2]//span",
 				"note": "图片占位符1上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_2_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[2]//span",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[3]//span",
 				"note": "图片占位符2上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_3_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[3]//span",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[4]//span",
 				"note": "图片占位符3上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_4_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[4]//span",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[5]//span",
 				"note": "图片占位符4上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_5_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[5]//span",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[6]//span",
 				"note": "图片占位符5上传图片按钮"
 			}
 			
