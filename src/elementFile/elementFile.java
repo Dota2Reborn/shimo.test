@@ -504,6 +504,13 @@ public class elementFile {
 	public WebElement enlarge_trying;
 	@SearchWith(pageName = "ppt_top", elementName = "ppt_zoom", noteName = "缩放视图")
 	public WebElement ppt_zoom;
+	@SearchWith(pageName = "ppt_top", elementName = "ppt_type", noteName = "样式&页面样式&组合排列")
+	public WebElement ppt_type;
+	@SearchWith(pageName = "ppt_top", elementName = "ppt_animation", noteName = "文本&排列&切换动画")
+	public WebElement ppt_animation;
+	@SearchWith(pageName = "ppt_top", elementName = "ppt_arrange", noteName = "文本排列")
+	public WebElement ppt_arrange;
+	
 	/**
 	 * 左边栏
 	 * ppt_left
@@ -647,8 +654,7 @@ public class elementFile {
 	 * PPT_rightBar
 	 *
 	 */
-	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_type", noteName = "样式")
-	public WebElement ppt_type;
+	
 	@SearchWith(pageName = "PPT_rightBar", elementName = "page_style", noteName = "背景填充")
 	public WebElement page_style;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "page_colour", noteName = "颜色选择")
@@ -696,8 +702,7 @@ public class elementFile {
 	@SearchWith(pageName = "PPT_rightBar", elementName = "type_pictures_proportiong", noteName = "输入图片高")
 	public WebElement type_pictures_proportiong;
 	
-	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_animation", noteName = "文本排列")
-	public WebElement ppt_animation;
+	
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_ttf", noteName = "字体")
 	public WebElement ppt_right_ttf;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_right_ttfa", noteName = "字体下箭头")

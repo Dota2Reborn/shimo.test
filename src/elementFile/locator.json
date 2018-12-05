@@ -1477,6 +1477,24 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-toolbar']//div[3]//button[2]",
 				"note": "视图"
+			},
+			{
+				"elementName": "ppt_type",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[1]/div[1]/button[1]",
+				"note": "样式&页面样式&组合排列"
+			},
+			{
+				"elementName": "ppt_animation",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[1]/div[1]/button[2]",
+				"note": "文本&排列&切换动画"
+			},
+			{
+				"elementName": "ppt_animation",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[1]/div[1]/button[3]",
+				"note": "文本排列"
 			}
 		]
 	},
@@ -1724,7 +1742,7 @@
 			{
 				"elementName": "ppt_type",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[1]",
+				"locator": "//div[@data-test='slide-sidebar']/div[1]/div[1]/button[1]",
 				"note": "样式"
 			},
 			{
@@ -2152,44 +2170,63 @@
 		]
 	},
 	{
-		"note": "幻灯片中右键菜单与列表",
+		"note": "幻灯片中右键菜单与下拉列表",
 		"pageName": "ppt_tabulation",
 		"elements": [
 			{
 				"elementName": "cutting",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[1]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[1]",
 				"note": "剪切"
 			},
 			{
 				"elementName": "replication",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[2]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[2]",
 				"note": "复制"
 			},
 			{
 				"elementName": "pasting",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[3]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[3]",
 				"note": "粘贴"
 			},
 			{
 				"elementName": "replication_pasting",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[4]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[4]",
 				"note": "复制并粘贴"
 			},
 			{
 				"elementName": "right_key_new",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[6]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[6]",
 				"note": "新建幻灯片"
 			},
 			{
 				"elementName": "delete_page",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[7]",
+				"locator": "//div[@class='fixed-context-menu']//ul//li[7]",
 				"note": "删除幻灯片"
+			},
+			
+			{
+				"elementName": "file_menu_msg",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'无填充')]",
+				"note": "幻灯片背景填充_无填充"
+			},
+			{
+				"elementName": "file_menu_msg",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'纯色填充')]",
+				"note": "幻灯片背景填充_纯色填充"
+			},
+			{
+				"elementName": "file_menu_msg",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'图片填充')]",
+				"note": "幻灯片背景填充_图片填充"
 			}
 		]
 	},
