@@ -1491,7 +1491,7 @@
 				"note": "文本&排列&切换动画"
 			},
 			{
-				"elementName": "ppt_animation",
+				"elementName": "ppt_arrange",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar']/div[1]/div[1]/button[3]",
 				"note": "文本排列"
@@ -1731,20 +1731,13 @@
 				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[6]//span",
 				"note": "图片占位符5上传图片按钮"
 			}
-			
 		]
 	},
-	
+		
 	{
-		"note": "PPT_幻灯片右边栏",
-		"pageName": "PPT_rightBar",
-		"elements": [
-			{
-				"elementName": "ppt_type",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar']/div[1]/div[1]/button[1]",
-				"note": "样式"
-			},
+		"note": "PPT_幻灯片选中页面右边栏",
+		"pageName": "PPT_page_rightBar",
+		"elements": [	
 			{
 				"elementName": "page_style",
 				"locateUsing": "xpath",
@@ -1766,132 +1759,76 @@
 			{
 				"elementName": "image_chosen",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//button[1]",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//button[2]",
 				"note": "页面图片选择"
+			},
+			{
+				"elementName": "page_Movie_Play1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[1]",
+				"note": "瞬间切换"
+			},
+			{
+				"elementName": "page_Movie_Play2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[2]",
+				"note": "渐隐渐现"
+			},
+			{
+				"elementName": "page_Movie_Play3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[3]",
+				"note": "左右推移"
+			},
+			{
+				"elementName": "page_Movie_Play4",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[4]",
+				"note": "上下推移"
+			},
+			{
+				"elementName": "page_Movie_Play5",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[5]",
+				"note": "左右翻页"
+			},
+			{
+				"elementName": "page_Movie_Play6",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[6]",
+				"note": "上下翻页"
 			},
 			{
 				"elementName": "style_all_applications",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar']//div[2]//div[1]//div[1]//div[2]//button[1]",
-				"note": "页面应用至全部"
-			},
-			{
-				"elementName": "border_style",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[1]//button[1]",
-				"note": "边框样式"
-			},
-			{
-				"elementName": "border_style_lines",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[2]//button[1]",
-				"note": "边框线样式"
-			},
-			{
-				"elementName": "border_style_color",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[3]//div[1]//button[1]",
-				"note": "边框线颜色"
-			},
-			{
-				"elementName": "border_style_width",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[1]",
-				"note": "边框线粗细输入"
-			},
-			{
-				"elementName": "border_style_widths",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[3]//button[1]",
-				"note": "边框线粗细上箭头"
-			},
-			{
-				"elementName": "border_style_widthx",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[3]//button[2]",
-				"note": "边框线粗细下箭头"
-			},
-			{
-				"elementName": "transparency",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//input[1]",
-				"note": "透明度输入"
-			},
-			{
-				"elementName": "transparencys",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[1]",
-				"note": "透明度上箭头"
-			},
-			{
-				"elementName": "transparencyx",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[2]",
-				"note": "透明度下箭头"
-			},
+				"locator": "//div/button[contains(text(),'应用至全部')]",
+				"note": "页面背景&页面切换动画应用至全部"
+			}
+			
+		]
+	},
+	
+	{
+		"note": "PPT_幻灯片选中文本框右边栏",
+		"pageName": "PPT_textbox_rightBar",
+		"elements": [
 			{
 				"elementName": "type_text_template1",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-presets']//div[1]//button[1]",
-				"note": "文本框样式模板1"
+				"note": "大标题1"
 			},
 			{
-				"elementName": "type_shapes_template1",
+				"elementName": "type_text_template2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-shape-presets']//div[1]//div[2]//div[1]//div[2]//div[1]",
-				"note": "形状样式模板1"
+				"locator": "//div[@data-test='slide-sidebar-presets']//div[1]//button[2]",
+				"note": "小标题1"
 			},
 			{
-				"elementName": "type_shapes_fill",
+				"elementName": "type_text_template3",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[1]//button[1]",
-				"note": "形状填充"
-			},
-			{
-				"elementName": "type_shapes_fillcolor",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
-				"note": "形状填充颜色"
-			},
-			{
-				"elementName": "type_pictures_cut",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar']//div[2]//div[1]//div[1]//div[1]//button[1]",
-				"note": "剪裁图片"
-			},
-			{
-				"elementName": "type_pictures_replace",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-info']//button[1]",
-				"note": "替换图片"
-			},
-			{
-				"elementName": "type_pictures_proportion",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[1]//button[1]",
-				"note": "图片剪裁比例"
-			},
-			{
-				"elementName": "type_pictures_proportionk",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[1]//div[1]//div[1]",
-				"note": "输入图片宽"
-			},
-			{
-				"elementName": "type_pictures_proportiong",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[2]//div[1]//div[1]",
-				"note": "输入图片高"
-			},
-			
-			
-			
-			
-			{
-				"elementName": "ppt_animation",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[2]",
-				"note": "文本_排列"
+				"locator": "//div[@data-test='slide-sidebar-presets']//div[2]//button[1]",
+				"note": "正文1"
 			},
 			{
 				"elementName": "ppt_right_ttf",
@@ -2084,7 +2021,138 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-font-size']//div[5]//div[1]//dev[1]",
 				"note": "文本_文本框自适应"
+			}
+		
+		]
+	},
+	
+	{
+		"note": "PPT_幻灯片右边栏",
+		"pageName": "PPT_rightBar_general",
+		"elements": [
+			{
+				"elementName": "border_style",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']/div[1]/button[1]",
+				"note": "边框样式(文本框图片圆矩形)"
 			},
+			{
+				"elementName": "border_style_lines",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']/div[2]/button[1]",
+				"note": "边框线样式(文本框图片圆矩形)"
+			},
+			{
+				"elementName": "border_style_color",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']/div[3]/div[1]/button[1]",
+				"note": "边框线颜色(文本框图片圆矩形)"
+			},
+			{
+				"elementName": "border_style_width",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']/div[4]/div[1]/div[1]/div[1]/input",
+				"note": "边框线粗细输入(文本框图片圆矩形)"
+			},
+			{
+				"elementName": "border_style_widths",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[1]//button[1]",
+				"note": "边框线粗细上箭头(文本框图片圆矩形)"
+			},
+			{
+				"elementName": "border_style_widthx",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[1]//button[2]",
+				"note": "边框线粗细下箭头(文本框图片圆矩形)"
+			},
+			{
+				"elementName": "transparency_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[1]//div[2]",
+				"note": "透明度无级调节钮(文本框图片形状)"
+			},{
+				"elementName": "transparency",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//input[1]",
+				"note": "透明度输入(文本框图片形状)"
+			},
+			{
+				"elementName": "transparencys",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[1]",
+				"note": "透明度上箭头(文本框图片形状)"
+			},
+			{
+				"elementName": "transparencyx",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[2]",
+				"note": "透明度下箭头(文本框图片形状)"
+			}
+		]
+	},
+	
+	{
+		"note": "PPT_幻灯片右边栏",
+		"pageName": "PPT_rightBar",
+		"elements": [
+			
+			
+			
+			
+			{
+				"elementName": "type_shapes_template1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-shape-presets']//div[1]//div[2]//div[1]//div[2]//div[1]",
+				"note": "形状样式模板1"
+			},
+			{
+				"elementName": "type_shapes_fill",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[1]//button[1]",
+				"note": "形状填充"
+			},
+			{
+				"elementName": "type_shapes_fillcolor",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"note": "形状填充颜色"
+			},
+			{
+				"elementName": "type_pictures_cut",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[2]//div[1]//div[1]//div[1]//button[1]",
+				"note": "剪裁图片"
+			},
+			{
+				"elementName": "type_pictures_replace",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-info']//button[1]",
+				"note": "替换图片"
+			},
+			{
+				"elementName": "type_pictures_proportion",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[1]//button[1]",
+				"note": "图片剪裁比例"
+			},
+			{
+				"elementName": "type_pictures_proportionk",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[1]//div[1]//div[1]",
+				"note": "输入图片宽"
+			},
+			{
+				"elementName": "type_pictures_proportiong",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[2]//div[1]//div[1]",
+				"note": "输入图片高"
+			},
+			
+			
+			
+			
+			
 			
 			
 			
@@ -2167,6 +2235,7 @@
 				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[1]//div[1]//div[1]//div[1]//button[2]",
 				"note": "Y位置下箭头"
 			}
+			
 		]
 	},
 	{
