@@ -1833,26 +1833,20 @@
 			{
 				"elementName": "ppt_right_ttf",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-size']//div[1]//button[1]",
+				"locator": "//div[@data-test='slide-font-size']/div[1]/div[1]/button[1]",
 				"note": "字体"
 			},
 			{
-				"elementName": "ppt_right_ttfa",
+				"elementName": "ppt_right_inputsize",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-size']//div[1]//button[1]",
-				"note": "文本_字体下箭头"
+				"locator": "//div[@data-test='slide-font-size']/div[1]/div[1]//input",
+				"note": "输入文本_字号"
 			},
 			{
 				"elementName": "ppt_right_size",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-size']//div[1]//button[2]",
+				"locator": "//div[@data-test='slide-font-size']/div[1]/div[1]/div[1]/button[1]",
 				"note": "文本_字号"
-			},
-			{
-				"elementName": "ppt_right_sizea",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-size']//div[1]//button[2]",
-				"note": "文本_字号下箭头"
 			},
 			{
 				"elementName": "ppt_right_color",
@@ -1935,91 +1929,91 @@
 			{
 				"elementName": "ppt_right_L",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[1]",
+				"locator": "//div[@data-test='slide-align-vertical']//div[2]//button[1]",
 				"note": "文本_左对齐"
 			},
 			{
 				"elementName": "ppt_right_center",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[2]",
+				"locator": "//div[@data-test='slide-align-vertical']//div[2]//button[2]",
 				"note": "文本_水平中对齐"
 			},
 			{
 				"elementName": "ppt_right_R",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[3]",
+				"locator": "//div[@data-test='slide-align-vertical']//div[2]//button[3]",
 				"note": "文本_右对齐"
 			},
 			{
 				"elementName": "ppt_right_ends",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[4]",
+				"locator": "//div[@data-test='slide-align-vertical']//div[2]//button[4]",
 				"note": "文本_两端对齐"
 			},
 			{
 				"elementName": "ppt_right_order",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[2]//button[1]",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[1]",
 				"note": "文本_有序列表"
 			},
 			{
 				"elementName": "ppt_right_disorder",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[2]//button[2]",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[2]",
 				"note": "文本_无序列表"
 			},
 			{
 				"elementName": "ppt_right_row1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='row-spacing']//div[1]//button[1]",
+				"locator": "//div[@data-test='row-spacing']//input",
 				"note": "文本_行间距输入"
 			},
 			{
 				"elementName": "ppt_right_row2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='row-spacing']//div[1]//button[2]",
+				"locator": "//div[@data-test='row-spacing']//div[1]//button[1]",
 				"note": "文本_行间距下三角"
 			},
 			{
 				"elementName": "ppt_right_front1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[1]//div[1]",
+				"locator": "//div[@data-test='pre-segment-distance']//div[1]//input",
 				"note": "文本_段前间距输入"
 			},
 			{
 				"elementName": "ppt_right_front2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[3]//button[1]",
+				"locator": "//div[@data-test='pre-segment-distance']//button[1]",
 				"note": "文本_段前间距上箭头"
 			},
 			{
 				"elementName": "ppt_right_front3",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[3]//button[2]",
+				"locator": "//div[@data-test='pre-segment-distance']//button[2]",
 				"note": "文本_段前间距下箭头"
 			},
 			{
 				"elementName": "ppt_right_rear1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[1]//div[1]",
+				"locator": "//div[@data-test='post-segment-distance']//div[1]//input",
 				"note": "文本_段后间距输入"
 			},
 			{
 				"elementName": "ppt_right_rear2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[3]//button[1]",
+				"locator": "//div[@data-test='post-segment-distance']//button[1]",
 				"note": "文本_段后间距上箭头"
 			},
 			{
 				"elementName": "ppt_right_rear3",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[3]//button[2]",
+				"locator": "//div[@data-test='post-segment-distance']//button[2]",
 				"note": "文本_段后间距下箭头"
 			},
 			{
 				"elementName": "ppt_right_adaptive",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-size']//div[5]//div[1]//dev[1]",
+				"locator": "//div[@data-test='slide-font-size']//div[5]//div[1]//div[1]",
 				"note": "文本_文本框自适应"
 			}
 		

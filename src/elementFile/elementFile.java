@@ -695,12 +695,10 @@ public class elementFile {
 	public WebElement type_text_template3;
 	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_ttf", noteName = "字体")
 	public WebElement ppt_right_ttf;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_ttfa", noteName = "字体下箭头")
-	public WebElement ppt_right_ttfa;
+	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_inputsize", noteName = "字号输入")
+	public WebElement ppt_right_inputsize;
 	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_size", noteName = "字号")
 	public WebElement ppt_right_size;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_sizea", noteName = "字号下箭头")
-	public WebElement ppt_right_sizea;
 	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_color", noteName = "字体颜色")
 	public WebElement ppt_right_color;
 	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_colora", noteName = "字体颜色下箭头")
