@@ -678,6 +678,12 @@ public class elementFile {
 	public WebElement page_Movie_Play6;
 	@SearchWith(pageName = "PPT_page_rightBar", elementName = "style_all_applications", noteName = "应用至全部")
 	public WebElement style_all_applications;
+	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_No_Fill", noteName = "幻灯片背景填充_无填充")
+	public WebElement page_No_Fill;
+	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_SolidColor_Fill", noteName = "幻灯片背景填充_纯色填充")
+	public WebElement page_SolidColor_Fill;
+	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_picture_Fill", noteName = "幻灯片背景填充_图片填充")
+	public WebElement page_picture_Fill;
 	
 	
 	

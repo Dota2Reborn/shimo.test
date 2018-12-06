@@ -1803,6 +1803,25 @@
 				"locateUsing": "xpath",
 				"locator": "//div/button[contains(text(),'应用至全部')]",
 				"note": "页面背景&页面切换动画应用至全部"
+			},
+			
+			{
+				"elementName": "page_No_Fill",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'无填充')]",
+				"note": "幻灯片背景填充_无填充"
+			},
+			{
+				"elementName": "page_SolidColor_Fill",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'纯色填充')]",
+				"note": "幻灯片背景填充_纯色填充"
+			},
+			{
+				"elementName": "page_picture_Fill",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'图片填充')]",
+				"note": "幻灯片背景填充_图片填充"
 			}
 			
 		]
@@ -2342,26 +2361,8 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[7]",
 				"note": "删除幻灯片"
-			},
-			
-			{
-				"elementName": "file_menu_msg",
-				"locateUsing": "xpath",
-				"locator": "//div//div/div/ul/li[contains(text(),'无填充')]",
-				"note": "幻灯片背景填充_无填充"
-			},
-			{
-				"elementName": "file_menu_msg",
-				"locateUsing": "xpath",
-				"locator": "//div//div/div/ul/li[contains(text(),'纯色填充')]",
-				"note": "幻灯片背景填充_纯色填充"
-			},
-			{
-				"elementName": "file_menu_msg",
-				"locateUsing": "xpath",
-				"locator": "//div//div/div/ul/li[contains(text(),'图片填充')]",
-				"note": "幻灯片背景填充_图片填充"
 			}
+			
 		]
 	},
 	{
