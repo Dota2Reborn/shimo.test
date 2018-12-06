@@ -774,14 +774,75 @@ public class elementFile {
 	public WebElement border_style_widths;
 	@SearchWith(pageName = "PPT_rightBar_general", elementName = "border_style_widthx", noteName = "边框线粗细下箭头")
 	public WebElement border_style_widthx;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "transparency_button", noteName = "透明度无级调节钮(文本框图片形状)")
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "transparency_button", noteName = "透明度无级调节钮(文本框图片形状)")
 	public WebElement transparency_button;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "transparency", noteName = "透明度输入(文本框图片形状)")
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "transparency", noteName = "透明度输入(文本框图片形状)")
 	public WebElement transparency;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "transparencys", noteName = "透明度上箭头(文本框图片形状)")
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "transparencys", noteName = "透明度上箭头(文本框图片形状)")
 	public WebElement transparencys;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "transparencyx", noteName = "透明度下箭头(文本框图片形状)")
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "transparencyx", noteName = "透明度下箭头(文本框图片形状)")
 	public WebElement transparencyx;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_setTop", noteName = "元素置顶")
+	public WebElement element_setTop;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_setThe", noteName = "元素置底")
+	public WebElement element_setThe;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_moveUp", noteName = "元素上移一层")
+	public WebElement element_moveUp;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_moveDown", noteName = "元素下移一层")
+	public WebElement element_moveDown;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_horizontal", noteName = "水平对齐")
+	public WebElement element_horizontal;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_vertically", noteName = "垂直对齐")
+	public WebElement element_vertically;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_combined", noteName = "组合")
+	public WebElement element_combined;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_lift_combined", noteName = "取消组合")
+	public WebElement element_lift_combined;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_horizontal_xvalue", noteName = "X位置输入")
+	public WebElement element_horizontal_xvalue;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_horizontal_xvalues", noteName = "X位置上箭头")
+	public WebElement element_horizontal_xvalues;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_horizontal_xvaluex", noteName = "X位置下箭头")
+	public WebElement element_horizontal_xvaluex;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_vertically_xvalue", noteName = "Y位置输入")
+	public WebElement element_vertically_xvalue;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_vertically_xvalues", noteName = "Y位置上箭头")
+	public WebElement element_vertically_xvalues;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_vertically_xvaluex", noteName = "Y位置下箭头")
+	public WebElement element_vertically_xvaluex;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_wide_value", noteName = "输入宽度")
+	public WebElement element_wide_value;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_wide_values", noteName = "宽度上箭头微调")
+	public WebElement element_wide_values;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_wide_valuex", noteName = "宽度下箭头微调")
+	public WebElement element_wide_valuex;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "lock_aspect_ratio", noteName = "宽度下箭头微调")
+	public WebElement lock_aspect_ratio;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_high_value", noteName = "输入高度")
+	public WebElement element_high_value;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_high_value", noteName = "高度上箭头微调")
+	public WebElement element_high_values;
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_high_value", noteName = "高度下箭头微调")
+	public WebElement element_high_valuex;
+	
+	
+	/**
+	 * ppt右边栏
+	 * PPT_rightBar_images
+	 *
+	 */
+
+	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_cut", noteName = "剪裁图片")
+	public WebElement type_pictures_cut;
+	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportion", noteName = "图片剪裁比例")
+	public WebElement type_pictures_proportion;
+	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportionk", noteName = "输入图片宽")
+	public WebElement type_pictures_proportionk;
+	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportiong", noteName = "输入图片高")
+	public WebElement type_pictures_proportiong;
+	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_replace", noteName = "替换图片")
+	public WebElement type_pictures_replace;
+	
 	
 	/**
 	 * ppt右边栏
@@ -790,55 +851,18 @@ public class elementFile {
 	 */
 	
 	
-	
-	
 	@SearchWith(pageName = "PPT_rightBar", elementName = "type_shapes_template1", noteName = "形状样式模板1")
 	public WebElement type_shapes_template1;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "type_shapes_fill", noteName = "形状填充")
 	public WebElement type_shapes_fill;
 	@SearchWith(pageName = "PPT_rightBar", elementName = "type_shapes_fillcolor", noteName = "形状填充颜色")
 	public WebElement type_shapes_fillcolor;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "type_pictures_cut", noteName = "剪裁图片")
-	public WebElement type_pictures_cut;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "type_pictures_replace", noteName = "替换图片")
-	public WebElement type_pictures_replace;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "type_pictures_proportion", noteName = "图片剪裁比例")
-	public WebElement type_pictures_proportion;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "type_pictures_proportionk", noteName = "输入图片宽")
-	public WebElement type_pictures_proportionk;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "type_pictures_proportiong", noteName = "输入图片高")
-	public WebElement type_pictures_proportiong;
 	
 	
 	
 
 	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_theme", noteName = "排列")
 	public WebElement ppt_theme;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_setTop", noteName = "元素置顶")
-	public WebElement element_setTop;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_setThe", noteName = "元素置底")
-	public WebElement element_setThe;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_moveUp", noteName = "元素上移一层")
-	public WebElement element_moveUp;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_moveDown", noteName = "元素下移一层")
-	public WebElement element_moveDown;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_horizontal", noteName = "水平对齐")
-	public WebElement element_horizontal;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_vertically", noteName = "垂直对齐")
-	public WebElement element_vertically;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_horizontal_xvalue", noteName = "X位置输入")
-	public WebElement element_horizontal_xvalue;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_horizontal_xvalues", noteName = "X位置上箭头")
-	public WebElement element_horizontal_xvalues;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_horizontal_xvaluex", noteName = "X位置下箭头")
-	public WebElement element_horizontal_xvaluex;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_vertically_xvalue", noteName = "Y位置输入")
-	public WebElement element_vertically_xvalue;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_vertically_xvalues", noteName = "Y位置上箭头")
-	public WebElement element_vertically_xvalues;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "element_vertically_xvaluex", noteName = "Y位置下箭头")
-	public WebElement element_vertically_xvaluex;
-	
 	/**
 	 * 幻灯片中右键菜单与列表
 	 * ppt_tabulation
