@@ -755,6 +755,49 @@ public class elementFile {
 	public WebElement ppt_right_rear3;
 	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_adaptive", noteName = "文本框自适应")
 	public WebElement ppt_right_adaptive;
+
+	
+	/**
+	 * ppt选中图片右边栏
+	 * PPT_rightBar_images
+	 *
+	 */
+
+	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_cut", noteName = "剪裁图片")
+	public WebElement type_pictures_cut;
+	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportion", noteName = "图片剪裁比例")
+	public WebElement type_pictures_proportion;
+	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportionk", noteName = "输入图片宽")
+	public WebElement type_pictures_proportionk;
+	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportiong", noteName = "输入图片高")
+	public WebElement type_pictures_proportiong;
+	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_replace", noteName = "替换图片")
+	public WebElement type_pictures_replace;
+	
+	
+	/**
+	 * PPT_幻灯片选中形状右边栏
+	 * PPT_rightBar_shape
+	 *
+	 */
+	
+
+	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "type_shapes_template1", noteName = "形状样式模板1")
+	public WebElement type_shapes_template1;
+	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "type_shapes_template2", noteName = "形状样式模板2")
+	public WebElement type_shapes_template2;
+	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "type_shapes_template3", noteName = "形状样式模板3")
+	public WebElement type_shapes_template3;
+	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "type_shapes_fill", noteName = "形状填充")
+	public WebElement type_shapes_fill;
+	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "type_shapes_fillcolor", noteName = "形状填充颜色")
+	public WebElement type_shapes_fillcolor;
+	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "line_Endarrow_left", noteName = "左端点箭头")
+	public WebElement line_Endarrow_left;
+	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "line_Endarrow_right", noteName = "右端点箭头")
+	public WebElement line_Endarrow_right;
+	
+
 	
 
 	/**
@@ -816,7 +859,7 @@ public class elementFile {
 	public WebElement element_wide_values;
 	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_wide_valuex", noteName = "宽度下箭头微调")
 	public WebElement element_wide_valuex;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "lock_aspect_ratio", noteName = "宽度下箭头微调")
+	@SearchWith(pageName = "PPT_rightBar_general", elementName = "lock_aspect_ratio", noteName = "锁定宽高比")
 	public WebElement lock_aspect_ratio;
 	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_high_value", noteName = "输入高度")
 	public WebElement element_high_value;
@@ -826,43 +869,7 @@ public class elementFile {
 	public WebElement element_high_valuex;
 	
 	
-	/**
-	 * ppt右边栏
-	 * PPT_rightBar_images
-	 *
-	 */
-
-	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_cut", noteName = "剪裁图片")
-	public WebElement type_pictures_cut;
-	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportion", noteName = "图片剪裁比例")
-	public WebElement type_pictures_proportion;
-	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportionk", noteName = "输入图片宽")
-	public WebElement type_pictures_proportionk;
-	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportiong", noteName = "输入图片高")
-	public WebElement type_pictures_proportiong;
-	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_replace", noteName = "替换图片")
-	public WebElement type_pictures_replace;
 	
-	
-	/**
-	 * ppt右边栏
-	 * PPT_rightBar
-	 *
-	 */
-	
-	
-	@SearchWith(pageName = "PPT_rightBar", elementName = "type_shapes_template1", noteName = "形状样式模板1")
-	public WebElement type_shapes_template1;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "type_shapes_fill", noteName = "形状填充")
-	public WebElement type_shapes_fill;
-	@SearchWith(pageName = "PPT_rightBar", elementName = "type_shapes_fillcolor", noteName = "形状填充颜色")
-	public WebElement type_shapes_fillcolor;
-	
-	
-	
-
-	@SearchWith(pageName = "PPT_rightBar", elementName = "ppt_theme", noteName = "排列")
-	public WebElement ppt_theme;
 	/**
 	 * 幻灯片中右键菜单与列表
 	 * ppt_tabulation
