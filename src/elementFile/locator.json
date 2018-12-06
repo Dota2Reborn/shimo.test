@@ -1730,6 +1730,30 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[6]//span",
 				"note": "图片占位符5上传图片按钮"
+			},
+			{
+				"elementName": "picture_trim",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-viewport-plugin-elementToolbar']//div[1]//div[1]",
+				"note": "剪裁按钮"
+			},
+			{
+				"elementName": "picture_replacement",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-viewport-plugin-elementToolbar']//div[1]//div[3]",
+				"note": "替换图片"
+			},
+			{
+				"elementName": "picture_resetting",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-viewport-plugin-elementToolbar']//div[1]//div[4]",
+				"note": "重置"
+			},
+			{
+				"elementName": "picture_prune1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][1]",
+				"note": "图片剪裁左上角"
 			}
 		]
 	},
