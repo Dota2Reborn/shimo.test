@@ -1754,6 +1754,48 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][1]",
 				"note": "图片剪裁左上角"
+			},
+			{
+				"elementName": "picture_prune2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][2]",
+				"note": "图片剪裁右上角"
+			},
+			{
+				"elementName": "picture_prune3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][3]",
+				"note": "图片剪裁右下角"
+			},
+			{
+				"elementName": "picture_prune4",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][4]",
+				"note": "图片剪裁左下角"
+			},
+			{
+				"elementName": "picture_prune5",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][5]",
+				"note": "图片剪裁上边"
+			},
+			{
+				"elementName": "picture_prune6",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][6]",
+				"note": "图片剪裁右边"
+			},
+			{
+				"elementName": "picture_prune7",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][7]",
+				"note": "图片剪裁下边"
+			},
+			{
+				"elementName": "picture_prune8",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][8]",
+				"note": "图片剪裁左边"
 			}
 		]
 	},

@@ -650,6 +650,28 @@ public class elementFile {
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_5_1", noteName = "图片占位符5上传图片按钮")
 	public WebElement page_elements_5_1;
 	
+	@SearchWith(pageName = "ppt_page", elementName = "picture_trim", noteName = "剪裁按钮")
+	public WebElement picture_trim;
+	@SearchWith(pageName = "ppt_page", elementName = "picture_replacement", noteName = "替换图片")
+	public WebElement picture_replacement;
+	@SearchWith(pageName = "ppt_page", elementName = "picture_resetting", noteName = "重置")
+	public WebElement picture_resetting;
+	@SearchWith(pageName = "ppt_page", elementName = "picture_prune1", noteName = "图片剪裁左上角")
+	public WebElement picture_prune1;
+	@SearchWith(pageName = "ppt_page", elementName = "picture_prune2", noteName = "图片剪裁右上角")
+	public WebElement picture_prune2;
+	@SearchWith(pageName = "ppt_page", elementName = "picture_prune3", noteName = "图片剪裁右下角")
+	public WebElement picture_prune3;
+	@SearchWith(pageName = "ppt_page", elementName = "picture_prune4", noteName = "图片剪裁左下角")
+	public WebElement picture_prune4;
+	@SearchWith(pageName = "ppt_page", elementName = "picture_prune5", noteName = "图片剪裁上边")
+	public WebElement picture_prune5;
+	@SearchWith(pageName = "ppt_page", elementName = "picture_prune6", noteName = "图片剪裁右边")
+	public WebElement picture_prune6;
+	@SearchWith(pageName = "ppt_page", elementName = "picture_prune7", noteName = "图片剪裁下边")
+	public WebElement picture_prune7;
+	@SearchWith(pageName = "ppt_page", elementName = "picture_prune8", noteName = "图片剪裁左边")
+	public WebElement picture_prune8;
 	
 	/**
 	 * ppt选中页面右边栏
