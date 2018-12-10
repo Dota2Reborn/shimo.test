@@ -2560,6 +2560,36 @@
 				"locateUsing": "xpath",
 				"locator": "//div//div/div/ul/li[contains(text(),'16:9')]",
 				"note": "图片剪裁比例16:9"
+			},
+			{
+				"elementName": "text_Fonts1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-font-dropdown']/ul/li[1]",
+				"note": "默认字体"
+			},
+			{
+				"elementName": "text_Fonts2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-font-dropdown']/ul/li[2]",
+				"note": "宋体"
+			},
+			{
+				"elementName": "text_Fonts3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-font-dropdown']/ul/li[3]",
+				"note": "黑体"
+			},
+			{
+				"elementName": "text_Fonts4",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-font-dropdown']/ul/li[4]",
+				"note": "微软雅黑"
+			},
+			{
+				"elementName": "text_Fonts5",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-font-dropdown']/ul/li[5]",
+				"note": "仿宋"
 			}
 			
 		]

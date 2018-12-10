@@ -957,4 +957,14 @@ public class elementFile {
 	public WebElement Trim_per_cent3;
 	@SearchWith(pageName = "ppt_tabulation", elementName = "Trim_per_cent4", noteName = "图片剪裁比例16:9")
 	public WebElement Trim_per_cent4;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "text_Fonts1", noteName = "默认字体")
+	public WebElement text_Fonts1;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "text_Fonts2", noteName = "宋体")
+	public WebElement text_Fonts2;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "text_Fonts3", noteName = "黑体")
+	public WebElement text_Fonts3;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "text_Fonts4", noteName = "微软雅黑")
+	public WebElement text_Fonts4;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "text_Fonts5", noteName = "仿宋")
+	public WebElement text_Fonts5;
 }
