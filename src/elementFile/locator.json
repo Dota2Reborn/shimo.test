@@ -2595,19 +2595,19 @@
 				"elementName": "text_size1",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[1]",
-				"note": "12px"
+				"note": "12px与行间距1"
 			},
 			{
 				"elementName": "text_size2",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[2]",
-				"note": "14px"
+				"note": "14px与行间距1.15"
 			},
 			{
 				"elementName": "text_size3",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[4]",
-				"note": "18px"
+				"note": "18px与行间距2"
 			},
 			{
 				"elementName": "text_size4",
