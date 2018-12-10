@@ -638,7 +638,6 @@ public class elementFile {
 	public WebElement smslide_unordered_2;
 	@SearchWith(pageName = "ppt_page", elementName = "smslide_unordered_3", noteName = "无序列表第3行是否存在")
 	public WebElement smslide_unordered_3;
-	
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_1_1", noteName = "图片占位符1上传图片按钮")
 	public WebElement page_elements_1_1;
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_2_1", noteName = "图片占位符2上传图片按钮")
@@ -649,7 +648,6 @@ public class elementFile {
 	public WebElement page_elements_4_1;
 	@SearchWith(pageName = "ppt_page", elementName = "page_elements_5_1", noteName = "图片占位符5上传图片按钮")
 	public WebElement page_elements_5_1;
-	
 	@SearchWith(pageName = "ppt_page", elementName = "picture_trim", noteName = "剪裁按钮")
 	public WebElement picture_trim;
 	@SearchWith(pageName = "ppt_page", elementName = "picture_replacement", noteName = "替换图片")
