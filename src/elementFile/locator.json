@@ -2620,6 +2620,54 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[10]",
 				"note": "40px"
+			},
+			{
+				"elementName": "onlineshown_off",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']/button[1]",
+				"note": "X掉在线演示弹窗"
+			},
+			{
+				"elementName": "onlineshown_Tip",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[1]/div[1]/div[3]/div[1]",
+				"note": "勾选弹窗提示"
+			},
+			{
+				"elementName": "onlineshown_go",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[1]//button[1]",
+				"note": "继续"
+			},
+			{
+				"elementName": "onlineshown_lift1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[1]//button[2]",
+				"note": "取消"
+			},
+			{
+				"elementName": "onlineshown_copy",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[1]/div[3]/div[1]/span",
+				"note": "复制链接"
+			},
+			{
+				"elementName": "onlineshown_Play",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[1]/div[4]/button[1]",
+				"note": "现在播放"
+			},
+			{
+				"elementName": "onlineshown_later",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[1]/div[4]/button[2]",
+				"note": "稍后播放"
+			},
+			{
+				"elementName": "onlineshown_close",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[1]/div[4]/button[3]",
+				"note": "结束演示"
 			}
 			
 		]

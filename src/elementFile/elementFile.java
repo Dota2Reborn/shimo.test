@@ -977,4 +977,20 @@ public class elementFile {
 	public WebElement text_size4;
 	@SearchWith(pageName = "ppt_tabulation", elementName = "text_size5", noteName = "40px")
 	public WebElement text_size5;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_off", noteName = "X掉在线演示弹窗")
+	public WebElement onlineshown_off;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_Tip", noteName = "勾选弹窗提示")
+	public WebElement onlineshown_Tip;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_go", noteName = "继续")
+	public WebElement onlineshown_go;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_lift1", noteName = "取消")
+	public WebElement onlineshown_lift1;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_copy", noteName = "复制链接")
+	public WebElement onlineshown_copy;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_Play", noteName = "现在播放")
+	public WebElement onlineshown_Play;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_later", noteName = "稍后播放")
+	public WebElement onlineshown_later;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_close", noteName = "结束演示")
+	public WebElement onlineshown_close;
 }
