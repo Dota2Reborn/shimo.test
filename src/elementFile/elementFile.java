@@ -698,12 +698,6 @@ public class elementFile {
 	public WebElement page_Movie_Play6;
 	@SearchWith(pageName = "PPT_page_rightBar", elementName = "style_all_applications", noteName = "应用至全部")
 	public WebElement style_all_applications;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_No_Fill", noteName = "幻灯片背景填充_无填充")
-	public WebElement page_No_Fill;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_SolidColor_Fill", noteName = "幻灯片背景填充_纯色填充")
-	public WebElement page_SolidColor_Fill;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_picture_Fill", noteName = "幻灯片背景填充_图片填充")
-	public WebElement page_picture_Fill;
 	
 	
 	
@@ -913,4 +907,34 @@ public class elementFile {
 	public WebElement right_key_new;
 	@SearchWith(pageName = "ppt_tabulation", elementName = "delete_page", noteName = "删除幻灯片")
 	public WebElement delete_page;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "page_No_Fill", noteName = "幻灯片背景填充_无填充")
+	public WebElement page_No_Fill;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "page_SolidColor_Fill", noteName = "幻灯片背景填充_纯色填充")
+	public WebElement page_SolidColor_Fill;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "page_picture_Fill", noteName = "幻灯片背景填充_图片填充")
+	public WebElement page_picture_Fill;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "background_raw", noteName = "幻灯片背景图片填充_原始大小")
+	public WebElement background_raw;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "background_stretch", noteName = "幻灯片背景图片填充_拉伸")
+	public WebElement background_stretch;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "background_splices", noteName = "幻灯片背景图片填充_拼贴")
+	public WebElement background_splices;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "background_populate", noteName = "幻灯片背景图片填充_缩放以填充")
+	public WebElement background_populate;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "background_suitable", noteName = "幻灯片背景图片填充_缩放以适合")
+	public WebElement background_suitable;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_no_border", noteName = "幻灯片页面元素边框_无边框")
+	public WebElement element_no_border;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_lines_border", noteName = "幻灯片页面元素边框_线条边框")
+	public WebElement element_lines_border;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "lines_styles1", noteName = "细线条样式")
+	public WebElement lines_styles1;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "lines_styles2", noteName = "粗线条样式")
+	public WebElement lines_styles2;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "lines_styles3", noteName = "特粗线条样式")
+	public WebElement lines_styles3;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "lines_styles4", noteName = "细虚线条样式")
+	public WebElement lines_styles4;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "lines_styles5", noteName = "粗虚线条样式")
+	public WebElement lines_styles5;
 }
