@@ -2590,6 +2590,36 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-font-dropdown']/ul/li[5]",
 				"note": "仿宋"
+			},
+			{
+				"elementName": "text_size1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[1]",
+				"note": "12px"
+			},
+			{
+				"elementName": "text_size2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[2]",
+				"note": "14px"
+			},
+			{
+				"elementName": "text_size3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[4]",
+				"note": "18px"
+			},
+			{
+				"elementName": "text_size4",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[8]",
+				"note": "32px"
+			},
+			{
+				"elementName": "text_size5",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[10]",
+				"note": "40px"
 			}
 			
 		]

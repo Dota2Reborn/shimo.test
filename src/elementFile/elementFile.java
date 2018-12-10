@@ -967,4 +967,14 @@ public class elementFile {
 	public WebElement text_Fonts4;
 	@SearchWith(pageName = "ppt_tabulation", elementName = "text_Fonts5", noteName = "仿宋")
 	public WebElement text_Fonts5;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "text_size1", noteName = "12px")
+	public WebElement text_size1;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "text_size2", noteName = "14px")
+	public WebElement text_size2;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "text_size3", noteName = "18px")
+	public WebElement text_size3;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "text_size4", noteName = "32px")
+	public WebElement text_size4;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "text_size5", noteName = "40px")
+	public WebElement text_size5;
 }
