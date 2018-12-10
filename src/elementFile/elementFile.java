@@ -907,11 +907,23 @@ public class elementFile {
 	public WebElement right_key_new;
 	@SearchWith(pageName = "ppt_tabulation", elementName = "delete_page", noteName = "删除幻灯片")
 	public WebElement delete_page;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "page_No_Fill", noteName = "幻灯片背景填充_无填充")
+	@SearchWith(pageName = "ppt_tabulation", elementName = "elements_left", noteName = "水平左对齐")
+	public WebElement elements_left;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "elements_centre_line", noteName = "水平剧中对齐")
+	public WebElement elements_centre_line;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_sright", noteName = "水平右对齐")
+	public WebElement element_sright;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "elements_top", noteName = "垂直顶部对齐")
+	public WebElement elements_top;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "elements_centre_vertical", noteName = "垂直居中对齐")
+	public WebElement elements_centre_vertical;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "elements_bottom", noteName = "垂直底部对齐")
+	public WebElement elements_bottom;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "page_No_Fill", noteName = "幻灯片页面与形状背景填充_无填充")
 	public WebElement page_No_Fill;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "page_SolidColor_Fill", noteName = "幻灯片背景填充_纯色填充")
+	@SearchWith(pageName = "ppt_tabulation", elementName = "page_SolidColor_Fill", noteName = "幻灯片页面与形状背景填充_纯色填充")
 	public WebElement page_SolidColor_Fill;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "page_picture_Fill", noteName = "幻灯片背景填充_图片填充")
+	@SearchWith(pageName = "ppt_tabulation", elementName = "page_picture_Fill", noteName = "幻灯片页面背景填充_图片填充")
 	public WebElement page_picture_Fill;
 	@SearchWith(pageName = "ppt_tabulation", elementName = "background_raw", noteName = "幻灯片背景图片填充_原始大小")
 	public WebElement background_raw;

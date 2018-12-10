@@ -2409,25 +2409,61 @@
 				"locator": "//div[@class='fixed-context-menu']//ul//li[7]",
 				"note": "左边栏右键菜单_删除幻灯片"
 			},
+			{
+				"elementName": "elements_left",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'左对齐')]",
+				"note": "水平左对齐"
+			},
+			{
+				"elementName": "elements_centre_line",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'居中对齐')]",
+				"note": "水平剧中对齐"
+			},
+			{
+				"elementName": "element_sright",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'右对齐')]",
+				"note": "水平右对齐"
+			},
+			{
+				"elementName": "elements_top",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'顶部对齐')]",
+				"note": "垂直顶部对齐"
+			},
+			{
+				"elementName": "elements_centre_vertical",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'居中对齐')]",
+				"note": "垂直居中对齐"
+			},
+			{
+				"elementName": "elements_bottom",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'底部对齐')]",
+				"note": "垂直底部对齐"
+			},
 			
 			
 			{
 				"elementName": "page_No_Fill",
 				"locateUsing": "xpath",
 				"locator": "//div//div/div/ul/li[contains(text(),'无填充')]",
-				"note": "幻灯片背景填充_无填充"
+				"note": "幻灯片页面与形状背景填充_无填充"
 			},
 			{
 				"elementName": "page_SolidColor_Fill",
 				"locateUsing": "xpath",
 				"locator": "//div//div/div/ul/li[contains(text(),'纯色填充')]",
-				"note": "幻灯片背景填充_纯色填充"
+				"note": "幻灯片页面与形状背景填充_纯色填充"
 			},
 			{
 				"elementName": "page_picture_Fill",
 				"locateUsing": "xpath",
 				"locator": "//div//div/div/ul/li[contains(text(),'图片填充')]",
-				"note": "幻灯片背景填充_图片填充"
+				"note": "幻灯片页面背景填充_图片填充"
 			},
 			{
 				"elementName": "background_raw",
