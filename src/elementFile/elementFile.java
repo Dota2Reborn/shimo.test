@@ -949,4 +949,12 @@ public class elementFile {
 	public WebElement lines_styles4;
 	@SearchWith(pageName = "ppt_tabulation", elementName = "lines_styles5", noteName = "粗虚线条样式")
 	public WebElement lines_styles5;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "Trim_per_cent1", noteName = "图片剪裁比例1:1")
+	public WebElement Trim_per_cent1;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "Trim_per_cent2", noteName = "图片剪裁比例2:3")
+	public WebElement Trim_per_cent2;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "Trim_per_cent3", noteName = "图片剪裁比例4:3")
+	public WebElement Trim_per_cent3;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "Trim_per_cent4", noteName = "图片剪裁比例16:9")
+	public WebElement Trim_per_cent4;
 }

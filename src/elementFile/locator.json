@@ -2536,6 +2536,30 @@
 				"locateUsing": "xpath",
 				"locator": "//div//div/div/ul/li[contains(text(),'')][5]",
 				"note": "粗虚线条样式"
+			},
+			{
+				"elementName": "Trim_per_cent1",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'1:1')]",
+				"note": "图片剪裁比例1:1"
+			},
+			{
+				"elementName": "Trim_per_cent2",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'2:3')]",
+				"note": "图片剪裁比例2:3"
+			},
+			{
+				"elementName": "Trim_per_cent3",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'4:3')]",
+				"note": "图片剪裁比例4:3"
+			},
+			{
+				"elementName": "Trim_per_cent4",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'16:9')]",
+				"note": "图片剪裁比例16:9"
 			}
 			
 		]
