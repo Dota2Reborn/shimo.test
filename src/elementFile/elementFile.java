@@ -895,6 +895,14 @@ public class elementFile {
 	 * ppt_tabulation
 	 *
 	 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "view_25", noteName = "顶部视图百分比下拉列表_25%")
+	public WebElement view_25;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "view_100", noteName = "顶部视图百分比下拉列表_100%")
+	public WebElement view_100;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "view_400", noteName = "顶部视图百分比下拉列表_400%")
+	public WebElement view_400;
+	@SearchWith(pageName = "ppt_tabulation", elementName = "view_adaptive", noteName = "顶部视图百分比下拉列表_自适应")
+	public WebElement view_adaptive;
 	@SearchWith(pageName = "ppt_tabulation", elementName = "cutting", noteName = "剪切")
 	public WebElement cutting;
 	@SearchWith(pageName = "ppt_tabulation", elementName = "replication", noteName = "复制")

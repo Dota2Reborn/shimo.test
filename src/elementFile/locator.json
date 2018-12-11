@@ -2374,6 +2374,30 @@
 		"pageName": "ppt_tabulation",
 		"elements": [
 			{
+				"elementName": "view_25",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'25%')]",
+				"note": "顶部视图百分比下拉列表_25%"
+			},
+			{
+				"elementName": "view_100",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'100%')]",
+				"note": "顶部视图百分比下拉列表_100%"
+			},
+			{
+				"elementName": "view_400",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'400%')]",
+				"note": "顶部视图百分比下拉列表_400%"
+			},
+			{
+				"elementName": "view_adaptive",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'适应窗口大小')]",
+				"note": "顶部视图百分比下拉列表_适应窗口大小"
+			},
+			{
 				"elementName": "cutting",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//ul//li[1]",
